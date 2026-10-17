@@ -1,0 +1,35 @@
+id: mtr
+title: MTR
+description: Next train schedules for MTR heavy rail lines and Light Rail, and MTR Bus arrival times.
+datasets:
+  - mtr-data2-nexttrain-data
+  - mtr-lrnt_data-light-rail-nexttrain-data
+  - mtr-mtr_bus-mtr-bus-eta-data
+baseUrl: https://rt.data.gov.hk/v1/transport/mtr
+lang:
+  param: lang
+  map: { en: EN, tc: TC, sc: TC }
+cacheTtl: 30
+tools:
+  - name: mtr_next_train
+    title: MTR next trains
+    description: "Next train arrival times at an MTR station on one line, in both directions (UP and DOWN). Line codes: AEL, TCL, TML, TKL, EAL, SIL, TWL, ISL, KTL, DRL. Station codes are three letters, e.g. TUM (Tuen Mun), ADM (Admiralty), HOK (Hong Kong)."
+    path: /getSchedule.php
+    input:
+      line: { type: string, required: true, transform: upper, description: "MTR line code, e.g. TML or ISL" }
+      sta: { type: string, required: true, transform: upper, description: "Three-letter station code on that line, e.g. TUM" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: mtr_light_rail_schedule
+    title: Light Rail next trains
+    description: Next Light Rail trains at a stop, by platform, with route number, destination and minutes to arrival.
+    path: /lrt/getSchedule
+    input:
+      stationId: { type: string, required: true, name: station_id, description: "Light Rail stop id, e.g. 100 for Tuen Mun Ferry Pier, 295 for Tuen Mun" }
+  - name: mtr_bus_schedule
+    title: MTR Bus arrivals
+    description: Real-time arrival times for every stop of an MTR Bus route (feeder buses in Tuen Mun, Yuen Long and Tung Chung, e.g. K12, 506).
+    method: POST
+    path: /bus/getSchedule
+    input:
+      routeName: { type: string, required: true, in: body, transform: upper, description: "MTR Bus route, e.g. K12" }
+      language: { type: string, enum: [en, zh], default: en, in: body, description: "Response language" }

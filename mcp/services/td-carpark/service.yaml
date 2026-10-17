@@ -1,0 +1,47 @@
+id: td-carpark
+title: Car Park Information and Vacancy
+description: Car park locations, opening hours, prices and real-time vacancies from the Transport Department.
+datasets:
+  - hk-dpo-datagovhk1-carpark-info-vacancy
+baseUrl: https://api.data.gov.hk/v1
+lang:
+  param: lang
+  map: { en: en_US, tc: zh_TW, sc: zh_CN }
+cacheTtl: 3600
+tools:
+  - name: carpark_info
+    title: Find car parks
+    description: Search car parks by name, address or district and return their id, address, coordinates, opening hours and facilities. Use the park id with carpark_vacancy.
+    path: /carpark-info-vacancy
+    query: { data: info }
+    input:
+      vehicleTypes:
+        type: string
+        enum: [privateCar, LGV, HGV, CV, coach, motorCycle]
+        default: privateCar
+        description: Vehicle type the car park must accept
+      search: { type: string, in: local, description: "Text in the car park name, address or district, e.g. Mong Kok" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+    response:
+      root: results
+      search: { input: search, fields: [name, displayAddress, district] }
+      pick: [park_Id, name, displayAddress, district, latitude, longitude, contactNo, opening_status, openingHours, heightLimits, facilities, paymentMethods, website]
+      limit: 30
+  - name: carpark_vacancy
+    title: Car park vacancy
+    description: Real-time number of vacant spaces at car parks. Pass a park id to check one car park.
+    path: /carpark-info-vacancy
+    query: { data: vacancy }
+    cacheTtl: 60
+    input:
+      vehicleTypes:
+        type: string
+        enum: [privateCar, LGV, HGV, CV, coach, motorCycle]
+        default: privateCar
+        description: Vehicle type to report vacancies for
+      parkId: { type: string, in: local, description: "Car park id from carpark_info" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+    response:
+      root: results
+      filter: { park_Id: parkId }
+      limit: 50

@@ -1,0 +1,36 @@
+import { desc, eq } from "drizzle-orm";
+import { db } from "@/db";
+import { apiKeys } from "@/db/schema";
+import { services } from "@/generated/registry";
+import { checkKeyUsable } from "@/lib/api-keys";
+import { requirePageUser } from "@/lib/auth";
+import { siteUrl } from "@/lib/site";
+import { KeysView, type KeyRow } from "./keys-view";
+
+export const metadata = { title: "API keys" };
+
+export default async function KeysPage() {
+  const user = await requirePageUser();
+  const rows = await db.select().from(apiKeys).where(eq(apiKeys.userId, user.id)).orderBy(desc(apiKeys.createdAt));
+  const keys: KeyRow[] = rows
+    .map((row): KeyRow => ({
+      id: row.id,
+      name: row.name,
+      prefix: row.prefix,
+      scopes: row.scopes,
+      callCount: row.callCount,
+      lastUsedAt: row.lastUsedAt?.toISOString() ?? null,
+      expiresAt: row.expiresAt?.toISOString() ?? null,
+      createdAt: row.createdAt.toISOString(),
+      status: checkKeyUsable(row) ?? "active",
+    }))
+    .sort((a, b) => Number(a.status !== "active") - Number(b.status !== "active"));
+
+  return (
+    <KeysView
+      keys={keys}
+      services={services.map((service) => ({ id: service.id, title: service.title }))}
+      endpoint={`${await siteUrl()}/api/mcp/mcp`}
+    />
+  );
+}

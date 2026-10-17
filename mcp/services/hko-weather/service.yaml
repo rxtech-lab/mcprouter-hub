@@ -1,0 +1,86 @@
+id: hko-weather
+title: Hong Kong Observatory Weather
+description: Current weather, forecasts, warnings, earthquakes and the lunar calendar from the Hong Kong Observatory open data API.
+datasets:
+  - hk-hko-rss-current-weather-report
+  - hk-hko-rss-local-weather-forecast
+  - hk-hko-rss-9-day-weather-forecast
+  - hk-hko-rss-weather-warning-summary
+  - hk-hko-rss-weather-warning-information
+  - hk-hko-rss-special-weather-tips
+  - hk-hko-rss-quick-earthquake-messages
+  - hk-hko-rss-locally-felt-earth-tremor-report
+  - hk-hko-rss-gregorian-lunar-calendar-conversion-table
+baseUrl: https://data.weather.gov.hk/weatherAPI/opendata
+lang:
+  param: lang
+  map: { en: en, tc: tc, sc: sc }
+cacheTtl: 300
+tools:
+  - name: hko_current_weather
+    title: Current weather report
+    description: Current weather readings in Hong Kong - temperature by station, humidity, rainfall by district, UV index, warnings in force and the latest update time.
+    path: /weather.php
+    query: { dataType: rhrread }
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language: en, tc (Traditional Chinese) or sc (Simplified Chinese)" }
+    response:
+      pick: [temperature, humidity, rainfall, uvindex, warningMessage, specialWxTips, tcmessage, updateTime, icon]
+  - name: hko_local_forecast
+    title: Local weather forecast
+    description: Today's local weather forecast for Hong Kong, with the general situation, outlook and any tropical cyclone information.
+    path: /weather.php
+    query: { dataType: flw }
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: hko_nine_day_forecast
+    title: 9-day weather forecast
+    description: Nine-day weather forecast for Hong Kong with daily temperature and humidity ranges, wind, weather and probability of significant rain, plus sea and soil temperatures.
+    path: /weather.php
+    query: { dataType: fnd }
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: hko_warning_summary
+    title: Weather warnings in force
+    description: Summary of weather warnings and signals currently in force in Hong Kong (rainstorm, typhoon signals, thunderstorm, hot or cold weather and so on). An empty object means no warnings are in force.
+    path: /weather.php
+    query: { dataType: warnsum }
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: hko_warning_details
+    title: Weather warning details
+    description: Full text of every weather warning currently in force in Hong Kong.
+    path: /weather.php
+    query: { dataType: warningInfo }
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: hko_special_weather_tips
+    title: Special weather tips
+    description: Special weather tips issued by the Hong Kong Observatory, if any.
+    path: /weather.php
+    query: { dataType: swt }
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: hko_earthquake
+    title: Earthquake information
+    description: Quick message about the latest earthquake recorded by the Hong Kong Observatory (magnitude, location, time), or the latest locally felt earth tremor report.
+    path: /earthquake.php
+    input:
+      kind:
+        type: string
+        enum: [qem, feltearthquake]
+        default: qem
+        name: dataType
+        description: "qem: latest earthquake quick message; feltearthquake: latest locally felt earth tremor report"
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: hko_lunar_date
+    title: Gregorian to lunar date
+    description: Convert a Gregorian date to the Chinese lunar calendar date, including the year's heavenly stem, earthly branch and zodiac animal.
+    path: /lunardate.php
+    cacheTtl: 86400
+    input:
+      date:
+        type: string
+        required: true
+        pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+        description: Gregorian date in YYYY-MM-DD format, e.g. 2026-02-17

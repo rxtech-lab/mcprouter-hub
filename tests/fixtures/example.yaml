@@ -1,0 +1,40 @@
+id: example
+title: Example Service
+description: A fixture covering every feature of the YAML spec.
+datasets: [example-dataset]
+baseUrl: https://api.example.test/v1
+lang:
+  param: language
+  map: { en: EN, tc: ZH, sc: ZH }
+cacheTtl: 60
+tools:
+  - name: example_items
+    title: List items
+    description: Items, filtered locally.
+    path: /items/{category}
+    query: { format: json }
+    input:
+      category: { type: string, required: true, transform: lower, description: Item category }
+      lang: { type: string, enum: [en, tc, sc], default: en }
+      name: { type: string, in: local, description: Text in the name }
+      code: { type: string, in: local, transform: upper }
+      limit: { type: integer, minimum: 1, maximum: 10, name: max }
+    response:
+      root: data.items
+      filter: { code: code }
+      search: { input: name, fields: [name_en, name_tc] }
+      pick: [code, name_en]
+      limit: 2
+  - name: example_submit
+    description: POST with a body.
+    method: POST
+    path: /submit
+    body: { fixed: true }
+    input:
+      route: { type: string, required: true, in: body, name: routeName }
+      level: { type: number, enum: [1, 2] }
+  - name: example_custom
+    description: Uses a handler.
+    handler: custom
+    input:
+      flag: { type: boolean, default: false }

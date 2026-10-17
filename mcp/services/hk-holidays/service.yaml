@@ -1,0 +1,25 @@
+id: hk-holidays
+title: Hong Kong Public Holidays
+description: General holidays in Hong Kong, from the 1823 calendar feed.
+datasets:
+  - hk-dpo-statistic-cal
+cacheTtl: 86400
+tools:
+  - name: hk_public_holidays
+    title: Public holidays
+    description: List Hong Kong general (public) holidays with their dates. Optionally limit to one year.
+    handler: holidays
+    input:
+      year: { type: integer, minimum: 2000, maximum: 2100, description: "Only return holidays in this year" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the holiday names" }
+  - name: hk_is_public_holiday
+    title: Is it a public holiday?
+    description: Check whether a given date is a Hong Kong general holiday, and name the holiday if it is.
+    handler: isHoliday
+    input:
+      date:
+        type: string
+        required: true
+        pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+        description: Date in YYYY-MM-DD format
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the holiday name" }

@@ -1,0 +1,70 @@
+id: datagovhk-catalog
+title: DATA.GOV.HK Catalogue
+description: Search the DATA.GOV.HK catalogue of 3,800+ datasets, read dataset details, browse the historical archive and query CSV resources.
+datasets:
+  - hk-dpo-datagovhk1-open-dataset-list
+baseUrl: https://api.data.gov.hk
+cacheTtl: 3600
+tools:
+  - name: datagovhk_search_datasets
+    title: Search datasets
+    description: Search the DATA.GOV.HK catalogue by keyword, provider or category. Each result says whether mcprouter already has a dedicated tool for it. Use datagovhk_dataset_details for resources and download URLs.
+    handler: searchDatasets
+    input:
+      query: { type: string, description: "Keyword in the dataset title or id (English or Chinese), e.g. parking or 天氣" }
+      provider: { type: string, description: "Provider (organization) id, e.g. hk-hko or hk-td" }
+      category: { type: string, description: "Category (group) id, e.g. transport or climate-and-weather" }
+      apiOnly: { type: boolean, default: false, description: "Only return datasets with a real API endpoint" }
+      limit: { type: integer, minimum: 1, maximum: 50, default: 20, description: "Maximum results" }
+  - name: datagovhk_dataset_details
+    title: Dataset details
+    description: Full CKAN metadata for one DATA.GOV.HK dataset - description, provider, update frequency, data dictionary and every resource with its format and URL.
+    baseUrl: https://data.gov.hk
+    path: /{lang}-data/api/3/action/package_show
+    input:
+      id: { type: string, required: true, description: "Dataset id, e.g. hk-hko-rss-current-weather-report" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Metadata language" }
+    response:
+      root: result
+      pick: [name, title, notes, organization, groups, update_frequency, data_dictionary, metadata_modified, resources]
+  - name: datagovhk_archive_list_files
+    title: Historical archive - list files
+    description: List files kept in the DATA.GOV.HK historical archive between two dates, optionally filtered by category, provider, format or a search term.
+    path: /v1/historical-archive/list-files
+    input:
+      start: { type: string, required: true, pattern: "^\\d{8}$", description: "Start date YYYYMMDD" }
+      end: { type: string, required: true, pattern: "^\\d{8}$", description: "End date YYYYMMDD" }
+      category: { type: string, description: "Category id, e.g. transport" }
+      provider: { type: string, description: "Provider id, e.g. hk-td" }
+      format: { type: string, description: "File format, e.g. csv or json" }
+      search: { type: string, description: "Search term" }
+      max: { type: integer, minimum: 1, maximum: 100, default: 20, description: "Maximum files" }
+      skip: { type: integer, minimum: 0, description: "Files to skip, for paging" }
+    response:
+      root: files
+  - name: datagovhk_archive_file_versions
+    title: Historical archive - file versions
+    description: Timestamps of the archived versions of one file between two dates. Pass a timestamp to datagovhk_archive_get_file.
+    path: /v1/historical-archive/list-file-versions
+    input:
+      url: { type: string, required: true, description: "The file's original URL" }
+      start: { type: string, required: true, pattern: "^\\d{8}$", description: "Start date YYYYMMDD" }
+      end: { type: string, required: true, pattern: "^\\d{8}$", description: "End date YYYYMMDD" }
+  - name: datagovhk_archive_get_file
+    title: Historical archive - get file
+    description: Content of an archived version of a file. Long files are cut off; the result says how many characters were omitted.
+    handler: getArchivedFile
+    input:
+      url: { type: string, required: true, description: "The file's original URL" }
+      time: { type: string, required: true, pattern: "^\\d{8}-\\d{4}$", description: "Version timestamp YYYYMMDD-HHMM from datagovhk_archive_file_versions" }
+      maxChars: { type: integer, minimum: 1000, maximum: 50000, default: 20000, description: "Maximum characters to return" }
+  - name: datagovhk_filter_csv
+    title: Query a CSV resource
+    description: "Filter and sort rows of a CSV resource on DATA.GOV.HK with the v2/filter API, instead of downloading the whole file. Columns are 1-based. Operators: eq, ne, ct (contains), bw (begins with), ew (ends with), gt, ge, lt, le."
+    handler: filterCsv
+    input:
+      resource: { type: string, required: true, description: "URL of the CSV resource" }
+      section: { type: integer, minimum: 1, default: 1, description: "Sheet or section number" }
+      filters: { type: string, description: 'JSON array of [column, operator, [values]], e.g. [[1,"eq",["Central"]]]' }
+      sorts: { type: string, description: 'JSON array of [column, "asc"|"desc"], e.g. [[2,"desc"]]' }
+      limit: { type: integer, minimum: 1, maximum: 500, default: 100, description: "Maximum rows" }

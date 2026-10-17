@@ -1,0 +1,22 @@
+id: ha-aed
+title: Hospital Authority A&E Waiting Times
+description: Current waiting times at the accident and emergency departments of Hong Kong public hospitals, by triage category.
+datasets:
+  - hospital-hadata-ae-waiting-time
+baseUrl: https://www.ha.org.hk/opendata/aed
+lang:
+  param: lang
+  in: path
+  map: { en: en, tc: tc, sc: sc }
+cacheTtl: 300
+tools:
+  - name: ha_aed_waiting_times
+    title: A&E waiting times
+    description: "Waiting times at every public hospital A&E department. t1wt/t2wt are for critical and emergency cases; t3p50/t3p95 are the median and 95th percentile wait for urgent cases; t45p50/t45p95 for semi-urgent and non-urgent cases."
+    path: /aedwtdata2-{lang}.json
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+      hospital: { type: string, in: local, description: "Text in the hospital name to filter by" }
+    response:
+      root: waitTime
+      search: { input: hospital, fields: [hospName] }
