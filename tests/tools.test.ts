@@ -235,6 +235,121 @@ const cases: Case[] = [
     error: /filters must be a JSON array/,
   },
 
+  // epd-aqhi
+  {
+    tool: "aqhi_current",
+    input: { station: "central" },
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/aqhi_ind_rss_Eng.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Environmental Protection Department - AQHI</title><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><title>Central/Western</title><link>https://www.aqhi.gov.hk/en/aqhi/past-24-hours-aqhi.html?mid=0</link><pubDate>Sun, 18 Oct 2026 22:30:00 +0800</pubDate><description><![CDATA[Central/Western - General Stations: 3 Low - Sun, 18 Oct 2026 22:30]]></description></item>`,
+      `<item><title>Mong Kok</title><link>https://www.aqhi.gov.hk/en/aqhi/past-24-hours-aqhi.html?mid=17</link><pubDate>Sun, 18 Oct 2026 22:30:00 +0800</pubDate><description><![CDATA[Mong Kok - Roadside Stations: 8 Very High - Sun, 18 Oct 2026 22:30]]></description></item>`,
+      `<item><title>Central</title><link>https://www.aqhi.gov.hk/en/aqhi/past-24-hours-aqhi.html?mid=16</link><pubDate>Sun, 18 Oct 2026 22:30:00 +0800</pubDate><description><![CDATA[Central - Roadside Stations: 10+ Serious - Sun, 18 Oct 2026 22:30]]></description></item>`,
+      `</channel></rss>`,
+    ].join(""),
+    // "central" is exactly the roadside station, so Central/Western is left out.
+    data: { updated: "2026-10-18T22:30:00+08:00", stations: [{ station: "Central", type: "roadside", aqhi: 10, risk: "serious", riskLabel: "Serious" }] },
+    ttl: 600,
+  },
+  {
+    name: "aqhi_current finds stations by an English name in Chinese and filters by type",
+    tool: "aqhi_current",
+    input: { station: "sha", type: "general", lang: "tc" },
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/aqhi_ind_rss_ChT.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><title>深水埗</title><description><![CDATA[深水埗 - 一般監測站: 2 低 - 2026年10月18日 (星期日)]]></description></item>`,
+      `<item><title>沙田</title><description><![CDATA[沙田 - 一般監測站: 4 中 - 2026年10月18日 (星期日)]]></description></item>`,
+      `<item><title>旺角</title><description><![CDATA[旺角 - 路邊監測站: 3 低 - 2026年10月18日 (星期日)]]></description></item>`,
+      `</channel></rss>`,
+    ].join(""),
+    data: {
+      updated: "2026-10-18T22:30:00+08:00",
+      stations: [
+        { station: "深水埗", type: "general", aqhi: 2, risk: "low", riskLabel: "低" },
+        { station: "沙田", type: "general", aqhi: 4, risk: "moderate", riskLabel: "中" },
+      ],
+    },
+  },
+  {
+    tool: "aqhi_forecast",
+    input: {},
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/aqhirss_Eng.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Environmental Protection Department - AQHI</title><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><title>HKSAR Air Quality Health Index at : Sun, 18 Oct 2026 22:30:00 +0800 Current Condition : </title><description><![CDATA[<p>General Stations: 2 to 3 (Health Risk: Low)</p><p>Roadside Stations: 3 (Health Risk: Low)</p>]]></description></item>`,
+      `<item><title>Forecast of Health Risk: </title><description><![CDATA[<p>&lt;Tomorrow A.M.&gt;<p>General Stations: Low to Moderate</p><p>Roadside Stations: Moderate</p></p><p>&lt;Tomorrow P.M.&gt;<p>General Stations: Low</p><p>Roadside Stations: Low to Moderate</p></p>]]></description></item>`,
+      `</channel></rss>`,
+    ].join(""),
+    data: {
+      updated: "2026-10-18T22:30:00+08:00",
+      current: {
+        general: { aqhiMin: 2, aqhiMax: 3, risk: "Low", riskLevels: ["low"] },
+        roadside: { aqhiMin: 3, aqhiMax: 3, risk: "Low", riskLevels: ["low"] },
+      },
+      forecast: [
+        { period: "Tomorrow A.M.", general: { risk: "Low to Moderate", riskLevels: ["low", "moderate"] }, roadside: { risk: "Moderate", riskLevels: ["moderate"] } },
+        { period: "Tomorrow P.M.", general: { risk: "Low", riskLevels: ["low"] }, roadside: { risk: "Low to Moderate", riskLevels: ["low", "moderate"] } },
+      ],
+    },
+    ttl: 600,
+  },
+  {
+    name: "aqhi_forecast reads the Simplified Chinese feed",
+    tool: "aqhi_forecast",
+    input: { lang: "sc" },
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/aqhirss_ChS.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><title>香港空气质素健康指数</title><description><![CDATA[<p>一般监测站: 7 to 10+ (健康风险:高 至 严重)</p><p>路边监测站: 3 (健康风险:低)</p>]]></description></item>`,
+      `<item><title>健康风险预测：</title><description><![CDATA[<p>&lt;明天 上午&gt;<p>一般监测站: 甚高</p><p>路边监测站: 低 至 中</p></p>]]></description></item>`,
+      `</channel></rss>`,
+    ].join(""),
+    data: {
+      updated: "2026-10-18T22:30:00+08:00",
+      current: {
+        general: { aqhiMin: 7, aqhiMax: 10, risk: "高 至 严重", riskLevels: ["high", "serious"] },
+        roadside: { aqhiMin: 3, aqhiMax: 3, risk: "低", riskLevels: ["low"] },
+      },
+      forecast: [{ period: "明天 上午", general: { risk: "甚高", riskLevels: ["very_high"] }, roadside: { risk: "低 至 中", riskLevels: ["low", "moderate"] } }],
+    },
+  },
+  {
+    tool: "aqhi_past_24h",
+    input: { station: "旺角" },
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/24aqhi_Eng.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><AQHI24HrReport><title>Environmental Protection Department - AQHI</title><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><type>General Stations</type><StationName>Central/Western</StationName><DateTime>Sun, 18 Oct 2026 21:00:00 +0800</DateTime><aqhi>3</aqhi></item>`,
+      `<item><type>Roadside Stations</type><StationName>Mong Kok</StationName><DateTime>Sun, 18 Oct 2026 20:00:00 +0800</DateTime><aqhi>4</aqhi></item>`,
+      `<item><type>Roadside Stations</type><StationName>Mong Kok</StationName><DateTime>Sun, 18 Oct 2026 21:00:00 +0800</DateTime><aqhi></aqhi></item>`,
+      `<item><type>Roadside Stations</type><StationName>Mong Kok</StationName><DateTime>Sun, 18 Oct 2026 22:00:00 +0800</DateTime><aqhi>3</aqhi></item>`,
+      `</AQHI24HrReport>`,
+    ].join(""),
+    data: {
+      updated: "2026-10-18T22:30:00+08:00",
+      stations: [
+        {
+          station: "Mong Kok",
+          type: "roadside",
+          highest: { time: "2026-10-18T20:00:00+08:00", aqhi: 4, risk: "moderate" },
+          readings: [
+            { time: "2026-10-18T20:00:00+08:00", aqhi: 4, risk: "moderate" },
+            { time: "2026-10-18T21:00:00+08:00", aqhi: null, risk: null },
+            { time: "2026-10-18T22:00:00+08:00", aqhi: 3, risk: "low" },
+          ],
+        },
+      ],
+    },
+    ttl: 600,
+  },
+  {
+    name: "aqhi_past_24h needs a station",
+    tool: "aqhi_past_24h",
+    input: {},
+    error: /station/,
+  },
+
   // epd-beach
   {
     tool: "beach_water_quality",

@@ -135,6 +135,25 @@ describe("card builders", () => {
     ]);
   });
 
+  it("colours AQHI stations by health risk and groups them by type", () => {
+    const card = cardForToolResult(
+      result("epd-aqhi", "aqhi_current", {}, {
+        updated: "2026-10-18T22:30:00+08:00",
+        stations: [
+          { station: "Central/Western", type: "general", aqhi: 3, risk: "low", riskLabel: "Low" },
+          { station: "Central", type: "roadside", aqhi: 10, risk: "serious", riskLabel: "Serious" },
+        ],
+      }),
+    )!;
+    expect(card).toMatchObject({ accent: "#00843d", badge: "AQHI", subtitle: "Updated Sun 18 Oct, 22:30" });
+    expect(card.blocks).toEqual([
+      { kind: "section", title: "General stations" },
+      { kind: "row", leading: { text: "3", tone: "success" }, title: "Central/Western", trailing: [{ text: "Low", tone: "success" }] },
+      { kind: "section", title: "Roadside stations" },
+      { kind: "row", leading: { text: "10+", tone: "danger" }, title: "Central", trailing: [{ text: "Serious", tone: "danger" }] },
+    ]);
+  });
+
   it("has no card for tools whose result doesn't picture well, or data a builder can't read", () => {
     expect(cardForToolResult(result("datagovhk-catalog", "datagovhk_archive_get_file", {}, { content: "a,b" }))).toBeNull();
     expect(cardForToolResult(result("hko-weather", "hko_earthquake", {}, {}))).toBeNull();

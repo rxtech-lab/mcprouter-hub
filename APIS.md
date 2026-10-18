@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **27 of 3819 implemented**, 3792 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **28 of 3819 implemented**, 3791 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -274,7 +274,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 
 | ID | API | Type | Provider | Status | Service |
 |---|---|---|---|---|---|
-| `API-0031` | [Air Quality Health Index](https://data.gov.hk/en-data/dataset/hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-0031` | [Air Quality Health Index](https://data.gov.hk/en-data/dataset/hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations) | API | Environmental Protection Department | ✅ Implemented | [Air Quality Health Index](mcp/services/epd-aqhi/service.yaml) |
 | `API-0039` | [Weather and radiation level report](https://data.gov.hk/en-data/dataset/hk-hko-rss-weather-and-radiation-level-report) | API | Hong Kong Observatory | 🕒 Coming soon | — |
 | `API-0040` | [Beach water quality](https://data.gov.hk/en-data/dataset/hk-epd-beachteam-beach-water-quality-grading) | API | Environmental Protection Department | ✅ Implemented | [Beach Water Quality](mcp/services/epd-beach/service.yaml) |
 | `API-0041` | [Red tide](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-red-tide-location) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
