@@ -66,6 +66,13 @@ const holidayFeed = BOM + JSON.stringify({
   ],
 });
 
+/** The EPD beach grading RSS, trimmed: one item per [code, title, latitude, longitude]. */
+function beachFeed(lang: string, items: Array<[string, string, string, string]>) {
+  const item = ([code, title, lat, lon]: [string, string, string, string]) =>
+    `<item><title>${title}</title><link>https://cd.epic.epd.gov.hk/EPICDI/beach/gradingreport/${code}/?lang=${lang}</link><description>&lt;table border='1'&gt;&lt;tr&gt;&lt;td width='150px'&gt;Latitude (N):&lt;/td&gt;&lt;td width='150px'&gt;${lat}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width='150px'&gt;Longitude (E):&lt;/td&gt;&lt;td&gt;${lon}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><pubDate>Fri, 16 Oct 2026 14:04:42</pubDate></item>`;
+  return `<?xml version='1.0' encoding='utf-8'?><?xml-stylesheet type='text/xsl' href='../beach.xsl'?><rss version="2.0"><channel><title>EPD beach water quality information</title><pubDate>Fri, 16 Oct 2026 14:04:42</pubDate><lastBuildDate>Fri, 16 Oct 2026 14:04:42</lastBuildDate>${items.map(item).join("")}</channel></rss>`;
+}
+
 const cases: Case[] = [
   // citybus
   {
@@ -226,6 +233,64 @@ const cases: Case[] = [
     tool: "datagovhk_filter_csv",
     input: { resource: "https://td.test/a.csv", filters: "district = Central" },
     error: /filters must be a JSON array/,
+  },
+
+  // epd-beach
+  {
+    tool: "beach_water_quality",
+    input: { district: "southern", maxGrade: 2 },
+    request: { url: "https://cd.epic.epd.gov.hk/beachpsi/en/beach2.rss" },
+    reply: beachFeed("en", [
+      ["ANG", "Anglers' Beach  water quality was rated as Fair(Grade 2)", `22° 21' 53"`, `114° 3' 21"`],
+      ["DW", "Deep Water Bay Beach water quality was rated as Poor(Grade 3)", `22° 14' 20"`, `114° 11' 2"`],
+      ["RB", "Repulse Bay Beach water quality was rated as Good(Grade 1)", `22° 14' 7"`, `114° 11' 47"`],
+    ]),
+    data: {
+      updated: "2026-10-16T14:04:42+08:00",
+      count: 1,
+      beaches: [
+        { code: "RB", name: "Repulse Bay Beach", district: "Southern", grade: 1, rating: "Good", latitude: 22.23528, longitude: 114.19639, report: "https://cd.epic.epd.gov.hk/EPICDI/beach/gradingreport/RB/?lang=en" },
+      ],
+    },
+    ttl: 1800,
+  },
+  {
+    name: "beach_water_quality finds a beach by its English name and answers in Chinese",
+    tool: "beach_water_quality",
+    input: { beach: "anglers", lang: "tc" },
+    request: { url: "https://cd.epic.epd.gov.hk/beachpsi/tc/beach2.rss" },
+    reply: beachFeed("zh", [
+      ["ANG", "釣魚灣泳灘的水質被評為一般(二級)", `22° 21' 53"`, `114° 3' 21"`],
+      ["XYZ", "新泳灘的水質暫停評級", `22° 0' 0"`, `114° 0' 0"`],
+    ]),
+    lookups: {
+      "https://cd.epic.epd.gov.hk/beachpsi/en/beach2.rss": beachFeed("en", [
+        ["ANG", "Anglers' Beach  water quality was rated as Fair(Grade 2)", `22° 21' 53"`, `114° 3' 21"`],
+        ["XYZ", "New Beach water quality grading suspended", `22° 0' 0"`, `114° 0' 0"`],
+      ]),
+      "https://cd.epic.epd.gov.hk/beachpsi/sc/beach2.rss": beachFeed("zh_cn", [["ANG", "钓鱼湾泳滩的水质被评为一般(二级)", `22° 21' 53"`, `114° 3' 21"`]]),
+    },
+    data: {
+      updated: "2026-10-16T14:04:42+08:00",
+      count: 1,
+      beaches: [
+        { code: "ANG", name: "釣魚灣泳灘", district: "荃灣", grade: 2, rating: "一般", latitude: 22.36472, longitude: 114.05583, report: "https://cd.epic.epd.gov.hk/EPICDI/beach/gradingreport/ANG/?lang=zh" },
+      ],
+    },
+  },
+  {
+    name: "beach_water_quality keeps a beach the feed gives no grade for",
+    tool: "beach_water_quality",
+    input: { lang: "sc" },
+    request: { url: "https://cd.epic.epd.gov.hk/beachpsi/sc/beach2.rss" },
+    reply: beachFeed("zh_cn", [["XYZ", "新泳滩的水质暂停评级", `22° 0' 0"`, `114° 0' 0"`]]),
+    data: {
+      updated: "2026-10-16T14:04:42+08:00",
+      count: 1,
+      beaches: [
+        { code: "XYZ", name: "新泳滩", district: null, grade: null, rating: null, latitude: 22, longitude: 114, report: "https://cd.epic.epd.gov.hk/EPICDI/beach/gradingreport/XYZ/?lang=zh_cn", note: "新泳滩的水质暂停评级" },
+      ],
+    },
   },
 
   // gmb (green minibus)

@@ -2,6 +2,7 @@ import type { Visual } from "@/lib/agent/display-tools";
 import { uiSpecCard } from "@/lib/cards/ui-card";
 import type { Card, CardBuilder, CardInput } from "@/mcp/apps/card";
 import { buildCard as catalogCard } from "@/mcp/services/datagovhk-catalog/card";
+import { buildCard as beachCard } from "@/mcp/services/epd-beach/card";
 import { buildCard as aedCard } from "@/mcp/services/ha-aed/card";
 import { buildCard as borderCard } from "@/mcp/services/hk-border/card";
 import { buildCard as busCard } from "@/mcp/services/hk-bus/card";
@@ -18,6 +19,7 @@ import { buildCard as carparkCard } from "@/mcp/services/td-carpark/card";
 
 const BUILDERS: Record<string, CardBuilder> = {
   "datagovhk-catalog": catalogCard,
+  "epd-beach": beachCard,
   "ha-aed": aedCard,
   "hk-border": borderCard,
   "hk-bus": busCard,

@@ -107,6 +107,19 @@ describe("card builders", () => {
     ]);
   });
 
+  it("lists the worst-graded beaches first and flags them", () => {
+    const beach = (code: string, name: string, grade: number, rating: string) => ({ code, name, district: "Southern", grade, rating, latitude: 22.2, longitude: 114.2, report: null });
+    const card = cardForToolResult(
+      result("epd-beach", "beach_water_quality", {}, { updated: "2026-10-16T14:04:42+08:00", count: 2, beaches: [beach("RB", "Repulse Bay Beach", 1, "Good"), beach("DW", "Deep Water Bay Beach", 3, "Poor")] }),
+    )!;
+    expect(card).toMatchObject({ badge: "≈", accent: "#00838f", subtitle: "2 beaches · graded Fri 16 Oct, 14:04" });
+    expect(card.blocks).toEqual([
+      { kind: "notice", text: "Below the swimming standard: Deep Water Bay Beach", tone: "warning" },
+      { kind: "row", leading: { text: "DW" }, title: "Deep Water Bay Beach", subtitle: "Southern", trailing: [{ text: "Poor · 3", tone: "warning" }] },
+      { kind: "row", leading: { text: "RB" }, title: "Repulse Bay Beach", subtitle: "Southern", trailing: [{ text: "Good · 1", tone: "success" }] },
+    ]);
+  });
+
   it("has no card for tools whose result doesn't picture well, or data a builder can't read", () => {
     expect(cardForToolResult(result("datagovhk-catalog", "datagovhk_archive_get_file", {}, { content: "a,b" }))).toBeNull();
     expect(cardForToolResult(result("hko-weather", "hko_earthquake", {}, {}))).toBeNull();
