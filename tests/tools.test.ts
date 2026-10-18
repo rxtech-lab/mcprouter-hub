@@ -353,6 +353,129 @@ const cases: Case[] = [
     ttl: 300,
   },
 
+  // hk-border
+  {
+    tool: "border_waiting_times",
+    input: { controlPoint: "lo wu" },
+    request: { url: "https://secure1.info.gov.hk/immd/mobileapps/2bb9ae17/data/CPQueueTimeR.json" },
+    reply: { LWS: { arrQueue: 1, depQueue: 0 }, SBC: { arrQueue: 99, depQueue: 99 } },
+    lookups: { "https://secure1.info.gov.hk/immd/mobileapps/2bb9ae17/data/CPQueueTimeV.json": { LWS: { arrQueue: 2, depQueue: 4 }, SBC: { arrQueue: 99, depQueue: 99 } } },
+    data: {
+      controlPoints: [
+        {
+          code: "LWS",
+          name: "Lo Wu",
+          residents: { arrival: { status: "busy", label: "Busy", wait: "generally under 30 min" }, departure: { status: "normal", label: "Normal", wait: "generally under 15 min" } },
+          visitors: { arrival: { status: "very_busy", label: "Very busy", wait: "generally 45 min or more" }, departure: { status: "maintenance", label: "System under maintenance", wait: null } },
+        },
+      ],
+    },
+    ttl: 300,
+  },
+  {
+    name: "border_waiting_times finds a control point by its Chinese name",
+    tool: "border_waiting_times",
+    input: { controlPoint: "深圳灣", lang: "tc" },
+    request: { url: "https://secure1.info.gov.hk/immd/mobileapps/2bb9ae17/data/CPQueueTimeR.json" },
+    reply: { LWS: { arrQueue: 0, depQueue: 0 }, SBC: { arrQueue: 99, depQueue: 0 } },
+    lookups: { "https://secure1.info.gov.hk/immd/mobileapps/2bb9ae17/data/CPQueueTimeV.json": { LWS: { arrQueue: 0, depQueue: 0 }, SBC: { arrQueue: 99, depQueue: 7 } } },
+    data: {
+      controlPoints: [
+        {
+          code: "SBC",
+          name: "深圳灣",
+          residents: { arrival: { status: "closed", label: "非服務時間", wait: null }, departure: { status: "normal", label: "正常", wait: "一般少於 15 分鐘" } },
+          visitors: { arrival: { status: "closed", label: "非服務時間", wait: null }, departure: { status: "unknown", label: "未知", wait: null } },
+        },
+      ],
+    },
+  },
+  {
+    tool: "border_daily_passengers",
+    input: { controlPoint: "lo" },
+    request: { url: "https://www.immd.gov.hk/opendata/eng/transport/immigration_clearance/statistics_on_daily_passenger_traffic.csv" },
+    reply: [
+      `${BOM}Date,Control Point,Arrival / Departure,Hong Kong Residents,Mainland Visitors,Other Visitors,Total,`,
+      "16-10-2026,Lo Wu,Arrival,1,2,3,6,",
+      "17-10-2026,Airport,Arrival,10,20,30,60,",
+      "17-10-2026,Lo Wu,Arrival,100,200,300,600,",
+      "17-10-2026,Lo Wu,Departure,400,500,600,1500,",
+      "17-10-2026,Lok Ma Chau,Departure,1,1,1,3,",
+    ].join("\n"),
+    data: {
+      date: "2026-10-17",
+      latestDate: "2026-10-17",
+      total: {
+        arrival: { hongKongResidents: 100, mainlandVisitors: 200, otherVisitors: 300, total: 600 },
+        departure: { hongKongResidents: 401, mainlandVisitors: 501, otherVisitors: 601, total: 1503 },
+      },
+      controlPoints: [
+        { controlPoint: "Lo Wu", arrival: { hongKongResidents: 100, mainlandVisitors: 200, otherVisitors: 300, total: 600 }, departure: { hongKongResidents: 400, mainlandVisitors: 500, otherVisitors: 600, total: 1500 } },
+        { controlPoint: "Lok Ma Chau", arrival: null, departure: { hongKongResidents: 1, mainlandVisitors: 1, otherVisitors: 1, total: 3 } },
+      ],
+    },
+    ttl: 21600,
+  },
+  {
+    name: "border_daily_passengers reads a past day in Chinese and says when a day is missing",
+    tool: "border_daily_passengers",
+    input: { date: "2026-10-16", lang: "tc" },
+    request: { url: "https://www.immd.gov.hk/opendata/hkt/transport/immigration_clearance/statistics_on_daily_passenger_traffic.csv" },
+    reply: `${BOM}日期,管制站,入境 / 出境,香港居民,內地訪客,其他訪客,總計\n16-10-2026,羅湖,入境,1,2,3,6\n17-10-2026,羅湖,出境,1,2,3,6\n`,
+    data: {
+      date: "2026-10-16",
+      latestDate: "2026-10-17",
+      total: { arrival: { hongKongResidents: 1, mainlandVisitors: 2, otherVisitors: 3, total: 6 }, departure: { hongKongResidents: 0, mainlandVisitors: 0, otherVisitors: 0, total: 0 } },
+      controlPoints: [{ controlPoint: "羅湖", arrival: { hongKongResidents: 1, mainlandVisitors: 2, otherVisitors: 3, total: 6 }, departure: null }],
+    },
+  },
+  {
+    tool: "border_annual_traffic",
+    input: { year: 2025 },
+    request: { url: "https://www.immd.gov.hk/opendata/eng/transport/immigration_clearance/statistics_passenger_visitor_vehicular_traffic.csv" },
+    reply: `${BOM}Year,Passenger Traffic,Passenger Traffic - Air,Passenger Traffic - Sea,Passenger Traffic - Land,Vehicular traffic to and from the Mainland,Visitors\n2024,298.5,41.9,8.8,247.8,15.5,89\n2025,334.6,45.3,8.4,280.9,18.1,99.7`,
+    data: {
+      unit: "million trips",
+      years: [{ year: 2025, passengerTrips: 334.6, passengerTripsByAir: 45.3, passengerTripsBySea: 8.4, passengerTripsByLand: 280.9, vehicleTripsToAndFromMainland: 18.1, visitorTrips: 99.7 }],
+    },
+    ttl: 86400,
+  },
+  {
+    tool: "border_passenger_throughput",
+    input: { year: 2025, controlPoint: "h" },
+    request: { url: "https://www.customs.gov.hk/hcms/filemanager/common/csv/statistics/passenger_entry_exit_en.csv" },
+    reply: [
+      `${BOM}Control Points,Year,Passenger Throughput '000`,
+      "OVERALL,2025,334632",
+      "HK International Airport,2024,41876",
+      "HK International Airport,2025,45324",
+      "Hung Hom Station (Through Train) (Passenger clearance services have been temporarily suspended starting from 30 January 2020.),2025,0",
+    ].join("\r\n"),
+    data: [
+      { controlPoint: "HK International Airport", year: 2025, passengersThousands: 45324 },
+      { controlPoint: "Hung Hom Station (Through Train)", note: "Passenger clearance services have been temporarily suspended starting from 30 January 2020.", year: 2025, passengersThousands: 0 },
+    ],
+    ttl: 86400,
+  },
+  {
+    tool: "border_vehicle_throughput",
+    input: { quarter: 2, lang: "sc" },
+    request: { url: "https://www.customs.gov.hk/hcms/filemanager/common/csv/statistics/passenger_land_sc.csv" },
+    // The Simplified Chinese file ends its header line with a bare CR.
+    reply: `${BOM}陆路边境管制站,车,年度,季度,车辆流量-千次\r总计,总计,2025,第2季,9\r\n深圳湾,总计,2025,第2季,6\r\n深圳湾,货运车,2025,第2季,2\r\n深圳湾,客运车,2025,第2季,1\r\n深圳湾,私家车,2025,第2季,3\r\n深圳湾,总计,2026,第1季,7\r\n深圳湾,总计,2026,第2季,8\r\n`,
+    data: [
+      { controlPoint: "深圳湾", year: 2026, quarter: 2, total: 8, goodsVehicles: null, passengerVehicles: null, privateCars: null },
+    ],
+  },
+  {
+    name: "border_vehicle_throughput pivots one year's vehicle types",
+    tool: "border_vehicle_throughput",
+    input: { year: 2025, controlPoint: "shenzhen" },
+    request: { url: "https://www.customs.gov.hk/hcms/filemanager/common/csv/statistics/passenger_land_en.csv" },
+    reply: `${BOM}Land Boundary Control Points,Vehicle,Year,Quarter,Vehicular Throughput '000\nOVERALL,Total,2025,Q2,9\nShenzhen Bay,Total,2025,Q2,6\nShenzhen Bay,Goods Vehicles,2025,Q2,2\nShenzhen Bay,Passenger Vehicles,2025,Q2,1\nShenzhen Bay,Private Cars,2025,Q2,3\nShenzhen Bay,Total,2026,Q1,7\n`,
+    data: [{ controlPoint: "Shenzhen Bay", year: 2025, quarter: 2, total: 6, goodsVehicles: 2, passengerVehicles: 1, privateCars: 3 }],
+  },
+
   // hk-holidays
   {
     tool: "hk_public_holidays",

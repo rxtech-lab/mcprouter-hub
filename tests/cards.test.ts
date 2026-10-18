@@ -82,6 +82,31 @@ describe("card builders", () => {
     ]);
   });
 
+  it("colours border queues by how busy they are", () => {
+    const queue = (status: string, label: string) => ({ status, label, wait: null });
+    const card = cardForToolResult(
+      result("hk-border", "border_waiting_times", {}, {
+        controlPoints: [
+          {
+            code: "LWS",
+            name: "Lo Wu",
+            residents: { arrival: queue("very_busy", "Very busy"), departure: queue("closed", "Outside service hours") },
+            visitors: { arrival: queue("normal", "Normal"), departure: queue("busy", "Busy") },
+          },
+        ],
+      }),
+    )!;
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        leading: { text: "LWS" },
+        title: "Lo Wu",
+        subtitle: "Visitors: in Normal, out Busy",
+        trailing: [{ text: "In Very busy", tone: "danger" }, { text: "Out Outside service hours", tone: "neutral" }],
+      },
+    ]);
+  });
+
   it("has no card for tools whose result doesn't picture well, or data a builder can't read", () => {
     expect(cardForToolResult(result("datagovhk-catalog", "datagovhk_archive_get_file", {}, { content: "a,b" }))).toBeNull();
     expect(cardForToolResult(result("hko-weather", "hko_earthquake", {}, {}))).toBeNull();

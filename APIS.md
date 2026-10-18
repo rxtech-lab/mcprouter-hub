@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **19 of 3819 implemented**, 3800 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **24 of 3819 implemented**, 3795 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -35,7 +35,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0024` | [Special traffic news](https://data.gov.hk/en-data/dataset/hk-td-tis_19-special-traffic-news-v2) | API | Transport Department | 🕒 Coming soon | — |
 | `API-0025` | [Journey time indicators](https://data.gov.hk/en-data/dataset/hk-td-sm_8-journey-time-indicators-v2) | API | Transport Department | 🕒 Coming soon | — |
 | `API-0026` | [Traffic snapshot images](https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images) | API | Transport Department | 🕒 Coming soon | — |
-| `API-0027` | [Land boundary control point waiting times](https://data.gov.hk/en-data/dataset/hk-immd-set28-land-boundary-control-points-waiting-time) | API | Immigration Department | 🕒 Coming soon | — |
+| `API-0027` | [Land boundary control point waiting times](https://data.gov.hk/en-data/dataset/hk-immd-set28-land-boundary-control-points-waiting-time) | API | Immigration Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
 | `API-0028` | [Metered parking spaces](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) | API | Transport Department | 🕒 Coming soon | — |
 | `API-0029` | [Kowloon East parking vacancy](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) | API | Development Bureau | 🕒 Coming soon | — |
 | `API-0121` | [Taxi Fleet Information (Amigo)](https://data.gov.hk/en-data/dataset/amigo-tis_41-taxi-fleet-information-amigo) | API | Amigo (Taxi Fleet Licensee) | 🕒 Coming soon | — |
@@ -82,8 +82,8 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1238` | [Water Dispensers in Civil Aviation Department](https://data.gov.hk/en-data/dataset/hk-cad-cadpsi1-water-dispensers-in-cad) | Files | Civil Aviation Department | 🕒 Coming soon | — |
 | `API-1264` | [Public Piers](https://data.gov.hk/en-data/dataset/hk-cedd-csu-public-piers) | API | Civil Engineering and Development Department | 🕒 Coming soon | — |
 | `API-1294` | [Electric Vehicle Charging Stations](https://data.gov.hk/en-data/dataset/clp-team1-electric-vehicle-charging-stations) | API | CLP Power Hong Kong Limited | 🕒 Coming soon | — |
-| `API-1424` | [Customs Statistics on Control Points Passenger Throughput](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-passenger-clearance) | Files | Customs and Excise Department | 🕒 Coming soon | — |
-| `API-1427` | [Customs Statistics on Land Boundary Control Points Vehicular Throughput](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-vehicle-clearance) | API | Customs and Excise Department | 🕒 Coming soon | — |
+| `API-1424` | [Customs Statistics on Control Points Passenger Throughput](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-passenger-clearance) | Files | Customs and Excise Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
+| `API-1427` | [Customs Statistics on Land Boundary Control Points Vehicular Throughput](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-vehicle-clearance) | API | Customs and Excise Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
 | `API-1541` | [Estimated arrival time of a specific bus stop for Citybus and New Lantao Bus](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-transport-bus-route-list-and-eta-spcific-bus-stop) | API | Digital Policy Office | 🕒 Coming soon | — |
 | `API-1543` | [Journey Time Indicators (City Dashboard Version)](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk2-city-dashboard-journey-time) | Files | Digital Policy Office | 🕒 Coming soon | — |
 | `API-1545` | [Parking Vacancy Data (City Dashboard Version)](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk2-city-dashboard-parking-vacancy) | Files | Digital Policy Office | 🕒 Coming soon | — |
@@ -117,9 +117,9 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-2412` | [HKSTP Carpark space utilization](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-carpark-utilization) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
 | `API-2413` | [HKSTP Carpark availability – Space available](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-carpark-vacancy) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
 | `API-2421` | [Public transportation means available to/from Hong Kong Science Park](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-park-info-public-transportation-list) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
-| `API-2501` | [Statistics on Daily Passenger Traffic](https://data.gov.hk/en-data/dataset/hk-immd-set5-statistics-daily-passenger-traffic) | Files | Immigration Department | 🕒 Coming soon | — |
+| `API-2501` | [Statistics on Daily Passenger Traffic](https://data.gov.hk/en-data/dataset/hk-immd-set5-statistics-daily-passenger-traffic) | Files | Immigration Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
 | `API-2502` | [Statistics on Passenger Traffic for Festive Periods](https://data.gov.hk/en-data/dataset/hk-immd-set5-statistics-passenger-traffic-festive-period) | Files | Immigration Department | 🕒 Coming soon | — |
-| `API-2503` | [Statistics on Passenger, Visitor and Vehicular Traffic](https://data.gov.hk/en-data/dataset/hk-immd-set5-statistics-passenger-visitor-vehicular-traffic) | Files | Immigration Department | 🕒 Coming soon | — |
+| `API-2503` | [Statistics on Passenger, Visitor and Vehicular Traffic](https://data.gov.hk/en-data/dataset/hk-immd-set5-statistics-passenger-visitor-vehicular-traffic) | Files | Immigration Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
 | `API-2944` | [Taxi Fleet Information (Joie)](https://data.gov.hk/en-data/dataset/joie-tis_43-taxi-fleet-information-joie) | API | Joie (Taxi Fleet Licensee) | 🕒 Coming soon | — |
 | `API-3269` | [Areas where Bright Light Fishing is Permitted](https://data.gov.hk/en-data/dataset/hk-md-hydro-areas-where-bright-light-fishing-is-permitted) | API | Marine Department | 🕒 Coming soon | — |
 | `API-3270` | [Calling-in Points](https://data.gov.hk/en-data/dataset/hk-md-hydro-calling-in-points) | API | Marine Department | 🕒 Coming soon | — |
