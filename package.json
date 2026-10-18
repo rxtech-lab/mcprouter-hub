@@ -15,6 +15,7 @@
     "postinstall": "bun run codegen",
     "theme": "bun scripts/theme.ts",
     "tracker:report": "bun scripts/tracker-report.ts",
+    "live-check": "bun --conditions=react-server scripts/live-check.ts",
     "catalog:sync": "bun --conditions=react-server scripts/sync-catalog.ts",
     "apis:import": "bun scripts/import-apis.ts",
     "telegram:webhook": "bun scripts/telegram-webhook.ts",

@@ -104,6 +104,10 @@ mount({
 
 `app.callTool`, `app.refresh`, `app.openLink` and `app.sendMessage` go through the host. In this app's chat they work for members (and are billed); visitors' apps can only open links and ask follow-ups.
 
+### Live check
+
+`.github/workflows/live-check.yml` runs `bun run live-check` on `main` every hour: it calls every tool against its real upstream (up to 3 attempts each) with the inputs in [`mcp/live-checks.ts`](mcp/live-checks.ts), then renders each result in its MCP App in Chromium and fails on render errors. A new tool needs an entry there; a unit test fails until it has one. Failure counts carry over between runs in the Actions cache. A check that fails 3 runs in a row (the `threshold` input when run by hand) is sent once to Telegram, and again when it recovers. The workflow reads `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` from the organisation's secrets or variables, and the Turso secrets for the catalogue search tool. Locally: `bun run live-check --only <service|tool> [--no-apps]`.
+
 ## API tracker
 
 [`mcp/apis.yaml`](mcp/apis.yaml) is the single source of truth for the upstream APIs mcprouter serves or plans to serve. Each entry has a permanent id (`API-0001`, `API-0002`, …); new APIs go at the end with the next number, and ids are never reused or renumbered. Status isn't written there: an API is **implemented** when a service YAML lists its id under `apis:`, and **coming soon** otherwise. A pull request that implements an API puts its id in the title, e.g. `feat(mcp): add AQHI (API-0031)`.
