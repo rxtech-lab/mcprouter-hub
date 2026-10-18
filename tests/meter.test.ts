@@ -33,9 +33,16 @@ describe("meterToolCall", () => {
     const result = await meterToolCall(caller, call, async () => ({ eta: 3 }), value);
     await settle();
     expect(result).toEqual({ content: [{ type: "text", text: '{"eta":3}' }] });
-    expect(value.record).toHaveBeenCalledWith(expect.objectContaining({ rxlabUserId: "user-1", item: "mcp_calls", metadata: { ...call, apiKeyId: "key-1" } }));
+    expect(value.record).toHaveBeenCalledWith(expect.objectContaining({ rxlabUserId: "user-1", item: "mcp_calls", metadata: { ...call, apiKeyId: "key-1", channel: null } }));
     expect(value.increment).toHaveBeenCalledWith("key-1");
     expect(value.log).toHaveBeenCalledWith(expect.objectContaining({ userId: "user-1", apiKeyId: "key-1", ...call, status: "ok", errorCode: null }));
+  });
+
+  it("logs the channel and OAuth client the call came from", async () => {
+    const { value, settle } = deps();
+    await meterToolCall({ userId: "user-1", apiKeyId: null, scopes: [], channel: "oauth", oauthClientId: "client-1" }, call, async () => ({}), value);
+    await settle();
+    expect(value.log).toHaveBeenCalledWith(expect.objectContaining({ channel: "oauth", oauthClientId: "client-1", status: "ok" }));
   });
 
   it("never charges free-agent guests", async () => {

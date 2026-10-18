@@ -30,7 +30,7 @@ export async function callAppTool(chatToolName: string, name: string, args: unkn
     const openedBy = toolName.parse(chatToolName);
     const input = toolArguments.parse(args ?? {});
     const { server } = splitToolName(openedBy);
-    if (!server) return callOwnTool({ userId: user.id, apiKeyId: null, scopes: [] }, openedBy, toolName.parse(name), input);
+    if (!server) return callOwnTool({ userId: user.id, apiKeyId: null, scopes: [], channel: "web" }, openedBy, toolName.parse(name), input);
     return callExternalTool(server, toolName.parse(name), input);
   });
 }

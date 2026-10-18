@@ -1,6 +1,8 @@
 id: td-carpark
 title: Car Park Information and Vacancy
 description: Car park locations, opening hours, prices and real-time vacancies from the Transport Department.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0017]
 datasets:
   - hk-dpo-datagovhk1-carpark-info-vacancy
 baseUrl: https://api.data.gov.hk/v1

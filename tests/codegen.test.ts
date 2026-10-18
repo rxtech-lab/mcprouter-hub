@@ -21,6 +21,7 @@ describe("codegen", () => {
           description: "A fixture covering every feature of the YAML spec.",
           aliases: [],
           datasets: ["example-dataset"],
+          apis: [],
           tools: [
             { name: "example_items", description: "Items, filtered locally." },
             { name: "example_submit", description: "POST with a body." },
@@ -89,7 +90,7 @@ describe("codegen", () => {
     expect(buildManifest([a, b]).datasets).toEqual({ d1: ["a"], d2: ["a", "b"] });
   });
 
-  it("matches the committed generated output", () => {
+  it("matches the committed generated output, including APIS.md", () => {
     const servicesDir = path.join(root, "mcp/services");
     const sources = readdirSync(servicesDir).map((directory) => {
       const handlers = path.join(servicesDir, directory, "handlers.ts");
@@ -102,7 +103,9 @@ describe("codegen", () => {
         appScript: hasApp ? (services.find((service) => service.id === directory)?.app?.script ?? "missing") : null,
       };
     });
-    for (const [file, content] of generate(sources, readFileSync(path.join(root, "mcp/apps/styles.css"), "utf8"))) {
+    const files = generate(sources, readFileSync(path.join(root, "mcp/apps/styles.css"), "utf8"), readFileSync(path.join(root, "mcp/apis.yaml"), "utf8"));
+    expect(files.has("APIS.md")).toBe(true);
+    for (const [file, content] of files) {
       expect(readFileSync(path.join(root, file), "utf8"), `${file} is stale; run bun run codegen`).toBe(content);
     }
   });

@@ -1,9 +1,10 @@
 import { LinkTabs } from "@/components/m3/tabs";
 import manifest from "@/generated/manifest.json";
+import { apiTracker } from "@/lib/apis";
 import { catalogueTotals } from "@/lib/sources";
 import { formatNumber } from "@/lib/format";
 
-/** Title and tabs shared by the Services and Providers lists. */
+/** Title and tabs shared by the Services, APIs and Providers lists. */
 export async function SourcesHeader() {
   const totals = await catalogueTotals();
   return (
@@ -18,6 +19,7 @@ export async function SourcesHeader() {
           label="Data source views"
           tabs={[
             { href: "/sources", label: "Services", count: manifest.services.length },
+            { href: "/sources/apis", label: "APIs", count: apiTracker.apis.length },
             { href: "/sources/providers", label: "Providers", count: totals.providers || undefined },
           ]}
         />

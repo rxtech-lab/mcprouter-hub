@@ -6,6 +6,8 @@ description: >-
   kmb_routes and citybus_routes; green minibus routes are numbered per region and found with gmb_route.
 # Former service ids, so API keys, OAuth grants and /api/mcp/s/<id> URLs created before the merge keep working.
 aliases: [kmb, citybus]
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0003, API-0004, API-0005]
 datasets:
   - hk-td-tis_21-etakmb
   - ctb-eta-transport-realtime-eta

@@ -4,13 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "./cn";
 
-/** M3 primary tabs that navigate between pages; the active tab follows the URL. */
-export function LinkTabs({ tabs, label }: { tabs: { href: string; label: string; count?: number }[]; label: string }) {
+/** M3 primary tabs that navigate between pages; the active tab follows the URL. A `nested` tab stays active on its sub-pages. */
+export function LinkTabs({ tabs, label }: { tabs: { href: string; label: string; count?: number; nested?: boolean }[]; label: string }) {
   const pathname = usePathname();
   return (
     <nav aria-label={label} className="flex border-b border-outline-variant">
       {tabs.map((tab) => {
-        const active = pathname === tab.href;
+        const active = pathname === tab.href || (!!tab.nested && pathname.startsWith(`${tab.href}/`));
         return (
           <Link
             key={tab.href}

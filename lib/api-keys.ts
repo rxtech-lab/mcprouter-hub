@@ -65,6 +65,8 @@ export function matchesInternalKey(candidate: string) {
 }
 
 export const INTERNAL_USER_HEADER = "x-mcprouter-user";
+/** Which agent surface an internal call is for: `web`, `telegram` or `whatsapp`. */
+export const INTERNAL_CHANNEL_HEADER = "x-mcprouter-channel";
 
 /** Internal-key callers whose user id starts with this are signed-out visitors of the free agent. */
 export const GUEST_USER_PREFIX = "guest:";

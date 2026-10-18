@@ -29,6 +29,11 @@ describe("AGENT_MCP_SERVERS", () => {
     });
     expect(() => resolveServer({ name: "hk", url: "self", headers: {} }, { origin: "https://hk.test", userId: "u1", internalKey: undefined })).toThrow(/MCPROUTER_INTERNAL_KEY/);
   });
+
+  it("tells the endpoint which agent channel the calls are for", () => {
+    const resolved = resolveServer({ name: "hk", url: "self", headers: {} }, { origin: "https://hk.test", userId: "u1", internalKey: "k".repeat(32), channel: "telegram" });
+    expect(resolved.headers).toMatchObject({ "x-mcprouter-channel": "telegram" });
+  });
 });
 
 describe("agentInstructions", () => {

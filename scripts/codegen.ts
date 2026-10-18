@@ -1,5 +1,5 @@
 /**
- * YAML → generated/. Usage:
+ * YAML → generated/ and APIS.md. Usage:
  *   bun run codegen          write generated files
  *   bun run codegen --check  fail if generated files are out of date
  */
@@ -51,7 +51,11 @@ async function readSources(): Promise<ServiceSource[]> {
 
 let files: Map<string, string>;
 try {
-  files = generate(await readSources(), readFileSync(path.join(root, "mcp/apps/styles.css"), "utf8"));
+  files = generate(
+    await readSources(),
+    readFileSync(path.join(root, "mcp/apps/styles.css"), "utf8"),
+    readFileSync(path.join(root, "mcp/apis.yaml"), "utf8"),
+  );
 } catch (error) {
   if (error instanceof CodegenError) {
     console.error(error.message);

@@ -176,6 +176,33 @@ const cases: Case[] = [
     data: { timestamps: ["20260101-0900", "20260102-0900"] },
   },
   {
+    tool: "datagovhk_get_resource",
+    input: { dataset: "hk-td-a", resource: "Vacancy", maxChars: 1000 },
+    lookups: {
+      "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-td-a": {
+        result: { resources: [{ id: "r1", name: "Info", format: "JSON", url: "https://td.test/info.json" }, { id: "r2", name: "Vacancy", format: "XML", url: "https://td.test/vacancy.xml" }] },
+      },
+    },
+    request: { url: "https://td.test/vacancy.xml" },
+    reply: "x".repeat(1500),
+    data: {
+      dataset: "hk-td-a",
+      resource: { id: "r2", name: "Vacancy", format: "XML", url: "https://td.test/vacancy.xml" },
+      content: "x".repeat(1000),
+      omittedCharacters: 500,
+    },
+    ttl: 300,
+  },
+  {
+    name: "datagovhk_get_resource defaults to the first resource",
+    tool: "datagovhk_get_resource",
+    input: { dataset: "hk-td-a" },
+    lookups: { "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-td-a": { result: { resources: [{ id: "r1", name: "Info", format: "JSON", url: "https://td.test/info.json" }] } } },
+    request: { url: "https://td.test/info.json" },
+    reply: '{"ok":true}',
+    data: { dataset: "hk-td-a", resource: { id: "r1", name: "Info", format: "JSON", url: "https://td.test/info.json" }, content: '{"ok":true}', omittedCharacters: 0 },
+  },
+  {
     tool: "datagovhk_archive_get_file",
     input: { url: "https://td.test/a.csv", time: "20260101-0900", maxChars: 1000 },
     request: { url: "https://api.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Ftd.test%2Fa.csv&time=20260101-0900" },
@@ -554,6 +581,15 @@ describe("MCP tools", () => {
 });
 
 describe("MCP tool upstream behaviour", () => {
+  it("only reads resources the dataset publishes", async () => {
+    const { service, tool } = find("datagovhk_get_resource");
+    const resources = [{ id: "r1", name: "Info", format: "JSON", url: "https://td.test/info.json" }, { id: "r2", name: "Sheet", format: "XLSX", url: "https://td.test/a.xlsx" }];
+    fetchMock.mockImplementation(async () => new Response(JSON.stringify({ result: { resources } })));
+    await expect(executeTool(service, tool, { dataset: "hk-td-a", resource: "https://evil.test/x" })).rejects.toThrow(/no resource .*Info, Sheet/);
+    await expect(executeTool(service, tool, { dataset: "hk-td-a", resource: "r2" })).rejects.toThrow(/XLSX/);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
   it("serves a repeated call from the cache", async () => {
     const { service, tool } = find("kmb_stop");
     fetchMock.mockImplementation(async () => new Response(JSON.stringify({ data: { stop: "X" } })));

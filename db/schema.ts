@@ -28,6 +28,10 @@ export const apiKeys = sqliteTable(
   ],
 );
 
+/** Where a tool call came from: an API key, an OAuth app, or the agent in the web chat, Telegram, WhatsApp or the free agent. */
+export const CALL_CHANNELS = ["key", "oauth", "web", "telegram", "whatsapp", "free"] as const;
+export type CallChannel = (typeof CALL_CHANNELS)[number];
+
 export const toolCalls = sqliteTable(
   "tool_calls",
   {
@@ -35,6 +39,10 @@ export const toolCalls = sqliteTable(
     userId: text("user_id").notNull(),
     /** Null for calls made by the in-app agent with the internal key. */
     apiKeyId: text("api_key_id"),
+    /** How the call came in. Null on calls logged before channels were recorded. */
+    channel: text("channel", { enum: CALL_CHANNELS }),
+    /** The OAuth client behind an `oauth` call. */
+    oauthClientId: text("oauth_client_id"),
     service: text("service").notNull(),
     tool: text("tool").notNull(),
     status: text("status", { enum: ["ok", "error", "denied"] }).notNull(),
@@ -45,6 +53,7 @@ export const toolCalls = sqliteTable(
   (table) => [
     index("tool_calls_user_created_idx").on(table.userId, table.createdAt),
     index("tool_calls_key_idx").on(table.apiKeyId),
+    index("tool_calls_user_channel_idx").on(table.userId, table.channel, table.createdAt),
   ],
 );
 

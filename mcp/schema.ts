@@ -148,6 +148,9 @@ export const toolSpec = z
     }
   });
 
+/** Stable id of an entry in `mcp/apis.yaml`. Never reused or renumbered. */
+export const API_ID = /^API-\d{4}$/;
+
 export const serviceSpec = z
   .object({
     id: z.string().regex(/^[a-z][a-z0-9-]*$/, "service ids are kebab-case"),
@@ -157,6 +160,8 @@ export const serviceSpec = z
     aliases: z.array(z.string().regex(/^[a-z][a-z0-9-]*$/)).default([]),
     /** DATA.GOV.HK (CKAN) dataset ids this service covers; read by the tracker. */
     datasets: z.array(z.string().min(1)).default([]),
+    /** Ids from `mcp/apis.yaml` this service implements, e.g. `API-0012`; the API tracker marks them implemented. */
+    apis: z.array(z.string().regex(API_ID, "API ids look like API-0012")).default([]),
     baseUrl: z.url({ protocol: /^https?$/ }).optional(),
     /** How this API spells languages. Applied to any tool input named `lang`. */
     lang: z

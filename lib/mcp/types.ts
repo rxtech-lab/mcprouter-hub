@@ -1,4 +1,5 @@
 import type { z } from "zod";
+import type { CallChannel } from "@/db/schema";
 import type { AppSpec, ServiceSpec, ToolSpec } from "@/mcp/schema";
 
 export type ToolInput = Record<string, unknown>;
@@ -58,4 +59,8 @@ export type CallerContext = {
   scopes: string[];
   /** A signed-out visitor of the free agent: logged, but never billed. */
   guest?: boolean;
+  /** Where the call came from, for usage by client. */
+  channel?: CallChannel;
+  /** The OAuth client, when `channel` is `oauth`. */
+  oauthClientId?: string | null;
 };

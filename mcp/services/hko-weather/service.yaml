@@ -1,6 +1,8 @@
 id: hko-weather
 title: Hong Kong Observatory Weather
 description: Current weather, forecasts, warnings, earthquakes and the lunar calendar from the Hong Kong Observatory open data API.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0007, API-0008, API-0009, API-0010, API-0011, API-0012, API-0013]
 datasets:
   - hk-hko-rss-current-weather-report
   - hk-hko-rss-local-weather-forecast
