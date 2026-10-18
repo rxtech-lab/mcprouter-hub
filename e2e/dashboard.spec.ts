@@ -4,9 +4,11 @@ test("create a key, see it once, then revoke it", async ({ page }) => {
   const name = `e2e key ${Date.now()}`;
   await page.goto("/keys");
   await page.getByRole("button", { name: "Create key" }).click();
-  await page.getByLabel("Name").fill(name);
+  await page.getByRole("textbox", { name: "Name" }).fill(name);
   await page.getByRole("combobox", { name: "Search services" }).fill("bus");
   await page.getByRole("option", { name: /Buses, Minibuses & Trams/ }).click();
+  // Close the search results so they don't cover the dialog's buttons.
+  await page.getByRole("dialog").getByRole("heading", { name: "Create API key" }).click();
   await page.getByRole("button", { name: "Create", exact: true }).click();
 
   const revealed = page.getByTestId("revealed-key");
@@ -94,6 +96,7 @@ test("limit the exposed services and tools in settings, then expose everything a
   await page.getByRole("dialog").getByRole("combobox", { name: "Search services" }).fill("weather");
   await page.getByRole("option", { name: /Hong Kong Observatory Weather/ }).click();
   await expect(page.getByRole("dialog").getByRole("button", { name: "Remove Hong Kong Observatory Weather" })).toBeVisible();
+  await page.getByRole("dialog").getByRole("heading", { name: "Choose services" }).click();
   await page.getByRole("dialog").getByRole("button", { name: "Save" }).click();
   await expect(page.getByTestId("snackbar")).toContainText("Services updated");
   await expect(page).not.toHaveURL(/edit=/);
