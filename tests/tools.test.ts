@@ -73,6 +73,72 @@ function beachFeed(lang: string, items: Array<[string, string, string, string]>)
   return `<?xml version='1.0' encoding='utf-8'?><?xml-stylesheet type='text/xsl' href='../beach.xsl'?><rss version="2.0"><channel><title>EPD beach water quality information</title><pubDate>Fri, 16 Oct 2026 14:04:42</pubDate><lastBuildDate>Fri, 16 Oct 2026 14:04:42</lastBuildDate>${items.map(item).join("")}</channel></rss>`;
 }
 
+// Trimmed from the Observatory's real files: a list in its published format, and the last track of SURIGAE
+// (2641), whose first forecast position has no time (interpolated, only for drawing the line).
+const cycloneList = `<?xml version="1.0" encoding="UTF-8"?>
+<TropicalCycloneList>
+<TropicalCyclone>
+<TropicalCycloneID>2641</TropicalCycloneID>
+<TropicalCycloneChineseName>舒力基</TropicalCycloneChineseName>
+<TropicalCycloneEnglishName>SURIGAE</TropicalCycloneEnglishName>
+<TropicalCycloneURL>http://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_2641.xml
+</TropicalCycloneURL>
+</TropicalCyclone>
+</TropicalCycloneList>`;
+
+const cycloneTrack = `<?xml version="1.0" encoding="UTF-8"?>
+<TropicalCycloneTrack tcid="2641"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="tc_track.xsd">
+<BulletinHeader>
+<BulletinName>Tropical Cyclone Track</BulletinName>
+<BulletinType>R</BulletinType>
+<BulletinProvider>Hong Kong Observatory</BulletinProvider>
+<BulletinTime>2026-10-01T04:00:47+08:00</BulletinTime>
+</BulletinHeader>
+<WeatherReport>
+<TropicalCycloneName>SURIGAE</TropicalCycloneName>
+<PastInformation>
+<Index>31</Index>
+<Intensity>Tropical Storm</Intensity>
+<MaximumWind>65km/h</MaximumWind>
+<Time>2026-09-30T06:00:00+00:00</Time>
+<Latitude>31.30N</Latitude>
+<Longitude>138.40E</Longitude>
+</PastInformation>
+<PastInformation>
+<Index>32</Index>
+<Intensity>Tropical Storm</Intensity>
+<MaximumWind>65km/h</MaximumWind>
+<Time>2026-09-30T12:00:00+00:00</Time>
+<Latitude>31.80N</Latitude>
+<Longitude>138.90E</Longitude>
+</PastInformation>
+<AnalysisInformation>
+<Intensity>Tropical Storm</Intensity>
+<MaximumWind>65km/h</MaximumWind>
+<Time>2026-09-30T18:00:00+00:00</Time>
+<Latitude>32.20N</Latitude>
+<Longitude>139.70E</Longitude>
+</AnalysisInformation>
+<ForecastInformation>
+<Index>11</Index>
+<Latitude>34.83N</Latitude>
+<Longitude>142.32E</Longitude>
+</ForecastInformation>
+<ForecastInformation>
+<Index>12</Index>
+<Intensity>Extratropical Low</Intensity>
+<MaximumWind>--</MaximumWind>
+<Time>2026-10-01T06:00:00+00:00</Time>
+<Latitude>35.00N</Latitude>
+<Longitude>142.50E</Longitude>
+</ForecastInformation>
+</WeatherReport>
+</TropicalCycloneTrack>`;
+
+const surigaeNow = { time: "2026-10-01T02:00:00+08:00", category: "tropical_storm", intensity: "Tropical Storm", maximumWindKmh: 65, latitude: 32.2, longitude: 139.7, distanceKm: 2744, bearing: "ENE" };
+
 const cases: Case[] = [
   // citybus
   {
@@ -833,6 +899,71 @@ const cases: Case[] = [
     request: { url: "https://www.1823.gov.hk/common/ical/en.json" },
     reply: holidayFeed,
     data: { date: "2030-01-06", isPublicHoliday: false, holiday: null, isSunday: true, note: expect.stringMatching(/outside the range/) },
+  },
+
+  // hko-cyclone
+  {
+    tool: "hko_tropical_cyclones",
+    input: {},
+    request: { url: "https://www.weather.gov.hk/wxinfo/currwx/tc_list.xml" },
+    reply: cycloneList,
+    lookups: { "https://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_2641.xml": cycloneTrack },
+    data: {
+      cyclones: [
+        {
+          id: 2641,
+          name: "SURIGAE",
+          englishName: "SURIGAE",
+          chineseName: "舒力基",
+          bulletinTime: "2026-10-01T04:00:47+08:00",
+          current: surigaeNow,
+          closestApproach: { time: "2026-10-01T02:00:00+08:00", distanceKm: 2744, bearing: "ENE" },
+          forecastPoints: 1,
+        },
+      ],
+    },
+    ttl: 300,
+  },
+  {
+    name: "hko_tropical_cyclones says when no cyclone is tracked",
+    tool: "hko_tropical_cyclones",
+    input: { lang: "tc" },
+    request: { url: "https://www.weather.gov.hk/wxinfo/currwx/tc_list.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>\n<TropicalCycloneList>\n</TropicalCycloneList>`,
+    data: { cyclones: [], note: expect.stringMatching(/not tracking any tropical cyclone/) },
+  },
+  {
+    tool: "hko_cyclone_track",
+    input: { id: 2641, lang: "sc" },
+    request: { url: "https://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_2641.xml" },
+    reply: cycloneTrack,
+    lookups: { "https://www.weather.gov.hk/wxinfo/currwx/tc_list.xml": cycloneList },
+    data: {
+      id: 2641,
+      name: "舒力基",
+      englishName: "SURIGAE",
+      chineseName: "舒力基",
+      bulletinTime: "2026-10-01T04:00:47+08:00",
+      current: { ...surigaeNow, intensity: "热带风暴" },
+      closestApproach: { time: "2026-10-01T02:00:00+08:00", distanceKm: 2744, bearing: "ENE" },
+      past: [
+        { time: "2026-09-30T14:00:00+08:00", category: "tropical_storm", intensity: "热带风暴", maximumWindKmh: 65, latitude: 31.3, longitude: 138.4 },
+        { time: "2026-09-30T20:00:00+08:00", category: "tropical_storm", intensity: "热带风暴", maximumWindKmh: 65, latitude: 31.8, longitude: 138.9 },
+      ],
+      forecast: [
+        { time: "2026-10-01T14:00:00+08:00", category: "extratropical_low", intensity: "温带气旋", maximumWindKmh: null, latitude: 35, longitude: 142.5, distanceKm: 3089, bearing: "ENE" },
+      ],
+    },
+    ttl: 300,
+  },
+  {
+    name: "hko_cyclone_track reads the first tracked cyclone without an id",
+    tool: "hko_cyclone_track",
+    input: {},
+    request: { url: "https://www.weather.gov.hk/wxinfo/currwx/tc_list.xml" },
+    reply: cycloneList,
+    lookups: { "https://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_2641.xml": cycloneTrack },
+    data: expect.objectContaining({ id: 2641, name: "SURIGAE", current: surigaeNow, forecast: [expect.objectContaining({ distanceKm: 3089 })] }),
   },
 
   // hko-regional
@@ -1604,5 +1735,13 @@ describe("MCP tool upstream behaviour", () => {
     await expect(executeTool(service, tool, { stopId: "Z" })).rejects.toThrow();
     expect((await executeTool(service, tool, { stopId: "Z" })).data).toEqual({ stop: "Z" });
     expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it("explains a cyclone id the Observatory has no track for", async () => {
+    const { service, tool } = find("hko_cyclone_track");
+    fetchMock.mockImplementation(async (url) =>
+      String(url).endsWith("tc_list.xml") ? new Response("<TropicalCycloneList></TropicalCycloneList>") : new Response("<html>Not found</html>", { status: 404 }),
+    );
+    await expect(executeTool(service, tool, { id: 2602 })).rejects.toThrow(/no track for tropical cyclone 2602/);
   });
 });

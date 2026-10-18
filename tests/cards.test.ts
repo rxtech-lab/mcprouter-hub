@@ -149,6 +149,22 @@ describe("card builders", () => {
     ]);
   });
 
+  it("lists tracked tropical cyclones with their intensity and distance from Hong Kong", () => {
+    const current = { time: "2026-10-01T02:00:00+08:00", category: "typhoon", intensity: "Typhoon", maximumWindKmh: 120, latitude: 20.1, longitude: 118.4, distanceKm: 501, bearing: "ESE" };
+    const card = cardForToolResult(
+      result("hko-cyclone", "hko_tropical_cyclones", {}, { cyclones: [{ id: 2641, name: "SURIGAE", englishName: "SURIGAE", chineseName: "舒力基", current, closestApproach: null, forecastPoints: 4 }] }),
+    )!;
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        leading: { text: "2641" },
+        title: "SURIGAE 舒力基",
+        subtitle: "501 km ESE of Hong Kong at Thu 1 Oct, 02:00",
+        trailing: [{ text: "Typhoon", tone: "danger" }, { text: "120 km/h" }],
+      },
+    ]);
+  });
+
   it("lists the worst-graded beaches first and flags them", () => {
     const beach = (code: string, name: string, grade: number, rating: string) => ({ code, name, district: "Southern", grade, rating, latitude: 22.2, longitude: 114.2, report: null });
     const card = cardForToolResult(

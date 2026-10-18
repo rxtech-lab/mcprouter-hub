@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **35 of 3819 implemented**, 3784 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **36 of 3819 implemented**, 3783 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -229,7 +229,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0013` | [Gregorian–lunar calendar](https://data.gov.hk/en-data/dataset/hk-hko-rss-gregorian-lunar-calendar-conversion-table) | API | Hong Kong Observatory | ✅ Implemented | [Hong Kong Observatory Weather](mcp/services/hko-weather/service.yaml) |
 | `API-0030` | [Rainfall in the past hour](https://data.gov.hk/en-data/dataset/hk-hko-rss-rainfall-in-the-past-hour) | API | Hong Kong Observatory | ✅ Implemented | [Regional Weather](mcp/services/hko-regional/service.yaml) |
 | `API-0032` | [Tides](https://data.gov.hk/en-data/dataset/hk-hko-rss-latest-tidal-info) | API | Hong Kong Observatory | ✅ Implemented | [Tides, Sun and Moon](mcp/services/hko-tides/service.yaml) |
-| `API-0033` | [Tropical cyclone tracks](https://data.gov.hk/en-data/dataset/hk-hko-rss-tc-track-info) | API | Hong Kong Observatory | 🕒 Coming soon | — |
+| `API-0033` | [Tropical cyclone tracks](https://data.gov.hk/en-data/dataset/hk-hko-rss-tc-track-info) | API | Hong Kong Observatory | ✅ Implemented | [Tropical Cyclones](mcp/services/hko-cyclone/service.yaml) |
 | `API-0034` | [UV index](https://data.gov.hk/en-data/dataset/hk-hko-rss-latest-fifteen-minute-mean-uv-index) | API | Hong Kong Observatory | ✅ Implemented | [Regional Weather](mcp/services/hko-regional/service.yaml) |
 | `API-0035` | [Lightning](https://data.gov.hk/en-data/dataset/hk-hko-rss-cloud-ground-lightning-count-past-hour) | API | Hong Kong Observatory | ✅ Implemented | [Regional Weather](mcp/services/hko-regional/service.yaml) |
 | `API-0036` | [Sun and moon times](https://data.gov.hk/en-data/dataset/hk-hko-rss-times-of-sunrise-suntransit-sunset) | API | Hong Kong Observatory | ✅ Implemented | [Tides, Sun and Moon](mcp/services/hko-tides/service.yaml) |
