@@ -834,7 +834,7 @@ msgid "{count} tool"
 msgid_plural "{count} tools"
 msgstr[0] "{count} 個工具"
 
-#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/client-setup-dialog.tsx
+#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/client-setup-dialog.tsx
 msgid "Close"
 msgstr "關閉"
 
@@ -2000,12 +2000,16 @@ msgid "Send"
 msgstr "發送"
 
 #: components/agent/hero-chat.tsx
-msgid "Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?"
-msgstr "你好！我可以為你查詢政府實時數據：天氣、巴士、港鐵、急症室輪候時間等。你想知道甚麼？"
-
-#: components/agent/hero-chat.tsx
 msgid "Thinking…"
 msgstr "思考中…"
+
+#: components/agent/hero-chat.tsx
+msgid "{remaining} of {limit} free messages left today. Not saved."
+msgstr "今日尚餘 {remaining}/{limit} 則免費訊息。對話不會儲存。"
+
+#: components/agent/hero-chat.tsx
+msgid "Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?"
+msgstr "你好！我可以為你查詢政府實時數據：天氣、巴士、港鐵、急症室輪候時間等。你想知道甚麼？"
 
 #: components/agent/hero-chat.tsx
 msgid "No free messages left today"
@@ -2018,10 +2022,6 @@ msgstr "查詢天氣、巴士、港鐵…"
 #: components/agent/hero-chat.tsx
 msgid "You've used today's {limit} free messages. More at midnight Hong Kong time."
 msgstr "你已用完今日的 {limit} 則免費訊息。香港時間午夜後重設。"
-
-#: components/agent/hero-chat.tsx
-msgid "{remaining} of {limit} free messages left today. Not saved."
-msgstr "今日尚餘 {remaining}/{limit} 則免費訊息。對話不會儲存。"
 
 #: components/agent/hero-chat.tsx
 msgid "Sign in for more"

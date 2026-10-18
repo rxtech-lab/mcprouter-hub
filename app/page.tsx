@@ -282,6 +282,8 @@ export default async function Home({ searchParams }: PageProps<"/">) {
       </main>
 
       <SiteFooter />
+      {/* Room for the docked chat sheet, so it never covers the end of the footer on phones. */}
+      {freeChat.enabled ? <div aria-hidden className="h-24 md:hidden" /> : null}
       <ScrollTimeline sections={timeline.map((section) => ({ ...section, label: t(section.label) }))} />
 
       {preview ? (
