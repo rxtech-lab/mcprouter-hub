@@ -1,0 +1,69 @@
+id: hk-border
+title: Border Control Points
+description: Live queue status at the land boundary control points, and passenger and vehicle traffic through every control point, from the Immigration Department and the Customs and Excise Department.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0027, API-1424, API-1427, API-2501, API-2503]
+datasets:
+  - hk-immd-set28-land-boundary-control-points-waiting-time
+  - hk-customs-ced_stat-passenger-clearance
+  - hk-customs-ced_stat-vehicle-clearance
+  - hk-immd-set5-statistics-daily-passenger-traffic
+  - hk-immd-set5-statistics-passenger-visitor-vehicular-traffic
+baseUrl: https://www.customs.gov.hk/hcms/filemanager/common/csv/statistics
+cacheTtl: 21600
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: border_waiting_times
+    title: Border crossing waiting times
+    description: Current immigration queue status at the land boundary control points to and from Shenzhen and Zhuhai (Lo Wu, Lok Ma Chau, Lok Ma Chau Spur Line, Huanggang, Man Kam To, Sha Tau Kok, Shenzhen Bay, Heung Yuen Wai, Hong Kong-Zhuhai-Macao Bridge), for arrival and departure, separately for Hong Kong residents and visitors. Each direction is normal, busy, very busy, under maintenance or outside service hours.
+    handler: waitingTimes
+    # The Immigration Department refreshes the feed every 15 minutes.
+    cacheTtl: 300
+    input:
+      controlPoint: { type: string, description: "Only this control point: part of its name in English or Chinese, or its code (e.g. LWS for Lo Wu, SBC for Shenzhen Bay)" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the names and statuses" }
+  - name: border_daily_passengers
+    title: Daily passenger traffic by control point
+    description: Passenger trips through every Hong Kong control point (airport, rail, ferry terminals and land crossings) on one day, arrivals and departures, split into Hong Kong residents, Mainland visitors and other visitors. Figures start on 2021-01-01 and are published the next day; leave out the date for the latest day.
+    handler: dailyPassengers
+    input:
+      date: { type: string, pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Day in YYYY-MM-DD format; defaults to the latest day published" }
+      controlPoint: { type: string, description: "Only control points whose name contains this text, e.g. Lo Wu or 機場" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the control point names" }
+  - name: border_annual_traffic
+    title: Annual passenger, visitor and vehicle traffic
+    description: Yearly totals since 2016 of passenger trips through Hong Kong control points (by air, sea and land), visitor trips and vehicle trips to and from the Mainland, in millions, from the Immigration Department.
+    handler: annualTraffic
+    cacheTtl: 86400
+    input:
+      year: { type: integer, minimum: 2016, maximum: 2100, description: "Only this year" }
+  - name: border_passenger_throughput
+    title: Yearly passenger throughput by control point
+    description: Passengers cleared by Customs each year at every control point (airport, land crossings, ferry terminals and so on), in thousands, from the Customs and Excise Department. Covers the last three years.
+    path: /passenger_entry_exit_{lang}.csv
+    cacheTtl: 86400
+    transform: { response: customsPassengers }
+    input:
+      year: { type: integer, in: local, minimum: 2000, maximum: 2100, description: "Only this year" }
+      controlPoint: { type: string, in: local, description: "Only control points whose name contains this text, e.g. Lo Wu" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the control point names" }
+    response:
+      format: csv
+      filter: { year: year }
+      search: { input: controlPoint, fields: [controlPoint] }
+  - name: border_vehicle_throughput
+    title: Vehicle throughput at land crossings
+    description: Vehicles cleared by Customs at each land boundary control point per quarter since 2016, in thousands, split into goods vehicles, passenger vehicles and private cars. Leave out the year for the latest year published.
+    path: /passenger_land_{lang}.csv
+    cacheTtl: 86400
+    transform: { response: customsVehicles }
+    input:
+      year: { type: integer, in: local, minimum: 2016, maximum: 2100, description: "Year; defaults to the latest year published" }
+      quarter: { type: integer, in: local, minimum: 1, maximum: 4, description: "Only this quarter (1-4)" }
+      controlPoint: { type: string, in: local, description: "Only control points whose name contains this text, e.g. Shenzhen Bay" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the control point names" }
+    response:
+      format: csv
+      filter: { quarter: quarter }
+      search: { input: controlPoint, fields: [controlPoint] }
