@@ -154,6 +154,24 @@ describe("card builders", () => {
     ]);
   });
 
+  it("lists the wettest weather stations first", () => {
+    const card = cardForToolResult(
+      result("hko-regional", "hko_rainfall_past_hour", {}, {
+        observedAt: "2026-10-18T22:45:00+08:00",
+        stations: [
+          { station: "Lau Fau Shan", id: "RF001", rainfallMm: 0 },
+          { station: "Sha Tin", id: "RF020", rainfallMm: 3 },
+          { station: "Tuen Mun", id: "RF019", rainfallMm: 12 },
+        ],
+      }),
+    )!;
+    expect(card).toMatchObject({ accent: "#1565c0", badge: "HKO", title: "Rainfall in the past hour", subtitle: "Observed Sun 18 Oct, 22:45" });
+    expect(card.blocks).toEqual([
+      { kind: "row", leading: { text: "RF019" }, title: "Tuen Mun", trailing: [{ text: "12 mm", tone: "info" }] },
+      { kind: "row", leading: { text: "RF020" }, title: "Sha Tin", trailing: [{ text: "3 mm", tone: "info" }] },
+    ]);
+  });
+
   it("has no card for tools whose result doesn't picture well, or data a builder can't read", () => {
     expect(cardForToolResult(result("datagovhk-catalog", "datagovhk_archive_get_file", {}, { content: "a,b" }))).toBeNull();
     expect(cardForToolResult(result("hko-weather", "hko_earthquake", {}, {}))).toBeNull();

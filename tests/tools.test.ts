@@ -684,6 +684,139 @@ const cases: Case[] = [
     data: { date: "2030-01-06", isPublicHoliday: false, holiday: null, isSunday: true, note: expect.stringMatching(/outside the range/) },
   },
 
+  // hko-regional
+  {
+    tool: "hko_rainfall_past_hour",
+    input: { station: "kings park" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/hourlyRainfall.php?lang=en" },
+    reply: {
+      obsTime: "2026-10-18T22:45:00+08:00",
+      hourlyRainfall: [
+        { automaticWeatherStation: "Lau Fau Shan", automaticWeatherStationID: "RF001", value: "0", unit: "mm" },
+        { automaticWeatherStation: "King’s Park", automaticWeatherStationID: "RF024", value: "3", unit: "mm" },
+      ],
+    },
+    data: { observedAt: "2026-10-18T22:45:00+08:00", stations: [{ station: "King’s Park", id: "RF024", rainfallMm: 3 }] },
+    ttl: 300,
+  },
+  {
+    name: "hko_rainfall_past_hour keeps only stations with rain, and reads a missing reading as null",
+    tool: "hko_rainfall_past_hour",
+    input: { rainingOnly: true, lang: "tc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/hourlyRainfall.php?lang=tc" },
+    reply: {
+      obsTime: "2026-10-18T22:45:00+08:00",
+      hourlyRainfall: [
+        { automaticWeatherStation: "流浮山", automaticWeatherStationID: "RF001", value: "0", unit: "mm" },
+        { automaticWeatherStation: "清水灣", automaticWeatherStationID: "RF009", value: "M", unit: "mm" },
+        { automaticWeatherStation: "沙田", automaticWeatherStationID: "RF020", value: "12", unit: "mm" },
+      ],
+    },
+    data: { observedAt: "2026-10-18T22:45:00+08:00", stations: [{ station: "沙田", id: "RF020", rainfallMm: 12 }] },
+  },
+  {
+    tool: "hko_uv_index",
+    input: {},
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_15min_uvindex.csv" },
+    reply: "Date time,past 15-minute mean UV Index\n202610181200,6.4\n",
+    data: { observedAt: "2026-10-18T12:00:00+08:00", uvIndex: 6.4, level: "high", label: "High" },
+    ttl: 300,
+  },
+  {
+    name: "hko_uv_index reads the Traditional Chinese file",
+    tool: "hko_uv_index",
+    input: { lang: "tc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_15min_uvindex_uc.csv" },
+    reply: `${BOM}日期 時間,過去十五分鐘平均紫外線指數\n202610181800,0.0\n`,
+    data: { observedAt: "2026-10-18T18:00:00+08:00", uvIndex: 0, level: "low", label: "低" },
+  },
+  {
+    tool: "hko_lightning",
+    input: {},
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=LHL&rformat=csv&lang=en" },
+    reply: [
+      `${BOM}DateTime,Type,Region,"lightning count"`,
+      `202610172100-202610172159,Cloud-to-ground,"New Territories West",4`,
+      `202610172100-202610172159,Cloud-to-ground,Lantau,0`,
+      `202610172100-202610172159,Cloud-to-ground,"Hong Kong territory",4`,
+      `202610172100-202610172159,Cloud-to-cloud,"Hong Kong territory",11`,
+    ].join("\n"),
+    data: {
+      from: "2026-10-17T21:00:00+08:00",
+      to: "2026-10-17T21:59:00+08:00",
+      total: { cloudToGround: 4, cloudToCloud: 11 },
+      cloudToGroundByRegion: [
+        { region: "New Territories West", count: 4 },
+        { region: "Lantau", count: 0 },
+      ],
+    },
+    ttl: 600,
+  },
+  {
+    name: "hko_lightning reads the Simplified Chinese types and regions",
+    tool: "hko_lightning",
+    input: { lang: "sc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=LHL&rformat=csv&lang=sc" },
+    reply: `${BOM}日期时间,类别,区域,闪电次数\n202610172100-202610172159,云对地,大屿山,0\n202610172100-202610172159,云对地,香港境内,0\n202610172100-202610172159,云间,香港境内,2\n`,
+    data: {
+      from: "2026-10-17T21:00:00+08:00",
+      to: "2026-10-17T21:59:00+08:00",
+      total: { cloudToGround: 0, cloudToCloud: 2 },
+      cloudToGroundByRegion: [{ region: "大屿山", count: 0 }],
+    },
+  },
+  {
+    tool: "hko_regional_weather",
+    input: { station: "Hong Kong Observatory" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_temperature.csv" },
+    reply: "Date time,Automatic Weather Station,Air Temperature(degree Celsius)\n202610182300,Chek Lap Kok,28.2\n202610182300,HK Observatory,27.9\n",
+    lookups: {
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_humidity.csv": "Date time,Automatic Weather Station,Relative Humidity(percent)\n202610182300,HK Observatory,75\n",
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_pressure.csv": "Date time,Automatic Weather Station,Mean Sea Level Pressure(hPa)\n202610182300,HK Observatory,1016.7\n",
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_10min_wind.csv":
+        "Date time,Automatic Weather Station,10-Minute Mean Wind Direction(Compass points),10-Minute Mean Speed(km/hour),10-Minute Maximum Gust(km/hour)\n202610182300,Central Pier,East,12,17\n",
+    },
+    data: { observedAt: "2026-10-18T23:00:00+08:00", stations: [{ station: "HK Observatory", temperatureC: 27.9, humidityPercent: 75, pressureHpa: 1016.7 }] },
+    ttl: 60,
+  },
+  {
+    name: "hko_regional_weather joins the Chinese files and reads calm and missing wind",
+    tool: "hko_regional_weather",
+    input: { lang: "tc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_temperature_uc.csv" },
+    reply: `${BOM}日期時間,自動氣象站,氣溫（攝氏）\n202610182300,西貢,25.6\n`,
+    lookups: {
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_humidity_uc.csv": `${BOM}日期時間,自動氣象站,相對濕度（百分比）\n202610182300,西貢,85\n`,
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_pressure_uc.csv": `${BOM}日期時間,自動氣象站,平均海平面氣壓（百帕斯卡）\n`,
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_10min_wind_uc.csv": `${BOM}日期時間,自動氣象站,十分鐘平均風向（方位點）,十分鐘平均風速（公里/小時）,十分鐘最高陣風風速（公里/小時）\n202610182300,西貢,無風,無風,2,\n202610182300,赤柱,東南,N/A,N/A\n`,
+    },
+    data: {
+      observedAt: "2026-10-18T23:00:00+08:00",
+      stations: [
+        { station: "西貢", temperatureC: 25.6, humidityPercent: 85, windDirection: "無風", gustKmh: 2 },
+        { station: "赤柱", windDirection: "東南" },
+      ],
+    },
+  },
+  {
+    tool: "hko_heat_stress",
+    input: { station: "observatory" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/recent10_10min_hkhi.csv" },
+    reply: [
+      "Date time,Automatic Weather Station,10 minute mean Hong Kong Heat Index",
+      "202610182259,Beas River,22.0",
+      "202610182259,Hong Kong Observatory,24.4",
+      "202610182300,Beas River,22.0",
+      "202610182300,Hong Kong Observatory,24.5",
+    ].join("\n"),
+    lookups: {
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/recent10_60min_wbgt.csv":
+        "Date time,Automatic Weather Station,60-minute mean Wet Bulb Globe Temperature (WBGT)\n202610182259,Hong Kong Observatory,24.5\n202610182300,Hong Kong Observatory,24.6\n",
+    },
+    data: { observedAt: "2026-10-18T23:00:00+08:00", stations: [{ station: "Hong Kong Observatory", heatIndex: 24.5, wbgtC: 24.6 }] },
+    ttl: 60,
+  },
+
   // hko-tides
   {
     tool: "hko_tide_times",
