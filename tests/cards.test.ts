@@ -82,6 +82,23 @@ describe("card builders", () => {
     ]);
   });
 
+  it("draws the airport board with each flight's status", () => {
+    const card = cardForToolResult(
+      result("hk-airport", "airport_departures", { date: "2026-10-18" }, [
+        { scheduled: "2026-10-18T00:05+08:00", flight: "CX 261", airline: "CPA", codeshares: ["QF 8261"], destinations: ["CDG"], status: "Dep 00:46", state: "departed", terminal: "T1", gate: "7" },
+        { scheduled: "2026-10-18T07:40+08:00", flight: "5X 003", airline: "UPS", destinations: ["BLR", "CGN"], status: "Cancelled", state: "cancelled" },
+        { scheduled: "2026-10-18T23:55+08:00", flight: "UO 848", airline: "HKE", destinations: ["NRT"], status: null, state: "scheduled" },
+      ], { total: 3, returned: 3, truncated: false }),
+    )!;
+    expect(card.title).toBe("Departures · Sun 18 Oct");
+    expect(card.blocks).toEqual([
+      { kind: "notice", text: "1 flight cancelled", tone: "warning" },
+      { kind: "row", leading: { text: "00:05" }, title: "CX 261", subtitle: "To CDG · Gate 7 · Also QF 8261", trailing: [{ text: "Dep 00:46", tone: "success" }], muted: false },
+      { kind: "row", leading: { text: "07:40" }, title: "5X 003", subtitle: "To BLR · CGN", trailing: [{ text: "Cancelled", tone: "danger" }], muted: true },
+      { kind: "row", leading: { text: "23:55" }, title: "UO 848", subtitle: "To NRT", trailing: [{ text: "Scheduled", tone: "neutral" }], muted: false },
+    ]);
+  });
+
   it("colours border queues by how busy they are", () => {
     const queue = (status: string, label: string) => ({ status, label, wait: null });
     const card = cardForToolResult(

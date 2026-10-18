@@ -533,6 +533,157 @@ const cases: Case[] = [
     ttl: 300,
   },
 
+  // hk-airport
+  {
+    tool: "airport_departures",
+    input: { date: "2026-10-18", airline: "cx", airport: "nrt" },
+    request: { url: "https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=false&date=2026-10-18&cargo=false&lang=en" },
+    reply: [
+      {
+        date: "2026-10-17",
+        arrival: false,
+        cargo: false,
+        list: [{ time: "22:30", flight: [{ no: "UA 878D", airline: "UAL" }], status: "Dep 10:47 (18/10/2026)", statusCode: null, destination: ["SFO"], terminal: "T1", aisle: "G", gate: "66" }],
+        lastUpdatedTime: "2026-10-18T21:27:14+08:00",
+      },
+      {
+        date: "2026-10-18",
+        arrival: false,
+        cargo: false,
+        list: [
+          { time: "01:20", flight: [{ no: "CX 524", airline: "CPA" }, { no: "JL 7040", airline: "JAL" }], status: "Dep 01:40", statusCode: null, destination: ["NRT"], terminal: "T1", aisle: "C", gate: "25" },
+          { time: "08:15", flight: [{ no: "JL 7026", airline: "JAL" }], status: "Dep 08:30", statusCode: null, destination: ["NRT"], terminal: "T1", aisle: "D", gate: "35" },
+          { time: "23:55", flight: [{ no: "UO 848", airline: "HKE" }, { no: "CX 5848", airline: "CPA" }], status: "", statusCode: null, destination: ["NRT"], terminal: "T1", aisle: "", gate: "" },
+          { time: "23:59", flight: [{ no: "CX 254", airline: "CPA" }], status: "Boarding Soon", statusCode: null, destination: ["LHR"], terminal: "T1", aisle: "B", gate: "3" },
+        ],
+        lastUpdatedTime: "2026-10-18T21:27:14+08:00",
+      },
+    ],
+    data: [
+      {
+        scheduled: "2026-10-18T01:20+08:00",
+        flight: "CX 524",
+        airline: "CPA",
+        codeshares: ["JL 7040"],
+        destinations: ["NRT"],
+        status: "Dep 01:40",
+        state: "departed",
+        statusTime: "2026-10-18T01:40+08:00",
+        terminal: "T1",
+        aisle: "C",
+        gate: "25",
+      },
+      { scheduled: "2026-10-18T23:55+08:00", flight: "UO 848", airline: "HKE", codeshares: ["CX 5848"], destinations: ["NRT"], status: null, state: "scheduled", terminal: "T1" },
+    ],
+    meta: { total: 2, returned: 2, truncated: false },
+    ttl: 120,
+  },
+  {
+    name: "airport_departures reads cargo flights in Chinese within a time window",
+    tool: "airport_departures",
+    input: { date: "2026-10-18", cargo: true, lang: "tc", from: "07:30", to: "08:00", status: "departed" },
+    request: { url: "https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=false&date=2026-10-18&cargo=true&lang=zh_HK" },
+    reply: [
+      {
+        date: "2026-10-18",
+        arrival: false,
+        cargo: true,
+        list: [
+          { time: "07:25", flight: [{ no: "HJ 024", airline: "TMN" }], status: "啟航 07:23", statusCode: null, destination: ["SYD"] },
+          { time: "07:35", flight: [{ no: "3S 721", airline: "BOX" }], status: "啟航 07:48", statusCode: null, destination: ["DEL", "LEJ"] },
+          { time: "07:40", flight: [{ no: "5X 003", airline: "UPS" }], status: "取消", statusCode: null, destination: ["BLR", "CGN", "PHL"] },
+        ],
+        lastUpdatedTime: "2026-10-18T23:09:22+08:00",
+      },
+    ],
+    data: [{ scheduled: "2026-10-18T07:35+08:00", flight: "3S 721", airline: "BOX", destinations: ["DEL", "LEJ"], status: "啟航 07:48", state: "departed", statusTime: "2026-10-18T07:48+08:00" }],
+  },
+  {
+    tool: "airport_arrivals",
+    input: { date: "2026-10-18", flight: "qf8228" },
+    request: { url: "https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=true&date=2026-10-18&cargo=false&lang=en" },
+    reply: [
+      {
+        date: "2026-10-18",
+        arrival: true,
+        cargo: false,
+        list: [
+          { time: "10:45", flight: [{ no: "CX 305", airline: "CPA" }], status: "At gate 10:18", statusCode: null, origin: ["NKG"], baggage: "3", hall: "A", terminal: "", stand: "R17" },
+          {
+            time: "10:50",
+            flight: [{ no: "CX 413", airline: "CPA" }, { no: "QF 8228", airline: "QFA" }, { no: "QR 3488", airline: "QTR" }],
+            status: "At gate 10:19",
+            statusCode: null,
+            origin: ["ICN"],
+            baggage: "10",
+            hall: "A",
+            terminal: "",
+            stand: "S11",
+          },
+        ],
+        lastUpdatedTime: "2026-10-18T21:53:01+08:00",
+      },
+      {
+        date: "2026-10-19",
+        arrival: true,
+        cargo: false,
+        list: [{ time: "00:05", flight: [{ no: "QF 8228", airline: "QFA" }], status: "Est at 23:21 (18/10/2026)", statusCode: null, origin: ["DPS"], baggage: "5", hall: "A", terminal: "", stand: "" }],
+        lastUpdatedTime: "2026-10-18T21:53:01+08:00",
+      },
+    ],
+    data: [
+      {
+        scheduled: "2026-10-18T10:50+08:00",
+        flight: "CX 413",
+        airline: "CPA",
+        codeshares: ["QF 8228", "QR 3488"],
+        origins: ["ICN"],
+        status: "At gate 10:19",
+        state: "at_gate",
+        statusTime: "2026-10-18T10:19+08:00",
+        baggageBelt: "10",
+        hall: "A",
+        stand: "S11",
+      },
+      { scheduled: "2026-10-19T00:05+08:00", flight: "QF 8228", airline: "QFA", origins: ["DPS"], status: "Est at 23:21 (18/10/2026)", state: "estimated", statusTime: "2026-10-18T23:21+08:00", baggageBelt: "5", hall: "A" },
+    ],
+    ttl: 120,
+  },
+  {
+    name: "airport_arrivals finds landed flights from one airport in Simplified Chinese",
+    tool: "airport_arrivals",
+    input: { date: "2026-10-18", lang: "sc", airport: "pvg", status: "landed" },
+    request: { url: "https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=true&date=2026-10-18&cargo=false&lang=zh_CN" },
+    reply: [
+      {
+        date: "2026-10-18",
+        arrival: true,
+        cargo: false,
+        list: [
+          { time: "21:40", flight: [{ no: "HO 1307", airline: "DKH" }, { no: "MU 3953", airline: "CES" }], status: "着陆於 21:44", statusCode: null, origin: ["PVG"], baggage: "9", hall: "A", terminal: "", stand: "R13" },
+          { time: "21:45", flight: [{ no: "CX 369", airline: "CPA" }], status: "到闸口 21:30", statusCode: null, origin: ["PVG"], baggage: "7", hall: "B", terminal: "", stand: "N61" },
+          { time: "21:50", flight: [{ no: "CX 383", airline: "CPA" }], status: "着陆於 21:48", statusCode: null, origin: ["PEK"], baggage: "8", hall: "B", terminal: "", stand: "N63" },
+        ],
+        lastUpdatedTime: "2026-10-18T23:10:27+08:00",
+      },
+    ],
+    data: [
+      {
+        scheduled: "2026-10-18T21:40+08:00",
+        flight: "HO 1307",
+        airline: "DKH",
+        codeshares: ["MU 3953"],
+        origins: ["PVG"],
+        status: "着陆於 21:44",
+        state: "landed",
+        statusTime: "2026-10-18T21:44+08:00",
+        baggageBelt: "9",
+        hall: "A",
+        stand: "R13",
+      },
+    ],
+  },
+
   // hk-border
   {
     tool: "border_waiting_times",
@@ -1404,6 +1555,18 @@ describe("MCP tool upstream behaviour", () => {
     await executeTool(service, tool, { routeName: "506" });
     const headers = fetchMock.mock.calls[0][1].headers as Record<string, string>;
     expect(headers).toMatchObject({ Accept: "application/json", "Content-Type": "application/json", "User-Agent": expect.stringMatching(/^mcprouter\//) });
+  });
+
+  it("reads today's flight board in Hong Kong time when no date is given", async () => {
+    const { service, tool } = find("airport_departures");
+    vi.useFakeTimers({ now: new Date("2026-10-18T16:30:00Z"), toFake: ["Date"] });
+    fetchMock.mockImplementation(async () => new Response("[]"));
+    try {
+      const result = await executeTool(service, tool, {});
+      expect(result.meta.source).toBe("https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=false&cargo=false&lang=en&date=2026-10-19");
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it("reports an upstream HTTP error with its status", async () => {
