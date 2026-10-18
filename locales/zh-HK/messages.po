@@ -1351,8 +1351,8 @@ msgid "The catalogue hasn't been synced yet"
 msgstr "目錄尚未同步"
 
 #: app/(dashboard)/tracker/tracker-ui.tsx
-msgid "Run {command}, or wait for the daily cron, to load the DATA.GOV.HK catalogue."
-msgstr "執行 {command}，或等待每日排程工作，以載入 DATA.GOV.HK 目錄。"
+msgid "Run {command}, or wait for the daily sync, to load the DATA.GOV.HK catalogue."
+msgstr "執行 {command}，或等待每日同步，以載入 DATA.GOV.HK 目錄。"
 
 #: app/(dashboard)/tracker/tracker-ui.tsx
 msgid "{name} converted"

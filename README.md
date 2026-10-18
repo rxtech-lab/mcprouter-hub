@@ -24,7 +24,6 @@ To inspect it: `bunx @modelcontextprotocol/inspector` with that URL and header.
 | `/api/chat` | The agent (AI SDK 7), used by `/chat` |
 | `/api/whatsapp` | WhatsApp bot webhook (WasenderAPI) |
 | `/api/telegram` | Telegram bot webhook (Bot API) |
-| `/api/cron/sync-catalog` | Daily catalogue sync (Vercel cron, `CRON_SECRET`) |
 
 The combined endpoint lists only `search_tools` (a query and an optional `limit`, default 8, at most 20; the same hybrid embedding and keyword ranking as the agent), `read_tool` (a tool's description and JSON Schema) and `use_tool` (a tool name and its `arguments`), so clients that cap or struggle with many tools stay usable. Only `use_tool` is metered, and it's logged under the real tool's name. Key scopes apply before search, so out-of-scope tools can't be found, read or used. `?tools=search` asks for this mode explicitly; the agent calls the route in-process and always gets every tool.
 
@@ -42,7 +41,7 @@ Besides API keys, both MCP endpoints accept OAuth 2.1 access tokens, so clients 
 4. `/oauth/authorize` sends signed-out users to `/login?next=…`, then shows a consent page. Allow/Cancel is a server action that validates the request again and redirects back with `code`, `state` and `iss` (RFC 9207).
 5. `POST /api/mcp/oauth/token` exchanges the code (one minute, single use; replaying it revokes the grant) and rotates refresh tokens (reusing one revokes the grant). Access tokens (`mcpo_at_…`) last an hour. The grant expires after 30 days without a refresh. `POST /api/mcp/oauth/revoke` follows RFC 7009.
 
-A token is bound to the `resource` the user approved: a token for `/api/mcp/streamable` works on every endpoint, and a token for `/api/mcp/s/<service>/streamable` only works on that endpoint. OAuth tokens are accepted only in the `Authorization` header. Calls are billed and logged like key calls (with no `apiKeyId`). Users see and disconnect apps under **API keys → Connected apps** (`/keys/apps`). Codes, tokens and grants are stored as sha256 hashes in `oauth_*` tables (migration `0003_oauth`). The daily cron removes expired and revoked ones. The issuer is `NEXT_PUBLIC_SITE_URL`, so set it to the public origin in production.
+A token is bound to the `resource` the user approved: a token for `/api/mcp/streamable` works on every endpoint, and a token for `/api/mcp/s/<service>/streamable` only works on that endpoint. OAuth tokens are accepted only in the `Authorization` header. Calls are billed and logged like key calls (with no `apiKeyId`). Users see and disconnect apps under **API keys → Connected apps** (`/keys/apps`). Codes, tokens and grants are stored as sha256 hashes in `oauth_*` tables (migration `0003_oauth`). The daily catalogue sync removes expired and revoked ones. The issuer is `NEXT_PUBLIC_SITE_URL`, so set it to the public origin in production.
 
 ## Adding an MCP service
 
@@ -134,7 +133,7 @@ Translations live in gettext catalogues, `locales/<locale>/messages.po`, keyed b
 | `bun run codegen [--check]` | YAML → `generated/` and `APIS.md`; compiles the translation catalogues |
 | `bun run i18n:extract` / `bun run i18n:check` | Update `locales/*/messages.po` from the source / check they're complete |
 | `bun run theme` | Regenerate `app/m3-tokens.css` from the seed colour |
-| `bun run catalog:sync [--limit N]` | Sync the CKAN catalogue without the cron's time budget |
+| `bun run catalog:sync [--limit N]` | Sync the CKAN catalogue and drop expired OAuth rows (run daily by the `Sync catalogue` GitHub Action) |
 | `bun run apis:import [--dry-run]` | Add every DATA.GOV.HK dataset `mcp/apis.yaml` doesn't list yet |
 | `bun run tracker:report [--markdown]` | Tracker summary in the terminal |
 | `bun run test` / `bun run test:e2e` | vitest / Playwright (`DEV_BYPASS_AUTH`) |

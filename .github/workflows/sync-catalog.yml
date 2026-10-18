@@ -1,0 +1,28 @@
+name: Sync catalogue
+
+on:
+  schedule:
+    - cron: "0 19 * * *" # 03:00 Hong Kong time
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: Fetch metadata for at most this many datasets (empty for all)
+        required: false
+
+concurrency:
+  group: sync-catalog
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run catalog:sync ${LIMIT:+--limit "$LIMIT"}
+        env:
+          LIMIT: ${{ inputs.limit }}
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
