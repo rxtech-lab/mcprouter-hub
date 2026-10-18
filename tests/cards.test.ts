@@ -107,6 +107,31 @@ describe("card builders", () => {
     ]);
   });
 
+  it("shows Kowloon East free spaces out of the total, coloured by how full the car park is", () => {
+    const card = cardForToolResult(
+      result("kowloon-east-parking", "ke_parking_vacancy", { carparkId: 12 }, [
+        {
+          id: 12,
+          name: "Amoy Plaza",
+          area: "Kowloon Bay",
+          closed: false,
+          updatedAt: null,
+          vacancies: { privateCar: { vacant: 13, spaces: 389, ev: 1 }, LGV: { vacant: 0, spaces: 5 }, motorCycle: { vacant: 4 } },
+        },
+      ]),
+    )!;
+    expect(card).toMatchObject({ title: "Amoy Plaza", subtitle: "Kowloon Bay", accent: "#d9531e" });
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        title: "Amoy Plaza",
+        subtitle: "Kowloon Bay",
+        trailing: [{ text: "Car 13/389", tone: "success" }, { text: "Light goods 0/5", tone: "danger" }, { text: "Motorcycle 4", tone: "warning" }],
+        muted: false,
+      },
+    ]);
+  });
+
   it("lists the worst-graded beaches first and flags them", () => {
     const beach = (code: string, name: string, grade: number, rating: string) => ({ code, name, district: "Southern", grade, rating, latitude: 22.2, longitude: 114.2, report: null });
     const card = cardForToolResult(

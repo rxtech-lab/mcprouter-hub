@@ -24,7 +24,7 @@ describe("service.yaml schema", () => {
 
   it("accepts every committed service", () => {
     const dir = path.join(import.meta.dirname, "../mcp/services");
-    for (const name of ["hko-weather", "hk-bus", "mtr", "ha-aed", "td-carpark", "hk-holidays", "datagovhk-catalog", "hk-border", "epd-beach", "hko-tides", "epd-aqhi", "hko-regional"]) {
+    for (const name of ["hko-weather", "hk-bus", "mtr", "ha-aed", "td-carpark", "hk-holidays", "datagovhk-catalog", "hk-border", "epd-beach", "hko-tides", "epd-aqhi", "hko-regional", "kowloon-east-parking"]) {
       expect(issues(parse(readFileSync(path.join(dir, name, "service.yaml"), "utf8"))), name).toEqual([]);
     }
   });

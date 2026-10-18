@@ -11,6 +11,7 @@ import { buildCard as holidaysCard } from "@/mcp/services/hk-holidays/card";
 import { buildCard as regionalWeatherCard } from "@/mcp/services/hko-regional/card";
 import { buildCard as tidesCard } from "@/mcp/services/hko-tides/card";
 import { buildCard as weatherCard } from "@/mcp/services/hko-weather/card";
+import { buildCard as kowloonEastParkingCard } from "@/mcp/services/kowloon-east-parking/card";
 import { buildCard as mtrCard } from "@/mcp/services/mtr/card";
 import { buildCard as carparkCard } from "@/mcp/services/td-carpark/card";
 
@@ -31,6 +32,7 @@ const BUILDERS: Record<string, CardBuilder> = {
   "hko-regional": regionalWeatherCard,
   "hko-tides": tidesCard,
   "hko-weather": weatherCard,
+  "kowloon-east-parking": kowloonEastParkingCard,
   mtr: mtrCard,
   "td-carpark": carparkCard,
 };

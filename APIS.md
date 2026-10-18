@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **33 of 3819 implemented**, 3786 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **34 of 3819 implemented**, 3785 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -37,7 +37,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0026` | [Traffic snapshot images](https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images) | API | Transport Department | 🕒 Coming soon | — |
 | `API-0027` | [Land boundary control point waiting times](https://data.gov.hk/en-data/dataset/hk-immd-set28-land-boundary-control-points-waiting-time) | API | Immigration Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
 | `API-0028` | [Metered parking spaces](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) | API | Transport Department | 🕒 Coming soon | — |
-| `API-0029` | [Kowloon East parking vacancy](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) | API | Development Bureau | 🕒 Coming soon | — |
+| `API-0029` | [Kowloon East parking vacancy](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) | API | Development Bureau | ✅ Implemented | [Kowloon East Parking](mcp/services/kowloon-east-parking/service.yaml) |
 | `API-0121` | [Taxi Fleet Information (Amigo)](https://data.gov.hk/en-data/dataset/amigo-tis_41-taxi-fleet-information-amigo) | API | Amigo (Taxi Fleet Licensee) | 🕒 Coming soon | — |
 | `API-0153` | [Taxi Fleet Information (Big Boss Taxi)](https://data.gov.hk/en-data/dataset/big-boss-taxi-tis_42-taxi-fleet-information-bbt) | API | Big Boss Taxi (Taxi Fleet Licensee) | 🕒 Coming soon | — |
 | `API-0638` | [Hong Kong Shipping Statistics - Table 410-55110 : Port Cargo Throughput](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-55110) | API | Census and Statistics Department | 🕒 Coming soon | — |
