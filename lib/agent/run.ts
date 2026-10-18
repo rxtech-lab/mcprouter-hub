@@ -13,6 +13,7 @@ import {
 } from "ai";
 import { cachedInstructions, gatewayCaching, markLastMessage, stableTools } from "@/lib/agent/cache";
 import type { resolveServer } from "@/lib/agent/mcp-servers";
+import { selfMcpFetch } from "@/lib/agent/self-fetch";
 import { usedToolNames, withToolSearch } from "@/lib/agent/tool-search";
 
 export const AGENT_INSTRUCTIONS = `You are the mcprouter assistant. You answer questions about Hong Kong using live government open data through your tools:
@@ -52,7 +53,8 @@ async function connectTools(servers: ResolvedServer[]) {
   await Promise.all(
     servers.map(async (server) => {
       try {
-        const client = await createMCPClient({ transport: { type: "http", url: server.url, headers: server.headers }, capabilities: mcpAppClientCapabilities });
+        const transport = { type: "http" as const, url: server.url, headers: server.headers, fetch: server.self ? selfMcpFetch : undefined };
+        const client = await createMCPClient({ transport, capabilities: mcpAppClientCapabilities });
         clients.push(client);
         const serverTools = client.toolsFromDefinitions(splitMCPAppTools(await listAllTools(client)).modelVisible);
         // Tools from other servers are prefixed so their names can't collide with ours.

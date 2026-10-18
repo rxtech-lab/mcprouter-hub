@@ -104,6 +104,21 @@ describe("MCP endpoint", () => {
     });
   });
 
+  it("serves the agent in-process, without a network round trip that a domain redirect could strip auth from", async () => {
+    const { createMCPClient } = await import("@ai-sdk/mcp");
+    const { selfMcpFetch } = await import("@/lib/agent/self-fetch");
+    const client = await createMCPClient({
+      transport: { type: "http", url: "https://apex.example/api/mcp/streamable", headers: { Authorization: `Bearer ${INTERNAL_KEY}`, [INTERNAL_USER_HEADER]: "user-1" }, fetch: selfMcpFetch },
+    });
+    try {
+      const { tools } = await client.listTools();
+      expect(tools.map((tool) => tool.name)).toContain("kmb_stop_eta");
+      expect(fetchMock).not.toHaveBeenCalled();
+    } finally {
+      await client.close();
+    }
+  });
+
   it("lists only one service's tools on a per-service endpoint", async () => {
     const { result } = await rpc(busOnly, "tools/list", {}, { path: `/api/mcp/s/${busService.id}/streamable` });
     const names = result!.tools!.map((tool) => tool.name);
