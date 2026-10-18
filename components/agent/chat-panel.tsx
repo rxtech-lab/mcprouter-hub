@@ -191,7 +191,7 @@ function toTurns(messages: UIMessage[]): Turn[] {
 }
 
 /** Three bouncing dots, shown for as long as the agent is working on a reply. */
-function TypingDots() {
+export function TypingDots() {
   const t = useT();
   return (
     <div role="status" aria-label={t("Agent is responding")} className="flex h-6 items-center gap-1 animate-fade-in" data-testid="typing-dots">

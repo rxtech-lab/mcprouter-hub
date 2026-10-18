@@ -2222,8 +2222,16 @@ msgid "Thinking…"
 msgstr "思考中…"
 
 #: components/agent/hero-chat.tsx
-msgid "{remaining} of {limit} free messages left today. Not saved."
-msgstr "今日剩余 {remaining}/{limit} 条免费消息。对话不会保存。"
+msgid "{remaining} of {limit} free messages left today. Saved in this browser only."
+msgstr "今日剩余 {remaining}/{limit} 条免费消息。对话仅保存在此浏览器。"
+
+#: components/agent/hero-chat.tsx
+msgid "Exit full screen"
+msgstr "退出全屏"
+
+#: components/agent/hero-chat.tsx
+msgid "Full screen"
+msgstr "全屏"
 
 #: components/agent/hero-chat.tsx
 msgid "Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?"

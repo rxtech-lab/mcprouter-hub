@@ -119,4 +119,12 @@ describe("createTranslator", () => {
     expect(isValidElement(node)).toBe(true);
     expect(renderToStaticMarkup(createElement(Fragment, null, node))).toBe('Read the <a href="/docs">guide</a> for <b>MCP</b>');
   });
+
+  it("fills placeholders inside a tag", () => {
+    const node = en.rich("Searched tools <muted>for “{query}”</muted>", {
+      muted: (chunks) => createElement("span", null, chunks),
+      query: "weather",
+    });
+    expect(renderToStaticMarkup(createElement(Fragment, null, node))).toBe("Searched tools <span>for “weather”</span>");
+  });
 });

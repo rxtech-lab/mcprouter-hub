@@ -1,8 +1,8 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { DefaultChatTransport } from "ai";
-import { ArrowUp, ChevronDown, ChevronUp, CircleAlert, LoaderCircle, RotateCcw, Square } from "lucide-react";
+import { DefaultChatTransport, type UIMessage } from "ai";
+import { ArrowUp, ChevronDown, ChevronUp, CircleAlert, Maximize2, Minimize2, RotateCcw, Square } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
@@ -11,11 +11,32 @@ import { cn } from "@/components/m3/cn";
 import type { FreeChatQuota } from "@/lib/free-chat";
 import { getFreeChatQuota } from "@/lib/free-chat-actions";
 import { useT } from "@/lib/i18n/client";
-import { MessageParts, SUGGESTIONS } from "./chat-panel";
+import { MessageParts, SUGGESTIONS, TypingDots } from "./chat-panel";
 import { McpAppHost } from "./tool-app";
 
 /** Below Tailwind's `md` breakpoint the chat leaves the hero and docks at the bottom of the screen. */
 const mobileQuery = "(max-width: 767px)";
+
+/** The free chat isn't stored on the server, so the conversation is kept in this browser instead. */
+const storageKey = "hero-chat-messages";
+
+function loadMessages(): UIMessage[] {
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey) ?? "[]");
+    return Array.isArray(saved) ? saved : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveMessages(messages: UIMessage[]) {
+  try {
+    if (messages.length === 0) localStorage.removeItem(storageKey);
+    else localStorage.setItem(storageKey, JSON.stringify(messages));
+  } catch {
+    // Storage is full or blocked (private mode): the chat still works, it just isn't kept.
+  }
+}
 
 function subscribeToMobile(onChange: () => void) {
   const query = window.matchMedia(mobileQuery);
@@ -25,7 +46,8 @@ function subscribeToMobile(onChange: () => void) {
 
 /**
  * The free, signed-out agent, embedded in the landing page hero. On phones it is a small sheet
- * docked at the bottom of the screen that grows into a full-screen chat when tapped.
+ * docked at the bottom of the screen that grows into a full-screen chat when tapped. On larger
+ * screens it can be expanded to fill the window.
  */
 export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
   const t = useT();
@@ -36,6 +58,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
   const mobile = useSyncExternalStore(subscribeToMobile, () => window.matchMedia(mobileQuery).matches, () => false);
   const [expanded, setExpanded] = useState(false);
   const open = !mobile || expanded;
+  const fullScreen = !mobile && expanded;
 
   const refreshQuota = async () => {
     const result = await getFreeChatQuota();
@@ -62,6 +85,18 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
     onFinish: () => void refreshQuota(),
   });
   const busy = status === "submitted" || status === "streaming";
+
+  // Restore the last conversation once mounted (localStorage isn't available while server rendering).
+  const restored = useRef(false);
+  useEffect(() => {
+    const saved = loadMessages();
+    if (saved.length > 0) setMessages(saved);
+    restored.current = true;
+  }, [setMessages]);
+  // Save once each answer settles rather than on every streamed token.
+  useEffect(() => {
+    if (restored.current && !busy) saveMessages(messages);
+  }, [messages, busy]);
   const usedUp = quota?.remaining === 0;
 
   // Follow the answer as it streams in.
@@ -84,9 +119,9 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
   });
   const askFromApp = useCallback((text: string) => sendRef.current(text), []);
 
-  // The full-screen sheet owns the screen: the page behind it stops scrolling and Escape folds it back down.
+  // The full-screen chat owns the screen: the page behind it stops scrolling and Escape folds it back down.
   useEffect(() => {
-    if (!mobile || !expanded) return;
+    if (!expanded) return;
     const overflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKeyDown = (event: KeyboardEvent) => {
@@ -97,7 +132,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
       document.body.style.overflow = overflow;
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [mobile, expanded]);
+  }, [expanded]);
 
   const remaining = quota?.remaining ?? dailyLimit;
   const limit = quota?.limit ?? dailyLimit;
@@ -114,8 +149,10 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
               "fixed inset-x-0 bottom-0 z-[35] animate-snackbar-in transition-[height,border-radius,box-shadow] duration-500 ease-emphasized",
               expanded ? "h-dvh rounded-none shadow-none" : "h-[calc(4.5rem+env(safe-area-inset-bottom))] rounded-t-xl shadow-elevation-3",
             )
-          : // Rendered on the server too, so phones keep it out of the hero until the sheet takes over.
-            "h-[32rem] scroll-mt-24 rounded-xl shadow-elevation-2 max-md:hidden",
+          : fullScreen
+            ? "fixed inset-0 z-[60] animate-pane-in"
+            : // Rendered on the server too, so phones keep it out of the hero until the sheet takes over.
+              "h-[32rem] scroll-mt-24 rounded-xl shadow-elevation-2 max-md:hidden",
       )}
       data-testid="hero-chat"
     >
@@ -142,7 +179,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
           <h2 className="type-title-small">{t("Ask the agent")}</h2>
           {!open ? (
             <p className="truncate type-body-small text-on-surface-variant">
-              {busy ? t("Thinking…") : (preview ?? t("{remaining} of {limit} free messages left today. Not saved.", { remaining, limit }))}
+              {busy ? t("Thinking…") : (preview ?? t("{remaining} of {limit} free messages left today. Saved in this browser only.", { remaining, limit }))}
             </p>
           ) : null}
         </div>
@@ -154,6 +191,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
             onClick={() => {
               stop();
               setMessages([]);
+              saveMessages([]);
               setError(null);
             }}
           >
@@ -166,55 +204,62 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
           <IconButton label={t("Close")} aria-expanded aria-controls="try-body" onClick={() => setExpanded(false)}>
             <ChevronDown size={20} />
           </IconButton>
+        ) : !mobile ? (
+          <IconButton label={fullScreen ? t("Exit full screen") : t("Full screen")} aria-pressed={fullScreen} onClick={() => setExpanded((value) => !value)}>
+            {fullScreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
+          </IconButton>
         ) : null}
       </div>
 
       <div id="try-body" inert={!open} className={cn("flex min-h-0 flex-1 flex-col transition-opacity duration-300 ease-emphasized", open ? "opacity-100 delay-100" : "opacity-0")}>
+        {/* Full screen scrolls edge to edge; only the conversation itself stays at a readable width. */}
         <div ref={scroller} className="min-h-0 flex-1 overflow-y-auto px-5 py-4" aria-live="polite">
-          {messages.length === 0 ? (
-            <div className="flex h-full flex-col justify-end gap-3">
-              <p className="max-w-[85%] rounded-lg rounded-bl-xs bg-surface-container-high px-4 py-2 type-body-medium">
-                {t("Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?")}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {SUGGESTIONS.slice(0, 4).map((suggestion) => (
-                  <button
-                    key={suggestion}
-                    type="button"
-                    disabled={usedUp}
-                    onClick={() => send(t(suggestion))}
-                    className="state-layer cursor-pointer rounded-sm border border-outline px-3 py-1.5 text-left type-label-large text-on-surface-variant disabled:cursor-default disabled:opacity-40"
-                  >
-                    {t(suggestion)}
-                  </button>
-                ))}
+          <div className={cn("h-full", fullScreen && "mx-auto max-w-3xl")}>
+            {messages.length === 0 ? (
+              <div className="flex h-full flex-col justify-end gap-3">
+                <p className="max-w-[85%] rounded-lg rounded-bl-xs bg-surface-container-high px-4 py-2 type-body-medium">
+                  {t("Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?")}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {SUGGESTIONS.slice(0, 4).map((suggestion) => (
+                    <button
+                      key={suggestion}
+                      type="button"
+                      disabled={usedUp}
+                      onClick={() => send(t(suggestion))}
+                      className="state-layer cursor-pointer rounded-sm border border-outline px-3 py-1.5 text-left type-label-large text-on-surface-variant disabled:cursor-default disabled:opacity-40"
+                    >
+                      {t(suggestion)}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
-          ) : (
-            <McpAppHost canCallTools={false} sendMessage={askFromApp}>
-              <ul className="flex flex-col gap-4">
-                {messages.map((message) =>
-                  message.role === "user" ? (
-                    <li key={message.id} className="max-w-[85%] self-end rounded-lg rounded-br-xs bg-primary px-4 py-2 type-body-medium text-on-primary" data-testid="user-message">
-                      <MessageParts message={message} />
+            ) : (
+              <McpAppHost canCallTools={false} sendMessage={askFromApp}>
+                <ul className="flex flex-col gap-4">
+                  {messages.map((message) =>
+                    message.role === "user" ? (
+                      <li key={message.id} className="max-w-[85%] self-end rounded-lg rounded-br-xs bg-primary px-4 py-2 type-body-medium text-on-primary" data-testid="user-message">
+                        <MessageParts message={message} />
+                      </li>
+                    ) : (
+                      <li key={message.id} className="type-body-medium" data-testid="agent-message">
+                        <MessageParts message={message} />
+                      </li>
+                    ),
+                  )}
+                  {busy ? (
+                    <li>
+                      <TypingDots />
                     </li>
-                  ) : (
-                    <li key={message.id} className="type-body-medium" data-testid="agent-message">
-                      <MessageParts message={message} />
-                    </li>
-                  ),
-                )}
-                {status === "submitted" ? (
-                  <li className="flex items-center gap-2 type-body-medium text-on-surface-variant">
-                    <LoaderCircle size={16} className="animate-spin" /> {t("Thinking…")}
-                  </li>
-                ) : null}
-              </ul>
-            </McpAppHost>
-          )}
+                  ) : null}
+                </ul>
+              </McpAppHost>
+            )}
+          </div>
         </div>
 
-        <div className="px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+        <div className={cn("px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]", fullScreen && "w-full max-w-3xl self-center")}>
           <form
             className="flex items-end gap-2 rounded-xl border-2 border-transparent bg-surface-container-high p-1.5 pl-4 transition-colors focus-within:border-primary"
             onSubmit={(event) => {
@@ -253,7 +298,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
               {error ??
                 (usedUp
                   ? t("You've used today's {limit} free messages. More at midnight Hong Kong time.", { limit })
-                  : t("{remaining} of {limit} free messages left today. Not saved.", { remaining, limit }))}
+                  : t("{remaining} of {limit} free messages left today. Saved in this browser only.", { remaining, limit }))}
             </span>
             <Link href="/login" className="shrink-0 type-label-large text-primary hover:underline">
               {t("Sign in for more")}
@@ -264,6 +309,9 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
     </div>
   );
 
-  // On phones the sheet lives on <body>: the hero's entrance animation would otherwise trap `position: fixed`.
-  return mobile ? createPortal(panel, document.body) : panel;
+  // On phones (and in full screen) the chat lives on <body>: the hero's entrance animation would otherwise
+  // trap `position: fixed`. A placeholder holds its spot in the hero meanwhile.
+  if (mobile) return createPortal(panel, document.body);
+  if (fullScreen) return <>{createPortal(panel, document.body)}<div aria-hidden className="h-[32rem] rounded-xl bg-surface-container-low max-md:hidden" /></>;
+  return panel;
 }
