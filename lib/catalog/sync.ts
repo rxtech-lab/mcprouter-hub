@@ -30,7 +30,7 @@ async function mapLimit<T>(items: T[], concurrency: number, deadline: number, ru
  * Sync the catalogue: `package_list` for the full id list, then
  * `package_show` for new ids first and then the least recently synced ones.
  * A dataset whose `metadata_modified` hasn't changed is only re-stamped.
- * Bounded by `maxShow` and `budgetMs` so the daily cron fits its duration;
+ * Bounded by `maxShow` and `budgetMs` so a run fits its time limit;
  * the next run continues where this one stopped.
  */
 export async function syncCatalog({ maxShow = 500, concurrency = 8, budgetMs = 240_000 } = {}): Promise<SyncReport> {

@@ -13,7 +13,7 @@ export async function NotSynced() {
   const t = await getT();
   return (
     <EmptyState title={t("The catalogue hasn't been synced yet")}>
-      {t.rich("Run {command}, or wait for the daily cron, to load the DATA.GOV.HK catalogue.", { command: <code className="font-mono">bun run catalog:sync</code> })}
+      {t.rich("Run {command}, or wait for the daily sync, to load the DATA.GOV.HK catalogue.", { command: <code className="font-mono">bun run catalog:sync</code> })}
     </EmptyState>
   );
 }
