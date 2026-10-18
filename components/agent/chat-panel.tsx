@@ -136,11 +136,11 @@ function ToolCallCard({ part }: { part: ToolPart }) {
   return (
     <details className="group my-2 rounded-md border border-outline-variant bg-surface-container-low animate-message-in" data-testid="tool-call">
       <summary className="flex cursor-pointer list-none items-center gap-2 px-3 py-2">
-        <span className="flex size-7 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container">
+        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container">
           <Wrench size={14} />
         </span>
-        <span className="font-mono text-[13px]">{part.toolName}</span>
-        <span className="ml-auto flex items-center gap-1 type-label-medium text-on-surface-variant">
+        <span className="min-w-0 truncate font-mono text-[13px]">{part.toolName}</span>
+        <span className="ml-auto flex shrink-0 items-center gap-1 type-label-medium text-on-surface-variant">
           {running ? <><LoaderCircle size={14} className="animate-spin" /> {t("Running")}</> : null}
           {part.state === "output-available" ? <><CircleCheck size={14} /> {t("Done")}</> : null}
           {failed ? <><CircleAlert size={14} className="text-error" /> {t("Failed")}</> : null}
@@ -309,13 +309,13 @@ function TurnItem({ turn, minHeight, busy }: { turn: Turn; minHeight?: number; b
       {turn.user ? (
         // The question stays pinned to the top while its answer scrolls beneath it.
         <div className="sticky top-0 z-10 flex justify-end bg-surface pb-2 md:bg-surface-container-lowest" data-testid="user-message">
-          <div className="max-h-40 max-w-[min(680px,90%)] origin-bottom-right overflow-y-auto rounded-[20px] rounded-br-xs bg-primary-container px-4 py-2 type-body-large text-on-primary-container animate-message-in">
+          <div className="max-h-40 max-w-[min(680px,90%)] origin-bottom-right overflow-y-auto rounded-[20px] rounded-br-xs bg-primary-container px-4 py-2 type-body-large wrap-anywhere text-on-primary-container animate-message-in">
             <MessageParts message={turn.user} />
           </div>
         </div>
       ) : null}
       {turn.replies.map((reply) => (
-        <div key={reply.id} className="max-w-[min(680px,90%)] origin-top-left type-body-large text-on-surface animate-message-in" data-testid="agent-message">
+        <div key={reply.id} className="max-w-[min(680px,100%)] min-w-0 origin-top-left type-body-large wrap-break-word text-on-surface animate-message-in" data-testid="agent-message">
           <MessageParts message={reply} />
         </div>
       ))}
@@ -385,12 +385,12 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <div className="flex items-center justify-between gap-2 pb-4">
-        <h1 className="type-headline-medium">{title}</h1>
+        <h1 className="min-w-0 truncate type-headline-medium">{title}</h1>
         {actions}
       </div>
       <div ref={scroller} className="relative min-h-0 flex-1 overflow-y-auto">
         {messages.length === 0 ? (
-          <div className="flex h-full flex-col items-center justify-center gap-4 text-center animate-message-in">
+          <div className="flex min-h-full flex-col items-center justify-center gap-4 py-4 text-center animate-message-in">
             <span className="flex size-12 items-center justify-center rounded-lg bg-tertiary-container text-on-tertiary-container">
               <Sparkles size={24} />
             </span>
@@ -403,7 +403,7 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
                   type="button"
                   disabled={disabled}
                   onClick={() => send(t(suggestion))}
-                  className="state-layer h-8 cursor-pointer rounded-sm border border-outline px-3 type-label-large text-on-surface-variant disabled:cursor-default disabled:opacity-40"
+                  className="state-layer min-h-8 cursor-pointer rounded-sm border border-outline px-3 py-1.5 type-label-large text-on-surface-variant disabled:cursor-default disabled:opacity-40"
                 >
                   {t(suggestion)}
                 </button>
@@ -442,7 +442,7 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
             }
           }}
           placeholder={t("Ask about weather, buses, MTR, hospitals…")}
-          className="max-h-40 min-h-10 flex-1 resize-none bg-transparent py-2 type-body-large outline-none placeholder:text-on-surface-variant disabled:opacity-60"
+          className="max-h-40 min-h-10 min-w-0 flex-1 resize-none bg-transparent py-2 type-body-large outline-none placeholder:truncate placeholder:text-on-surface-variant disabled:opacity-60"
         />
         {busy ? (
           <IconButton label={t("Stop")} variant="tonal" onClick={onStop}>

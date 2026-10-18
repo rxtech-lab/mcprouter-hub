@@ -8,7 +8,7 @@ import type { ReactNode } from "react";
 import { LanguageMenu } from "@/components/language-menu";
 import { Logo } from "@/components/logo";
 import { cn } from "@/components/m3/cn";
-import { NavigationBar, NavigationRail, type NavItem } from "@/components/m3/navigation";
+import { NavigationDrawer, NavigationRail, type NavItem } from "@/components/m3/navigation";
 import { SnackbarProvider } from "@/components/m3/snackbar";
 import { useT } from "@/lib/i18n/client";
 import { msg } from "@/lib/i18n/translate";
@@ -32,7 +32,22 @@ export function AppShell({ children, account }: { children: ReactNode; account: 
   return (
     <SnackbarProvider>
       <Tooltip.Provider delayDuration={300}>
-        <div className="flex min-h-dvh bg-surface">
+        <div className="flex min-h-dvh flex-col bg-surface md:flex-row">
+          <NavigationDrawer
+            items={navItems}
+            header={
+              <Link href="/" aria-label={t("mcprouter home")} className="flex items-center gap-2 rounded-md px-1">
+                <Logo size={32} />
+                <span className="type-title-large">mcprouter</span>
+              </Link>
+            }
+            actions={
+              <>
+                <LanguageMenu />
+                {account}
+              </>
+            }
+          />
           <NavigationRail
             items={navItems}
             header={
@@ -47,10 +62,9 @@ export function AppShell({ children, account }: { children: ReactNode; account: 
               </div>
             }
           />
-          <main className={cn("min-w-0 flex-1", fullBleed ? "pb-20 md:pb-0" : "px-4 pt-6 pb-28 md:rounded-tl-xl md:bg-surface-container-lowest md:px-8 md:pb-10")}>
+          <main className={cn("min-w-0 flex-1", fullBleed ? undefined : "px-4 pt-2 pb-10 md:rounded-tl-xl md:bg-surface-container-lowest md:px-8 md:pt-6")}>
             {fullBleed ? children : <div className="mx-auto max-w-6xl">{children}</div>}
           </main>
-          <NavigationBar items={navItems} />
         </div>
       </Tooltip.Provider>
     </SnackbarProvider>
