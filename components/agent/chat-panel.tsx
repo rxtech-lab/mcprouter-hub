@@ -1,13 +1,16 @@
 "use client";
 
 import type { UIMessage } from "ai";
-import { ArrowUp, CircleAlert, CircleCheck, ExternalLink, LayoutDashboard, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
+import { ArrowUp, ChevronDown, CircleAlert, CircleCheck, ExternalLink, LayoutDashboard, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { IconButton } from "@/components/m3/button";
 import { ACCOUNT_SUMMARY_TOOL_NAME, LIST_KEYS_TOOL_NAME, NAVIGATION_PART_TYPES, type DashboardNavigation } from "@/lib/agent/dashboard-tools";
+import { SHOW_TOOL_UI_TOOL_NAME, SHOW_UI_TOOL_NAME } from "@/lib/agent/display-tools";
+import type { UiSpec } from "@/lib/agent/ui-catalog";
 import { SEARCH_TOOL_NAME } from "@/lib/agent/tool-search";
 import { useT } from "@/lib/i18n/client";
 import { msg } from "@/lib/i18n/translate";
+import { GenerativeUi } from "./generative-ui";
 import { Markdown } from "./markdown";
 import { McpAppHost, ToolAppCard, toolPartApp } from "./tool-app";
 
@@ -30,6 +33,13 @@ type SearchPart = {
 };
 
 const SEARCH_PART_TYPE = `tool-${SEARCH_TOOL_NAME}`;
+const SHOW_TOOL_UI_PART_TYPE = `tool-${SHOW_TOOL_UI_TOOL_NAME}`;
+const SHOW_UI_PART_TYPE = `tool-${SHOW_UI_TOOL_NAME}`;
+
+type ShowToolUiPart = { type: `tool-${string}`; state: ToolPart["state"]; output?: { shown?: string[] } };
+type ShowUiPart = { type: `tool-${string}`; state: ToolPart["state"]; input?: { spec?: UiSpec }; output?: { shown?: boolean } };
+
+const isRunning = (state: ToolPart["state"]) => state === "input-streaming" || state === "input-available";
 
 type DashboardPart = { type: `tool-${string}`; state: ToolPart["state"]; output?: Partial<DashboardNavigation> & { error?: string }; errorText?: string };
 
@@ -121,7 +131,7 @@ function ToolSearchCard({ part }: { part: SearchPart }) {
 
 function ToolCallCard({ part }: { part: ToolPart }) {
   const t = useT();
-  const running = part.state === "input-streaming" || part.state === "input-available";
+  const running = isRunning(part.state);
   const failed = part.state === "output-error";
   return (
     <details className="group my-2 rounded-md border border-outline-variant bg-surface-container-low animate-message-in" data-testid="tool-call">
@@ -153,26 +163,117 @@ function ToolCallCard({ part }: { part: ToolPart }) {
   );
 }
 
+/** A step of the agent's work that stays folded: searches, tool calls and account lookups. */
+function isActivity(part: Part) {
+  return part.type === "dynamic-tool" || part.type === SEARCH_PART_TYPE || part.type in LOOKUP_LABELS;
+}
+
+function ActivityPart({ part }: { part: Part }) {
+  if (part.type === "dynamic-tool") return <ToolCallCard part={part} />;
+  if (part.type === SEARCH_PART_TYPE) return <ToolSearchCard part={part as SearchPart} />;
+  return <LookupLine part={part as DashboardPart} labels={LOOKUP_LABELS[part.type]} />;
+}
+
+/** A run of tool calls, folded to one line; it opens to show each call. */
+function ActivityGroup({ parts }: { parts: Part[] }) {
+  const t = useT();
+  const calls = parts.filter((part) => part.type === "dynamic-tool");
+  // Every activity part is a tool part, so each has a state.
+  const running = parts.find((part) => isRunning((part as SearchPart).state));
+  const failed = parts.some((part) => (part as SearchPart).state === "output-error");
+  const label = running
+    ? running.type === "dynamic-tool"
+      ? t("Running {tool}", { tool: running.toolName })
+      : running.type === SEARCH_PART_TYPE
+        ? t("Searching tools")
+        : t(LOOKUP_LABELS[running.type][0])
+    : calls.length
+      ? t.plural("Used {count} tool", "Used {count} tools", calls.length)
+      : parts.some((part) => part.type === SEARCH_PART_TYPE)
+        ? t("Searched tools")
+        : t(LOOKUP_LABELS[parts[0].type][1]);
+  return (
+    <details className="group my-1 animate-message-in" data-testid="tool-activity">
+      <summary className="state-layer inline-flex cursor-pointer list-none items-center gap-2 rounded-full py-1 pr-2 pl-1 type-label-large text-on-surface-variant">
+        <span className="flex size-6 items-center justify-center rounded-full bg-surface-container-highest">
+          {running ? <LoaderCircle size={14} className="animate-spin" /> : failed ? <CircleAlert size={14} className="text-error" /> : <Wrench size={14} />}
+        </span>
+        <span className="min-w-0 truncate">{label}</span>
+        <ChevronDown size={16} className="shrink-0 transition-transform duration-200 ease-[cubic-bezier(0.2,0,0,1)] group-open:rotate-180" />
+      </summary>
+      <div className="mt-1 border-l-2 border-outline-variant pl-3 animate-message-in">
+        {parts.map((part, index) => (
+          <ActivityPart key={"toolCallId" in part ? part.toolCallId : index} part={part} />
+        ))}
+      </div>
+    </details>
+  );
+}
+
+/** Where a UI the agent is composing will appear. */
+function UiSkeleton() {
+  const t = useT();
+  return (
+    <div className="my-2 flex flex-col gap-2 rounded-md border border-outline-variant p-4 animate-message-in" aria-label={t("Loading results")}>
+      {[60, 90, 75].map((width) => (
+        <div key={width} className="h-3.5 animate-pulse rounded-full bg-surface-container-highest" style={{ width: `${width}%` }} />
+      ))}
+    </div>
+  );
+}
+
+/** The latest call of `toolName` before `before`, if it has an app to show. */
+function appCall(parts: Part[], toolName: string, before: number) {
+  for (let index = before - 1; index >= 0; index--) {
+    const part = parts[index];
+    if (part.type === "dynamic-tool" && part.toolName === toolName) {
+      const resourceUri = part.state === "output-available" ? toolPartApp(part) : null;
+      return resourceUri ? { part, resourceUri } : null;
+    }
+  }
+  return null;
+}
+
+/**
+ * A message's parts. Tool calls fold into one line per run; UI shows only where the agent asked for it:
+ * a tool's MCP App with `show_tool_ui`, or a UI it composed with `show_ui`. The reply carries just the visuals that help.
+ */
 export function MessageParts({ message }: { message: UIMessage }) {
   const isUser = message.role === "user";
-  return message.parts.map((part, index) => {
+  const { parts } = message;
+  const nodes: ReactNode[] = [];
+  let group: Part[] = [];
+  const flush = () => {
+    if (group.length) nodes.push(<ActivityGroup key={`activity-${nodes.length}`} parts={group} />);
+    group = [];
+  };
+
+  parts.forEach((part, index) => {
+    if (isActivity(part)) {
+      group.push(part);
+      return;
+    }
+    // Step markers sit between tool calls; they don't end a run.
+    if (part.type === "step-start") return;
+    if (part.type === "text" && !part.text.trim()) return;
+    flush();
     if (part.type === "text") {
-      return isUser ? <p key={index} className="whitespace-pre-wrap">{part.text}</p> : <Markdown key={index}>{part.text}</Markdown>;
+      nodes.push(isUser ? <p key={index} className="whitespace-pre-wrap">{part.text}</p> : <Markdown key={index}>{part.text}</Markdown>);
+    } else if (part.type === SHOW_UI_PART_TYPE) {
+      const show = part as ShowUiPart;
+      if (isRunning(show.state)) nodes.push(<UiSkeleton key={index} />);
+      else if (show.state === "output-available" && show.output?.shown && show.input?.spec) nodes.push(<GenerativeUi key={index} spec={show.input.spec} />);
+    } else if (part.type === SHOW_TOOL_UI_PART_TYPE) {
+      for (const name of (part as ShowToolUiPart).output?.shown ?? []) {
+        const call = appCall(parts, name, index);
+        if (call) nodes.push(<ToolAppCard key={`${index}-${call.part.toolCallId}`} part={call.part} resourceUri={call.resourceUri} fallback={null} />);
+      }
+    } else if (NAVIGATION_PART_TYPES.includes(part.type)) {
+      nodes.push(<DashboardLinkCard key={index} part={part as DashboardPart} />);
     }
-    if (part.type === "dynamic-tool") {
-      // Tools with an MCP App render their result as the app; the rest show their JSON.
-      const resourceUri = toolPartApp(part);
-      return resourceUri ? (
-        <ToolAppCard key={part.toolCallId} part={part} resourceUri={resourceUri} fallback={<ToolCallCard part={part} />} />
-      ) : (
-        <ToolCallCard key={index} part={part} />
-      );
-    }
-    if (part.type === SEARCH_PART_TYPE) return <ToolSearchCard key={index} part={part as SearchPart} />;
-    if (NAVIGATION_PART_TYPES.includes(part.type)) return <DashboardLinkCard key={index} part={part as DashboardPart} />;
-    if (part.type in LOOKUP_LABELS) return <LookupLine key={index} part={part as DashboardPart} labels={LOOKUP_LABELS[part.type]} />;
-    return null;
   });
+  flush();
+  return nodes;
 }
 
 type Turn = { id: string; user?: UIMessage; replies: UIMessage[] };

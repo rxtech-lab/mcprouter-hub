@@ -1,7 +1,10 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it, vi } from "vitest";
-import { cardForToolResult, cardInput, cardsForToolResults, MAX_CARDS_PER_REPLY } from "@/lib/cards";
+import type { Visual } from "@/lib/agent/display-tools";
+import type { UiSpec } from "@/lib/agent/ui-catalog";
+import { cardForToolResult, cardInput, cardsForVisuals, MAX_CARDS_PER_REPLY } from "@/lib/cards";
+import { uiSpecCard } from "@/lib/cards/ui-card";
 import { cardTree, renderCardPng, renderCardSvg } from "@/lib/cards/render";
 import type { Card } from "@/mcp/apps/card";
 
@@ -90,18 +93,65 @@ describe("card builders", () => {
   });
 });
 
-describe("cardsForToolResults", () => {
+describe("cardsForVisuals", () => {
   const holiday = (date: string) => result("hk-holidays", "hk_is_public_holiday", { date }, { date, isPublicHoliday: false, holiday: null, isSunday: false });
+  const shown = (output: unknown): Visual => ({ type: "tool", toolName: "hk_is_public_holiday", output });
 
-  it("keeps the latest result per tool and input, in call order", () => {
-    const cards = cardsForToolResults([holiday("2026-12-25"), { content: [] }, holiday("2026-12-26"), holiday("2026-12-25")]);
+  it("draws what the agent showed, once per tool and input, in order", () => {
+    const cards = cardsForVisuals([shown(holiday("2026-12-25")), shown({ content: [] }), shown(holiday("2026-12-26")), shown(holiday("2026-12-25"))]);
     expect(cards.map((card) => card.title)).toEqual(["Saturday, 26 December 2026", "Friday, 25 December 2026"]);
   });
 
+  it("draws a composed UI as a card", () => {
+    const spec: UiSpec = { root: "t", elements: { t: { type: "Text", props: { text: "Hello" } } } };
+    expect(cardsForVisuals([{ type: "ui", spec }, shown(holiday("2026-12-25"))]).map((card) => card.title)).toEqual(["mcprouter", "Friday, 25 December 2026"]);
+  });
+
   it(`sends at most ${MAX_CARDS_PER_REPLY}, the latest`, () => {
-    const cards = cardsForToolResults(["2026-12-21", "2026-12-22", "2026-12-23", "2026-12-24"].map(holiday));
+    const cards = cardsForVisuals(["2026-12-21", "2026-12-22", "2026-12-23", "2026-12-24"].map((date) => shown(holiday(date))));
     expect(cards).toHaveLength(MAX_CARDS_PER_REPLY);
     expect(cards[0].title).toContain("22 December");
+  });
+});
+
+describe("uiSpecCard", () => {
+  it("heads the card with the root Card and maps components to blocks", () => {
+    const card = uiSpecCard({
+      root: "card",
+      elements: {
+        card: { type: "Card", props: { title: "Hong Kong now", subtitle: "HKO" }, children: ["grid", "warn", "list", "table", "kv", "source"] },
+        grid: { type: "Grid", props: {}, children: ["temp", "humidity"] },
+        temp: { type: "Metric", props: { label: "Temperature", value: "28", unit: "°C" } },
+        humidity: { type: "Metric", props: { label: "Humidity", value: "71", unit: "%" } },
+        warn: { type: "Alert", props: { title: "Thunderstorm warning", message: "Until 23:00", tone: "error" } },
+        list: { type: "List", props: { items: [{ title: "1A", subtitle: "Star Ferry", trailing: "3 min" }] } },
+        table: { type: "Table", props: { columns: ["Hospital", "Region", "Wait"], rows: [["QMH", "HK Island", "2 hours"]] } },
+        kv: { type: "KeyValue", props: { items: [{ label: "Updated", value: "a very long value that will not fit" }] } },
+        source: { type: "Link", props: { label: "Source", href: "https://www.hko.gov.hk" } },
+      },
+    });
+    expect(card).toMatchObject({ title: "Hong Kong now", subtitle: "HKO", badge: "H", accent: "#216487" });
+    expect(card.blocks).toEqual([
+      { kind: "stats", items: [{ label: "Temperature", value: "28°C" }, { label: "Humidity", value: "71%" }] },
+      { kind: "notice", text: "Thunderstorm warning: Until 23:00", tone: "danger" },
+      { kind: "row", title: "1A", subtitle: "Star Ferry", trailing: [{ text: "3 min", tone: "accent" }] },
+      { kind: "row", title: "QMH", subtitle: "Region: HK Island", trailing: [{ text: "2 hours", tone: "accent" }] },
+      { kind: "row", title: "a very long value that will not fit", subtitle: "Updated" },
+      { kind: "text", text: "Source: https://www.hko.gov.hk", muted: true },
+    ]);
+  });
+
+  it("uses a leading heading as the title and never loops", () => {
+    const card = uiSpecCard({
+      root: "stack",
+      elements: {
+        stack: { type: "Stack", props: {}, children: ["heading", "metric", "stack"] },
+        heading: { type: "Heading", props: { text: "九天天氣預報" } },
+        metric: { type: "Metric", props: { label: "最高", value: "32", unit: "°C" } },
+      },
+    });
+    expect(card).toMatchObject({ title: "九天天氣預報", badge: "九" });
+    expect(card.blocks).toEqual([{ kind: "hero", value: "32°C", label: "最高", detail: null }]);
   });
 });
 

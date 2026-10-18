@@ -14,6 +14,7 @@ import {
 import { cachedInstructions, gatewayCaching, markLastMessage, stableTools } from "@/lib/agent/cache";
 import type { resolveServer } from "@/lib/agent/mcp-servers";
 import { selfMcpFetch } from "@/lib/agent/self-fetch";
+import { APP_TOOL_HINT, chosenVisuals, definitionHasApp, SHOW_UI_NOTE, showUiTools } from "@/lib/agent/display-tools";
 import { usedToolNames, withToolSearch } from "@/lib/agent/tool-search";
 
 export const AGENT_INSTRUCTIONS = `You are the mcprouter assistant. You answer questions with live open data through your tools. Coverage starts with Hong Kong:
@@ -37,9 +38,9 @@ type ResolvedServer = ReturnType<typeof resolveServer>;
 /** Whether this app's server is in search mode, so it already hands the model search_tools, read_tool and use_tool. */
 const inSearchMode = (servers: ResolvedServer[]) => servers.some((server) => server.self && server.toolMode === "search");
 
-/** The instructions, with the channel's note and, in search mode, how to reach tools. */
+/** The instructions, with how to show results, the channel's note and, in search mode, how to reach tools. */
 function instructionsFor(servers: ResolvedServer[], channelNote: string | undefined) {
-  return [agentInstructions(), inSearchMode(servers) ? SEARCH_MODE_NOTE : null, channelNote].filter(Boolean).join("\n");
+  return [agentInstructions(), inSearchMode(servers) ? SEARCH_MODE_NOTE : null, SHOW_UI_NOTE, channelNote].filter(Boolean).join("\n");
 }
 
 /**
@@ -70,15 +71,21 @@ async function listAllTools(client: MCPClient) {
 async function connectTools(servers: ResolvedServer[]) {
   const clients: MCPClient[] = [];
   const tools: ToolSet = {};
+  const appTools = new Set<string>();
   await Promise.all(
     servers.map(async (server) => {
       try {
         const transport = { type: "http" as const, url: server.url, headers: server.headers, fetch: server.self ? selfMcpFetch : undefined };
         const client = await createMCPClient({ transport, capabilities: mcpAppClientCapabilities });
         clients.push(client);
-        const serverTools = client.toolsFromDefinitions(splitMCPAppTools(await listAllTools(client)).modelVisible);
+        const definitions = splitMCPAppTools(await listAllTools(client)).modelVisible;
         // Tools from other servers are prefixed so their names can't collide with ours.
-        for (const [name, tool] of Object.entries(serverTools)) tools[server.self ? name : `${server.name}__${name}`] = tool;
+        const chatName = (name: string) => (server.self ? name : `${server.name}__${name}`);
+        for (const definition of definitions.tools) if (definitionHasApp(definition)) appTools.add(chatName(definition.name));
+        for (const [name, tool] of Object.entries(client.toolsFromDefinitions(definitions))) {
+          // Tools with an app say so, so the agent knows it can show their result.
+          tools[chatName(name)] = appTools.has(chatName(name)) ? ({ ...tool, description: [tool.description, APP_TOOL_HINT].filter(Boolean).join("\n") } as typeof tool) : tool;
+        }
       } catch (error) {
         console.error(`[agent] could not connect to MCP server "${server.name}"`, error);
       }
@@ -87,7 +94,7 @@ async function connectTools(servers: ResolvedServer[]) {
   const closeAll = async () => {
     await Promise.allSettled(clients.map((client) => client.close()));
   };
-  return { tools, closeAll };
+  return { tools, appTools, closeAll };
 }
 
 /** Streams one agent reply as a UI message response, calling `onFinished` with the full conversation. */
@@ -103,14 +110,14 @@ export async function streamAgentReply(options: {
   channelTools?: ToolSet;
   onFinished?: (messages: UIMessage[]) => Promise<void>;
 }) {
-  const { tools, closeAll } = await connectTools(options.servers);
+  const { tools, appTools, closeAll } = await connectTools(options.servers);
   try {
     const instructions = instructionsFor(options.servers, options.channelNote);
     const result = streamText({
       model: options.model,
       instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages(options.messages)),
-      tools: modelTools(options.servers, tools, options.messages, options.channelTools),
+      tools: modelTools(options.servers, tools, options.messages, { ...options.channelTools, ...showUiTools(appTools) }),
       providerOptions: gatewayCaching,
       // Each tool step resends the conversation; keep the breakpoint on its newest message.
       prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
@@ -150,7 +157,7 @@ export async function streamAgentReply(options: {
 
 /**
  * One complete agent reply, for channels that can't stream (Telegram, WhatsApp). `channelNote` is appended
- * to the instructions. `toolOutputs` are the raw tool results in call order, for drawing chat cards.
+ * to the instructions. `visuals` are what the agent chose to show, in order, for drawing chat cards.
  */
 export async function generateAgentReply(options: {
   servers: ResolvedServer[];
@@ -161,19 +168,19 @@ export async function generateAgentReply(options: {
   /** The channel's own tools (e.g. `sign_out`); always loaded, never behind `search_tools`. */
   channelTools?: ToolSet;
 }) {
-  const { tools, closeAll } = await connectTools(options.servers);
+  const { tools, appTools, closeAll } = await connectTools(options.servers);
   try {
     const instructions = instructionsFor(options.servers, options.channelNote);
     const result = await generateText({
       model: options.model,
       instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages(options.messages)),
-      tools: modelTools(options.servers, tools, options.messages, options.channelTools),
+      tools: modelTools(options.servers, tools, options.messages, { ...options.channelTools, ...showUiTools(appTools) }),
       providerOptions: gatewayCaching,
       prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
       stopWhen: isStepCount(options.maxSteps ?? 10),
     });
-    return { text: result.text, toolOutputs: result.steps.flatMap((step) => step.toolResults.map((toolResult) => toolResult.output as unknown)) };
+    return { text: result.text, visuals: chosenVisuals(result.steps.flatMap((step) => step.toolResults)) };
   } finally {
     await closeAll();
   }
