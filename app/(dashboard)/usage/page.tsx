@@ -35,7 +35,7 @@ export default async function UsageCallsPage({ searchParams }: PageProps<"/usage
 
   return (
     <>
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="stagger grid gap-4 sm:grid-cols-3">
         <StatCard label={`Calls, last ${days} days`} value={daily ? formatNumber(total) : "–"} icon={<Activity size={18} />} />
         <StatCard
           label="Plan allowance"

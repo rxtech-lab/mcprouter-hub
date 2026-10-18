@@ -78,7 +78,7 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
 
       <h2 className="mt-8 mb-3 type-title-large">Plans</h2>
       {catalog?.plans.length ? (
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="stagger grid gap-4 md:grid-cols-3">
           {catalog.plans.map((plan) => (
             <Card key={plan.id} className="flex flex-col gap-2">
               <h3 className="type-title-medium">{plan.name}</h3>
@@ -102,7 +102,7 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
       {catalog?.topups.length ? (
         <>
           <h2 className="mt-8 mb-3 type-title-large">Top-ups</h2>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="stagger grid gap-4 md:grid-cols-3">
             {catalog.topups.map((topup) => (
               <Card key={topup.id} className="flex flex-col gap-2">
                 <h3 className="type-title-medium">{topup.name}</h3>

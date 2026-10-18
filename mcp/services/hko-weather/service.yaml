@@ -16,6 +16,9 @@ lang:
   param: lang
   map: { en: en, tc: tc, sc: sc }
 cacheTtl: 300
+# Renders results in hosts that support MCP Apps; see app.ts. Weather icons load from the Observatory.
+app:
+  resourceDomains: ["https://www.hko.gov.hk"]
 tools:
   - name: hko_current_weather
     title: Current weather report

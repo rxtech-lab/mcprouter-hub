@@ -11,7 +11,7 @@ export default function SourcesPage() {
   return (
     <>
       <SourcesHeader />
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {manifest.services.map((service, index) => (
           <li key={service.id}>
             <Link href={`/sources/${service.id}`} className="state-layer group flex h-full flex-col gap-4 rounded-lg bg-surface-container-low p-5 text-on-surface">

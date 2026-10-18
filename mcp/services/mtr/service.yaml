@@ -10,6 +10,8 @@ lang:
   param: lang
   map: { en: EN, tc: TC, sc: TC }
 cacheTtl: 30
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
 tools:
   - name: mtr_next_train
     title: MTR next trains

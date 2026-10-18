@@ -52,6 +52,63 @@
   /* M3 emphasized-decelerate: elements entering the screen. */
   --animate-message-in: message-in 400ms cubic-bezier(0.05, 0.7, 0.1, 1) both;
   --animate-typing-dot: typing-dot 1.2s cubic-bezier(0.2, 0, 0, 1) infinite;
+  /* M3 shared-axis Y: a page fades in while rising slightly. */
+  --animate-page-in: page-in 400ms cubic-bezier(0.05, 0.7, 0.1, 1) both;
+  /* M3 fade-through: switching between tabs of the same page. */
+  --animate-fade-through: fade-through 300ms cubic-bezier(0.2, 0, 0, 1) both;
+  /* M3 emphasized-accelerate: elements leaving the screen. */
+  --animate-fade-out: fade-out 150ms cubic-bezier(0.3, 0, 0.8, 0.15) both;
+  --animate-surface-out: surface-out 150ms cubic-bezier(0.3, 0, 0.8, 0.15) both;
+  --animate-menu-in: menu-in 250ms cubic-bezier(0.05, 0.7, 0.1, 1) both;
+  --animate-hold: hold 150ms both;
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+@keyframes page-in {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes fade-through {
+  from { transform: scale(0.98); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+@keyframes surface-out {
+  to { transform: scale(0.96); opacity: 0; }
+}
+@keyframes menu-in {
+  from { transform: scaleY(0.8); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+/* Keeps a wrapper mounted (Radix Presence waits for animationend) while its child animates out. */
+@keyframes hold {
+  from { opacity: 1; }
+  to { opacity: 1; }
+}
+
+/* Children of a list or grid enter one after another, 40ms apart, capped so long lists don't drag. */
+@utility stagger {
+  & > * { animation: message-in 400ms cubic-bezier(0.05, 0.7, 0.1, 1) both; }
+  & > :nth-child(2) { animation-delay: 40ms; }
+  & > :nth-child(3) { animation-delay: 80ms; }
+  & > :nth-child(4) { animation-delay: 120ms; }
+  & > :nth-child(5) { animation-delay: 160ms; }
+  & > :nth-child(6) { animation-delay: 200ms; }
+  & > :nth-child(7) { animation-delay: 240ms; }
+  & > :nth-child(8) { animation-delay: 280ms; }
+  & > :nth-child(n + 9) { animation-delay: 320ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-page-in,
+  .animate-fade-through,
+  .animate-menu-in,
+  .stagger > * { animation-name: fade-in; animation-duration: 150ms; }
+  .animate-surface-out { animation-name: fade-out; }
+  *, ::before, ::after { transition-duration: 0.01ms !important; }
 }
 
 @keyframes message-in {

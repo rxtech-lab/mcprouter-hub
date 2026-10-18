@@ -110,7 +110,7 @@ export async function serviceDatasets(ids: string[]) {
 }
 
 export function findService(id: string) {
-  return manifest.services.find((service) => service.id === id) ?? null;
+  return manifest.services.find((service) => service.id === id || service.aliases.includes(id)) ?? null;
 }
 
 export function datasetUrl(row: { id: string; url: string | null }) {

@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { Logo } from "@/components/logo";
 import { ButtonLink } from "@/components/m3/button";
 import { cn } from "@/components/m3/cn";
+import { getCurrentUser } from "@/lib/auth";
 
 const links = [
   { href: "/sources", label: "Data sources", key: "sources" },
@@ -30,9 +32,24 @@ export function SiteHeader({ active, className }: { active?: (typeof links)[numb
               {link.label}
             </Link>
           ))}
-          <ButtonLink href="/login" variant="filled" className="ml-1 max-sm:px-4">Sign in</ButtonLink>
+          <Suspense fallback={<AccountAction signedIn={false} />}>
+            <SessionAction />
+          </Suspense>
         </nav>
       </div>
     </header>
+  );
+}
+
+async function SessionAction() {
+  const user = await getCurrentUser();
+  return <AccountAction signedIn={Boolean(user)} />;
+}
+
+function AccountAction({ signedIn }: { signedIn: boolean }) {
+  return signedIn ? (
+    <ButtonLink href="/dashboard" variant="filled" className="ml-1 max-sm:px-4">Dashboard</ButtonLink>
+  ) : (
+    <ButtonLink href="/login" variant="filled" className="ml-1 max-sm:px-4">Sign in</ButtonLink>
   );
 }

@@ -13,6 +13,7 @@ export const service: ServiceDefinition = {
   "id": "example",
   "title": "Example Service",
   "description": "A fixture covering every feature of the YAML spec.",
+  "aliases": [],
   "datasets": [
     "example-dataset"
   ],
@@ -96,7 +97,8 @@ export const service: ServiceDefinition = {
             "name_en"
           ],
           "limit": 2
-        }
+        },
+        "app": true
       },
       inputSchema: z.object({
         "category": z.string().describe("Item category"),
@@ -132,7 +134,8 @@ export const service: ServiceDefinition = {
             ],
             "required": false
           }
-        }
+        },
+        "app": true
       },
       inputSchema: z.object({
         "route": z.string(),
@@ -152,12 +155,44 @@ export const service: ServiceDefinition = {
             "default": false,
             "required": false
           }
-        }
+        },
+        "app": true
       },
       inputSchema: z.object({
         "flag": z.boolean().default(false),
       }),
       handler: handlers.custom,
+    },
+    {
+      name: "example_transformed",
+      description: "YAML request with code transformers.",
+      spec: {
+        "name": "example_transformed",
+        "description": "YAML request with code transformers.",
+        "method": "GET",
+        "path": "/feed",
+        "input": {
+          "q": {
+            "type": "string",
+            "required": true
+          }
+        },
+        "response": {
+          "format": "json",
+          "root": "entries",
+          "limit": 200
+        },
+        "transform": {
+          "request": "signRequest",
+          "response": "unwrapFeed"
+        },
+        "app": true
+      },
+      inputSchema: z.object({
+        "q": z.string(),
+      }),
+      transformRequest: handlers.signRequest,
+      transformResponse: handlers.unwrapFeed,
     },
   ],
 };
@@ -175,6 +210,7 @@ import { service as example } from "./services/example";
 
 export const services: readonly ServiceDefinition[] = [example];
 
-export const serviceById = new Map(services.map((service) => [service.id, service]));
+/** By id, and by every alias (the id of a service merged into it). */
+export const serviceById = new Map(services.flatMap((service) => [service.id, ...service.aliases].map((id) => [id, service] as const)));
 "
 `;

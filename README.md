@@ -12,7 +12,7 @@ bun run catalog:sync            # optional: load the 3,830-dataset catalogue for
 bun run dev
 ```
 
-Create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/mcp` with `Authorization: Bearer mcpr_…`.
+Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Codex, Gemini CLI and Cursor is at `/keys/setup` (`?client=<id>&auth=key` picks the client and API-key flow). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/mcp` with `Authorization: Bearer mcpr_…`.
 To inspect it: `bunx @modelcontextprotocol/inspector` with that URL and header.
 
 ## Endpoints
@@ -22,14 +22,28 @@ To inspect it: `bunx @modelcontextprotocol/inspector` with that URL and header.
 | `/api/mcp/mcp` | Every service (Streamable HTTP, stateless) |
 | `/api/mcp/s/<service>/mcp` | One service, for a smaller tool list |
 | `/api/chat` | The agent (AI SDK 7), used by `/chat` |
+| `/api/whatsapp` | WhatsApp bot webhook (WasenderAPI) |
+| `/api/telegram` | Telegram bot webhook (Bot API) |
 | `/api/cron/sync-catalog` | Daily catalogue sync (Vercel cron, `CRON_SECRET`) |
 
 Keys arrive as a Bearer header or `?token=`. They're stored as a sha256 hash, can be limited to services, and every call is metered against rx-subscription when `BILLING_ENABLED=true`. With `RX_SUBSCRIPTION_CREDIT_UNIT` set, each call (including the dashboard agent's) first takes 1 from that balance (`POST /api/v1/balances`, refused when empty) and is then tracked on the usage item `RX_SUBSCRIPTION_USAGE_ITEM` (`POST /api/v1/usage`); without it, the usage item's plan allowance is the gate. rx-subscription keeps the usage log; the Usage pages read it back from `/api/v1/usage/statistics` and `/api/v1/balances/ledger`.
 
+### OAuth
+
+Besides API keys, both MCP endpoints accept OAuth 2.1 access tokens, so clients like Claude Code, Claude Desktop and ChatGPT only need the URL. mcprouter is its own authorization server; sign-in reuses the normal RxLab session, so no extra RxAuth client is needed.
+
+1. An unauthenticated call gets `401` with `WWW-Authenticate: Bearer resource_metadata="<site>/.well-known/oauth-protected-resource/<endpoint path>"` (RFC 9728). The metadata names the endpoint as the `resource`.
+2. `/.well-known/oauth-authorization-server` (RFC 8414) lists the endpoints below. Only public clients, the `authorization_code` + `refresh_token` grants, and S256 PKCE are supported.
+3. `POST /api/mcp/oauth/register` (RFC 7591 dynamic registration) accepts HTTPS, loopback (any port) and private-use app-scheme redirect URIs, up to 60 registrations a minute.
+4. `/oauth/authorize` sends signed-out users to `/login?next=…`, then shows a consent page. Allow/Cancel is a server action that validates the request again and redirects back with `code`, `state` and `iss` (RFC 9207).
+5. `POST /api/mcp/oauth/token` exchanges the code (one minute, single use; replaying it revokes the grant) and rotates refresh tokens (reusing one revokes the grant). Access tokens (`mcpo_at_…`) last an hour. The grant expires after 30 days without a refresh. `POST /api/mcp/oauth/revoke` follows RFC 7009.
+
+A token is bound to the `resource` the user approved: a token for `/api/mcp/mcp` works on every endpoint, and a token for `/api/mcp/s/<service>/mcp` only works on that endpoint. OAuth tokens are accepted only in the `Authorization` header. Calls are billed and logged like key calls (with no `apiKeyId`). Users see and disconnect apps under **API keys → Connected apps** (`/keys/apps`). Codes, tokens and grants are stored as sha256 hashes in `oauth_*` tables (migration `0003_oauth`). The daily cron removes expired and revoked ones. The issuer is `NEXT_PUBLIC_SITE_URL`, so set it to the public origin in production.
+
 ## Adding an MCP service
 
-1. Create `mcp/services/<id>/service.yaml` (schema: `mcp/schema.ts`; `mcp/services/kmb/service.yaml` is a good template).
-2. For anything YAML can't express, set `handler: name` on the tool and export `name` from `mcp/services/<id>/handlers.ts`.
+1. Create `mcp/services/<id>/service.yaml` (schema: `mcp/schema.ts`; `mcp/services/hk-bus/service.yaml` is a good template).
+2. For anything YAML can't express, set `handler: name` on the tool and export `name` from `mcp/services/<id>/handlers.ts`. When only the HTTP call or its body needs code, keep the YAML request and add `transform` instead (see below).
 3. Run `bun run codegen` (also runs on `bun install`, `dev` and `build`). `generated/` is gitignored.
 
 List the service's CKAN dataset ids under `datasets:`; the tracker counts them as converted.
@@ -58,7 +72,33 @@ tools:
       filter: { route: route }    # item field → input name, exact match
       pick: [id, name_en]
       limit: 100
+    transform:                    # optional; exports from handlers.ts, not allowed with `handler`
+      request: signRequest        # (request, input, context) => request, before the fetch
+      response: unwrapFeed        # (body, input, context) => body, before `response` shaping
 ```
+
+A request transformer gets the built `{ url, method, body, headers }` and returns the request to send (it must stay http(s) GET/POST). The cache is keyed by that final request and holds the raw body, so the response transformer runs on every call, including cache hits. Both get the same `context` as handlers (`service`, `tool`, `fetchUpstream`). Types: `RequestTransformer` and `ResponseTransformer` in `lib/mcp/types.ts`.
+
+### MCP Apps (result UI)
+
+A service can show its results as an [MCP App](https://modelcontextprotocol.io/docs/extensions/apps) (`io.modelcontextprotocol/ui`): add `app:` to the YAML and write `mcp/services/<id>/app.ts`. Codegen bundles it with the shared runtime (`mcp/apps/runtime.ts`, styles in `mcp/apps/styles.css`) into one HTML resource, `ui://mcprouter/<id>`, and every tool of the service points at it through `_meta.ui.resourceUri` (opt a tool out with `app: false`). Results also carry `structuredContent` (`{ service, tool, input, data, meta }`), which the app renders and the model never sees; hosts without MCP Apps still get the JSON text.
+
+```yaml
+app:
+  resourceDomains: ["https://www.hko.gov.hk"]   # optional; origins the app may load images from
+  connectDomains: []                            # optional; origins it may fetch from (prefer tools/call)
+```
+
+```ts
+import { mount, ui, type View } from "../../apps/runtime";
+
+mount({
+  accent: "#ac2e44", // the provider's brand colour
+  render: (view: View) => (view.tool === "my_tool" ? [ui.header({ title: "…" }), ui.generic(view.data)] : ui.generic(view.data)),
+});
+```
+
+`app.callTool`, `app.refresh`, `app.openLink` and `app.sendMessage` go through the host. In this app's chat they work for members (and are billed); visitors' apps can only open links and ask follow-ups.
 
 ## Scripts
 
@@ -72,7 +112,25 @@ tools:
 
 ## Agent
 
-`AGENT_MCP_SERVERS` is a JSON list of `{ name, url, headers }`. `url: "self"` is this app's `/api/mcp/mcp`, called with `MCPROUTER_INTERNAL_KEY` on behalf of the signed-in user, so the agent's tool calls are billed to them. Tools from other servers are prefixed `<name>__`. `AI_MODEL` is an AI Gateway model string. The agent loads tools on demand: it starts with only `search_tools`, which ranks tools by embedding similarity (`AI_EMBEDDING_MODEL`, default `openai/text-embedding-3-small`) merged with keyword matches, and falls back to keywords if embedding fails.
+`AGENT_MCP_SERVERS` is a JSON list of `{ name, url, headers }`. `url: "self"` is this app's `/api/mcp/mcp`, called with `MCPROUTER_INTERNAL_KEY` on behalf of the signed-in user, so the agent's tool calls are billed to them. Tools from other servers are prefixed `<name>__`. The chat is an MCP Apps host: tool results with an app render in a sandboxed iframe through `/mcp-app-sandbox` (set `NEXT_PUBLIC_MCP_APP_SANDBOX_URL` to serve that page from a separate origin), and apps from other servers work too. `AI_MODEL` is an AI Gateway model string. The agent loads tools on demand: it starts with only `search_tools`, which ranks tools by embedding similarity (`AI_EMBEDDING_MODEL`, default `openai/text-embedding-3-small`) merged with keyword matches, and falls back to keywords if embedding fails.
+
+## WhatsApp
+
+People can chat with the agent on WhatsApp through [WasenderAPI](https://wasenderapi.com).
+
+1. Connect a WhatsApp number as a Wasender session. Set `WASENDER_API_KEY` to the session's API key and `WASENDER_WEBHOOK_SECRET` to its webhook secret. Optionally set `WHATSAPP_BOT_NUMBER` for "Chat on WhatsApp" links.
+2. Set the session's webhook URL to `https://<site>/api/whatsapp` and turn on the `messages.received` event. For local work, expose `bun run dev` with a tunnel such as `cloudflared tunnel --url http://localhost:3000`.
+
+Every webhook must carry the secret in `X-Webhook-Signature`. It's acknowledged straight away, and the reply is generated in `after()`. The bot answers only numbers linked to an account. Any other number gets a sign-in link (`/whatsapp/link?token=…`, signed with `AUTH_SECRET`, valid for 30 minutes) that links it after the user signs in and confirms. A linked number then works like the web agent: the same MCP servers, and its tool calls are metered against that user's plan. Before each answer the bot checks the user's rx-subscription allowance. When it's used up, the bot sends a sign-in link to `/billing` instead. Users see and unlink their numbers under API keys → WhatsApp. Numbers are stored only as a hash plus their last four digits. Conversations are saved as chats in the user's history, with the last 20 messages sent to the model. `/new` starts over. Only text is read; group messages are ignored.
+
+## Telegram
+
+People can also chat with the agent on Telegram.
+
+1. Create a bot with [@BotFather](https://t.me/BotFather). Set `TELEGRAM_BOT_TOKEN` to its token and `TELEGRAM_WEBHOOK_SECRET` to a random string (letters, digits, `_` and `-`). Optionally set `TELEGRAM_BOT_USERNAME` for "Chat on Telegram" links.
+2. Run `bun run telegram:webhook https://<site>` (defaults to `NEXT_PUBLIC_SITE_URL`). It calls `setWebhook` for `https://<site>/api/telegram` with the secret and the `message` update only, and adds `/new` to the bot's menu. Telegram only calls public https URLs, so for local work pass a tunnel URL such as one from `cloudflared tunnel --url http://localhost:3000`.
+
+Every webhook must carry the secret in `X-Telegram-Bot-Api-Secret-Token`. Linking, billing and history work as for WhatsApp: unlinked accounts get a sign-in button to `/telegram/link?token=…` (signed with `AUTH_SECRET`, valid for 30 minutes), linked accounts are answered by the user's agent and metered against their plan, and a used-up allowance gets a link to `/billing`. Users see and unlink their accounts under API keys → Telegram. Telegram user ids are stored only as a hash, with the @username or first name for display. Replies are sent as Telegram HTML, falling back to plain text if Telegram can't parse them, and "typing…" shows while the agent works. `/new` starts over; `/start` greets. Only text in private chats is read.
 
 ## Tracker
 

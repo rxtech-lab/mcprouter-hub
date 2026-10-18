@@ -1,7 +1,7 @@
 import { desc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { apiKeys } from "@/db/schema";
-import { services } from "@/generated/registry";
+import { serviceById, services } from "@/generated/registry";
 import { checkKeyUsable } from "@/lib/api-keys";
 import { requirePageUser } from "@/lib/auth";
 import { siteUrl } from "@/lib/site";
@@ -17,7 +17,8 @@ export default async function KeysPage() {
       id: row.id,
       name: row.name,
       prefix: row.prefix,
-      scopes: row.scopes,
+      // Scopes saved before services were merged are shown (and edited) as the service they became.
+      scopes: [...new Set(row.scopes.map((id) => serviceById.get(id)?.id ?? id))],
       callCount: row.callCount,
       lastUsedAt: row.lastUsedAt?.toISOString() ?? null,
       expiresAt: row.expiresAt?.toISOString() ?? null,

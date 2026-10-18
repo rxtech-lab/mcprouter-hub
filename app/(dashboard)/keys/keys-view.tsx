@@ -2,6 +2,7 @@
 
 import { DropdownMenu } from "radix-ui";
 import { KeyRound, MoreVertical, Pencil, Plus, ShieldCheck, Trash2, TriangleAlert } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import { Button, IconButton } from "@/components/m3/button";
 import { Card } from "@/components/m3/card";
@@ -13,7 +14,9 @@ import { EmptyState, PageHeader } from "@/components/m3/page-header";
 import { SelectField, TextField } from "@/components/m3/text-field";
 import { useActionRunner } from "@/components/use-action-runner";
 import { formatDate, formatNumber, formatRelative } from "@/lib/format";
+import { KEY_CLIENTS } from "@/lib/mcp-clients";
 import { createApiKey, renameApiKey, revokeApiKey, updateApiKeyScopes } from "./actions";
+import { KeysTabs } from "./keys-tabs";
 
 export type KeyRow = {
   id: string;
@@ -46,17 +49,19 @@ export function KeysView({ keys, services, endpoint }: { keys: KeyRow[]; service
     <>
       <PageHeader
         title="API keys"
-        description="Keys let MCP clients call mcprouter on your behalf. Each tool call counts against your plan."
+        description="Keys let MCP clients call mcprouter on your behalf. Clients that support OAuth can sign in instead. Each tool call counts against your plan."
         actions={
           <Button icon={<Plus size={18} />} onClick={() => setMode({ kind: "create" })}>
             Create key
           </Button>
         }
       />
+      <KeysTabs />
 
       {keys.length === 0 ? (
         <EmptyState icon={<KeyRound size={32} />} title="No API keys yet">
-          Create a key, then paste the ready-made config into Claude Code, Cursor or any MCP client.
+          Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude and ChatGPT sign in with OAuth instead, see{" "}
+          <Link href="/keys/setup" className="text-primary underline">Set up a client</Link>.
         </EmptyState>
       ) : (
         <ul className="flex flex-col gap-3" aria-label="API keys">
@@ -229,25 +234,9 @@ function CreateKeyDialog({ open, services, onClose, onCreated }: { open: boolean
   );
 }
 
-const CLIENTS = ["Claude Code", "Cursor", "JSON (mcp-remote)"] as const;
-
-export function clientConfig(client: (typeof CLIENTS)[number], endpoint: string, key: string) {
-  switch (client) {
-    case "Claude Code":
-      return `claude mcp add --transport http mcprouter ${endpoint} \\\n  --header "Authorization: Bearer ${key}"`;
-    case "Cursor":
-      return JSON.stringify({ mcpServers: { "mcprouter": { url: endpoint, headers: { Authorization: `Bearer ${key}` } } } }, null, 2);
-    case "JSON (mcp-remote)":
-      return JSON.stringify(
-        { mcpServers: { "mcprouter": { command: "npx", args: ["-y", "mcp-remote", endpoint, "--header", `Authorization:Bearer ${key}`] } } },
-        null,
-        2,
-      );
-  }
-}
-
 function RevealKeyDialog({ name, apiKey, endpoint, onClose }: { name: string; apiKey: string; endpoint: string; onClose: () => void }) {
-  const [client, setClient] = useState<(typeof CLIENTS)[number]>("Claude Code");
+  const [clientId, setClientId] = useState(KEY_CLIENTS[0].id);
+  const client = KEY_CLIENTS.find((option) => option.id === clientId) ?? KEY_CLIENTS[0];
   return (
     <Dialog
       open
@@ -265,24 +254,38 @@ function RevealKeyDialog({ name, apiKey, endpoint, onClose }: { name: string; ap
         <div data-testid="revealed-key">
           <CodeBlock code={apiKey} label="API key" what="Key copied" />
         </div>
-        <div role="tablist" aria-label="Client" className="flex border-b border-outline-variant">
-          {CLIENTS.map((option) => (
+        <div role="tablist" aria-label="Client" className="flex overflow-x-auto border-b border-outline-variant">
+          {KEY_CLIENTS.map((option) => (
             <button
-              key={option}
+              key={option.id}
               role="tab"
               type="button"
-              aria-selected={client === option}
-              onClick={() => setClient(option)}
+              aria-selected={client.id === option.id}
+              onClick={() => setClientId(option.id)}
               className={cn(
-                "state-layer -mb-px h-12 cursor-pointer border-b-2 px-4 type-title-small",
-                client === option ? "border-primary text-primary" : "border-transparent text-on-surface-variant",
+                "state-layer -mb-px h-12 shrink-0 cursor-pointer border-b-2 px-4 type-title-small",
+                client.id === option.id ? "border-primary text-primary" : "border-transparent text-on-surface-variant",
               )}
             >
-              {option}
+              {option.name}
             </button>
           ))}
         </div>
-        <CodeBlock code={clientConfig(client, endpoint, apiKey)} what="Config copied" />
+        <ol key={client.id} role="tabpanel" aria-label={client.name} className="animate-fade-through flex flex-col gap-3">
+          {client.apiKey(endpoint, apiKey).map((step, index) => (
+            <li key={index} className="flex flex-col gap-2">
+              <p className="type-body-medium">
+                <span className="tabular-nums text-on-surface-variant">{index + 1}. </span>
+                {step.text}
+              </p>
+              {step.code ? <CodeBlock code={step.code} what="Config copied" /> : null}
+            </li>
+          ))}
+        </ol>
+        <p className="type-body-small text-on-surface-variant">
+          Claude, ChatGPT and other clients that sign in with OAuth don&apos;t need a key. See{" "}
+          <Link href="/keys/setup" className="text-primary underline">Set up a client</Link>.
+        </p>
       </div>
     </Dialog>
   );

@@ -1,9 +1,10 @@
 import "server-only";
-import { createMCPClient, type MCPClient } from "@ai-sdk/mcp";
+import { createMCPClient, mcpAppClientCapabilities, splitMCPAppTools, type MCPClient } from "@ai-sdk/mcp";
 import {
   convertToModelMessages,
   createIdGenerator,
   createUIMessageStreamResponse,
+  generateText,
   isStepCount,
   streamText,
   toUIMessageStream,
@@ -15,7 +16,7 @@ import type { resolveServer } from "@/lib/agent/mcp-servers";
 import { usedToolNames, withToolSearch } from "@/lib/agent/tool-search";
 
 export const AGENT_INSTRUCTIONS = `You are the mcprouter assistant. You answer questions about Hong Kong using live government open data through your tools:
-weather and warnings, KMB/Citybus/MTR arrivals, A&E waiting times, car parks, public holidays and the DATA.GOV.HK catalogue.
+weather and warnings, bus and minibus (KMB, Citybus, green minibus) and MTR arrivals, A&E waiting times, car parks, public holidays and the DATA.GOV.HK catalogue.
 Most tools are not loaded yet: call search_tools describing what you need (e.g. "when is the next bus", "is it going to rain") to load the right tools, then call them.
 Always call a tool for live or factual data instead of guessing, and say when data comes back empty.
 Times are Hong Kong time (UTC+8). Reply in the user's language; use tc data for Traditional Chinese questions.
@@ -29,16 +30,31 @@ export function agentInstructions(now = new Date()) {
 
 type ResolvedServer = ReturnType<typeof resolveServer>;
 
-/** Connects to every MCP server; one that is down is logged and skipped. */
+/** Every tool a server lists, across pages. */
+async function listAllTools(client: MCPClient) {
+  let page = await client.listTools();
+  const tools = [...page.tools];
+  while (page.nextCursor) {
+    page = await client.listTools({ params: { cursor: page.nextCursor } });
+    tools.push(...page.tools);
+  }
+  return { tools };
+}
+
+/**
+ * Connects to every MCP server; one that is down is logged and skipped. The
+ * chat renders MCP Apps, so it says so; tools only an app may call are kept
+ * from the model.
+ */
 async function connectTools(servers: ResolvedServer[]) {
   const clients: MCPClient[] = [];
   const tools: ToolSet = {};
   await Promise.all(
     servers.map(async (server) => {
       try {
-        const client = await createMCPClient({ transport: { type: "http", url: server.url, headers: server.headers } });
+        const client = await createMCPClient({ transport: { type: "http", url: server.url, headers: server.headers }, capabilities: mcpAppClientCapabilities });
         clients.push(client);
-        const serverTools = await client.tools();
+        const serverTools = client.toolsFromDefinitions(splitMCPAppTools(await listAllTools(client)).modelVisible);
         // Tools from other servers are prefixed so their names can't collide with ours.
         for (const [name, tool] of Object.entries(serverTools)) tools[server.self ? name : `${server.name}__${name}`] = tool;
       } catch (error) {
@@ -102,5 +118,25 @@ export async function streamAgentReply(options: {
   } catch (error) {
     await closeAll();
     throw error;
+  }
+}
+
+/** One complete agent reply as text, for channels that can't stream (WhatsApp). `channelNote` is appended to the instructions. */
+export async function generateAgentReply(options: { servers: ResolvedServer[]; messages: UIMessage[]; model: string; maxSteps?: number; channelNote?: string }) {
+  const { tools, closeAll } = await connectTools(options.servers);
+  try {
+    const instructions = options.channelNote ? `${agentInstructions()}\n${options.channelNote}` : agentInstructions();
+    const result = await generateText({
+      model: options.model,
+      instructions: cachedInstructions(instructions),
+      messages: markLastMessage(await convertToModelMessages(options.messages)),
+      tools: stableTools(withToolSearch(tools, usedToolNames(options.messages), process.env.AI_EMBEDDING_MODEL || undefined)),
+      providerOptions: gatewayCaching,
+      prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
+      stopWhen: isStepCount(options.maxSteps ?? 10),
+    });
+    return result.text;
+  } finally {
+    await closeAll();
   }
 }

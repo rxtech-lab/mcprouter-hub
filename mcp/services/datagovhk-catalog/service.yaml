@@ -5,6 +5,8 @@ datasets:
   - hk-dpo-datagovhk1-open-dataset-list
 baseUrl: https://api.data.gov.hk
 cacheTtl: 3600
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
 tools:
   - name: datagovhk_search_datasets
     title: Search datasets

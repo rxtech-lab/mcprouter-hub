@@ -9,6 +9,8 @@ lang:
   in: path
   map: { en: en, tc: tc, sc: sc }
 cacheTtl: 300
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
 tools:
   - name: ha_aed_waiting_times
     title: A&E waiting times

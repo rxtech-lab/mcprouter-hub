@@ -4,12 +4,13 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { ArrowUp, CircleAlert, LoaderCircle, RotateCcw, Square } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { IconButton } from "@/components/m3/button";
 import { cn } from "@/components/m3/cn";
 import type { FreeChatQuota } from "@/lib/free-chat";
 import { getFreeChatQuota } from "@/lib/free-chat-actions";
 import { MessageParts, SUGGESTIONS } from "./chat-panel";
+import { McpAppHost } from "./tool-app";
 
 /** The free, signed-out agent, embedded in the landing page hero. */
 export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
@@ -58,6 +59,12 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
     void sendMessage({ text: text.trim() });
     setInput("");
   };
+  // Follow-ups asked from inside an MCP App. Visitors' apps can't call tools: those calls would bypass the free allowance.
+  const sendRef = useRef(send);
+  useEffect(() => {
+    sendRef.current = send;
+  });
+  const askFromApp = useCallback((text: string) => sendRef.current(text), []);
 
   return (
     <div id="try" className="flex h-[32rem] scroll-mt-24 flex-col overflow-hidden rounded-xl bg-surface-container-lowest text-on-surface shadow-elevation-2" data-testid="hero-chat">
@@ -104,24 +111,26 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
             </div>
           </div>
         ) : (
-          <ul className="flex flex-col gap-4">
-            {messages.map((message) =>
-              message.role === "user" ? (
-                <li key={message.id} className="max-w-[85%] self-end rounded-lg rounded-br-xs bg-primary px-4 py-2 type-body-medium text-on-primary" data-testid="user-message">
-                  <MessageParts message={message} />
+          <McpAppHost canCallTools={false} sendMessage={askFromApp}>
+            <ul className="flex flex-col gap-4">
+              {messages.map((message) =>
+                message.role === "user" ? (
+                  <li key={message.id} className="max-w-[85%] self-end rounded-lg rounded-br-xs bg-primary px-4 py-2 type-body-medium text-on-primary" data-testid="user-message">
+                    <MessageParts message={message} />
+                  </li>
+                ) : (
+                  <li key={message.id} className="type-body-medium" data-testid="agent-message">
+                    <MessageParts message={message} />
+                  </li>
+                ),
+              )}
+              {status === "submitted" ? (
+                <li className="flex items-center gap-2 type-body-medium text-on-surface-variant">
+                  <LoaderCircle size={16} className="animate-spin" /> Thinking…
                 </li>
-              ) : (
-                <li key={message.id} className="type-body-medium" data-testid="agent-message">
-                  <MessageParts message={message} />
-                </li>
-              ),
-            )}
-            {status === "submitted" ? (
-              <li className="flex items-center gap-2 type-body-medium text-on-surface-variant">
-                <LoaderCircle size={16} className="animate-spin" /> Thinking…
-              </li>
-            ) : null}
-          </ul>
+              ) : null}
+            </ul>
+          </McpAppHost>
         )}
       </div>
 

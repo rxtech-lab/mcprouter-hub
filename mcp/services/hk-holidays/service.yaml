@@ -4,6 +4,8 @@ description: General holidays in Hong Kong, from the 1823 calendar feed.
 datasets:
   - hk-dpo-statistic-cal
 cacheTtl: 86400
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
 tools:
   - name: hk_public_holidays
     title: Public holidays

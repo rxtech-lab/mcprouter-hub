@@ -1,6 +1,6 @@
 import { ArrowRight, KeyRound, MessageSquareText } from "lucide-react";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ButtonLink } from "@/components/m3/button";
 import { ServiceIcon } from "@/components/service-icon";
 import manifest from "@/generated/manifest.json";
@@ -15,8 +15,10 @@ export async function generateMetadata({ params }: PageProps<"/sources/[service]
 }
 
 export default async function ServicePage({ params }: PageProps<"/sources/[service]">) {
-  const service = findService((await params).service);
+  const id = (await params).service;
+  const service = findService(id);
   if (!service) notFound();
+  if (service.id !== id) permanentRedirect(`/sources/${service.id}`);
   const index = manifest.services.indexOf(service);
   const rows = await serviceDatasets(service.datasets);
 
@@ -38,7 +40,7 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
       <section className="mt-10">
         <h2 className="mb-1 type-title-large">Tools</h2>
         <p className="mb-4 type-body-medium text-on-surface-variant">What your assistant can call through this service.</p>
-        <ul className="grid gap-3 md:grid-cols-2">
+        <ul className="stagger grid gap-3 md:grid-cols-2">
           {service.tools.map((tool) => (
             <li key={tool.name} className="flex flex-col gap-2 rounded-lg bg-surface-container-low p-4">
               <code className="self-start rounded-xs bg-secondary-container px-2 py-0.5 font-mono text-[13px] text-on-secondary-container">{tool.name}</code>

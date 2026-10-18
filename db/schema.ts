@@ -129,8 +129,105 @@ export const freeChatUsage = sqliteTable(
   (table) => [primaryKey({ columns: [table.subject, table.day] })],
 );
 
+/** MCP clients registered through OAuth dynamic client registration. Public clients: no secret, PKCE only. */
+export const oauthClients = sqliteTable(
+  "oauth_clients",
+  {
+    id: text("id").primaryKey(),
+    name: text("name").notNull(),
+    redirectUris: text("redirect_uris", { mode: "json" }).$type<string[]>().notNull(),
+    createdAt: createdAt(),
+  },
+  (table) => [index("oauth_clients_created_idx").on(table.createdAt)],
+);
+
+/** One user's approval of one client for one MCP endpoint. Refreshing keeps the grant and slides its expiry. */
+export const oauthGrants = sqliteTable(
+  "oauth_grants",
+  {
+    id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+    userId: text("user_id").notNull(),
+    clientId: text("client_id").notNull().references(() => oauthClients.id, { onDelete: "cascade" }),
+    /** The MCP endpoint URL the user approved (the token audience). */
+    resource: text("resource").notNull(),
+    /** Set when the resource is a single-service endpoint; null means every service. */
+    service: text("service"),
+    scope: text("scope").notNull(),
+    lastUsedAt: integer("last_used_at", { mode: "timestamp_ms" }),
+    revokedAt: integer("revoked_at", { mode: "timestamp_ms" }),
+    expiresAt: integer("expires_at", { mode: "timestamp_ms" }).notNull(),
+    createdAt: createdAt(),
+  },
+  (table) => [index("oauth_grants_user_idx").on(table.userId), index("oauth_grants_expiry_idx").on(table.expiresAt)],
+);
+
+/** Authorization codes, stored as sha256 hashes. Single use, one minute. */
+export const oauthCodes = sqliteTable(
+  "oauth_codes",
+  {
+    hash: text("hash").primaryKey(),
+    grantId: text("grant_id").notNull().references(() => oauthGrants.id, { onDelete: "cascade" }),
+    redirectUri: text("redirect_uri").notNull(),
+    challenge: text("challenge").notNull(),
+    usedAt: integer("used_at", { mode: "timestamp_ms" }),
+    expiresAt: integer("expires_at", { mode: "timestamp_ms" }).notNull(),
+  },
+  (table) => [index("oauth_codes_expiry_idx").on(table.expiresAt)],
+);
+
+/** Access and refresh tokens, stored as sha256 hashes. Used refresh hashes are kept to detect replay. */
+export const oauthTokens = sqliteTable(
+  "oauth_tokens",
+  {
+    hash: text("hash").primaryKey(),
+    grantId: text("grant_id").notNull().references(() => oauthGrants.id, { onDelete: "cascade" }),
+    kind: text("kind", { enum: ["access", "refresh"] }).notNull(),
+    usedAt: integer("used_at", { mode: "timestamp_ms" }),
+    expiresAt: integer("expires_at", { mode: "timestamp_ms" }).notNull(),
+  },
+  (table) => [index("oauth_tokens_grant_idx").on(table.grantId), index("oauth_tokens_expiry_idx").on(table.expiresAt)],
+);
+
+/**
+ * WhatsApp numbers linked to an account, so the bot answers as that user and bills their plan.
+ * The number is kept only as a sha256 hash plus its last digits for display.
+ */
+export const whatsappLinks = sqliteTable(
+  "whatsapp_links",
+  {
+    phoneHash: text("phone_hash").primaryKey(),
+    userId: text("user_id").notNull(),
+    userEmail: text("user_email").notNull().default(""),
+    /** Last four digits, shown as ••••1234. */
+    phoneHint: text("phone_hint").notNull(),
+    createdAt: createdAt(),
+  },
+  (table) => [index("whatsapp_links_user_idx").on(table.userId)],
+);
+
+/**
+ * Telegram accounts linked to an account, so the bot answers as that user and bills their plan.
+ * The Telegram user id is kept only as a sha256 hash, plus the @username or first name for display.
+ */
+export const telegramLinks = sqliteTable(
+  "telegram_links",
+  {
+    telegramHash: text("telegram_hash").primaryKey(),
+    userId: text("user_id").notNull(),
+    userEmail: text("user_email").notNull().default(""),
+    /** `@username` or first name at the time of linking. */
+    displayName: text("display_name").notNull(),
+    createdAt: createdAt(),
+  },
+  (table) => [index("telegram_links_user_idx").on(table.userId)],
+);
+
 export type ApiKey = typeof apiKeys.$inferSelect;
+export type OAuthClient = typeof oauthClients.$inferSelect;
+export type OAuthGrant = typeof oauthGrants.$inferSelect;
 export type ToolCall = typeof toolCalls.$inferSelect;
 export type Dataset = typeof datasets.$inferSelect;
 export type DatasetStatusRow = typeof datasetStatus.$inferSelect;
 export type Chat = typeof chats.$inferSelect;
+export type WhatsAppLink = typeof whatsappLinks.$inferSelect;
+export type TelegramLink = typeof telegramLinks.$inferSelect;

@@ -8,7 +8,7 @@ const variants = {
 };
 
 export function Card({ variant = "outlined", className, ...props }: ComponentProps<"section"> & { variant?: keyof typeof variants }) {
-  return <section className={cn("rounded-md p-4", variants[variant], className)} {...props} />;
+  return <section className={cn("rounded-md p-4 transition-[box-shadow,background-color] duration-200 ease-emphasized", variants[variant], className)} {...props} />;
 }
 
 export function CardTitle({ className, ...props }: ComponentProps<"h2">) {

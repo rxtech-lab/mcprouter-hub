@@ -1,0 +1,218 @@
+id: hk-bus
+title: Buses & Minibuses
+description: >-
+  KMB / Long Win, Citybus and green minibus routes, stops and real-time estimated arrival times, in one place.
+  Tools are prefixed by operator (kmb_, citybus_, gmb_). When the operator of a route is unknown, look it up with
+  kmb_routes and citybus_routes; green minibus routes are numbered per region and found with gmb_route.
+# Former service ids, so API keys, OAuth grants and /api/mcp/s/<id> URLs created before the merge keep working.
+aliases: [kmb, citybus]
+datasets:
+  - hk-td-tis_21-etakmb
+  - ctb-eta-transport-realtime-eta
+  - hk-td-sm_7-real-time-arrival-data-of-gmb
+cacheTtl: 3600
+# Renders results in hosts that support MCP Apps; see app.ts. Each operator keeps its own colours.
+app: {}
+tools:
+  # KMB / LWB — https://data.etabus.gov.hk
+  - name: kmb_routes
+    title: KMB routes
+    description: List KMB/LWB bus routes with origin and destination in English, Traditional and Simplified Chinese. Filter by route number to find both directions and every service type of one route.
+    baseUrl: &kmb https://data.etabus.gov.hk/v1/transport/kmb
+    path: /route/
+    input:
+      route: { type: string, in: local, transform: upper, description: "Route number to filter by, e.g. 1A or 960" }
+      search: { type: string, in: local, description: "Text to look for in the origin or destination name" }
+    response:
+      root: data
+      filter: { route: route }
+      search: { input: search, fields: [orig_en, orig_tc, dest_en, dest_tc] }
+      limit: 100
+  - name: kmb_stops
+    title: Find KMB stops
+    description: Search KMB/LWB bus stops by name and return their stop ids and coordinates. Use the stop id with kmb_stop_eta.
+    baseUrl: *kmb
+    path: /stop
+    cacheTtl: 86400
+    input:
+      search: { type: string, in: local, required: true, description: "Text in the stop name (English or Chinese), e.g. Mong Kok or 旺角" }
+    response:
+      root: data
+      search: { input: search, fields: [name_en, name_tc, name_sc] }
+      limit: 50
+  - name: kmb_stop
+    title: KMB stop details
+    description: Name and coordinates of one KMB/LWB bus stop.
+    baseUrl: *kmb
+    path: /stop/{stopId}
+    cacheTtl: 86400
+    input:
+      stopId: { type: string, required: true, description: "16-character KMB stop id" }
+    response:
+      root: data
+  - name: kmb_route_stops
+    title: Stops on a KMB route
+    description: Ordered stops (seq, stop id, names and coordinates) served by a KMB/LWB route in one direction.
+    baseUrl: *kmb
+    path: /route-stop/{route}/{direction}/{serviceType}
+    transform: { response: kmbRouteStopNames }
+    input:
+      route: { type: string, required: true, transform: upper, description: "Route number, e.g. 1A" }
+      direction: { type: string, enum: [inbound, outbound], default: outbound, description: "Direction of travel" }
+      serviceType: { type: string, default: "1", description: "Service type, usually 1" }
+    response:
+      root: data
+      limit: 150
+  - name: kmb_stop_eta
+    title: KMB arrivals at a stop
+    description: Real-time estimated arrival times of every KMB/LWB route at one stop.
+    baseUrl: *kmb
+    path: /stop-eta/{stopId}
+    cacheTtl: 30
+    input:
+      stopId: { type: string, required: true, description: "16-character KMB stop id" }
+      route: { type: string, in: local, transform: upper, description: "Only return arrivals for this route" }
+    response:
+      root: data
+      filter: { route: route }
+      pick: [route, dir, service_type, seq, dest_en, dest_tc, eta_seq, eta, rmk_en, rmk_tc, data_timestamp]
+  - name: kmb_route_eta
+    title: KMB arrivals along a route
+    description: Real-time estimated arrival times at every stop of a KMB/LWB route.
+    baseUrl: *kmb
+    path: /route-eta/{route}/{serviceType}
+    cacheTtl: 30
+    input:
+      route: { type: string, required: true, transform: upper, description: "Route number" }
+      serviceType: { type: string, default: "1", description: "Service type, usually 1" }
+    response:
+      root: data
+      pick: [dir, seq, dest_en, dest_tc, eta_seq, eta, rmk_en, rmk_tc]
+      limit: 300
+
+  # Citybus — https://rt.data.gov.hk/v2/transport/citybus
+  - name: citybus_routes
+    title: Citybus routes
+    description: List Citybus bus routes with origin and destination. Filter by route number or by text in the origin or destination.
+    baseUrl: &citybus https://rt.data.gov.hk/v2/transport/citybus
+    path: /route/ctb
+    input:
+      route: { type: string, in: local, transform: upper, description: "Route number to filter by, e.g. 8 or A21" }
+      search: { type: string, in: local, description: "Text to look for in the origin or destination name" }
+    response:
+      root: data
+      filter: { route: route }
+      search: { input: search, fields: [orig_en, orig_tc, dest_en, dest_tc] }
+      limit: 100
+  - name: citybus_stop
+    title: Citybus stop details
+    description: Name and coordinates of one Citybus bus stop.
+    baseUrl: *citybus
+    path: /stop/{stopId}
+    cacheTtl: 86400
+    input:
+      stopId: { type: string, required: true, description: "6-digit Citybus stop id" }
+    response:
+      root: data
+  - name: citybus_route_stops
+    title: Stops on a Citybus route
+    description: Ordered stops (seq, stop id, names and coordinates) served by a Citybus bus route in one direction.
+    baseUrl: *citybus
+    path: /route-stop/ctb/{route}/{direction}
+    transform: { response: citybusRouteStopNames }
+    input:
+      route: { type: string, required: true, transform: upper, description: "Route number" }
+      direction: { type: string, enum: [inbound, outbound], default: outbound, description: "Direction of travel" }
+    response:
+      root: data
+      limit: 150
+  - name: citybus_eta
+    title: Citybus arrivals
+    description: Real-time estimated arrival times of one Citybus bus route at one stop.
+    baseUrl: *citybus
+    path: /eta/ctb/{stopId}/{route}
+    cacheTtl: 30
+    input:
+      stopId: { type: string, required: true, description: "6-digit Citybus stop id" }
+      route: { type: string, required: true, transform: upper, description: "Route number" }
+    response:
+      root: data
+      pick: [route, dir, seq, dest_en, dest_tc, eta_seq, eta, rmk_en, rmk_tc, data_timestamp]
+
+  # Green minibus (GMB) — https://data.etagmb.gov.hk
+  - name: gmb_routes
+    title: Minibus routes in a region
+    description: List the route numbers of green minibus (GMB) routes in one region. Use gmb_route for a route's id, directions and frequency.
+    baseUrl: &gmb https://data.etagmb.gov.hk
+    path: /route/{region}
+    cacheTtl: 86400
+    input:
+      region: { type: string, required: true, enum: [HKI, KLN, NT], description: "HKI = Hong Kong Island, KLN = Kowloon, NT = New Territories" }
+    response:
+      root: data.routes
+      limit: 500
+  - name: gmb_route
+    title: Minibus route details
+    description: Green minibus (GMB) route id, origin and destination of each direction (route_seq) and headways for one route number in one region. Use route_id and route_seq with gmb_route_stops and gmb_route_stop_eta.
+    baseUrl: *gmb
+    path: /route/{region}/{route}
+    cacheTtl: 86400
+    input:
+      region: { type: string, required: true, enum: [HKI, KLN, NT], description: "HKI = Hong Kong Island, KLN = Kowloon, NT = New Territories" }
+      route: { type: string, required: true, transform: upper, description: "Minibus route number, e.g. 12 or 44M" }
+    response:
+      root: data
+  - name: gmb_route_stops
+    title: Stops on a minibus route
+    description: Ordered stops (stop_seq, stop_id and names) of a green minibus route in one direction.
+    baseUrl: *gmb
+    path: /route-stop/{routeId}/{routeSeq}
+    cacheTtl: 86400
+    input:
+      routeId: { type: string, required: true, description: "Numeric route_id from gmb_route" }
+      routeSeq: { type: integer, enum: [1, 2], default: 1, description: "Direction: route_seq from gmb_route, 1 or 2" }
+    response:
+      root: data.route_stops
+      limit: 150
+  - name: gmb_stop
+    title: Minibus stop details
+    description: Coordinates and remarks of one green minibus stop.
+    baseUrl: *gmb
+    path: /stop/{stopId}
+    cacheTtl: 86400
+    input:
+      stopId: { type: string, required: true, description: "Numeric GMB stop_id" }
+    response:
+      root: data
+  - name: gmb_stop_routes
+    title: Minibus routes at a stop
+    description: Every green minibus route (route_id, route_seq, stop_seq) that calls at one stop.
+    baseUrl: *gmb
+    path: /stop-route/{stopId}
+    cacheTtl: 86400
+    input:
+      stopId: { type: string, required: true, description: "Numeric GMB stop_id" }
+    response:
+      root: data
+  - name: gmb_stop_eta
+    title: Minibus arrivals at a stop
+    description: Real-time estimated arrival times of every green minibus route at one stop. `diff` is minutes until arrival; match route_id with gmb_route for the route number.
+    baseUrl: *gmb
+    path: /eta/stop/{stopId}
+    cacheTtl: 30
+    input:
+      stopId: { type: string, required: true, description: "Numeric GMB stop_id" }
+    response:
+      root: data
+  - name: gmb_route_stop_eta
+    title: Minibus arrivals for a route
+    description: Real-time estimated arrival times of one green minibus route at one stop of it. `diff` is minutes until arrival.
+    baseUrl: *gmb
+    path: /eta/route-stop/{routeId}/{routeSeq}/{stopSeq}
+    cacheTtl: 30
+    input:
+      routeId: { type: string, required: true, description: "Numeric route_id from gmb_route" }
+      routeSeq: { type: integer, enum: [1, 2], default: 1, description: "Direction: route_seq from gmb_route, 1 or 2" }
+      stopSeq: { type: integer, required: true, minimum: 1, description: "stop_seq of the stop on the route, from gmb_route_stops" }
+    response:
+      root: data

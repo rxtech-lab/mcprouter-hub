@@ -64,6 +64,8 @@ export type CallBreakdown = {
 };
 
 const serviceTitles = new Map(manifest.services.map((service) => [service.id, service.title]));
+/** Calls logged under a service that was later merged into another count towards the merged one. */
+const canonicalServiceIds = new Map(manifest.services.flatMap((service) => service.aliases.map((alias) => [alias, service.id] as const)));
 
 /** Calls since the start of the `days` window, grouped by tool and by the service (provider) behind it, busiest first. */
 export async function callsByTool(user: AppUser, days: number): Promise<CallBreakdown> {
@@ -76,9 +78,17 @@ export async function callsByTool(user: AppUser, days: number): Promise<CallBrea
     .orderBy(desc(calls));
 
   const providers = new Map<string, number>();
-  for (const row of rows) providers.set(row.service, (providers.get(row.service) ?? 0) + row.calls);
+  const tools = new Map<string, { tool: string; service: string; calls: number }>();
+  for (const row of rows) {
+    const service = canonicalServiceIds.get(row.service) ?? row.service;
+    const key = `${service}\n${row.tool}`;
+    const entry = tools.get(key) ?? { tool: row.tool, service, calls: 0 };
+    entry.calls += row.calls;
+    tools.set(key, entry);
+    providers.set(service, (providers.get(service) ?? 0) + row.calls);
+  }
   return {
-    byTool: rows,
+    byTool: [...tools.values()].sort((a, b) => b.calls - a.calls),
     byProvider: [...providers]
       .map(([service, total]) => ({ service, title: serviceTitles.get(service) ?? service, calls: total }))
       .sort((a, b) => b.calls - a.calls),

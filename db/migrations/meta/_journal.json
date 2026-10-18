@@ -22,6 +22,27 @@
       "when": 1792247005698,
       "tag": "0002_free_chat_usage",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1792251113840,
+      "tag": "0003_oauth",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1792289795282,
+      "tag": "0004_whatsapp",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1792292290958,
+      "tag": "0005_telegram",
+      "breakpoints": true
     }
   ]
 }

@@ -34,7 +34,7 @@ export function AccountMenu({ name, email, signOut }: Props) {
         </button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
-        <DropdownMenu.Content side="right" align="end" sideOffset={8} className="z-50 min-w-60 animate-fade-in rounded-xs bg-surface-container py-2 shadow-elevation-2">
+        <DropdownMenu.Content side="right" align="end" sideOffset={8} className="z-50 min-w-60 origin-(--radix-dropdown-menu-content-transform-origin) animate-menu-in rounded-xs data-[state=closed]:animate-fade-out bg-surface-container py-2 shadow-elevation-2">
           <div className="flex items-center gap-3 px-3 pt-1 pb-3">
             <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-tertiary-container type-label-large text-on-tertiary-container">{initials || "?"}</span>
             <div className="min-w-0">

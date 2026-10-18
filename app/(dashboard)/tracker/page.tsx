@@ -53,7 +53,7 @@ export default async function TrackerPage() {
 
       <section className="mt-6">
         <h2 className="mb-3 type-title-medium">By status</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+        <div className="stagger grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           {TRACKER_STATUSES.map((status) => (
             <StatusTile key={status} href={datasetsHref({ status })} label={STATUS_LABELS[status]} value={formatNumber(summary.overall.counts[status])} icon={STATUS_STYLE[status].icon(18)} />
           ))}

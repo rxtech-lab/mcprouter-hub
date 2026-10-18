@@ -1,5 +1,5 @@
 import type { z } from "zod";
-import type { ServiceSpec, ToolSpec } from "@/mcp/schema";
+import type { AppSpec, ServiceSpec, ToolSpec } from "@/mcp/schema";
 
 export type ToolInput = Record<string, unknown>;
 
@@ -15,6 +15,24 @@ export type HandlerContext = {
 
 export type ToolHandler = (input: ToolInput, context: HandlerContext) => Promise<unknown>;
 
+/** The upstream HTTP call a YAML tool makes, before it is sent. */
+export type UpstreamRequest = {
+  url: string;
+  method: "GET" | "POST";
+  body?: Record<string, unknown>;
+  headers?: Record<string, string>;
+};
+
+/** `transform.request`: rewrite the built request, e.g. encode a query param or add a computed header. */
+export type RequestTransformer = (
+  request: UpstreamRequest,
+  input: ToolInput,
+  context: HandlerContext,
+) => UpstreamRequest | Promise<UpstreamRequest>;
+
+/** `transform.response`: reshape the parsed upstream body before `response` shaping runs. */
+export type ResponseTransformer = (body: unknown, input: ToolInput, context: HandlerContext) => unknown;
+
 export type ToolDefinition = {
   name: string;
   title?: string;
@@ -22,9 +40,13 @@ export type ToolDefinition = {
   spec: Omit<ToolSpec, "handler">;
   inputSchema: z.ZodObject;
   handler?: ToolHandler;
+  transformRequest?: RequestTransformer;
+  transformResponse?: ResponseTransformer;
 };
 
-export type ServiceDefinition = Omit<ServiceSpec, "tools"> & {
+export type ServiceDefinition = Omit<ServiceSpec, "tools" | "app"> & {
+  /** The service's MCP App, with its bundled `app.ts`. */
+  app?: AppSpec & { script: string };
   tools: ToolDefinition[];
 };
 

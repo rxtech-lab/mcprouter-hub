@@ -15,7 +15,7 @@ const variants: Record<ButtonVariant, string> = {
 
 export function buttonClasses(variant: ButtonVariant = "filled", className?: string) {
   return cn(
-    "state-layer inline-flex h-10 shrink-0 cursor-pointer items-center justify-center gap-2 rounded-full px-6 type-label-large transition-shadow select-none",
+    "state-layer inline-flex h-10 shrink-0 cursor-pointer items-center justify-center gap-2 rounded-full px-6 type-label-large transition-[box-shadow,background-color,scale] duration-200 ease-emphasized select-none active:scale-[0.98]",
     "disabled:pointer-events-none disabled:opacity-40",
     variants[variant],
     className,
@@ -64,7 +64,7 @@ export function IconButton({
       aria-label={label}
       title={label}
       className={cn(
-        "state-layer inline-flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full disabled:cursor-default disabled:opacity-40",
+        "state-layer inline-flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full transition-[background-color,scale] duration-200 ease-emphasized active:scale-90 disabled:cursor-default disabled:opacity-40",
         iconVariants[variant],
         className,
       )}

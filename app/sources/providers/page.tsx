@@ -29,7 +29,7 @@ export default async function ProvidersPage({ searchParams }: PageProps<"/source
         </div>
       ) : (
         <>
-          <ul className="mt-6 grid gap-3 md:grid-cols-2" data-testid="provider-list">
+          <ul className="stagger mt-6 grid gap-3 md:grid-cols-2" data-testid="provider-list">
             {rows.map((provider) => (
               <li key={provider.id}>
                 <Link href={`/sources/providers/${encodeURIComponent(provider.id)}`} className="state-layer flex h-full items-center gap-4 rounded-lg border border-outline-variant p-4 text-on-surface">
