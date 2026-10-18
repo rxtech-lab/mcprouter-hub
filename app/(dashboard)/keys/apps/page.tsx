@@ -1,15 +1,25 @@
 import { and, desc, eq, gt, isNull } from "drizzle-orm";
+import { z } from "zod";
 import { db } from "@/db";
 import { oauthClients, oauthGrants } from "@/db/schema";
 import { serviceById } from "@/generated/registry";
 import { requirePageUser } from "@/lib/auth";
+import { KEY_PLACEHOLDER, MCP_CLIENTS, mcpClientById } from "@/lib/mcp-clients";
 import { siteUrl } from "@/lib/site";
-import { AppsView, type AppRow } from "./apps-view";
+import { AppsView, type AppRow, type ClientGuide } from "./apps-view";
 
 export const metadata = { title: "Connected apps" };
 
-export default async function ConnectedAppsPage() {
+/** `?client=<id>` opens the setup dialog for that client; `&auth=key` switches it to the API-key flow. */
+const paramsSchema = z.object({
+  client: z.string().optional().catch(undefined),
+  auth: z.enum(["oauth", "key"]).catch("oauth"),
+});
+
+export default async function ConnectedAppsPage({ searchParams }: PageProps<"/keys/apps">) {
   const user = await requirePageUser();
+  const raw = await searchParams;
+  const params = paramsSchema.parse(Object.fromEntries(Object.entries(raw).map(([key, value]) => [key, Array.isArray(value) ? value[0] : value])));
   const rows = await db
     .select({ grant: oauthGrants, clientName: oauthClients.name })
     .from(oauthGrants)
@@ -23,5 +33,21 @@ export default async function ConnectedAppsPage() {
     lastUsedAt: grant.lastUsedAt?.toISOString() ?? null,
     createdAt: grant.createdAt.toISOString(),
   }));
-  return <AppsView apps={apps} endpoint={`${await siteUrl()}/api/mcp/streamable`} />;
+
+  const endpoint = `${await siteUrl()}/api/mcp/streamable`;
+  const client = mcpClientById(params.client);
+  const auth = client?.apiKey ? params.auth : "oauth";
+  const guide: ClientGuide | null = client
+    ? {
+        id: client.id,
+        name: client.name,
+        kind: client.kind,
+        auth,
+        supportsApiKey: Boolean(client.apiKey),
+        steps: auth === "key" && client.apiKey ? client.apiKey(endpoint, KEY_PLACEHOLDER) : client.oauth(endpoint),
+        note: client.note ?? null,
+      }
+    : null;
+
+  return <AppsView apps={apps} clients={MCP_CLIENTS.map(({ id, name, kind }) => ({ id, name, kind }))} guide={guide} />;
 }

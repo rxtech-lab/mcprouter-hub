@@ -57,7 +57,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
   const { client: clientParam } = await searchParams;
   // Signed-in users go straight to the full guide; everyone else gets a preview dialog first.
   const preview = user ? undefined : mcpClientById(typeof clientParam === "string" ? clientParam : undefined);
-  const setupHref = (id: string) => `/keys/setup?${new URLSearchParams({ client: id })}`;
+  const setupHref = (id: string) => `/keys/apps?${new URLSearchParams({ client: id })}`;
   const clientHref = (id: string) => (user ? setupHref(id) : `/?${new URLSearchParams({ client: id })}`);
   const clients = MCP_CLIENTS.filter((client) => client.id !== "other");
   const otherClient = MCP_CLIENTS.find((client) => client.id === "other");

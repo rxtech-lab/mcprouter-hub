@@ -3,24 +3,33 @@ import { createHash } from "node:crypto";
 import type { UIMessage } from "ai";
 import { parseMcpServers, resolveServer } from "@/lib/agent/mcp-servers";
 import { generateAgentReply } from "@/lib/agent/run";
+import { SIGN_OUT_NOTE, signOutTool } from "@/lib/agent/sign-out-tool";
 import { isOverLimit } from "@/lib/billing/allowance";
+import { cardsForToolResults } from "@/lib/cards";
+import { renderCardPng } from "@/lib/cards/render";
 import { deleteChat, ensureChat, loadChat, saveMessages } from "@/lib/chat-store";
-import { commandOf, sendText, sendTyping, type IncomingMessage, type LinkButton, type TelegramConfig } from "@/lib/telegram/api";
-import { createLinkToken, findLink, telegramHash } from "@/lib/telegram/link";
+import { commandOf, sendPhoto, sendText, sendTyping, type IncomingMessage, type LinkButton, type TelegramConfig } from "@/lib/telegram/api";
+import type { Card } from "@/mcp/apps/card";
+import { createLinkToken, findLink, signOutAccount, telegramHash } from "@/lib/telegram/link";
 
 /** Earlier turns sent to the model with each question. */
 const MAX_HISTORY = 20;
 const MAX_QUESTION_CHARS = 2_000;
 const RESET_COMMANDS = new Set(["/new", "/reset"]);
+const SIGN_OUT_COMMANDS = new Set(["/signout", "/logout"]);
 /** Telegram drops "typing…" after 5 seconds, so it's sent again while the agent works. */
 const TYPING_INTERVAL_MS = 4_000;
 
 export const TELEGRAM_CHANNEL_NOTE = `You are replying in Telegram. Keep answers short and skimmable: plain sentences and "-" bullets, **bold** sparingly, no tables or headings.
-The user can send "/new" to start a fresh conversation.`;
+The user can send "/new" to start a fresh conversation and "/signout" to unlink their mcprouter account.
+${SIGN_OUT_NOTE}`;
 
 const INTRO = "Hi! I answer questions about Hong Kong with live government data: weather, buses, the MTR, A&E waiting times and more.";
 
 type LinkedUser = { id: string; email: string };
+
+/** The agent's text answer, pictures of the results of tools that have an MCP App, and whether it was asked to sign the user out. */
+export type AgentAnswer = { text: string; cards: Card[]; signOut?: boolean };
 
 /** One chat per account and Telegram user, so relinking to another account starts a fresh chat there. */
 export function telegramChatId(userId: string, from: string) {
@@ -32,9 +41,11 @@ export type BotDeps = {
   /** This deployment's public origin, for sign-in links and the agent's `self` MCP server. */
   origin: string;
   findUser?: (from: string) => Promise<LinkedUser | null>;
+  signOut?: (from: string) => Promise<boolean>;
   overLimit?: (user: LinkedUser) => Promise<boolean>;
-  reply?: (messages: UIMessage[], user: LinkedUser) => Promise<string>;
+  reply?: (messages: UIMessage[], user: LinkedUser) => Promise<AgentAnswer>;
   send?: (chatId: number, text: string, button?: LinkButton) => Promise<void>;
+  sendCard?: (chatId: number, card: Card) => Promise<void>;
   typing?: (chatId: number) => Promise<void>;
 };
 
@@ -44,12 +55,14 @@ async function linkedUser(from: string) {
 }
 
 function defaultReply(deps: BotDeps) {
-  return (messages: UIMessage[], user: LinkedUser) => {
+  return async (messages: UIMessage[], user: LinkedUser): Promise<AgentAnswer> => {
     // The member's own agent, with the same servers and billing as the web chat.
     const servers = parseMcpServers(process.env.AGENT_MCP_SERVERS).map((server) =>
       resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY }),
     );
-    return generateAgentReply({ servers, messages, model: deps.config.model, channelNote: TELEGRAM_CHANNEL_NOTE });
+    const signOut = signOutTool();
+    const { text, toolOutputs } = await generateAgentReply({ servers, messages, model: deps.config.model, channelNote: TELEGRAM_CHANNEL_NOTE, channelTools: signOut.tools });
+    return { text, cards: cardsForToolResults(toolOutputs), signOut: signOut.requested() };
   };
 }
 
@@ -58,13 +71,21 @@ const textMessage = (id: string, role: "user" | "assistant", text: string): UIMe
 /** Telegram only accepts public https URLs on buttons, so local http origins get the link in the text alone. */
 const buttonFor = (text: string, url: string): LinkButton | undefined => (url.startsWith("https://") ? { text, url } : undefined);
 
-export function signInMessage(origin: string, message: Pick<IncomingMessage, "from" | "name">) {
-  const url = `${origin}/telegram/link?token=${createLinkToken(message.from, message.name)}`;
+/** `lead` replaces the greeting, e.g. after signing out. */
+export function signInMessage(origin: string, message: Pick<IncomingMessage, "from" | "name" | "chatId">, lead = INTRO) {
+  const url = `${origin}/telegram/link?token=${createLinkToken(message.from, message.name, message.chatId)}`;
   return {
-    text: `${INTRO}\n\nTo start, sign in to mcprouter and link this Telegram account (the link works for 30 minutes):\n${url}`,
+    text: `${lead}\n\nTo start, sign in to mcprouter and link this Telegram account (the link works for 30 minutes):\n${url}`,
     button: buttonFor("Sign in and link", url),
   };
 }
+
+/** Sent to the chat once the account is linked on the web. */
+export function linkedMessage(email: string) {
+  return `You're signed in${email ? ` as **${email}**` : ""}. Ask me anything about Hong Kong: weather, buses, the MTR, A&E waiting times and more.\n\nSend /new to start over, or /signout to unlink this Telegram account.`;
+}
+
+export const SIGNED_OUT_LEAD = "Signed out. This Telegram account is no longer linked to mcprouter.";
 
 export function overLimitMessage(origin: string) {
   const url = `${origin}/login?next=${encodeURIComponent("/billing")}`;
@@ -86,12 +107,24 @@ function keepTyping(typing: (chatId: number) => Promise<void>, chatId: number) {
 export async function handleIncomingMessage(message: IncomingMessage, deps: BotDeps) {
   const send = deps.send ?? ((chatId, text, button) => sendText(deps.config, chatId, text, button));
   const typing = deps.typing ?? ((chatId) => sendTyping(deps.config, chatId));
+  const sendCard = deps.sendCard ?? (async (chatId, card) => sendPhoto(deps.config, chatId, await renderCardPng(card)));
   const reply = deps.reply ?? defaultReply(deps);
   const findUser = deps.findUser ?? linkedUser;
+  const signOut = deps.signOut ?? ((from: string) => signOutAccount(telegramHash(from)));
   const overLimit = deps.overLimit ?? isOverLimit;
   const to = message.chatId;
 
   try {
+    if (message.text !== null && SIGN_OUT_COMMANDS.has(commandOf(message.text) ?? "")) {
+      if (!(await signOut(message.from))) {
+        await send(to, "This Telegram account isn't linked to mcprouter, so there's nothing to sign out of.");
+        return { status: "signed-out" as const };
+      }
+      const { text, button } = signInMessage(deps.origin, message, SIGNED_OUT_LEAD);
+      await send(to, text, button);
+      return { status: "signed-out" as const };
+    }
+
     const user = await findUser(message.from);
     if (!user) {
       const { text, button } = signInMessage(deps.origin, message);
@@ -116,7 +149,7 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
       return { status: "reset" as const };
     }
     if (command === "/start") {
-      await send(to, `${INTRO}\n\nYour account is linked, so just ask. Send /new to start over.`);
+      await send(to, `${INTRO}\n\nYour account is linked, so just ask. Send /new to start over or /signout to unlink.`);
       return { status: "welcome" as const };
     }
     if (text.length > MAX_QUESTION_CHARS) {
@@ -136,9 +169,16 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
     await saveMessages(chatId, [question], history.length);
 
     let answer: string;
+    let wantsSignOut = false;
     const stopTyping = keepTyping(typing, to);
     try {
-      answer = (await reply([...history.slice(-MAX_HISTORY), question], user)).trim();
+      const result = await reply([...history.slice(-MAX_HISTORY), question], user);
+      answer = result.text.trim();
+      wantsSignOut = Boolean(result.signOut);
+      // Pictures of the tool results go first, so the text answer reads as their summary.
+      for (const card of result.cards) {
+        await sendCard(to, card).catch((error) => console.warn("[telegram] could not send a card", card.title, error));
+      }
     } catch (error) {
       console.error("[telegram] agent failed", error);
       await send(to, "Sorry, I couldn't answer that just now. Please try again in a moment.");
@@ -146,10 +186,19 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
     } finally {
       stopTyping();
     }
-    if (!answer) answer = "Sorry, I couldn't find an answer to that.";
+    if (!answer && !wantsSignOut) answer = "Sorry, I couldn't find an answer to that.";
 
-    await send(to, answer);
-    await saveMessages(chatId, [textMessage(`msg_${crypto.randomUUID().replace(/-/g, "").slice(0, 16)}`, "assistant", answer)], history.length + 1);
+    if (answer) {
+      await send(to, answer);
+      await saveMessages(chatId, [textMessage(`msg_${crypto.randomUUID().replace(/-/g, "").slice(0, 16)}`, "assistant", answer)], history.length + 1);
+    }
+    // Asked in their own words ("log me out"): unlink like /signout, once the reply is saved.
+    if (wantsSignOut) {
+      await signOut(message.from);
+      const { text: signInText, button } = signInMessage(deps.origin, message, SIGNED_OUT_LEAD);
+      await send(to, signInText, button);
+      return { status: "signed-out" as const };
+    }
     return { status: "answered" as const };
   } catch (error) {
     console.error("[telegram] could not handle message", message.id, error);

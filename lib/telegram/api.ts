@@ -124,12 +124,14 @@ export class TelegramApiError extends Error {
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export async function callTelegram(config: Pick<TelegramConfig, "botToken">, method: string, payload: object, fetcher: typeof fetch = fetch, retries = 1): Promise<unknown> {
+/** Calls a Bot API method with a JSON payload, or a multipart one (`FormData`) for uploads. */
+export async function callTelegram(config: Pick<TelegramConfig, "botToken">, method: string, payload: object | FormData, fetcher: typeof fetch = fetch, retries = 1): Promise<unknown> {
+  const multipart = payload instanceof FormData;
   const response = await fetcher(`${API_BASE}/bot${config.botToken}/${method}`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(15_000),
+    headers: multipart ? undefined : { "Content-Type": "application/json" },
+    body: multipart ? payload : JSON.stringify(payload),
+    signal: AbortSignal.timeout(multipart ? 30_000 : 15_000),
   });
   // Flood control: wait as long as Telegram asks (capped) and try once more.
   if (response.status === 429 && retries > 0) {
@@ -160,6 +162,14 @@ export async function sendText(config: TelegramConfig, chatId: number, markdown:
       await callTelegram(config, "sendMessage", { ...base, text: chunk }, fetcher);
     }
   }
+}
+
+/** Uploads a PNG and sends it as a photo. */
+export async function sendPhoto(config: TelegramConfig, chatId: number, png: Uint8Array, fetcher: typeof fetch = fetch) {
+  const form = new FormData();
+  form.set("chat_id", String(chatId));
+  form.set("photo", new Blob([new Uint8Array(png)], { type: "image/png" }), "card.png");
+  await callTelegram(config, "sendPhoto", form, fetcher);
 }
 
 /** Shows "typing…" in the chat. Telegram clears it after 5 seconds or when a message arrives. */

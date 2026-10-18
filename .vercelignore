@@ -1,0 +1,36 @@
+# Vercel installs dependencies and builds remotely
+node_modules
+.next
+out
+build
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# Generated at build time by `bun run codegen`
+generated
+
+# Local secrets and databases (env vars are managed in Vercel)
+.env*
+!.env.example
+local.db
+local.db-*
+e2e.db*
+*.pem
+
+# Tests and tooling not needed for the build
+tests
+e2e
+test-results
+playwright-report
+coverage
+.playwright-mcp
+vitest.config.ts
+playwright.config.ts
+
+# Repo and design sources
+.git
+.github
+design
+.DS_Store
+*.log

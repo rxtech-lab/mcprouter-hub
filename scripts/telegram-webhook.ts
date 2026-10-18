@@ -16,7 +16,12 @@ if (!origin.startsWith("https://")) throw new Error(`Telegram needs a public htt
 
 const url = `${origin}/api/telegram`;
 await callTelegram(config, "setWebhook", { url, secret_token: config.webhookSecret, allowed_updates: ["message"], drop_pending_updates: true });
-await callTelegram(config, "setMyCommands", { commands: [{ command: "new", description: "Start a new conversation" }] });
+await callTelegram(config, "setMyCommands", {
+  commands: [
+    { command: "new", description: "Start a new conversation" },
+    { command: "signout", description: "Unlink this Telegram account" },
+  ],
+});
 const me = (await callTelegram(config, "getMe", {})) as { username?: string };
 console.log(`Webhook set to ${url} for @${me.username}.`);
 if (config.botUsername !== me.username) console.log(`Set TELEGRAM_BOT_USERNAME=${me.username} for "Chat on Telegram" links.`);

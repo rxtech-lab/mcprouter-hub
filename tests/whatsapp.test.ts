@@ -3,9 +3,10 @@ import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { db } from "@/db";
 import { POST } from "@/app/api/whatsapp/route";
 import { loadChat } from "@/lib/chat-store";
-import { handleIncomingMessage, whatsAppChatId, type BotDeps } from "@/lib/whatsapp/bot";
-import { createLinkToken, findLink, LINK_TOKEN_TTL_MS, linkNumber, listLinks, phoneHash, readLinkToken, unlinkNumber } from "@/lib/whatsapp/link";
-import { parseIncomingMessages, sendText, splitMessage, toWhatsAppText, verifySignature, whatsAppConfig, type IncomingMessage } from "@/lib/whatsapp/wasender";
+import { handleIncomingMessage, linkedMessage, whatsAppChatId, type BotDeps } from "@/lib/whatsapp/bot";
+import { createLinkToken, findLink, LINK_TOKEN_TTL_MS, linkNumber, listLinks, phoneHash, readLinkToken, signOutNumber, unlinkNumber } from "@/lib/whatsapp/link";
+import { parseIncomingMessages, sendImage, sendText, splitMessage, toWhatsAppText, verifySignature, whatsAppConfig, type IncomingMessage } from "@/lib/whatsapp/wasender";
+import type { Card } from "@/mcp/apps/card";
 
 vi.mock("next/headers", () => ({ headers: async () => new Headers({ host: "hub.test" }) }));
 
@@ -110,12 +111,37 @@ describe("sendText", () => {
   });
 });
 
+describe("sendImage", () => {
+  it("uploads the PNG, then sends its public URL", async () => {
+    const fetcher = vi
+      .fn<(url: string, init?: RequestInit) => Promise<Response>>(async () => Response.json({ success: true }))
+      .mockResolvedValueOnce(Response.json({ success: true, publicUrl: "https://wasenderapi.com/media/card.png" }));
+    await sendImage(whatsAppConfig(env), "85291234567", new Uint8Array([137, 80, 78, 71]), fetcher as unknown as typeof fetch);
+    expect(fetcher.mock.calls[0][0]).toBe("https://www.wasenderapi.com/api/upload");
+    expect(JSON.parse(fetcher.mock.calls[0][1]!.body as string)).toEqual({ base64: "data:image/png;base64,iVBORw==" });
+    expect(JSON.parse(fetcher.mock.calls[1][1]!.body as string)).toEqual({ to: "+85291234567", imageUrl: "https://wasenderapi.com/media/card.png" });
+  });
+
+  it("refuses to send when the upload returns no URL", async () => {
+    const fetcher = vi.fn(async () => Response.json({ success: false }));
+    await expect(sendImage(whatsAppConfig(env), "1", new Uint8Array([1]), fetcher as unknown as typeof fetch)).rejects.toThrow("publicUrl");
+    expect(fetcher).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("linkedMessage", () => {
+  it("confirms the account in WhatsApp formatting", () => {
+    expect(linkedMessage("ada@test")).toContain("*ada@test*");
+  });
+});
+
 describe("link tokens", () => {
   it("round-trips the number's hash and last digits until it expires", () => {
     const now = Date.now();
     const token = createLinkToken("85291234567", now);
     expect(token).not.toContain("85291234567");
-    expect(readLinkToken(token, now)).toEqual({ phoneHash: phoneHash("85291234567"), phoneHint: "4567", expiresAt: now + LINK_TOKEN_TTL_MS });
+    expect(Buffer.from(token.split(".")[0], "base64url").toString()).not.toContain("85291234567");
+    expect(readLinkToken(token, now)).toEqual({ phoneHash: phoneHash("85291234567"), phoneHint: "4567", phone: "85291234567", expiresAt: now + LINK_TOKEN_TTL_MS });
     expect(readLinkToken(token, now + LINK_TOKEN_TTL_MS + 1)).toBeNull();
   });
 
@@ -143,6 +169,14 @@ describe("linked numbers", () => {
     await unlinkNumber("bob", claims.phoneHash);
     expect(await findLink(claims.phoneHash)).toBeNull();
   });
+
+  it("signs out from whichever account the number is linked to", async () => {
+    const claims = readLinkToken(createLinkToken("85298886666"))!;
+    await linkNumber({ id: "carol", email: "carol@test" }, claims);
+    expect(await signOutNumber(claims.phoneHash)).toBe(true);
+    expect(await findLink(claims.phoneHash)).toBeNull();
+    expect(await signOutNumber(claims.phoneHash)).toBe(false);
+  });
 });
 
 describe("handleIncomingMessage", () => {
@@ -151,7 +185,7 @@ describe("handleIncomingMessage", () => {
     const from = `852900000${String(++counter).padStart(2, "0")}`;
     const user = { id: `user-${counter}`, email: `user${counter}@test` };
     const sent: string[] = [];
-    const reply = vi.fn<NonNullable<BotDeps["reply"]>>(async (messages) => `**Answer** ${messages.length}`);
+    const reply = vi.fn<NonNullable<BotDeps["reply"]>>(async (messages) => ({ text: `**Answer** ${messages.length}`, cards: [] }));
     const deps: BotDeps = {
       config: whatsAppConfig(env),
       origin: "https://hub.test",
@@ -200,6 +234,44 @@ describe("handleIncomingMessage", () => {
     await handleIncomingMessage(message("b1", "Hi"), deps);
     expect(await handleIncomingMessage(message("b1", "Hi"), deps)).toEqual({ status: "duplicate" });
     expect(sent).toHaveLength(1);
+  });
+
+  it("signs out on /signout and sends a new sign-in link", async () => {
+    const { from, sent, reply, deps, message } = setup({ findUser: undefined });
+    await linkNumber({ id: "erin", email: "erin@test" }, readLinkToken(createLinkToken(from))!);
+    expect(await handleIncomingMessage(message("o1", "/SignOut"), deps)).toEqual({ status: "signed-out" });
+    expect(await findLink(phoneHash(from))).toBeNull();
+    expect(reply).not.toHaveBeenCalled();
+    expect(sent[0]).toContain("Signed out");
+    expect(sent[0]).toContain("https://hub.test/whatsapp/link?token=");
+  });
+
+  it("says so when /logout comes from a number that isn't linked", async () => {
+    const { sent, deps, message } = setup({ signOut: async () => false });
+    expect(await handleIncomingMessage(message("o2", "/logout"), deps)).toEqual({ status: "signed-out" });
+    expect(sent[0]).toContain("isn't linked");
+  });
+
+  it("signs out when the agent's sign_out tool was called, after sending its reply", async () => {
+    const signOut = vi.fn(async () => true);
+    const { from, sent, deps, message } = setup({ reply: async () => ({ text: "", cards: [], signOut: true }), signOut });
+    expect(await handleIncomingMessage(message("o3", "登出"), deps)).toEqual({ status: "signed-out" });
+    expect(signOut).toHaveBeenCalledWith(from);
+    // No "couldn't find an answer" when the agent only signed the user out.
+    expect(sent).toHaveLength(1);
+    expect(sent[0]).toContain("Signed out");
+  });
+
+  it("sends cards of the tool results before the answer, skipping any that fail", async () => {
+    const card = (title: string): Card => ({ accent: "#000000", badge: "T", title, blocks: [] });
+    const order: string[] = [];
+    const { deps, message } = setup({
+      reply: async () => ({ text: "Done", cards: [card("Broken"), card("Weather")] }),
+      send: async (_to, text) => void order.push(`text:${text}`),
+      sendCard: async (_to, value) => (value.title === "Broken" ? Promise.reject(new Error("render failed")) : void order.push(`card:${value.title}`)),
+    });
+    expect(await handleIncomingMessage(message("g1", "Weather?"), deps)).toEqual({ status: "answered" });
+    expect(order).toEqual(["card:Weather", "text:Done"]);
   });
 
   it("starts over on /new", async () => {

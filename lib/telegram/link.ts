@@ -4,6 +4,7 @@ import { and, desc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { telegramLinks } from "@/db/schema";
 import type { AppUser } from "@/lib/auth";
+import { seal, unseal } from "@/lib/sealed";
 
 /** How long a sign-in link sent on Telegram stays valid. */
 export const LINK_TOKEN_TTL_MS = 30 * 60 * 1000;
@@ -23,14 +24,16 @@ const sign = (payload: string) => createHmac("sha256", secret()).update(`telegra
 
 /**
  * A link token names the Telegram account (as its hash and display name) and expires after 30 minutes.
- * It's signed, so nobody can mint one for an account they don't hold.
+ * It's signed, so nobody can mint one for an account they don't hold. The chat to confirm the link in
+ * travels encrypted, so the URL doesn't show the Telegram id.
  */
-export function createLinkToken(from: string, name: string, now = Date.now()) {
-  const payload = Buffer.from(JSON.stringify({ h: telegramHash(from), n: name.slice(0, 64), e: now + LINK_TOKEN_TTL_MS })).toString("base64url");
+export function createLinkToken(from: string, name: string, chatId: number, now = Date.now()) {
+  const payload = Buffer.from(JSON.stringify({ h: telegramHash(from), n: name.slice(0, 64), c: seal("telegram-chat", String(chatId)), e: now + LINK_TOKEN_TTL_MS })).toString("base64url");
   return `${payload}.${sign(payload)}`;
 }
 
-export type LinkTokenClaims = { telegramHash: string; displayName: string; expiresAt: number };
+/** `chatId` is null for tokens minted before it was carried. */
+export type LinkTokenClaims = { telegramHash: string; displayName: string; chatId: number | null; expiresAt: number };
 
 /** The token's claims, or null when it's malformed, tampered with or expired. */
 export function readLinkToken(token: string | null | undefined, now = Date.now()): LinkTokenClaims | null {
@@ -40,9 +43,10 @@ export function readLinkToken(token: string | null | undefined, now = Date.now()
   const expected = Buffer.from(sign(payload));
   if (given.length !== expected.length || !timingSafeEqual(given, expected)) return null;
   try {
-    const claims = JSON.parse(Buffer.from(payload, "base64url").toString()) as { h?: unknown; n?: unknown; e?: unknown };
+    const claims = JSON.parse(Buffer.from(payload, "base64url").toString()) as { h?: unknown; n?: unknown; c?: unknown; e?: unknown };
     if (typeof claims.h !== "string" || typeof claims.n !== "string" || typeof claims.e !== "number" || claims.e < now) return null;
-    return { telegramHash: claims.h, displayName: claims.n, expiresAt: claims.e };
+    const chatId = Number(unseal("telegram-chat", claims.c));
+    return { telegramHash: claims.h, displayName: claims.n, chatId: Number.isSafeInteger(chatId) && chatId !== 0 ? chatId : null, expiresAt: claims.e };
   } catch {
     return null;
   }
@@ -72,4 +76,10 @@ export async function unlinkAccount(userId: string, hash: string) {
     .where(and(eq(telegramLinks.telegramHash, hash), eq(telegramLinks.userId, userId)))
     .returning({ telegramHash: telegramLinks.telegramHash });
   if (removed.length === 0) throw new Error("NOT_FOUND");
+}
+
+/** Unlinks the Telegram account from whichever account it's linked to (`/signout` in the chat). False when it wasn't linked. */
+export async function signOutAccount(hash: string) {
+  const removed = await db.delete(telegramLinks).where(eq(telegramLinks.telegramHash, hash)).returning({ telegramHash: telegramLinks.telegramHash });
+  return removed.length > 0;
 }
