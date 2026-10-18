@@ -1,0 +1,53 @@
+id: hk-ferry
+title: Ferries
+description: Outlying-island and harbour ferry routes, live arrival times, timetables and fares from Sun Ferry and Hong Kong & Kowloon Ferry (HKKF).
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0020, API-0021]
+datasets:
+  - sunferry-eta-eta
+  - hkkf-hkkfdata-hkkf-eta-data
+baseUrl: https://www.hkkfeta.com/opendata
+cacheTtl: 86400
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: ferry_routes
+    title: Ferry routes
+    description: Ferry routes of Sun Ferry (Central to Cheung Chau and Mui Wo, North Point to Hung Hom and Kowloon City, and the inter-islands ferry between Peng Chau, Mui Wo, Chi Ma Wan and Cheung Chau) and Hong Kong & Kowloon Ferry (Central to Sok Kwu Wan, Yung Shue Wan and Peng Chau, Peng Chau to Hei Ling Chau). Each entry is one direction of a route, with the route code (and direction for HKKF) that ferry_arrivals takes.
+    handler: routes
+    input:
+      operator: { type: string, enum: [sunferry, hkkf], description: "Only this operator: sunferry (Sun Ferry) or hkkf (Hong Kong & Kowloon Ferry)" }
+      search: { type: string, description: "Only routes calling at a place whose name contains this text, in English or Chinese, e.g. Cheung Chau or 長洲" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the names" }
+  - name: ferry_arrivals
+    title: Next ferry sailings
+    description: Live next sailings on one ferry route, with scheduled departure and estimated arrival (ISO times, Hong Kong time) and where each sails from and to. Sun Ferry routes are one direction each (e.g. CECC Central to Cheung Chau, CCCE back); they also show the next scheduled sailing before it leaves, the vessel and its position once under way, and mark fast ferries. HKKF routes are numbered 1-4 with an outbound (from Central, or from Peng Chau on route 4) and an inbound direction, and only show sailings already under way. Find route codes with ferry_routes.
+    handler: arrivals
+    # Both operators refresh their ETAs about every minute.
+    cacheTtl: 60
+    input:
+      route: { type: string, required: true, description: "Route code: a Sun Ferry code such as CECC, MWCE or IIPECMUW, or an HKKF route number 1-4" }
+      operator: { type: string, enum: [sunferry, hkkf], description: "Operator; worked out from the route code when left out (numbers are HKKF)" }
+      direction: { type: string, enum: [outbound, inbound], description: "HKKF only: outbound sails from Central (Peng Chau on route 4), inbound back to it. Both when left out" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the place names and remarks" }
+  - name: hkkf_timetable
+    title: HKKF ferry timetable
+    description: Timetable of a Hong Kong & Kowloon Ferry route in one direction, for Monday to Saturday and for Sundays and public holidays, with the remarks that the marks on some sailings refer to (e.g. ^ last sailing, @ optional service, {} only on Saturdays or no freight). Routes are 1 Central – Sok Kwu Wan, 2 Central – Yung Shue Wan, 3 Central – Peng Chau and 4 Peng Chau – Hei Ling Chau.
+    path: /time_table/{route}/{direction}
+    transform: { response: hkkfTimetable }
+    input:
+      route: { type: integer, required: true, minimum: 1, maximum: 99, description: "HKKF route number, 1-4" }
+      direction: { type: string, enum: [outbound, inbound], default: outbound, description: "outbound sails from Central (Peng Chau on route 4), inbound back to it" }
+      lang: { type: string, in: local, enum: [en, tc, sc], default: en, description: "Language of the place names and remarks" }
+    response:
+      format: csv
+  - name: hkkf_fares
+    title: HKKF ferry fares
+    description: Fares in HK$ for each ticket type on a Hong Kong & Kowloon Ferry route, for Monday to Saturday and for Sundays and public holidays (adult, child, elderly or disabled, children under 3 free), plus monthly, student monthly and multi-ride tickets, which have a single fare. A null fare means the ticket is not sold on that route.
+    path: /fare_table/{route}
+    transform: { response: hkkfFares }
+    input:
+      route: { type: integer, required: true, minimum: 1, maximum: 99, description: "HKKF route number, 1-4" }
+      lang: { type: string, in: local, enum: [en, tc, sc], default: en, description: "Language of the ticket names (Chinese for both tc and sc)" }
+    response:
+      format: csv

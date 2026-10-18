@@ -873,6 +873,196 @@ const cases: Case[] = [
     data: [{ controlPoint: "Shenzhen Bay", year: 2025, quarter: 2, total: 6, goodsVehicles: 2, passengerVehicles: 1, privateCars: 3 }],
   },
 
+  // hk-ferry
+  {
+    tool: "ferry_routes",
+    input: { search: "peng chau" },
+    request: { url: "https://www.hkkfeta.com/opendata/route/" },
+    reply: {
+      type: "Route",
+      version: "1.2",
+      generated_timestamp: "2026-10-18T23:11:18+08:00",
+      data: [
+        { route_id: 1, route_name_en: "Central<=>Sok Kwu Wan", route_name_tc: "中環往來索罟灣", route_name_sc: "中环往来索罟湾", origin_en: "Central", origin_tc: "中環", origin_sc: "中环", destination_en: "Sok Kwu Wan", destination_tc: "索罟灣", destination_sc: "索罟湾" },
+        { route_id: 3, route_name_en: "Central<=>Peng Chau", route_name_tc: "中環往來坪洲", route_name_sc: "中环往来坪洲", origin_en: "Central", origin_tc: "中環", origin_sc: "中环", destination_en: "Peng Chau", destination_tc: "坪洲", destination_sc: "坪洲" },
+      ],
+    },
+    data: {
+      routes: [
+        { operator: "sunferry", operatorName: "Sun Ferry", route: "IIPECMUW", direction: null, from: "Peng Chau", to: "Mui Wo", service: "Inter-islands" },
+        { operator: "sunferry", operatorName: "Sun Ferry", route: "IIMUWPEC", direction: null, from: "Mui Wo", to: "Peng Chau", service: "Inter-islands" },
+        { operator: "hkkf", operatorName: "Hong Kong & Kowloon Ferry", route: "3", direction: "outbound", from: "Central", to: "Peng Chau", fromPier: "Central Pier 6", toPier: "Peng Chau Pier" },
+        { operator: "hkkf", operatorName: "Hong Kong & Kowloon Ferry", route: "3", direction: "inbound", from: "Peng Chau", to: "Central", fromPier: "Peng Chau Pier", toPier: "Central Pier 6" },
+      ],
+    },
+    ttl: 86400,
+  },
+  {
+    name: "ferry_routes lists Sun Ferry routes without calling out, matching Chinese names",
+    tool: "ferry_routes",
+    input: { operator: "sunferry", search: "長洲", lang: "tc" },
+    data: {
+      routes: [
+        { operator: "sunferry", operatorName: "新渡輪", route: "CECC", direction: null, from: "中環", to: "長洲" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "CCCE", direction: null, from: "長洲", to: "中環" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "IICMWCHC", direction: null, from: "芝麻灣", to: "長洲", service: "橫水渡" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "IICHCCMW", direction: null, from: "長洲", to: "芝麻灣", service: "橫水渡" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "IICHCMUW", direction: null, from: "長洲", to: "梅窩", service: "橫水渡" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "IIMUWCHC", direction: null, from: "梅窩", to: "長洲", service: "橫水渡" },
+      ],
+    },
+  },
+  {
+    tool: "ferry_arrivals",
+    input: { route: "cecc" },
+    request: { url: "https://www.sunferry.com.hk/eta/?route=CECC" },
+    reply: {
+      type: "ETA",
+      version: "1.1",
+      generated_timestamp: "2026-10-19T00:05:08+08:00",
+      data: [
+        { routecode: "CECC", route_en: "Central - Cheung Chau", route_tc: "中環 - 長洲", route_sc: "中环 - 长洲", vesselcode: "GUO", depart_time: "23:30", eta: "00:23", lat: "22.235283", lng: "114.039983", rmk_en: null, rmk_tc: null, rmk_sc: null, date_timestamp: "2026-10-19T00:05:08+08:00" },
+        { routecode: "CECCH", route_en: "Central - Cheung Chau", route_tc: "中環 - 長洲", route_sc: "中环 - 长洲", vesselcode: "XMZ11", depart_time: "23:45", eta: "00:20", lat: null, lng: null, rmk_en: "Delayed", rmk_tc: null, rmk_sc: null, date_timestamp: "2026-10-19T00:05:08+08:00" },
+      ],
+    },
+    data: {
+      operator: "Sun Ferry",
+      route: "CECC",
+      name: "Central – Cheung Chau",
+      updatedAt: "2026-10-19T00:05:08+08:00",
+      sailings: [
+        { direction: null, from: "Central", to: "Cheung Chau", departure: "2026-10-18T23:30:00+08:00", eta: "2026-10-19T00:23:00+08:00", status: "departed", fast: false, vessel: "GUO", position: { lat: 22.235283, lng: 114.039983 } },
+        // Just after midnight: sailings that left before it are dated yesterday, their ETAs today.
+        { direction: null, from: "Central", to: "Cheung Chau", departure: "2026-10-18T23:45:00+08:00", eta: "2026-10-19T00:20:00+08:00", status: "departed", fast: true, vessel: "XMZ11", remark: "Delayed" },
+      ],
+    },
+    ttl: 60,
+  },
+  {
+    name: "ferry_arrivals dates a Sun Ferry sailing not yet left to the next morning",
+    tool: "ferry_arrivals",
+    input: { route: "NPHH", lang: "tc" },
+    request: { url: "https://www.sunferry.com.hk/eta/?route=NPHH" },
+    reply: {
+      type: "ETA",
+      version: "1.1",
+      generated_timestamp: "2026-10-18T23:10:08+08:00",
+      data: [{ routecode: "NPHH", route_en: "North Point - Hung Hom", route_tc: "北角 - 紅磡", route_sc: "北角 - 红磡", vesselcode: "SW11", depart_time: "08:23", lat: null, lng: null, eta: null, rmk_en: null, rmk_tc: null, rmk_sc: null, date_timestamp: "2026-10-18T23:10:08+08:00" }],
+    },
+    data: {
+      operator: "新渡輪",
+      route: "NPHH",
+      name: "北角 – 紅磡",
+      updatedAt: "2026-10-18T23:10:08+08:00",
+      sailings: [{ direction: null, from: "北角", to: "紅磡", departure: "2026-10-19T08:23:00+08:00", eta: null, status: "scheduled", fast: false, vessel: "SW11" }],
+    },
+  },
+  {
+    name: "ferry_arrivals reads both directions of an HKKF route",
+    tool: "ferry_arrivals",
+    input: { route: "3" },
+    request: { url: "https://www.hkkfeta.com/opendata/eta/3/outbound" },
+    reply: { type: "ETA", version: "1.2", generated_timestamp: "2026-10-18T23:11:41+08:00", data: [{ route_id: 3, direction: "outbound", date: "2026-10-18", session_time: "22:50:00", ETA: "2026-10-18T23:16:00+08:00" }] },
+    lookups: {
+      "https://www.hkkfeta.com/opendata/eta/3/inbound": { type: "ETA", version: "1.2", generated_timestamp: "2026-10-18T23:11:40+08:00", data: [{ route_id: 3, direction: "inbound", date: "2026-10-18", session_time: "22:45:00", ETA: "2026-10-18T23:20:00+08:00" }] },
+      "https://www.hkkfeta.com/opendata/route/": {
+        type: "Route",
+        data: [{ route_id: 3, route_name_en: "Central<=>Peng Chau", origin_en: "Central", origin_tc: "中環", origin_sc: "中环", destination_en: "Peng Chau", destination_tc: "坪洲", destination_sc: "坪洲" }],
+      },
+    },
+    data: {
+      operator: "Hong Kong & Kowloon Ferry",
+      route: "3",
+      name: "Central ⇄ Peng Chau",
+      updatedAt: "2026-10-18T23:11:41+08:00",
+      sailings: [
+        { direction: "outbound", from: "Central", to: "Peng Chau", fromPier: "Central Pier 6", toPier: "Peng Chau Pier", departure: "2026-10-18T22:50:00+08:00", eta: "2026-10-18T23:16:00+08:00", status: "departed" },
+        { direction: "inbound", from: "Peng Chau", to: "Central", fromPier: "Peng Chau Pier", toPier: "Central Pier 6", departure: "2026-10-18T22:45:00+08:00", eta: "2026-10-18T23:20:00+08:00", status: "departed" },
+      ],
+    },
+    ttl: 60,
+  },
+  {
+    name: "ferry_arrivals rejects an unknown Sun Ferry route before calling out",
+    tool: "ferry_arrivals",
+    input: { route: "CECCX" },
+    error: /Unknown Sun Ferry route CECCX. Routes are: CECC, CCCE/,
+  },
+  {
+    tool: "hkkf_timetable",
+    input: { route: 3, direction: "inbound" },
+    request: { url: "https://www.hkkfeta.com/opendata/time_table/3/inbound" },
+    reply: [
+      `${BOM}route id/航綫,direction/方向,origin_en,出發碼頭,出发码头,destination_en,目的地碼頭,目的地码头,remarks_en,附註,附注,Monday to Saturday/星期一至星期六,Sunday and Public Holidays/星期日及公眾假期`,
+      `3,inbound,Central,中環,中环,Peng Chau,坪洲,坪洲," rgb(0, 0, 0); background-color: rgb(244, 244, 244);"">Remarks:</span><span style=""color: rgb(0, 0, 0);"">^ Last Sailing</span><span style=""color: rgb(0, 0, 0);"">{ } No freight is allowed on this sailing</span><span style=""color: rgb(0, 0, 0);"">▲&nbsp;Only small quantity of freight can be carried</span>",</span><span>^ 尾班船</span>,</span><span>^ 尾班船</span>,"[' { 03:40 }', '    05:30', ' 🞁07:25', ' ^23:30']","['{ 03:40 }', '🞁06:30', '^ 23:35', '']"`,
+    ].join("\r\n"),
+    data: {
+      route: 3,
+      direction: "inbound",
+      from: "Peng Chau",
+      to: "Central",
+      mondayToSaturday: [{ time: "03:40", marks: ["{}"] }, { time: "05:30" }, { time: "07:25", marks: ["▲"] }, { time: "23:30", marks: ["^"] }],
+      sundayAndHolidays: [{ time: "03:40", marks: ["{}"] }, { time: "06:30", marks: ["▲"] }, { time: "23:35", marks: ["^"] }],
+      remarks: [
+        { mark: "^", text: "Last Sailing" },
+        { mark: "{}", text: "No freight is allowed on this sailing" },
+        { mark: "▲", text: "Only small quantity of freight can be carried" },
+      ],
+    },
+    ttl: 86400,
+  },
+  {
+    name: "hkkf_timetable splits Chinese remarks run together without markup",
+    tool: "hkkf_timetable",
+    input: { route: 1, lang: "tc" },
+    request: { url: "https://www.hkkfeta.com/opendata/time_table/1/outbound" },
+    reply: [
+      `${BOM}route id/航綫,direction/方向,origin_en,出發碼頭,出发码头,destination_en,目的地碼頭,目的地码头,remarks_en,附註,附注,Monday to Saturday/星期一至星期六,Sunday and Public Holidays/星期日及公眾假期`,
+      `1,outbound,Central,中環,中环,Sok Kwu Wan,索罟灣,索罟湾,"x"">@ Optional Service</span>",@ 必要時加班服務^ 尾班船及不設載貨服務,@ 必要时加班服务^ 尾班船及不设载货服务,"['07:20', '^23:30', '']","['@12:50', '^23:30']"`,
+    ].join("\r\n"),
+    data: {
+      route: 1,
+      direction: "outbound",
+      from: "中環",
+      to: "索罟灣",
+      mondayToSaturday: [{ time: "07:20" }, { time: "23:30", marks: ["^"] }],
+      sundayAndHolidays: [{ time: "12:50", marks: ["@"] }, { time: "23:30", marks: ["^"] }],
+      remarks: [
+        { mark: "@", text: "必要時加班服務" },
+        { mark: "^", text: "尾班船及不設載貨服務" },
+      ],
+    },
+  },
+  {
+    tool: "hkkf_fares",
+    input: { route: 1 },
+    request: { url: "https://www.hkkfeta.com/opendata/fare_table/1" },
+    reply: [
+      `${BOM}type/票種,Monday to Saturday/星期一至星期六,Sunday and Public Holidays/星期日及公眾假期`,
+      "month_ticket/月票,893",
+      "multi-ride_ticket/多程票,--",
+      "adult/成人,30.9,43.5",
+      "child (aged 3 or above but under 12)/小童(3歲或以上但12歲以下),15.4,21.7",
+      "child under 3 (accompanied by adult)/3歲以下小童(須有成人陪同),Free 免費,Free 免費",
+    ].join("\r\n"),
+    data: [
+      { ticket: "month ticket", price: 893 },
+      { ticket: "multi-ride ticket", price: null },
+      { ticket: "adult", mondayToSaturday: 30.9, sundayAndHolidays: 43.5 },
+      { ticket: "child (aged 3 or above but under 12)", mondayToSaturday: 15.4, sundayAndHolidays: 21.7 },
+      { ticket: "child under 3 (accompanied by adult)", mondayToSaturday: 0, sundayAndHolidays: 0 },
+    ],
+    ttl: 86400,
+  },
+  {
+    name: "hkkf_fares names tickets in Chinese",
+    tool: "hkkf_fares",
+    input: { route: 2, lang: "sc" },
+    request: { url: "https://www.hkkfeta.com/opendata/fare_table/2" },
+    reply: `${BOM}type/票種,Monday to Saturday/星期一至星期六,Sunday and Public Holidays/星期日及公眾假期\r\nadult/成人,24.9,34.7\r\n`,
+    data: [{ ticket: "成人", mondayToSaturday: 24.9, sundayAndHolidays: 34.7 }],
+  },
+
   // hk-holidays
   {
     tool: "hk_public_holidays",

@@ -8,6 +8,7 @@ import { buildCard as aedCard } from "@/mcp/services/ha-aed/card";
 import { buildCard as airportCard } from "@/mcp/services/hk-airport/card";
 import { buildCard as borderCard } from "@/mcp/services/hk-border/card";
 import { buildCard as busCard } from "@/mcp/services/hk-bus/card";
+import { buildCard as ferryCard } from "@/mcp/services/hk-ferry/card";
 import { buildCard as holidaysCard } from "@/mcp/services/hk-holidays/card";
 import { buildCard as cycloneCard } from "@/mcp/services/hko-cyclone/card";
 import { buildCard as regionalWeatherCard } from "@/mcp/services/hko-regional/card";
@@ -31,6 +32,7 @@ const BUILDERS: Record<string, CardBuilder> = {
   "hk-airport": airportCard,
   "hk-border": borderCard,
   "hk-bus": busCard,
+  "hk-ferry": ferryCard,
   "hk-holidays": holidaysCard,
   "hko-cyclone": cycloneCard,
   "hko-regional": regionalWeatherCard,

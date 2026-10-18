@@ -230,6 +230,17 @@ describe("card builders", () => {
     ]);
   });
 
+  it("shows ferry sailings with their departure, fast ferries marked", () => {
+    const sailing = { direction: null, from: "Central", to: "Cheung Chau", eta: null, status: "scheduled", fast: true };
+    const card = cardForToolResult(
+      result("hk-ferry", "ferry_arrivals", { route: "CECC" }, { operator: "Sun Ferry", route: "CECC", name: "Central – Cheung Chau", updatedAt: "2026-10-18T23:10:08+08:00", sailings: [{ ...sailing, departure: "2026-10-19T06:10:00+08:00" }] }),
+    )!;
+    expect(card).toMatchObject({ title: "Central – Cheung Chau", subtitle: "Sun Ferry · route CECC", footer: "Updated 23:10" });
+    expect(card.blocks).toEqual([
+      { kind: "row", leading: { text: "06:10" }, title: "Central → Cheung Chau", subtitle: null, trailing: [{ text: "Fast", tone: "info" }, { text: "Departs 06:10" }] },
+    ]);
+  });
+
   it("has no card for tools whose result doesn't picture well, or data a builder can't read", () => {
     expect(cardForToolResult(result("datagovhk-catalog", "datagovhk_archive_get_file", {}, { content: "a,b" }))).toBeNull();
     expect(cardForToolResult(result("hko-weather", "hko_earthquake", {}, {}))).toBeNull();
