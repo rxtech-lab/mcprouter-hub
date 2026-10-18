@@ -2043,6 +2043,283 @@ const cases: Case[] = [
       ],
     },
   },
+
+  // td-traffic
+  {
+    tool: "traffic_news",
+    input: { search: "ting kau" },
+    request: { url: "https://www.td.gov.hk/en/special_news/trafficnews.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.td.gov.hk/en/special_news/trafficnews.xsd">
+  <message>
+    <INCIDENT_NUMBER>IN-26-07624</INCIDENT_NUMBER>
+    <INCIDENT_HEADING_EN>Road Incident</INCIDENT_HEADING_EN>
+    <INCIDENT_HEADING_CN>道路事故</INCIDENT_HEADING_CN>
+    <INCIDENT_DETAIL_EN>Traffic Accident</INCIDENT_DETAIL_EN>
+    <INCIDENT_DETAIL_CN>交通意外</INCIDENT_DETAIL_CN>
+    <LOCATION_EN>Gloucester Road Service Road</LOCATION_EN>
+    <LOCATION_CN>告士打道輔助道路</LOCATION_CN>
+    <DISTRICT_EN/>
+    <DISTRICT_CN/>
+    <DIRECTION_EN>Central</DIRECTION_EN>
+    <DIRECTION_CN>中環</DIRECTION_CN>
+    <ANNOUNCEMENT_DATE>2026-10-18T21:19:00</ANNOUNCEMENT_DATE>
+    <INCIDENT_STATUS_EN>CLOSED</INCIDENT_STATUS_EN>
+    <INCIDENT_STATUS_CN>完結</INCIDENT_STATUS_CN>
+    <NEAR_LANDMARK_EN>Marsh Road</NEAR_LANDMARK_EN>
+    <NEAR_LANDMARK_CN>馬師道</NEAR_LANDMARK_CN>
+    <BETWEEN_LANDMARK_EN/>
+    <BETWEEN_LANDMARK_CN/>
+    <ID>148152</ID>
+    <CONTENT_EN>The only lane of Gloucester Road Service Road (Inner Gloucester Road) (Central bound) near Marsh Road which was closed due to traffic accident is re-opened to all traffic. </CONTENT_EN>
+    <CONTENT_CN>較早前因交通意外而封閉的告士打道輔助道路(內告士打道)(往中環方向)近馬師道的唯一行車線現已解封。</CONTENT_CN>
+    <LATITUDE/>
+    <LONGITUDE/>
+  </message>
+  <message>
+    <INCIDENT_NUMBER>IN-26-07625</INCIDENT_NUMBER>
+    <INCIDENT_HEADING_EN>Road Incident</INCIDENT_HEADING_EN>
+    <INCIDENT_HEADING_CN>道路事故</INCIDENT_HEADING_CN>
+    <INCIDENT_DETAIL_EN>Traffic Accident</INCIDENT_DETAIL_EN>
+    <INCIDENT_DETAIL_CN>交通意外</INCIDENT_DETAIL_CN>
+    <LOCATION_EN>Tsing Long Highway (Ting Kau Bridge)</LOCATION_EN>
+    <LOCATION_CN>青朗公路(汀九橋)</LOCATION_CN>
+    <DISTRICT_EN>Tsuen Wan</DISTRICT_EN>
+    <DISTRICT_CN>荃灣</DISTRICT_CN>
+    <DIRECTION_EN>Kowloon</DIRECTION_EN>
+    <DIRECTION_CN>九龍</DIRECTION_CN>
+    <ANNOUNCEMENT_DATE>2026-10-18T22:47:00</ANNOUNCEMENT_DATE>
+    <INCIDENT_STATUS_EN>NEW</INCIDENT_STATUS_EN>
+    <INCIDENT_STATUS_CN>最新情況</INCIDENT_STATUS_CN>
+    <NEAR_LANDMARK_EN/>
+    <NEAR_LANDMARK_CN/>
+    <BETWEEN_LANDMARK_EN/>
+    <BETWEEN_LANDMARK_CN/>
+    <ID>148153</ID>
+    <CONTENT_EN>Due to traffic accident , the fast lane of Tsing Long Highway (Ting Kau Bridge) (Kowloon bound) is closed to all traffic. Only remaining lanes are available to motorists. </CONTENT_EN>
+    <CONTENT_CN>因交通意外，青朗公路(汀九橋)(往九龍方向) 的快線現已封閉。 駕駛人士只可使用餘下行車線行車。</CONTENT_CN>
+    <LATITUDE>22.3618</LATITUDE>
+    <LONGITUDE>114.1087</LONGITUDE>
+  </message>
+</list>`,
+    data: [
+      {
+        id: 148153,
+        incidentNumber: "IN-26-07625",
+        status: "new",
+        heading: "Road Incident",
+        detail: "Traffic Accident",
+        location: "Tsing Long Highway (Ting Kau Bridge)",
+        district: "Tsuen Wan",
+        direction: "Kowloon",
+        announcedAt: "2026-10-18T22:47:00+08:00",
+        content: "Due to traffic accident , the fast lane of Tsing Long Highway (Ting Kau Bridge) (Kowloon bound) is closed to all traffic. Only remaining lanes are available to motorists.",
+        latitude: 22.3618,
+        longitude: 114.1087,
+      },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 120,
+  },
+  {
+    name: "traffic_news reads the Chinese copy of a single message and filters by district",
+    tool: "traffic_news",
+    input: { district: "荃灣", lang: "tc" },
+    request: { url: "https://www.td.gov.hk/tc/special_news/trafficnews.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>
+<list>
+  <message>
+    <INCIDENT_NUMBER>IN-26-07625</INCIDENT_NUMBER>
+    <INCIDENT_HEADING_EN>Road Incident</INCIDENT_HEADING_EN>
+    <INCIDENT_HEADING_CN>道路事故</INCIDENT_HEADING_CN>
+    <INCIDENT_DETAIL_EN>Traffic Accident</INCIDENT_DETAIL_EN>
+    <INCIDENT_DETAIL_CN>交通意外</INCIDENT_DETAIL_CN>
+    <LOCATION_EN>Tsing Long Highway (Ting Kau Bridge)</LOCATION_EN>
+    <LOCATION_CN>青朗公路(汀九橋)</LOCATION_CN>
+    <DISTRICT_EN>Tsuen Wan</DISTRICT_EN>
+    <DISTRICT_CN>荃灣</DISTRICT_CN>
+    <DIRECTION_EN>Kowloon</DIRECTION_EN>
+    <DIRECTION_CN>九龍</DIRECTION_CN>
+    <ANNOUNCEMENT_DATE>2026-10-18T23:04:00</ANNOUNCEMENT_DATE>
+    <INCIDENT_STATUS_EN>UPDATED</INCIDENT_STATUS_EN>
+    <INCIDENT_STATUS_CN>更新情況</INCIDENT_STATUS_CN>
+    <ID>148154</ID>
+    <CONTENT_EN>The fast lane of Tsing Long Highway (Ting Kau Bridge) (Kowloon bound) which was closed due to traffic accident is re-opened to all traffic. </CONTENT_EN>
+    <CONTENT_CN>較早前因交通意外而封閉的青朗公路(汀九橋)(往九龍方向) 的快線現已解封。</CONTENT_CN>
+    <LATITUDE/>
+    <LONGITUDE/>
+  </message>
+</list>`,
+    data: [
+      {
+        id: 148154,
+        incidentNumber: "IN-26-07625",
+        status: "updated",
+        heading: "道路事故",
+        detail: "交通意外",
+        location: "青朗公路(汀九橋)",
+        district: "荃灣",
+        direction: "九龍",
+        announcedAt: "2026-10-18T23:04:00+08:00",
+        content: "較早前因交通意外而封閉的青朗公路(汀九橋)(往九龍方向) 的快線現已解封。",
+      },
+    ],
+  },
+  {
+    tool: "traffic_journey_times",
+    input: { to: "airport" },
+    request: { url: "https://resource.data.one.gov.hk/td/jss/Journeytimev2.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jtis_journey_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.one.gov.hk/td http://data.one.gov.hk/xsd/td/journeytime.xsd" xmlns="http://data.one.gov.hk/td">
+    <jtis_journey_time>
+        <LOCATION_ID>H1</LOCATION_ID>
+        <DESTINATION_ID>CH</DESTINATION_ID>
+        <CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE>
+        <JOURNEY_TYPE>1</JOURNEY_TYPE>
+        <JOURNEY_DATA>4</JOURNEY_DATA>
+        <COLOUR_ID>3</COLOUR_ID>
+        <JOURNEY_DESC/>
+    </jtis_journey_time>
+    <jtis_journey_time>
+        <LOCATION_ID>K07</LOCATION_ID>
+        <DESTINATION_ID>ACTT</DESTINATION_ID>
+        <CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE>
+        <JOURNEY_TYPE>1</JOURNEY_TYPE>
+        <JOURNEY_DATA>21</JOURNEY_DATA>
+        <COLOUR_ID>2</COLOUR_ID>
+        <JOURNEY_DESC/>
+    </jtis_journey_time>
+    <jtis_journey_time>
+        <LOCATION_ID>K07</LOCATION_ID>
+        <DESTINATION_ID>ATSCA</DESTINATION_ID>
+        <CAPTURE_DATE>2026-10-18T23:11:00</CAPTURE_DATE>
+        <JOURNEY_TYPE>2</JOURNEY_TYPE>
+        <JOURNEY_DATA>3</JOURNEY_DATA>
+        <COLOUR_ID>-1</COLOUR_ID>
+        <JOURNEY_DESC>Tunnel Closed</JOURNEY_DESC>
+    </jtis_journey_time>
+    <jtis_journey_time>
+        <LOCATION_ID>K07</LOCATION_ID>
+        <DESTINATION_ID>WH</DESTINATION_ID>
+        <CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE>
+        <JOURNEY_TYPE>1</JOURNEY_TYPE>
+        <JOURNEY_DATA>6</JOURNEY_DATA>
+        <COLOUR_ID>3</COLOUR_ID>
+        <JOURNEY_DESC/>
+    </jtis_journey_time>
+</jtis_journey_list>`,
+    data: {
+      capturedAt: "2026-10-18T23:11:00+08:00",
+      indicators: [
+        {
+          code: "K07",
+          location: "West Kowloon Highway westbound near MTR Nam Cheong Station",
+          region: "Kowloon",
+          journeys: [
+            { destinationCode: "ACTT", destination: "Airport via Route 3", minutes: 21, colour: "amber" },
+            { destinationCode: "ATSCA", destination: "Airport via Route 8", minutes: null, colour: null, notice: "Tunnel closed" },
+          ],
+        },
+      ],
+    },
+    ttl: 120,
+  },
+  {
+    name: "traffic_journey_times picks one sign by its code, in Simplified Chinese",
+    tool: "traffic_journey_times",
+    input: { from: "h1", lang: "sc" },
+    request: { url: "https://resource.data.one.gov.hk/td/jss/Journeytimev2.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jtis_journey_list xmlns="http://data.one.gov.hk/td">
+    <jtis_journey_time><LOCATION_ID>H1</LOCATION_ID><DESTINATION_ID>CH</DESTINATION_ID><CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE><JOURNEY_TYPE>1</JOURNEY_TYPE><JOURNEY_DATA>4</JOURNEY_DATA><COLOUR_ID>3</COLOUR_ID><JOURNEY_DESC/></jtis_journey_time>
+    <jtis_journey_time><LOCATION_ID>H11</LOCATION_ID><DESTINATION_ID>EH</DESTINATION_ID><CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE><JOURNEY_TYPE>1</JOURNEY_TYPE><JOURNEY_DATA>4</JOURNEY_DATA><COLOUR_ID>3</COLOUR_ID><JOURNEY_DESC/></jtis_journey_time>
+    <jtis_journey_time><LOCATION_ID>H1</LOCATION_ID><DESTINATION_ID>EH</DESTINATION_ID><CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE><JOURNEY_TYPE>2</JOURNEY_TYPE><JOURNEY_DATA>1</JOURNEY_DATA><COLOUR_ID>1</COLOUR_ID><JOURNEY_DESC>Traffic Congestion</JOURNEY_DESC></jtis_journey_time>
+</jtis_journey_list>`,
+    data: {
+      capturedAt: "2026-10-18T23:09:00+08:00",
+      indicators: [
+        {
+          code: "H1",
+          location: "告士打道东行近税务大楼",
+          region: "香港岛",
+          journeys: [
+            { destinationCode: "CH", destination: "红磡海底隧道", minutes: 4, colour: "green" },
+            { destinationCode: "EH", destination: "东区海底隧道", minutes: null, colour: "red", notice: "交通挤塞" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    tool: "traffic_cameras",
+    input: { search: "tunnel", region: "hongKongIsland" },
+    request: { url: "https://static.data.gov.hk/td/traffic-snapshot-images/code/Traffic_Camera_Locations_En.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>
+<image-list>
+	<image>
+		<key>H429F</key>
+		<region>Hong Kong Island</region>
+		<district>Southern</district>
+		<description>Aberdeen Praya Road near Fish Market [H429F]</description>
+		<easting>833549</easting>
+		<northing>812187</northing>
+		<latitude>22.24845</latitude>
+		<longitude>114.1505</longitude>
+		<url>https://tdcctv.data.one.gov.hk/H429F.JPG</url>
+	</image>
+	<image>
+		<key>H210F</key>
+		<region>Hong Kong Island</region>
+		<district>Wan Chai</district>
+		<description>Aberdeen Tunnel - Wan Chai Side [H210F]</description>
+		<easting>836525</easting>
+		<northing>815094</northing>
+		<latitude>22.2747</latitude>
+		<longitude>114.17936</longitude>
+		<url>https://tdcctv.data.one.gov.hk/H210F.JPG</url>
+	</image>
+	<image>
+		<key>H207F</key>
+		<region>Hong Kong Island</region>
+		<district>Wan Chai</district>
+		<description>Cross Harbour Tunnel Hong Kong Side [H207F]</description>
+		<easting>836788</easting>
+		<northing>815823</northing>
+		<latitude>22.28128179</latitude>
+		<longitude>114.1819201</longitude>
+		<url>https://tdcctv.data.one.gov.hk/H207F.JPG</url>
+	</image>
+	<image>
+		<key>K107F</key>
+		<region>Kowloon</region>
+		<district>Yau Tsim Mong</district>
+		<description>Cross Harbour Tunnel Kowloon Side [K107F]</description>
+		<easting>836665</easting>
+		<northing>818282</northing>
+		<latitude>22.30349</latitude>
+		<longitude>114.18073</longitude>
+		<url>https://tdcctv.data.one.gov.hk/K107F.JPG</url>
+	</image>
+</image-list>`,
+    data: [
+      { key: "H210F", region: "Hong Kong Island", district: "Wan Chai", description: "Aberdeen Tunnel - Wan Chai Side", latitude: 22.2747, longitude: 114.17936, imageUrl: "https://tdcctv.data.one.gov.hk/H210F.JPG" },
+      { key: "H207F", region: "Hong Kong Island", district: "Wan Chai", description: "Cross Harbour Tunnel Hong Kong Side", latitude: 22.28128179, longitude: 114.1819201, imageUrl: "https://tdcctv.data.one.gov.hk/H207F.JPG" },
+    ],
+    meta: { total: 2, returned: 2, truncated: false },
+    ttl: 86400,
+  },
+  {
+    name: "traffic_cameras filters by district in Traditional Chinese",
+    tool: "traffic_cameras",
+    input: { district: "黃大仙", lang: "tc" },
+    request: { url: "https://static.data.gov.hk/td/traffic-snapshot-images/code/Traffic_Camera_Locations_Tc.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>
+<image-list>
+	<image><key>K505F</key><region>九龍</region><district>黃大仙區</district><description>龍翔道/竹園道 [K505F]</description><easting>836794</easting><northing>821148</northing><latitude>22.34290651</latitude><longitude>114.1845919</longitude><url>https://tdcctv.data.one.gov.hk/K505F.JPG</url></image>
+	<image><key>H429F</key><region>香港島</region><district>南區</district><description>香港仔海傍道近魚市場 [H429F]</description><easting>833549</easting><northing>812187</northing><latitude>22.24845</latitude><longitude>114.1505</longitude><url>https://tdcctv.data.one.gov.hk/H429F.JPG</url></image>
+</image-list>`,
+    data: [{ key: "K505F", region: "九龍", district: "黃大仙區", description: "龍翔道/竹園道", latitude: 22.34290651, longitude: 114.1845919, imageUrl: "https://tdcctv.data.one.gov.hk/K505F.JPG" }],
+  },
 ];
 
 const fetchMock = vi.fn<(url: string, init: RequestInit) => Promise<Response>>();

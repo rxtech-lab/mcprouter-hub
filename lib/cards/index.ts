@@ -18,6 +18,7 @@ import { buildCard as kowloonEastParkingCard } from "@/mcp/services/kowloon-east
 import { buildCard as mtrCard } from "@/mcp/services/mtr/card";
 import { buildCard as carparkCard } from "@/mcp/services/td-carpark/card";
 import { buildCard as streetParkingCard } from "@/mcp/services/td-street-parking/card";
+import { buildCard as trafficCard } from "@/mcp/services/td-traffic/card";
 
 /**
  * Chat cards for what the agent chose to show: the channels that can't run an
@@ -43,6 +44,7 @@ const BUILDERS: Record<string, CardBuilder> = {
   mtr: mtrCard,
   "td-carpark": carparkCard,
   "td-street-parking": streetParkingCard,
+  "td-traffic": trafficCard,
 };
 
 /** At most this many pictures go with one reply. */

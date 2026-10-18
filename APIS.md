@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **40 of 3819 implemented**, 3779 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **43 of 3819 implemented**, 3776 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -32,9 +32,9 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0021` | [Hong Kong & Kowloon Ferry](https://data.gov.hk/en-data/dataset/hkkf-hkkfdata-hkkf-eta-data) | API | Hong Kong & Kowloon Ferry Limited | ✅ Implemented | [Ferries](mcp/services/hk-ferry/service.yaml) |
 | `API-0022` | [Fortune Ferry and Water Taxi arrivals](https://data.gov.hk/en-data/dataset/ff-fortune-schedule2) | API | Fortune Ferry Company Limited | 🕒 Coming soon | — |
 | `API-0023` | [Flight information](https://data.gov.hk/en-data/dataset/aahk-team1-flight-info) | API | Airport Authority Hong Kong | ✅ Implemented | [Hong Kong International Airport Flights](mcp/services/hk-airport/service.yaml) |
-| `API-0024` | [Special traffic news](https://data.gov.hk/en-data/dataset/hk-td-tis_19-special-traffic-news-v2) | API | Transport Department | 🕒 Coming soon | — |
-| `API-0025` | [Journey time indicators](https://data.gov.hk/en-data/dataset/hk-td-sm_8-journey-time-indicators-v2) | API | Transport Department | 🕒 Coming soon | — |
-| `API-0026` | [Traffic snapshot images](https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images) | API | Transport Department | 🕒 Coming soon | — |
+| `API-0024` | [Special traffic news](https://data.gov.hk/en-data/dataset/hk-td-tis_19-special-traffic-news-v2) | API | Transport Department | ✅ Implemented | [Traffic News and Journey Times](mcp/services/td-traffic/service.yaml) |
+| `API-0025` | [Journey time indicators](https://data.gov.hk/en-data/dataset/hk-td-sm_8-journey-time-indicators-v2) | API | Transport Department | ✅ Implemented | [Traffic News and Journey Times](mcp/services/td-traffic/service.yaml) |
+| `API-0026` | [Traffic snapshot images](https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images) | API | Transport Department | ✅ Implemented | [Traffic News and Journey Times](mcp/services/td-traffic/service.yaml) |
 | `API-0027` | [Land boundary control point waiting times](https://data.gov.hk/en-data/dataset/hk-immd-set28-land-boundary-control-points-waiting-time) | API | Immigration Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
 | `API-0028` | [Metered parking spaces](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) | API | Transport Department | ✅ Implemented | [On-street Parking](mcp/services/td-street-parking/service.yaml) |
 | `API-0029` | [Kowloon East parking vacancy](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) | API | Development Bureau | ✅ Implemented | [Kowloon East Parking](mcp/services/kowloon-east-parking/service.yaml) |

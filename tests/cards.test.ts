@@ -165,6 +165,35 @@ describe("card builders", () => {
     ]);
   });
 
+  it("colours journey times the way the roadside sign does", () => {
+    const card = cardForToolResult(
+      result("td-traffic", "traffic_journey_times", {}, {
+        capturedAt: "2026-10-18T23:09:00+08:00",
+        indicators: [
+          {
+            code: "H1",
+            location: "Gloucester Road eastbound near Revenue Tower",
+            region: "Hong Kong Island",
+            journeys: [
+              { destinationCode: "CH", destination: "Cross Harbour Tunnel", minutes: 4, colour: "green" },
+              { destinationCode: "EH", destination: "Eastern Harbour Crossing", minutes: null, colour: "red", notice: "Traffic congestion" },
+            ],
+          },
+        ],
+      }),
+    )!;
+    expect(card).toMatchObject({ accent: "#1a4fa0", badge: "TD", title: "Journey times", subtitle: "Updated 23:09" });
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        leading: { text: "H1" },
+        title: "Gloucester Road eastbound near Revenue Tower",
+        subtitle: "Cross Harbour Tunnel · Eastern Harbour Crossing",
+        trailing: [{ text: "CH 4 min", tone: "success" }, { text: "EH Traffic congestion", tone: "danger" }],
+      },
+    ]);
+  });
+
   it("lists the worst-graded beaches first and flags them", () => {
     const beach = (code: string, name: string, grade: number, rating: string) => ({ code, name, district: "Southern", grade, rating, latitude: 22.2, longitude: 114.2, report: null });
     const card = cardForToolResult(
