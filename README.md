@@ -12,15 +12,15 @@ bun run catalog:sync            # optional: load the 3,830-dataset catalogue for
 bun run dev
 ```
 
-Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Codex, Gemini CLI and Cursor is at `/keys/setup` (`?client=<id>&auth=key` picks the client and API-key flow). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/mcp` with `Authorization: Bearer mcpr_…`.
+Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Codex, Gemini CLI and Cursor is at `/keys/setup` (`?client=<id>&auth=key` picks the client and API-key flow). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/streamable` with `Authorization: Bearer mcpr_…`.
 To inspect it: `bunx @modelcontextprotocol/inspector` with that URL and header.
 
 ## Endpoints
 
 | Path | What |
 |---|---|
-| `/api/mcp/mcp` | Every service (Streamable HTTP, stateless) |
-| `/api/mcp/s/<service>/mcp` | One service, for a smaller tool list |
+| `/api/mcp/streamable` | Every service (Streamable HTTP, stateless) |
+| `/api/mcp/s/<service>/streamable` | One service, for a smaller tool list |
 | `/api/chat` | The agent (AI SDK 7), used by `/chat` |
 | `/api/whatsapp` | WhatsApp bot webhook (WasenderAPI) |
 | `/api/telegram` | Telegram bot webhook (Bot API) |
@@ -38,7 +38,7 @@ Besides API keys, both MCP endpoints accept OAuth 2.1 access tokens, so clients 
 4. `/oauth/authorize` sends signed-out users to `/login?next=…`, then shows a consent page. Allow/Cancel is a server action that validates the request again and redirects back with `code`, `state` and `iss` (RFC 9207).
 5. `POST /api/mcp/oauth/token` exchanges the code (one minute, single use; replaying it revokes the grant) and rotates refresh tokens (reusing one revokes the grant). Access tokens (`mcpo_at_…`) last an hour. The grant expires after 30 days without a refresh. `POST /api/mcp/oauth/revoke` follows RFC 7009.
 
-A token is bound to the `resource` the user approved: a token for `/api/mcp/mcp` works on every endpoint, and a token for `/api/mcp/s/<service>/mcp` only works on that endpoint. OAuth tokens are accepted only in the `Authorization` header. Calls are billed and logged like key calls (with no `apiKeyId`). Users see and disconnect apps under **API keys → Connected apps** (`/keys/apps`). Codes, tokens and grants are stored as sha256 hashes in `oauth_*` tables (migration `0003_oauth`). The daily cron removes expired and revoked ones. The issuer is `NEXT_PUBLIC_SITE_URL`, so set it to the public origin in production.
+A token is bound to the `resource` the user approved: a token for `/api/mcp/streamable` works on every endpoint, and a token for `/api/mcp/s/<service>/streamable` only works on that endpoint. OAuth tokens are accepted only in the `Authorization` header. Calls are billed and logged like key calls (with no `apiKeyId`). Users see and disconnect apps under **API keys → Connected apps** (`/keys/apps`). Codes, tokens and grants are stored as sha256 hashes in `oauth_*` tables (migration `0003_oauth`). The daily cron removes expired and revoked ones. The issuer is `NEXT_PUBLIC_SITE_URL`, so set it to the public origin in production.
 
 ## Adding an MCP service
 
@@ -112,7 +112,7 @@ mount({
 
 ## Agent
 
-`AGENT_MCP_SERVERS` is a JSON list of `{ name, url, headers }`. `url: "self"` is this app's `/api/mcp/mcp`, called with `MCPROUTER_INTERNAL_KEY` on behalf of the signed-in user, so the agent's tool calls are billed to them. Tools from other servers are prefixed `<name>__`. The chat is an MCP Apps host: tool results with an app render in a sandboxed iframe through `/mcp-app-sandbox` (set `NEXT_PUBLIC_MCP_APP_SANDBOX_URL` to serve that page from a separate origin), and apps from other servers work too. `AI_MODEL` is an AI Gateway model string. The agent loads tools on demand: it starts with only `search_tools`, which ranks tools by embedding similarity (`AI_EMBEDDING_MODEL`, default `openai/text-embedding-3-small`) merged with keyword matches, and falls back to keywords if embedding fails.
+`AGENT_MCP_SERVERS` is a JSON list of `{ name, url, headers }`. `url: "self"` is this app's `/api/mcp/streamable`, called with `MCPROUTER_INTERNAL_KEY` on behalf of the signed-in user, so the agent's tool calls are billed to them. Tools from other servers are prefixed `<name>__`. The chat is an MCP Apps host: tool results with an app render in a sandboxed iframe through `/mcp-app-sandbox` (set `NEXT_PUBLIC_MCP_APP_SANDBOX_URL` to serve that page from a separate origin), and apps from other servers work too. `AI_MODEL` is an AI Gateway model string. The agent loads tools on demand: it starts with only `search_tools`, which ranks tools by embedding similarity (`AI_EMBEDDING_MODEL`, default `openai/text-embedding-3-small`) merged with keyword matches, and falls back to keywords if embedding fails.
 
 ## WhatsApp
 

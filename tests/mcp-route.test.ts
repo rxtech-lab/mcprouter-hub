@@ -31,7 +31,7 @@ function rpcRequest(method: string, params: unknown, options: { user?: string; t
   const token = options.token === undefined ? INTERNAL_KEY : options.token;
   if (token) headers.authorization = `Bearer ${token}`;
   if (options.user !== "") headers[INTERNAL_USER_HEADER] = options.user ?? "user-1";
-  return new Request(`https://hub.example${options.path ?? "/api/mcp/mcp"}`, {
+  return new Request(`https://hub.example${options.path ?? "/api/mcp/streamable"}`, {
     method: "POST",
     headers,
     body: JSON.stringify({ jsonrpc: "2.0", id: nextId++, method, params }),
@@ -105,7 +105,7 @@ describe("MCP endpoint", () => {
   });
 
   it("lists only one service's tools on a per-service endpoint", async () => {
-    const { result } = await rpc(busOnly, "tools/list", {}, { path: `/api/mcp/s/${busService.id}/mcp` });
+    const { result } = await rpc(busOnly, "tools/list", {}, { path: `/api/mcp/s/${busService.id}/streamable` });
     const names = result!.tools!.map((tool) => tool.name);
     expect(names.sort()).toEqual(busService.tools.map((tool) => tool.name).sort());
   });
@@ -157,7 +157,7 @@ describe("MCP endpoint", () => {
   });
 
   it("does not expose a tool outside the endpoint's services", async () => {
-    const { result, error } = await rpc(busOnly, "tools/call", { name: "hko_current_weather", arguments: {} }, { path: `/api/mcp/s/${busService.id}/mcp` });
+    const { result, error } = await rpc(busOnly, "tools/call", { name: "hko_current_weather", arguments: {} }, { path: `/api/mcp/s/${busService.id}/streamable` });
     expect(error ?? result?.isError).toBeTruthy();
     expect(fetchMock).not.toHaveBeenCalled();
   });
@@ -165,7 +165,7 @@ describe("MCP endpoint", () => {
   it("requires a token", async () => {
     const response = await allServices(rpcRequest("tools/list", {}, { token: null }));
     expect(response.status).toBe(401);
-    expect(response.headers.get("www-authenticate")).toMatch(/oauth-protected-resource\/api\/mcp\/mcp/);
+    expect(response.headers.get("www-authenticate")).toMatch(/oauth-protected-resource\/api\/mcp\/streamable/);
   });
 
   it("rejects a wrong token and an internal key without a user", async () => {
@@ -174,7 +174,7 @@ describe("MCP endpoint", () => {
   });
 
   it("answers 404 for an unknown service", async () => {
-    const response = await unknownService(rpcRequest("tools/list", {}, { path: "/api/mcp/s/nope/mcp" }));
+    const response = await unknownService(rpcRequest("tools/list", {}, { path: "/api/mcp/s/nope/streamable" }));
     expect(response.status).toBe(404);
     expect(await response.json()).toEqual({ error: "unknown_service" });
   });

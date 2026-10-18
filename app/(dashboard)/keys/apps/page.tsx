@@ -23,5 +23,5 @@ export default async function ConnectedAppsPage() {
     lastUsedAt: grant.lastUsedAt?.toISOString() ?? null,
     createdAt: grant.createdAt.toISOString(),
   }));
-  return <AppsView apps={apps} endpoint={`${await siteUrl()}/api/mcp/mcp`} />;
+  return <AppsView apps={apps} endpoint={`${await siteUrl()}/api/mcp/streamable`} />;
 }

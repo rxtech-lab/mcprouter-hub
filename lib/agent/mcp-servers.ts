@@ -3,7 +3,7 @@ import { z } from "zod";
 /**
  * `AGENT_MCP_SERVERS` lists the MCP servers the agent can use, as JSON:
  *   [{"name":"hk","url":"self","headers":{}}, {"name":"other","url":"https://…","headers":{"Authorization":"Bearer …"}}]
- * `url: "self"` is this app's own `/api/mcp/mcp`, called with the internal key
+ * `url: "self"` is this app's own `/api/mcp/streamable`, called with the internal key
  * on behalf of the signed-in user so their calls are metered to them.
  */
 export const mcpServerSchema = z.object({
@@ -40,7 +40,7 @@ export function resolveServer(server: McpServerConfig, context: { origin: string
   if (!context.internalKey) throw new Error("MCPROUTER_INTERNAL_KEY must be set for the agent to use this app's MCP server");
   return {
     name: server.name,
-    url: `${context.origin}/api/mcp/mcp`,
+    url: `${context.origin}/api/mcp/streamable`,
     headers: { ...server.headers, Authorization: `Bearer ${context.internalKey}`, "x-mcprouter-user": context.userId },
     self: true,
   };

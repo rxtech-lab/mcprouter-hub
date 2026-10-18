@@ -23,7 +23,7 @@ describe("AGENT_MCP_SERVERS", () => {
   it("resolves self to the internal endpoint for the signed-in user", () => {
     expect(resolveServer({ name: "hk", url: "self", headers: {} }, { origin: "https://hk.test", userId: "u1", internalKey: "k".repeat(32) })).toEqual({
       name: "hk",
-      url: "https://hk.test/api/mcp/mcp",
+      url: "https://hk.test/api/mcp/streamable",
       headers: { Authorization: `Bearer ${"k".repeat(32)}`, "x-mcprouter-user": "u1" },
       self: true,
     });

@@ -14,7 +14,7 @@ test("create a key, see it once, then revoke it", async ({ page }) => {
   const key = (await revealed.locator("pre").textContent())!.trim();
 
   // The key works against the MCP endpoint and only sees its scoped service.
-  const list = await page.request.post("/api/mcp/mcp", {
+  const list = await page.request.post("/api/mcp/streamable", {
     headers: { Authorization: `Bearer ${key}`, Accept: "application/json, text/event-stream", "mcp-protocol-version": "2025-06-18" },
     data: { jsonrpc: "2.0", id: 1, method: "tools/list", params: {} },
   });
@@ -31,7 +31,7 @@ test("create a key, see it once, then revoke it", async ({ page }) => {
   await expect(page.getByTestId("snackbar")).toContainText("Key revoked");
   await expect(page.getByTestId("key-card").filter({ hasText: name })).toContainText("Revoked");
 
-  const denied = await page.request.post("/api/mcp/mcp", {
+  const denied = await page.request.post("/api/mcp/streamable", {
     headers: { Authorization: `Bearer ${key}`, Accept: "application/json, text/event-stream" },
     data: { jsonrpc: "2.0", id: 1, method: "tools/list", params: {} },
   });

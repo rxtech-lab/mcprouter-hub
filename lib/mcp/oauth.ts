@@ -66,11 +66,11 @@ export function authorizationServerMetadata(origin: string) {
   };
 }
 
-const MCP_PATH = /^\/api\/mcp\/(?:s\/([^/]+)\/)?(mcp|sse)$/;
+const MCP_PATH = /^\/api\/mcp\/(?:s\/([^/]+)\/)?streamable$/;
 
 export type McpResource = { url: string; service: string | null };
 
-/** Parses an MCP endpoint path (`/api/mcp/mcp` or `/api/mcp/s/<service>/mcp`). */
+/** Parses an MCP endpoint path (`/api/mcp/streamable` or `/api/mcp/s/<service>/streamable`). */
 export function parseMcpPath(pathname: string): { service: string | null } | null {
   const match = MCP_PATH.exec(pathname);
   if (!match) return null;
@@ -81,7 +81,7 @@ export function parseMcpPath(pathname: string): { service: string | null } | nul
 
 /** The resource a token is for. Omitted means the all-services endpoint. */
 export function resolveResource(value: string | null | undefined, origin: string): McpResource {
-  if (!value) return { url: `${origin}/api/mcp/mcp`, service: null };
+  if (!value) return { url: `${origin}/api/mcp/streamable`, service: null };
   let url: URL;
   try {
     url = new URL(value);
@@ -95,7 +95,7 @@ export function resolveResource(value: string | null | undefined, origin: string
 
 export function protectedResourceMetadata(origin: string, pathname: string) {
   const parsed = parseMcpPath(pathname);
-  const resource = parsed ? `${origin}${pathname}` : `${origin}/api/mcp/mcp`;
+  const resource = parsed ? `${origin}${pathname}` : `${origin}/api/mcp/streamable`;
   return {
     resource,
     resource_name: parsed?.service ? `mcprouter · ${serviceById.get(parsed.service)?.title ?? parsed.service}` : "mcprouter",
