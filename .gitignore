@@ -51,3 +51,4 @@ e2e.db*
 
 # codegen output (bun run codegen)
 /generated
+live-check-state.json

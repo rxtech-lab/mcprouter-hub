@@ -1,0 +1,49 @@
+name: Live check
+
+# Calls every MCP tool against its real upstream and renders each MCP App.
+# A check that fails 3 runs in a row is sent to Telegram, and again when it recovers.
+on:
+  schedule:
+    - cron: "17 * * * *" # hourly
+  workflow_dispatch:
+    inputs:
+      threshold:
+        description: Failed runs in a row before a Telegram alert
+        required: false
+        default: "3"
+
+concurrency:
+  group: live-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bunx playwright install --with-deps chromium
+
+      # Failure counts carry over between runs in the Actions cache.
+      - uses: actions/cache/restore@v6
+        with:
+          path: live-check-state.json
+          key: live-check-state-${{ github.run_id }}
+          restore-keys: live-check-state-
+
+      - run: bun run live-check --state live-check-state.json --threshold "$THRESHOLD"
+        env:
+          THRESHOLD: ${{ inputs.threshold || '3' }}
+          TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
+          TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || vars.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID }}
+
+      - uses: actions/cache/save@v6
+        if: always() && hashFiles('live-check-state.json') != ''
+        with:
+          path: live-check-state.json
+          key: live-check-state-${{ github.run_id }}
