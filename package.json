@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "bun run codegen && next dev",
-    "build": "bun run codegen && next build",
+    "build": "drizzle-kit migrate && bun run codegen && next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
