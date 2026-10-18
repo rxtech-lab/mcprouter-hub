@@ -11,5 +11,17 @@ const limitIndex = process.argv.indexOf("--limit");
 const maxShow = limitIndex > -1 ? Number(process.argv[limitIndex + 1]) : 10_000;
 
 await cleanupOAuth().catch((error) => console.error("[catalog-sync] OAuth cleanup failed", error));
-const report = await syncCatalog({ maxShow, concurrency: 8, budgetMs: 60 * 60 * 1000 });
+const startedAt = Date.now();
+const report = await syncCatalog({
+  maxShow,
+  concurrency: 8,
+  budgetMs: 60 * 60 * 1000,
+  onProgress: ({ done, queued, updated, unchanged, failed }) => {
+    if (done % 100 !== 0 && done !== queued) return;
+    const seconds = Math.round((Date.now() - startedAt) / 1000);
+    console.log(
+      `[catalog-sync] ${done}/${queued} (${updated} updated, ${unchanged} unchanged, ${failed} failed) ${seconds}s`,
+    );
+  },
+});
 console.log(report);
