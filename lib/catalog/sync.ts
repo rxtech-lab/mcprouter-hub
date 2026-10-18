@@ -75,7 +75,8 @@ export async function syncCatalog({ maxShow = 500, concurrency = 8, budgetMs = 2
       report.updated++;
     } catch (error) {
       report.failed++;
-      console.warn(`[catalog-sync] ${row.id}:`, (error as Error).message);
+      const cause = (error as Error).cause as Error | undefined;
+      console.warn(`[catalog-sync] ${row.id}:`, cause?.message ?? (error as Error).message);
     }
   });
 
