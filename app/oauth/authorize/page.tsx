@@ -10,6 +10,7 @@ import { checkAuthorizationRequest, clientRedirect } from "@/lib/mcp/oauth";
 import { siteUrl } from "@/lib/site";
 import { decideAuthorization } from "./actions";
 import { DecisionButtons } from "./decision-buttons";
+import { ServicesField } from "./services-field";
 import { AUTHORIZE_PARAMS } from "./params";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -80,7 +81,7 @@ export default async function AuthorizePage({ searchParams }: PageProps<"/oauth/
           <span>
             {service
               ? t("Call the {service} tools as you. Each tool call counts against your plan, like calls made with an API key.", { service: service.title })
-              : t("Call every mcprouter service as you. Each tool call counts against your plan, like calls made with an API key.")}
+              : t("Call mcprouter services as you, all of them or only the ones you pick below. Each tool call counts against your plan, like calls made with an API key.")}
           </span>
         </li>
         <li className="flex items-start gap-3 type-body-medium">
@@ -95,7 +96,8 @@ export default async function AuthorizePage({ searchParams }: PageProps<"/oauth/
         })}
       </p>
 
-      <form action={decideAuthorization} className="mt-8">
+      <form action={decideAuthorization} className="mt-6 flex flex-col gap-8">
+        {service ? null : <ServicesField />}
         {AUTHORIZE_PARAMS.map((name) => {
           const value = params[name];
           return typeof value === "string" ? <input key={name} type="hidden" name={name} value={value} /> : null;

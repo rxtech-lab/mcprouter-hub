@@ -1,8 +1,8 @@
 import "server-only";
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
-import { and, desc, eq } from "drizzle-orm";
+import { and, desc, eq, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { whatsappLinks } from "@/db/schema";
+import { whatsappLinks, type ToolMode } from "@/db/schema";
 import type { AppUser } from "@/lib/auth";
 import { seal, unseal } from "@/lib/sealed";
 
@@ -67,7 +67,16 @@ export async function linkNumber(user: Pick<AppUser, "id" | "email">, claims: Li
   await db
     .insert(whatsappLinks)
     .values({ phoneHash: claims.phoneHash, ...values })
-    .onConflictDoUpdate({ target: whatsappLinks.phoneHash, set: { ...values, createdAt: new Date() } });
+    .onConflictDoUpdate({
+      target: whatsappLinks.phoneHash,
+      set: {
+        ...values,
+        // Service limits and the tool mode stay with the account that set them; linking to another account starts afresh.
+        scopes: sql`CASE WHEN ${whatsappLinks.userId} = ${user.id} THEN ${whatsappLinks.scopes} ELSE '[]' END`,
+        toolMode: sql`CASE WHEN ${whatsappLinks.userId} = ${user.id} THEN ${whatsappLinks.toolMode} ELSE NULL END`,
+        createdAt: new Date(),
+      },
+    });
 }
 
 export async function listLinks(userId: string) {
@@ -86,4 +95,24 @@ export async function unlinkNumber(userId: string, hash: string) {
 export async function signOutNumber(hash: string) {
   const removed = await db.delete(whatsappLinks).where(eq(whatsappLinks.phoneHash, hash)).returning({ phoneHash: whatsappLinks.phoneHash });
   return removed.length > 0;
+}
+
+/** Sets the services the bot may call for this link. */
+export async function updateLinkScopes(userId: string, hash: string, scopes: string[]) {
+  const updated = await db
+    .update(whatsappLinks)
+    .set({ scopes })
+    .where(and(eq(whatsappLinks.phoneHash, hash), eq(whatsappLinks.userId, userId)))
+    .returning({ userId: whatsappLinks.userId });
+  if (updated.length === 0) throw new Error("NOT_FOUND");
+}
+
+/** Sets how the bot's agent sees tools for this link: `all` by name, or `search` behind the three search tools. */
+export async function updateLinkToolMode(userId: string, hash: string, toolMode: ToolMode) {
+  const updated = await db
+    .update(whatsappLinks)
+    .set({ toolMode })
+    .where(and(eq(whatsappLinks.phoneHash, hash), eq(whatsappLinks.userId, userId)))
+    .returning({ userId: whatsappLinks.userId });
+  if (updated.length === 0) throw new Error("NOT_FOUND");
 }

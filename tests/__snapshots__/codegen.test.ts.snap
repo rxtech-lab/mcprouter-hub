@@ -14,6 +14,7 @@ export const service: ServiceDefinition = {
   "title": "Example Service",
   "description": "A fixture covering every feature of the YAML spec.",
   "aliases": [],
+  "region": "hk",
   "datasets": [
     "example-dataset"
   ],

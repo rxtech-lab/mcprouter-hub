@@ -6,6 +6,7 @@ import { Pagination } from "@/components/m3/pagination";
 import { SearchBar } from "@/components/m3/search-bar";
 import { requirePageUser } from "@/lib/auth";
 import { getT } from "@/lib/i18n/server";
+import { matchesService } from "@/lib/mcp/search";
 import { siteUrl } from "@/lib/site";
 import { listHref, parseListParams } from "@/app/sources/params";
 import { ServicesView, type ServiceCard } from "./services-view";
@@ -17,20 +18,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const PAGE_SIZE = 12;
 
-/** Matches every word of the query against the service and its tools, so "bus eta" finds KMB. */
-function matches(service: (typeof services)[number], query: string) {
-  const haystack = [service.id, service.title, service.description ?? "", ...service.datasets, ...service.tools.flatMap((tool) => [tool.name, tool.title ?? "", tool.description])]
-    .join(" ")
-    .toLowerCase();
-  return query.toLowerCase().split(/\s+/).filter(Boolean).every((word) => haystack.includes(word));
-}
-
 export default async function ServicesPage({ searchParams }: PageProps<"/services">) {
   await requirePageUser();
   const t = await getT();
   const params = parseListParams(await searchParams);
   const origin = await siteUrl();
-  const filtered = params.q ? services.filter((service) => matches(service, params.q!)) : services;
+  const filtered = params.q ? services.filter((service) => matchesService(service, params.q!)) : services;
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const page = Math.min(params.page, pageCount);
   const cards: ServiceCard[] = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE).map((service) => ({

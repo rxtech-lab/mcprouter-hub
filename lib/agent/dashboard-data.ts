@@ -6,6 +6,7 @@ import { serviceById } from "@/generated/registry";
 import type { DashboardData, KeySummary } from "@/lib/agent/dashboard-tools";
 import { checkKeyUsable } from "@/lib/api-keys";
 import type { AppUser } from "@/lib/auth";
+import { NO_SERVICES } from "@/lib/service-selection";
 import { billingConfig } from "@/lib/billing/config";
 import { activePlans, getEntitlements, subscriptionConfigured } from "@/lib/billing/subscription";
 import { callsPerDay } from "@/lib/usage";
@@ -17,7 +18,7 @@ async function listKeys(userId: string): Promise<KeySummary[]> {
     name: row.name,
     prefix: `${row.prefix}…`,
     status: checkKeyUsable(row) ?? "active",
-    services: row.scopes.length ? row.scopes.map((id) => serviceById.get(id)?.title ?? id).join(", ") : "All services",
+    services: row.scopes.includes(NO_SERVICES) ? "No services" : row.scopes.length ? row.scopes.map((id) => serviceById.get(id)?.title ?? id).join(", ") : "All services",
     calls: row.callCount,
     lastUsedAt: row.lastUsedAt?.toISOString() ?? null,
   }));

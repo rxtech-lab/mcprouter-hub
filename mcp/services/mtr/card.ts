@@ -1,4 +1,4 @@
-// MTR chat cards: next-train boards, Light Rail platforms and MTR Bus stops, as still pictures.
+// MTR chat cards: next-train boards and Light Rail platforms, as still pictures.
 import { blocks, card, fmt, langOf, type Card, type CardBuilder, type CardInput, type Row } from "../../apps/card";
 import { LINES, station } from "./stations";
 
@@ -67,31 +67,6 @@ function lightRail({ input, data: body = {} }: CardInput): Card {
   };
 }
 
-function bus({ input, data: body = {} }: CardInput): Card {
-  const stops: Row[] = body.busStop ?? [];
-  const route = body.routeName ?? input?.routeName ?? "";
-  const colour = String(body.routeColour ?? "").replace(/[^0-9a-f]/gi, "").slice(0, 6);
-  return {
-    accent: colour.length === 6 ? `#${colour}` : "#ac2e44",
-    badge: String(route || "BUS"),
-    title: `MTR Bus ${route}`.trim(),
-    subtitle: body.routeStatusRemarkTitle || null,
-    blocks: blocks(
-      body.routeStatusRemarkContent && card.notice(body.routeStatusRemarkContent, "warning"),
-      stops.length
-        ? stops.map((stop) => {
-            const buses: Row[] = (stop.bus ?? []).slice(0, 3);
-            return card.row({
-              title: String(stop.busStopId),
-              subtitle: stop.isSuspended === "1" ? "Suspended" : stop.busStopRemark,
-              trailing: buses.length ? card.etas(buses.map((item) => item.departureTimeText || item.arrivalTimeText || "—")) : [{ text: "No buses" }],
-            });
-          })
-        : card.text("No stops reported for this route.", true),
-    ),
-  };
-}
-
-const builders: Record<string, CardBuilder> = { mtr_next_train: nextTrain, mtr_light_rail_schedule: lightRail, mtr_bus_schedule: bus };
+const builders: Record<string, CardBuilder> = { mtr_next_train: nextTrain, mtr_light_rail_schedule: lightRail };
 
 export const buildCard: CardBuilder = (result) => builders[result.tool]?.(result) ?? null;

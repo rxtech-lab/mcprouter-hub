@@ -1,12 +1,11 @@
 id: mtr
 title: MTR
-description: Next train schedules for MTR heavy rail lines and Light Rail, and MTR Bus arrival times.
+description: Next train schedules for MTR heavy rail lines and Light Rail. MTR Bus arrivals are in the Buses, Minibuses & Trams service.
 # Entries in mcp/apis.yaml this service implements.
-apis: [API-0014, API-0015, API-0016]
+apis: [API-0014, API-0015]
 datasets:
   - mtr-data2-nexttrain-data
   - mtr-lrnt_data-light-rail-nexttrain-data
-  - mtr-mtr_bus-mtr-bus-eta-data
 baseUrl: https://rt.data.gov.hk/v1/transport/mtr
 lang:
   param: lang
@@ -29,11 +28,3 @@ tools:
     path: /lrt/getSchedule
     input:
       stationId: { type: string, required: true, name: station_id, description: "Light Rail stop id, e.g. 100 for Tuen Mun Ferry Pier, 295 for Tuen Mun" }
-  - name: mtr_bus_schedule
-    title: MTR Bus arrivals
-    description: Real-time arrival times for every stop of an MTR Bus route (feeder buses in Tuen Mun, Yuen Long and Tung Chung, e.g. K12, 506).
-    method: POST
-    path: /bus/getSchedule
-    input:
-      routeName: { type: string, required: true, in: body, transform: upper, description: "MTR Bus route, e.g. K12" }
-      language: { type: string, enum: [en, zh], default: en, in: body, description: "Response language" }

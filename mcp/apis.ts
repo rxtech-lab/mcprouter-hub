@@ -18,11 +18,30 @@ export const API_CATEGORIES = {
   finance: "Finance",
   places: "Places & addresses",
   government: "Government",
+  commerce: "Commerce & industry",
+  development: "Development",
+  population: "Population",
+  security: "Law & security",
+  employment: "Employment & labour",
+  welfare: "Social welfare",
+  technology: "IT & broadcasting",
+  recreation: "Recreation & culture",
+  education: "Education",
+  city: "City management",
+  housing: "Housing",
+  legislature: "Legislature",
+  tourism: "Tourism",
+  food: "Food",
+  other: "Miscellaneous",
 } as const;
 export type ApiCategory = keyof typeof API_CATEGORIES;
 
 export const API_STATUSES = { implemented: "Implemented", "coming-soon": "Coming soon" } as const;
 export type ApiStatus = keyof typeof API_STATUSES;
+
+/** `api`: the dataset has a live API resource on DATA.GOV.HK. `files`: only downloadable files (CSV, XLSX, …). */
+export const API_KINDS = { api: "Live API", files: "Data files" } as const;
+export type ApiKind = keyof typeof API_KINDS;
 
 export const apiSpec = z
   .object({
@@ -33,6 +52,7 @@ export const apiSpec = z
     category: z.enum(Object.keys(API_CATEGORIES) as [ApiCategory, ...ApiCategory[]]),
     /** DATA.GOV.HK (CKAN) dataset ids behind this API. */
     datasets: z.array(z.string().min(1)).min(1),
+    kind: z.enum(Object.keys(API_KINDS) as [ApiKind, ...ApiKind[]]).default("api"),
     /** Developer docs, when there's a better page than the first dataset's. */
     docs: z.url({ protocol: /^https$/ }).optional(),
   })
@@ -121,6 +141,10 @@ export function resolveApis(yaml: string, specs: ServiceSpec[]): { tracker: ApiT
   return { tracker: { apis, counts, nextId: formatApiId(idNumber(entries.at(-1)!.id) + 1) }, problems };
 }
 
+function apisByKind(tracker: ApiTracker, kind: ApiKind) {
+  return tracker.apis.filter((api) => api.kind === kind).length;
+}
+
 function cell(text: string) {
   return text.replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
 }
@@ -134,7 +158,8 @@ export function renderApisMarkdown(tracker: ApiTracker, specs: ServiceSpec[]): s
     "",
     "# API tracker",
     "",
-    `Every upstream API mcprouter serves as MCP tools, or plans to. **${tracker.counts.implemented} of ${total} implemented**, ${tracker.counts["coming-soon"]} coming soon.`,
+    `Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **${tracker.counts.implemented} of ${total} implemented**, ${tracker.counts["coming-soon"]} coming soon.`,
+    `${apisByKind(tracker, "api")} have a live API; ${apisByKind(tracker, "files")} only publish data files. New DATA.GOV.HK datasets are added with \`bun run apis:import\`.`,
     "The same list is on the website under Data sources → APIs (`/sources/apis`).",
     "",
     "## Implementing an API",
@@ -150,11 +175,12 @@ export function renderApisMarkdown(tracker: ApiTracker, specs: ServiceSpec[]): s
   for (const [category, label] of Object.entries(API_CATEGORIES)) {
     const rows = tracker.apis.filter((api) => api.category === category);
     if (rows.length === 0) continue;
-    lines.push(`## ${label}`, "", "| ID | API | Provider | Status | Service |", "|---|---|---|---|---|");
+    lines.push(`## ${label}`, "", "| ID | API | Type | Provider | Status | Service |", "|---|---|---|---|---|---|");
     for (const api of rows) {
       const status = api.status === "implemented" ? "✅ Implemented" : "🕒 Coming soon";
       const services = api.services.map((id) => `[${cell(titles.get(id) ?? id)}](mcp/services/${id}/service.yaml)`).join(", ") || "—";
-      lines.push(`| \`${api.id}\` | [${cell(api.title)}](${api.docs}) | ${cell(api.provider)} | ${status} | ${services} |`);
+      const kind = api.kind === "api" ? "API" : "Files";
+      lines.push(`| \`${api.id}\` | [${cell(api.title)}](${api.docs}) | ${kind} | ${cell(api.provider)} | ${status} | ${services} |`);
     }
     lines.push("");
   }

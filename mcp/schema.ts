@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { REGIONS } from "./regions";
 
 /**
  * Schema for `mcp/services/<service>/service.yaml`, the hand-written source
@@ -158,6 +159,8 @@ export const serviceSpec = z
     description: z.string().optional(),
     /** Former ids of services merged into this one; they still resolve here for old API keys, grants and URLs. */
     aliases: z.array(z.string().regex(/^[a-z][a-z0-9-]*$/)).default([]),
+    /** Where the data comes from, an id from `mcp/regions.ts`. Users can expose only some regions. */
+    region: z.enum(REGIONS).default("hk"),
     /** DATA.GOV.HK (CKAN) dataset ids this service covers; read by the tracker. */
     datasets: z.array(z.string().min(1)).default([]),
     /** Ids from `mcp/apis.yaml` this service implements, e.g. `API-0012`; the API tracker marks them implemented. */

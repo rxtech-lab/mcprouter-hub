@@ -28,7 +28,7 @@ beforeAll(async () => {
   await migrate(db, { migrationsFolder: "db/migrations" });
 });
 
-async function authorize(userId: string, resource?: string) {
+async function authorize(userId: string, resource?: string, scopes?: string[]) {
   const client = await registerClient({ client_name: "Test agent", redirect_uris: [redirectUri] });
   const verifier = secret();
   const check = await checkAuthorizationRequest(
@@ -44,7 +44,7 @@ async function authorize(userId: string, resource?: string) {
     origin,
   );
   if (!check.ok) throw new Error(check.message);
-  const code = await approveAuthorization(userId, check.request);
+  const code = await approveAuthorization(userId, check.request, scopes);
   return { client, verifier, code };
 }
 
@@ -119,6 +119,14 @@ describe("OAuth for MCP", () => {
     expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/s/mtr/streamable")).toBeNull();
     const auth = await verifyMcpToken(new Request(`${origin}/api/mcp/s/kmb/streamable`), tokens.access_token);
     expect(auth?.extra).toMatchObject({ scopes: ["kmb"] });
+  });
+
+  it("limits a grant to the services picked on the consent page", async () => {
+    const { client, verifier, code } = await authorize("dana", undefined, ["kmb", "mtr"]);
+    const tokens = await exchangeCode({ code, clientId: client.client_id, redirectUri, verifier, resource: null, origin });
+    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/streamable")).toMatchObject({ service: null, scopes: ["kmb", "mtr"] });
+    const auth = await verifyMcpToken(new Request(`${origin}/api/mcp/streamable`), tokens.access_token);
+    expect(auth?.extra).toMatchObject({ scopes: ["kmb", "mtr"] });
   });
 
   it("rotates refresh tokens and revokes the grant on reuse", async () => {

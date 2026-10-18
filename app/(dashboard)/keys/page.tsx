@@ -18,11 +18,11 @@ const first = (value: string | string[] | undefined) => (Array.isArray(value) ? 
 
 /**
  * A dialog to open with the page, from the URL (the agent links here to start an action):
- * `?create=1&name=…` creates a key, `?rename=<id>`, `?scopes=<id>` or `?revoke=<id>` act on one.
+ * `?create=1&name=…` creates a key, `?rename=<id>`, `?scopes=<id>`, `?toolMode=<id>` or `?revoke=<id>` act on one.
  */
 function openDialog(raw: Record<string, string | string[] | undefined>, keys: KeyRow[]): OpenDialog | undefined {
   if (first(raw.create)) return { kind: "create", name: first(raw.name)?.slice(0, 60) };
-  for (const kind of ["rename", "scopes", "revoke"] as const) {
+  for (const kind of ["rename", "scopes", "toolMode", "revoke"] as const) {
     const id = first(raw[kind]);
     const key = id ? keys.find((row) => row.id === id && row.status === "active") : undefined;
     if (key) return { kind, key };
@@ -41,6 +41,7 @@ export default async function KeysPage({ searchParams }: PageProps<"/keys">) {
       prefix: row.prefix,
       // Scopes saved before services were merged are shown (and edited) as the service they became.
       scopes: [...new Set(row.scopes.map((id) => serviceById.get(id)?.id ?? id))],
+      toolMode: row.toolMode,
       callCount: row.callCount,
       lastUsedAt: row.lastUsedAt?.toISOString() ?? null,
       expiresAt: row.expiresAt?.toISOString() ?? null,
@@ -56,7 +57,7 @@ export default async function KeysPage({ searchParams }: PageProps<"/keys">) {
       key={initial ? JSON.stringify(raw) : "keys"}
       initial={initial}
       keys={keys}
-      services={services.map((service) => ({ id: service.id, title: service.title }))}
+      services={services.map((service) => ({ id: service.id, title: service.title, region: service.region, tools: service.tools.length }))}
       endpoint={`${await siteUrl()}/api/mcp/streamable`}
     />
   );

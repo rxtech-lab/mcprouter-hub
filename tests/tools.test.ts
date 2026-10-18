@@ -289,6 +289,59 @@ const cases: Case[] = [
     ttl: 30,
   },
 
+  // nlb (New Lantao Bus)
+  {
+    tool: "nlb_routes",
+    input: { route: "1", search: "tai o" },
+    request: { url: "https://rt.data.gov.hk/v2/transport/nlb/route.php?action=list" },
+    reply: {
+      routes: [
+        { routeId: "1", routeNo: "1", routeName_e: "Mui Wo Ferry Pier > Tai O", routeName_c: "梅窩碼頭 > 大澳", routeName_s: "梅窝码头 > 大澳", overnightRoute: 0, specialRoute: 0 },
+        { routeId: "3", routeNo: "1R", routeName_e: "Hung Hom > Ngong Ping", routeName_c: "紅磡 > 昂坪", routeName_s: "红磡 > 昂坪", overnightRoute: 0, specialRoute: 0 },
+      ],
+    },
+    data: [{ routeId: "1", routeNo: "1", routeName_en: "Mui Wo Ferry Pier > Tai O", routeName_tc: "梅窩碼頭 > 大澳", routeName_sc: "梅窝码头 > 大澳", overnightRoute: 0, specialRoute: 0 }],
+    ttl: 86400,
+  },
+  {
+    tool: "nlb_route_stops",
+    input: { routeId: "1" },
+    request: { url: "https://rt.data.gov.hk/v2/transport/nlb/stop.php?action=list&routeId=1" },
+    reply: { stops: [{ stopId: "1", stopName_e: "Mui Wo Ferry Pier", stopName_c: "梅窩碼頭", latitude: "22.264664", longitude: "114.001554", fare: "12.7" }] },
+    data: [{ stopId: "1", stopName_en: "Mui Wo Ferry Pier", stopName_tc: "梅窩碼頭", latitude: "22.264664", longitude: "114.001554", fare: "12.7" }],
+  },
+  {
+    tool: "nlb_eta",
+    input: { routeId: "1", stopId: "1" },
+    request: { url: "https://rt.data.gov.hk/v2/transport/nlb/stop.php?action=estimatedArrivals&routeId=1&stopId=1&language=en" },
+    reply: { estimatedArrivals: [{ estimatedArrivalTime: "2026-10-18 17:00:00", routeVariantName: "", departed: "0" }], message: "Scheduled times" },
+    data: { estimatedArrivals: [{ estimatedArrivalTime: "2026-10-18 17:00:00", routeVariantName: "", departed: "0" }], message: "Scheduled times" },
+    ttl: 30,
+  },
+
+  // tram (Hong Kong Tramways)
+  {
+    tool: "tram_routes",
+    input: { search: "kennedy" },
+    lookups: {
+      "https://static.data.gov.hk/tramways/datasets/main_routes/tramways_main_routes_en.csv": `${BOM}Route ID,Route start,Route end\n1,Western Market,Shau Kei Wan\n5,Kennedy Town,Happy Valley\n`,
+      "https://static.data.gov.hk/tramways/datasets/main_routes/tramways_main_routes_tc.csv": `${BOM}路線號碼,路線起點,路線終點\n1,上環西港城,筲箕灣\n5,堅尼地城,跑馬地\n`,
+      "https://static.data.gov.hk/tramways/datasets/main_routes/tramways_main_routes_sc.csv": `${BOM}路线号码,路线起点,路线终点\n1,上环西港城,筲箕湾\n5,坚尼地城,跑马地\n`,
+    },
+    data: [{ route: "5", orig_en: "Kennedy Town", orig_tc: "堅尼地城", orig_sc: "坚尼地城", dest_en: "Happy Valley", dest_tc: "跑馬地", dest_sc: "跑马地" }],
+    ttl: 86400,
+  },
+  {
+    tool: "tram_stops",
+    input: { direction: "westbound", search: "柴灣" },
+    lookups: {
+      "https://static.data.gov.hk/tramways/datasets/tram_stops/summary_tram_stops_en.csv": `${BOM}"Traveling Direction","Stops Code","Stops Name"\n"Westbound","T","Shau Kei Wan Terminus"\n"Westbound","02W","Chai Wan Road"\n"Eastbound","01E","Chai Wan Road"\n`,
+      "https://static.data.gov.hk/tramways/datasets/tram_stops/summary_tram_stops_tc.csv": `${BOM}"行駛方向","車站代號","車站名稱"\n"西行","T","筲箕灣總站"\n"西行","02W","柴灣道"\n"東行","01E","柴灣道"\n`,
+      "https://static.data.gov.hk/tramways/datasets/tram_stops/summary_tram_stops_sc.csv": `${BOM}"行驶方向","车站代号","车站名称"\n"西行","T","筲箕湾总站"\n"西行","02W","柴湾道"\n"东行","01E","柴湾道"\n`,
+    },
+    data: [{ direction: "westbound", stop: "02W", name_en: "Chai Wan Road", name_tc: "柴灣道", name_sc: "柴湾道" }],
+  },
+
   // ha-aed
   {
     tool: "ha_aed_waiting_times",
@@ -552,7 +605,10 @@ describe("MCP tools", () => {
   it.each(cases.map((testCase) => [testCase.name ?? testCase.tool, testCase] as const))("%s", async (_name, testCase) => {
     const { service, tool } = find(testCase.tool);
     fetchMock.mockImplementation(async (url) => {
-      if (testCase.lookups && url in testCase.lookups) return new Response(JSON.stringify(testCase.lookups[url]));
+      if (testCase.lookups && url in testCase.lookups) {
+        const lookup = testCase.lookups[url];
+        return new Response(typeof lookup === "string" ? lookup : JSON.stringify(lookup));
+      }
       if (!testCase.request || url !== testCase.request.url) throw new Error(`Unexpected upstream request: ${url}`);
       return new Response(typeof testCase.reply === "string" ? testCase.reply : JSON.stringify(testCase.reply));
     });
@@ -572,7 +628,7 @@ describe("MCP tools", () => {
       expect(init.body === undefined ? undefined : JSON.parse(String(init.body))).toEqual(testCase.request.body);
       if (!tool.handler) expect(result.meta.source).toBe(testCase.request.url);
     } else {
-      expect(fetchMock).not.toHaveBeenCalled();
+      expect(fetchMock).toHaveBeenCalledTimes(Object.keys(testCase.lookups ?? {}).length);
     }
     expect(result.data).toEqual(testCase.data);
     if (testCase.meta) expect(result.meta).toMatchObject(testCase.meta);

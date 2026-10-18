@@ -1,8 +1,8 @@
 import "server-only";
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
-import { and, desc, eq } from "drizzle-orm";
+import { and, desc, eq, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { telegramLinks } from "@/db/schema";
+import { telegramLinks, type ToolMode } from "@/db/schema";
 import type { AppUser } from "@/lib/auth";
 import { seal, unseal } from "@/lib/sealed";
 
@@ -63,7 +63,16 @@ export async function linkAccount(user: Pick<AppUser, "id" | "email">, claims: L
   await db
     .insert(telegramLinks)
     .values({ telegramHash: claims.telegramHash, ...values })
-    .onConflictDoUpdate({ target: telegramLinks.telegramHash, set: { ...values, createdAt: new Date() } });
+    .onConflictDoUpdate({
+      target: telegramLinks.telegramHash,
+      set: {
+        ...values,
+        // Service limits and the tool mode stay with the account that set them; linking to another account starts afresh.
+        scopes: sql`CASE WHEN ${telegramLinks.userId} = ${user.id} THEN ${telegramLinks.scopes} ELSE '[]' END`,
+        toolMode: sql`CASE WHEN ${telegramLinks.userId} = ${user.id} THEN ${telegramLinks.toolMode} ELSE NULL END`,
+        createdAt: new Date(),
+      },
+    });
 }
 
 export async function listLinks(userId: string) {
@@ -82,4 +91,24 @@ export async function unlinkAccount(userId: string, hash: string) {
 export async function signOutAccount(hash: string) {
   const removed = await db.delete(telegramLinks).where(eq(telegramLinks.telegramHash, hash)).returning({ telegramHash: telegramLinks.telegramHash });
   return removed.length > 0;
+}
+
+/** Sets the services the bot may call for this link. */
+export async function updateLinkScopes(userId: string, hash: string, scopes: string[]) {
+  const updated = await db
+    .update(telegramLinks)
+    .set({ scopes })
+    .where(and(eq(telegramLinks.telegramHash, hash), eq(telegramLinks.userId, userId)))
+    .returning({ userId: telegramLinks.userId });
+  if (updated.length === 0) throw new Error("NOT_FOUND");
+}
+
+/** Sets how the bot's agent sees tools for this link: `all` by name, or `search` behind the three search tools. */
+export async function updateLinkToolMode(userId: string, hash: string, toolMode: ToolMode) {
+  const updated = await db
+    .update(telegramLinks)
+    .set({ toolMode })
+    .where(and(eq(telegramLinks.telegramHash, hash), eq(telegramLinks.userId, userId)))
+    .returning({ userId: telegramLinks.userId });
+  if (updated.length === 0) throw new Error("NOT_FOUND");
 }

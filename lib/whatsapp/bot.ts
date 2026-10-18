@@ -1,6 +1,7 @@
 import "server-only";
 import { createHash } from "node:crypto";
 import type { UIMessage } from "ai";
+import type { ToolMode } from "@/db/schema";
 import { parseMcpServers, resolveServer } from "@/lib/agent/mcp-servers";
 import { generateAgentReply } from "@/lib/agent/run";
 import { SIGN_OUT_NOTE, signOutTool } from "@/lib/agent/sign-out-tool";
@@ -22,7 +23,8 @@ export const WHATSAPP_CHANNEL_NOTE = `You are replying in WhatsApp. Keep answers
 The user can send "/new" to start a fresh conversation and "/signout" to unlink their mcprouter account.
 ${SIGN_OUT_NOTE}`;
 
-type LinkedUser = { id: string; email: string };
+/** `scopes` are the services the link may call; empty means every service. `toolMode` is how the agent sees them. */
+type LinkedUser = { id: string; email: string; scopes?: string[]; toolMode?: ToolMode | null };
 
 /** The agent's text answer, pictures of the results of tools that have an MCP App, and whether it was asked to sign the user out. */
 export type AgentAnswer = { text: string; cards: Card[]; signOut?: boolean };
@@ -47,14 +49,14 @@ export type BotDeps = {
 
 async function linkedUser(from: string) {
   const link = await findLink(phoneHash(from));
-  return link ? { id: link.userId, email: link.userEmail } : null;
+  return link ? { id: link.userId, email: link.userEmail, scopes: link.scopes, toolMode: link.toolMode } : null;
 }
 
 function defaultReply(deps: BotDeps) {
   return async (messages: UIMessage[], user: LinkedUser): Promise<AgentAnswer> => {
     // The member's own agent, with the same servers and billing as the web chat.
     const servers = parseMcpServers(process.env.AGENT_MCP_SERVERS).map((server) =>
-      resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "whatsapp" }),
+      resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "whatsapp", scopes: user.scopes, toolMode: user.toolMode }),
     );
     const signOut = signOutTool();
     const { text, toolOutputs } = await generateAgentReply({ servers, messages, model: deps.config.model, channelNote: WHATSAPP_CHANNEL_NOTE, channelTools: signOut.tools });
