@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import { CodeBlock } from "@/components/m3/code-block";
 import type { SetupStep } from "@/lib/mcp-clients";
 
@@ -12,6 +13,11 @@ export function SetupSteps({ steps }: { steps: SetupStep[] }) {
           </span>
           <div className="flex min-w-0 flex-1 flex-col gap-2 pt-0.5">
             <p className="type-body-large">{step.text}</p>
+            {step.link ? (
+              <a className="inline-flex items-center gap-1 self-start type-label-large text-primary underline" href={step.link.href} target="_blank" rel="noreferrer">
+                {step.link.label} <ExternalLink size={14} />
+              </a>
+            ) : null}
             {step.code ? <CodeBlock code={step.code} what="Copied" /> : null}
           </div>
         </li>

@@ -123,8 +123,19 @@ export async function streamAgentReply(options: {
   }
 }
 
-/** One complete agent reply as text, for channels that can't stream (WhatsApp). `channelNote` is appended to the instructions. */
-export async function generateAgentReply(options: { servers: ResolvedServer[]; messages: UIMessage[]; model: string; maxSteps?: number; channelNote?: string }) {
+/**
+ * One complete agent reply, for channels that can't stream (Telegram, WhatsApp). `channelNote` is appended
+ * to the instructions. `toolOutputs` are the raw tool results in call order, for drawing chat cards.
+ */
+export async function generateAgentReply(options: {
+  servers: ResolvedServer[];
+  messages: UIMessage[];
+  model: string;
+  maxSteps?: number;
+  channelNote?: string;
+  /** The channel's own tools (e.g. `sign_out`); always loaded, never behind `search_tools`. */
+  channelTools?: ToolSet;
+}) {
   const { tools, closeAll } = await connectTools(options.servers);
   try {
     const instructions = options.channelNote ? `${agentInstructions()}\n${options.channelNote}` : agentInstructions();
@@ -132,12 +143,12 @@ export async function generateAgentReply(options: { servers: ResolvedServer[]; m
       model: options.model,
       instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages(options.messages)),
-      tools: stableTools(withToolSearch(tools, usedToolNames(options.messages), process.env.AI_EMBEDDING_MODEL || undefined)),
+      tools: stableTools({ ...withToolSearch(tools, usedToolNames(options.messages), process.env.AI_EMBEDDING_MODEL || undefined), ...options.channelTools }),
       providerOptions: gatewayCaching,
       prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
       stopWhen: isStepCount(options.maxSteps ?? 10),
     });
-    return result.text;
+    return { text: result.text, toolOutputs: result.steps.flatMap((step) => step.toolResults.map((toolResult) => toolResult.output as unknown)) };
   } finally {
     await closeAll();
   }

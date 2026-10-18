@@ -61,7 +61,7 @@ export function KeysView({ keys, services, endpoint }: { keys: KeyRow[]; service
       {keys.length === 0 ? (
         <EmptyState icon={<KeyRound size={32} />} title="No API keys yet">
           Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude and ChatGPT sign in with OAuth instead, see{" "}
-          <Link href="/keys/setup" className="text-primary underline">Set up a client</Link>.
+          <Link href="/keys/apps?client=claude" className="text-primary underline">Set up a client</Link>.
         </EmptyState>
       ) : (
         <ul className="flex flex-col gap-3" aria-label="API keys">
@@ -284,7 +284,7 @@ function RevealKeyDialog({ name, apiKey, endpoint, onClose }: { name: string; ap
         </ol>
         <p className="type-body-small text-on-surface-variant">
           Claude, ChatGPT and other clients that sign in with OAuth don&apos;t need a key. See{" "}
-          <Link href="/keys/setup" className="text-primary underline">Set up a client</Link>.
+          <Link href="/keys/apps?client=claude" className="text-primary underline">Set up a client</Link>.
         </p>
       </div>
     </Dialog>

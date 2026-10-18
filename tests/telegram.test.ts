@@ -1,11 +1,13 @@
+import { createHmac } from "node:crypto";
 import { migrate } from "drizzle-orm/libsql/migrator";
 import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { db } from "@/db";
 import { POST } from "@/app/api/telegram/route";
 import { loadChat } from "@/lib/chat-store";
-import { commandOf, parseUpdate, sendText, splitMessage, telegramConfig, toTelegramHtml, verifySecretToken, type IncomingMessage } from "@/lib/telegram/api";
-import { handleIncomingMessage, telegramChatId, type BotDeps } from "@/lib/telegram/bot";
-import { createLinkToken, findLink, LINK_TOKEN_TTL_MS, linkAccount, listLinks, readLinkToken, telegramHash, unlinkAccount } from "@/lib/telegram/link";
+import { commandOf, parseUpdate, sendPhoto, sendText, splitMessage, telegramConfig, toTelegramHtml, verifySecretToken, type IncomingMessage } from "@/lib/telegram/api";
+import { handleIncomingMessage, linkedMessage, telegramChatId, type BotDeps } from "@/lib/telegram/bot";
+import { createLinkToken, findLink, LINK_TOKEN_TTL_MS, linkAccount, listLinks, readLinkToken, signOutAccount, telegramHash, unlinkAccount } from "@/lib/telegram/link";
+import type { Card } from "@/mcp/apps/card";
 
 vi.mock("next/headers", () => ({ headers: async () => new Headers({ host: "hub.test" }) }));
 
@@ -115,26 +117,49 @@ describe("sendText", () => {
   });
 });
 
+describe("sendPhoto", () => {
+  it("uploads the PNG as multipart form data", async () => {
+    const fetcher = vi.fn<(url: string, init?: RequestInit) => Promise<Response>>(async () => Response.json({ ok: true, result: {} }));
+    await sendPhoto(telegramConfig(env), 42, new Uint8Array([137, 80, 78, 71]), fetcher as unknown as typeof fetch);
+    const [url, init] = fetcher.mock.calls[0];
+    expect(url).toBe("https://api.telegram.org/bot123:abc/sendPhoto");
+    const form = init!.body as FormData;
+    expect(form.get("chat_id")).toBe("42");
+    expect((form.get("photo") as File).type).toBe("image/png");
+  });
+});
+
 describe("link tokens", () => {
-  it("round-trips the account's hash and name until it expires", () => {
+  it("round-trips the account's hash, name and chat until it expires", () => {
     const now = Date.now();
-    const token = createLinkToken("42", "@ada", now);
-    expect(readLinkToken(token, now)).toEqual({ telegramHash: telegramHash("42"), displayName: "@ada", expiresAt: now + LINK_TOKEN_TTL_MS });
+    const token = createLinkToken("42", "@ada", 42, now);
+    expect(readLinkToken(token, now)).toEqual({ telegramHash: telegramHash("42"), displayName: "@ada", chatId: 42, expiresAt: now + LINK_TOKEN_TTL_MS });
     expect(readLinkToken(token, now + LINK_TOKEN_TTL_MS + 1)).toBeNull();
   });
 
   it("rejects tampered and malformed tokens", () => {
-    const [payload, signature] = createLinkToken("42", "@ada").split(".");
+    const [payload, signature] = createLinkToken("42", "@ada", 42).split(".");
     const forged = Buffer.from(JSON.stringify({ h: telegramHash("43"), n: "@eve", e: Date.now() + 60_000 })).toString("base64url");
     expect(readLinkToken(`${forged}.${signature}`)).toBeNull();
     expect(readLinkToken(`${payload}.x`)).toBeNull();
     expect(readLinkToken(null)).toBeNull();
   });
+
+  it("keeps the chat id out of the readable payload", () => {
+    const [payload] = createLinkToken("123456789", "@ada", 123456789).split(".");
+    expect(Buffer.from(payload, "base64url").toString()).not.toContain("123456789");
+  });
+
+  it("still reads tokens minted before they carried the chat", () => {
+    const payload = Buffer.from(JSON.stringify({ h: telegramHash("42"), n: "@ada", e: Date.now() + 60_000 })).toString("base64url");
+    const signature = createHmac("sha256", "test-secret").update(`telegram-link:${payload}`).digest("base64url");
+    expect(readLinkToken(`${payload}.${signature}`)).toMatchObject({ telegramHash: telegramHash("42"), chatId: null });
+  });
 });
 
 describe("linked accounts", () => {
   it("links an account to one user at a time and unlinks only for its owner", async () => {
-    const claims = readLinkToken(createLinkToken("777", "@grace"))!;
+    const claims = readLinkToken(createLinkToken("777", "@grace", 777))!;
     await linkAccount({ id: "alice", email: "alice@test" }, claims);
     expect(await findLink(claims.telegramHash)).toMatchObject({ userId: "alice", displayName: "@grace" });
 
@@ -146,6 +171,22 @@ describe("linked accounts", () => {
     await unlinkAccount("bob", claims.telegramHash);
     expect(await findLink(claims.telegramHash)).toBeNull();
   });
+
+  it("signs out from whichever account the Telegram account is linked to", async () => {
+    const claims = readLinkToken(createLinkToken("778", "@grace", 778))!;
+    await linkAccount({ id: "carol", email: "carol@test" }, claims);
+    expect(await signOutAccount(claims.telegramHash)).toBe(true);
+    expect(await findLink(claims.telegramHash)).toBeNull();
+    expect(await signOutAccount(claims.telegramHash)).toBe(false);
+  });
+});
+
+describe("linkedMessage", () => {
+  it("confirms the account and mentions /signout", () => {
+    expect(linkedMessage("ada@test")).toContain("**ada@test**");
+    expect(linkedMessage("ada@test")).toContain("/signout");
+    expect(linkedMessage("")).toMatch(/^You're signed in\. /);
+  });
 });
 
 describe("handleIncomingMessage", () => {
@@ -154,7 +195,7 @@ describe("handleIncomingMessage", () => {
     const from = String(1000 + ++counter);
     const user = { id: `tg-user-${counter}`, email: `user${counter}@test` };
     const sent: { text: string; button?: { text: string; url: string } }[] = [];
-    const reply = vi.fn<NonNullable<BotDeps["reply"]>>(async (messages) => `**Answer** ${messages.length}`);
+    const reply = vi.fn<NonNullable<BotDeps["reply"]>>(async (messages) => ({ text: `**Answer** ${messages.length}`, cards: [] }));
     const deps: BotDeps = {
       config: telegramConfig(env),
       origin: "https://hub.test",
@@ -175,7 +216,7 @@ describe("handleIncomingMessage", () => {
     expect(reply).not.toHaveBeenCalled();
     expect(sent[0].text).toContain("https://hub.test/telegram/link?token=");
     const token = new URL(sent[0].button!.url).searchParams.get("token");
-    expect(readLinkToken(token)).toMatchObject({ telegramHash: telegramHash(from), displayName: "@ada" });
+    expect(readLinkToken(token)).toMatchObject({ telegramHash: telegramHash(from), displayName: "@ada", chatId: Number(from) });
   });
 
   it("puts no button on http links, which Telegram refuses", async () => {
@@ -231,6 +272,50 @@ describe("handleIncomingMessage", () => {
     expect(await handleIncomingMessage(message("d1", null), deps)).toEqual({ status: "unsupported" });
     expect(reply).not.toHaveBeenCalled();
     expect(sent[0].text).toContain("only read text");
+  });
+
+  it("signs out on /signout and offers a new sign-in link", async () => {
+    const { from, sent, reply, deps, message } = setup({ findUser: undefined });
+    const claims = readLinkToken(createLinkToken(from, "@ada", Number(from)))!;
+    await linkAccount({ id: "dave", email: "dave@test" }, claims);
+    expect(await handleIncomingMessage(message("o1", "/signout"), deps)).toEqual({ status: "signed-out" });
+    expect(await findLink(telegramHash(from))).toBeNull();
+    expect(reply).not.toHaveBeenCalled();
+    expect(sent[0].text).toContain("Signed out");
+    expect(sent[0].button?.url).toContain("https://hub.test/telegram/link?token=");
+  });
+
+  it("says so when /logout is sent by an account that isn't linked", async () => {
+    const { sent, deps, message } = setup({ signOut: async () => false });
+    expect(await handleIncomingMessage(message("o2", "/logout@hub_bot"), deps)).toEqual({ status: "signed-out" });
+    expect(sent[0].text).toContain("isn't linked");
+  });
+
+  it("signs out when the agent's sign_out tool was called, after sending its reply", async () => {
+    const order: string[] = [];
+    const signOut = vi.fn(async () => true);
+    const { from, user, deps, message } = setup({
+      reply: async () => ({ text: "Bye!", cards: [], signOut: true }),
+      send: async (_chatId, text) => void order.push(text),
+      signOut,
+    });
+    expect(await handleIncomingMessage(message("o3", "please log me out"), deps)).toEqual({ status: "signed-out" });
+    expect(signOut).toHaveBeenCalledWith(from);
+    expect(order[0]).toBe("Bye!");
+    expect(order[1]).toContain("Signed out");
+    expect((await loadChat(user.id, telegramChatId(user.id, from)))?.messages.map((item) => item.role)).toEqual(["user", "assistant"]);
+  });
+
+  it("sends cards of the tool results before the answer, skipping any that fail", async () => {
+    const card = (title: string): Card => ({ accent: "#000000", badge: "T", title, blocks: [] });
+    const order: string[] = [];
+    const { deps, message } = setup({
+      reply: async () => ({ text: "Done", cards: [card("Broken"), card("Weather")] }),
+      send: async (_chatId, text) => void order.push(`text:${text}`),
+      sendCard: async (_chatId, value) => (value.title === "Broken" ? Promise.reject(new Error("render failed")) : void order.push(`card:${value.title}`)),
+    });
+    expect(await handleIncomingMessage(message("g1", "Weather?"), deps)).toEqual({ status: "answered" });
+    expect(order).toEqual(["card:Weather", "text:Done"]);
   });
 
   it("apologises when the agent fails", async () => {

@@ -1,6 +1,7 @@
 /** Setup guides for the MCP clients mcprouter supports, shared by the setup page and the new-key dialog. */
 
-export type SetupStep = { text: string; code?: string };
+/** `link` opens a page in the client (e.g. its settings) in a new tab. */
+export type SetupStep = { text: string; code?: string; link?: { href: string; label: string } };
 
 export type McpClient = {
   id: string;
@@ -52,12 +53,16 @@ export const MCP_CLIENTS: McpClient[] = [
     name: "ChatGPT",
     kind: "chatgpt.com",
     oauth: (endpoint) => [
-      { text: "In ChatGPT, open Settings → Apps & Connectors → Advanced settings and turn on Developer mode." },
-      { text: "Back in Apps & Connectors, choose Create. Name it mcprouter and paste the MCP server URL.", code: endpoint },
-      { text: "Set Authentication to OAuth, confirm that you trust the app, then choose Create. Sign in to mcprouter and approve access." },
-      { text: "In a chat, choose Developer mode from the + menu and turn on mcprouter." },
+      { text: "In ChatGPT, open Settings → Security and login and turn on Developer mode." },
+      {
+        text: "On the Plugins page, choose Add → Create MCP App. Name it mcprouter, keep Server URL selected under Connection and paste the MCP server URL.",
+        code: endpoint,
+        link: { href: "https://chatgpt.com/plugins", label: "Open ChatGPT Plugins" },
+      },
+      { text: "Leave Authentication on OAuth, tick the acknowledgement, then choose Create. Sign in to mcprouter and approve access." },
+      { text: "In a chat, type @ or open the tools menu and pick mcprouter." },
     ],
-    note: "Developer mode is available on Plus, Pro, Business, Enterprise and Edu plans. On workspace plans an admin may need to allow it.",
+    note: "Developer mode is available on Plus and Pro, and on Business, Enterprise and Edu plans where an admin allows it.",
   },
   {
     id: "codex",

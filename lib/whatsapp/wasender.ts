@@ -118,7 +118,7 @@ export class WasenderApiError extends Error {
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-async function post(config: WhatsAppConfig, path: string, payload: object, fetcher: typeof fetch, retries = 1): Promise<void> {
+async function post(config: WhatsAppConfig, path: string, payload: object, fetcher: typeof fetch, retries = 1): Promise<unknown> {
   const response = await fetcher(`${API_BASE}${path}`, {
     method: "POST",
     headers: { Authorization: `Bearer ${config.apiKey}`, "Content-Type": "application/json" },
@@ -132,6 +132,7 @@ async function post(config: WhatsAppConfig, path: string, payload: object, fetch
     return post(config, path, payload, fetcher, retries - 1);
   }
   if (!response.ok) throw new WasenderApiError(response.status, await response.text());
+  return response.json().catch(() => null);
 }
 
 /** Sends the reply, split into as many messages as it takes. */
@@ -139,6 +140,13 @@ export async function sendText(config: WhatsAppConfig, to: string, text: string,
   for (const body of splitMessage(text)) {
     await post(config, "/send-message", { to: `+${to}`, text: body }, fetcher);
   }
+}
+
+/** Uploads a PNG (Wasender keeps it for 24 hours) and sends it as an image message. */
+export async function sendImage(config: WhatsAppConfig, to: string, png: Uint8Array, fetcher: typeof fetch = fetch) {
+  const upload = (await post(config, "/upload", { base64: `data:image/png;base64,${Buffer.from(png).toString("base64")}` }, fetcher)) as { publicUrl?: unknown } | null;
+  if (typeof upload?.publicUrl !== "string") throw new Error("WasenderAPI upload returned no publicUrl");
+  await post(config, "/send-message", { to: `+${to}`, imageUrl: upload.publicUrl }, fetcher);
 }
 
 /** Shows "typing…" in the chat while the agent works. */

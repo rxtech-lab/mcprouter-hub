@@ -4,6 +4,7 @@ import { and, desc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { whatsappLinks } from "@/db/schema";
 import type { AppUser } from "@/lib/auth";
+import { seal, unseal } from "@/lib/sealed";
 
 /** How long a sign-in link sent on WhatsApp stays valid. */
 export const LINK_TOKEN_TTL_MS = 30 * 60 * 1000;
@@ -23,14 +24,16 @@ const sign = (payload: string) => createHmac("sha256", secret()).update(`whatsap
 
 /**
  * A link token names the number (as its hash and last digits) and expires after 30 minutes.
- * It's signed, so nobody can mint one for a number they don't hold.
+ * It's signed, so nobody can mint one for a number they don't hold. The full number, to confirm
+ * the link on WhatsApp, travels encrypted so the URL doesn't show it.
  */
 export function createLinkToken(from: string, now = Date.now()) {
-  const payload = Buffer.from(JSON.stringify({ h: phoneHash(from), d: from.slice(-4), e: now + LINK_TOKEN_TTL_MS })).toString("base64url");
+  const payload = Buffer.from(JSON.stringify({ h: phoneHash(from), d: from.slice(-4), p: seal("whatsapp-number", from), e: now + LINK_TOKEN_TTL_MS })).toString("base64url");
   return `${payload}.${sign(payload)}`;
 }
 
-export type LinkTokenClaims = { phoneHash: string; phoneHint: string; expiresAt: number };
+/** `phone` is null for tokens minted before it was carried. */
+export type LinkTokenClaims = { phoneHash: string; phoneHint: string; phone: string | null; expiresAt: number };
 
 /** The token's claims, or null when it's malformed, tampered with or expired. */
 export function readLinkToken(token: string | null | undefined, now = Date.now()): LinkTokenClaims | null {
@@ -40,9 +43,10 @@ export function readLinkToken(token: string | null | undefined, now = Date.now()
   const expected = Buffer.from(sign(payload));
   if (given.length !== expected.length || !timingSafeEqual(given, expected)) return null;
   try {
-    const claims = JSON.parse(Buffer.from(payload, "base64url").toString()) as { h?: unknown; d?: unknown; e?: unknown };
+    const claims = JSON.parse(Buffer.from(payload, "base64url").toString()) as { h?: unknown; d?: unknown; p?: unknown; e?: unknown };
     if (typeof claims.h !== "string" || typeof claims.d !== "string" || typeof claims.e !== "number" || claims.e < now) return null;
-    return { phoneHash: claims.h, phoneHint: claims.d, expiresAt: claims.e };
+    const phone = unseal("whatsapp-number", claims.p);
+    return { phoneHash: claims.h, phoneHint: claims.d, phone: phone && phoneHash(phone) === claims.h ? phone : null, expiresAt: claims.e };
   } catch {
     return null;
   }
@@ -76,4 +80,10 @@ export async function unlinkNumber(userId: string, hash: string) {
     .where(and(eq(whatsappLinks.phoneHash, hash), eq(whatsappLinks.userId, userId)))
     .returning({ phoneHash: whatsappLinks.phoneHash });
   if (removed.length === 0) throw new Error("NOT_FOUND");
+}
+
+/** Unlinks the number from whichever account it's linked to (sign-out from the chat). False when it wasn't linked. */
+export async function signOutNumber(hash: string) {
+  const removed = await db.delete(whatsappLinks).where(eq(whatsappLinks.phoneHash, hash)).returning({ phoneHash: whatsappLinks.phoneHash });
+  return removed.length > 0;
 }

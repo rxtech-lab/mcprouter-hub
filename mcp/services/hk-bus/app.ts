@@ -1,18 +1,7 @@
 // Buses & minibuses MCP App: KMB, Citybus and green minibus routes, stops and live arrival boards,
 // each drawn in its operator's colours.
 import { app, fmt, h, mount, setAccent, ui, type Content, type Row, type View } from "../../apps/runtime";
-
-type Operator = { badge: string; name: string; accent: string; onAccent: string };
-
-const OPERATORS = {
-  kmb: { badge: "KMB", name: "KMB", accent: "#e1251b", onAccent: "#ffffff" },
-  citybus: { badge: "CTB", name: "Citybus", accent: "#ffd200", onAccent: "#1d1b16" },
-  gmb: { badge: "GMB", name: "Green minibus", accent: "#00843d", onAccent: "#ffffff" },
-} satisfies Record<string, Operator>;
-
-function operatorOf(tool: string | undefined): Operator {
-  return OPERATORS[String(tool ?? "").split("_")[0] as keyof typeof OPERATORS] ?? OPERATORS.kmb;
-}
+import { OPERATORS, operatorOf, type Operator } from "./operators";
 
 function plural(count: number, word: string) {
   return `${count} ${word}${count === 1 ? "" : "s"}`;
