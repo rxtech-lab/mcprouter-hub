@@ -48,6 +48,8 @@ test("tracker and services pages load", async ({ page }) => {
   await expect(page).toHaveURL(/\/tracker\/datasets/);
   await page.goto("/services");
   await expect(page.getByRole("heading", { name: "Services", level: 1 })).toBeVisible();
+  // Services are paged, so look the service up rather than expect it on the first page.
+  await page.goto("/services?q=hko_current_weather");
   await page.getByRole("button", { name: /^Hong Kong Observatory Weather/ }).click();
   const dialog = page.getByRole("dialog");
   await expect(dialog.getByRole("heading", { name: "Hong Kong Observatory Weather" })).toBeVisible();
