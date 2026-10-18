@@ -66,6 +66,126 @@ const holidayFeed = BOM + JSON.stringify({
   ],
 });
 
+/** The EPD beach grading RSS, trimmed: one item per [code, title, latitude, longitude]. */
+function beachFeed(lang: string, items: Array<[string, string, string, string]>) {
+  const item = ([code, title, lat, lon]: [string, string, string, string]) =>
+    `<item><title>${title}</title><link>https://cd.epic.epd.gov.hk/EPICDI/beach/gradingreport/${code}/?lang=${lang}</link><description>&lt;table border='1'&gt;&lt;tr&gt;&lt;td width='150px'&gt;Latitude (N):&lt;/td&gt;&lt;td width='150px'&gt;${lat}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td width='150px'&gt;Longitude (E):&lt;/td&gt;&lt;td&gt;${lon}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><pubDate>Fri, 16 Oct 2026 14:04:42</pubDate></item>`;
+  return `<?xml version='1.0' encoding='utf-8'?><?xml-stylesheet type='text/xsl' href='../beach.xsl'?><rss version="2.0"><channel><title>EPD beach water quality information</title><pubDate>Fri, 16 Oct 2026 14:04:42</pubDate><lastBuildDate>Fri, 16 Oct 2026 14:04:42</lastBuildDate>${items.map(item).join("")}</channel></rss>`;
+}
+
+// Trimmed from the Observatory's real files: a list in its published format, and the last track of SURIGAE
+// (2641), whose first forecast position has no time (interpolated, only for drawing the line).
+const cycloneList = `<?xml version="1.0" encoding="UTF-8"?>
+<TropicalCycloneList>
+<TropicalCyclone>
+<TropicalCycloneID>2641</TropicalCycloneID>
+<TropicalCycloneChineseName>舒力基</TropicalCycloneChineseName>
+<TropicalCycloneEnglishName>SURIGAE</TropicalCycloneEnglishName>
+<TropicalCycloneURL>http://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_2641.xml
+</TropicalCycloneURL>
+</TropicalCyclone>
+</TropicalCycloneList>`;
+
+const cycloneTrack = `<?xml version="1.0" encoding="UTF-8"?>
+<TropicalCycloneTrack tcid="2641"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="tc_track.xsd">
+<BulletinHeader>
+<BulletinName>Tropical Cyclone Track</BulletinName>
+<BulletinType>R</BulletinType>
+<BulletinProvider>Hong Kong Observatory</BulletinProvider>
+<BulletinTime>2026-10-01T04:00:47+08:00</BulletinTime>
+</BulletinHeader>
+<WeatherReport>
+<TropicalCycloneName>SURIGAE</TropicalCycloneName>
+<PastInformation>
+<Index>31</Index>
+<Intensity>Tropical Storm</Intensity>
+<MaximumWind>65km/h</MaximumWind>
+<Time>2026-09-30T06:00:00+00:00</Time>
+<Latitude>31.30N</Latitude>
+<Longitude>138.40E</Longitude>
+</PastInformation>
+<PastInformation>
+<Index>32</Index>
+<Intensity>Tropical Storm</Intensity>
+<MaximumWind>65km/h</MaximumWind>
+<Time>2026-09-30T12:00:00+00:00</Time>
+<Latitude>31.80N</Latitude>
+<Longitude>138.90E</Longitude>
+</PastInformation>
+<AnalysisInformation>
+<Intensity>Tropical Storm</Intensity>
+<MaximumWind>65km/h</MaximumWind>
+<Time>2026-09-30T18:00:00+00:00</Time>
+<Latitude>32.20N</Latitude>
+<Longitude>139.70E</Longitude>
+</AnalysisInformation>
+<ForecastInformation>
+<Index>11</Index>
+<Latitude>34.83N</Latitude>
+<Longitude>142.32E</Longitude>
+</ForecastInformation>
+<ForecastInformation>
+<Index>12</Index>
+<Intensity>Extratropical Low</Intensity>
+<MaximumWind>--</MaximumWind>
+<Time>2026-10-01T06:00:00+00:00</Time>
+<Latitude>35.00N</Latitude>
+<Longitude>142.50E</Longitude>
+</ForecastInformation>
+</WeatherReport>
+</TropicalCycloneTrack>`;
+
+const surigaeNow = { time: "2026-10-01T02:00:00+08:00", category: "tropical_storm", intensity: "Tropical Storm", maximumWindKmh: 65, latitude: 32.2, longitude: 139.7, distanceKm: 2744, bearing: "ENE" };
+
+const METER_SPACES = "https://resource.data.one.gov.hk/td/psiparkingspaces/spaceinfo/parkingspaces.csv";
+const METER_OCCUPANCY = "https://resource.data.one.gov.hk/td/psiparkingspaces/occupancystatus/occupancystatus.csv";
+
+/** The metered location file starts with its date and a line of commas; Tuen Mun's newest meters have no Chinese names yet. */
+const meterSpaces = [
+  `${BOM}2026-10-17`,
+  ",,,,,,,,,,,,,,,,,,,,,,,",
+  "PoleId,ParkingSpaceId,Region,Region_tc,Region_sc,District,District_tc,District_sc,SubDistrict,SubDistrict_tc,SubDistrict_sc,Street,Street_tc,Street_sc,SectionOfStreet,SectionOfStreet_tc,SectionOfStreet_sc,Latitude,Longitude,VehicleType,LPP,OperatingPeriod,TimeUnit,PaymentUnit",
+  "1199,1199A,HONG KONG,香港島,香港岛,WAN CHAI,灣仔,湾仔,TAI FAT HAU,大佛口,大佛口,LOCKHART ROAD,駱克道,骆克道,FENWICK STREET,分域街,分域街,22.27837319738389,114.1693944716486,A,30,D,15,4.00",
+  "1199,1199B,HONG KONG,香港島,香港岛,WAN CHAI,灣仔,湾仔,TAI FAT HAU,大佛口,大佛口,LOCKHART ROAD,駱克道,骆克道,FENWICK STREET,分域街,分域街,22.27837797330262,114.1693467203257,A,30,D,15,4.00",
+  "1172,1172A,HONG KONG,香港島,香港岛,WAN CHAI,灣仔,湾仔,OI KWAN,愛群,爱群,STEWART ROAD,史釗域道,史钊域道,JAFFE ROAD,謝斐道,谢斐道,22.27934108627336,114.1767267848235,A,30,D,15,4.00",
+  "20501,20501A,NEW TERRITORIES,新界,新界,TSUEN WAN,荃灣,荃湾,TING SHAM,汀深,汀深,CASTLE PEAK ROAD - TING KAU,青山公路 － 汀九段,青山公路 － 汀九段,TING KAU BEACH,汀九泳灘,汀九泳滩,22.363715,114.0681147,G,120,4Q,15,2.00",
+  "22259,22259A,NEW TERRITORIES,,,TUEN MUN,,,SAN HUI,,,HANG FU STREET,,,NERINE COVE BLOCK#5,,,22.3832641,113.9714256,A,120,Q,15,4.00",
+  "90004,90004A,KOWLOON,九龍,九龙,INTERNAL TEST,內部測試,内部测试,CONTRACT 2,合約 2,合约 2,LAI CHI KOK ENGINEERING CENTER,電訊盈科荔枝角工程中心,电讯盈科荔枝角工程中心,INTERNAL TEST,內部測試,内部测试,48.8505009,2.3024468,A,30,Z,5,0.20",
+].join("\r\n");
+
+const meterOccupancy = [
+  "ParkingSpaceId,ParkingMeterStatus,OccupancyStatus,OccupancyDateChanged",
+  "1199A,N,V,10/18/2026 09:49:07 PM",
+  "1199B,N,O,10/18/2026 12:15:38 PM",
+  "1172A,NU,O,10/05/2026 03:34:46 PM",
+  "20501A,N,V,10/18/2026 08:01:11 AM",
+  "90004A,N,V,10/18/2026 10:00:00 PM",
+].join("\r\n");
+
+const SENSOR_SPACES = "https://data.nmospiot.gov.hk/api/pvds/Download/parkingspace";
+const SENSOR_OCCUPANCY = "https://data.nmospiot.gov.hk/api/pvds/Download/occupancystatus";
+
+/** The header names a NonMetered column that no row fills. */
+const sensorSpaces = [
+  `${BOM}2026-10-18`,
+  "",
+  "FeatureID,ParkingSpaceId,Region,Region_tc,Region_sc,District,District_tc,District_sc,SubDistrict,SubDistrict_tc,SubDistrict_sc,Street,Street_tc,Street_sc,SectionOfStreet,SectionOfStreet_tc,SectionOfStreet_sc,Latitude,Longitude,VehicleType,NonMetered",
+  "2065,A101_CL_001,New Territories,新界,新界,North District,北區,北区,Wu Kau Tang,烏蛟騰,乌蛟腾,Bride’s Pool Road,新娘潭路,新娘潭路,Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus),新娘潭路（近新娘潭前巴士總站）,新娘潭路（近新娘潭前巴士总站）,22.502228,114.237742,A",
+  "2064,A101_CL_002,New Territories,新界,新界,North District,北區,北区,Wu Kau Tang,烏蛟騰,乌蛟腾,Bride’s Pool Road,新娘潭路,新娘潭路,Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus),新娘潭路（近新娘潭前巴士總站）,新娘潭路（近新娘潭前巴士总站）,22.502226,114.237713,A",
+  "2068,A101_BC_013,New Territories,新界,新界,North District,北區,北区,Wu Kau Tang,烏蛟騰,乌蛟腾,Bride’s Pool Road,新娘潭路,新娘潭路,Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus),新娘潭路（近新娘潭前巴士總站）,新娘潭路（近新娘潭前巴士总站）,22.502201,114.237398,C",
+  "5136,A115_DR_017,New Territories,新界,新界,Sha Tin District,沙田區,沙田区,Ma On Shan,馬鞍山,马鞍山,Hang Shun Street,恆信街,恆信街,Hang Shun Street,恆信街,恆信街,22.407261,114.223089,D",
+].join("\n");
+
+const sensorOccupancy = [
+  "FeatureID,ParkingSpaceId,OccupancyStatus,OccupancyDateChanged",
+  "2065,A101_CL_001,NU,2/7/2026 9:9:40",
+  "2064,A101_CL_002,NU,22/5/2026 22:34:38",
+  "2068,A101_BC_013,NU,19/9/2025 15:16:27",
+  "5136,A115_DR_017,V,18/10/2026 19:34:48",
+].join("\n");
+
 const cases: Case[] = [
   // citybus
   {
@@ -228,6 +348,179 @@ const cases: Case[] = [
     error: /filters must be a JSON array/,
   },
 
+  // epd-aqhi
+  {
+    tool: "aqhi_current",
+    input: { station: "central" },
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/aqhi_ind_rss_Eng.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Environmental Protection Department - AQHI</title><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><title>Central/Western</title><link>https://www.aqhi.gov.hk/en/aqhi/past-24-hours-aqhi.html?mid=0</link><pubDate>Sun, 18 Oct 2026 22:30:00 +0800</pubDate><description><![CDATA[Central/Western - General Stations: 3 Low - Sun, 18 Oct 2026 22:30]]></description></item>`,
+      `<item><title>Mong Kok</title><link>https://www.aqhi.gov.hk/en/aqhi/past-24-hours-aqhi.html?mid=17</link><pubDate>Sun, 18 Oct 2026 22:30:00 +0800</pubDate><description><![CDATA[Mong Kok - Roadside Stations: 8 Very High - Sun, 18 Oct 2026 22:30]]></description></item>`,
+      `<item><title>Central</title><link>https://www.aqhi.gov.hk/en/aqhi/past-24-hours-aqhi.html?mid=16</link><pubDate>Sun, 18 Oct 2026 22:30:00 +0800</pubDate><description><![CDATA[Central - Roadside Stations: 10+ Serious - Sun, 18 Oct 2026 22:30]]></description></item>`,
+      `</channel></rss>`,
+    ].join(""),
+    // "central" is exactly the roadside station, so Central/Western is left out.
+    data: { updated: "2026-10-18T22:30:00+08:00", stations: [{ station: "Central", type: "roadside", aqhi: 10, risk: "serious", riskLabel: "Serious" }] },
+    ttl: 600,
+  },
+  {
+    name: "aqhi_current finds stations by an English name in Chinese and filters by type",
+    tool: "aqhi_current",
+    input: { station: "sha", type: "general", lang: "tc" },
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/aqhi_ind_rss_ChT.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><title>深水埗</title><description><![CDATA[深水埗 - 一般監測站: 2 低 - 2026年10月18日 (星期日)]]></description></item>`,
+      `<item><title>沙田</title><description><![CDATA[沙田 - 一般監測站: 4 中 - 2026年10月18日 (星期日)]]></description></item>`,
+      `<item><title>旺角</title><description><![CDATA[旺角 - 路邊監測站: 3 低 - 2026年10月18日 (星期日)]]></description></item>`,
+      `</channel></rss>`,
+    ].join(""),
+    data: {
+      updated: "2026-10-18T22:30:00+08:00",
+      stations: [
+        { station: "深水埗", type: "general", aqhi: 2, risk: "low", riskLabel: "低" },
+        { station: "沙田", type: "general", aqhi: 4, risk: "moderate", riskLabel: "中" },
+      ],
+    },
+  },
+  {
+    tool: "aqhi_forecast",
+    input: {},
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/aqhirss_Eng.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Environmental Protection Department - AQHI</title><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><title>HKSAR Air Quality Health Index at : Sun, 18 Oct 2026 22:30:00 +0800 Current Condition : </title><description><![CDATA[<p>General Stations: 2 to 3 (Health Risk: Low)</p><p>Roadside Stations: 3 (Health Risk: Low)</p>]]></description></item>`,
+      `<item><title>Forecast of Health Risk: </title><description><![CDATA[<p>&lt;Tomorrow A.M.&gt;<p>General Stations: Low to Moderate</p><p>Roadside Stations: Moderate</p></p><p>&lt;Tomorrow P.M.&gt;<p>General Stations: Low</p><p>Roadside Stations: Low to Moderate</p></p>]]></description></item>`,
+      `</channel></rss>`,
+    ].join(""),
+    data: {
+      updated: "2026-10-18T22:30:00+08:00",
+      current: {
+        general: { aqhiMin: 2, aqhiMax: 3, risk: "Low", riskLevels: ["low"] },
+        roadside: { aqhiMin: 3, aqhiMax: 3, risk: "Low", riskLevels: ["low"] },
+      },
+      forecast: [
+        { period: "Tomorrow A.M.", general: { risk: "Low to Moderate", riskLevels: ["low", "moderate"] }, roadside: { risk: "Moderate", riskLevels: ["moderate"] } },
+        { period: "Tomorrow P.M.", general: { risk: "Low", riskLevels: ["low"] }, roadside: { risk: "Low to Moderate", riskLevels: ["low", "moderate"] } },
+      ],
+    },
+    ttl: 600,
+  },
+  {
+    name: "aqhi_forecast reads the Simplified Chinese feed",
+    tool: "aqhi_forecast",
+    input: { lang: "sc" },
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/aqhirss_ChS.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><title>香港空气质素健康指数</title><description><![CDATA[<p>一般监测站: 7 to 10+ (健康风险:高 至 严重)</p><p>路边监测站: 3 (健康风险:低)</p>]]></description></item>`,
+      `<item><title>健康风险预测：</title><description><![CDATA[<p>&lt;明天 上午&gt;<p>一般监测站: 甚高</p><p>路边监测站: 低 至 中</p></p>]]></description></item>`,
+      `</channel></rss>`,
+    ].join(""),
+    data: {
+      updated: "2026-10-18T22:30:00+08:00",
+      current: {
+        general: { aqhiMin: 7, aqhiMax: 10, risk: "高 至 严重", riskLevels: ["high", "serious"] },
+        roadside: { aqhiMin: 3, aqhiMax: 3, risk: "低", riskLevels: ["low"] },
+      },
+      forecast: [{ period: "明天 上午", general: { risk: "甚高", riskLevels: ["very_high"] }, roadside: { risk: "低 至 中", riskLevels: ["low", "moderate"] } }],
+    },
+  },
+  {
+    tool: "aqhi_past_24h",
+    input: { station: "旺角" },
+    request: { url: "https://www.aqhi.gov.hk/epd/ddata/html/out/24aqhi_Eng.xml" },
+    reply: [
+      `<?xml version="1.0" encoding="UTF-8"?><AQHI24HrReport><title>Environmental Protection Department - AQHI</title><lastBuildDate>Sun, 18 Oct 2026 22:30:00 +0800</lastBuildDate>`,
+      `<item><type>General Stations</type><StationName>Central/Western</StationName><DateTime>Sun, 18 Oct 2026 21:00:00 +0800</DateTime><aqhi>3</aqhi></item>`,
+      `<item><type>Roadside Stations</type><StationName>Mong Kok</StationName><DateTime>Sun, 18 Oct 2026 20:00:00 +0800</DateTime><aqhi>4</aqhi></item>`,
+      `<item><type>Roadside Stations</type><StationName>Mong Kok</StationName><DateTime>Sun, 18 Oct 2026 21:00:00 +0800</DateTime><aqhi></aqhi></item>`,
+      `<item><type>Roadside Stations</type><StationName>Mong Kok</StationName><DateTime>Sun, 18 Oct 2026 22:00:00 +0800</DateTime><aqhi>3</aqhi></item>`,
+      `</AQHI24HrReport>`,
+    ].join(""),
+    data: {
+      updated: "2026-10-18T22:30:00+08:00",
+      stations: [
+        {
+          station: "Mong Kok",
+          type: "roadside",
+          highest: { time: "2026-10-18T20:00:00+08:00", aqhi: 4, risk: "moderate" },
+          readings: [
+            { time: "2026-10-18T20:00:00+08:00", aqhi: 4, risk: "moderate" },
+            { time: "2026-10-18T21:00:00+08:00", aqhi: null, risk: null },
+            { time: "2026-10-18T22:00:00+08:00", aqhi: 3, risk: "low" },
+          ],
+        },
+      ],
+    },
+    ttl: 600,
+  },
+  {
+    name: "aqhi_past_24h needs a station",
+    tool: "aqhi_past_24h",
+    input: {},
+    error: /station/,
+  },
+
+  // epd-beach
+  {
+    tool: "beach_water_quality",
+    input: { district: "southern", maxGrade: 2 },
+    request: { url: "https://cd.epic.epd.gov.hk/beachpsi/en/beach2.rss" },
+    reply: beachFeed("en", [
+      ["ANG", "Anglers' Beach  water quality was rated as Fair(Grade 2)", `22° 21' 53"`, `114° 3' 21"`],
+      ["DW", "Deep Water Bay Beach water quality was rated as Poor(Grade 3)", `22° 14' 20"`, `114° 11' 2"`],
+      ["RB", "Repulse Bay Beach water quality was rated as Good(Grade 1)", `22° 14' 7"`, `114° 11' 47"`],
+    ]),
+    data: {
+      updated: "2026-10-16T14:04:42+08:00",
+      count: 1,
+      beaches: [
+        { code: "RB", name: "Repulse Bay Beach", district: "Southern", grade: 1, rating: "Good", latitude: 22.23528, longitude: 114.19639, report: "https://cd.epic.epd.gov.hk/EPICDI/beach/gradingreport/RB/?lang=en" },
+      ],
+    },
+    ttl: 1800,
+  },
+  {
+    name: "beach_water_quality finds a beach by its English name and answers in Chinese",
+    tool: "beach_water_quality",
+    input: { beach: "anglers", lang: "tc" },
+    request: { url: "https://cd.epic.epd.gov.hk/beachpsi/tc/beach2.rss" },
+    reply: beachFeed("zh", [
+      ["ANG", "釣魚灣泳灘的水質被評為一般(二級)", `22° 21' 53"`, `114° 3' 21"`],
+      ["XYZ", "新泳灘的水質暫停評級", `22° 0' 0"`, `114° 0' 0"`],
+    ]),
+    lookups: {
+      "https://cd.epic.epd.gov.hk/beachpsi/en/beach2.rss": beachFeed("en", [
+        ["ANG", "Anglers' Beach  water quality was rated as Fair(Grade 2)", `22° 21' 53"`, `114° 3' 21"`],
+        ["XYZ", "New Beach water quality grading suspended", `22° 0' 0"`, `114° 0' 0"`],
+      ]),
+      "https://cd.epic.epd.gov.hk/beachpsi/sc/beach2.rss": beachFeed("zh_cn", [["ANG", "钓鱼湾泳滩的水质被评为一般(二级)", `22° 21' 53"`, `114° 3' 21"`]]),
+    },
+    data: {
+      updated: "2026-10-16T14:04:42+08:00",
+      count: 1,
+      beaches: [
+        { code: "ANG", name: "釣魚灣泳灘", district: "荃灣", grade: 2, rating: "一般", latitude: 22.36472, longitude: 114.05583, report: "https://cd.epic.epd.gov.hk/EPICDI/beach/gradingreport/ANG/?lang=zh" },
+      ],
+    },
+  },
+  {
+    name: "beach_water_quality keeps a beach the feed gives no grade for",
+    tool: "beach_water_quality",
+    input: { lang: "sc" },
+    request: { url: "https://cd.epic.epd.gov.hk/beachpsi/sc/beach2.rss" },
+    reply: beachFeed("zh_cn", [["XYZ", "新泳滩的水质暂停评级", `22° 0' 0"`, `114° 0' 0"`]]),
+    data: {
+      updated: "2026-10-16T14:04:42+08:00",
+      count: 1,
+      beaches: [
+        { code: "XYZ", name: "新泳滩", district: null, grade: null, rating: null, latitude: 22, longitude: 114, report: "https://cd.epic.epd.gov.hk/EPICDI/beach/gradingreport/XYZ/?lang=zh_cn", note: "新泳滩的水质暂停评级" },
+      ],
+    },
+  },
+
   // gmb (green minibus)
   {
     tool: "gmb_routes",
@@ -353,6 +646,157 @@ const cases: Case[] = [
     ttl: 300,
   },
 
+  // hk-airport
+  {
+    tool: "airport_departures",
+    input: { date: "2026-10-18", airline: "cx", airport: "nrt" },
+    request: { url: "https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=false&date=2026-10-18&cargo=false&lang=en" },
+    reply: [
+      {
+        date: "2026-10-17",
+        arrival: false,
+        cargo: false,
+        list: [{ time: "22:30", flight: [{ no: "UA 878D", airline: "UAL" }], status: "Dep 10:47 (18/10/2026)", statusCode: null, destination: ["SFO"], terminal: "T1", aisle: "G", gate: "66" }],
+        lastUpdatedTime: "2026-10-18T21:27:14+08:00",
+      },
+      {
+        date: "2026-10-18",
+        arrival: false,
+        cargo: false,
+        list: [
+          { time: "01:20", flight: [{ no: "CX 524", airline: "CPA" }, { no: "JL 7040", airline: "JAL" }], status: "Dep 01:40", statusCode: null, destination: ["NRT"], terminal: "T1", aisle: "C", gate: "25" },
+          { time: "08:15", flight: [{ no: "JL 7026", airline: "JAL" }], status: "Dep 08:30", statusCode: null, destination: ["NRT"], terminal: "T1", aisle: "D", gate: "35" },
+          { time: "23:55", flight: [{ no: "UO 848", airline: "HKE" }, { no: "CX 5848", airline: "CPA" }], status: "", statusCode: null, destination: ["NRT"], terminal: "T1", aisle: "", gate: "" },
+          { time: "23:59", flight: [{ no: "CX 254", airline: "CPA" }], status: "Boarding Soon", statusCode: null, destination: ["LHR"], terminal: "T1", aisle: "B", gate: "3" },
+        ],
+        lastUpdatedTime: "2026-10-18T21:27:14+08:00",
+      },
+    ],
+    data: [
+      {
+        scheduled: "2026-10-18T01:20+08:00",
+        flight: "CX 524",
+        airline: "CPA",
+        codeshares: ["JL 7040"],
+        destinations: ["NRT"],
+        status: "Dep 01:40",
+        state: "departed",
+        statusTime: "2026-10-18T01:40+08:00",
+        terminal: "T1",
+        aisle: "C",
+        gate: "25",
+      },
+      { scheduled: "2026-10-18T23:55+08:00", flight: "UO 848", airline: "HKE", codeshares: ["CX 5848"], destinations: ["NRT"], status: null, state: "scheduled", terminal: "T1" },
+    ],
+    meta: { total: 2, returned: 2, truncated: false },
+    ttl: 120,
+  },
+  {
+    name: "airport_departures reads cargo flights in Chinese within a time window",
+    tool: "airport_departures",
+    input: { date: "2026-10-18", cargo: true, lang: "tc", from: "07:30", to: "08:00", status: "departed" },
+    request: { url: "https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=false&date=2026-10-18&cargo=true&lang=zh_HK" },
+    reply: [
+      {
+        date: "2026-10-18",
+        arrival: false,
+        cargo: true,
+        list: [
+          { time: "07:25", flight: [{ no: "HJ 024", airline: "TMN" }], status: "啟航 07:23", statusCode: null, destination: ["SYD"] },
+          { time: "07:35", flight: [{ no: "3S 721", airline: "BOX" }], status: "啟航 07:48", statusCode: null, destination: ["DEL", "LEJ"] },
+          { time: "07:40", flight: [{ no: "5X 003", airline: "UPS" }], status: "取消", statusCode: null, destination: ["BLR", "CGN", "PHL"] },
+        ],
+        lastUpdatedTime: "2026-10-18T23:09:22+08:00",
+      },
+    ],
+    data: [{ scheduled: "2026-10-18T07:35+08:00", flight: "3S 721", airline: "BOX", destinations: ["DEL", "LEJ"], status: "啟航 07:48", state: "departed", statusTime: "2026-10-18T07:48+08:00" }],
+  },
+  {
+    tool: "airport_arrivals",
+    input: { date: "2026-10-18", flight: "qf8228" },
+    request: { url: "https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=true&date=2026-10-18&cargo=false&lang=en" },
+    reply: [
+      {
+        date: "2026-10-18",
+        arrival: true,
+        cargo: false,
+        list: [
+          { time: "10:45", flight: [{ no: "CX 305", airline: "CPA" }], status: "At gate 10:18", statusCode: null, origin: ["NKG"], baggage: "3", hall: "A", terminal: "", stand: "R17" },
+          {
+            time: "10:50",
+            flight: [{ no: "CX 413", airline: "CPA" }, { no: "QF 8228", airline: "QFA" }, { no: "QR 3488", airline: "QTR" }],
+            status: "At gate 10:19",
+            statusCode: null,
+            origin: ["ICN"],
+            baggage: "10",
+            hall: "A",
+            terminal: "",
+            stand: "S11",
+          },
+        ],
+        lastUpdatedTime: "2026-10-18T21:53:01+08:00",
+      },
+      {
+        date: "2026-10-19",
+        arrival: true,
+        cargo: false,
+        list: [{ time: "00:05", flight: [{ no: "QF 8228", airline: "QFA" }], status: "Est at 23:21 (18/10/2026)", statusCode: null, origin: ["DPS"], baggage: "5", hall: "A", terminal: "", stand: "" }],
+        lastUpdatedTime: "2026-10-18T21:53:01+08:00",
+      },
+    ],
+    data: [
+      {
+        scheduled: "2026-10-18T10:50+08:00",
+        flight: "CX 413",
+        airline: "CPA",
+        codeshares: ["QF 8228", "QR 3488"],
+        origins: ["ICN"],
+        status: "At gate 10:19",
+        state: "at_gate",
+        statusTime: "2026-10-18T10:19+08:00",
+        baggageBelt: "10",
+        hall: "A",
+        stand: "S11",
+      },
+      { scheduled: "2026-10-19T00:05+08:00", flight: "QF 8228", airline: "QFA", origins: ["DPS"], status: "Est at 23:21 (18/10/2026)", state: "estimated", statusTime: "2026-10-18T23:21+08:00", baggageBelt: "5", hall: "A" },
+    ],
+    ttl: 120,
+  },
+  {
+    name: "airport_arrivals finds landed flights from one airport in Simplified Chinese",
+    tool: "airport_arrivals",
+    input: { date: "2026-10-18", lang: "sc", airport: "pvg", status: "landed" },
+    request: { url: "https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=true&date=2026-10-18&cargo=false&lang=zh_CN" },
+    reply: [
+      {
+        date: "2026-10-18",
+        arrival: true,
+        cargo: false,
+        list: [
+          { time: "21:40", flight: [{ no: "HO 1307", airline: "DKH" }, { no: "MU 3953", airline: "CES" }], status: "着陆於 21:44", statusCode: null, origin: ["PVG"], baggage: "9", hall: "A", terminal: "", stand: "R13" },
+          { time: "21:45", flight: [{ no: "CX 369", airline: "CPA" }], status: "到闸口 21:30", statusCode: null, origin: ["PVG"], baggage: "7", hall: "B", terminal: "", stand: "N61" },
+          { time: "21:50", flight: [{ no: "CX 383", airline: "CPA" }], status: "着陆於 21:48", statusCode: null, origin: ["PEK"], baggage: "8", hall: "B", terminal: "", stand: "N63" },
+        ],
+        lastUpdatedTime: "2026-10-18T23:10:27+08:00",
+      },
+    ],
+    data: [
+      {
+        scheduled: "2026-10-18T21:40+08:00",
+        flight: "HO 1307",
+        airline: "DKH",
+        codeshares: ["MU 3953"],
+        origins: ["PVG"],
+        status: "着陆於 21:44",
+        state: "landed",
+        statusTime: "2026-10-18T21:44+08:00",
+        baggageBelt: "9",
+        hall: "A",
+        stand: "R13",
+      },
+    ],
+  },
+
   // hk-border
   {
     tool: "border_waiting_times",
@@ -476,6 +920,196 @@ const cases: Case[] = [
     data: [{ controlPoint: "Shenzhen Bay", year: 2025, quarter: 2, total: 6, goodsVehicles: 2, passengerVehicles: 1, privateCars: 3 }],
   },
 
+  // hk-ferry
+  {
+    tool: "ferry_routes",
+    input: { search: "peng chau" },
+    request: { url: "https://www.hkkfeta.com/opendata/route/" },
+    reply: {
+      type: "Route",
+      version: "1.2",
+      generated_timestamp: "2026-10-18T23:11:18+08:00",
+      data: [
+        { route_id: 1, route_name_en: "Central<=>Sok Kwu Wan", route_name_tc: "中環往來索罟灣", route_name_sc: "中环往来索罟湾", origin_en: "Central", origin_tc: "中環", origin_sc: "中环", destination_en: "Sok Kwu Wan", destination_tc: "索罟灣", destination_sc: "索罟湾" },
+        { route_id: 3, route_name_en: "Central<=>Peng Chau", route_name_tc: "中環往來坪洲", route_name_sc: "中环往来坪洲", origin_en: "Central", origin_tc: "中環", origin_sc: "中环", destination_en: "Peng Chau", destination_tc: "坪洲", destination_sc: "坪洲" },
+      ],
+    },
+    data: {
+      routes: [
+        { operator: "sunferry", operatorName: "Sun Ferry", route: "IIPECMUW", direction: null, from: "Peng Chau", to: "Mui Wo", service: "Inter-islands" },
+        { operator: "sunferry", operatorName: "Sun Ferry", route: "IIMUWPEC", direction: null, from: "Mui Wo", to: "Peng Chau", service: "Inter-islands" },
+        { operator: "hkkf", operatorName: "Hong Kong & Kowloon Ferry", route: "3", direction: "outbound", from: "Central", to: "Peng Chau", fromPier: "Central Pier 6", toPier: "Peng Chau Pier" },
+        { operator: "hkkf", operatorName: "Hong Kong & Kowloon Ferry", route: "3", direction: "inbound", from: "Peng Chau", to: "Central", fromPier: "Peng Chau Pier", toPier: "Central Pier 6" },
+      ],
+    },
+    ttl: 86400,
+  },
+  {
+    name: "ferry_routes lists Sun Ferry routes without calling out, matching Chinese names",
+    tool: "ferry_routes",
+    input: { operator: "sunferry", search: "長洲", lang: "tc" },
+    data: {
+      routes: [
+        { operator: "sunferry", operatorName: "新渡輪", route: "CECC", direction: null, from: "中環", to: "長洲" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "CCCE", direction: null, from: "長洲", to: "中環" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "IICMWCHC", direction: null, from: "芝麻灣", to: "長洲", service: "橫水渡" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "IICHCCMW", direction: null, from: "長洲", to: "芝麻灣", service: "橫水渡" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "IICHCMUW", direction: null, from: "長洲", to: "梅窩", service: "橫水渡" },
+        { operator: "sunferry", operatorName: "新渡輪", route: "IIMUWCHC", direction: null, from: "梅窩", to: "長洲", service: "橫水渡" },
+      ],
+    },
+  },
+  {
+    tool: "ferry_arrivals",
+    input: { route: "cecc" },
+    request: { url: "https://www.sunferry.com.hk/eta/?route=CECC" },
+    reply: {
+      type: "ETA",
+      version: "1.1",
+      generated_timestamp: "2026-10-19T00:05:08+08:00",
+      data: [
+        { routecode: "CECC", route_en: "Central - Cheung Chau", route_tc: "中環 - 長洲", route_sc: "中环 - 长洲", vesselcode: "GUO", depart_time: "23:30", eta: "00:23", lat: "22.235283", lng: "114.039983", rmk_en: null, rmk_tc: null, rmk_sc: null, date_timestamp: "2026-10-19T00:05:08+08:00" },
+        { routecode: "CECCH", route_en: "Central - Cheung Chau", route_tc: "中環 - 長洲", route_sc: "中环 - 长洲", vesselcode: "XMZ11", depart_time: "23:45", eta: "00:20", lat: null, lng: null, rmk_en: "Delayed", rmk_tc: null, rmk_sc: null, date_timestamp: "2026-10-19T00:05:08+08:00" },
+      ],
+    },
+    data: {
+      operator: "Sun Ferry",
+      route: "CECC",
+      name: "Central – Cheung Chau",
+      updatedAt: "2026-10-19T00:05:08+08:00",
+      sailings: [
+        { direction: null, from: "Central", to: "Cheung Chau", departure: "2026-10-18T23:30:00+08:00", eta: "2026-10-19T00:23:00+08:00", status: "departed", fast: false, vessel: "GUO", position: { lat: 22.235283, lng: 114.039983 } },
+        // Just after midnight: sailings that left before it are dated yesterday, their ETAs today.
+        { direction: null, from: "Central", to: "Cheung Chau", departure: "2026-10-18T23:45:00+08:00", eta: "2026-10-19T00:20:00+08:00", status: "departed", fast: true, vessel: "XMZ11", remark: "Delayed" },
+      ],
+    },
+    ttl: 60,
+  },
+  {
+    name: "ferry_arrivals dates a Sun Ferry sailing not yet left to the next morning",
+    tool: "ferry_arrivals",
+    input: { route: "NPHH", lang: "tc" },
+    request: { url: "https://www.sunferry.com.hk/eta/?route=NPHH" },
+    reply: {
+      type: "ETA",
+      version: "1.1",
+      generated_timestamp: "2026-10-18T23:10:08+08:00",
+      data: [{ routecode: "NPHH", route_en: "North Point - Hung Hom", route_tc: "北角 - 紅磡", route_sc: "北角 - 红磡", vesselcode: "SW11", depart_time: "08:23", lat: null, lng: null, eta: null, rmk_en: null, rmk_tc: null, rmk_sc: null, date_timestamp: "2026-10-18T23:10:08+08:00" }],
+    },
+    data: {
+      operator: "新渡輪",
+      route: "NPHH",
+      name: "北角 – 紅磡",
+      updatedAt: "2026-10-18T23:10:08+08:00",
+      sailings: [{ direction: null, from: "北角", to: "紅磡", departure: "2026-10-19T08:23:00+08:00", eta: null, status: "scheduled", fast: false, vessel: "SW11" }],
+    },
+  },
+  {
+    name: "ferry_arrivals reads both directions of an HKKF route",
+    tool: "ferry_arrivals",
+    input: { route: "3" },
+    request: { url: "https://www.hkkfeta.com/opendata/eta/3/outbound" },
+    reply: { type: "ETA", version: "1.2", generated_timestamp: "2026-10-18T23:11:41+08:00", data: [{ route_id: 3, direction: "outbound", date: "2026-10-18", session_time: "22:50:00", ETA: "2026-10-18T23:16:00+08:00" }] },
+    lookups: {
+      "https://www.hkkfeta.com/opendata/eta/3/inbound": { type: "ETA", version: "1.2", generated_timestamp: "2026-10-18T23:11:40+08:00", data: [{ route_id: 3, direction: "inbound", date: "2026-10-18", session_time: "22:45:00", ETA: "2026-10-18T23:20:00+08:00" }] },
+      "https://www.hkkfeta.com/opendata/route/": {
+        type: "Route",
+        data: [{ route_id: 3, route_name_en: "Central<=>Peng Chau", origin_en: "Central", origin_tc: "中環", origin_sc: "中环", destination_en: "Peng Chau", destination_tc: "坪洲", destination_sc: "坪洲" }],
+      },
+    },
+    data: {
+      operator: "Hong Kong & Kowloon Ferry",
+      route: "3",
+      name: "Central ⇄ Peng Chau",
+      updatedAt: "2026-10-18T23:11:41+08:00",
+      sailings: [
+        { direction: "outbound", from: "Central", to: "Peng Chau", fromPier: "Central Pier 6", toPier: "Peng Chau Pier", departure: "2026-10-18T22:50:00+08:00", eta: "2026-10-18T23:16:00+08:00", status: "departed" },
+        { direction: "inbound", from: "Peng Chau", to: "Central", fromPier: "Peng Chau Pier", toPier: "Central Pier 6", departure: "2026-10-18T22:45:00+08:00", eta: "2026-10-18T23:20:00+08:00", status: "departed" },
+      ],
+    },
+    ttl: 60,
+  },
+  {
+    name: "ferry_arrivals rejects an unknown Sun Ferry route before calling out",
+    tool: "ferry_arrivals",
+    input: { route: "CECCX" },
+    error: /Unknown Sun Ferry route CECCX. Routes are: CECC, CCCE/,
+  },
+  {
+    tool: "hkkf_timetable",
+    input: { route: 3, direction: "inbound" },
+    request: { url: "https://www.hkkfeta.com/opendata/time_table/3/inbound" },
+    reply: [
+      `${BOM}route id/航綫,direction/方向,origin_en,出發碼頭,出发码头,destination_en,目的地碼頭,目的地码头,remarks_en,附註,附注,Monday to Saturday/星期一至星期六,Sunday and Public Holidays/星期日及公眾假期`,
+      `3,inbound,Central,中環,中环,Peng Chau,坪洲,坪洲," rgb(0, 0, 0); background-color: rgb(244, 244, 244);"">Remarks:</span><span style=""color: rgb(0, 0, 0);"">^ Last Sailing</span><span style=""color: rgb(0, 0, 0);"">{ } No freight is allowed on this sailing</span><span style=""color: rgb(0, 0, 0);"">▲&nbsp;Only small quantity of freight can be carried</span>",</span><span>^ 尾班船</span>,</span><span>^ 尾班船</span>,"[' { 03:40 }', '    05:30', ' 🞁07:25', ' ^23:30']","['{ 03:40 }', '🞁06:30', '^ 23:35', '']"`,
+    ].join("\r\n"),
+    data: {
+      route: 3,
+      direction: "inbound",
+      from: "Peng Chau",
+      to: "Central",
+      mondayToSaturday: [{ time: "03:40", marks: ["{}"] }, { time: "05:30" }, { time: "07:25", marks: ["▲"] }, { time: "23:30", marks: ["^"] }],
+      sundayAndHolidays: [{ time: "03:40", marks: ["{}"] }, { time: "06:30", marks: ["▲"] }, { time: "23:35", marks: ["^"] }],
+      remarks: [
+        { mark: "^", text: "Last Sailing" },
+        { mark: "{}", text: "No freight is allowed on this sailing" },
+        { mark: "▲", text: "Only small quantity of freight can be carried" },
+      ],
+    },
+    ttl: 86400,
+  },
+  {
+    name: "hkkf_timetable splits Chinese remarks run together without markup",
+    tool: "hkkf_timetable",
+    input: { route: 1, lang: "tc" },
+    request: { url: "https://www.hkkfeta.com/opendata/time_table/1/outbound" },
+    reply: [
+      `${BOM}route id/航綫,direction/方向,origin_en,出發碼頭,出发码头,destination_en,目的地碼頭,目的地码头,remarks_en,附註,附注,Monday to Saturday/星期一至星期六,Sunday and Public Holidays/星期日及公眾假期`,
+      `1,outbound,Central,中環,中环,Sok Kwu Wan,索罟灣,索罟湾,"x"">@ Optional Service</span>",@ 必要時加班服務^ 尾班船及不設載貨服務,@ 必要时加班服务^ 尾班船及不设载货服务,"['07:20', '^23:30', '']","['@12:50', '^23:30']"`,
+    ].join("\r\n"),
+    data: {
+      route: 1,
+      direction: "outbound",
+      from: "中環",
+      to: "索罟灣",
+      mondayToSaturday: [{ time: "07:20" }, { time: "23:30", marks: ["^"] }],
+      sundayAndHolidays: [{ time: "12:50", marks: ["@"] }, { time: "23:30", marks: ["^"] }],
+      remarks: [
+        { mark: "@", text: "必要時加班服務" },
+        { mark: "^", text: "尾班船及不設載貨服務" },
+      ],
+    },
+  },
+  {
+    tool: "hkkf_fares",
+    input: { route: 1 },
+    request: { url: "https://www.hkkfeta.com/opendata/fare_table/1" },
+    reply: [
+      `${BOM}type/票種,Monday to Saturday/星期一至星期六,Sunday and Public Holidays/星期日及公眾假期`,
+      "month_ticket/月票,893",
+      "multi-ride_ticket/多程票,--",
+      "adult/成人,30.9,43.5",
+      "child (aged 3 or above but under 12)/小童(3歲或以上但12歲以下),15.4,21.7",
+      "child under 3 (accompanied by adult)/3歲以下小童(須有成人陪同),Free 免費,Free 免費",
+    ].join("\r\n"),
+    data: [
+      { ticket: "month ticket", price: 893 },
+      { ticket: "multi-ride ticket", price: null },
+      { ticket: "adult", mondayToSaturday: 30.9, sundayAndHolidays: 43.5 },
+      { ticket: "child (aged 3 or above but under 12)", mondayToSaturday: 15.4, sundayAndHolidays: 21.7 },
+      { ticket: "child under 3 (accompanied by adult)", mondayToSaturday: 0, sundayAndHolidays: 0 },
+    ],
+    ttl: 86400,
+  },
+  {
+    name: "hkkf_fares names tickets in Chinese",
+    tool: "hkkf_fares",
+    input: { route: 2, lang: "sc" },
+    request: { url: "https://www.hkkfeta.com/opendata/fare_table/2" },
+    reply: `${BOM}type/票種,Monday to Saturday/星期一至星期六,Sunday and Public Holidays/星期日及公眾假期\r\nadult/成人,24.9,34.7\r\n`,
+    data: [{ ticket: "成人", mondayToSaturday: 24.9, sundayAndHolidays: 34.7 }],
+  },
+
   // hk-holidays
   {
     tool: "hk_public_holidays",
@@ -502,6 +1136,302 @@ const cases: Case[] = [
     request: { url: "https://www.1823.gov.hk/common/ical/en.json" },
     reply: holidayFeed,
     data: { date: "2030-01-06", isPublicHoliday: false, holiday: null, isSunday: true, note: expect.stringMatching(/outside the range/) },
+  },
+
+  // hko-cyclone
+  {
+    tool: "hko_tropical_cyclones",
+    input: {},
+    request: { url: "https://www.weather.gov.hk/wxinfo/currwx/tc_list.xml" },
+    reply: cycloneList,
+    lookups: { "https://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_2641.xml": cycloneTrack },
+    data: {
+      cyclones: [
+        {
+          id: 2641,
+          name: "SURIGAE",
+          englishName: "SURIGAE",
+          chineseName: "舒力基",
+          bulletinTime: "2026-10-01T04:00:47+08:00",
+          current: surigaeNow,
+          closestApproach: { time: "2026-10-01T02:00:00+08:00", distanceKm: 2744, bearing: "ENE" },
+          forecastPoints: 1,
+        },
+      ],
+    },
+    ttl: 300,
+  },
+  {
+    name: "hko_tropical_cyclones says when no cyclone is tracked",
+    tool: "hko_tropical_cyclones",
+    input: { lang: "tc" },
+    request: { url: "https://www.weather.gov.hk/wxinfo/currwx/tc_list.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>\n<TropicalCycloneList>\n</TropicalCycloneList>`,
+    data: { cyclones: [], note: expect.stringMatching(/not tracking any tropical cyclone/) },
+  },
+  {
+    tool: "hko_cyclone_track",
+    input: { id: 2641, lang: "sc" },
+    request: { url: "https://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_2641.xml" },
+    reply: cycloneTrack,
+    lookups: { "https://www.weather.gov.hk/wxinfo/currwx/tc_list.xml": cycloneList },
+    data: {
+      id: 2641,
+      name: "舒力基",
+      englishName: "SURIGAE",
+      chineseName: "舒力基",
+      bulletinTime: "2026-10-01T04:00:47+08:00",
+      current: { ...surigaeNow, intensity: "热带风暴" },
+      closestApproach: { time: "2026-10-01T02:00:00+08:00", distanceKm: 2744, bearing: "ENE" },
+      past: [
+        { time: "2026-09-30T14:00:00+08:00", category: "tropical_storm", intensity: "热带风暴", maximumWindKmh: 65, latitude: 31.3, longitude: 138.4 },
+        { time: "2026-09-30T20:00:00+08:00", category: "tropical_storm", intensity: "热带风暴", maximumWindKmh: 65, latitude: 31.8, longitude: 138.9 },
+      ],
+      forecast: [
+        { time: "2026-10-01T14:00:00+08:00", category: "extratropical_low", intensity: "温带气旋", maximumWindKmh: null, latitude: 35, longitude: 142.5, distanceKm: 3089, bearing: "ENE" },
+      ],
+    },
+    ttl: 300,
+  },
+  {
+    name: "hko_cyclone_track reads the first tracked cyclone without an id",
+    tool: "hko_cyclone_track",
+    input: {},
+    request: { url: "https://www.weather.gov.hk/wxinfo/currwx/tc_list.xml" },
+    reply: cycloneList,
+    lookups: { "https://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_2641.xml": cycloneTrack },
+    data: expect.objectContaining({ id: 2641, name: "SURIGAE", current: surigaeNow, forecast: [expect.objectContaining({ distanceKm: 3089 })] }),
+  },
+
+  // hko-regional
+  {
+    tool: "hko_rainfall_past_hour",
+    input: { station: "kings park" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/hourlyRainfall.php?lang=en" },
+    reply: {
+      obsTime: "2026-10-18T22:45:00+08:00",
+      hourlyRainfall: [
+        { automaticWeatherStation: "Lau Fau Shan", automaticWeatherStationID: "RF001", value: "0", unit: "mm" },
+        { automaticWeatherStation: "King’s Park", automaticWeatherStationID: "RF024", value: "3", unit: "mm" },
+      ],
+    },
+    data: { observedAt: "2026-10-18T22:45:00+08:00", stations: [{ station: "King’s Park", id: "RF024", rainfallMm: 3 }] },
+    ttl: 300,
+  },
+  {
+    name: "hko_rainfall_past_hour keeps only stations with rain, and reads a missing reading as null",
+    tool: "hko_rainfall_past_hour",
+    input: { rainingOnly: true, lang: "tc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/hourlyRainfall.php?lang=tc" },
+    reply: {
+      obsTime: "2026-10-18T22:45:00+08:00",
+      hourlyRainfall: [
+        { automaticWeatherStation: "流浮山", automaticWeatherStationID: "RF001", value: "0", unit: "mm" },
+        { automaticWeatherStation: "清水灣", automaticWeatherStationID: "RF009", value: "M", unit: "mm" },
+        { automaticWeatherStation: "沙田", automaticWeatherStationID: "RF020", value: "12", unit: "mm" },
+      ],
+    },
+    data: { observedAt: "2026-10-18T22:45:00+08:00", stations: [{ station: "沙田", id: "RF020", rainfallMm: 12 }] },
+  },
+  {
+    tool: "hko_uv_index",
+    input: {},
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_15min_uvindex.csv" },
+    reply: "Date time,past 15-minute mean UV Index\n202610181200,6.4\n",
+    data: { observedAt: "2026-10-18T12:00:00+08:00", uvIndex: 6.4, level: "high", label: "High" },
+    ttl: 300,
+  },
+  {
+    name: "hko_uv_index reads the Traditional Chinese file",
+    tool: "hko_uv_index",
+    input: { lang: "tc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_15min_uvindex_uc.csv" },
+    reply: `${BOM}日期 時間,過去十五分鐘平均紫外線指數\n202610181800,0.0\n`,
+    data: { observedAt: "2026-10-18T18:00:00+08:00", uvIndex: 0, level: "low", label: "低" },
+  },
+  {
+    tool: "hko_lightning",
+    input: {},
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=LHL&rformat=csv&lang=en" },
+    reply: [
+      `${BOM}DateTime,Type,Region,"lightning count"`,
+      `202610172100-202610172159,Cloud-to-ground,"New Territories West",4`,
+      `202610172100-202610172159,Cloud-to-ground,Lantau,0`,
+      `202610172100-202610172159,Cloud-to-ground,"Hong Kong territory",4`,
+      `202610172100-202610172159,Cloud-to-cloud,"Hong Kong territory",11`,
+    ].join("\n"),
+    data: {
+      from: "2026-10-17T21:00:00+08:00",
+      to: "2026-10-17T21:59:00+08:00",
+      total: { cloudToGround: 4, cloudToCloud: 11 },
+      cloudToGroundByRegion: [
+        { region: "New Territories West", count: 4 },
+        { region: "Lantau", count: 0 },
+      ],
+    },
+    ttl: 600,
+  },
+  {
+    name: "hko_lightning reads the Simplified Chinese types and regions",
+    tool: "hko_lightning",
+    input: { lang: "sc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=LHL&rformat=csv&lang=sc" },
+    reply: `${BOM}日期时间,类别,区域,闪电次数\n202610172100-202610172159,云对地,大屿山,0\n202610172100-202610172159,云对地,香港境内,0\n202610172100-202610172159,云间,香港境内,2\n`,
+    data: {
+      from: "2026-10-17T21:00:00+08:00",
+      to: "2026-10-17T21:59:00+08:00",
+      total: { cloudToGround: 0, cloudToCloud: 2 },
+      cloudToGroundByRegion: [{ region: "大屿山", count: 0 }],
+    },
+  },
+  {
+    tool: "hko_regional_weather",
+    input: { station: "Hong Kong Observatory" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_temperature.csv" },
+    reply: "Date time,Automatic Weather Station,Air Temperature(degree Celsius)\n202610182300,Chek Lap Kok,28.2\n202610182300,HK Observatory,27.9\n",
+    lookups: {
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_humidity.csv": "Date time,Automatic Weather Station,Relative Humidity(percent)\n202610182300,HK Observatory,75\n",
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_pressure.csv": "Date time,Automatic Weather Station,Mean Sea Level Pressure(hPa)\n202610182300,HK Observatory,1016.7\n",
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_10min_wind.csv":
+        "Date time,Automatic Weather Station,10-Minute Mean Wind Direction(Compass points),10-Minute Mean Speed(km/hour),10-Minute Maximum Gust(km/hour)\n202610182300,Central Pier,East,12,17\n",
+    },
+    data: { observedAt: "2026-10-18T23:00:00+08:00", stations: [{ station: "HK Observatory", temperatureC: 27.9, humidityPercent: 75, pressureHpa: 1016.7 }] },
+    ttl: 60,
+  },
+  {
+    name: "hko_regional_weather joins the Chinese files and reads calm and missing wind",
+    tool: "hko_regional_weather",
+    input: { lang: "tc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_temperature_uc.csv" },
+    reply: `${BOM}日期時間,自動氣象站,氣溫（攝氏）\n202610182300,西貢,25.6\n`,
+    lookups: {
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_humidity_uc.csv": `${BOM}日期時間,自動氣象站,相對濕度（百分比）\n202610182300,西貢,85\n`,
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_1min_pressure_uc.csv": `${BOM}日期時間,自動氣象站,平均海平面氣壓（百帕斯卡）\n`,
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_10min_wind_uc.csv": `${BOM}日期時間,自動氣象站,十分鐘平均風向（方位點）,十分鐘平均風速（公里/小時）,十分鐘最高陣風風速（公里/小時）\n202610182300,西貢,無風,無風,2,\n202610182300,赤柱,東南,N/A,N/A\n`,
+    },
+    data: {
+      observedAt: "2026-10-18T23:00:00+08:00",
+      stations: [
+        { station: "西貢", temperatureC: 25.6, humidityPercent: 85, windDirection: "無風", gustKmh: 2 },
+        { station: "赤柱", windDirection: "東南" },
+      ],
+    },
+  },
+  {
+    tool: "hko_heat_stress",
+    input: { station: "observatory" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/recent10_10min_hkhi.csv" },
+    reply: [
+      "Date time,Automatic Weather Station,10 minute mean Hong Kong Heat Index",
+      "202610182259,Beas River,22.0",
+      "202610182259,Hong Kong Observatory,24.4",
+      "202610182300,Beas River,22.0",
+      "202610182300,Hong Kong Observatory,24.5",
+    ].join("\n"),
+    lookups: {
+      "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/recent10_60min_wbgt.csv":
+        "Date time,Automatic Weather Station,60-minute mean Wet Bulb Globe Temperature (WBGT)\n202610182259,Hong Kong Observatory,24.5\n202610182300,Hong Kong Observatory,24.6\n",
+    },
+    data: { observedAt: "2026-10-18T23:00:00+08:00", stations: [{ station: "Hong Kong Observatory", heatIndex: 24.5, wbgtC: 24.6 }] },
+    ttl: 60,
+  },
+
+  // hko-tides
+  {
+    tool: "hko_tide_times",
+    input: { station: "quarry bay", date: "2026-10-18", days: 2 },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=HLT&station=QUB&year=2026&rformat=json" },
+    reply: {
+      fields: ["Month", "Date", "Time", "Height(m)", "Time", "Height(m)", "Time", "Height(m)", "Time", "Height(m)"],
+      data: [
+        ["10", "17", "1013", "0.98", "1745", "1.63", "2257", "1.55", "", ""],
+        ["10", "18", "0030", "2.27", "0947", "1.03", "", "", "", ""],
+        ["10", "19", "0059", "2.20", "1021", "1.07", "1802", "1.81", "2324", "1.62"],
+      ],
+    },
+    data: {
+      station: { code: "QUB", name: "Quarry Bay" },
+      timeZone: "Asia/Hong_Kong",
+      heightUnit: "metres above Chart Datum",
+      days: [
+        { date: "2026-10-18", tides: [{ time: "00:30", type: "high", heightM: 2.27 }, { time: "09:47", type: "low", heightM: 1.03 }] },
+        {
+          date: "2026-10-19",
+          tides: [
+            { time: "00:59", type: "high", heightM: 2.2 },
+            { time: "10:21", type: "low", heightM: 1.07 },
+            { time: "18:02", type: "high", heightM: 1.81 },
+            { time: "23:24", type: "low", heightM: 1.62 },
+          ],
+        },
+      ],
+    },
+    ttl: 86400,
+  },
+  {
+    name: "hko_tide_times warns about a closed station and a year with no predictions",
+    tool: "hko_tide_times",
+    input: { station: "芝麻灣", date: "2030-01-01", lang: "tc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=HLT&station=CMW&year=2030&rformat=json" },
+    reply: "Please include valid parameters in API request. For details, please refer to <a href=\"https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf\">Hong Kong Observatory Open Data API Documentation</a>.",
+    data: {
+      station: { code: "CMW", name: "芝麻灣" },
+      timeZone: "Asia/Hong_Kong",
+      heightUnit: "metres above Chart Datum",
+      note: "Chi Ma Wan tide station closed in 1997; its predictions may have large errors. The Observatory has no tide predictions for Chi Ma Wan in 2030.",
+      days: [],
+    },
+  },
+  {
+    name: "hko_tide_times rejects an unknown station",
+    tool: "hko_tide_times",
+    input: { station: "Stanley", date: "2026-10-18" },
+    error: /Unknown tide station "Stanley".*QUB \(Quarry Bay\)/,
+  },
+  {
+    tool: "hko_tide_observations",
+    input: { station: "bay" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/tide/ALL_en.csv" },
+    reply: `${BOM}Tide Station,Date,Time,Height(m)\nQuarry Bay,2026-10-18,23:05,2.02\nShek Pik,2026-10-18,23:05,1.96\nWaglan Island,2026-10-18,23:05,----`,
+    data: [{ code: "QUB", name: "Quarry Bay", time: "2026-10-18T23:05:00+08:00", heightM: 2.02 }],
+    ttl: 120,
+  },
+  {
+    name: "hko_tide_observations reads Chinese names and missing readings",
+    tool: "hko_tide_observations",
+    input: { lang: "sc", station: "WAG" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/tide/ALL_sc.csv" },
+    reply: `${BOM}潮汐站,日期,时间,高度（米）\n鰂鱼涌,2026-10-18,23:10,2.02\n横澜岛,2026-10-18,23:10,----`,
+    data: [{ code: "WAG", name: "横澜岛", time: "2026-10-18T23:10:00+08:00", heightM: null }],
+  },
+  {
+    tool: "hko_sun_moon",
+    input: { date: "2026-10-18", endDate: "2026-10-19" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=SRS&year=2026&rformat=json" },
+    reply: {
+      fields: ["YYYY-MM-DD", "RISE", "TRAN.", "SET"],
+      data: [["2026-10-17", "06:20", "12:09", "17:57"], ["2026-10-18", "06:21", "12:09", "17:56"], ["2026-10-19", "06:21", "12:09", "17:55"]],
+    },
+    lookups: {
+      "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=MRS&year=2026&rformat=json": {
+        fields: ["YYYY-MM-DD", "RISE", "TRAN.", "SET"],
+        data: [["2026-10-18", "12:48", "18:14", "23:43"], ["2026-10-19", "13:38", "19:05", ""]],
+      },
+    },
+    data: {
+      timeZone: "Asia/Hong_Kong",
+      days: [
+        { date: "2026-10-18", sunrise: "06:21", sunTransit: "12:09", sunset: "17:56", moonrise: "12:48", moonTransit: "18:14", moonset: "23:43" },
+        { date: "2026-10-19", sunrise: "06:21", sunTransit: "12:09", sunset: "17:55", moonrise: "13:38", moonTransit: "19:05", moonset: null },
+      ],
+    },
+    ttl: 86400,
+  },
+  {
+    name: "hko_sun_moon rejects a range that ends before it starts",
+    tool: "hko_sun_moon",
+    input: { date: "2026-10-18", endDate: "2026-10-01" },
+    error: /endDate/,
   },
 
   // hko-weather
@@ -637,6 +1567,216 @@ const cases: Case[] = [
     data: [{ dir: "O", seq: 1, eta_seq: 1, eta: null, rmk_en: "Scheduled Bus" }],
   },
 
+  // kowloon-east-parking
+  {
+    tool: "ke_carparks",
+    input: { search: "telford", vehicleType: "privateCar" },
+    request: { url: "https://sps-opendata.pilotsmartke.gov.hk/rest/getCarparkInfos?fullload=true&lang=en_US" },
+    reply: {
+      results: [
+        {
+          _id: 30,
+          name: "Telford Plaza D Carpark",
+          nature: "commercial",
+          type: "multi-storey",
+          address: { region: "KLN", dcDistrict: "Kwun Tong District", subDistrict: "Kowloon Bay", streetName: "33 Wai Yip Street" },
+          contactNo: "2997 2262",
+          website: "http://www.telford-plaza.com/tch/tp/about_us/parking_info.jsp",
+          published: true,
+          modifiedDate: "2025-05-27T04:14:21.730Z",
+          facilities: ["evCharger"],
+          paymentMethods: ["octopus", "visa", "master"],
+          heightLimits: [{ remark: "Private Car", height: 1.75 }],
+          openingHours: [{ weekdays: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "PH"], excludePublicHoliday: false, periodEnd: "24:00", periodStart: "00:00" }],
+          motorCycle: { spaceUNL: 0, spaceEV: 0, spaceDIS: 0, space: 0 },
+          HGV: { spaceUNL: 0, spaceEV: 0, spaceDIS: 0, space: 3, hourlyCharges: [{ weekdays: ["MON"], excludePublicHoliday: false, covered: "covered", type: "hourly", price: 40, periodEnd: "24:00", periodStart: "00:00" }] },
+          privateCar: {
+            hourlyCharges: [{ weekdays: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "PH"], excludePublicHoliday: false, covered: "covered", type: "hourly", remark: "", price: 22, periodEnd: "24:00", periodStart: "00:00" }],
+            privileges: [{ weekdays: ["MON", "TUE", "WED", "THU", "FRI"], excludePublicHoliday: true, description: "Spend HK$300 for 1-hour\n free parking.", periodEnd: "14:00", periodStart: "12:00" }],
+            spaceUNL: 0,
+            spaceEV: 2,
+            spaceDIS: 0,
+            space: 70,
+          },
+          coordinates: [114.21204329, 22.32228903],
+          publishedDate: "2017-02-13T01:41:31.271Z",
+          displayAddress: "33 Wai Yip Street, Kowloon Bay, KLN",
+        },
+        {
+          _id: 12,
+          name: "Amoy Plaza",
+          nature: "commercial",
+          type: "multi-storey",
+          address: { region: "KLN", dcDistrict: "Kwun Tong District", subDistrict: "Kowloon Bay", streetName: "Ngau Tau Kok Raod" },
+          privateCar: { space: 389 },
+          coordinates: [114.21675324, 22.32470074],
+          displayAddress: "77 Ngau Tau Kok Raod, Kowloon Bay, KLN",
+        },
+      ],
+    },
+    data: [
+      {
+        id: 30,
+        name: "Telford Plaza D Carpark",
+        nature: "commercial",
+        type: "multi-storey",
+        address: "33 Wai Yip Street, Kowloon Bay, KLN",
+        area: "Kowloon Bay",
+        district: "Kwun Tong District",
+        latitude: 22.32228903,
+        longitude: 114.21204329,
+        phone: "2997 2262",
+        website: "http://www.telford-plaza.com/tch/tp/about_us/parking_info.jsp",
+        openingHours: ["Daily 24 hours"],
+        heightLimits: [{ metres: 1.75, remark: "Private Car" }],
+        facilities: ["evCharger"],
+        paymentMethods: ["octopus", "visa", "master"],
+        vehicles: {
+          privateCar: {
+            spaces: 70,
+            evSpaces: 2,
+            prices: [{ type: "hourly", price: 22, days: "Daily", hours: "24 hours", covered: "covered" }],
+            offers: [{ days: "Mon-Fri except PH", hours: "12:00-14:00", description: "Spend HK$300 for 1-hour free parking." }],
+          },
+        },
+      },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    name: "ke_carparks reads one car park in Chinese, with tiered and all-day prices",
+    tool: "ke_carparks",
+    input: { carparkId: 27, lang: "tc" },
+    request: { url: "https://sps-opendata.pilotsmartke.gov.hk/rest/getCarparkInfos?fullload=true&carparkIds=27&lang=zh_TW" },
+    reply: {
+      results: [
+        {
+          _id: 27,
+          name: "油麗商場停車場",
+          nature: "government",
+          type: "multi-storey",
+          address: { region: "九龍", dcDistrict: "觀塘區", subDistrict: "油塘", streetName: "油塘道9號", buildingName: "油麗商場", floor: "LG1 & LG2" },
+          contactNo: "23530667",
+          gracePeriods: [{ minutes: 30 }],
+          heightLimits: [{ height: 2 }],
+          openingHours: [{ weekdays: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"], excludePublicHoliday: false, periodStart: "00:00", periodEnd: "00:00" }],
+          motorCycle: {
+            hourlyCharges: [{ weekdays: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"], excludePublicHoliday: false, usageThresholds: [{ hours: 1, price: 2 }], periodStart: "00:00", periodEnd: "24:00", price: 2, usageMinimum: 1, type: "hourly", covered: "covered" }],
+            spaceUNL: 0,
+            spaceEV: 0,
+            spaceDIS: 0,
+            space: 2,
+          },
+          coach: { spaceUNL: 0, spaceEV: 0, spaceDIS: 0, space: 0 },
+          privateCar: {
+            dayNightParks: [{ weekdays: ["SAT", "SUN", "PH"], excludePublicHoliday: false, periodStart: "23:00", periodEnd: "06:00", price: 13, type: "night-park", covered: "covered", validUntil: "same-day", validUntilEnd: "24:00" }],
+            monthlyCharges: [{ reserved: "non-reserved", covered: "covered", type: "monthly-park", remark: "並不適用於充電車位。", price: 3600 }],
+            spaceUNL: 0,
+            spaceEV: 0,
+            spaceDIS: 1,
+            space: 11,
+          },
+          coordinates: [114.23740089, 22.29851205],
+          remark: "",
+          displayAddress: "九龍油塘油塘道9號油麗商場LG1 & LG2",
+        },
+      ],
+    },
+    data: [
+      {
+        id: 27,
+        name: "油麗商場停車場",
+        nature: "government",
+        type: "multi-storey",
+        address: "九龍油塘油塘道9號油麗商場LG1 & LG2",
+        area: "油塘",
+        district: "觀塘區",
+        latitude: 22.29851205,
+        longitude: 114.23740089,
+        phone: "23530667",
+        openingHours: ["Daily 24 hours"],
+        heightLimits: [{ metres: 2 }],
+        gracePeriods: [{ minutes: 30 }],
+        vehicles: {
+          privateCar: {
+            spaces: 11,
+            disabledSpaces: 1,
+            prices: [
+              { type: "night-park", price: 13, days: "Sat, Sun, PH", hours: "23:00-06:00", covered: "covered", validUntil: "same-day 24:00" },
+              { type: "monthly-park", price: 3600, covered: "covered", reserved: "non-reserved", remark: "並不適用於充電車位。" },
+            ],
+          },
+          motorCycle: { spaces: 2, prices: [{ type: "hourly", price: 2, days: "Daily", hours: "24 hours", covered: "covered", minimumHours: 1, firstHours: [{ hours: 1, price: 2 }] }] },
+        },
+      },
+    ],
+  },
+  {
+    name: "ke_carparks reads the empty object upstream sends when nothing matches",
+    tool: "ke_carparks",
+    input: { carparkId: 999 },
+    request: { url: "https://sps-opendata.pilotsmartke.gov.hk/rest/getCarparkInfos?fullload=true&carparkIds=999&lang=en_US" },
+    reply: {},
+    data: [],
+  },
+  {
+    tool: "ke_parking_vacancy",
+    input: { search: "yau tong", vehicleType: "privateCar" },
+    request: { url: "https://sps-opendata.pilotsmartke.gov.hk/rest/getCarparkVacancies" },
+    reply: {
+      results: [
+        { _id: 12, closed: false, motorCycle: { vacancy: 0 }, privateCar: { vacancyEV: 1, vacancyDIS: 1, vacancy: 13 }, lastUploadDate: "2026-10-17T10:32:45.420Z", eob: false },
+        { _id: 27, closed: false, motorCycle: { vacancy: 2 }, privateCar: { vacancyDIS: 1, vacancy: 4 }, lastUploadDate: "2026-10-18T14:02:20.385Z", eob: false },
+        { _id: 38, closed: false, HGV: { vacancy: 35 }, lastUploadDate: "2026-10-18T14:02:17.144Z", eob: false },
+      ],
+    },
+    lookups: {
+      "https://sps-opendata.pilotsmartke.gov.hk/rest/getCarparkInfos?fullload=true&lang=en_US": {
+        results: [
+          { _id: 12, name: "Amoy Plaza", address: { dcDistrict: "Kwun Tong District", subDistrict: "Kowloon Bay" }, privateCar: { space: 389 } },
+          { _id: 27, name: "Yau Lai Shopping Centre Carpark", address: { dcDistrict: "Kwun Tong District", subDistrict: "Yau Tong" }, privateCar: { space: 11 }, motorCycle: { space: 2 } },
+          { _id: 38, name: "Domain Carpark", address: { dcDistrict: "Kwun Tong District", subDistrict: "Yau Tong" }, HGV: { space: 35 } },
+        ],
+      },
+    },
+    data: [
+      {
+        id: 27,
+        name: "Yau Lai Shopping Centre Carpark",
+        area: "Yau Tong",
+        district: "Kwun Tong District",
+        closed: false,
+        updatedAt: "2026-10-18T14:02:20.385Z",
+        vacancies: { privateCar: { vacant: 4, spaces: 11, disabled: 1 } },
+      },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 60,
+  },
+  {
+    name: "ke_parking_vacancy reads one car park in Chinese, and names a car park the list doesn't know",
+    tool: "ke_parking_vacancy",
+    input: { carparkId: 38, lang: "tc" },
+    request: { url: "https://sps-opendata.pilotsmartke.gov.hk/rest/getCarparkVacancies" },
+    reply: {
+      results: [
+        { _id: 12, closed: false, privateCar: { vacancy: 13 }, lastUploadDate: "2026-10-17T10:32:45.420Z" },
+        { _id: 38, closed: true, HGV: { vacancy: 35 }, privateCar: { vacancyEV: 0, vacancyDIS: 3, vacancy: 126 }, eob: false },
+      ],
+    },
+    lookups: { "https://sps-opendata.pilotsmartke.gov.hk/rest/getCarparkInfos?fullload=true&lang=zh_TW": { results: [] } },
+    data: [
+      {
+        id: 38,
+        name: "Car park 38",
+        closed: true,
+        updatedAt: null,
+        vacancies: { privateCar: { vacant: 126, ev: 0, disabled: 3 }, HGV: { vacant: 35 } },
+      },
+    ],
+  },
+
   // mtr
   {
     tool: "mtr_next_train",
@@ -681,6 +1821,504 @@ const cases: Case[] = [
     reply: { results: [{ park_Id: "10", motorCycle: [{ vacancy: 3 }] }, { park_Id: "11", motorCycle: [{ vacancy: 0 }] }] },
     data: [{ park_Id: "11", motorCycle: [{ vacancy: 0 }] }],
     ttl: 60,
+  },
+
+  // td-street-parking
+  {
+    tool: "parking_meter_vacancy",
+    input: { district: "wan chai" },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: {
+      listDate: "2026-10-17",
+      updated: "2026-10-18T21:49:07+08:00",
+      total: { spaces: 3, vacant: 1, occupied: 1, notInUse: 1, noData: 0 },
+      districts: [{ district: "Wan Chai", spaces: 3, vacant: 1, occupied: 1, notInUse: 1, noData: 0 }],
+      streetsMatched: 2,
+      streets: [
+        {
+          district: "Wan Chai",
+          street: "Lockhart Road",
+          vehicleType: "car",
+          spaces: 2,
+          vacant: 1,
+          occupied: 1,
+          notInUse: 0,
+          noData: 0,
+          hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+          maxStayMinutes: [30],
+          hourlyRate: [16],
+          latitude: 22.278378,
+          longitude: 114.169347,
+        },
+        {
+          district: "Wan Chai",
+          street: "Stewart Road",
+          vehicleType: "car",
+          spaces: 1,
+          vacant: 0,
+          occupied: 0,
+          notInUse: 1,
+          noData: 0,
+          hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+          maxStayMinutes: [30],
+          hourlyRate: [16],
+          latitude: 22.279341,
+          longitude: 114.176727,
+        },
+      ],
+    },
+    ttl: 120,
+  },
+  {
+    name: "parking_meter_vacancy counts every district, leaving out test meters",
+    tool: "parking_meter_vacancy",
+    input: { lang: "tc" },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: {
+      listDate: "2026-10-17",
+      updated: "2026-10-18T21:49:07+08:00",
+      total: { spaces: 5, vacant: 2, occupied: 1, notInUse: 1, noData: 1 },
+      districts: [
+        { district: "Tuen Mun", spaces: 1, vacant: 0, occupied: 0, notInUse: 0, noData: 1 },
+        { district: "灣仔", spaces: 3, vacant: 1, occupied: 1, notInUse: 1, noData: 0 },
+        { district: "荃灣", spaces: 1, vacant: 1, occupied: 0, notInUse: 0, noData: 0 },
+      ],
+    },
+  },
+  {
+    tool: "parking_meter_spaces",
+    input: { street: "lockhart", status: "vacant" },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: [
+      {
+        id: "1199A",
+        district: "Wan Chai",
+        street: "Lockhart Road",
+        section: "Fenwick Street",
+        vehicleType: "car",
+        status: "vacant",
+        since: "2026-10-18T21:49:07+08:00",
+        latitude: 22.278373,
+        longitude: 114.169394,
+        maxStayMinutes: 30,
+        hourlyRate: 16,
+        hours: "Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00",
+      },
+    ],
+    ttl: 120,
+  },
+  {
+    name: "parking_meter_spaces finds goods vehicle spaces by a Chinese street name",
+    tool: "parking_meter_spaces",
+    input: { street: "汀九", vehicleType: "goods", lang: "sc" },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: [
+      {
+        id: "20501A",
+        district: "荃湾",
+        street: "青山公路 － 汀九段",
+        section: "汀九泳滩",
+        vehicleType: "goods",
+        status: "vacant",
+        since: "2026-10-18T08:01:11+08:00",
+        latitude: 22.363715,
+        longitude: 114.068115,
+        maxStayMinutes: 120,
+        hourlyRate: 8,
+        hours: "星期一至六 08:00–20:00；星期日及公众假期 10:00–22:00",
+      },
+    ],
+  },
+  {
+    tool: "parking_meter_nearby",
+    input: { latitude: 22.2784, longitude: 114.1694, radius: 100 },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: {
+      center: { latitude: 22.2784, longitude: 114.1694 },
+      radiusMeters: 100,
+      updated: "2026-10-18T21:49:07+08:00",
+      total: { spaces: 2, vacant: 1, occupied: 1, notInUse: 0, noData: 0 },
+      streetsMatched: 1,
+      streets: [
+        {
+          district: "Wan Chai",
+          street: "Lockhart Road",
+          vehicleType: "car",
+          spaces: 2,
+          vacant: 1,
+          occupied: 1,
+          notInUse: 0,
+          noData: 0,
+          hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+          maxStayMinutes: [30],
+          hourlyRate: [16],
+          latitude: 22.278373,
+          longitude: 114.169394,
+          distanceMeters: 3,
+        },
+      ],
+    },
+    ttl: 120,
+  },
+  {
+    tool: "parking_sensor_vacancy",
+    input: { search: "Bride's Pool" },
+    request: { url: SENSOR_SPACES },
+    reply: sensorSpaces,
+    lookups: { [SENSOR_OCCUPANCY]: sensorOccupancy },
+    data: {
+      listDate: "2026-10-18",
+      total: { spaces: 3, vacant: 0, occupied: 0, notInUse: 3, noData: 0 },
+      sections: [
+        {
+          site: "A101",
+          district: "North District",
+          street: "Bride’s Pool Road",
+          section: "Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus)",
+          vehicleType: "car",
+          spaces: 2,
+          vacant: 0,
+          occupied: 0,
+          notInUse: 2,
+          noData: 0,
+          latitude: 22.502228,
+          longitude: 114.237742,
+          updated: "2026-07-02T09:09:40+08:00",
+        },
+        {
+          site: "A101",
+          district: "North District",
+          street: "Bride’s Pool Road",
+          section: "Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus)",
+          vehicleType: "coach",
+          spaces: 1,
+          vacant: 0,
+          occupied: 0,
+          notInUse: 1,
+          noData: 0,
+          latitude: 22.502201,
+          longitude: 114.237398,
+          updated: "2025-09-19T15:16:27+08:00",
+        },
+      ],
+    },
+    ttl: 120,
+  },
+  {
+    name: "parking_sensor_vacancy lists disabled spaces in Chinese",
+    tool: "parking_sensor_vacancy",
+    input: { vehicleType: "disabled", lang: "tc" },
+    request: { url: SENSOR_SPACES },
+    reply: sensorSpaces,
+    lookups: { [SENSOR_OCCUPANCY]: sensorOccupancy },
+    data: {
+      listDate: "2026-10-18",
+      total: { spaces: 1, vacant: 1, occupied: 0, notInUse: 0, noData: 0 },
+      sections: [
+        {
+          site: "A115",
+          district: "沙田區",
+          street: "恆信街",
+          section: "恆信街",
+          vehicleType: "disabled",
+          spaces: 1,
+          vacant: 1,
+          occupied: 0,
+          notInUse: 0,
+          noData: 0,
+          latitude: 22.407261,
+          longitude: 114.223089,
+          updated: "2026-10-18T19:34:48+08:00",
+        },
+      ],
+    },
+  },
+
+  // td-traffic
+  {
+    tool: "traffic_news",
+    input: { search: "ting kau" },
+    request: { url: "https://www.td.gov.hk/en/special_news/trafficnews.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.td.gov.hk/en/special_news/trafficnews.xsd">
+  <message>
+    <INCIDENT_NUMBER>IN-26-07624</INCIDENT_NUMBER>
+    <INCIDENT_HEADING_EN>Road Incident</INCIDENT_HEADING_EN>
+    <INCIDENT_HEADING_CN>道路事故</INCIDENT_HEADING_CN>
+    <INCIDENT_DETAIL_EN>Traffic Accident</INCIDENT_DETAIL_EN>
+    <INCIDENT_DETAIL_CN>交通意外</INCIDENT_DETAIL_CN>
+    <LOCATION_EN>Gloucester Road Service Road</LOCATION_EN>
+    <LOCATION_CN>告士打道輔助道路</LOCATION_CN>
+    <DISTRICT_EN/>
+    <DISTRICT_CN/>
+    <DIRECTION_EN>Central</DIRECTION_EN>
+    <DIRECTION_CN>中環</DIRECTION_CN>
+    <ANNOUNCEMENT_DATE>2026-10-18T21:19:00</ANNOUNCEMENT_DATE>
+    <INCIDENT_STATUS_EN>CLOSED</INCIDENT_STATUS_EN>
+    <INCIDENT_STATUS_CN>完結</INCIDENT_STATUS_CN>
+    <NEAR_LANDMARK_EN>Marsh Road</NEAR_LANDMARK_EN>
+    <NEAR_LANDMARK_CN>馬師道</NEAR_LANDMARK_CN>
+    <BETWEEN_LANDMARK_EN/>
+    <BETWEEN_LANDMARK_CN/>
+    <ID>148152</ID>
+    <CONTENT_EN>The only lane of Gloucester Road Service Road (Inner Gloucester Road) (Central bound) near Marsh Road which was closed due to traffic accident is re-opened to all traffic. </CONTENT_EN>
+    <CONTENT_CN>較早前因交通意外而封閉的告士打道輔助道路(內告士打道)(往中環方向)近馬師道的唯一行車線現已解封。</CONTENT_CN>
+    <LATITUDE/>
+    <LONGITUDE/>
+  </message>
+  <message>
+    <INCIDENT_NUMBER>IN-26-07625</INCIDENT_NUMBER>
+    <INCIDENT_HEADING_EN>Road Incident</INCIDENT_HEADING_EN>
+    <INCIDENT_HEADING_CN>道路事故</INCIDENT_HEADING_CN>
+    <INCIDENT_DETAIL_EN>Traffic Accident</INCIDENT_DETAIL_EN>
+    <INCIDENT_DETAIL_CN>交通意外</INCIDENT_DETAIL_CN>
+    <LOCATION_EN>Tsing Long Highway (Ting Kau Bridge)</LOCATION_EN>
+    <LOCATION_CN>青朗公路(汀九橋)</LOCATION_CN>
+    <DISTRICT_EN>Tsuen Wan</DISTRICT_EN>
+    <DISTRICT_CN>荃灣</DISTRICT_CN>
+    <DIRECTION_EN>Kowloon</DIRECTION_EN>
+    <DIRECTION_CN>九龍</DIRECTION_CN>
+    <ANNOUNCEMENT_DATE>2026-10-18T22:47:00</ANNOUNCEMENT_DATE>
+    <INCIDENT_STATUS_EN>NEW</INCIDENT_STATUS_EN>
+    <INCIDENT_STATUS_CN>最新情況</INCIDENT_STATUS_CN>
+    <NEAR_LANDMARK_EN/>
+    <NEAR_LANDMARK_CN/>
+    <BETWEEN_LANDMARK_EN/>
+    <BETWEEN_LANDMARK_CN/>
+    <ID>148153</ID>
+    <CONTENT_EN>Due to traffic accident , the fast lane of Tsing Long Highway (Ting Kau Bridge) (Kowloon bound) is closed to all traffic. Only remaining lanes are available to motorists. </CONTENT_EN>
+    <CONTENT_CN>因交通意外，青朗公路(汀九橋)(往九龍方向) 的快線現已封閉。 駕駛人士只可使用餘下行車線行車。</CONTENT_CN>
+    <LATITUDE>22.3618</LATITUDE>
+    <LONGITUDE>114.1087</LONGITUDE>
+  </message>
+</list>`,
+    data: [
+      {
+        id: 148153,
+        incidentNumber: "IN-26-07625",
+        status: "new",
+        heading: "Road Incident",
+        detail: "Traffic Accident",
+        location: "Tsing Long Highway (Ting Kau Bridge)",
+        district: "Tsuen Wan",
+        direction: "Kowloon",
+        announcedAt: "2026-10-18T22:47:00+08:00",
+        content: "Due to traffic accident , the fast lane of Tsing Long Highway (Ting Kau Bridge) (Kowloon bound) is closed to all traffic. Only remaining lanes are available to motorists.",
+        latitude: 22.3618,
+        longitude: 114.1087,
+      },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 120,
+  },
+  {
+    name: "traffic_news reads the Chinese copy of a single message and filters by district",
+    tool: "traffic_news",
+    input: { district: "荃灣", lang: "tc" },
+    request: { url: "https://www.td.gov.hk/tc/special_news/trafficnews.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>
+<list>
+  <message>
+    <INCIDENT_NUMBER>IN-26-07625</INCIDENT_NUMBER>
+    <INCIDENT_HEADING_EN>Road Incident</INCIDENT_HEADING_EN>
+    <INCIDENT_HEADING_CN>道路事故</INCIDENT_HEADING_CN>
+    <INCIDENT_DETAIL_EN>Traffic Accident</INCIDENT_DETAIL_EN>
+    <INCIDENT_DETAIL_CN>交通意外</INCIDENT_DETAIL_CN>
+    <LOCATION_EN>Tsing Long Highway (Ting Kau Bridge)</LOCATION_EN>
+    <LOCATION_CN>青朗公路(汀九橋)</LOCATION_CN>
+    <DISTRICT_EN>Tsuen Wan</DISTRICT_EN>
+    <DISTRICT_CN>荃灣</DISTRICT_CN>
+    <DIRECTION_EN>Kowloon</DIRECTION_EN>
+    <DIRECTION_CN>九龍</DIRECTION_CN>
+    <ANNOUNCEMENT_DATE>2026-10-18T23:04:00</ANNOUNCEMENT_DATE>
+    <INCIDENT_STATUS_EN>UPDATED</INCIDENT_STATUS_EN>
+    <INCIDENT_STATUS_CN>更新情況</INCIDENT_STATUS_CN>
+    <ID>148154</ID>
+    <CONTENT_EN>The fast lane of Tsing Long Highway (Ting Kau Bridge) (Kowloon bound) which was closed due to traffic accident is re-opened to all traffic. </CONTENT_EN>
+    <CONTENT_CN>較早前因交通意外而封閉的青朗公路(汀九橋)(往九龍方向) 的快線現已解封。</CONTENT_CN>
+    <LATITUDE/>
+    <LONGITUDE/>
+  </message>
+</list>`,
+    data: [
+      {
+        id: 148154,
+        incidentNumber: "IN-26-07625",
+        status: "updated",
+        heading: "道路事故",
+        detail: "交通意外",
+        location: "青朗公路(汀九橋)",
+        district: "荃灣",
+        direction: "九龍",
+        announcedAt: "2026-10-18T23:04:00+08:00",
+        content: "較早前因交通意外而封閉的青朗公路(汀九橋)(往九龍方向) 的快線現已解封。",
+      },
+    ],
+  },
+  {
+    tool: "traffic_journey_times",
+    input: { to: "airport" },
+    request: { url: "https://resource.data.one.gov.hk/td/jss/Journeytimev2.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jtis_journey_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://data.one.gov.hk/td http://data.one.gov.hk/xsd/td/journeytime.xsd" xmlns="http://data.one.gov.hk/td">
+    <jtis_journey_time>
+        <LOCATION_ID>H1</LOCATION_ID>
+        <DESTINATION_ID>CH</DESTINATION_ID>
+        <CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE>
+        <JOURNEY_TYPE>1</JOURNEY_TYPE>
+        <JOURNEY_DATA>4</JOURNEY_DATA>
+        <COLOUR_ID>3</COLOUR_ID>
+        <JOURNEY_DESC/>
+    </jtis_journey_time>
+    <jtis_journey_time>
+        <LOCATION_ID>K07</LOCATION_ID>
+        <DESTINATION_ID>ACTT</DESTINATION_ID>
+        <CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE>
+        <JOURNEY_TYPE>1</JOURNEY_TYPE>
+        <JOURNEY_DATA>21</JOURNEY_DATA>
+        <COLOUR_ID>2</COLOUR_ID>
+        <JOURNEY_DESC/>
+    </jtis_journey_time>
+    <jtis_journey_time>
+        <LOCATION_ID>K07</LOCATION_ID>
+        <DESTINATION_ID>ATSCA</DESTINATION_ID>
+        <CAPTURE_DATE>2026-10-18T23:11:00</CAPTURE_DATE>
+        <JOURNEY_TYPE>2</JOURNEY_TYPE>
+        <JOURNEY_DATA>3</JOURNEY_DATA>
+        <COLOUR_ID>-1</COLOUR_ID>
+        <JOURNEY_DESC>Tunnel Closed</JOURNEY_DESC>
+    </jtis_journey_time>
+    <jtis_journey_time>
+        <LOCATION_ID>K07</LOCATION_ID>
+        <DESTINATION_ID>WH</DESTINATION_ID>
+        <CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE>
+        <JOURNEY_TYPE>1</JOURNEY_TYPE>
+        <JOURNEY_DATA>6</JOURNEY_DATA>
+        <COLOUR_ID>3</COLOUR_ID>
+        <JOURNEY_DESC/>
+    </jtis_journey_time>
+</jtis_journey_list>`,
+    data: {
+      capturedAt: "2026-10-18T23:11:00+08:00",
+      indicators: [
+        {
+          code: "K07",
+          location: "West Kowloon Highway westbound near MTR Nam Cheong Station",
+          region: "Kowloon",
+          journeys: [
+            { destinationCode: "ACTT", destination: "Airport via Route 3", minutes: 21, colour: "amber" },
+            { destinationCode: "ATSCA", destination: "Airport via Route 8", minutes: null, colour: null, notice: "Tunnel closed" },
+          ],
+        },
+      ],
+    },
+    ttl: 120,
+  },
+  {
+    name: "traffic_journey_times picks one sign by its code, in Simplified Chinese",
+    tool: "traffic_journey_times",
+    input: { from: "h1", lang: "sc" },
+    request: { url: "https://resource.data.one.gov.hk/td/jss/Journeytimev2.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jtis_journey_list xmlns="http://data.one.gov.hk/td">
+    <jtis_journey_time><LOCATION_ID>H1</LOCATION_ID><DESTINATION_ID>CH</DESTINATION_ID><CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE><JOURNEY_TYPE>1</JOURNEY_TYPE><JOURNEY_DATA>4</JOURNEY_DATA><COLOUR_ID>3</COLOUR_ID><JOURNEY_DESC/></jtis_journey_time>
+    <jtis_journey_time><LOCATION_ID>H11</LOCATION_ID><DESTINATION_ID>EH</DESTINATION_ID><CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE><JOURNEY_TYPE>1</JOURNEY_TYPE><JOURNEY_DATA>4</JOURNEY_DATA><COLOUR_ID>3</COLOUR_ID><JOURNEY_DESC/></jtis_journey_time>
+    <jtis_journey_time><LOCATION_ID>H1</LOCATION_ID><DESTINATION_ID>EH</DESTINATION_ID><CAPTURE_DATE>2026-10-18T23:09:00</CAPTURE_DATE><JOURNEY_TYPE>2</JOURNEY_TYPE><JOURNEY_DATA>1</JOURNEY_DATA><COLOUR_ID>1</COLOUR_ID><JOURNEY_DESC>Traffic Congestion</JOURNEY_DESC></jtis_journey_time>
+</jtis_journey_list>`,
+    data: {
+      capturedAt: "2026-10-18T23:09:00+08:00",
+      indicators: [
+        {
+          code: "H1",
+          location: "告士打道东行近税务大楼",
+          region: "香港岛",
+          journeys: [
+            { destinationCode: "CH", destination: "红磡海底隧道", minutes: 4, colour: "green" },
+            { destinationCode: "EH", destination: "东区海底隧道", minutes: null, colour: "red", notice: "交通挤塞" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    tool: "traffic_cameras",
+    input: { search: "tunnel", region: "hongKongIsland" },
+    request: { url: "https://static.data.gov.hk/td/traffic-snapshot-images/code/Traffic_Camera_Locations_En.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>
+<image-list>
+	<image>
+		<key>H429F</key>
+		<region>Hong Kong Island</region>
+		<district>Southern</district>
+		<description>Aberdeen Praya Road near Fish Market [H429F]</description>
+		<easting>833549</easting>
+		<northing>812187</northing>
+		<latitude>22.24845</latitude>
+		<longitude>114.1505</longitude>
+		<url>https://tdcctv.data.one.gov.hk/H429F.JPG</url>
+	</image>
+	<image>
+		<key>H210F</key>
+		<region>Hong Kong Island</region>
+		<district>Wan Chai</district>
+		<description>Aberdeen Tunnel - Wan Chai Side [H210F]</description>
+		<easting>836525</easting>
+		<northing>815094</northing>
+		<latitude>22.2747</latitude>
+		<longitude>114.17936</longitude>
+		<url>https://tdcctv.data.one.gov.hk/H210F.JPG</url>
+	</image>
+	<image>
+		<key>H207F</key>
+		<region>Hong Kong Island</region>
+		<district>Wan Chai</district>
+		<description>Cross Harbour Tunnel Hong Kong Side [H207F]</description>
+		<easting>836788</easting>
+		<northing>815823</northing>
+		<latitude>22.28128179</latitude>
+		<longitude>114.1819201</longitude>
+		<url>https://tdcctv.data.one.gov.hk/H207F.JPG</url>
+	</image>
+	<image>
+		<key>K107F</key>
+		<region>Kowloon</region>
+		<district>Yau Tsim Mong</district>
+		<description>Cross Harbour Tunnel Kowloon Side [K107F]</description>
+		<easting>836665</easting>
+		<northing>818282</northing>
+		<latitude>22.30349</latitude>
+		<longitude>114.18073</longitude>
+		<url>https://tdcctv.data.one.gov.hk/K107F.JPG</url>
+	</image>
+</image-list>`,
+    data: [
+      { key: "H210F", region: "Hong Kong Island", district: "Wan Chai", description: "Aberdeen Tunnel - Wan Chai Side", latitude: 22.2747, longitude: 114.17936, imageUrl: "https://tdcctv.data.one.gov.hk/H210F.JPG" },
+      { key: "H207F", region: "Hong Kong Island", district: "Wan Chai", description: "Cross Harbour Tunnel Hong Kong Side", latitude: 22.28128179, longitude: 114.1819201, imageUrl: "https://tdcctv.data.one.gov.hk/H207F.JPG" },
+    ],
+    meta: { total: 2, returned: 2, truncated: false },
+    ttl: 86400,
+  },
+  {
+    name: "traffic_cameras filters by district in Traditional Chinese",
+    tool: "traffic_cameras",
+    input: { district: "黃大仙", lang: "tc" },
+    request: { url: "https://static.data.gov.hk/td/traffic-snapshot-images/code/Traffic_Camera_Locations_Tc.xml" },
+    reply: `<?xml version="1.0" encoding="UTF-8"?>
+<image-list>
+	<image><key>K505F</key><region>九龍</region><district>黃大仙區</district><description>龍翔道/竹園道 [K505F]</description><easting>836794</easting><northing>821148</northing><latitude>22.34290651</latitude><longitude>114.1845919</longitude><url>https://tdcctv.data.one.gov.hk/K505F.JPG</url></image>
+	<image><key>H429F</key><region>香港島</region><district>南區</district><description>香港仔海傍道近魚市場 [H429F]</description><easting>833549</easting><northing>812187</northing><latitude>22.24845</latitude><longitude>114.1505</longitude><url>https://tdcctv.data.one.gov.hk/H429F.JPG</url></image>
+</image-list>`,
+    data: [{ key: "K505F", region: "九龍", district: "黃大仙區", description: "龍翔道/竹園道", latitude: 22.34290651, longitude: 114.1845919, imageUrl: "https://tdcctv.data.one.gov.hk/K505F.JPG" }],
   },
 ];
 
@@ -785,6 +2423,18 @@ describe("MCP tool upstream behaviour", () => {
     expect(headers).toMatchObject({ Accept: "application/json", "Content-Type": "application/json", "User-Agent": expect.stringMatching(/^mcprouter\//) });
   });
 
+  it("reads today's flight board in Hong Kong time when no date is given", async () => {
+    const { service, tool } = find("airport_departures");
+    vi.useFakeTimers({ now: new Date("2026-10-18T16:30:00Z"), toFake: ["Date"] });
+    fetchMock.mockImplementation(async () => new Response("[]"));
+    try {
+      const result = await executeTool(service, tool, {});
+      expect(result.meta.source).toBe("https://www.hongkongairport.com/flightinfo-rest/rest/flights/past?arrival=false&cargo=false&lang=en&date=2026-10-19");
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it("reports an upstream HTTP error with its status", async () => {
     const { service, tool } = find("hko_current_weather");
     fetchMock.mockImplementation(async () => new Response("maintenance", { status: 502 }));
@@ -820,5 +2470,13 @@ describe("MCP tool upstream behaviour", () => {
     await expect(executeTool(service, tool, { stopId: "Z" })).rejects.toThrow();
     expect((await executeTool(service, tool, { stopId: "Z" })).data).toEqual({ stop: "Z" });
     expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it("explains a cyclone id the Observatory has no track for", async () => {
+    const { service, tool } = find("hko_cyclone_track");
+    fetchMock.mockImplementation(async (url) =>
+      String(url).endsWith("tc_list.xml") ? new Response("<TropicalCycloneList></TropicalCycloneList>") : new Response("<html>Not found</html>", { status: 404 }),
+    );
+    await expect(executeTool(service, tool, { id: 2602 })).rejects.toThrow(/no track for tropical cyclone 2602/);
   });
 });

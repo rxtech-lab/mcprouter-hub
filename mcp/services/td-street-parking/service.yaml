@@ -1,0 +1,55 @@
+id: td-street-parking
+title: On-street Parking
+description: Live vacancy of on-street metered parking spaces across Hong Kong, and of the non-metered spaces with sensors at country park roads, from the Transport Department.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0028, API-3629]
+datasets:
+  - hk-td-msd_1-metered-parking-spaces-data
+  - hk-td-msd_2-non-metered-parking-spaces-data
+# Occupancy changes by the minute.
+cacheTtl: 120
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: parking_meter_vacancy
+    title: Metered parking vacancy by street
+    description: Live count of vacant and occupied metered on-street parking spaces, per district and, when a district or street is given, per street (the most vacancies first), with the meters' operating hours, longest stay, hourly rate and a point on the street. Vehicle types are car (any vehicle except medium and heavy goods vehicles, buses, motorcycles and cycles), goods (goods vehicles) and coach. Use parking_meter_spaces for the individual spaces on one street.
+    handler: meteredVacancy
+    timeoutMs: 30000
+    input:
+      district: { type: string, description: "District or neighbourhood, in English or Chinese, e.g. Wan Chai, Mong Kok or 旺角" }
+      street: { type: string, description: "Text in the street name or the section of the street, e.g. Lockhart Road" }
+      vehicleType: { type: string, enum: [car, goods, coach], description: "Only spaces for this vehicle type" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the place names and operating hours" }
+  - name: parking_meter_spaces
+    title: Metered spaces on a street
+    description: Each metered parking space on a street, with its id, section of the street, live status (vacant, occupied, not_in_use or no_data for meters without a sensor yet), when the status last changed, location, longest stay, hourly rate and operating hours.
+    handler: meteredStreetSpaces
+    timeoutMs: 30000
+    input:
+      street: { type: string, required: true, description: "Text in the street name or the section of the street, e.g. Lockhart Road or 駱克道" }
+      district: { type: string, description: "District or neighbourhood, to tell apart streets of the same name" }
+      vehicleType: { type: string, enum: [car, goods, coach], description: "Only spaces for this vehicle type" }
+      status: { type: string, enum: [vacant, occupied, not_in_use, no_data], description: "Only spaces with this status, e.g. vacant" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the place names and operating hours" }
+    response:
+      limit: 150
+  - name: parking_meter_nearby
+    title: Metered parking near a place
+    description: Metered on-street parking around a point, per street with live vacant and occupied counts, nearest first. Each street points at its nearest vacant space (or its nearest space when none is free) and gives the straight-line distance to it in metres.
+    handler: meteredNearby
+    timeoutMs: 30000
+    input:
+      latitude: { type: number, required: true, minimum: 22.1, maximum: 22.6, description: "Latitude of the place, e.g. 22.2783" }
+      longitude: { type: number, required: true, minimum: 113.8, maximum: 114.5, description: "Longitude of the place, e.g. 114.1747" }
+      radius: { type: integer, minimum: 50, maximum: 2000, default: 300, description: "Search radius in metres" }
+      vehicleType: { type: string, enum: [car, goods, coach], description: "Only spaces for this vehicle type" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the place names and operating hours" }
+  - name: parking_sensor_vacancy
+    title: Non-metered parking with sensors
+    description: Live vacancy of the free (non-metered) on-street parking spaces fitted with sensors in a Transport Department trial, mostly at country park roads such as Bride's Pool Road, Pat Heung Road, Sai Sha Road and Clear Water Bay Road, plus some disabled parking spaces. Counted per section of road and vehicle type (car, coach or disabled). Many spaces report not_in_use.
+    handler: sensorVacancy
+    input:
+      search: { type: string, description: "Text in the district, road or section name, e.g. Bride's Pool or 新娘潭" }
+      vehicleType: { type: string, enum: [car, coach, disabled], description: "Only spaces for this vehicle type" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the place names" }

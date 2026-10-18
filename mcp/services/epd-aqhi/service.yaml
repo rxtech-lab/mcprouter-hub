@@ -1,0 +1,48 @@
+id: epd-aqhi
+title: Air Quality Health Index
+description: Current Air Quality Health Index (AQHI) and health risk at every general and roadside monitoring station, the territory-wide range and forecast, and the past 24 hours at a station, from the Environmental Protection Department.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0031]
+datasets:
+  - hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations
+  - hk-epd-airteam-current-air-quality-health-index-range-and-forecast
+baseUrl: https://www.aqhi.gov.hk/epd/ddata/html/out
+lang:
+  param: lang
+  in: path
+  map: { en: Eng, tc: ChT, sc: ChS }
+# The feeds are rebuilt every hour, at half past.
+cacheTtl: 600
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: aqhi_current
+    title: Current AQHI by station
+    description: Latest hourly Air Quality Health Index (AQHI, 1-10 and 10+) and health risk (low, moderate, high, very high, serious) at each of Hong Kong's 15 general and 3 roadside (Causeway Bay, Central, Mong Kok) air quality monitoring stations.
+    path: /aqhi_ind_rss_{lang}.xml
+    transform: { response: currentAqhi }
+    input:
+      station: { type: string, in: local, description: "Only this station: its name or part of it in English or Chinese, e.g. Sha Tin, Mong Kok or 觀塘" }
+      type: { type: string, enum: [general, roadside], in: local, description: "Only general stations or only roadside stations" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the station names and risk labels" }
+    response:
+      format: xml
+  - name: aqhi_forecast
+    title: AQHI range and forecast
+    description: The current AQHI range and health risk across general and roadside stations, and the forecast health risk for general and roadside stations over the next periods (e.g. tomorrow morning and afternoon).
+    path: /aqhirss_{lang}.xml
+    transform: { response: aqhiForecast }
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the risk labels and forecast periods" }
+    response:
+      format: xml
+  - name: aqhi_past_24h
+    title: AQHI over the past 24 hours
+    description: Hourly AQHI and health risk over the past 24 hours at one air quality monitoring station, with the highest reading.
+    path: /24aqhi_{lang}.xml
+    transform: { response: pastAqhi }
+    input:
+      station: { type: string, in: local, required: true, description: "Station name or part of it in English or Chinese, e.g. Central/Western, Tung Chung or 旺角" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the station names" }
+    response:
+      format: xml

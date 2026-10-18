@@ -1,0 +1,25 @@
+id: hko-cyclone
+title: Tropical Cyclones
+description: Tropical cyclones the Hong Kong Observatory is tracking, with their past, current and forecast positions, intensity and distance from Hong Kong.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0033]
+datasets:
+  - hk-hko-rss-tc-track-info
+# The Observatory updates a track with each bulletin, at least every few hours while a cyclone is near.
+cacheTtl: 300
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: hko_tropical_cyclones
+    title: Current tropical cyclones
+    description: Tropical cyclones the Hong Kong Observatory is tracking now (in the western North Pacific and South China Sea), each with its id, name, latest position and time, intensity category (tropical depression up to super typhoon), maximum sustained wind near the centre, distance and bearing from Hong Kong, and its closest forecast approach to Hong Kong. An empty list means no cyclone is being tracked. For typhoon signals in force use hko_warning_summary.
+    handler: tropicalCyclones
+    input:
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the names and intensity categories (cyclone names are only published in English and Traditional Chinese)" }
+  - name: hko_cyclone_track
+    title: Tropical cyclone track
+    description: Past track and forecast track of one tropical cyclone from the Hong Kong Observatory - every analysed position (6-hourly) with intensity and maximum sustained wind, the latest position, and the forecast positions for the next days with their distance and bearing from Hong Kong. Times are Hong Kong time. Leave out the id for the first cyclone the Observatory is tracking now; tracks of earlier cyclones this year usually stay readable by id.
+    handler: cycloneTrack
+    input:
+      id: { type: integer, minimum: 1000, maximum: 9999, description: "The Observatory's 4-digit cyclone id from hko_tropical_cyclones, e.g. 2641" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the name and intensity categories" }

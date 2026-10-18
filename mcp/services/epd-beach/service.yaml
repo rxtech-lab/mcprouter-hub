@@ -1,0 +1,22 @@
+id: epd-beach
+title: Beach Water Quality
+description: Water quality grading of Hong Kong's gazetted bathing beaches from the Environmental Protection Department.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0040]
+datasets:
+  - hk-epd-beachteam-beach-water-quality-grading
+# The Environmental Protection Department updates the grading once a day.
+cacheTtl: 1800
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: beach_water_quality
+    title: Beach water quality grading
+    description: Latest water quality grade of every gazetted bathing beach in Hong Kong (about 40, in Southern, Islands, Sai Kung, Tsuen Wan, Tuen Mun and Tai Po districts) from the Environmental Protection Department, with district, coordinates and a link to the beach report. Grade 1 Good, 2 Fair, 3 Poor, 4 Very Poor, based on the geometric mean of the last five E. coli counts (up to 24, 25-180, 181-610 and over 610 per 100 mL); grades 1 and 2 meet the swimming standard. The feed does not say whether a beach is closed or flagged.
+    handler: beachWaterQuality
+    input:
+      beach: { type: string, description: "Only beaches whose name contains this text, in English or Chinese (e.g. Repulse Bay, 淺水灣), or the beach code (e.g. RB)" }
+      district: { type: string, description: "Only beaches in this district, in English or Chinese: Southern, Islands, Sai Kung, Tsuen Wan, Tuen Mun or Tai Po" }
+      grade: { type: integer, minimum: 1, maximum: 4, description: "Only beaches with this grade: 1 Good, 2 Fair, 3 Poor, 4 Very Poor" }
+      maxGrade: { type: integer, minimum: 1, maximum: 4, description: "Only beaches graded this or better, e.g. 2 for beaches fit for swimming" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the beach, district and rating names" }

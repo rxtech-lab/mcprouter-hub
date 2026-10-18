@@ -1,0 +1,52 @@
+id: hk-airport
+title: Hong Kong International Airport Flights
+description: Passenger and cargo departures and arrivals at Hong Kong International Airport (HKG), with codeshares, live status, gates and baggage belts, from the Airport Authority Hong Kong flight information board.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0023]
+datasets:
+  - aahk-team1-flight-info
+baseUrl: https://www.hongkongairport.com/flightinfo-rest/rest
+lang:
+  param: lang
+  map: { en: en, tc: zh_HK, sc: zh_CN }
+# Statuses change by the minute.
+cacheTtl: 120
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: airport_departures
+    title: HKIA departures
+    description: Departures from Hong Kong International Airport on one day (from 91 days ago to 14 days ahead; defaults to today, Hong Kong time), one row per flight in scheduled order. Each row has the scheduled time, flight number and operating airline (ICAO code), codeshare flight numbers, destination airport IATA codes (several when the flight stops on the way), the status as shown on the board (e.g. "Dep 10:47", "Boarding", "Cancelled"), a status keyword (scheduled, estimated, boarding_soon, boarding, final_call, gate_closed, departed, delayed, cancelled), the status time, and for passenger flights the terminal, check-in aisle and gate. Flights scheduled late the day before or just after midnight that leave on the day are included. Narrow long lists with the filters.
+    path: /flights/past
+    query: { arrival: false }
+    transform: { request: defaultDate, response: flights }
+    input:
+      date: { type: string, pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Day in YYYY-MM-DD format; defaults to today in Hong Kong" }
+      cargo: { type: boolean, default: false, description: "Cargo flights instead of passenger flights" }
+      flight: { type: string, in: local, description: "Only this flight number, including codeshares, e.g. CX 261 or CX261" }
+      airline: { type: string, in: local, description: "Only this airline: a two-letter IATA code matches flight numbers (CX), a three-letter ICAO code the operating airline (CPA)" }
+      airport: { type: string, in: local, description: "Only flights to this destination airport, by its IATA code, e.g. NRT or LHR" }
+      status: { type: string, in: local, description: "Only flights whose status contains this text, e.g. cancelled, delayed, boarding or departed" }
+      from: { type: string, in: local, pattern: "^\\d{2}:\\d{2}$", description: "Only flights scheduled to leave at or after this time on the day, HH:MM" }
+      to: { type: string, in: local, pattern: "^\\d{2}:\\d{2}$", description: "Only flights scheduled to leave at or before this time on the day, HH:MM" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the statuses" }
+    response:
+      limit: 100
+  - name: airport_arrivals
+    title: HKIA arrivals
+    description: Arrivals at Hong Kong International Airport on one day (from 91 days ago to 14 days ahead; defaults to today, Hong Kong time), one row per flight in scheduled order. Each row has the scheduled time, flight number and operating airline (ICAO code), codeshare flight numbers, origin airport IATA codes (several when the flight stops on the way), the status as shown on the board (e.g. "At gate 10:34", "Est at 23:35", "Cancelled"), a status keyword (scheduled, estimated, landed, at_gate, delayed, cancelled), the status time, and for passenger flights the baggage belt, arrival hall and parking stand. Flights scheduled just before or after midnight that land on the day are included. Narrow long lists with the filters.
+    path: /flights/past
+    query: { arrival: true }
+    transform: { request: defaultDate, response: flights }
+    input:
+      date: { type: string, pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Day in YYYY-MM-DD format; defaults to today in Hong Kong" }
+      cargo: { type: boolean, default: false, description: "Cargo flights instead of passenger flights" }
+      flight: { type: string, in: local, description: "Only this flight number, including codeshares, e.g. CX 261 or CX261" }
+      airline: { type: string, in: local, description: "Only this airline: a two-letter IATA code matches flight numbers (CX), a three-letter ICAO code the operating airline (CPA)" }
+      airport: { type: string, in: local, description: "Only flights from this origin airport, by its IATA code, e.g. NRT or LHR" }
+      status: { type: string, in: local, description: "Only flights whose status contains this text, e.g. cancelled, delayed, landed or at gate" }
+      from: { type: string, in: local, pattern: "^\\d{2}:\\d{2}$", description: "Only flights scheduled to land at or after this time on the day, HH:MM" }
+      to: { type: string, in: local, pattern: "^\\d{2}:\\d{2}$", description: "Only flights scheduled to land at or before this time on the day, HH:MM" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the statuses" }
+    response:
+      limit: 100
