@@ -128,4 +128,53 @@ export const liveCases: Record<string, LiveCase> = {
   // td-carpark
   carpark_info: { input: { search: "mong kok" }, check: nonEmpty },
   carpark_vacancy: { input: {}, check: nonEmpty },
+
+  // epd-aqhi
+  aqhi_current: { input: {}, check: nonEmpty },
+  aqhi_forecast: { input: {} },
+  aqhi_past_24h: { input: { station: "Central/Western" } },
+
+  // epd-beach
+  beach_water_quality: { input: {}, check: nonEmpty },
+
+  // hk-airport
+  airport_departures: { input: { date: dashed(hkDate()) }, check: nonEmpty },
+  airport_arrivals: { input: { date: dashed(hkDate()) }, check: nonEmpty },
+
+  // hk-ferry
+  ferry_routes: { input: {}, check: nonEmpty },
+  ferry_arrivals: { input: { route: "CECC" } },
+  hkkf_timetable: { input: { route: 1 } },
+  hkkf_fares: { input: { route: 1 } },
+
+  // hko-cyclone (empty when there's no tropical cyclone)
+  hko_tropical_cyclones: { input: {} },
+  hko_cyclone_track: { input: {} },
+
+  // hko-regional
+  hko_rainfall_past_hour: { input: {}, check: nonEmpty },
+  hko_uv_index: { input: {} },
+  hko_lightning: { input: {} },
+  hko_regional_weather: { input: {} },
+  hko_heat_stress: { input: {} },
+
+  // hko-tides
+  hko_tide_times: { input: { station: "Quarry Bay", date: dashed(hkDate()) } },
+  hko_tide_observations: { input: {} },
+  hko_sun_moon: { input: { date: dashed(hkDate()) } },
+
+  // kowloon-east-parking
+  ke_carparks: { input: {}, check: nonEmpty },
+  ke_parking_vacancy: { input: {}, check: nonEmpty },
+
+  // td-street-parking
+  parking_meter_vacancy: { input: {}, check: nonEmpty },
+  parking_meter_spaces: { input: { street: "Lockhart" }, check: nonEmpty },
+  parking_meter_nearby: { input: { latitude: 22.2784, longitude: 114.1694, radius: 200 } },
+  parking_sensor_vacancy: { input: {}, check: nonEmpty },
+
+  // td-traffic
+  traffic_news: { input: {} },
+  traffic_journey_times: { input: {}, check: nonEmpty },
+  traffic_cameras: { input: {}, check: nonEmpty },
 };
