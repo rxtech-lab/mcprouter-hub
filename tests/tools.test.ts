@@ -139,6 +139,53 @@ xsi:noNamespaceSchemaLocation="tc_track.xsd">
 
 const surigaeNow = { time: "2026-10-01T02:00:00+08:00", category: "tropical_storm", intensity: "Tropical Storm", maximumWindKmh: 65, latitude: 32.2, longitude: 139.7, distanceKm: 2744, bearing: "ENE" };
 
+const METER_SPACES = "https://resource.data.one.gov.hk/td/psiparkingspaces/spaceinfo/parkingspaces.csv";
+const METER_OCCUPANCY = "https://resource.data.one.gov.hk/td/psiparkingspaces/occupancystatus/occupancystatus.csv";
+
+/** The metered location file starts with its date and a line of commas; Tuen Mun's newest meters have no Chinese names yet. */
+const meterSpaces = [
+  `${BOM}2026-10-17`,
+  ",,,,,,,,,,,,,,,,,,,,,,,",
+  "PoleId,ParkingSpaceId,Region,Region_tc,Region_sc,District,District_tc,District_sc,SubDistrict,SubDistrict_tc,SubDistrict_sc,Street,Street_tc,Street_sc,SectionOfStreet,SectionOfStreet_tc,SectionOfStreet_sc,Latitude,Longitude,VehicleType,LPP,OperatingPeriod,TimeUnit,PaymentUnit",
+  "1199,1199A,HONG KONG,香港島,香港岛,WAN CHAI,灣仔,湾仔,TAI FAT HAU,大佛口,大佛口,LOCKHART ROAD,駱克道,骆克道,FENWICK STREET,分域街,分域街,22.27837319738389,114.1693944716486,A,30,D,15,4.00",
+  "1199,1199B,HONG KONG,香港島,香港岛,WAN CHAI,灣仔,湾仔,TAI FAT HAU,大佛口,大佛口,LOCKHART ROAD,駱克道,骆克道,FENWICK STREET,分域街,分域街,22.27837797330262,114.1693467203257,A,30,D,15,4.00",
+  "1172,1172A,HONG KONG,香港島,香港岛,WAN CHAI,灣仔,湾仔,OI KWAN,愛群,爱群,STEWART ROAD,史釗域道,史钊域道,JAFFE ROAD,謝斐道,谢斐道,22.27934108627336,114.1767267848235,A,30,D,15,4.00",
+  "20501,20501A,NEW TERRITORIES,新界,新界,TSUEN WAN,荃灣,荃湾,TING SHAM,汀深,汀深,CASTLE PEAK ROAD - TING KAU,青山公路 － 汀九段,青山公路 － 汀九段,TING KAU BEACH,汀九泳灘,汀九泳滩,22.363715,114.0681147,G,120,4Q,15,2.00",
+  "22259,22259A,NEW TERRITORIES,,,TUEN MUN,,,SAN HUI,,,HANG FU STREET,,,NERINE COVE BLOCK#5,,,22.3832641,113.9714256,A,120,Q,15,4.00",
+  "90004,90004A,KOWLOON,九龍,九龙,INTERNAL TEST,內部測試,内部测试,CONTRACT 2,合約 2,合约 2,LAI CHI KOK ENGINEERING CENTER,電訊盈科荔枝角工程中心,电讯盈科荔枝角工程中心,INTERNAL TEST,內部測試,内部测试,48.8505009,2.3024468,A,30,Z,5,0.20",
+].join("\r\n");
+
+const meterOccupancy = [
+  "ParkingSpaceId,ParkingMeterStatus,OccupancyStatus,OccupancyDateChanged",
+  "1199A,N,V,10/18/2026 09:49:07 PM",
+  "1199B,N,O,10/18/2026 12:15:38 PM",
+  "1172A,NU,O,10/05/2026 03:34:46 PM",
+  "20501A,N,V,10/18/2026 08:01:11 AM",
+  "90004A,N,V,10/18/2026 10:00:00 PM",
+].join("\r\n");
+
+const SENSOR_SPACES = "https://data.nmospiot.gov.hk/api/pvds/Download/parkingspace";
+const SENSOR_OCCUPANCY = "https://data.nmospiot.gov.hk/api/pvds/Download/occupancystatus";
+
+/** The header names a NonMetered column that no row fills. */
+const sensorSpaces = [
+  `${BOM}2026-10-18`,
+  "",
+  "FeatureID,ParkingSpaceId,Region,Region_tc,Region_sc,District,District_tc,District_sc,SubDistrict,SubDistrict_tc,SubDistrict_sc,Street,Street_tc,Street_sc,SectionOfStreet,SectionOfStreet_tc,SectionOfStreet_sc,Latitude,Longitude,VehicleType,NonMetered",
+  "2065,A101_CL_001,New Territories,新界,新界,North District,北區,北区,Wu Kau Tang,烏蛟騰,乌蛟腾,Bride’s Pool Road,新娘潭路,新娘潭路,Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus),新娘潭路（近新娘潭前巴士總站）,新娘潭路（近新娘潭前巴士总站）,22.502228,114.237742,A",
+  "2064,A101_CL_002,New Territories,新界,新界,North District,北區,北区,Wu Kau Tang,烏蛟騰,乌蛟腾,Bride’s Pool Road,新娘潭路,新娘潭路,Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus),新娘潭路（近新娘潭前巴士總站）,新娘潭路（近新娘潭前巴士总站）,22.502226,114.237713,A",
+  "2068,A101_BC_013,New Territories,新界,新界,North District,北區,北区,Wu Kau Tang,烏蛟騰,乌蛟腾,Bride’s Pool Road,新娘潭路,新娘潭路,Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus),新娘潭路（近新娘潭前巴士總站）,新娘潭路（近新娘潭前巴士总站）,22.502201,114.237398,C",
+  "5136,A115_DR_017,New Territories,新界,新界,Sha Tin District,沙田區,沙田区,Ma On Shan,馬鞍山,马鞍山,Hang Shun Street,恆信街,恆信街,Hang Shun Street,恆信街,恆信街,22.407261,114.223089,D",
+].join("\n");
+
+const sensorOccupancy = [
+  "FeatureID,ParkingSpaceId,OccupancyStatus,OccupancyDateChanged",
+  "2065,A101_CL_001,NU,2/7/2026 9:9:40",
+  "2064,A101_CL_002,NU,22/5/2026 22:34:38",
+  "2068,A101_BC_013,NU,19/9/2025 15:16:27",
+  "5136,A115_DR_017,V,18/10/2026 19:34:48",
+].join("\n");
+
 const cases: Case[] = [
   // citybus
   {
@@ -1774,6 +1821,227 @@ const cases: Case[] = [
     reply: { results: [{ park_Id: "10", motorCycle: [{ vacancy: 3 }] }, { park_Id: "11", motorCycle: [{ vacancy: 0 }] }] },
     data: [{ park_Id: "11", motorCycle: [{ vacancy: 0 }] }],
     ttl: 60,
+  },
+
+  // td-street-parking
+  {
+    tool: "parking_meter_vacancy",
+    input: { district: "wan chai" },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: {
+      listDate: "2026-10-17",
+      updated: "2026-10-18T21:49:07+08:00",
+      total: { spaces: 3, vacant: 1, occupied: 1, notInUse: 1, noData: 0 },
+      districts: [{ district: "Wan Chai", spaces: 3, vacant: 1, occupied: 1, notInUse: 1, noData: 0 }],
+      streetsMatched: 2,
+      streets: [
+        {
+          district: "Wan Chai",
+          street: "Lockhart Road",
+          vehicleType: "car",
+          spaces: 2,
+          vacant: 1,
+          occupied: 1,
+          notInUse: 0,
+          noData: 0,
+          hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+          maxStayMinutes: [30],
+          hourlyRate: [16],
+          latitude: 22.278378,
+          longitude: 114.169347,
+        },
+        {
+          district: "Wan Chai",
+          street: "Stewart Road",
+          vehicleType: "car",
+          spaces: 1,
+          vacant: 0,
+          occupied: 0,
+          notInUse: 1,
+          noData: 0,
+          hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+          maxStayMinutes: [30],
+          hourlyRate: [16],
+          latitude: 22.279341,
+          longitude: 114.176727,
+        },
+      ],
+    },
+    ttl: 120,
+  },
+  {
+    name: "parking_meter_vacancy counts every district, leaving out test meters",
+    tool: "parking_meter_vacancy",
+    input: { lang: "tc" },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: {
+      listDate: "2026-10-17",
+      updated: "2026-10-18T21:49:07+08:00",
+      total: { spaces: 5, vacant: 2, occupied: 1, notInUse: 1, noData: 1 },
+      districts: [
+        { district: "Tuen Mun", spaces: 1, vacant: 0, occupied: 0, notInUse: 0, noData: 1 },
+        { district: "灣仔", spaces: 3, vacant: 1, occupied: 1, notInUse: 1, noData: 0 },
+        { district: "荃灣", spaces: 1, vacant: 1, occupied: 0, notInUse: 0, noData: 0 },
+      ],
+    },
+  },
+  {
+    tool: "parking_meter_spaces",
+    input: { street: "lockhart", status: "vacant" },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: [
+      {
+        id: "1199A",
+        district: "Wan Chai",
+        street: "Lockhart Road",
+        section: "Fenwick Street",
+        vehicleType: "car",
+        status: "vacant",
+        since: "2026-10-18T21:49:07+08:00",
+        latitude: 22.278373,
+        longitude: 114.169394,
+        maxStayMinutes: 30,
+        hourlyRate: 16,
+        hours: "Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00",
+      },
+    ],
+    ttl: 120,
+  },
+  {
+    name: "parking_meter_spaces finds goods vehicle spaces by a Chinese street name",
+    tool: "parking_meter_spaces",
+    input: { street: "汀九", vehicleType: "goods", lang: "sc" },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: [
+      {
+        id: "20501A",
+        district: "荃湾",
+        street: "青山公路 － 汀九段",
+        section: "汀九泳滩",
+        vehicleType: "goods",
+        status: "vacant",
+        since: "2026-10-18T08:01:11+08:00",
+        latitude: 22.363715,
+        longitude: 114.068115,
+        maxStayMinutes: 120,
+        hourlyRate: 8,
+        hours: "星期一至六 08:00–20:00；星期日及公众假期 10:00–22:00",
+      },
+    ],
+  },
+  {
+    tool: "parking_meter_nearby",
+    input: { latitude: 22.2784, longitude: 114.1694, radius: 100 },
+    request: { url: METER_SPACES },
+    reply: meterSpaces,
+    lookups: { [METER_OCCUPANCY]: meterOccupancy },
+    data: {
+      center: { latitude: 22.2784, longitude: 114.1694 },
+      radiusMeters: 100,
+      updated: "2026-10-18T21:49:07+08:00",
+      total: { spaces: 2, vacant: 1, occupied: 1, notInUse: 0, noData: 0 },
+      streetsMatched: 1,
+      streets: [
+        {
+          district: "Wan Chai",
+          street: "Lockhart Road",
+          vehicleType: "car",
+          spaces: 2,
+          vacant: 1,
+          occupied: 1,
+          notInUse: 0,
+          noData: 0,
+          hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+          maxStayMinutes: [30],
+          hourlyRate: [16],
+          latitude: 22.278373,
+          longitude: 114.169394,
+          distanceMeters: 3,
+        },
+      ],
+    },
+    ttl: 120,
+  },
+  {
+    tool: "parking_sensor_vacancy",
+    input: { search: "Bride's Pool" },
+    request: { url: SENSOR_SPACES },
+    reply: sensorSpaces,
+    lookups: { [SENSOR_OCCUPANCY]: sensorOccupancy },
+    data: {
+      listDate: "2026-10-18",
+      total: { spaces: 3, vacant: 0, occupied: 0, notInUse: 3, noData: 0 },
+      sections: [
+        {
+          site: "A101",
+          district: "North District",
+          street: "Bride’s Pool Road",
+          section: "Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus)",
+          vehicleType: "car",
+          spaces: 2,
+          vacant: 0,
+          occupied: 0,
+          notInUse: 2,
+          noData: 0,
+          latitude: 22.502228,
+          longitude: 114.237742,
+          updated: "2026-07-02T09:09:40+08:00",
+        },
+        {
+          site: "A101",
+          district: "North District",
+          street: "Bride’s Pool Road",
+          section: "Bride’s Pool Road (near Bride’s Pool ex-Bus Terminus)",
+          vehicleType: "coach",
+          spaces: 1,
+          vacant: 0,
+          occupied: 0,
+          notInUse: 1,
+          noData: 0,
+          latitude: 22.502201,
+          longitude: 114.237398,
+          updated: "2025-09-19T15:16:27+08:00",
+        },
+      ],
+    },
+    ttl: 120,
+  },
+  {
+    name: "parking_sensor_vacancy lists disabled spaces in Chinese",
+    tool: "parking_sensor_vacancy",
+    input: { vehicleType: "disabled", lang: "tc" },
+    request: { url: SENSOR_SPACES },
+    reply: sensorSpaces,
+    lookups: { [SENSOR_OCCUPANCY]: sensorOccupancy },
+    data: {
+      listDate: "2026-10-18",
+      total: { spaces: 1, vacant: 1, occupied: 0, notInUse: 0, noData: 0 },
+      sections: [
+        {
+          site: "A115",
+          district: "沙田區",
+          street: "恆信街",
+          section: "恆信街",
+          vehicleType: "disabled",
+          spaces: 1,
+          vacant: 1,
+          occupied: 0,
+          notInUse: 0,
+          noData: 0,
+          latitude: 22.407261,
+          longitude: 114.223089,
+          updated: "2026-10-18T19:34:48+08:00",
+        },
+      ],
+    },
   },
 ];
 

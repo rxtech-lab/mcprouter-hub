@@ -241,6 +241,39 @@ describe("card builders", () => {
     ]);
   });
 
+  it("counts free metered spaces per street", () => {
+    const street = (name: string, vacant: number, spaces: number) => ({
+      district: "Wan Chai",
+      street: name,
+      vehicleType: "car",
+      spaces,
+      vacant,
+      occupied: spaces - vacant,
+      notInUse: 0,
+      noData: 0,
+      hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+      maxStayMinutes: [30],
+      hourlyRate: [16],
+      latitude: 22.278,
+      longitude: 114.169,
+    });
+    const card = cardForToolResult(
+      result("td-street-parking", "parking_meter_vacancy", { street: "road" }, {
+        updated: "2026-10-18T21:49:07+08:00",
+        total: { spaces: 40, vacant: 15, occupied: 25, notInUse: 0, noData: 0 },
+        districts: [],
+        streetsMatched: 2,
+        streets: [street("Lockhart Road", 15, 38), street("Stewart Road", 0, 2)],
+      }),
+    )!;
+    expect(card).toMatchObject({ title: "Metered parking: road", subtitle: "Updated 21:49", footer: null });
+    expect(card.blocks).toEqual([
+      { kind: "stats", items: [{ label: "Vacant", value: "15" }, { label: "Occupied", value: "25" }, { label: "Spaces", value: "40" }] },
+      { kind: "row", title: "Lockhart Road", subtitle: "Wan Chai · Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00", trailing: [{ text: "15 free", tone: "success" }, { text: "of 38" }] },
+      { kind: "row", title: "Stewart Road", subtitle: "Wan Chai · Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00", trailing: [{ text: "0 free", tone: "danger" }, { text: "of 2" }] },
+    ]);
+  });
+
   it("has no card for tools whose result doesn't picture well, or data a builder can't read", () => {
     expect(cardForToolResult(result("datagovhk-catalog", "datagovhk_archive_get_file", {}, { content: "a,b" }))).toBeNull();
     expect(cardForToolResult(result("hko-weather", "hko_earthquake", {}, {}))).toBeNull();

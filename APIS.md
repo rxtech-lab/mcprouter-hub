@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **38 of 3819 implemented**, 3781 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **40 of 3819 implemented**, 3779 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -36,7 +36,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0025` | [Journey time indicators](https://data.gov.hk/en-data/dataset/hk-td-sm_8-journey-time-indicators-v2) | API | Transport Department | 🕒 Coming soon | — |
 | `API-0026` | [Traffic snapshot images](https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images) | API | Transport Department | 🕒 Coming soon | — |
 | `API-0027` | [Land boundary control point waiting times](https://data.gov.hk/en-data/dataset/hk-immd-set28-land-boundary-control-points-waiting-time) | API | Immigration Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
-| `API-0028` | [Metered parking spaces](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) | API | Transport Department | 🕒 Coming soon | — |
+| `API-0028` | [Metered parking spaces](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) | API | Transport Department | ✅ Implemented | [On-street Parking](mcp/services/td-street-parking/service.yaml) |
 | `API-0029` | [Kowloon East parking vacancy](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) | API | Development Bureau | ✅ Implemented | [Kowloon East Parking](mcp/services/kowloon-east-parking/service.yaml) |
 | `API-0121` | [Taxi Fleet Information (Amigo)](https://data.gov.hk/en-data/dataset/amigo-tis_41-taxi-fleet-information-amigo) | API | Amigo (Taxi Fleet Licensee) | 🕒 Coming soon | — |
 | `API-0153` | [Taxi Fleet Information (Big Boss Taxi)](https://data.gov.hk/en-data/dataset/big-boss-taxi-tis_42-taxi-fleet-information-bbt) | API | Big Boss Taxi (Taxi Fleet Licensee) | 🕒 Coming soon | — |
@@ -159,7 +159,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-3626` | [Cross boundary road cargo statistics](https://data.gov.hk/en-data/dataset/hk-tlb-tlb_div5_2-mpb) | Files | Transport and Logistics Bureau | 🕒 Coming soon | — |
 | `API-3627` | [Container Throughput Statistics](https://data.gov.hk/en-data/dataset/hk-tlb-tlb-mpb) | API | Transport and Logistics Bureau | 🕒 Coming soon | — |
 | `API-3628` | [Locations of Licensing and Driving Services Offices, Driving Test and Vehicle Examination Centres, Public Vehicles Unit and Driving-offence Points Office](https://data.gov.hk/en-data/dataset/hk-td-alb_1-alb-office-location) | API | Transport Department | 🕒 Coming soon | — |
-| `API-3629` | [Location and occupancy status of non-metered on-street parking spaces installed with sensors](https://data.gov.hk/en-data/dataset/hk-td-msd_2-non-metered-parking-spaces-data) | API | Transport Department | 🕒 Coming soon | — |
+| `API-3629` | [Location and occupancy status of non-metered on-street parking spaces installed with sensors](https://data.gov.hk/en-data/dataset/hk-td-msd_2-non-metered-parking-spaces-data) | API | Transport Department | ✅ Implemented | [On-street Parking](mcp/services/td-street-parking/service.yaml) |
 | `API-3630` | [Traffic speed map](https://data.gov.hk/en-data/dataset/hk-td-sm_1-traffic-speed-map) | Files | Transport Department | 🕒 Coming soon | — |
 | `API-3631` | [Journey time indicators](https://data.gov.hk/en-data/dataset/hk-td-sm_2-journey-time-indicators) | Files | Transport Department | 🕒 Coming soon | — |
 | `API-3632` | [Speed map panels](https://data.gov.hk/en-data/dataset/hk-td-sm_3-speed-map-panels) | Files | Transport Department | 🕒 Coming soon | — |
