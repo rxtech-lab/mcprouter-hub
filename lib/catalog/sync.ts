@@ -33,7 +33,18 @@ async function mapLimit<T>(items: T[], concurrency: number, deadline: number, ru
  * Bounded by `maxShow` and `budgetMs` so a run fits its time limit;
  * the next run continues where this one stopped.
  */
-export async function syncCatalog({ maxShow = 500, concurrency = 8, budgetMs = 240_000 } = {}): Promise<SyncReport> {
+export async function syncCatalog({
+  maxShow = 500,
+  concurrency = 8,
+  budgetMs = 240_000,
+  onProgress,
+}: {
+  maxShow?: number;
+  concurrency?: number;
+  budgetMs?: number;
+  /** Called after each `package_show` attempt with the running counts. */
+  onProgress?: (progress: { done: number; queued: number; updated: number; unchanged: number; failed: number }) => void;
+} = {}): Promise<SyncReport> {
   const deadline = Date.now() + budgetMs;
   const ids = await listPackageIds();
   const live = new Set(ids);
@@ -60,6 +71,7 @@ export async function syncCatalog({ maxShow = 500, concurrency = 8, budgetMs = 2
     .limit(maxShow);
 
   const report = { fetched: 0, updated: 0, unchanged: 0, failed: 0 };
+  let done = 0;
   await mapLimit(queue, concurrency, deadline, async (row) => {
     try {
       const pkg = await showPackage(row.id, "en");
@@ -77,6 +89,9 @@ export async function syncCatalog({ maxShow = 500, concurrency = 8, budgetMs = 2
       report.failed++;
       const cause = (error as Error).cause as Error | undefined;
       console.warn(`[catalog-sync] ${row.id}:`, cause?.message ?? (error as Error).message);
+    } finally {
+      done++;
+      onProgress?.({ done, queued: queue.length, updated: report.updated, unchanged: report.unchanged, failed: report.failed });
     }
   });
 
