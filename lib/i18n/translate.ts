@@ -50,23 +50,27 @@ export function createTranslator(locale: Locale, messages: Messages): Translator
   };
 
   t.rich = (msgid, values) => {
-    const nodes: ReactNode[] = [];
-    const pattern = /<(\w+)>([\s\S]*?)<\/\1>|\{(\w+)\}/g;
-    const template = lookup(msgid);
-    let last = 0;
-    for (const match of template.matchAll(pattern)) {
-      if (match.index > last) nodes.push(template.slice(last, match.index));
-      const [whole, tag, inner, placeholder] = match;
-      const value = values[tag ?? placeholder];
-      if (tag) {
-        nodes.push(typeof value === "function" ? value(inner) : inner);
-      } else {
-        nodes.push(value === undefined ? whole : typeof value === "function" ? value(null) : value);
+    // Recursive so placeholders inside a tag (`<muted>for “{query}”</muted>`) are filled too.
+    const render = (template: string): ReactNode => {
+      const nodes: ReactNode[] = [];
+      const pattern = /<(\w+)>([\s\S]*?)<\/\1>|\{(\w+)\}/g;
+      let last = 0;
+      for (const match of template.matchAll(pattern)) {
+        if (match.index > last) nodes.push(template.slice(last, match.index));
+        const [whole, tag, inner, placeholder] = match;
+        const value = values[tag ?? placeholder];
+        if (tag) {
+          const chunks = render(inner);
+          nodes.push(typeof value === "function" ? value(chunks) : chunks);
+        } else {
+          nodes.push(value === undefined ? whole : typeof value === "function" ? value(null) : value);
+        }
+        last = match.index + whole.length;
       }
-      last = match.index + whole.length;
-    }
-    if (last < template.length) nodes.push(template.slice(last));
-    return createElement(Fragment, null, ...nodes.map((node, index) => createElement(Fragment, { key: index }, node)));
+      if (last < template.length) nodes.push(template.slice(last));
+      return createElement(Fragment, null, ...nodes.map((node, index) => createElement(Fragment, { key: index }, node)));
+    };
+    return render(lookup(msgid));
   };
 
   t.locale = locale;
