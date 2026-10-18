@@ -31,7 +31,7 @@ export default async function KeysPage() {
     <KeysView
       keys={keys}
       services={services.map((service) => ({ id: service.id, title: service.title }))}
-      endpoint={`${await siteUrl()}/api/mcp/mcp`}
+      endpoint={`${await siteUrl()}/api/mcp/streamable`}
     />
   );
 }

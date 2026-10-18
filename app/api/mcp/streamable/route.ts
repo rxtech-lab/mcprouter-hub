@@ -3,7 +3,7 @@ import { createServiceRoute } from "@/lib/mcp/handler";
 
 export const maxDuration = 60;
 
-/** Every service on one endpoint: `/api/mcp/mcp`. */
+/** Every service on one endpoint: `/api/mcp/streamable`. */
 const handler = createServiceRoute(() => services);
 
 export { handler as GET, handler as POST, handler as DELETE };

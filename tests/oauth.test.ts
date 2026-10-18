@@ -66,12 +66,12 @@ describe("OAuth for MCP", () => {
   });
 
   it("binds resources to this origin's MCP endpoints", () => {
-    expect(resolveResource(undefined, origin)).toEqual({ url: `${origin}/api/mcp/mcp`, service: null });
-    expect(resolveResource(`${origin}/api/mcp/s/kmb/mcp`, origin)).toEqual({ url: `${origin}/api/mcp/s/kmb/mcp`, service: "kmb" });
-    expect(() => resolveResource("https://other.example/api/mcp/mcp", origin)).toThrow(OAuthError);
-    expect(() => resolveResource(`${origin}/api/mcp/s/nope/mcp`, origin)).toThrow(OAuthError);
-    expect(protectedResourceMetadata(origin, "/api/mcp/s/kmb/mcp")).toMatchObject({ resource: `${origin}/api/mcp/s/kmb/mcp`, authorization_servers: [origin] });
-    expect(protectedResourceMetadata(origin, "/").resource).toBe(`${origin}/api/mcp/mcp`);
+    expect(resolveResource(undefined, origin)).toEqual({ url: `${origin}/api/mcp/streamable`, service: null });
+    expect(resolveResource(`${origin}/api/mcp/s/kmb/streamable`, origin)).toEqual({ url: `${origin}/api/mcp/s/kmb/streamable`, service: "kmb" });
+    expect(() => resolveResource("https://other.example/api/mcp/streamable", origin)).toThrow(OAuthError);
+    expect(() => resolveResource(`${origin}/api/mcp/s/nope/streamable`, origin)).toThrow(OAuthError);
+    expect(protectedResourceMetadata(origin, "/api/mcp/s/kmb/streamable")).toMatchObject({ resource: `${origin}/api/mcp/s/kmb/streamable`, authorization_servers: [origin] });
+    expect(protectedResourceMetadata(origin, "/").resource).toBe(`${origin}/api/mcp/streamable`);
   });
 
   it("shows untrusted client errors instead of redirecting, and redirects the rest", async () => {
@@ -97,27 +97,27 @@ describe("OAuth for MCP", () => {
     expect(tokens.access_token.startsWith(ACCESS_TOKEN_PREFIX)).toBe(true);
     expect(tokens).toMatchObject({ token_type: "Bearer", scope: "mcp" });
 
-    const caller = await authenticateAccessToken(tokens.access_token, "/api/mcp/s/kmb/mcp");
+    const caller = await authenticateAccessToken(tokens.access_token, "/api/mcp/s/kmb/streamable");
     expect(caller?.userId).toBe("alice");
 
-    const request = new Request(`${origin}/api/mcp/mcp`);
+    const request = new Request(`${origin}/api/mcp/streamable`);
     const auth = await verifyMcpToken(request, tokens.access_token);
     expect(auth?.extra).toMatchObject({ userId: "alice", apiKeyId: null, scopes: [] });
     // OAuth tokens aren't accepted from the query string.
-    expect(await verifyMcpToken(new Request(`${origin}/api/mcp/mcp?token=${tokens.access_token}`))).toBeUndefined();
+    expect(await verifyMcpToken(new Request(`${origin}/api/mcp/streamable?token=${tokens.access_token}`))).toBeUndefined();
 
     // Replaying the code revokes the grant and every token issued from it.
     await rejects(exchangeCode({ ...base, verifier }), "invalid_grant");
-    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/mcp")).toBeNull();
+    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/streamable")).toBeNull();
   });
 
   it("limits single-service grants to their endpoint", async () => {
-    const { client, verifier, code } = await authorize("bob", `${origin}/api/mcp/s/kmb/mcp`);
-    const tokens = await exchangeCode({ code, clientId: client.client_id, redirectUri, verifier, resource: `${origin}/api/mcp/s/kmb/mcp`, origin });
-    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/s/kmb/mcp")).toMatchObject({ service: "kmb" });
-    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/mcp")).toBeNull();
-    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/s/mtr/mcp")).toBeNull();
-    const auth = await verifyMcpToken(new Request(`${origin}/api/mcp/s/kmb/mcp`), tokens.access_token);
+    const { client, verifier, code } = await authorize("bob", `${origin}/api/mcp/s/kmb/streamable`);
+    const tokens = await exchangeCode({ code, clientId: client.client_id, redirectUri, verifier, resource: `${origin}/api/mcp/s/kmb/streamable`, origin });
+    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/s/kmb/streamable")).toMatchObject({ service: "kmb" });
+    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/streamable")).toBeNull();
+    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/s/mtr/streamable")).toBeNull();
+    const auth = await verifyMcpToken(new Request(`${origin}/api/mcp/s/kmb/streamable`), tokens.access_token);
     expect(auth?.extra).toMatchObject({ scopes: ["kmb"] });
   });
 
@@ -129,10 +129,10 @@ describe("OAuth for MCP", () => {
     await rejects(exchangeRefresh({ ...refresh, clientId: "someone-else", token: first.refresh_token }), "invalid_grant");
     const second = await exchangeRefresh({ ...refresh, token: first.refresh_token });
     expect(second.refresh_token).not.toBe(first.refresh_token);
-    expect(await authenticateAccessToken(second.access_token, "/api/mcp/mcp")).not.toBeNull();
+    expect(await authenticateAccessToken(second.access_token, "/api/mcp/streamable")).not.toBeNull();
 
     await rejects(exchangeRefresh({ ...refresh, token: first.refresh_token }), "invalid_grant");
-    expect(await authenticateAccessToken(second.access_token, "/api/mcp/mcp")).toBeNull();
+    expect(await authenticateAccessToken(second.access_token, "/api/mcp/streamable")).toBeNull();
     await rejects(exchangeRefresh({ ...refresh, token: second.refresh_token }), "invalid_grant");
   });
 
@@ -140,14 +140,14 @@ describe("OAuth for MCP", () => {
     const { client, verifier, code } = await authorize("dave");
     const tokens = await exchangeCode({ code, clientId: client.client_id, redirectUri, verifier, resource: null, origin });
     await revokeToken(tokens.refresh_token, "another-client");
-    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/mcp")).not.toBeNull();
+    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/streamable")).not.toBeNull();
     await revokeToken(tokens.refresh_token, client.client_id);
-    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/mcp")).toBeNull();
+    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/streamable")).toBeNull();
   });
 
   it("rejects expired access tokens", async () => {
     const { client, verifier, code } = await authorize("erin");
     const tokens = await exchangeCode({ code, clientId: client.client_id, redirectUri, verifier, resource: null, origin });
-    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/mcp", new Date(Date.now() + 2 * 3600_000))).toBeNull();
+    expect(await authenticateAccessToken(tokens.access_token, "/api/mcp/streamable", new Date(Date.now() + 2 * 3600_000))).toBeNull();
   });
 });

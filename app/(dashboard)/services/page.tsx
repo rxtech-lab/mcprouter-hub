@@ -32,7 +32,7 @@ export default async function ServicesPage({ searchParams }: PageProps<"/service
     title: service.title,
     description: service.description ?? "",
     datasets: service.datasets,
-    endpoint: `${origin}/api/mcp/s/${service.id}/mcp`,
+    endpoint: `${origin}/api/mcp/s/${service.id}/streamable`,
     tools: service.tools.map((tool) => ({
       name: tool.name,
       title: tool.title ?? tool.name,
@@ -48,7 +48,7 @@ export default async function ServicesPage({ searchParams }: PageProps<"/service
         title="Services"
         description={`${services.length} services, ${toolCount} tools. Use the combined endpoint for everything, or a service endpoint for a smaller tool list.`}
       />
-      <ServicesView services={cards} allEndpoint={`${origin}/api/mcp/mcp`}>
+      <ServicesView services={cards} allEndpoint={`${origin}/api/mcp/streamable`}>
         <SearchBar action="/services" query={params.q} label="Search services" placeholder="Search services, tools and datasets" />
       </ServicesView>
       {cards.length === 0 ? (

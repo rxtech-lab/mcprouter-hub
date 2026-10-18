@@ -7,14 +7,14 @@ const mcpHeaders = { Accept: "application/json, text/event-stream", "mcp-protoco
 
 test("an OAuth client discovers sign-in, gets approved and calls the MCP endpoint", async ({ page, baseURL }) => {
   // 1. An unauthenticated call points at this endpoint's resource metadata.
-  const challenge = await page.request.post("/api/mcp/s/kmb/mcp", { headers: mcpHeaders, data: rpc });
+  const challenge = await page.request.post("/api/mcp/s/kmb/streamable", { headers: mcpHeaders, data: rpc });
   expect(challenge.status()).toBe(401);
   const wwwAuthenticate = challenge.headers()["www-authenticate"];
   const metadataUrl = /resource_metadata="([^"]+)"/.exec(wwwAuthenticate)?.[1];
-  expect(metadataUrl).toBe(`${baseURL}/.well-known/oauth-protected-resource/api/mcp/s/kmb/mcp`);
+  expect(metadataUrl).toBe(`${baseURL}/.well-known/oauth-protected-resource/api/mcp/s/kmb/streamable`);
 
   const resourceMetadata = await (await page.request.get(metadataUrl!)).json();
-  expect(resourceMetadata.resource).toBe(`${baseURL}/api/mcp/s/kmb/mcp`);
+  expect(resourceMetadata.resource).toBe(`${baseURL}/api/mcp/s/kmb/streamable`);
   const server = await (await page.request.get(`${resourceMetadata.authorization_servers[0]}/.well-known/oauth-authorization-server`)).json();
   expect(server.code_challenge_methods_supported).toEqual(["S256"]);
 
@@ -57,10 +57,10 @@ test("an OAuth client discovers sign-in, gets approved and calls the MCP endpoin
   expect(tokenResponse.status()).toBe(200);
   const tokens = await tokenResponse.json();
 
-  const list = await page.request.post("/api/mcp/s/kmb/mcp", { headers: { ...mcpHeaders, Authorization: `Bearer ${tokens.access_token}` }, data: rpc });
+  const list = await page.request.post("/api/mcp/s/kmb/streamable", { headers: { ...mcpHeaders, Authorization: `Bearer ${tokens.access_token}` }, data: rpc });
   expect(list.status()).toBe(200);
   expect(await list.text()).toContain("kmb_stop_eta");
-  const elsewhere = await page.request.post("/api/mcp/mcp", { headers: { ...mcpHeaders, Authorization: `Bearer ${tokens.access_token}` }, data: rpc });
+  const elsewhere = await page.request.post("/api/mcp/streamable", { headers: { ...mcpHeaders, Authorization: `Bearer ${tokens.access_token}` }, data: rpc });
   expect(elsewhere.status()).toBe(401);
 
   // 5. The app shows up under Connected apps and can be disconnected.
@@ -71,7 +71,7 @@ test("an OAuth client discovers sign-in, gets approved and calls the MCP endpoin
   await page.getByRole("alertdialog").getByRole("button", { name: "Disconnect" }).click();
   await expect(page.getByTestId("snackbar")).toContainText("App disconnected");
 
-  const revoked = await page.request.post("/api/mcp/s/kmb/mcp", { headers: { ...mcpHeaders, Authorization: `Bearer ${tokens.access_token}` }, data: rpc });
+  const revoked = await page.request.post("/api/mcp/s/kmb/streamable", { headers: { ...mcpHeaders, Authorization: `Bearer ${tokens.access_token}` }, data: rpc });
   expect(revoked.status()).toBe(401);
 });
 
