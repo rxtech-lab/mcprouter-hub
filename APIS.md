@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **24 of 3819 implemented**, 3795 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **43 of 3819 implemented**, 3776 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -28,16 +28,16 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0017` | [Car park vacancy (one-stop)](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-carpark-info-vacancy) | API | Digital Policy Office | ✅ Implemented | [Car Park Information and Vacancy](mcp/services/td-carpark/service.yaml) |
 | `API-0018` | [New Lantao Bus arrivals](https://data.gov.hk/en-data/dataset/nlb-bus-nlb-bus-service-v2) | API | New Lantao Bus Company (1973) Limited | ✅ Implemented | [Buses, Minibuses & Trams](mcp/services/hk-bus/service.yaml) |
 | `API-0019` | [Tram routes and stops](https://data.gov.hk/en-data/dataset/hktramways-hktramways-main-routes) | API | Hong Kong Tramways, Limited | ✅ Implemented | [Buses, Minibuses & Trams](mcp/services/hk-bus/service.yaml) |
-| `API-0020` | [Sun Ferry arrivals](https://data.gov.hk/en-data/dataset/sunferry-eta-eta) | API | Sun Ferry Services Company Limited | 🕒 Coming soon | — |
-| `API-0021` | [Hong Kong & Kowloon Ferry](https://data.gov.hk/en-data/dataset/hkkf-hkkfdata-hkkf-eta-data) | API | Hong Kong & Kowloon Ferry Limited | 🕒 Coming soon | — |
+| `API-0020` | [Sun Ferry arrivals](https://data.gov.hk/en-data/dataset/sunferry-eta-eta) | API | Sun Ferry Services Company Limited | ✅ Implemented | [Ferries](mcp/services/hk-ferry/service.yaml) |
+| `API-0021` | [Hong Kong & Kowloon Ferry](https://data.gov.hk/en-data/dataset/hkkf-hkkfdata-hkkf-eta-data) | API | Hong Kong & Kowloon Ferry Limited | ✅ Implemented | [Ferries](mcp/services/hk-ferry/service.yaml) |
 | `API-0022` | [Fortune Ferry and Water Taxi arrivals](https://data.gov.hk/en-data/dataset/ff-fortune-schedule2) | API | Fortune Ferry Company Limited | 🕒 Coming soon | — |
-| `API-0023` | [Flight information](https://data.gov.hk/en-data/dataset/aahk-team1-flight-info) | API | Airport Authority Hong Kong | 🕒 Coming soon | — |
-| `API-0024` | [Special traffic news](https://data.gov.hk/en-data/dataset/hk-td-tis_19-special-traffic-news-v2) | API | Transport Department | 🕒 Coming soon | — |
-| `API-0025` | [Journey time indicators](https://data.gov.hk/en-data/dataset/hk-td-sm_8-journey-time-indicators-v2) | API | Transport Department | 🕒 Coming soon | — |
-| `API-0026` | [Traffic snapshot images](https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images) | API | Transport Department | 🕒 Coming soon | — |
+| `API-0023` | [Flight information](https://data.gov.hk/en-data/dataset/aahk-team1-flight-info) | API | Airport Authority Hong Kong | ✅ Implemented | [Hong Kong International Airport Flights](mcp/services/hk-airport/service.yaml) |
+| `API-0024` | [Special traffic news](https://data.gov.hk/en-data/dataset/hk-td-tis_19-special-traffic-news-v2) | API | Transport Department | ✅ Implemented | [Traffic News and Journey Times](mcp/services/td-traffic/service.yaml) |
+| `API-0025` | [Journey time indicators](https://data.gov.hk/en-data/dataset/hk-td-sm_8-journey-time-indicators-v2) | API | Transport Department | ✅ Implemented | [Traffic News and Journey Times](mcp/services/td-traffic/service.yaml) |
+| `API-0026` | [Traffic snapshot images](https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images) | API | Transport Department | ✅ Implemented | [Traffic News and Journey Times](mcp/services/td-traffic/service.yaml) |
 | `API-0027` | [Land boundary control point waiting times](https://data.gov.hk/en-data/dataset/hk-immd-set28-land-boundary-control-points-waiting-time) | API | Immigration Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
-| `API-0028` | [Metered parking spaces](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) | API | Transport Department | 🕒 Coming soon | — |
-| `API-0029` | [Kowloon East parking vacancy](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) | API | Development Bureau | 🕒 Coming soon | — |
+| `API-0028` | [Metered parking spaces](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) | API | Transport Department | ✅ Implemented | [On-street Parking](mcp/services/td-street-parking/service.yaml) |
+| `API-0029` | [Kowloon East parking vacancy](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) | API | Development Bureau | ✅ Implemented | [Kowloon East Parking](mcp/services/kowloon-east-parking/service.yaml) |
 | `API-0121` | [Taxi Fleet Information (Amigo)](https://data.gov.hk/en-data/dataset/amigo-tis_41-taxi-fleet-information-amigo) | API | Amigo (Taxi Fleet Licensee) | 🕒 Coming soon | — |
 | `API-0153` | [Taxi Fleet Information (Big Boss Taxi)](https://data.gov.hk/en-data/dataset/big-boss-taxi-tis_42-taxi-fleet-information-bbt) | API | Big Boss Taxi (Taxi Fleet Licensee) | 🕒 Coming soon | — |
 | `API-0638` | [Hong Kong Shipping Statistics - Table 410-55110 : Port Cargo Throughput](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-55110) | API | Census and Statistics Department | 🕒 Coming soon | — |
@@ -159,7 +159,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-3626` | [Cross boundary road cargo statistics](https://data.gov.hk/en-data/dataset/hk-tlb-tlb_div5_2-mpb) | Files | Transport and Logistics Bureau | 🕒 Coming soon | — |
 | `API-3627` | [Container Throughput Statistics](https://data.gov.hk/en-data/dataset/hk-tlb-tlb-mpb) | API | Transport and Logistics Bureau | 🕒 Coming soon | — |
 | `API-3628` | [Locations of Licensing and Driving Services Offices, Driving Test and Vehicle Examination Centres, Public Vehicles Unit and Driving-offence Points Office](https://data.gov.hk/en-data/dataset/hk-td-alb_1-alb-office-location) | API | Transport Department | 🕒 Coming soon | — |
-| `API-3629` | [Location and occupancy status of non-metered on-street parking spaces installed with sensors](https://data.gov.hk/en-data/dataset/hk-td-msd_2-non-metered-parking-spaces-data) | API | Transport Department | 🕒 Coming soon | — |
+| `API-3629` | [Location and occupancy status of non-metered on-street parking spaces installed with sensors](https://data.gov.hk/en-data/dataset/hk-td-msd_2-non-metered-parking-spaces-data) | API | Transport Department | ✅ Implemented | [On-street Parking](mcp/services/td-street-parking/service.yaml) |
 | `API-3630` | [Traffic speed map](https://data.gov.hk/en-data/dataset/hk-td-sm_1-traffic-speed-map) | Files | Transport Department | 🕒 Coming soon | — |
 | `API-3631` | [Journey time indicators](https://data.gov.hk/en-data/dataset/hk-td-sm_2-journey-time-indicators) | Files | Transport Department | 🕒 Coming soon | — |
 | `API-3632` | [Speed map panels](https://data.gov.hk/en-data/dataset/hk-td-sm_3-speed-map-panels) | Files | Transport Department | 🕒 Coming soon | — |
@@ -227,14 +227,14 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0011` | [Special weather tips](https://data.gov.hk/en-data/dataset/hk-hko-rss-special-weather-tips) | API | Hong Kong Observatory | ✅ Implemented | [Hong Kong Observatory Weather](mcp/services/hko-weather/service.yaml) |
 | `API-0012` | [Earthquakes](https://data.gov.hk/en-data/dataset/hk-hko-rss-quick-earthquake-messages) | API | Hong Kong Observatory | ✅ Implemented | [Hong Kong Observatory Weather](mcp/services/hko-weather/service.yaml) |
 | `API-0013` | [Gregorian–lunar calendar](https://data.gov.hk/en-data/dataset/hk-hko-rss-gregorian-lunar-calendar-conversion-table) | API | Hong Kong Observatory | ✅ Implemented | [Hong Kong Observatory Weather](mcp/services/hko-weather/service.yaml) |
-| `API-0030` | [Rainfall in the past hour](https://data.gov.hk/en-data/dataset/hk-hko-rss-rainfall-in-the-past-hour) | API | Hong Kong Observatory | 🕒 Coming soon | — |
-| `API-0032` | [Tides](https://data.gov.hk/en-data/dataset/hk-hko-rss-latest-tidal-info) | API | Hong Kong Observatory | 🕒 Coming soon | — |
-| `API-0033` | [Tropical cyclone tracks](https://data.gov.hk/en-data/dataset/hk-hko-rss-tc-track-info) | API | Hong Kong Observatory | 🕒 Coming soon | — |
-| `API-0034` | [UV index](https://data.gov.hk/en-data/dataset/hk-hko-rss-latest-fifteen-minute-mean-uv-index) | API | Hong Kong Observatory | 🕒 Coming soon | — |
-| `API-0035` | [Lightning](https://data.gov.hk/en-data/dataset/hk-hko-rss-cloud-ground-lightning-count-past-hour) | API | Hong Kong Observatory | 🕒 Coming soon | — |
-| `API-0036` | [Sun and moon times](https://data.gov.hk/en-data/dataset/hk-hko-rss-times-of-sunrise-suntransit-sunset) | API | Hong Kong Observatory | 🕒 Coming soon | — |
-| `API-0037` | [Regional weather](https://data.gov.hk/en-data/dataset/hk-hko-rss-latest-one-minute-mean-air-temp) | API | Hong Kong Observatory | 🕒 Coming soon | — |
-| `API-0038` | [Heat stress](https://data.gov.hk/en-data/dataset/hk-hko-rss-hong-kong-heat-index) | API | Hong Kong Observatory | 🕒 Coming soon | — |
+| `API-0030` | [Rainfall in the past hour](https://data.gov.hk/en-data/dataset/hk-hko-rss-rainfall-in-the-past-hour) | API | Hong Kong Observatory | ✅ Implemented | [Regional Weather](mcp/services/hko-regional/service.yaml) |
+| `API-0032` | [Tides](https://data.gov.hk/en-data/dataset/hk-hko-rss-latest-tidal-info) | API | Hong Kong Observatory | ✅ Implemented | [Tides, Sun and Moon](mcp/services/hko-tides/service.yaml) |
+| `API-0033` | [Tropical cyclone tracks](https://data.gov.hk/en-data/dataset/hk-hko-rss-tc-track-info) | API | Hong Kong Observatory | ✅ Implemented | [Tropical Cyclones](mcp/services/hko-cyclone/service.yaml) |
+| `API-0034` | [UV index](https://data.gov.hk/en-data/dataset/hk-hko-rss-latest-fifteen-minute-mean-uv-index) | API | Hong Kong Observatory | ✅ Implemented | [Regional Weather](mcp/services/hko-regional/service.yaml) |
+| `API-0035` | [Lightning](https://data.gov.hk/en-data/dataset/hk-hko-rss-cloud-ground-lightning-count-past-hour) | API | Hong Kong Observatory | ✅ Implemented | [Regional Weather](mcp/services/hko-regional/service.yaml) |
+| `API-0036` | [Sun and moon times](https://data.gov.hk/en-data/dataset/hk-hko-rss-times-of-sunrise-suntransit-sunset) | API | Hong Kong Observatory | ✅ Implemented | [Tides, Sun and Moon](mcp/services/hko-tides/service.yaml) |
+| `API-0037` | [Regional weather](https://data.gov.hk/en-data/dataset/hk-hko-rss-latest-one-minute-mean-air-temp) | API | Hong Kong Observatory | ✅ Implemented | [Regional Weather](mcp/services/hko-regional/service.yaml) |
+| `API-0038` | [Heat stress](https://data.gov.hk/en-data/dataset/hk-hko-rss-hong-kong-heat-index) | API | Hong Kong Observatory | ✅ Implemented | [Regional Weather](mcp/services/hko-regional/service.yaml) |
 | `API-1549` | [Weather Station Information (City Dashboard Version)](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk2-city-dashboard-weather-station) | Files | Digital Policy Office | 🕒 Coming soon | — |
 | `API-2338` | [Daily total cloud-to-cloud lightning count over Hong Kong territory](https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-cloud-to-cloud-lightning-count) | API | Hong Kong Observatory | 🕒 Coming soon | — |
 | `API-2339` | [Daily total cloud-to-ground lightning count over Hong Kong territory](https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-cloud-to-ground-lightning-count) | API | Hong Kong Observatory | 🕒 Coming soon | — |
@@ -274,9 +274,9 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 
 | ID | API | Type | Provider | Status | Service |
 |---|---|---|---|---|---|
-| `API-0031` | [Air Quality Health Index](https://data.gov.hk/en-data/dataset/hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-0031` | [Air Quality Health Index](https://data.gov.hk/en-data/dataset/hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations) | API | Environmental Protection Department | ✅ Implemented | [Air Quality Health Index](mcp/services/epd-aqhi/service.yaml) |
 | `API-0039` | [Weather and radiation level report](https://data.gov.hk/en-data/dataset/hk-hko-rss-weather-and-radiation-level-report) | API | Hong Kong Observatory | 🕒 Coming soon | — |
-| `API-0040` | [Beach water quality](https://data.gov.hk/en-data/dataset/hk-epd-beachteam-beach-water-quality-grading) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-0040` | [Beach water quality](https://data.gov.hk/en-data/dataset/hk-epd-beachteam-beach-water-quality-grading) | API | Environmental Protection Department | ✅ Implemented | [Beach Water Quality](mcp/services/epd-beach/service.yaml) |
 | `API-0041` | [Red tide](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-red-tide-location) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
 | `API-0067` | [Animal Management Centres and Dog Inoculation Centres](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-amcanddiccsdi) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
 | `API-0068` | [Artificial Reef Deployment Limits](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-ardevlimits) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |

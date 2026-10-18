@@ -82,6 +82,23 @@ describe("card builders", () => {
     ]);
   });
 
+  it("draws the airport board with each flight's status", () => {
+    const card = cardForToolResult(
+      result("hk-airport", "airport_departures", { date: "2026-10-18" }, [
+        { scheduled: "2026-10-18T00:05+08:00", flight: "CX 261", airline: "CPA", codeshares: ["QF 8261"], destinations: ["CDG"], status: "Dep 00:46", state: "departed", terminal: "T1", gate: "7" },
+        { scheduled: "2026-10-18T07:40+08:00", flight: "5X 003", airline: "UPS", destinations: ["BLR", "CGN"], status: "Cancelled", state: "cancelled" },
+        { scheduled: "2026-10-18T23:55+08:00", flight: "UO 848", airline: "HKE", destinations: ["NRT"], status: null, state: "scheduled" },
+      ], { total: 3, returned: 3, truncated: false }),
+    )!;
+    expect(card.title).toBe("Departures · Sun 18 Oct");
+    expect(card.blocks).toEqual([
+      { kind: "notice", text: "1 flight cancelled", tone: "warning" },
+      { kind: "row", leading: { text: "00:05" }, title: "CX 261", subtitle: "To CDG · Gate 7 · Also QF 8261", trailing: [{ text: "Dep 00:46", tone: "success" }], muted: false },
+      { kind: "row", leading: { text: "07:40" }, title: "5X 003", subtitle: "To BLR · CGN", trailing: [{ text: "Cancelled", tone: "danger" }], muted: true },
+      { kind: "row", leading: { text: "23:55" }, title: "UO 848", subtitle: "To NRT", trailing: [{ text: "Scheduled", tone: "neutral" }], muted: false },
+    ]);
+  });
+
   it("colours border queues by how busy they are", () => {
     const queue = (status: string, label: string) => ({ status, label, wait: null });
     const card = cardForToolResult(
@@ -104,6 +121,185 @@ describe("card builders", () => {
         subtitle: "Visitors: in Normal, out Busy",
         trailing: [{ text: "In Very busy", tone: "danger" }, { text: "Out Outside service hours", tone: "neutral" }],
       },
+    ]);
+  });
+
+  it("shows Kowloon East free spaces out of the total, coloured by how full the car park is", () => {
+    const card = cardForToolResult(
+      result("kowloon-east-parking", "ke_parking_vacancy", { carparkId: 12 }, [
+        {
+          id: 12,
+          name: "Amoy Plaza",
+          area: "Kowloon Bay",
+          closed: false,
+          updatedAt: null,
+          vacancies: { privateCar: { vacant: 13, spaces: 389, ev: 1 }, LGV: { vacant: 0, spaces: 5 }, motorCycle: { vacant: 4 } },
+        },
+      ]),
+    )!;
+    expect(card).toMatchObject({ title: "Amoy Plaza", subtitle: "Kowloon Bay", accent: "#d9531e" });
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        title: "Amoy Plaza",
+        subtitle: "Kowloon Bay",
+        trailing: [{ text: "Car 13/389", tone: "success" }, { text: "Light goods 0/5", tone: "danger" }, { text: "Motorcycle 4", tone: "warning" }],
+        muted: false,
+      },
+    ]);
+  });
+
+  it("lists tracked tropical cyclones with their intensity and distance from Hong Kong", () => {
+    const current = { time: "2026-10-01T02:00:00+08:00", category: "typhoon", intensity: "Typhoon", maximumWindKmh: 120, latitude: 20.1, longitude: 118.4, distanceKm: 501, bearing: "ESE" };
+    const card = cardForToolResult(
+      result("hko-cyclone", "hko_tropical_cyclones", {}, { cyclones: [{ id: 2641, name: "SURIGAE", englishName: "SURIGAE", chineseName: "舒力基", current, closestApproach: null, forecastPoints: 4 }] }),
+    )!;
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        leading: { text: "2641" },
+        title: "SURIGAE 舒力基",
+        subtitle: "501 km ESE of Hong Kong at Thu 1 Oct, 02:00",
+        trailing: [{ text: "Typhoon", tone: "danger" }, { text: "120 km/h" }],
+      },
+    ]);
+  });
+
+  it("colours journey times the way the roadside sign does", () => {
+    const card = cardForToolResult(
+      result("td-traffic", "traffic_journey_times", {}, {
+        capturedAt: "2026-10-18T23:09:00+08:00",
+        indicators: [
+          {
+            code: "H1",
+            location: "Gloucester Road eastbound near Revenue Tower",
+            region: "Hong Kong Island",
+            journeys: [
+              { destinationCode: "CH", destination: "Cross Harbour Tunnel", minutes: 4, colour: "green" },
+              { destinationCode: "EH", destination: "Eastern Harbour Crossing", minutes: null, colour: "red", notice: "Traffic congestion" },
+            ],
+          },
+        ],
+      }),
+    )!;
+    expect(card).toMatchObject({ accent: "#1a4fa0", badge: "TD", title: "Journey times", subtitle: "Updated 23:09" });
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        leading: { text: "H1" },
+        title: "Gloucester Road eastbound near Revenue Tower",
+        subtitle: "Cross Harbour Tunnel · Eastern Harbour Crossing",
+        trailing: [{ text: "CH 4 min", tone: "success" }, { text: "EH Traffic congestion", tone: "danger" }],
+      },
+    ]);
+  });
+
+  it("lists the worst-graded beaches first and flags them", () => {
+    const beach = (code: string, name: string, grade: number, rating: string) => ({ code, name, district: "Southern", grade, rating, latitude: 22.2, longitude: 114.2, report: null });
+    const card = cardForToolResult(
+      result("epd-beach", "beach_water_quality", {}, { updated: "2026-10-16T14:04:42+08:00", count: 2, beaches: [beach("RB", "Repulse Bay Beach", 1, "Good"), beach("DW", "Deep Water Bay Beach", 3, "Poor")] }),
+    )!;
+    expect(card).toMatchObject({ badge: "≈", accent: "#00838f", subtitle: "2 beaches · graded Fri 16 Oct, 14:04" });
+    expect(card.blocks).toEqual([
+      { kind: "notice", text: "Below the swimming standard: Deep Water Bay Beach", tone: "warning" },
+      { kind: "row", leading: { text: "DW" }, title: "Deep Water Bay Beach", subtitle: "Southern", trailing: [{ text: "Poor · 3", tone: "warning" }] },
+      { kind: "row", leading: { text: "RB" }, title: "Repulse Bay Beach", subtitle: "Southern", trailing: [{ text: "Good · 1", tone: "success" }] },
+    ]);
+  });
+
+  it("lists a day's high and low tides with their heights", () => {
+    const card = cardForToolResult(
+      result("hko-tides", "hko_tide_times", { station: "QUB" }, {
+        station: { code: "QUB", name: "Quarry Bay" },
+        days: [{ date: "2026-10-18", tides: [{ time: "00:30", type: "high", heightM: 2.27 }, { time: "09:47", type: "low", heightM: 1.03 }] }],
+      }),
+    )!;
+    expect(card.title).toBe("Tides at Quarry Bay");
+    expect(card.footer).toBe("Sun 18 Oct · Hong Kong time");
+    expect(card.blocks).toEqual([
+      { kind: "row", leading: { text: "High", tone: "info" }, title: "00:30", trailing: [{ text: "2.27 m", tone: "accent" }] },
+      { kind: "row", leading: { text: "Low", tone: "neutral" }, title: "09:47", trailing: [{ text: "1.03 m", tone: "accent" }] },
+    ]);
+  });
+
+  it("colours AQHI stations by health risk and groups them by type", () => {
+    const card = cardForToolResult(
+      result("epd-aqhi", "aqhi_current", {}, {
+        updated: "2026-10-18T22:30:00+08:00",
+        stations: [
+          { station: "Central/Western", type: "general", aqhi: 3, risk: "low", riskLabel: "Low" },
+          { station: "Central", type: "roadside", aqhi: 10, risk: "serious", riskLabel: "Serious" },
+        ],
+      }),
+    )!;
+    expect(card).toMatchObject({ accent: "#00843d", badge: "AQHI", subtitle: "Updated Sun 18 Oct, 22:30" });
+    expect(card.blocks).toEqual([
+      { kind: "section", title: "General stations" },
+      { kind: "row", leading: { text: "3", tone: "success" }, title: "Central/Western", trailing: [{ text: "Low", tone: "success" }] },
+      { kind: "section", title: "Roadside stations" },
+      { kind: "row", leading: { text: "10+", tone: "danger" }, title: "Central", trailing: [{ text: "Serious", tone: "danger" }] },
+    ]);
+  });
+
+  it("lists the wettest weather stations first", () => {
+    const card = cardForToolResult(
+      result("hko-regional", "hko_rainfall_past_hour", {}, {
+        observedAt: "2026-10-18T22:45:00+08:00",
+        stations: [
+          { station: "Lau Fau Shan", id: "RF001", rainfallMm: 0 },
+          { station: "Sha Tin", id: "RF020", rainfallMm: 3 },
+          { station: "Tuen Mun", id: "RF019", rainfallMm: 12 },
+        ],
+      }),
+    )!;
+    expect(card).toMatchObject({ accent: "#1565c0", badge: "HKO", title: "Rainfall in the past hour", subtitle: "Observed Sun 18 Oct, 22:45" });
+    expect(card.blocks).toEqual([
+      { kind: "row", leading: { text: "RF019" }, title: "Tuen Mun", trailing: [{ text: "12 mm", tone: "info" }] },
+      { kind: "row", leading: { text: "RF020" }, title: "Sha Tin", trailing: [{ text: "3 mm", tone: "info" }] },
+    ]);
+  });
+
+  it("shows ferry sailings with their departure, fast ferries marked", () => {
+    const sailing = { direction: null, from: "Central", to: "Cheung Chau", eta: null, status: "scheduled", fast: true };
+    const card = cardForToolResult(
+      result("hk-ferry", "ferry_arrivals", { route: "CECC" }, { operator: "Sun Ferry", route: "CECC", name: "Central – Cheung Chau", updatedAt: "2026-10-18T23:10:08+08:00", sailings: [{ ...sailing, departure: "2026-10-19T06:10:00+08:00" }] }),
+    )!;
+    expect(card).toMatchObject({ title: "Central – Cheung Chau", subtitle: "Sun Ferry · route CECC", footer: "Updated 23:10" });
+    expect(card.blocks).toEqual([
+      { kind: "row", leading: { text: "06:10" }, title: "Central → Cheung Chau", subtitle: null, trailing: [{ text: "Fast", tone: "info" }, { text: "Departs 06:10" }] },
+    ]);
+  });
+
+  it("counts free metered spaces per street", () => {
+    const street = (name: string, vacant: number, spaces: number) => ({
+      district: "Wan Chai",
+      street: name,
+      vehicleType: "car",
+      spaces,
+      vacant,
+      occupied: spaces - vacant,
+      notInUse: 0,
+      noData: 0,
+      hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+      maxStayMinutes: [30],
+      hourlyRate: [16],
+      latitude: 22.278,
+      longitude: 114.169,
+    });
+    const card = cardForToolResult(
+      result("td-street-parking", "parking_meter_vacancy", { street: "road" }, {
+        updated: "2026-10-18T21:49:07+08:00",
+        total: { spaces: 40, vacant: 15, occupied: 25, notInUse: 0, noData: 0 },
+        districts: [],
+        streetsMatched: 2,
+        streets: [street("Lockhart Road", 15, 38), street("Stewart Road", 0, 2)],
+      }),
+    )!;
+    expect(card).toMatchObject({ title: "Metered parking: road", subtitle: "Updated 21:49", footer: null });
+    expect(card.blocks).toEqual([
+      { kind: "stats", items: [{ label: "Vacant", value: "15" }, { label: "Occupied", value: "25" }, { label: "Spaces", value: "40" }] },
+      { kind: "row", title: "Lockhart Road", subtitle: "Wan Chai · Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00", trailing: [{ text: "15 free", tone: "success" }, { text: "of 38" }] },
+      { kind: "row", title: "Stewart Road", subtitle: "Wan Chai · Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00", trailing: [{ text: "0 free", tone: "danger" }, { text: "of 2" }] },
     ]);
   });
 

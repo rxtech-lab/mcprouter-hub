@@ -2,13 +2,23 @@ import type { Visual } from "@/lib/agent/display-tools";
 import { uiSpecCard } from "@/lib/cards/ui-card";
 import type { Card, CardBuilder, CardInput } from "@/mcp/apps/card";
 import { buildCard as catalogCard } from "@/mcp/services/datagovhk-catalog/card";
+import { buildCard as aqhiCard } from "@/mcp/services/epd-aqhi/card";
+import { buildCard as beachCard } from "@/mcp/services/epd-beach/card";
 import { buildCard as aedCard } from "@/mcp/services/ha-aed/card";
+import { buildCard as airportCard } from "@/mcp/services/hk-airport/card";
 import { buildCard as borderCard } from "@/mcp/services/hk-border/card";
 import { buildCard as busCard } from "@/mcp/services/hk-bus/card";
+import { buildCard as ferryCard } from "@/mcp/services/hk-ferry/card";
 import { buildCard as holidaysCard } from "@/mcp/services/hk-holidays/card";
+import { buildCard as cycloneCard } from "@/mcp/services/hko-cyclone/card";
+import { buildCard as regionalWeatherCard } from "@/mcp/services/hko-regional/card";
+import { buildCard as tidesCard } from "@/mcp/services/hko-tides/card";
 import { buildCard as weatherCard } from "@/mcp/services/hko-weather/card";
+import { buildCard as kowloonEastParkingCard } from "@/mcp/services/kowloon-east-parking/card";
 import { buildCard as mtrCard } from "@/mcp/services/mtr/card";
 import { buildCard as carparkCard } from "@/mcp/services/td-carpark/card";
+import { buildCard as streetParkingCard } from "@/mcp/services/td-street-parking/card";
+import { buildCard as trafficCard } from "@/mcp/services/td-traffic/card";
 
 /**
  * Chat cards for what the agent chose to show: the channels that can't run an
@@ -18,13 +28,23 @@ import { buildCard as carparkCard } from "@/mcp/services/td-carpark/card";
 
 const BUILDERS: Record<string, CardBuilder> = {
   "datagovhk-catalog": catalogCard,
+  "epd-aqhi": aqhiCard,
+  "epd-beach": beachCard,
   "ha-aed": aedCard,
+  "hk-airport": airportCard,
   "hk-border": borderCard,
   "hk-bus": busCard,
+  "hk-ferry": ferryCard,
   "hk-holidays": holidaysCard,
+  "hko-cyclone": cycloneCard,
+  "hko-regional": regionalWeatherCard,
+  "hko-tides": tidesCard,
   "hko-weather": weatherCard,
+  "kowloon-east-parking": kowloonEastParkingCard,
   mtr: mtrCard,
   "td-carpark": carparkCard,
+  "td-street-parking": streetParkingCard,
+  "td-traffic": trafficCard,
 };
 
 /** At most this many pictures go with one reply. */

@@ -1,0 +1,54 @@
+id: td-traffic
+title: Traffic News and Journey Times
+description: Special traffic news, roadside journey time indicators and traffic camera snapshots from the Transport Department.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0024, API-0025, API-0026]
+datasets:
+  - hk-td-tis_19-special-traffic-news-v2
+  - hk-td-sm_8-journey-time-indicators-v2
+  - hk-td-tis_2-traffic-snapshot-images
+baseUrl: https://www.td.gov.hk
+cacheTtl: 120
+# Renders results in hosts that support MCP Apps; see app.ts. Camera snapshots load from the Transport Department.
+app:
+  resourceDomains: ["https://tdcctv.data.one.gov.hk"]
+tools:
+  - name: traffic_news
+    title: Special traffic news
+    description: Current Transport Department special traffic news for Hong Kong - road incidents, closures and traffic arrangements, newest first. Each item has its status (new, updated or closed, where closed means the incident is over), heading, location, district, direction, nearby landmark, announcement time and the full message.
+    path: /{lang}/special_news/trafficnews.xml
+    transform: { response: trafficNews }
+    input:
+      search: { type: string, in: local, description: "Only news mentioning this text in the heading, location, direction, landmarks or message, e.g. Tuen Mun Road or 隧道" }
+      district: { type: string, in: local, description: "Only news in this district, as the Transport Department names it, e.g. Sha Tin, Kwun Tong or 沙田" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the news: en, tc (Traditional Chinese) or sc (Simplified Chinese)" }
+    response:
+      format: xml
+      filter: { district: district }
+      search: { input: search, fields: [heading, detail, location, direction, nearLandmark, betweenLandmark, content] }
+      limit: 50
+  - name: traffic_journey_times
+    title: Journey time indicators
+    description: Estimated driving times in minutes from the roadside journey time indicators on Hong Kong Island, in Kowloon and in the New Territories to the harbour crossings, the airport and other major destinations, with the sign's colour (green, amber or red) and notices such as traffic congestion or tunnel closed. Updated every 2 minutes.
+    baseUrl: https://resource.data.one.gov.hk
+    path: /td/jss/Journeytimev2.xml
+    transform: { response: journeyTimes }
+    input:
+      from: { type: string, in: local, description: "Only indicators whose location or code contains this text, e.g. Gloucester Road, Tate's Cairn or H1" }
+      to: { type: string, in: local, description: "Only journeys to destinations containing this text or code, e.g. Cross Harbour Tunnel, Airport, 西區海底隧道 or WH" }
+      lang: { type: string, in: local, enum: [en, tc, sc], default: en, description: "Language of the location and destination names" }
+    response:
+      format: xml
+  - name: traffic_cameras
+    title: Traffic cameras
+    description: Find Transport Department traffic cameras by region, district or road and get the URL of each camera's latest snapshot (a 320x240 JPEG refreshed every few minutes), with its coordinates.
+    handler: cameras
+    cacheTtl: 86400
+    input:
+      search: { type: string, description: "Text in the camera's location or its key, e.g. Lion Rock Tunnel, 獅子山 or K109F" }
+      region: { type: string, enum: [hongKongIsland, kowloon, newTerritories], description: "Only cameras in this region" }
+      district: { type: string, description: "Only cameras in districts whose name contains this text, e.g. Sha Tin or 沙田" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the locations" }
+    response:
+      search: { input: search, fields: [description, key] }
+      limit: 30

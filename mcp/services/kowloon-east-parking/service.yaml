@@ -1,0 +1,51 @@
+id: kowloon-east-parking
+title: Kowloon East Parking
+description: Car parks and real-time parking vacancies in Kowloon East (Kwun Tong, Kowloon Bay, San Po Kong and Kai Tak) from the Development Bureau's Smart Parking pilot.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0029]
+datasets:
+  - hk-devb-sps-sps
+baseUrl: https://sps-opendata.pilotsmartke.gov.hk/rest
+# The API has English and Traditional Chinese only; sc gets Traditional Chinese.
+lang:
+  param: lang
+  map: { en: en_US, tc: zh_TW, sc: zh_TW }
+cacheTtl: 3600
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: ke_carparks
+    title: Kowloon East car parks
+    description: Car parks in the Kowloon East Smart Parking pilot (Kwun Tong, Kowloon Bay, Ngau Tau Kok, Yau Tong, San Po Kong, Kai Tak) with address, area, coordinates, phone, opening hours, height limits, facilities, payment methods, and per vehicle type the number of spaces, parking fees (hourly, day/night park, monthly) and shopping offers for free parking. Use the id with ke_parking_vacancy for live free spaces.
+    path: /getCarparkInfos
+    query: { fullload: "true" }
+    transform: { response: carparks }
+    input:
+      carparkId: { type: integer, name: carparkIds, description: "Only this car park (id from ke_carparks or ke_parking_vacancy)" }
+      search: { type: string, in: local, description: "Text in the car park name, address, area or district, e.g. Kowloon Bay, Kai Tak, Telford" }
+      vehicleType:
+        type: string
+        in: local
+        enum: [privateCar, LGV, HGV, coach, motorCycle]
+        description: "Only car parks with spaces for this vehicle (LGV/HGV: light/heavy goods vehicle), showing only its fees"
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of names, addresses and remarks (sc returns Traditional Chinese; upstream has no Simplified)" }
+    response:
+      search: { input: search, fields: [name, address, area, district] }
+      limit: 30
+  - name: ke_parking_vacancy
+    title: Kowloon East parking vacancy
+    description: Live number of free parking spaces at Kowloon East car parks, per vehicle type (private car, light and heavy goods vehicle, coach, motorcycle), with free EV-charging and accessible spaces where reported, the total spaces, and when the car park last reported (updatedAt, UTC; some car parks report rarely, so check it). Filter by car park id, name or area.
+    handler: vacancies
+    # Car parks upload counts every few minutes.
+    cacheTtl: 60
+    input:
+      carparkId: { type: integer, description: "Only this car park (id from ke_carparks)" }
+      search: { type: string, description: "Text in the car park name, area or district, e.g. Kwun Tong" }
+      vehicleType:
+        type: string
+        enum: [privateCar, LGV, HGV, coach, motorCycle]
+        description: "Only this vehicle type (LGV/HGV: light/heavy goods vehicle)"
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the car park names (sc returns Traditional Chinese)" }
+    response:
+      search: { input: search, fields: [name, area, district] }
+      limit: 50

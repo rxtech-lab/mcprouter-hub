@@ -1,0 +1,47 @@
+id: hko-tides
+title: Tides, Sun and Moon
+description: Predicted high and low tides, the latest observed sea levels at the tide stations, and times of sunrise, sunset, moonrise and moonset in Hong Kong, from the Hong Kong Observatory.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0032, API-0036]
+datasets:
+  - hk-hko-rss-latest-tidal-info
+  - hk-hko-rss-times-and-heights-of-high-and-low-tides
+  - hk-hko-rss-times-of-sunrise-suntransit-sunset
+  - hk-hko-rss-times-of-moonrise-moontransit-moonset
+baseUrl: https://data.weather.gov.hk/weatherAPI
+lang:
+  param: lang
+  map: { en: en, tc: tc, sc: sc }
+# Predictions are published years ahead and never change.
+cacheTtl: 86400
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: hko_tide_times
+    title: Predicted high and low tides
+    description: "Predicted times and heights of astronomical high and low tides at a Hong Kong tide station, for one day or up to 14 days, in Hong Kong time with heights in metres above Chart Datum. Stations: CCH Cheung Chau, CLK Chek Lap Kok (E), CMW Chi Ma Wan, KCT Kwai Chung, KLW Ko Lau Wan, LOP Lok On Pai, MWC Ma Wan, PT1 Po Toi, QUB Quarry Bay (Victoria Harbour), SPW Shek Pik, TAO Tai O, TBT Tsim Bei Tsui, TMW Tai Miu Wan, TPK Tai Po Kau, WAG Waglan Island. Astronomical predictions leave out storm surges."
+    handler: tideTimes
+    input:
+      station: { type: string, default: QUB, description: "Tide station code or name, e.g. QUB, Tai O or 長洲" }
+      date: { type: string, pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "First day in YYYY-MM-DD format; defaults to today in Hong Kong" }
+      days: { type: integer, minimum: 1, maximum: 14, default: 1, description: "Number of days from date" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the station name" }
+  - name: hko_tide_observations
+    title: Latest observed sea levels
+    description: The latest sea level observed at each Hong Kong Observatory tide station (Quarry Bay, Shek Pik, Tsim Bei Tsui, Tai Miu Wan, Tai Po Kau, Tai O, Waglan Island and so on), in metres above Chart Datum, with the time of the reading. A null height means the station has no reading right now.
+    path: /hko_data/tide/ALL_{lang}.csv
+    cacheTtl: 120
+    transform: { response: tideObservations }
+    input:
+      station: { type: string, in: local, description: "Only stations whose name or code contains this text, e.g. Quarry Bay or QUB" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the station names" }
+    response:
+      format: csv
+      search: { input: station, fields: [name, code] }
+  - name: hko_sun_moon
+    title: Sunrise, sunset, moonrise and moonset
+    description: Times of sunrise, sun transit (solar noon), sunset, moonrise, moon transit and moonset in Hong Kong for a date or a range of up to 31 days, in Hong Kong time (HH:MM). A null time means the event does not happen that day, which is common for the moon.
+    handler: sunMoon
+    input:
+      date: { type: string, pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Day in YYYY-MM-DD format, or the first day of a range; defaults to today in Hong Kong" }
+      endDate: { type: string, pattern: "^\\d{4}-\\d{2}-\\d{2}$", description: "Last day of the range in YYYY-MM-DD format, at most 31 days in all" }
