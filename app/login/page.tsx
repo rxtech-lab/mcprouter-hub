@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const benefits = [
   { icon: <KeyRound size={20} />, text: msg("API keys for Claude, Cursor, VS Code and any MCP client") },
-  { icon: <MessageSquareText size={20} />, text: msg("The Hong Kong agent, with your chats saved") },
+  { icon: <MessageSquareText size={20} />, text: msg("The mcprouter agent, with your chats saved") },
   { icon: <BarChart3 size={20} />, text: msg("Usage by key and tool, and your plan in one place") },
 ];
 
@@ -47,7 +47,7 @@ export default async function LoginPage({ searchParams }: PageProps<"/login">) {
           <span className="type-title-large">mcprouter</span>
         </Link>
         <div className="flex max-w-lg flex-col gap-8">
-          <h1 className="type-display-small">{t("Hong Kong open data, ready for your AI.")}</h1>
+          <h1 className="type-display-small">{t("Open data, ready for your AI.")}</h1>
           <ul className="stagger flex flex-col gap-4">
             {benefits.map((benefit) => (
               <li key={benefit.text} className="flex items-center gap-4 type-body-large">

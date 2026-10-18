@@ -1,4 +1,4 @@
-import { Activity, ArrowRight, Blocks, CalendarRange, Gauge, KeyRound, MessageSquareText } from "lucide-react";
+import { Activity, ArrowRight, Blocks, CalendarRange, Gauge, KeyRound, Lightbulb, MessageSquareText } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -15,7 +15,10 @@ import { activePlans, getEntitlements, subscriptionConfigured } from "@/lib/bill
 import manifest from "@/generated/manifest.json";
 import { formatDateTime, formatNumber } from "@/lib/format";
 import { getT } from "@/lib/i18n/server";
+import { INTRO_CARDS, introCardById, type IntroCard } from "@/lib/intro-cards";
+import { unreadIntroCards } from "@/lib/intro";
 import { callsPerDay } from "@/lib/usage";
+import { IntroDialog } from "./intro-dialog";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
@@ -36,13 +39,27 @@ async function planUsage(user: AppUser) {
   }
 }
 
-export default async function OverviewPage() {
+/**
+ * The intro dialog's cards. `?intro=all` replays every card, `?intro=<card id>` opens one (the agent links to these);
+ * otherwise it shows whatever the user hasn't read, which is nothing once they've been through it.
+ */
+async function introCards(userId: string, intro: string | undefined): Promise<IntroCard[]> {
+  if (intro === "all") return INTRO_CARDS;
+  const card = introCardById(intro);
+  if (card) return [card];
+  return unreadIntroCards(userId).catch((error) => (console.error("[dashboard] intro cards failed", error), []));
+}
+
+export default async function OverviewPage({ searchParams }: PageProps<"/dashboard">) {
   const user = await requirePageUser();
   const t = await getT();
-  const [daily, [{ activeKeys }], plan] = await Promise.all([
+  const { intro: rawIntro } = await searchParams;
+  const intro = Array.isArray(rawIntro) ? rawIntro[0] : rawIntro;
+  const [daily, [{ activeKeys }], plan, cards] = await Promise.all([
     callsPerDay(user, 30).catch((error) => (console.error("[dashboard] statistics failed", error), null)),
     db.select({ activeKeys: count() }).from(apiKeys).where(and(eq(apiKeys.userId, user.id), isNull(apiKeys.revokedAt))),
     planUsage(user),
+    introCards(user.id, intro),
   ]);
 
   const today = daily?.at(-1)?.value ?? 0;
@@ -64,8 +81,13 @@ export default async function OverviewPage() {
         <div className="flex flex-wrap gap-2">
           <ButtonLink href="/keys" icon={<KeyRound size={18} />}>{t("API keys")}</ButtonLink>
           <ButtonLink href="/chat" variant="elevated" icon={<MessageSquareText size={18} />}>{t("Ask the agent")}</ButtonLink>
+          <ButtonLink href="/dashboard?intro=all" variant="text" icon={<Lightbulb size={18} />} scroll={false} className="text-on-primary-container">
+            {t("Tour and what's new")}
+          </ButtonLink>
         </div>
       </section>
+      {/* Remounted per `?intro`, so asking for the tour again opens it even after it was closed. */}
+      <IntroDialog key={intro ?? "unread"} cards={cards} replay={intro === "all"} />
       <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label={t("Calls today")} value={formatNumber(today, t.locale)} icon={<Activity size={18} />} />
         <StatCard label={t("Calls, last 30 days")} value={formatNumber(last30, t.locale)} icon={<CalendarRange size={18} />} />

@@ -231,6 +231,18 @@ export const telegramLinks = sqliteTable(
   (table) => [index("telegram_links_user_idx").on(table.userId)],
 );
 
+/** Dashboard intro cards (tutorial steps and new-feature cards) a user has read, so each is shown once. */
+export const introReads = sqliteTable(
+  "intro_reads",
+  {
+    userId: text("user_id").notNull(),
+    /** An id from `INTRO_CARDS`. */
+    cardId: text("card_id").notNull(),
+    createdAt: createdAt(),
+  },
+  (table) => [primaryKey({ columns: [table.userId, table.cardId] })],
+);
+
 export type ApiKey = typeof apiKeys.$inferSelect;
 export type OAuthClient = typeof oauthClients.$inferSelect;
 export type OAuthGrant = typeof oauthGrants.$inferSelect;

@@ -1,6 +1,6 @@
 # mcprouter
 
-Hong Kong open data (DATA.GOV.HK) as MCP tools, with RxLab sign-in, rx-subscription billing, a Material 3 dashboard, an AI agent and a conversion tracker.
+Open data as MCP tools for everyone, starting with Hong Kong (DATA.GOV.HK), with RxLab sign-in, rx-subscription billing, a Material 3 dashboard, an AI agent and a conversion tracker.
 
 ## Quick start
 
@@ -12,7 +12,7 @@ bun run catalog:sync            # optional: load the 3,830-dataset catalogue for
 bun run dev
 ```
 
-Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Codex, Gemini CLI and Cursor opens as a dialog on `/keys/apps` (`?client=<id>&auth=key` picks the client and API-key flow). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/streamable` with `Authorization: Bearer mcpr_…`.
+Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Gemini (web), Codex, Gemini CLI and Cursor opens as a dialog on `/keys/apps` (`?client=<id>&auth=key` picks the client and API-key flow). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/streamable` with `Authorization: Bearer mcpr_…`.
 To inspect it: `bunx @modelcontextprotocol/inspector` with that URL and header.
 
 ## Endpoints

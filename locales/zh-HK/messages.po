@@ -42,7 +42,7 @@ msgstr "付款成功，你的計劃稍後會更新。"
 msgid "Checkout cancelled. Nothing was charged."
 msgstr "已取消結帳，未有收取任何費用。"
 
-#: app/(dashboard)/billing/page.tsx components/app-shell.tsx
+#: app/(dashboard)/billing/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Billing"
 msgstr "帳單"
 
@@ -183,7 +183,7 @@ msgstr "單位"
 msgid "Buy"
 msgstr "購買"
 
-#: app/(dashboard)/chat/[id]/page.tsx app/(dashboard)/chat/chat-view.tsx app/(dashboard)/chat/page.tsx app/(dashboard)/usage/clients/client-icon.tsx components/app-shell.tsx
+#: app/(dashboard)/chat/[id]/page.tsx app/(dashboard)/chat/chat-view.tsx app/(dashboard)/chat/page.tsx app/(dashboard)/usage/clients/client-icon.tsx components/app-shell.tsx lib/intro-cards.ts
 msgid "Agent"
 msgstr "AI 助理"
 
@@ -235,7 +235,7 @@ msgstr "對話已刪除"
 msgid "Chat history"
 msgstr "對話記錄"
 
-#: app/(dashboard)/chat/chat-history.tsx components/agent/hero-chat.tsx
+#: app/(dashboard)/chat/chat-history.tsx components/agent/hero-chat.tsx lib/agent/dashboard-tools.ts
 msgid "New chat"
 msgstr "新對話"
 
@@ -247,15 +247,55 @@ msgstr "最近"
 msgid "Chats"
 msgstr "對話"
 
+#: app/(dashboard)/chat/chat-view.tsx
+msgid "How many calls have I made today?"
+msgstr "我今日調用了多少次？"
+
+#: app/(dashboard)/chat/chat-view.tsx
+msgid "Create an API key for Claude Code"
+msgstr "為 Claude Code 建立 API 金鑰"
+
+#: app/(dashboard)/chat/chat-view.tsx
+msgid "Show me the dashboard tour"
+msgstr "帶我瀏覽控制台導覽"
+
 #: app/(dashboard)/chat/chat-view.tsx components/agent/hero-chat.tsx
 msgid "The agent could not answer. Try again."
 msgstr "AI 助理未能回答，請再試一次。"
 
 #: app/(dashboard)/chat/chat-view.tsx
-msgid "The agent calls mcprouter tools for you. Tool calls count towards your plan, like calls from your own keys."
-msgstr "AI 助理會為你調用 mcprouter 工具。工具調用與你自己金鑰的調用一樣，會計入你的計劃。"
+msgid "The agent calls mcprouter tools for you, and can link you to dashboard pages and actions like creating a key. Tool calls count towards your plan, like calls from your own keys."
+msgstr "AI 助理會為你調用 mcprouter 工具，亦可帶你前往控制台頁面和操作，例如建立金鑰。工具調用會計入你的計劃，與你自己的金鑰調用相同。"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/tracker/layout.tsx app/page.tsx components/app-shell.tsx
+#: app/(dashboard)/dashboard/intro-dialog.tsx app/(dashboard)/services/services-view.tsx
+msgid "Back"
+msgstr "返回"
+
+#: app/(dashboard)/dashboard/intro-dialog.tsx
+msgid "Skip"
+msgstr "略過"
+
+#: app/(dashboard)/dashboard/intro-dialog.tsx app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/page.tsx components/agent/chat-panel.tsx components/agent/tool-app.tsx
+msgid "Done"
+msgstr "完成"
+
+#: app/(dashboard)/dashboard/intro-dialog.tsx components/m3/pagination.tsx
+msgid "Next"
+msgstr "下一頁"
+
+#: app/(dashboard)/dashboard/intro-dialog.tsx
+msgid "New feature"
+msgstr "新功能"
+
+#: app/(dashboard)/dashboard/intro-dialog.tsx
+msgid "Tutorial"
+msgstr "教學"
+
+#: app/(dashboard)/dashboard/intro-dialog.tsx
+msgid "Card {index} of {count}"
+msgstr "第 {index} 張，共 {count} 張"
+
+#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/tracker/layout.tsx app/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Overview"
 msgstr "概覽"
 
@@ -276,13 +316,17 @@ msgstr "今日尚未有工具調用。"
 msgid "{services} services and {tools} tools are ready."
 msgstr "{services} 項服務及 {tools} 個工具已準備就緒。"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-tabs.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/page.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx components/app-shell.tsx
+#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-tabs.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/page.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "API keys"
 msgstr "API 金鑰"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(dashboard)/dashboard/page.tsx components/agent/hero-chat.tsx
 msgid "Ask the agent"
 msgstr "詢問 AI 助理"
+
+#: app/(dashboard)/dashboard/page.tsx
+msgid "Tour and what's new"
+msgstr "導覽與新功能"
 
 #: app/(dashboard)/dashboard/page.tsx
 msgid "Calls today"
@@ -304,7 +348,7 @@ msgstr "每日調用"
 msgid "Last 30 days, Hong Kong time"
 msgstr "過去 30 日，香港時間"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/layout.tsx app/(dashboard)/usage/page.tsx components/app-shell.tsx
+#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/layout.tsx app/(dashboard)/usage/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Usage"
 msgstr "用量"
 
@@ -384,7 +428,7 @@ msgstr "選擇你的客戶端，查看如何加入 mcprouter。支援 OAuth 的�
 msgid "Clients"
 msgstr "客戶端"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/apps/page.tsx app/(dashboard)/keys/keys-tabs.tsx
+#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/apps/page.tsx app/(dashboard)/keys/keys-tabs.tsx lib/agent/dashboard-tools.ts
 msgid "Connected apps"
 msgstr "已連接的應用程式"
 
@@ -423,10 +467,6 @@ msgstr "你只需登入 mcprouter 並授權存取，無需複製金鑰。該客�
 #: app/(dashboard)/keys/apps/apps-view.tsx app/page.tsx
 msgid "Create a key"
 msgstr "建立金鑰"
-
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/page.tsx components/agent/chat-panel.tsx components/agent/tool-app.tsx
-msgid "Done"
-msgstr "完成"
 
 #: app/(dashboard)/keys/apps/apps-view.tsx
 msgid "Sign-in method"
@@ -469,8 +509,8 @@ msgid "No API keys yet"
 msgstr "暫無 API 金鑰"
 
 #: app/(dashboard)/keys/keys-view.tsx
-msgid "Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude and ChatGPT sign in with OAuth instead, see <link>Set up a client</link>."
-msgstr "建立金鑰後，將現成的設定貼上至 Claude Code、Codex、Gemini CLI、Cursor 或任何 MCP 客戶端。Claude 及 ChatGPT 則以 OAuth 登入，請參閱<link>設定客戶端</link>。"
+msgid "Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude, ChatGPT and Gemini sign in with OAuth instead, see <link>Set up a client</link>."
+msgstr "建立金鑰後，將現成的設定貼上至 Claude Code、Codex、Gemini CLI、Cursor 或任何 MCP 客戶端。Claude、ChatGPT 和 Gemini 則透過 OAuth 登入，請參閱<link>設定客戶端</link>。"
 
 #: app/(dashboard)/keys/keys-view.tsx
 msgid "Revoked"
@@ -516,7 +556,7 @@ msgstr "撤銷"
 msgid "Services this key may call"
 msgstr "此金鑰可調用的服務"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(dashboard)/keys/keys-view.tsx lib/agent/dashboard-tools.ts
 msgid "Create API key"
 msgstr "建立 API 金鑰"
 
@@ -588,7 +628,7 @@ msgstr "設定已複製"
 msgid "Claude, ChatGPT and other clients that sign in with OAuth don't need a key. See <link>Set up a client</link>."
 msgstr "Claude、ChatGPT 及其他以 OAuth 登入的客戶端無需金鑰。請參閱<link>設定客戶端</link>。"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(dashboard)/keys/keys-view.tsx lib/agent/dashboard-tools.ts
 msgid "Rename key"
 msgstr "重新命名金鑰"
 
@@ -752,7 +792,7 @@ msgstr "解除連結此號碼？"
 msgid "Number unlinked"
 msgstr "號碼已解除連結"
 
-#: app/(dashboard)/services/page.tsx app/(dashboard)/tracker/dataset-table.tsx app/page.tsx app/sources/sources-header.tsx components/app-shell.tsx
+#: app/(dashboard)/services/page.tsx app/(dashboard)/tracker/dataset-table.tsx app/page.tsx app/sources/sources-header.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Services"
 msgstr "服務"
 
@@ -793,10 +833,6 @@ msgstr "端點已複製"
 msgid "{count} tool"
 msgid_plural "{count} tools"
 msgstr[0] "{count} 個工具"
-
-#: app/(dashboard)/services/services-view.tsx
-msgid "Back"
-msgstr "返回"
 
 #: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/client-setup-dialog.tsx
 msgid "Close"
@@ -1048,7 +1084,7 @@ msgstr "數據提供者"
 msgid "Datasets"
 msgstr "數據集"
 
-#: app/(dashboard)/tracker/page.tsx components/app-shell.tsx
+#: app/(dashboard)/tracker/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Tracker"
 msgstr "追蹤器"
 
@@ -1201,7 +1237,7 @@ msgstr "按數據提供者"
 msgid "Connected app"
 msgstr "已連接的應用程式"
 
-#: app/(dashboard)/usage/clients/page.tsx
+#: app/(dashboard)/usage/clients/page.tsx lib/agent/dashboard-tools.ts
 msgid "Usage by client"
 msgstr "按客戶端統計用量"
 
@@ -1233,7 +1269,7 @@ msgstr "沒有調用"
 msgid "{n} failed or denied"
 msgstr "{n} 次失敗或被拒絕"
 
-#: app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/layout.tsx
+#: app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/layout.tsx lib/agent/dashboard-tools.ts
 msgid "Credits"
 msgstr "額度"
 
@@ -1303,24 +1339,24 @@ msgid "Calls past the allowance"
 msgstr "超出計劃配額的調用"
 
 #: app/layout.tsx
-msgid "Hong Kong open data as MCP tools."
-msgstr "將香港開放數據化為 MCP 工具。"
+msgid "Open data as MCP tools, for everyone. Starting with Hong Kong."
+msgstr "人人可用的開放數據 MCP 工具，由香港開始。"
 
 #: app/login/page.tsx
 msgid "API keys for Claude, Cursor, VS Code and any MCP client"
 msgstr "適用於 Claude、Cursor、VS Code 及任何 MCP 客戶端的 API 金鑰"
 
 #: app/login/page.tsx
-msgid "The Hong Kong agent, with your chats saved"
-msgstr "香港 AI 助理，並儲存你的對話"
+msgid "The mcprouter agent, with your chats saved"
+msgstr "mcprouter AI 助理，保存你的對話"
 
 #: app/login/page.tsx
 msgid "Usage by key and tool, and your plan in one place"
 msgstr "按金鑰和工具查看用量，計劃資訊一目了然"
 
 #: app/login/page.tsx
-msgid "Hong Kong open data, ready for your AI."
-msgstr "香港開放數據，為你的 AI 準備就緒。"
+msgid "Open data, ready for your AI."
+msgstr "開放數據，為你的 AI 準備就緒。"
 
 #: app/login/page.tsx
 msgid "{count} service"
@@ -1473,12 +1509,12 @@ msgid "{services} services · {tools} MCP tools"
 msgstr "{services} 個服務 · {tools} 個 MCP 工具"
 
 #: app/page.tsx
-msgid "Hong Kong open data, as tools your AI can call."
-msgstr "香港開放數據，化為你的 AI 可調用的工具。"
+msgid "Open data, as tools your AI can call."
+msgstr "開放數據，化為你的 AI 可調用的工具。"
 
 #: app/page.tsx
-msgid "Weather, buses, MTR, A&E waiting times, car parks, public holidays and the whole DATA.GOV.HK catalogue — live, through one MCP endpoint and one API key."
-msgstr "天氣、巴士、港鐵、急症室輪候時間、停車場、公眾假期以及整個 DATA.GOV.HK 目錄 — 即時數據，只需一個 MCP 端點和一個 API 金鑰。"
+msgid "Live public data for anyone, through one MCP endpoint and one API key. We're starting with Hong Kong: weather, buses, MTR, A&E waiting times, car parks, public holidays and the whole DATA.GOV.HK catalogue."
+msgstr "人人可用的即時公共數據，只需一個 MCP 端點和一個 API 金鑰。我們由香港開始：天氣、巴士、港鐵、急症室輪候時間、停車場、公眾假期，以及整個 DATA.GOV.HK 目錄。"
 
 #: app/page.tsx
 msgid "Open dashboard"
@@ -1529,8 +1565,8 @@ msgid "No AI app? Just message the bot."
 msgstr "沒有 AI 應用程式？直接向機械人發訊息。"
 
 #: app/page.tsx
-msgid "The same live Hong Kong data on Telegram and WhatsApp. Nothing to install or configure."
-msgstr "在 Telegram 和 WhatsApp 上取得同樣的香港實時數據，無需安裝或設定。"
+msgid "The same live data on Telegram and WhatsApp. Nothing to install or configure."
+msgstr "在 Telegram 和 WhatsApp 上取得同樣的即時數據，無需安裝或設定。"
 
 #: app/page.tsx
 msgid "{name} bot"
@@ -1609,8 +1645,8 @@ msgid "API tracker"
 msgstr "API 追蹤器"
 
 #: app/sources/apis/page.tsx
-msgid "Every Hong Kong open data API mcprouter serves as MCP tools, and the ones coming soon."
-msgstr "mcprouter 以 MCP 工具形式提供的所有香港開放數據 API，以及即將推出的 API。"
+msgid "Every open data API mcprouter serves as MCP tools, and the ones coming soon."
+msgstr "mcprouter 以 MCP 工具提供的所有開放數據 API，以及即將推出的 API。"
 
 #: app/sources/apis/page.tsx lib/apis.ts
 msgid "Implemented"
@@ -1678,8 +1714,8 @@ msgid_plural "Datasets on DATA.GOV.HK"
 msgstr[0] "DATA.GOV.HK 上的數據集"
 
 #: app/sources/page.tsx
-msgid "The Hong Kong open data services mcprouter serves as MCP tools."
-msgstr "mcprouter 以 MCP 工具形式提供的香港開放數據服務。"
+msgid "The open data services mcprouter serves as MCP tools."
+msgstr "mcprouter 以 MCP 工具提供的開放數據服務。"
 
 #: app/sources/page.tsx
 msgid "{count} dataset"
@@ -1763,7 +1799,7 @@ msgstr "正在連結…"
 msgid "Link account"
 msgstr "連結帳戶"
 
-#: app/telegram/link/page.tsx
+#: app/telegram/link/page.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Link Telegram"
 msgstr "連結 Telegram"
 
@@ -1807,7 +1843,7 @@ msgstr "可隨時在「API 金鑰 → Telegram」中解除連結。"
 msgid "Link number"
 msgstr "連結號碼"
 
-#: app/whatsapp/link/page.tsx
+#: app/whatsapp/link/page.tsx lib/agent/dashboard-tools.ts
 msgid "Link WhatsApp"
 msgstr "連結 WhatsApp"
 
@@ -1880,6 +1916,30 @@ msgid "Find datasets about air quality"
 msgstr "搜尋有關空氣質素的數據集"
 
 #: components/agent/chat-panel.tsx
+msgid "Checking your API keys"
+msgstr "正在查看你的 API 金鑰"
+
+#: components/agent/chat-panel.tsx
+msgid "Checked your API keys"
+msgstr "已查看你的 API 金鑰"
+
+#: components/agent/chat-panel.tsx
+msgid "Checking your account"
+msgstr "正在查看你的帳戶"
+
+#: components/agent/chat-panel.tsx
+msgid "Checked your account"
+msgstr "已查看你的帳戶"
+
+#: components/agent/chat-panel.tsx
+msgid "Finding the page…"
+msgstr "正在尋找頁面…"
+
+#: components/agent/chat-panel.tsx
+msgid "Open"
+msgstr "開啟"
+
+#: components/agent/chat-panel.tsx
 msgid "Searching tools <muted>for “{query}”</muted>"
 msgstr "正在搜尋工具<muted>：「{query}」</muted>"
 
@@ -1920,8 +1980,8 @@ msgid "Agent is responding"
 msgstr "AI 助理正在回覆"
 
 #: components/agent/chat-panel.tsx
-msgid "Ask about Hong Kong, live"
-msgstr "即時查詢香港資訊"
+msgid "Ask about live data"
+msgstr "查詢即時數據"
 
 #: components/agent/chat-panel.tsx components/agent/hero-chat.tsx
 msgid "Message"
@@ -1938,10 +1998,6 @@ msgstr "停止"
 #: components/agent/chat-panel.tsx components/agent/hero-chat.tsx
 msgid "Send"
 msgstr "發送"
-
-#: components/agent/hero-chat.tsx
-msgid "Ask the Hong Kong agent"
-msgstr "向香港 AI 助理發問"
 
 #: components/agent/hero-chat.tsx
 msgid "Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?"
@@ -2003,6 +2059,26 @@ msgstr "{kind}。請先登入，以便 mcprouter 批准存取，然後按以下�
 msgid "Sign in to continue"
 msgstr "登入以繼續"
 
+#: components/intro/intro-art.tsx
+msgid "What's the weather now?"
+msgstr "現在天氣如何？"
+
+#: components/intro/intro-art.tsx
+msgid "Mostly cloudy, no warnings"
+msgstr "大致多雲，沒有警告"
+
+#: components/intro/intro-art.tsx
+msgid "Is MTR running OK?"
+msgstr "港鐵服務正常嗎？"
+
+#: components/intro/intro-art.tsx
+msgid "All lines normal 🚇"
+msgstr "所有綫路正常 🚇"
+
+#: components/intro/intro-art.tsx
+msgid "Thanks!"
+msgstr "謝謝！"
+
 #: components/language-menu.tsx
 msgid "Language"
 msgstr "語言"
@@ -2033,15 +2109,11 @@ msgstr "主導覽"
 
 #: components/m3/pagination.tsx
 msgid "{total} {noun} · page {page} of {pageCount}"
-msgstr "{total} {noun} · 第 {page}/{pageCount} 頁"
+msgstr "{total} 個{noun} · 第 {page}/{pageCount} 頁"
 
 #: components/m3/pagination.tsx
 msgid "Previous"
 msgstr "上一頁"
-
-#: components/m3/pagination.tsx
-msgid "Next"
-msgstr "下一頁"
 
 #: components/m3/search-bar.tsx
 msgid "Clear search"
@@ -2087,6 +2159,18 @@ msgstr "該項目已不存在。"
 msgid "Something went wrong. Please try again."
 msgstr "發生錯誤，請再試一次。"
 
+#: lib/agent/dashboard-tools.ts
+msgid "Dashboard tour"
+msgstr "控制台導覽"
+
+#: lib/agent/dashboard-tools.ts
+msgid "Change key services"
+msgstr "更改金鑰服務"
+
+#: lib/agent/dashboard-tools.ts
+msgid "Revoke key"
+msgstr "撤銷金鑰"
+
 #: lib/apis.ts
 msgid "Transport"
 msgstr "交通"
@@ -2114,6 +2198,86 @@ msgstr "地點及地址"
 #: lib/apis.ts
 msgid "Government"
 msgstr "政府"
+
+#: lib/intro-cards.ts
+msgid "Welcome to your dashboard"
+msgstr "歡迎使用你的控制台"
+
+#: lib/intro-cards.ts
+msgid "Everything lives in the navigation on the left (at the bottom on a phone). Here is what each tab is for."
+msgstr "所有功能都在左側導覽列中（手機上位於底部）。以下是各個分頁的用途。"
+
+#: lib/intro-cards.ts
+msgid "Today's calls, your plan and shortcuts."
+msgstr "今日調用、你的計劃和捷徑。"
+
+#: lib/intro-cards.ts
+msgid "Keys, connected apps, and the Telegram and WhatsApp bots."
+msgstr "金鑰、已連接的應用程式，以及 Telegram 和 WhatsApp 機械人。"
+
+#: lib/intro-cards.ts
+msgid "Calls per day, by client and your credit history."
+msgstr "每日調用量、按客戶端統計及你的額度記錄。"
+
+#: lib/intro-cards.ts
+msgid "Every tool and the data behind it."
+msgstr "所有工具及其背後的數據。"
+
+#: lib/intro-cards.ts
+msgid "Which DATA.GOV.HK datasets are converted next."
+msgstr "接下來要轉換哪些 DATA.GOV.HK 數據集。"
+
+#: lib/intro-cards.ts
+msgid "Ask about live data, or ask it to do things in the dashboard for you."
+msgstr "查詢即時數據，或讓它在控制台中代你操作。"
+
+#: lib/intro-cards.ts
+msgid "Your plan and allowance."
+msgstr "你的計劃和配額。"
+
+#: lib/intro-cards.ts
+msgid "Connect your chat client"
+msgstr "連接你的聊天客戶端"
+
+#: lib/intro-cards.ts
+msgid "Add mcprouter to the chat app you already use, such as Claude, ChatGPT, Gemini, Gemini CLI, Codex or Cursor. Pick your client under Connected apps and follow its steps; most sign in with OAuth, so there is no key to copy."
+msgstr "將 mcprouter 加入你正在使用的聊天應用程式，例如 Claude、ChatGPT、Gemini、Gemini CLI、Codex 或 Cursor。在「已連接的應用程式」選擇你的客戶端並按步驟操作；大部分客戶端透過 OAuth 登入，無需複製金鑰。"
+
+#: lib/intro-cards.ts
+msgid "Set up a client"
+msgstr "設定客戶端"
+
+#: lib/intro-cards.ts
+msgid "Quick start: ask the agent"
+msgstr "快速開始：向 AI 助理發問"
+
+#: lib/intro-cards.ts
+msgid "No setup needed: the Agent tab answers with live data, starting with Hong Kong: the weather, the next bus or A&E waiting times. It can also find pages and prepare actions here, such as creating a key."
+msgstr "無需設定：「AI 助理」分頁會以即時數據回答你，由香港開始：天氣、下一班巴士或急症室輪候時間。它亦可在這裡尋找頁面並準備操作，例如建立金鑰。"
+
+#: lib/intro-cards.ts
+msgid "Try “What's the weather now?”"
+msgstr "試試「現在天氣如何？」"
+
+#: lib/intro-cards.ts
+msgid "New: chat with ChatGPT, Gemini and Claude"
+msgstr "新功能：在 ChatGPT、Gemini 和 Claude 中聊天"
+
+#: lib/intro-cards.ts
+msgid "mcprouter now works in ChatGPT, Gemini and Claude. Connect it once and ask about live data, starting with Hong Kong's weather and transport, right in the chat app you already use."
+msgstr "mcprouter 現已支援 ChatGPT、Gemini 和 Claude。只需連接一次，即可在你正在使用的聊天應用程式中查詢即時數據，由香港的天氣和交通開始。"
+
+#: lib/intro-cards.ts
+msgid "Connect a client"
+msgstr "連接客戶端"
+
+#: lib/intro-cards.ts
+msgid "New: the agent on Telegram and WhatsApp"
+msgstr "新功能：在 Telegram 和 WhatsApp 上使用 AI 助理"
+
+#: lib/intro-cards.ts
+msgid "Chat with the mcprouter agent from Telegram or WhatsApp. Link your account once, then send a message like you would to a friend. Calls count towards your plan."
+msgstr "在 Telegram 或 WhatsApp 上與 mcprouter AI 助理聊天。連結一次帳戶後，就像給朋友傳訊息一樣發問。調用會計入你的計劃。"
 
 #: lib/mcp-clients.ts
 msgid "Terminal"
@@ -2186,6 +2350,26 @@ msgstr "在對話中輸入 @ 或開啟工具選單，然後選擇 mcprouter。"
 #: lib/mcp-clients.ts
 msgid "Developer mode is available on Plus and Pro, and on Business, Enterprise and Edu plans where an admin allows it."
 msgstr "Developer mode 適用於 Plus 及 Pro 計劃；Business、Enterprise 及 Edu 計劃須經管理員允許。"
+
+#: lib/mcp-clients.ts
+msgid "In Gemini on the web, open Settings → Connected Apps. Under Custom apps, choose Add a custom app and paste the MCP server URL."
+msgstr "在網頁版 Gemini 中，開啟「Settings → Connected Apps」。在「Custom apps」下選擇「Add a custom app」，然後貼上 MCP 伺服器 URL。"
+
+#: lib/mcp-clients.ts
+msgid "Open Gemini Connected Apps"
+msgstr "開啟 Gemini Connected Apps"
+
+#: lib/mcp-clients.ts
+msgid "Choose Next. Leave Advanced features closed, as mcprouter registers itself. Sign in to mcprouter and approve access."
+msgstr "選擇「Next」。「Advanced features」保持收起即可，mcprouter 會自行註冊。登入 mcprouter 並批准存取。"
+
+#: lib/mcp-clients.ts
+msgid "In a chat, type @ and pick mcprouter. Once added on the web, it also works in the Gemini mobile app."
+msgstr "在對話中輸入 @ 並選擇 mcprouter。在網頁版加入後，Gemini 手機應用程式中亦可使用。"
+
+#: lib/mcp-clients.ts
+msgid "Custom apps need a personal Google Account (not work or school), Keep Activity turned on, and are available in English to people 18 or over in the US."
+msgstr "Custom apps 需要個人 Google 帳戶（非工作或學校帳戶）並開啟 Keep Activity，目前只向美國 18 歲或以上的用戶提供英文版本。"
 
 #: lib/mcp-clients.ts
 msgid "CLI and IDE extension"

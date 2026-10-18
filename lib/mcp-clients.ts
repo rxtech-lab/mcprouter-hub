@@ -69,6 +69,21 @@ export const MCP_CLIENTS: McpClient[] = [
     note: msg("Developer mode is available on Plus and Pro, and on Business, Enterprise and Edu plans where an admin allows it."),
   },
   {
+    id: "gemini-web",
+    name: "Gemini",
+    kind: "gemini.google.com",
+    oauth: (endpoint) => [
+      {
+        text: msg("In Gemini on the web, open Settings → Connected Apps. Under Custom apps, choose Add a custom app and paste the MCP server URL."),
+        code: endpoint,
+        link: { href: "https://gemini.google.com/customize/connectors", label: msg("Open Gemini Connected Apps") },
+      },
+      { text: msg("Choose Next. Leave Advanced features closed, as mcprouter registers itself. Sign in to mcprouter and approve access.") },
+      { text: msg("In a chat, type @ and pick mcprouter. Once added on the web, it also works in the Gemini mobile app.") },
+    ],
+    note: msg("Custom apps need a personal Google Account (not work or school), Keep Activity turned on, and are available in English to people 18 or over in the US."),
+  },
+  {
     id: "codex",
     name: "Codex",
     kind: msg("CLI and IDE extension"),

@@ -1,4 +1,4 @@
-import { ArrowRight, Code, Globe, KeyRound, type LucideIcon, MessageCircle, MessageSquareText, MousePointer2, Plug, Send, Sparkles, Terminal, Wrench } from "lucide-react";
+import { ArrowRight, Code, Globe, KeyRound, type LucideIcon, MessageCircle, MessageSquareText, MousePointer2, Plug, Send, Sparkle, Sparkles, Terminal, Wrench } from "lucide-react";
 import Link from "next/link";
 import manifest from "@/generated/manifest.json";
 import { HeroChat } from "@/components/agent/hero-chat";
@@ -24,6 +24,7 @@ const clientIcons: Record<string, LucideIcon> = {
   claude: MessageSquareText,
   chatgpt: Globe,
   codex: Code,
+  "gemini-web": Sparkle,
   gemini: Sparkles,
   cursor: MousePointer2,
 };
@@ -98,9 +99,9 @@ export default async function Home({ searchParams }: PageProps<"/">) {
             <span className="inline-flex h-8 items-center gap-2 self-start rounded-sm bg-surface-container-lowest/60 px-3 type-label-large">
               <Wrench size={16} /> {t("{services} services · {tools} MCP tools", { services: manifest.services.length, tools: toolCount })}
             </span>
-            <h1 className="type-display-small md:type-display-large">{t("Hong Kong open data, as tools your AI can call.")}</h1>
+            <h1 className="type-display-small md:type-display-large">{t("Open data, as tools your AI can call.")}</h1>
             <p className="max-w-xl type-body-large opacity-90">
-              {t("Weather, buses, MTR, A&E waiting times, car parks, public holidays and the whole DATA.GOV.HK catalogue — live, through one MCP endpoint and one API key.")}
+              {t("Live public data for anyone, through one MCP endpoint and one API key. We're starting with Hong Kong: weather, buses, MTR, A&E waiting times, car parks, public holidays and the whole DATA.GOV.HK catalogue.")}
             </p>
             <div className="flex flex-wrap gap-3">
               <ButtonLink href="/dashboard" className="h-14 rounded-lg px-6">
@@ -200,7 +201,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           <div id="chat-apps" className="mt-16 mb-8 flex scroll-mt-24 flex-col gap-2">
             <span className="type-label-large text-primary">{t("Chat apps")}</span>
             <h3 className="type-headline-medium">{t("No AI app? Just message the bot.")}</h3>
-            <p className="max-w-2xl type-body-large text-on-surface-variant">{t("The same live Hong Kong data on Telegram and WhatsApp. Nothing to install or configure.")}</p>
+            <p className="max-w-2xl type-body-large text-on-surface-variant">{t("The same live data on Telegram and WhatsApp. Nothing to install or configure.")}</p>
           </div>
           <ul className="stagger grid gap-4 md:grid-cols-2">
             {bots.map((bot) => {

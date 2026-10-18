@@ -8,7 +8,7 @@ import { SourcesHeader } from "./sources-header";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
-  return { title: t("Data sources"), description: t("The Hong Kong open data services mcprouter serves as MCP tools.") };
+  return { title: t("Data sources"), description: t("The open data services mcprouter serves as MCP tools.") };
 }
 
 export default async function SourcesPage() {

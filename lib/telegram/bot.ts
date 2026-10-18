@@ -24,7 +24,7 @@ export const TELEGRAM_CHANNEL_NOTE = `You are replying in Telegram. Keep answers
 The user can send "/new" to start a fresh conversation and "/signout" to unlink their mcprouter account.
 ${SIGN_OUT_NOTE}`;
 
-const INTRO = "Hi! I answer questions about Hong Kong with live government data: weather, buses, the MTR, A&E waiting times and more.";
+const INTRO = "Hi! I answer questions with live open data, starting with Hong Kong: weather, buses, the MTR, A&E waiting times and more.";
 
 type LinkedUser = { id: string; email: string };
 
@@ -82,7 +82,7 @@ export function signInMessage(origin: string, message: Pick<IncomingMessage, "fr
 
 /** Sent to the chat once the account is linked on the web. */
 export function linkedMessage(email: string) {
-  return `You're signed in${email ? ` as **${email}**` : ""}. Ask me anything about Hong Kong: weather, buses, the MTR, A&E waiting times and more.\n\nSend /new to start over, or /signout to unlink this Telegram account.`;
+  return `You're signed in${email ? ` as **${email}**` : ""}. Ask me about live data, starting with Hong Kong: weather, buses, the MTR, A&E waiting times and more.\n\nSend /new to start over, or /signout to unlink this Telegram account.`;
 }
 
 export const SIGNED_OUT_LEAD = "Signed out. This Telegram account is no longer linked to mcprouter.";
@@ -138,7 +138,7 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
     if (existing?.messages.some((stored) => stored.id === message.id)) return { status: "duplicate" as const };
 
     if (message.text === null) {
-      await send(to, "I can only read text messages for now. Ask me about Hong Kong weather, buses, the MTR, A&E waiting times or public holidays.");
+      await send(to, "I can only read text messages for now. Ask me about the weather, buses, the MTR, A&E waiting times or public holidays.");
       return { status: "unsupported" as const };
     }
     const text = message.text.trim();

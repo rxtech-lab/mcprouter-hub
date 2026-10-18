@@ -3,6 +3,7 @@
 import { DropdownMenu } from "radix-ui";
 import { KeyRound, MoreVertical, Pencil, Plus, ShieldCheck, Trash2, TriangleAlert } from "lucide-react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { Button, IconButton } from "@/components/m3/button";
 import { Card } from "@/components/m3/card";
@@ -41,9 +42,20 @@ type Mode =
   | { kind: "scopes"; key: KeyRow }
   | { kind: "revoke"; key: KeyRow };
 
-export function KeysView({ keys, services, endpoint }: { keys: KeyRow[]; services: ServiceOption[]; endpoint: string }) {
-  const [mode, setMode] = useState<Mode>({ kind: "none" });
-  const close = () => setMode({ kind: "none" });
+/** A dialog opened from the URL, e.g. by the agent. */
+export type OpenDialog = { kind: "create"; name?: string } | { kind: "rename" | "scopes" | "revoke"; key: KeyRow };
+
+type KeysViewProps = { keys: KeyRow[]; services: ServiceOption[]; endpoint: string; initial?: OpenDialog };
+
+export function KeysView({ keys, services, endpoint, initial }: KeysViewProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const [mode, setMode] = useState<Mode>(initial ? (initial.kind === "create" ? { kind: "create" } : initial) : { kind: "none" });
+  const close = () => {
+    setMode({ kind: "none" });
+    // The dialog came from the URL; drop it so a reload doesn't reopen it.
+    if (initial) router.replace(pathname, { scroll: false });
+  };
   const titles = new Map(services.map((service) => [service.id, service.title]));
   const t = useT();
 
@@ -63,7 +75,7 @@ export function KeysView({ keys, services, endpoint }: { keys: KeyRow[]; service
       {keys.length === 0 ? (
         <EmptyState icon={<KeyRound size={32} />} title={t("No API keys yet")}>
           {t.rich(
-            "Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude and ChatGPT sign in with OAuth instead, see <link>Set up a client</link>.",
+            "Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude, ChatGPT and Gemini sign in with OAuth instead, see <link>Set up a client</link>.",
             { link: (chunks) => <Link href="/keys/apps?client=claude" className="text-primary underline">{chunks}</Link> },
           )}
         </EmptyState>
@@ -80,6 +92,7 @@ export function KeysView({ keys, services, endpoint }: { keys: KeyRow[]; service
       <CreateKeyDialog
         open={mode.kind === "create"}
         services={services}
+        initialName={initial?.kind === "create" ? initial.name : undefined}
         onClose={close}
         onCreated={(name, key) => setMode({ kind: "reveal", name, key })}
       />
@@ -181,8 +194,17 @@ function ServicePicker({ services, value, onChange }: { services: ServiceOption[
   );
 }
 
-function CreateKeyDialog({ open, services, onClose, onCreated }: { open: boolean; services: ServiceOption[]; onClose: () => void; onCreated: (name: string, key: string) => void }) {
-  const [name, setName] = useState("");
+type CreateKeyDialogProps = {
+  open: boolean;
+  services: ServiceOption[];
+  /** Pre-filled, e.g. the name the agent suggested. */
+  initialName?: string;
+  onClose: () => void;
+  onCreated: (name: string, key: string) => void;
+};
+
+function CreateKeyDialog({ open, services, initialName, onClose, onCreated }: CreateKeyDialogProps) {
+  const [name, setName] = useState(initialName ?? "");
   const [scopes, setScopes] = useState<string[]>([]);
   const [expires, setExpires] = useState("0");
   const { pending, run } = useActionRunner();

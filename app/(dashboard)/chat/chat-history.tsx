@@ -188,11 +188,14 @@ function HistoryList({ onNavigate }: { onNavigate?: () => void }) {
   );
 }
 
-/** Chat history beside the conversation on medium screens and up. */
+/** Chat history beside the conversation on medium screens and up, on its own tone so it reads apart from the navigation rail. */
 export function ChatSidebar() {
   const t = useT();
   return (
-    <aside className="hidden w-72 shrink-0 flex-col gap-3 bg-surface pt-4 pr-3 md:flex" aria-label={t("Chat history")}>
+    <aside
+      className="hidden w-80 shrink-0 animate-pane-slide-in flex-col gap-3 rounded-tl-xl bg-surface-container pt-4 pr-10 pl-3 md:flex"
+      aria-label={t("Chat history")}
+    >
       <ButtonLink href="/chat" variant="tonal" icon={<MessageSquarePlus size={20} />} className="h-14 self-start rounded-lg px-5 shadow-elevation-1">{t("New chat")}</ButtonLink>
       <SearchField />
       <h2 className="px-4 pt-2 type-title-small text-on-surface-variant">{t("Recent")}</h2>

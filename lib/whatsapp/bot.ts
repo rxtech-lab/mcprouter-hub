@@ -64,7 +64,7 @@ function defaultReply(deps: BotDeps) {
 
 const textMessage = (id: string, role: "user" | "assistant", text: string): UIMessage => ({ id, role, parts: [{ type: "text", text }] });
 
-const INTRO = "Hi! I answer questions about Hong Kong with live government data: weather, buses, the MTR, A&E waiting times and more.";
+const INTRO = "Hi! I answer questions with live open data, starting with Hong Kong: weather, buses, the MTR, A&E waiting times and more.";
 
 export const SIGNED_OUT_LEAD = "Signed out. This number is no longer linked to mcprouter.";
 
@@ -76,7 +76,7 @@ export function signInMessage(origin: string, from: string, lead = INTRO) {
 
 /** Sent to the number once it's linked on the web. */
 export function linkedMessage(email: string) {
-  return `You're signed in${email ? ` as *${email}*` : ""}. Ask me anything about Hong Kong: weather, buses, the MTR, A&E waiting times and more.\n\nSend /new to start over, or /signout to unlink this number.`;
+  return `You're signed in${email ? ` as *${email}*` : ""}. Ask me about live data, starting with Hong Kong: weather, buses, the MTR, A&E waiting times and more.\n\nSend /new to start over, or /signout to unlink this number.`;
 }
 
 export function overLimitMessage(origin: string) {
@@ -112,7 +112,7 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
     if (existing?.messages.some((stored) => stored.id === message.id)) return { status: "duplicate" as const };
 
     if (message.text === null) {
-      await send(message.from, "I can only read text messages for now. Ask me about Hong Kong weather, buses, the MTR, A&E waiting times or public holidays.");
+      await send(message.from, "I can only read text messages for now. Ask me about the weather, buses, the MTR, A&E waiting times or public holidays.");
       return { status: "unsupported" as const };
     }
     const text = message.text.trim();

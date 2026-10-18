@@ -1,6 +1,8 @@
 import { validateUIMessages, type UIMessage } from "ai";
 import { getCurrentUser } from "@/lib/auth";
 import { chatIdSchema, ensureChat, loadChat, saveMessages } from "@/lib/chat-store";
+import { dashboardData } from "@/lib/agent/dashboard-data";
+import { DASHBOARD_NOTE, dashboardTools } from "@/lib/agent/dashboard-tools";
 import { parseMcpServers, resolveServer } from "@/lib/agent/mcp-servers";
 import { streamAgentReply } from "@/lib/agent/run";
 
@@ -43,6 +45,8 @@ export async function POST(request: Request) {
     servers,
     messages,
     model: process.env.AI_MODEL ?? "anthropic/claude-sonnet-5-5",
+    channelNote: DASHBOARD_NOTE,
+    channelTools: dashboardTools(dashboardData(user)),
     onFinished: (finished) => saveMessages(chatId, finished),
   });
 }

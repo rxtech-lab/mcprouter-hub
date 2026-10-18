@@ -75,7 +75,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
           <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
           <span className="relative inline-flex size-2.5 rounded-full bg-primary" />
         </span>
-        <h2 className="flex-1 type-title-small">{t("Ask the Hong Kong agent")}</h2>
+        <h2 className="flex-1 type-title-small">{t("Ask the agent")}</h2>
         {messages.length > 0 ? (
           <IconButton
             label={t("New chat")}

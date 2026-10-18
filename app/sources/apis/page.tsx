@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
   return {
     title: t("API tracker"),
-    description: t("Every Hong Kong open data API mcprouter serves as MCP tools, and the ones coming soon."),
+    description: t("Every open data API mcprouter serves as MCP tools, and the ones coming soon."),
   };
 }
 

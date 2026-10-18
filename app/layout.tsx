@@ -10,7 +10,7 @@ const robotoMono = Roboto_Mono({ variable: "--font-roboto-mono", subsets: ["lati
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
-  const description = t("Hong Kong open data as MCP tools.");
+  const description = t("Open data as MCP tools, for everyone. Starting with Hong Kong.");
   return {
     metadataBase: new URL(
       process.env.NEXT_PUBLIC_SITE_URL ||

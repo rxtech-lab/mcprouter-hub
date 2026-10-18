@@ -1,9 +1,10 @@
 "use client";
 
 import type { UIMessage } from "ai";
-import { ArrowUp, CircleAlert, CircleCheck, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
+import { ArrowUp, CircleAlert, CircleCheck, ExternalLink, LayoutDashboard, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { IconButton } from "@/components/m3/button";
+import { ACCOUNT_SUMMARY_TOOL_NAME, LIST_KEYS_TOOL_NAME, NAVIGATION_PART_TYPES, type DashboardNavigation } from "@/lib/agent/dashboard-tools";
 import { SEARCH_TOOL_NAME } from "@/lib/agent/tool-search";
 import { useT } from "@/lib/i18n/client";
 import { msg } from "@/lib/i18n/translate";
@@ -29,6 +30,51 @@ type SearchPart = {
 };
 
 const SEARCH_PART_TYPE = `tool-${SEARCH_TOOL_NAME}`;
+
+type DashboardPart = { type: `tool-${string}`; state: ToolPart["state"]; output?: Partial<DashboardNavigation> & { error?: string }; errorText?: string };
+
+const LOOKUP_LABELS: Record<string, [running: string, done: string]> = {
+  [`tool-${LIST_KEYS_TOOL_NAME}`]: [msg("Checking your API keys"), msg("Checked your API keys")],
+  [`tool-${ACCOUNT_SUMMARY_TOOL_NAME}`]: [msg("Checking your account"), msg("Checked your account")],
+};
+
+/** A dashboard page or dialog the agent found for the user. It opens in a new tab, only when they choose to, so the chat stays put. */
+function DashboardLinkCard({ part }: { part: DashboardPart }) {
+  const t = useT();
+  const running = part.state === "input-streaming" || part.state === "input-available";
+  const error = part.state === "output-error" ? part.errorText : part.output?.error;
+  const target = part.state === "output-available" && part.output?.href && part.output.label ? part.output : null;
+  return (
+    <div className="my-2 flex items-center gap-3 rounded-md border border-outline-variant bg-surface-container-low px-3 py-2 animate-message-in" data-testid="dashboard-link">
+      <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-container text-on-primary-container">
+        <LayoutDashboard size={16} />
+      </span>
+      <span className="min-w-0 flex-1 truncate type-body-medium">
+        {running ? t("Finding the page…") : null}
+        {target?.label ? t(target.label) : null}
+        {error ? <span className="text-error">{error}</span> : null}
+      </span>
+      {running ? <LoaderCircle size={16} className="animate-spin text-on-surface-variant" /> : null}
+      {target ? (
+        <a href={target.href} target="_blank" rel="noopener" className="state-layer inline-flex h-8 items-center gap-1 rounded-full px-3 type-label-large text-primary">
+          {t("Open")} <ExternalLink size={16} />
+        </a>
+      ) : null}
+    </div>
+  );
+}
+
+/** A read-only look at the account (keys, usage): one line, the answer follows in the text. */
+function LookupLine({ part, labels }: { part: DashboardPart; labels: [string, string] }) {
+  const t = useT();
+  const running = part.state === "input-streaming" || part.state === "input-available";
+  return (
+    <p className="my-1 flex items-center gap-2 type-body-small text-on-surface-variant animate-message-in">
+      {running ? <LoaderCircle size={14} className="animate-spin" /> : part.state === "output-error" ? <CircleAlert size={14} className="text-error" /> : <CircleCheck size={14} />}
+      {t(running ? labels[0] : labels[1])}
+    </p>
+  );
+}
 
 /** The agent looking up which tools to load: shows its query, then the tools it found. */
 function ToolSearchCard({ part }: { part: SearchPart }) {
@@ -123,6 +169,8 @@ export function MessageParts({ message }: { message: UIMessage }) {
       );
     }
     if (part.type === SEARCH_PART_TYPE) return <ToolSearchCard key={index} part={part as SearchPart} />;
+    if (NAVIGATION_PART_TYPES.includes(part.type)) return <DashboardLinkCard key={index} part={part as DashboardPart} />;
+    if (part.type in LOOKUP_LABELS) return <LookupLine key={index} part={part as DashboardPart} labels={LOOKUP_LABELS[part.type]} />;
     return null;
   });
 }
@@ -191,10 +239,12 @@ type ChatPanelProps = {
   disabled?: boolean;
   /** Lets MCP Apps in the replies call their tools, e.g. to refresh. Calls are billed to the signed-in user. */
   canCallAppTools?: boolean;
+  /** Starter questions on the empty state. */
+  suggestions?: string[];
 };
 
 /** The conversation: turns that pin each question to the top, suggestions when empty, and the composer. */
-export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false, canCallAppTools = false }: ChatPanelProps) {
+export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false, canCallAppTools = false, suggestions = SUGGESTIONS }: ChatPanelProps) {
   const t = useT();
   const [input, setInput] = useState("");
   const scroller = useRef<HTMLDivElement>(null);
@@ -243,10 +293,10 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
             <span className="flex size-12 items-center justify-center rounded-lg bg-tertiary-container text-on-tertiary-container">
               <Sparkles size={24} />
             </span>
-            <p className="type-title-large">{t("Ask about Hong Kong, live")}</p>
+            <p className="type-title-large">{t("Ask about live data")}</p>
             <p className="max-w-md type-body-medium text-on-surface-variant">{intro}</p>
             <div className="flex max-w-2xl flex-wrap justify-center gap-2">
-              {SUGGESTIONS.map((suggestion) => (
+              {suggestions.map((suggestion) => (
                 <button
                   key={suggestion}
                   type="button"
