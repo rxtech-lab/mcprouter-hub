@@ -1,4 +1,5 @@
 import type { ManualDatasetStatus } from "@/db/schema";
+import { msg } from "@/lib/i18n/translate";
 
 /**
  * Conversion tracker logic, kept free of I/O so the page, the terminal report
@@ -10,12 +11,13 @@ import type { ManualDatasetStatus } from "@/db/schema";
 export const TRACKER_STATUSES = ["converted", "in_progress", "planned", "skipped", "not_started"] as const;
 export type TrackerStatus = (typeof TRACKER_STATUSES)[number];
 
+/** Marked for translation; the UI renders them with `t(STATUS_LABELS[status])`. */
 export const STATUS_LABELS: Record<TrackerStatus, string> = {
-  converted: "Converted",
-  in_progress: "In progress",
-  planned: "Planned",
-  skipped: "Skipped",
-  not_started: "Not started",
+  converted: msg("Converted"),
+  in_progress: msg("In progress"),
+  planned: msg("Planned"),
+  skipped: msg("Skipped"),
+  not_started: msg("Not started"),
 };
 
 export type TrackerDataset = {

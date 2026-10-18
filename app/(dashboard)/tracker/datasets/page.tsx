@@ -1,10 +1,12 @@
 import { X } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { cn } from "@/components/m3/cn";
 import { Pagination } from "@/components/m3/pagination";
 import { SearchBar } from "@/components/m3/search-bar";
 import { isAdmin, requirePageUser } from "@/lib/auth";
 import { formatNumber } from "@/lib/format";
+import { getT } from "@/lib/i18n/server";
 import { filterRows, humanise, STATUS_LABELS, TRACKER_STATUSES, type TrackerFilters, type TrackerRow } from "@/lib/tracker";
 import { loadTrackerRows } from "@/lib/tracker-data";
 import { datasetsHref, parseDatasetParams, type DatasetParams } from "../params";
@@ -12,7 +14,10 @@ import { NotSynced } from "../tracker-ui";
 import { DatasetTable, type Row } from "../dataset-table";
 import { FiltersButton } from "./filters-button";
 
-export const metadata = { title: "Tracker · Datasets" };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("Tracker · Datasets") };
+}
 
 const PAGE_SIZE = 25;
 
@@ -41,6 +46,7 @@ function LinkChip({ href, selected, children }: { href: string; selected: boolea
 
 export default async function TrackerDatasetsPage({ searchParams }: PageProps<"/tracker/datasets">) {
   const user = await requirePageUser();
+  const t = await getT();
   const params = parseDatasetParams(await searchParams);
   const rows = await loadTrackerRows();
   if (rows.length === 0) return <NotSynced />;
@@ -61,28 +67,28 @@ export default async function TrackerDatasetsPage({ searchParams }: PageProps<"/
 
   const providerLabel = params.provider ? (rows.find((row) => row.organization === params.provider)?.organizationTitle ?? params.provider) : null;
   const active = [
-    params.category ? { label: `Category: ${humanise(params.category)}`, remove: href({ category: undefined }) } : null,
-    providerLabel ? { label: `Provider: ${providerLabel}`, remove: href({ provider: undefined }) } : null,
-    params.format ? { label: `Format: ${params.format}`, remove: href({ format: undefined }) } : null,
-    params.api ? { label: "Real API endpoints", remove: href({ api: undefined }) } : null,
+    params.category ? { label: t("Category: {name}", { name: humanise(params.category) }), remove: href({ category: undefined }) } : null,
+    providerLabel ? { label: t("Provider: {name}", { name: providerLabel }), remove: href({ provider: undefined }) } : null,
+    params.format ? { label: t("Format: {name}", { name: params.format }), remove: href({ format: undefined }) } : null,
+    params.api ? { label: t("Real API endpoints"), remove: href({ api: undefined }) } : null,
   ].filter((chip) => chip !== null);
 
   return (
     <>
       <div className="flex flex-wrap items-center gap-3">
         <div className="min-w-0 flex-1 basis-72">
-          <SearchBar action="/tracker/datasets" query={params.q} label="Search datasets" placeholder="Search by title or id">
+          <SearchBar action="/tracker/datasets" query={params.q} label={t("Search datasets")} placeholder={t("Search by title or id")}>
             {Object.entries(filters).map(([key, value]) => (key !== "q" && value ? <input key={key} type="hidden" name={key} value={value} /> : null))}
           </SearchBar>
         </div>
         <FiltersButton formats={formats} format={params.format} api={params.api} keep={{ q: params.q, status: params.status, provider: params.provider, category: params.category }} />
       </div>
 
-      <nav aria-label="Filter by status" className="mt-4 flex gap-2 overflow-x-auto pb-1">
-        <LinkChip href={href({ status: undefined })} selected={!params.status}>All · {formatNumber(anyStatus.length)}</LinkChip>
+      <nav aria-label={t("Filter by status")} className="mt-4 flex gap-2 overflow-x-auto pb-1">
+        <LinkChip href={href({ status: undefined })} selected={!params.status}>{t("All")} · {formatNumber(anyStatus.length, t.locale)}</LinkChip>
         {TRACKER_STATUSES.map((status) => (
           <LinkChip key={status} href={href({ status })} selected={params.status === status}>
-            {STATUS_LABELS[status]} · {formatNumber(statusCounts[status])}
+            {t(STATUS_LABELS[status])} · {formatNumber(statusCounts[status], t.locale)}
           </LinkChip>
         ))}
       </nav>
@@ -90,12 +96,12 @@ export default async function TrackerDatasetsPage({ searchParams }: PageProps<"/
       {active.length ? (
         <div className="mt-3 flex flex-wrap items-center gap-2">
           {active.map((chip) => (
-            <Link key={chip.label} href={chip.remove} aria-label={`Remove ${chip.label}`} className="state-layer inline-flex h-8 max-w-full items-center gap-2 rounded-sm border border-outline pr-2 pl-3 type-label-large text-on-surface-variant">
+            <Link key={chip.label} href={chip.remove} aria-label={t("Remove {filter}", { filter: chip.label })} className="state-layer inline-flex h-8 max-w-full items-center gap-2 rounded-sm border border-outline pr-2 pl-3 type-label-large text-on-surface-variant">
               <span className="truncate">{chip.label}</span>
               <X size={16} className="shrink-0" />
             </Link>
           ))}
-          <Link href={datasetsHref({ q: params.q, status: params.status })} className="state-layer rounded-full px-3 py-1.5 type-label-large text-primary">Clear filters</Link>
+          <Link href={datasetsHref({ q: params.q, status: params.status })} className="state-layer rounded-full px-3 py-1.5 type-label-large text-primary">{t("Clear filters")}</Link>
         </div>
       ) : null}
 
@@ -108,7 +114,7 @@ export default async function TrackerDatasetsPage({ searchParams }: PageProps<"/
           repoUrl={process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/rxtech-lab/mcprouter"}
         />
       </div>
-      {filtered.length ? <Pagination page={page} pageCount={pageCount} total={filtered.length} noun={filtered.length === 1 ? "dataset" : "datasets"} href={(next) => href({ page: next })} /> : null}
+      {filtered.length ? <Pagination page={page} pageCount={pageCount} total={filtered.length} noun={t.plural("dataset", "datasets", filtered.length)} href={(next) => href({ page: next })} /> : null}
     </>
   );
 }

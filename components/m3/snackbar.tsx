@@ -2,6 +2,7 @@
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import { CircleAlert, CircleCheck, LoaderCircle, X } from "lucide-react";
+import { useT } from "@/lib/i18n/client";
 import { cn } from "./cn";
 
 type Tone = "info" | "success" | "error" | "progress";
@@ -27,6 +28,7 @@ export function useSnackbar() {
  * prescribes; a new message replaces the current one.
  */
 export function SnackbarProvider({ children }: { children: ReactNode }) {
+  const t = useT();
   const [snack, setSnack] = useState<Snack | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const counter = useRef(0);
@@ -81,7 +83,8 @@ export function SnackbarProvider({ children }: { children: ReactNode }) {
               </button>
             ) : null}
             {snack.tone !== "progress" ? (
-              <button type="button" aria-label="Dismiss" className="state-layer inline-flex size-9 cursor-pointer items-center justify-center rounded-full" onClick={() => dismiss(snack.id)}>
+              <button type="button" aria-label={t("Dismiss")}
+ className="state-layer inline-flex size-9 cursor-pointer items-center justify-center rounded-full" onClick={() => dismiss(snack.id)}>
                 <X size={18} />
               </button>
             ) : null}

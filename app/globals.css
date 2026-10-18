@@ -61,6 +61,15 @@
   --animate-surface-out: surface-out 150ms cubic-bezier(0.3, 0, 0.8, 0.15) both;
   --animate-menu-in: menu-in 250ms cubic-bezier(0.05, 0.7, 0.1, 1) both;
   --animate-hold: hold 150ms both;
+  /* Agent panes: the chat history slides out from the rail, then the conversation follows. */
+  --animate-pane-slide-in: pane-slide-in 500ms cubic-bezier(0.05, 0.7, 0.1, 1) both;
+  --animate-pane-in: pane-in 400ms cubic-bezier(0.05, 0.7, 0.1, 1) both;
+  /* Intro card illustrations: looping, so the card reads like a short clip. */
+  --animate-intro-pop: intro-pop 6s cubic-bezier(0.05, 0.7, 0.1, 1) infinite both;
+  --animate-intro-travel: intro-travel 2.4s cubic-bezier(0.2, 0, 0, 1) infinite;
+  --animate-intro-rail: intro-rail 10.5s cubic-bezier(0.2, 0, 0, 1) infinite;
+  --animate-intro-float: intro-float 3s ease-in-out infinite;
+  --animate-intro-ping: intro-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
   --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
 }
@@ -81,6 +90,14 @@
 }
 @keyframes menu-in {
   from { transform: scaleY(0.8); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes pane-slide-in {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes pane-in {
+  from { transform: translateX(24px); opacity: 0; }
   to { transform: none; opacity: 1; }
 }
 /* Keeps a wrapper mounted (Radix Presence waits for animationend) while its child animates out. */
@@ -106,6 +123,8 @@
   .animate-page-in,
   .animate-fade-through,
   .animate-menu-in,
+  .animate-pane-slide-in,
+  .animate-pane-in,
   .stagger > * { animation-name: fade-in; animation-duration: 150ms; }
   .animate-surface-out { animation-name: fade-out; }
   *, ::before, ::after { transition-duration: 0.01ms !important; }
@@ -126,6 +145,45 @@
 @keyframes typing-dot-fade {
   0%, 60%, 100% { opacity: 0.4; }
   30% { opacity: 1; }
+}
+
+/* Appears with the emphasized-decelerate curve, holds, then fades before the loop restarts. */
+@keyframes intro-pop {
+  0% { transform: translateY(10px) scale(0.96); opacity: 0; }
+  8%, 85% { transform: none; opacity: 1; }
+  95%, 100% { transform: none; opacity: 0; }
+}
+@keyframes intro-travel {
+  from { left: 0; opacity: 0; }
+  15%, 85% { opacity: 1; }
+  to { left: 100%; opacity: 0; }
+}
+/* Steps through the seven navigation items, 40px apart, resting on each. */
+@keyframes intro-rail {
+  0%, 11% { transform: translateY(0); }
+  14%, 25% { transform: translateY(40px); }
+  28%, 39% { transform: translateY(80px); }
+  42%, 53% { transform: translateY(120px); }
+  56%, 67% { transform: translateY(160px); }
+  70%, 81% { transform: translateY(200px); }
+  84%, 97% { transform: translateY(240px); }
+  100% { transform: translateY(0); }
+}
+@keyframes intro-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes intro-ping {
+  from { transform: scale(1); opacity: 0.6; }
+  to { transform: scale(1.8); opacity: 0; }
+}
+/* Still frames for reduced motion: everything visible, nothing moving. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-intro-pop,
+  .animate-intro-rail,
+  .animate-intro-float { animation: none; }
+  .animate-intro-travel,
+  .animate-intro-ping { display: none; }
 }
 
 @keyframes snackbar-in {

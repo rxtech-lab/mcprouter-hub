@@ -4,10 +4,12 @@ import { useRouter } from "next/navigation";
 import { type ReactNode, useState, useTransition } from "react";
 import { Button } from "@/components/m3/button";
 import { Dialog } from "@/components/m3/dialog";
+import { useT } from "@/lib/i18n/client";
 
 /** One API's details. Opened by `?api=<id>`; closing goes back to the list with the same filters. */
 export function ApiDialog({ title, description, closeHref, actions, children }: { title: string; description: ReactNode; closeHref: string; actions?: ReactNode; children: ReactNode }) {
   const router = useRouter();
+  const t = useT();
   const [open, setOpen] = useState(true);
   const [, startTransition] = useTransition();
 
@@ -26,7 +28,7 @@ export function ApiDialog({ title, description, closeHref, actions, children }: 
       actions={
         <>
           <Button variant="text" onClick={close}>
-            Close
+            {t("Close")}
           </Button>
           {actions}
         </>

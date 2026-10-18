@@ -9,9 +9,11 @@ export default async function ChatLayout({ children }: LayoutProps<"/chat">) {
   return (
     <Suspense>
       <ChatHistoryProvider initial={initial}>
-        <div className="flex h-[calc(100dvh-5rem)] md:h-dvh">
+        {/* Clipped so the history slides out from behind the rail. */}
+        <div className="flex h-[calc(100dvh-5rem)] overflow-hidden md:h-dvh">
           <ChatSidebar />
-          <div className="flex min-w-0 flex-1 flex-col px-4 pt-6 pb-4 md:rounded-tl-xl md:bg-surface-container-lowest md:px-8">
+          {/* Overlaps the sidebar by its corner radius, so the rounded corner shows the history pane behind it. */}
+          <div className="relative flex min-w-0 flex-1 animate-pane-in flex-col px-4 pt-6 pb-4 md:-ml-7 md:rounded-tl-xl md:bg-surface-container-lowest md:px-8 md:[animation-delay:200ms]">
             <div className="mx-auto flex min-h-0 w-full max-w-4xl flex-1 flex-col">{children}</div>
           </div>
         </div>

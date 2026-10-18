@@ -9,11 +9,13 @@ import { IconButton } from "@/components/m3/button";
 import { cn } from "@/components/m3/cn";
 import type { FreeChatQuota } from "@/lib/free-chat";
 import { getFreeChatQuota } from "@/lib/free-chat-actions";
+import { useT } from "@/lib/i18n/client";
 import { MessageParts, SUGGESTIONS } from "./chat-panel";
 import { McpAppHost } from "./tool-app";
 
 /** The free, signed-out agent, embedded in the landing page hero. */
 export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
+  const t = useT();
   const [input, setInput] = useState("");
   const [quota, setQuota] = useState<FreeChatQuota | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -38,7 +40,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
     // Free chats aren't stored, so the whole conversation goes with each message.
     transport: new DefaultChatTransport({ api: "/api/free-chat" }),
     onError: (failure) => {
-      setError(failure.message || "The agent could not answer. Try again.");
+      setError(failure.message || t("The agent could not answer. Try again."));
       void refreshQuota();
     },
     onFinish: () => void refreshQuota(),
@@ -73,10 +75,10 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
           <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
           <span className="relative inline-flex size-2.5 rounded-full bg-primary" />
         </span>
-        <h2 className="flex-1 type-title-small">Ask the Hong Kong agent</h2>
+        <h2 className="flex-1 type-title-small">{t("Ask the agent")}</h2>
         {messages.length > 0 ? (
           <IconButton
-            label="New chat"
+            label={t("New chat")}
             onClick={() => {
               stop();
               setMessages([]);
@@ -94,7 +96,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
         {messages.length === 0 ? (
           <div className="flex h-full flex-col justify-end gap-3">
             <p className="max-w-[85%] rounded-lg rounded-bl-xs bg-surface-container-high px-4 py-2 type-body-medium">
-              Hi! I check live government data for you: weather, buses, MTR, A&amp;E waits and more. What do you want to know?
+              {t("Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?")}
             </p>
             <div className="flex flex-wrap gap-2">
               {SUGGESTIONS.slice(0, 4).map((suggestion) => (
@@ -102,10 +104,10 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
                   key={suggestion}
                   type="button"
                   disabled={usedUp}
-                  onClick={() => send(suggestion)}
+                  onClick={() => send(t(suggestion))}
                   className="state-layer cursor-pointer rounded-sm border border-outline px-3 py-1.5 text-left type-label-large text-on-surface-variant disabled:cursor-default disabled:opacity-40"
                 >
-                  {suggestion}
+                  {t(suggestion)}
                 </button>
               ))}
             </div>
@@ -126,7 +128,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
               )}
               {status === "submitted" ? (
                 <li className="flex items-center gap-2 type-body-medium text-on-surface-variant">
-                  <LoaderCircle size={16} className="animate-spin" /> Thinking…
+                  <LoaderCircle size={16} className="animate-spin" /> {t("Thinking…")}
                 </li>
               ) : null}
             </ul>
@@ -143,7 +145,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
           }}
         >
           <textarea
-            aria-label="Message"
+            aria-label={t("Message")}
             rows={1}
             value={input}
             disabled={usedUp}
@@ -154,15 +156,15 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
                 send(input);
               }
             }}
-            placeholder={usedUp ? "No free messages left today" : "Ask about weather, buses, MTR…"}
+            placeholder={usedUp ? t("No free messages left today") : t("Ask about weather, buses, MTR…")}
             className="max-h-28 min-h-10 flex-1 resize-none bg-transparent py-2 type-body-large outline-none placeholder:text-on-surface-variant disabled:opacity-60"
           />
           {busy ? (
-            <IconButton label="Stop" variant="tonal" onClick={() => stop()}>
+            <IconButton label={t("Stop")} variant="tonal" onClick={() => stop()}>
               <Square size={18} />
             </IconButton>
           ) : (
-            <IconButton label="Send" variant="filled" type="submit" disabled={usedUp || !input.trim()}>
+            <IconButton label={t("Send")} variant="filled" type="submit" disabled={usedUp || !input.trim()}>
               <ArrowUp size={20} />
             </IconButton>
           )}
@@ -172,11 +174,11 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
           <span className="min-w-0 flex-1">
             {error ??
               (usedUp
-                ? `You've used today's ${quota?.limit ?? dailyLimit} free messages. More at midnight Hong Kong time.`
-                : `${quota?.remaining ?? dailyLimit} of ${quota?.limit ?? dailyLimit} free messages left today. Not saved.`)}
+                ? t("You've used today's {limit} free messages. More at midnight Hong Kong time.", { limit: quota?.limit ?? dailyLimit })
+                : t("{remaining} of {limit} free messages left today. Not saved.", { remaining: quota?.remaining ?? dailyLimit, limit: quota?.limit ?? dailyLimit }))}
           </span>
           <Link href="/login" className="shrink-0 type-label-large text-primary hover:underline">
-            Sign in for more
+            {t("Sign in for more")}
           </Link>
         </p>
       </div>

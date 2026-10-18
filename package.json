@@ -11,7 +11,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "codegen": "bun scripts/codegen.ts",
+    "codegen": "bun scripts/codegen.ts && bun scripts/i18n.ts compile",
     "postinstall": "bun run codegen",
     "theme": "bun scripts/theme.ts",
     "tracker:report": "bun scripts/tracker-report.ts",
@@ -19,7 +19,9 @@
     "telegram:webhook": "bun scripts/telegram-webhook.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push"
+    "db:push": "drizzle-kit push",
+    "i18n:extract": "bun scripts/i18n.ts extract && bun scripts/i18n.ts compile",
+    "i18n:check": "bun scripts/i18n.ts check"
   },
   "dependencies": {
     "@ai-sdk/mcp": "^2.0.78",

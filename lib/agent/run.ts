@@ -16,7 +16,7 @@ import type { resolveServer } from "@/lib/agent/mcp-servers";
 import { selfMcpFetch } from "@/lib/agent/self-fetch";
 import { usedToolNames, withToolSearch } from "@/lib/agent/tool-search";
 
-export const AGENT_INSTRUCTIONS = `You are the mcprouter assistant. You answer questions about Hong Kong using live government open data through your tools:
+export const AGENT_INSTRUCTIONS = `You are the mcprouter assistant. You answer questions with live open data through your tools. Coverage starts with Hong Kong:
 weather and warnings, bus and minibus (KMB, Citybus, green minibus) and MTR arrivals, A&E waiting times, car parks, public holidays and the DATA.GOV.HK catalogue.
 Most tools are not loaded yet: call search_tools describing what you need (e.g. "when is the next bus", "is it going to rain") to load the right tools, then call them.
 Always call a tool for live or factual data instead of guessing, and say when data comes back empty.
@@ -77,15 +77,20 @@ export async function streamAgentReply(options: {
   model: string;
   maxSteps?: number;
   headers?: HeadersInit;
+  /** Appended to the instructions, e.g. the web chat's dashboard guide. */
+  channelNote?: string;
+  /** The channel's own tools (e.g. the dashboard tools); always loaded, never behind `search_tools`. */
+  channelTools?: ToolSet;
   onFinished?: (messages: UIMessage[]) => Promise<void>;
 }) {
   const { tools, closeAll } = await connectTools(options.servers);
   try {
+    const instructions = options.channelNote ? `${agentInstructions()}\n${options.channelNote}` : agentInstructions();
     const result = streamText({
       model: options.model,
-      instructions: cachedInstructions(agentInstructions()),
+      instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages(options.messages)),
-      tools: stableTools(withToolSearch(tools, usedToolNames(options.messages), process.env.AI_EMBEDDING_MODEL || undefined)),
+      tools: stableTools({ ...withToolSearch(tools, usedToolNames(options.messages), process.env.AI_EMBEDDING_MODEL || undefined), ...options.channelTools }),
       providerOptions: gatewayCaching,
       // Each tool step resends the conversation; keep the breakpoint on its newest message.
       prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),

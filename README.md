@@ -1,6 +1,6 @@
 # mcprouter
 
-Hong Kong open data (DATA.GOV.HK) as MCP tools, with RxLab sign-in, rx-subscription billing, a Material 3 dashboard, an AI agent and a conversion tracker.
+Open data as MCP tools for everyone, starting with Hong Kong (DATA.GOV.HK), with RxLab sign-in, rx-subscription billing, a Material 3 dashboard, an AI agent and a conversion tracker.
 
 ## Quick start
 
@@ -12,7 +12,7 @@ bun run catalog:sync            # optional: load the 3,830-dataset catalogue for
 bun run dev
 ```
 
-Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Codex, Gemini CLI and Cursor opens as a dialog on `/keys/apps` (`?client=<id>&auth=key` picks the client and API-key flow). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/streamable` with `Authorization: Bearer mcpr_…`.
+Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Gemini (web), Codex, Gemini CLI and Cursor opens as a dialog on `/keys/apps` (`?client=<id>&auth=key` picks the client and API-key flow). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/streamable` with `Authorization: Bearer mcpr_…`.
 To inspect it: `bunx @modelcontextprotocol/inspector` with that URL and header.
 
 ## Endpoints
@@ -106,11 +106,26 @@ mount({
 
 `bun run codegen` checks the two agree (unknown or out-of-order ids, a service without `apis:`, or datasets that don't match fail the build) and writes [`APIS.md`](APIS.md), the tracker as a table, and `generated/apis.json`, which the public **Data sources → APIs** page (`/sources/apis`) reads. Commit `APIS.md` with the YAML change; a test fails when it's stale.
 
+## Translations
+
+The UI is in English, Simplified Chinese (`zh-CN`) and Traditional Chinese for Hong Kong (`zh-HK`). The language menu sits in the navigation rail and in the public top app bar. Picking a language saves it in the `locale` cookie for a year. Until the user picks one, the locale follows the browser's `Accept-Language` (`zh-HK`, `zh-TW`, `zh-MO`, `zh-Hant` and `yue` read `zh-HK`; other Chinese reads `zh-CN`; anything else reads English). URLs stay the same in every language.
+
+Translations live in gettext catalogues, `locales/<locale>/messages.po`, keyed by the English source string:
+
+- Server Components, server actions and `generateMetadata`: `const t = await getT()` from `@/lib/i18n/server`. Client Components: `const t = useT()` from `@/lib/i18n/client`.
+- `t("Hello {name}", { name })` translates and fills placeholders. `t.plural("{count} key", "{count} keys", count)` picks by count. `t.rich("Read the <docs>guide</docs>", { docs: (chunks) => <Link href="/docs">{chunks}</Link> })` renders elements inside a sentence.
+- Labels declared outside a component are marked with `msg("Overview")` and translated where they render, with `t(item.label)`.
+- The first argument must be a string literal, so `bun run i18n:extract` can find it. Extraction adds new strings to every `messages.po` and drops unused ones; translators fill in each `msgstr`. Strings left untranslated, or flagged `fuzzy`, fall back to English.
+- Dates and numbers: pass `t.locale` to the helpers in `lib/format.ts`.
+
+`bun run codegen` compiles the catalogues to `generated/i18n/<locale>.json`. CI runs `bun run i18n:check`, which fails when a catalogue is out of date or has untranslated strings.
+
 ## Scripts
 
 | Script | |
 |---|---|
-| `bun run codegen [--check]` | YAML → `generated/` and `APIS.md` |
+| `bun run codegen [--check]` | YAML → `generated/` and `APIS.md`; compiles the translation catalogues |
+| `bun run i18n:extract` / `bun run i18n:check` | Update `locales/*/messages.po` from the source / check they're complete |
 | `bun run theme` | Regenerate `app/m3-tokens.css` from the seed colour |
 | `bun run catalog:sync [--limit N]` | Sync the CKAN catalogue without the cron's time budget |
 | `bun run tracker:report [--markdown]` | Tracker summary in the terminal |

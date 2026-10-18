@@ -3,11 +3,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceIcon } from "@/components/service-icon";
 import manifest from "@/generated/manifest.json";
+import { getT } from "@/lib/i18n/server";
 import { SourcesHeader } from "./sources-header";
 
-export const metadata: Metadata = { title: "Data sources", description: "The Hong Kong open data services mcprouter serves as MCP tools." };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("Data sources"), description: t("The open data services mcprouter serves as MCP tools.") };
+}
 
-export default function SourcesPage() {
+export default async function SourcesPage() {
+  const t = await getT();
   return (
     <>
       <SourcesHeader />
@@ -24,7 +29,7 @@ export default function SourcesPage() {
                 <p className="type-body-medium text-on-surface-variant">{service.description}</p>
               </div>
               <span className="type-label-medium text-on-surface-variant">
-                {service.tools.length} {service.tools.length === 1 ? "tool" : "tools"} · {service.datasets.length} {service.datasets.length === 1 ? "dataset" : "datasets"}
+                {t.plural("{count} tool", "{count} tools", service.tools.length)} · {t.plural("{count} dataset", "{count} datasets", service.datasets.length)}
               </span>
             </Link>
           </li>

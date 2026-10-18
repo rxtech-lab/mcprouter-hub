@@ -1,4 +1,5 @@
 import { ArrowDownLeft, ArrowUpRight } from "lucide-react";
+import type { Metadata } from "next";
 import { z } from "zod";
 import { ButtonLink } from "@/components/m3/button";
 import { Card, CardTitle } from "@/components/m3/card";
@@ -9,15 +10,20 @@ import { requirePageUser } from "@/lib/auth";
 import { billingConfig } from "@/lib/billing/config";
 import { getBalanceLedger, getEntitlements, subscriptionConfigured } from "@/lib/billing/subscription";
 import { formatDateTime, formatNumber } from "@/lib/format";
+import { getT } from "@/lib/i18n/server";
 
-export const metadata = { title: "Credits" };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("Credits") };
+}
 
 const paramsSchema = z.object({ page: z.coerce.number().int().min(1).catch(1) });
 
 export default async function UsageCreditsPage({ searchParams }: PageProps<"/usage/credits">) {
   const user = await requirePageUser();
+  const t = await getT();
   if (!subscriptionConfigured) {
-    return <EmptyState title="Billing is not configured">Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show credits.</EmptyState>;
+    return <EmptyState title={t("Billing is not configured")}>{t("Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show credits.")}</EmptyState>;
   }
 
   const raw = await searchParams;
@@ -32,26 +38,26 @@ export default async function UsageCreditsPage({ searchParams }: PageProps<"/usa
     <>
       <Card variant="filled" className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <CardTitle>Credit balance</CardTitle>
+          <CardTitle>{t("Credit balance")}</CardTitle>
           {balances.length ? (
             balances.map((balance) => (
               <p key={balance.unit} className="mt-2 type-headline-medium tabular-nums">
-                {formatNumber(balance.available)} <span className="type-title-medium text-on-surface-variant">{balance.name}</span>
+                {formatNumber(balance.available, t.locale)} <span className="type-title-medium text-on-surface-variant">{balance.name}</span>
               </p>
             ))
           ) : (
-            <p className="mt-2 type-body-medium text-on-surface-variant">{entitlements ? "No credits yet. Pay as you go calls are paid from credits." : "The balance is unavailable right now."}</p>
+            <p className="mt-2 type-body-medium text-on-surface-variant">{entitlements ? t("No credits yet. Pay as you go calls are paid from credits.") : t("The balance is unavailable right now.")}</p>
           )}
         </div>
-        <ButtonLink href="/billing" variant="tonal">Top up</ButtonLink>
+        <ButtonLink href="/billing" variant="tonal">{t("Top up")}</ButtonLink>
       </Card>
 
       <Card className="mt-4 overflow-hidden p-0">
-        <CardTitle className="px-4 pt-4">History</CardTitle>
+        <CardTitle className="px-4 pt-4">{t("History")}</CardTitle>
         {!ledger ? (
-          <p className="p-4 type-body-medium text-on-surface-variant">The credit history couldn&apos;t be loaded.</p>
+          <p className="p-4 type-body-medium text-on-surface-variant">{t("The credit history couldn't be loaded.")}</p>
         ) : ledger.entries.length === 0 ? (
-          <div className="p-4"><EmptyState title="No credit activity">Top-ups and calls paid from credits will appear here.</EmptyState></div>
+          <div className="p-4"><EmptyState title={t("No credit activity")}>{t("Top-ups and calls paid from credits will appear here.")}</EmptyState></div>
         ) : (
           <ul className="mt-2">
             {ledger.entries.map((entry) => (
@@ -61,11 +67,11 @@ export default async function UsageCreditsPage({ searchParams }: PageProps<"/usa
                 </span>
                 <span className="flex min-w-0 flex-1 flex-col">
                   <span className="truncate type-body-large">{entry.description ?? entry.kind}</span>
-                  <span className="type-body-small text-on-surface-variant">{formatDateTime(entry.createdAt)}</span>
+                  <span className="type-body-small text-on-surface-variant">{formatDateTime(entry.createdAt, t.locale)}</span>
                 </span>
                 <span className="flex flex-col items-end gap-1">
-                  <Badge tone={entry.delta >= 0 ? "success" : "neutral"}>{`${entry.delta >= 0 ? "+" : ""}${formatNumber(entry.delta)}`}</Badge>
-                  <span className="type-body-small text-on-surface-variant tabular-nums">Balance {formatNumber(entry.balanceAfter)}</span>
+                  <Badge tone={entry.delta >= 0 ? "success" : "neutral"}>{`${entry.delta >= 0 ? "+" : ""}${formatNumber(entry.delta, t.locale)}`}</Badge>
+                  <span className="type-body-small text-on-surface-variant tabular-nums">{t("Balance {amount}", { amount: formatNumber(entry.balanceAfter, t.locale) })}</span>
                 </span>
               </li>
             ))}
@@ -73,7 +79,7 @@ export default async function UsageCreditsPage({ searchParams }: PageProps<"/usa
         )}
       </Card>
       {ledger && ledger.pageCount > 1 ? (
-        <Pagination page={ledger.page} pageCount={ledger.pageCount} total={ledger.total} noun="entries" href={(next) => `/usage/credits?page=${next}`} />
+        <Pagination page={ledger.page} pageCount={ledger.pageCount} total={ledger.total} noun={t.plural("entry", "entries", ledger.total)} href={(next) => `/usage/credits?page=${next}`} />
       ) : null}
     </>
   );

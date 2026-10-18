@@ -1,13 +1,16 @@
 import { notFound } from "next/navigation";
 import { requirePageUser } from "@/lib/auth";
 import { chatIdSchema, loadChat } from "@/lib/chat-store";
+import { getT } from "@/lib/i18n/server";
 import { ChatView } from "../chat-view";
 
 export async function generateMetadata({ params }: PageProps<"/chat/[id]">) {
   const { id } = await params;
   const user = await requirePageUser();
   const chat = chatIdSchema.safeParse(id).success ? await loadChat(user.id, id) : null;
-  return { title: chat?.chat.title ?? "Agent" };
+  const t = await getT();
+  return { title: chat?.chat.title ?? t("Agent") };
+
 }
 
 export default async function ChatPage({ params }: PageProps<"/chat/[id]">) {

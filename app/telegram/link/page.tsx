@@ -1,19 +1,25 @@
 import { ArrowLeftRight, Ban, ReceiptText, Send, Unlink } from "lucide-react";
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Logo } from "@/components/logo";
 import { ButtonLink } from "@/components/m3/button";
 import { getCurrentUser } from "@/lib/auth";
+import { getT } from "@/lib/i18n/server";
 import { findLink, readLinkToken } from "@/lib/telegram/link";
 import { confirmTelegramLink } from "./actions";
 import { LinkButtons } from "./link-buttons";
 
-export const metadata = { title: "Link Telegram", robots: { index: false, follow: false } };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("Link Telegram"), robots: { index: false, follow: false } };
+}
 
 /** Opened from the sign-in link the Telegram bot sends: signs the user in, then asks to link the account. */
 export default async function LinkTelegramPage({ searchParams }: PageProps<"/telegram/link">) {
   const { token } = await searchParams;
   const value = typeof token === "string" ? token : null;
   const claims = readLinkToken(value);
+  const t = await getT();
 
   if (!claims) {
     return (
@@ -21,11 +27,11 @@ export default async function LinkTelegramPage({ searchParams }: PageProps<"/tel
         <span className="flex size-12 items-center justify-center rounded-full bg-error-container text-on-error-container">
           <Ban size={24} />
         </span>
-        <h1 className="mt-6 type-headline-small">This link has expired</h1>
+        <h1 className="mt-6 type-headline-small">{t("This link has expired")}</h1>
         <p className="mt-2 type-body-large text-on-surface-variant">
-          Links from the Telegram bot work for 30 minutes. Send the bot any message to get a new one.
+          {t("Links from the Telegram bot work for 30 minutes. Send the bot any message to get a new one.")}
         </p>
-        <ButtonLink href="/dashboard" variant="tonal" className="mt-8 self-start">Go to dashboard</ButtonLink>
+        <ButtonLink href="/dashboard" variant="tonal" className="mt-8 self-start">{t("Go to dashboard")}</ButtonLink>
       </Shell>
     );
   }
@@ -39,9 +45,9 @@ export default async function LinkTelegramPage({ searchParams }: PageProps<"/tel
     return (
       <Shell>
         <Header />
-        <h1 className="mt-6 type-headline-small">Telegram {account} is already linked</h1>
-        <p className="mt-2 type-body-large text-on-surface-variant">Go back to Telegram and ask away.</p>
-        <ButtonLink href="/keys/telegram" variant="tonal" className="mt-8 self-start">Manage linked accounts</ButtonLink>
+        <h1 className="mt-6 type-headline-small">{t("Telegram {account} is already linked", { account })}</h1>
+        <p className="mt-2 type-body-large text-on-surface-variant">{t("Go back to Telegram and ask away.")}</p>
+        <ButtonLink href="/keys/telegram" variant="tonal" className="mt-8 self-start">{t("Manage linked accounts")}</ButtonLink>
       </Shell>
     );
   }
@@ -50,22 +56,23 @@ export default async function LinkTelegramPage({ searchParams }: PageProps<"/tel
     <Shell>
       <Header />
       <h1 className="mt-6 type-headline-small">
-        Link Telegram <span className="text-primary">{account}</span> to your account?
+        {t.rich("Link Telegram {account} to your account?", { account: <span className="text-primary">{account}</span> })}
       </h1>
       <p className="mt-2 type-body-large text-on-surface-variant">
-        Signed in as <span className="text-on-surface">{user.email || user.name}</span>.
+        {t.rich("Signed in as {user}.", { user: <span className="text-on-surface">{user.email || user.name}</span> })}
       </p>
 
       <ul className="stagger mt-6 flex flex-col gap-4 rounded-md bg-surface-container-low p-4">
         <li className="flex items-start gap-3 type-body-medium">
           <ReceiptText size={20} className="mt-0.5 shrink-0 text-primary" />
-          <span>The bot answers as you. Its tool calls count against your plan, the same as the agent on the web.</span>
+          <span>{t("The bot answers as you. Its tool calls count against your plan, the same as the agent on the web.")}</span>
         </li>
         <li className="flex items-start gap-3 type-body-medium">
           <Unlink size={20} className="mt-0.5 shrink-0 text-primary" />
           <span>
-            {existing ? "This Telegram account is linked to another account now; linking moves it to yours. " : ""}
-            Unlink it any time under API keys → Telegram.
+            {existing
+              ? t("This Telegram account is linked to another account now; linking moves it to yours. Unlink it any time under API keys → Telegram.")
+              : t("Unlink it any time under API keys → Telegram.")}
           </span>
         </li>
       </ul>

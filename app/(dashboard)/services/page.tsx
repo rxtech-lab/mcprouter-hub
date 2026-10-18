@@ -1,14 +1,19 @@
+import type { Metadata } from "next";
 import { z } from "zod";
 import { services } from "@/generated/registry";
 import { EmptyState, PageHeader } from "@/components/m3/page-header";
 import { Pagination } from "@/components/m3/pagination";
 import { SearchBar } from "@/components/m3/search-bar";
 import { requirePageUser } from "@/lib/auth";
+import { getT } from "@/lib/i18n/server";
 import { siteUrl } from "@/lib/site";
 import { listHref, parseListParams } from "@/app/sources/params";
 import { ServicesView, type ServiceCard } from "./services-view";
 
-export const metadata = { title: "Services" };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("Services") };
+}
 
 const PAGE_SIZE = 12;
 
@@ -22,6 +27,7 @@ function matches(service: (typeof services)[number], query: string) {
 
 export default async function ServicesPage({ searchParams }: PageProps<"/services">) {
   await requirePageUser();
+  const t = await getT();
   const params = parseListParams(await searchParams);
   const origin = await siteUrl();
   const filtered = params.q ? services.filter((service) => matches(service, params.q!)) : services;
@@ -45,18 +51,18 @@ export default async function ServicesPage({ searchParams }: PageProps<"/service
   return (
     <>
       <PageHeader
-        title="Services"
-        description={`${services.length} services, ${toolCount} tools. Use the combined endpoint for everything, or a service endpoint for a smaller tool list.`}
+        title={t("Services")}
+        description={t("{services} services, {tools} tools. Use the combined endpoint for everything, or a service endpoint for a smaller tool list.", { services: services.length, tools: toolCount })}
       />
       <ServicesView services={cards} allEndpoint={`${origin}/api/mcp/streamable`}>
-        <SearchBar action="/services" query={params.q} label="Search services" placeholder="Search services, tools and datasets" />
+        <SearchBar action="/services" query={params.q} label={t("Search services")} placeholder={t("Search services, tools and datasets")} />
       </ServicesView>
       {cards.length === 0 ? (
         <div className="mt-6">
-          <EmptyState title={`No services match “${params.q}”`}>Try a shorter word, a tool name such as get_weather, or a dataset ID.</EmptyState>
+          <EmptyState title={t("No services match “{query}”", { query: params.q ?? "" })}>{t("Try a shorter word, a tool name such as get_weather, or a dataset ID.")}</EmptyState>
         </div>
       ) : (
-        <Pagination page={page} pageCount={pageCount} total={filtered.length} noun={filtered.length === 1 ? "service" : "services"} href={(next) => listHref("/services", { q: params.q, page: next })} />
+        <Pagination page={page} pageCount={pageCount} total={filtered.length} noun={t.plural("service", "services", filtered.length)} href={(next) => listHref("/services", { q: params.q, page: next })} />
       )}
     </>
   );

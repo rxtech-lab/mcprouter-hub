@@ -6,6 +6,7 @@ import manifest from "@/generated/manifest.json";
 import type { AppUser } from "@/lib/auth";
 import { billingConfig } from "@/lib/billing/config";
 import { getUsageStatistics, subscriptionConfigured } from "@/lib/billing/subscription";
+import { msg } from "@/lib/i18n/translate";
 
 /** Day buckets are Hong Kong days (UTC+8, no DST). */
 const HK_OFFSET_MS = 8 * 3600 * 1000;
@@ -117,11 +118,12 @@ export type ClientUsage = {
   lastCallAt: Date | null;
 };
 
+/** Fixed client labels are marked for translation; pages render every label with `t(client.label)`. */
 const AGENT_LABELS = {
-  web: "Web chat",
+  web: msg("Web chat"),
   telegram: "Telegram",
   whatsapp: "WhatsApp",
-  agent: "Agent (before channels were tracked)",
+  agent: msg("Agent (before channels were tracked)"),
 } as const;
 
 export function parseClientId(value: string | undefined): ClientId | null {
@@ -165,7 +167,7 @@ async function clientLabels(user: AppUser, clients: ClientId[]) {
   const labels = new Map<ClientId, string>();
   for (const key of keys) labels.set(`key:${key.id}`, `${key.name} (${key.prefix}…)`);
   for (const app of apps) labels.set(`oauth:${app.id}`, app.name);
-  return (client: ClientId) => labels.get(client) ?? (Object.hasOwn(AGENT_LABELS, client) ? AGENT_LABELS[client as keyof typeof AGENT_LABELS] : client.startsWith("key:") ? "Deleted API key" : "Removed app");
+  return (client: ClientId) => labels.get(client) ?? (Object.hasOwn(AGENT_LABELS, client) ? AGENT_LABELS[client as keyof typeof AGENT_LABELS] : client.startsWith("key:") ? msg("Deleted API key") : msg("Removed app"));
 }
 
 /** Calls since the start of the `days` window by the API key, OAuth app or agent channel that made them, busiest first. */

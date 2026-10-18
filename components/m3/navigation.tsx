@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
+import { useT } from "@/lib/i18n/client";
 import { cn } from "./cn";
 
 export type NavItem = { href: string; label: string; icon: ReactNode };
@@ -26,9 +27,10 @@ function Indicator({ active }: { active: boolean }) {
 
 /** M3 navigation rail for medium and larger windows. */
 export function NavigationRail({ items, header, footer }: { items: NavItem[]; header?: ReactNode; footer?: ReactNode }) {
+  const t = useT();
   const pathname = usePathname();
   return (
-    <nav aria-label="Main" className="sticky top-0 hidden h-dvh w-20 shrink-0 flex-col items-center gap-3 bg-surface py-4 md:flex">
+    <nav aria-label={t("Main")} className="sticky top-0 hidden h-dvh w-20 shrink-0 flex-col items-center gap-3 bg-surface py-4 md:flex">
       {header}
       <ul className="mt-4 flex flex-col gap-3">
         {items.map((item) => {
@@ -58,9 +60,11 @@ export function NavigationRail({ items, header, footer }: { items: NavItem[]; he
 
 /** M3 navigation bar for compact windows. */
 export function NavigationBar({ items }: { items: NavItem[] }) {
+  const t = useT();
   const pathname = usePathname();
   return (
-    <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-30 flex h-20 items-stretch overflow-x-auto bg-surface-container md:hidden">
+    <nav aria-label={t("Main")}
+ className="fixed inset-x-0 bottom-0 z-30 flex h-20 items-stretch overflow-x-auto bg-surface-container md:hidden">
       {items.map((item) => {
         const active = isActive(pathname, item.href);
         return (

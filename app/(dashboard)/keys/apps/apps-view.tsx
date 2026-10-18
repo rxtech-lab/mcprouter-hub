@@ -14,6 +14,7 @@ import { SetupSteps } from "@/components/setup-steps";
 import { useActionRunner } from "@/components/use-action-runner";
 import { listHref } from "@/app/sources/params";
 import { formatDate, formatRelative } from "@/lib/format";
+import { useT } from "@/lib/i18n/client";
 import { KEY_PLACEHOLDER, type SetupStep } from "@/lib/mcp-clients";
 import { disconnectApp } from "../actions";
 import { KeysTabs } from "../keys-tabs";
@@ -28,15 +29,16 @@ const guideHref = (client: string, auth?: "oauth" | "key") => listHref(PATH, { c
 
 export function AppsView({ apps, clients, guide }: { apps: AppRow[]; clients: ClientOption[]; guide: ClientGuide | null }) {
   const [disconnecting, setDisconnecting] = useState<AppRow | null>(null);
+  const t = useT();
   return (
     <>
       <PageHeader
-        title="API keys"
-        description="Keys let MCP clients call mcprouter on your behalf. Clients that support OAuth can sign in instead. Each tool call counts against your plan."
+        title={t("API keys")}
+        description={t("Keys let MCP clients call mcprouter on your behalf. Clients that support OAuth can sign in instead. Each tool call counts against your plan.")}
         actions={
           apps.length > 0 ? (
             <ButtonLink href={guideHref(clients[0].id)} scroll={false} icon={<Plus size={18} />}>
-              Add client
+              {t("Add client")}
             </ButtonLink>
           ) : null
         }
@@ -44,9 +46,9 @@ export function AppsView({ apps, clients, guide }: { apps: AppRow[]; clients: Cl
       <KeysTabs />
 
       {apps.length === 0 ? (
-        <EmptyState icon={<AppWindow size={32} />} title="No connected apps">
-          <p>Pick your client to see how to add mcprouter. Clients that support OAuth ask you to sign in and approve access, with no key to copy.</p>
-          <ul className="stagger mt-6 grid gap-2 text-left sm:grid-cols-2" aria-label="Clients">
+        <EmptyState icon={<AppWindow size={32} />} title={t("No connected apps")}>
+          <p>{t("Pick your client to see how to add mcprouter. Clients that support OAuth ask you to sign in and approve access, with no key to copy.")}</p>
+          <ul className="stagger mt-6 grid gap-2 text-left sm:grid-cols-2" aria-label={t("Clients")}>
             {clients.map((client) => (
               <li key={client.id}>
                 <Link
@@ -55,8 +57,8 @@ export function AppsView({ apps, clients, guide }: { apps: AppRow[]; clients: Cl
                   className="state-layer flex items-center gap-3 rounded-md bg-surface-container px-4 py-3 text-on-surface transition-colors duration-200 ease-emphasized"
                 >
                   <span className="min-w-0 flex-1">
-                    <span className="block type-label-large">{client.name}</span>
-                    <span className="block truncate type-body-small text-on-surface-variant">{client.kind}</span>
+                    <span className="block type-label-large">{t(client.name)}</span>
+                    <span className="block truncate type-body-small text-on-surface-variant">{t(client.kind)}</span>
                   </span>
                   <ChevronRight size={18} className="shrink-0 text-on-surface-variant" />
                 </Link>
@@ -65,7 +67,7 @@ export function AppsView({ apps, clients, guide }: { apps: AppRow[]; clients: Cl
           </ul>
         </EmptyState>
       ) : (
-        <ul className="stagger flex flex-col gap-3" aria-label="Connected apps">
+        <ul className="stagger flex flex-col gap-3" aria-label={t("Connected apps")}>
           {apps.map((app) => (
             <li key={app.id}>
               <Card className="flex flex-wrap items-start gap-4" data-testid="app-card">
@@ -75,16 +77,16 @@ export function AppsView({ apps, clients, guide }: { apps: AppRow[]; clients: Cl
                 <div className="min-w-0 flex-1">
                   <h2 className="type-title-medium">{app.name}</h2>
                   <div className="mt-2 flex flex-wrap gap-1">
-                    {app.service ? <Badge>{app.service}</Badge> : <Badge tone="primary">All services</Badge>}
+                    {app.service ? <Badge>{app.service}</Badge> : <Badge tone="primary">{t("All services")}</Badge>}
                     <Badge>OAuth</Badge>
                   </div>
                   <dl className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1 type-body-small text-on-surface-variant sm:grid-cols-4">
-                    <div><dt className="inline">Last used </dt><dd className="inline text-on-surface">{formatRelative(app.lastUsedAt)}</dd></div>
-                    <div><dt className="inline">Connected </dt><dd className="inline text-on-surface">{formatDate(app.createdAt)}</dd></div>
+                    <div><dt className="inline">{t("Last used")} </dt><dd className="inline text-on-surface">{formatRelative(app.lastUsedAt, undefined, t.locale)}</dd></div>
+                    <div><dt className="inline">{t("Connected")} </dt><dd className="inline text-on-surface">{formatDate(app.createdAt, t.locale)}</dd></div>
                   </dl>
                 </div>
-                <Button variant="text" icon={<Unplug size={18} />} onClick={() => setDisconnecting(app)} aria-label={`Disconnect ${app.name}`}>
-                  Disconnect
+                <Button variant="text" icon={<Unplug size={18} />} onClick={() => setDisconnecting(app)} aria-label={t("Disconnect {name}", { name: app.name })}>
+                  {t("Disconnect")}
                 </Button>
               </Card>
             </li>
@@ -101,6 +103,7 @@ export function AppsView({ apps, clients, guide }: { apps: AppRow[]; clients: Cl
 /** Setup steps for one client. Open while `?client=` is in the URL; closing drops it. */
 function ClientGuideDialog({ guide, clients }: { guide: ClientGuide | null; clients: ClientOption[] }) {
   const router = useRouter();
+  const t = useT();
   // Keep showing the last guide while the dialog animates out after the URL loses `?client=`.
   const [shown, setShown] = useState(guide);
   if (guide && (guide.id !== shown?.id || guide.auth !== shown.auth)) setShown(guide);
@@ -110,14 +113,14 @@ function ClientGuideDialog({ guide, clients }: { guide: ClientGuide | null; clie
     <Dialog
       open={guide !== null}
       onOpenChange={(open) => !open && router.push(PATH, { scroll: false })}
-      title={`Add ${shown.name}`}
+      title={t("Add {name}", { name: t(shown.name) })}
       description={
         shown.auth === "key" ? (
-          <>
-            Replace <code className="font-mono text-on-surface">{KEY_PLACEHOLDER}</code> with a key from the API keys tab. New keys show these steps with the key filled in.
-          </>
+          t.rich("Replace {placeholder} with a key from the API keys tab. New keys show these steps with the key filled in.", {
+            placeholder: <code className="font-mono text-on-surface">{KEY_PLACEHOLDER}</code>,
+          })
         ) : (
-          "You sign in to mcprouter and approve access, with no key to copy. The client then appears in this list."
+          t("You sign in to mcprouter and approve access, with no key to copy. The client then appears in this list.")
         )
       }
       className="w-[min(720px,calc(100vw-32px))]"
@@ -125,17 +128,17 @@ function ClientGuideDialog({ guide, clients }: { guide: ClientGuide | null; clie
         <>
           {shown.auth === "key" ? (
             <ButtonLink href="/keys" variant="tonal" icon={<KeyRound size={18} />}>
-              Create a key
+              {t("Create a key")}
             </ButtonLink>
           ) : null}
           <Button variant="text" onClick={() => router.push(PATH, { scroll: false })}>
-            Done
+            {t("Done")}
           </Button>
         </>
       }
     >
       <div className="flex flex-col gap-5" data-testid="client-guide">
-        <nav aria-label="Clients" className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
+        <nav aria-label={t("Clients")} className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
           {clients.map((option) => {
             const active = option.id === shown.id;
             return (
@@ -150,20 +153,20 @@ function ClientGuideDialog({ guide, clients }: { guide: ClientGuide | null; clie
                   active ? "border-transparent bg-secondary-container text-on-secondary-container" : "border-outline-variant text-on-surface-variant",
                 )}
               >
-                {option.name}
+                {t(option.name)}
               </Link>
             );
           })}
         </nav>
 
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="type-body-medium text-on-surface-variant">{shown.kind}</p>
+          <p className="type-body-medium text-on-surface-variant">{t(shown.kind)}</p>
           {shown.supportsApiKey ? (
-            <nav aria-label="Sign-in method" className="flex rounded-full border border-outline">
+            <nav aria-label={t("Sign-in method")} className="flex rounded-full border border-outline">
               {(
                 [
-                  { value: "oauth", label: "Sign in", icon: <LogIn size={16} /> },
-                  { value: "key", label: "API key", icon: <KeyRound size={16} /> },
+                  { value: "oauth", label: t("Sign in"), icon: <LogIn size={16} /> },
+                  { value: "key", label: t("API key"), icon: <KeyRound size={16} /> },
                 ] as const
               ).map((option, index) => (
                 <Link
@@ -188,7 +191,7 @@ function ClientGuideDialog({ guide, clients }: { guide: ClientGuide | null; clie
 
         <div key={`${shown.id}-${shown.auth}`} className="animate-fade-through flex flex-col gap-5">
           <SetupSteps steps={shown.steps} />
-          {shown.note ? <p className="rounded-sm bg-surface-container p-3 type-body-medium text-on-surface-variant">{shown.note}</p> : null}
+          {shown.note ? <p className="rounded-sm bg-surface-container p-3 type-body-medium text-on-surface-variant">{t(shown.note)}</p> : null}
         </div>
       </div>
     </Dialog>
@@ -197,16 +200,17 @@ function ClientGuideDialog({ guide, clients }: { guide: ClientGuide | null; clie
 
 function DisconnectDialog({ app, onClose }: { app: AppRow; onClose: () => void }) {
   const { pending, run } = useActionRunner();
+  const t = useT();
   return (
     <ConfirmDialog
       open
       onOpenChange={(next) => !next && !pending && onClose()}
-      title="Disconnect this app?"
-      description={`“${app.name}” will lose access immediately. It can connect again only after you sign in and approve it.`}
-      confirmLabel="Disconnect"
+      title={t("Disconnect this app?")}
+      description={t("“{name}” will lose access immediately. It can connect again only after you sign in and approve it.", { name: app.name })}
+      confirmLabel={t("Disconnect")}
       destructive
       pending={pending}
-      onConfirm={() => run(() => disconnectApp({ id: app.id }), { progress: "Disconnecting…", success: "App disconnected" }, onClose)}
+      onConfirm={() => run(() => disconnectApp({ id: app.id }), { progress: t("Disconnecting…"), success: t("App disconnected") }, onClose)}
     />
   );
 }

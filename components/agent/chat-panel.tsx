@@ -1,19 +1,22 @@
 "use client";
 
 import type { UIMessage } from "ai";
-import { ArrowUp, CircleAlert, CircleCheck, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
+import { ArrowUp, CircleAlert, CircleCheck, ExternalLink, LayoutDashboard, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { IconButton } from "@/components/m3/button";
+import { ACCOUNT_SUMMARY_TOOL_NAME, LIST_KEYS_TOOL_NAME, NAVIGATION_PART_TYPES, type DashboardNavigation } from "@/lib/agent/dashboard-tools";
 import { SEARCH_TOOL_NAME } from "@/lib/agent/tool-search";
+import { useT } from "@/lib/i18n/client";
+import { msg } from "@/lib/i18n/translate";
 import { Markdown } from "./markdown";
 import { McpAppHost, ToolAppCard, toolPartApp } from "./tool-app";
 
 export const SUGGESTIONS = [
-  "What's the weather in Hong Kong right now? Any warnings?",
-  "When is the next KMB 1A from Star Ferry?",
-  "Which A&E has the shortest waiting time on Hong Kong Island?",
-  "Is next Monday a public holiday?",
-  "Find datasets about air quality",
+  msg("What's the weather in Hong Kong right now? Any warnings?"),
+  msg("When is the next KMB 1A from Star Ferry?"),
+  msg("Which A&E has the shortest waiting time on Hong Kong Island?"),
+  msg("Is next Monday a public holiday?"),
+  msg("Find datasets about air quality"),
 ];
 
 type Part = UIMessage["parts"][number];
@@ -28,11 +31,59 @@ type SearchPart = {
 
 const SEARCH_PART_TYPE = `tool-${SEARCH_TOOL_NAME}`;
 
+type DashboardPart = { type: `tool-${string}`; state: ToolPart["state"]; output?: Partial<DashboardNavigation> & { error?: string }; errorText?: string };
+
+const LOOKUP_LABELS: Record<string, [running: string, done: string]> = {
+  [`tool-${LIST_KEYS_TOOL_NAME}`]: [msg("Checking your API keys"), msg("Checked your API keys")],
+  [`tool-${ACCOUNT_SUMMARY_TOOL_NAME}`]: [msg("Checking your account"), msg("Checked your account")],
+};
+
+/** A dashboard page or dialog the agent found for the user. It opens in a new tab, only when they choose to, so the chat stays put. */
+function DashboardLinkCard({ part }: { part: DashboardPart }) {
+  const t = useT();
+  const running = part.state === "input-streaming" || part.state === "input-available";
+  const error = part.state === "output-error" ? part.errorText : part.output?.error;
+  const target = part.state === "output-available" && part.output?.href && part.output.label ? part.output : null;
+  return (
+    <div className="my-2 flex items-center gap-3 rounded-md border border-outline-variant bg-surface-container-low px-3 py-2 animate-message-in" data-testid="dashboard-link">
+      <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-container text-on-primary-container">
+        <LayoutDashboard size={16} />
+      </span>
+      <span className="min-w-0 flex-1 truncate type-body-medium">
+        {running ? t("Finding the page…") : null}
+        {target?.label ? t(target.label) : null}
+        {error ? <span className="text-error">{error}</span> : null}
+      </span>
+      {running ? <LoaderCircle size={16} className="animate-spin text-on-surface-variant" /> : null}
+      {target ? (
+        <a href={target.href} target="_blank" rel="noopener" className="state-layer inline-flex h-8 items-center gap-1 rounded-full px-3 type-label-large text-primary">
+          {t("Open")} <ExternalLink size={16} />
+        </a>
+      ) : null}
+    </div>
+  );
+}
+
+/** A read-only look at the account (keys, usage): one line, the answer follows in the text. */
+function LookupLine({ part, labels }: { part: DashboardPart; labels: [string, string] }) {
+  const t = useT();
+  const running = part.state === "input-streaming" || part.state === "input-available";
+  return (
+    <p className="my-1 flex items-center gap-2 type-body-small text-on-surface-variant animate-message-in">
+      {running ? <LoaderCircle size={14} className="animate-spin" /> : part.state === "output-error" ? <CircleAlert size={14} className="text-error" /> : <CircleCheck size={14} />}
+      {t(running ? labels[0] : labels[1])}
+    </p>
+  );
+}
+
 /** The agent looking up which tools to load: shows its query, then the tools it found. */
 function ToolSearchCard({ part }: { part: SearchPart }) {
+  const t = useT();
   const running = part.state === "input-streaming" || part.state === "input-available";
   const failed = part.state === "output-error";
   const found = part.output?.tools ?? [];
+  const muted = (chunks: ReactNode) => <span className="text-on-surface-variant">{chunks}</span>;
+
   return (
     <div className="my-2 flex flex-col gap-2 rounded-md border border-outline-variant bg-surface-container-low px-3 py-2 animate-message-in" data-testid="tool-search">
       <div className="flex items-center gap-2">
@@ -40,13 +91,18 @@ function ToolSearchCard({ part }: { part: SearchPart }) {
           <Search size={14} />
         </span>
         <span className="min-w-0 flex-1 truncate type-body-medium">
-          {running ? "Searching tools" : "Searched tools"}
-          {part.input?.query ? <span className="text-on-surface-variant"> for “{part.input.query}”</span> : null}
+          {part.input?.query
+            ? running
+              ? t.rich("Searching tools <muted>for “{query}”</muted>", { muted, query: part.input.query })
+              : t.rich("Searched tools <muted>for “{query}”</muted>", { muted, query: part.input.query })
+            : running
+              ? t("Searching tools")
+              : t("Searched tools")}
         </span>
         <span className="flex shrink-0 items-center gap-1 type-label-medium text-on-surface-variant">
           {running ? <LoaderCircle size={14} className="animate-spin" /> : null}
-          {part.state === "output-available" ? <><CircleCheck size={14} /> {found.length} found</> : null}
-          {failed ? <><CircleAlert size={14} className="text-error" /> Failed</> : null}
+          {part.state === "output-available" ? <><CircleCheck size={14} /> {t("{count} found", { count: found.length })}</> : null}
+          {failed ? <><CircleAlert size={14} className="text-error" /> {t("Failed")}</> : null}
         </span>
       </div>
       {found.length ? (
@@ -64,6 +120,7 @@ function ToolSearchCard({ part }: { part: SearchPart }) {
 }
 
 function ToolCallCard({ part }: { part: ToolPart }) {
+  const t = useT();
   const running = part.state === "input-streaming" || part.state === "input-available";
   const failed = part.state === "output-error";
   return (
@@ -74,19 +131,19 @@ function ToolCallCard({ part }: { part: ToolPart }) {
         </span>
         <span className="font-mono text-[13px]">{part.toolName}</span>
         <span className="ml-auto flex items-center gap-1 type-label-medium text-on-surface-variant">
-          {running ? <><LoaderCircle size={14} className="animate-spin" /> Running</> : null}
-          {part.state === "output-available" ? <><CircleCheck size={14} /> Done</> : null}
-          {failed ? <><CircleAlert size={14} className="text-error" /> Failed</> : null}
+          {running ? <><LoaderCircle size={14} className="animate-spin" /> {t("Running")}</> : null}
+          {part.state === "output-available" ? <><CircleCheck size={14} /> {t("Done")}</> : null}
+          {failed ? <><CircleAlert size={14} className="text-error" /> {t("Failed")}</> : null}
         </span>
       </summary>
       <div className="flex flex-col gap-2 border-t border-outline-variant px-3 py-2">
         <div>
-          <span className="type-label-small text-on-surface-variant">Input</span>
+          <span className="type-label-small text-on-surface-variant">{t("Input")}</span>
           <pre className="mt-1 max-h-40 overflow-auto rounded-xs bg-surface-container-highest p-2 font-mono text-xs">{JSON.stringify(part.input ?? {}, null, 2)}</pre>
         </div>
         {part.state === "output-available" ? (
           <div>
-            <span className="type-label-small text-on-surface-variant">Result</span>
+            <span className="type-label-small text-on-surface-variant">{t("Result")}</span>
             <pre className="mt-1 max-h-60 overflow-auto rounded-xs bg-surface-container-highest p-2 font-mono text-xs">{JSON.stringify(part.output, null, 2)}</pre>
           </div>
         ) : null}
@@ -112,6 +169,8 @@ export function MessageParts({ message }: { message: UIMessage }) {
       );
     }
     if (part.type === SEARCH_PART_TYPE) return <ToolSearchCard key={index} part={part as SearchPart} />;
+    if (NAVIGATION_PART_TYPES.includes(part.type)) return <DashboardLinkCard key={index} part={part as DashboardPart} />;
+    if (part.type in LOOKUP_LABELS) return <LookupLine key={index} part={part as DashboardPart} labels={LOOKUP_LABELS[part.type]} />;
     return null;
   });
 }
@@ -133,8 +192,9 @@ function toTurns(messages: UIMessage[]): Turn[] {
 
 /** Three bouncing dots, shown for as long as the agent is working on a reply. */
 function TypingDots() {
+  const t = useT();
   return (
-    <div role="status" aria-label="Agent is responding" className="flex h-6 items-center gap-1 animate-fade-in" data-testid="typing-dots">
+    <div role="status" aria-label={t("Agent is responding")} className="flex h-6 items-center gap-1 animate-fade-in" data-testid="typing-dots">
       {[0, 150, 300].map((delay) => (
         <span key={delay} className="size-2 rounded-full bg-on-surface-variant animate-typing-dot" style={{ animationDelay: `${delay}ms` }} />
       ))}
@@ -179,10 +239,13 @@ type ChatPanelProps = {
   disabled?: boolean;
   /** Lets MCP Apps in the replies call their tools, e.g. to refresh. Calls are billed to the signed-in user. */
   canCallAppTools?: boolean;
+  /** Starter questions on the empty state. */
+  suggestions?: string[];
 };
 
 /** The conversation: turns that pin each question to the top, suggestions when empty, and the composer. */
-export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false, canCallAppTools = false }: ChatPanelProps) {
+export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false, canCallAppTools = false, suggestions = SUGGESTIONS }: ChatPanelProps) {
+  const t = useT();
   const [input, setInput] = useState("");
   const scroller = useRef<HTMLDivElement>(null);
   const [viewportHeight, setViewportHeight] = useState<number>();
@@ -230,18 +293,18 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
             <span className="flex size-12 items-center justify-center rounded-lg bg-tertiary-container text-on-tertiary-container">
               <Sparkles size={24} />
             </span>
-            <p className="type-title-large">Ask about Hong Kong, live</p>
+            <p className="type-title-large">{t("Ask about live data")}</p>
             <p className="max-w-md type-body-medium text-on-surface-variant">{intro}</p>
             <div className="flex max-w-2xl flex-wrap justify-center gap-2">
-              {SUGGESTIONS.map((suggestion) => (
+              {suggestions.map((suggestion) => (
                 <button
                   key={suggestion}
                   type="button"
                   disabled={disabled}
-                  onClick={() => send(suggestion)}
+                  onClick={() => send(t(suggestion))}
                   className="state-layer h-8 cursor-pointer rounded-sm border border-outline px-3 type-label-large text-on-surface-variant disabled:cursor-default disabled:opacity-40"
                 >
-                  {suggestion}
+                  {t(suggestion)}
                 </button>
               ))}
             </div>
@@ -266,7 +329,7 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
         }}
       >
         <textarea
-          aria-label="Message"
+          aria-label={t("Message")}
           rows={1}
           value={input}
           disabled={disabled}
@@ -277,15 +340,16 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
               send(input);
             }
           }}
-          placeholder="Ask about weather, buses, MTR, hospitals…"
+          placeholder={t("Ask about weather, buses, MTR, hospitals…")}
           className="max-h-40 min-h-10 flex-1 resize-none bg-transparent py-2 type-body-large outline-none placeholder:text-on-surface-variant disabled:opacity-60"
         />
         {busy ? (
-          <IconButton label="Stop" variant="tonal" onClick={onStop}>
+          <IconButton label={t("Stop")} variant="tonal" onClick={onStop}>
             <Square size={18} />
           </IconButton>
         ) : (
-          <IconButton label="Send" variant="filled" type="submit" disabled={disabled || !input.trim()}>
+          <IconButton label={t("Send")} variant="filled" type="submit"
+ disabled={disabled || !input.trim()}>
             <ArrowUp size={20} />
           </IconButton>
         )}

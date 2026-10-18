@@ -1,14 +1,19 @@
 import { and, desc, eq, gt, isNull } from "drizzle-orm";
+import type { Metadata } from "next";
 import { z } from "zod";
 import { db } from "@/db";
 import { oauthClients, oauthGrants } from "@/db/schema";
 import { serviceById } from "@/generated/registry";
 import { requirePageUser } from "@/lib/auth";
+import { getT } from "@/lib/i18n/server";
 import { KEY_PLACEHOLDER, MCP_CLIENTS, mcpClientById } from "@/lib/mcp-clients";
 import { siteUrl } from "@/lib/site";
 import { AppsView, type AppRow, type ClientGuide } from "./apps-view";
 
-export const metadata = { title: "Connected apps" };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("Connected apps") };
+}
 
 /** `?client=<id>` opens the setup dialog for that client; `&auth=key` switches it to the API-key flow. */
 const paramsSchema = z.object({
