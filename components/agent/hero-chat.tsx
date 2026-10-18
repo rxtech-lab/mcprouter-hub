@@ -111,10 +111,8 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
         "flex flex-col overflow-hidden bg-surface-container-lowest text-on-surface",
         mobile
           ? cn(
-              "fixed z-[35] animate-snackbar-in transition-[left,right,bottom,height,border-radius,box-shadow] duration-500 ease-emphasized",
-              expanded
-                ? "right-0 bottom-0 left-0 h-dvh rounded-none shadow-none"
-                : "right-3 bottom-[calc(0.75rem+env(safe-area-inset-bottom))] left-3 h-[4.5rem] rounded-xl shadow-elevation-3",
+              "fixed inset-x-0 bottom-0 z-[35] animate-snackbar-in transition-[height,border-radius,box-shadow] duration-500 ease-emphasized",
+              expanded ? "h-dvh rounded-none shadow-none" : "h-[calc(4.5rem+env(safe-area-inset-bottom))] rounded-t-xl shadow-elevation-3",
             )
           : // Rendered on the server too, so phones keep it out of the hero until the sheet takes over.
             "h-[32rem] scroll-mt-24 rounded-xl shadow-elevation-2 max-md:hidden",
