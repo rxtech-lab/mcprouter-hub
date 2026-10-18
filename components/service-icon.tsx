@@ -1,12 +1,11 @@
-import { Bus, BusFront, CalendarDays, CloudSun, Database, Hospital, SquareParking, TrainFront } from "lucide-react";
+import { BusFront, CalendarDays, CloudSun, Database, Hospital, SquareParking, TrainFront } from "lucide-react";
 
 const icons = {
-  citybus: Bus,
   "datagovhk-catalog": Database,
   "ha-aed": Hospital,
+  "hk-bus": BusFront,
   "hk-holidays": CalendarDays,
   "hko-weather": CloudSun,
-  kmb: BusFront,
   mtr: TrainFront,
   "td-carpark": SquareParking,
 } as const;

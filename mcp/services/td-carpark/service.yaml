@@ -8,6 +8,8 @@ lang:
   param: lang
   map: { en: en_US, tc: zh_TW, sc: zh_CN }
 cacheTtl: 3600
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
 tools:
   - name: carpark_info
     title: Find car parks

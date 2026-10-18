@@ -2,10 +2,11 @@
 
 import type { UIMessage } from "ai";
 import { ArrowUp, CircleAlert, CircleCheck, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { IconButton } from "@/components/m3/button";
 import { SEARCH_TOOL_NAME } from "@/lib/agent/tool-search";
 import { Markdown } from "./markdown";
+import { McpAppHost, ToolAppCard, toolPartApp } from "./tool-app";
 
 export const SUGGESTIONS = [
   "What's the weather in Hong Kong right now? Any warnings?",
@@ -101,7 +102,15 @@ export function MessageParts({ message }: { message: UIMessage }) {
     if (part.type === "text") {
       return isUser ? <p key={index} className="whitespace-pre-wrap">{part.text}</p> : <Markdown key={index}>{part.text}</Markdown>;
     }
-    if (part.type === "dynamic-tool") return <ToolCallCard key={index} part={part} />;
+    if (part.type === "dynamic-tool") {
+      // Tools with an MCP App render their result as the app; the rest show their JSON.
+      const resourceUri = toolPartApp(part);
+      return resourceUri ? (
+        <ToolAppCard key={part.toolCallId} part={part} resourceUri={resourceUri} fallback={<ToolCallCard part={part} />} />
+      ) : (
+        <ToolCallCard key={index} part={part} />
+      );
+    }
     if (part.type === SEARCH_PART_TYPE) return <ToolSearchCard key={index} part={part as SearchPart} />;
     return null;
   });
@@ -168,10 +177,12 @@ type ChatPanelProps = {
   notice?: ReactNode;
   /** Blocks sending, e.g. when the free allowance is used up. */
   disabled?: boolean;
+  /** Lets MCP Apps in the replies call their tools, e.g. to refresh. Calls are billed to the signed-in user. */
+  canCallAppTools?: boolean;
 };
 
 /** The conversation: turns that pin each question to the top, suggestions when empty, and the composer. */
-export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false }: ChatPanelProps) {
+export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false, canCallAppTools = false }: ChatPanelProps) {
   const [input, setInput] = useState("");
   const scroller = useRef<HTMLDivElement>(null);
   const [viewportHeight, setViewportHeight] = useState<number>();
@@ -200,6 +211,12 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
     onSend(text.trim());
     setInput("");
   };
+  // A follow-up asked from inside an MCP App, sent like a typed message.
+  const sendRef = useRef(send);
+  useEffect(() => {
+    sendRef.current = send;
+  });
+  const askFromApp = useCallback((text: string) => sendRef.current(text), []);
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
@@ -230,12 +247,14 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
             </div>
           </div>
         ) : (
-          <ul className="flex flex-col gap-8 pb-4" aria-live="polite">
-            {turns.map((turn) => {
-              const last = turn.id === lastTurnId;
-              return <TurnItem key={turn.id} turn={turn} minHeight={last ? viewportHeight : undefined} busy={last && busy} />;
-            })}
-          </ul>
+          <McpAppHost canCallTools={canCallAppTools} sendMessage={askFromApp}>
+            <ul className="flex flex-col gap-8 pb-4" aria-live="polite">
+              {turns.map((turn) => {
+                const last = turn.id === lastTurnId;
+                return <TurnItem key={turn.id} turn={turn} minHeight={last ? viewportHeight : undefined} busy={last && busy} />;
+              })}
+            </ul>
+          </McpAppHost>
         )}
       </div>
       {notice}

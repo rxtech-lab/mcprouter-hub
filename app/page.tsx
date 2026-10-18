@@ -23,7 +23,7 @@ export default function Home() {
       <SiteHeader />
 
       <main className="mx-auto flex max-w-6xl flex-col gap-16 px-4 pt-4 pb-20 md:gap-24 md:px-6">
-        <section className="grid items-center gap-10 overflow-hidden rounded-xl bg-primary-container px-6 py-12 text-on-primary-container md:px-12 md:py-16 lg:grid-cols-[1.15fr_1fr]">
+        <section className="grid animate-page-in items-center gap-10 overflow-hidden rounded-xl bg-primary-container px-6 py-12 text-on-primary-container md:px-12 md:py-16 lg:grid-cols-[1.15fr_1fr]">
           <div className="flex flex-col gap-6">
             <span className="inline-flex h-8 items-center gap-2 self-start rounded-sm bg-surface-container-lowest/60 px-3 type-label-large">
               <Wrench size={16} /> {manifest.services.length} services · {toolCount} MCP tools
@@ -47,7 +47,7 @@ export default function Home() {
 
         <section id="services">
           <SectionHeading eyebrow="Services" title="Everything Hongkongers check on their phone" />
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {manifest.services.map((service, index) => (
               <li key={service.id}>
                 <Link href={`/sources/${service.id}`} className="state-layer flex h-full flex-col gap-4 rounded-lg bg-surface-container-low p-5 text-on-surface">
@@ -75,7 +75,7 @@ export default function Home() {
 
         <section id="how">
           <SectionHeading eyebrow="How it works" title="From sign-in to answers in a minute" />
-          <ol className="grid gap-4 md:grid-cols-3">
+          <ol className="stagger grid gap-4 md:grid-cols-3">
             {steps.map((step, index) => (
               <li key={step.title} className="flex flex-col gap-4 rounded-lg border border-outline-variant p-6">
                 <div className="flex items-center justify-between">

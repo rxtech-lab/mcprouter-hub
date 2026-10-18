@@ -12,6 +12,8 @@ export type ServiceSource = {
   yaml: string;
   /** Exported names found in `handlers.ts`, or null when the file is absent. */
   handlerExports: Set<string> | null;
+  /** `app.ts`, the service's MCP App, bundled with `mcp/apps/runtime.ts` into one browser script; null when absent. */
+  appScript?: string | null;
 };
 
 export class CodegenError extends Error {
@@ -41,12 +43,21 @@ export function parseService(source: ServiceSource): { spec: ServiceSpec | null;
   const spec = parsed.data;
   const problems: string[] = [];
   if (spec.id !== source.directory) problems.push(`${where}: id "${spec.id}" must match its directory name`);
+  if (spec.app && !source.appScript) problems.push(`${where}: app is set but mcp/services/${source.directory}/app.ts does not exist`);
+  if (!spec.app && source.appScript) problems.push(`${where}: mcp/services/${source.directory}/app.ts exists but the YAML has no app section`);
   for (const tool of spec.tools) {
-    if (!tool.handler) continue;
-    if (!source.handlerExports) {
-      problems.push(`${where}: tool ${tool.name} uses handler "${tool.handler}" but handlers.ts does not exist`);
-    } else if (!source.handlerExports.has(tool.handler)) {
-      problems.push(`${where}: tool ${tool.name} uses handler "${tool.handler}" but handlers.ts does not export it`);
+    const references: Array<[string, string | undefined]> = [
+      ["handler", tool.handler],
+      ["request transformer", tool.transform?.request],
+      ["response transformer", tool.transform?.response],
+    ];
+    for (const [kind, name] of references) {
+      if (!name) continue;
+      if (!source.handlerExports) {
+        problems.push(`${where}: tool ${tool.name} uses ${kind} "${name}" but handlers.ts does not exist`);
+      } else if (!source.handlerExports.has(name)) {
+        problems.push(`${where}: tool ${tool.name} uses ${kind} "${name}" but handlers.ts does not export it`);
+      }
     }
   }
   return { spec: problems.length ? null : spec, problems };
@@ -94,9 +105,10 @@ export function variableName(id: string) {
   return id.replace(/-([a-z0-9])/g, (_, char: string) => char.toUpperCase());
 }
 
-export function generateServiceModule(spec: ServiceSpec): string {
-  const usesHandlers = spec.tools.some((tool) => tool.handler);
-  const { tools, ...serviceFields } = spec;
+export function generateServiceModule(spec: ServiceSpec, appScript?: string | null): string {
+  const usesHandlers = spec.tools.some((tool) => tool.handler || tool.transform);
+  const { tools, app, ...rest } = spec;
+  const serviceFields = app && appScript ? { ...rest, app: { ...app, script: appScript } } : rest;
   const toolBlocks = tools.map((tool) => {
     const { handler, ...toolSpec } = tool;
     const inputLines = Object.entries(tool.input).map(([name, param]) => `    ${JSON.stringify(name)}: ${zodFor(param)},`);
@@ -108,6 +120,8 @@ export function generateServiceModule(spec: ServiceSpec): string {
       `  spec: ${indent(JSON.stringify(toolSpec, null, 2), 2)},`,
       inputLines.length ? `  inputSchema: z.object({\n${inputLines.join("\n")}\n  }),` : "  inputSchema: z.object({}),",
       ...(handler ? [`  handler: handlers.${handler},`] : []),
+      ...(tool.transform?.request ? [`  transformRequest: handlers.${tool.transform.request},`] : []),
+      ...(tool.transform?.response ? [`  transformResponse: handlers.${tool.transform.response},`] : []),
       "}",
     ];
     return indent(lines.join("\n"), 4);
@@ -144,7 +158,8 @@ export function generateRegistry(specs: ServiceSpec[]): string {
     "",
     `export const services: readonly ServiceDefinition[] = [${specs.map((spec) => variableName(spec.id)).join(", ")}];`,
     "",
-    "export const serviceById = new Map(services.map((service) => [service.id, service]));",
+    "/** By id, and by every alias (the id of a service merged into it). */",
+    "export const serviceById = new Map(services.flatMap((service) => [service.id, ...service.aliases].map((id) => [id, service] as const)));",
     "",
   ].join("\n");
 }
@@ -154,6 +169,7 @@ export type Manifest = {
     id: string;
     title: string;
     description?: string;
+    aliases: string[];
     datasets: string[];
     tools: Array<{ name: string; description: string }>;
   }>;
@@ -171,6 +187,7 @@ export function buildManifest(specs: ServiceSpec[]): Manifest {
       id: spec.id,
       title: spec.title,
       ...(spec.description ? { description: spec.description } : {}),
+      aliases: spec.aliases,
       datasets: spec.datasets,
       tools: spec.tools.map((tool) => ({ name: tool.name, description: tool.description })),
     })),
@@ -178,14 +195,30 @@ export function buildManifest(specs: ServiceSpec[]): Manifest {
   };
 }
 
+export function generateAppStyles(styles: string): string {
+  return [HEADER, "// Source: mcp/apps/styles.css", "", `export const APP_STYLES = ${JSON.stringify(styles)};`, ""].join("\n");
+}
+
 /** Validate every source and return the generated files, keyed by path relative to the repo root. */
-export function generate(sources: ServiceSource[]): Map<string, string> {
+export function generate(sources: ServiceSource[], appStyles = ""): Map<string, string> {
   const problems: string[] = [];
   const specs: ServiceSpec[] = [];
+  const scripts = new Map<string, string | null>();
   for (const source of [...sources].sort((a, b) => a.directory.localeCompare(b.directory))) {
     const result = parseService(source);
     problems.push(...result.problems);
-    if (result.spec) specs.push(result.spec);
+    if (result.spec) {
+      specs.push(result.spec);
+      scripts.set(result.spec.id, source.appScript ?? null);
+    }
+  }
+  const ids = new Map<string, string>();
+  for (const spec of specs) {
+    for (const id of [spec.id, ...spec.aliases]) {
+      const owner = ids.get(id);
+      if (owner) problems.push(`service id ${id} is used by both ${owner} and ${spec.id}`);
+      ids.set(id, spec.id);
+    }
   }
   const owners = new Map<string, string>();
   for (const spec of specs) {
@@ -198,8 +231,9 @@ export function generate(sources: ServiceSource[]): Map<string, string> {
   if (problems.length) throw new CodegenError(problems);
 
   const files = new Map<string, string>();
-  for (const spec of specs) files.set(`generated/services/${spec.id}.ts`, generateServiceModule(spec));
+  for (const spec of specs) files.set(`generated/services/${spec.id}.ts`, generateServiceModule(spec, scripts.get(spec.id)));
   files.set("generated/registry.ts", generateRegistry(specs));
+  files.set("generated/app-styles.ts", generateAppStyles(appStyles));
   files.set("generated/manifest.json", `${JSON.stringify(buildManifest(specs), null, 2)}\n`);
   return files;
 }

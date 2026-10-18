@@ -5,11 +5,12 @@ import type { ReactNode } from "react";
 import { Button } from "./button";
 import { cn } from "./cn";
 
-const overlay = "fixed inset-0 z-40 bg-scrim/40 animate-fade-in";
+const overlay = "fixed inset-0 z-40 bg-scrim/40 animate-fade-in data-[state=closed]:animate-fade-out";
 // Centred by a flex wrapper rather than translate(-50%), so the entry transition can't knock it off-centre.
-const center = "fixed inset-0 z-50 flex items-center justify-center";
+// The portal unmounts the wrapper once its own animation ends, so it holds while the surface animates out.
+const center = (open: boolean) => cn("fixed inset-0 z-50 flex items-center justify-center", !open && "pointer-events-none animate-hold");
 const surface =
-  "flex max-h-[90vh] w-[min(560px,calc(100vw-32px))] flex-col gap-4 overflow-hidden rounded-xl bg-surface-container-high p-6 text-on-surface shadow-elevation-3 transition-[opacity,translate,scale] duration-250 ease-[cubic-bezier(0.05,0.7,0.1,1)] starting:translate-y-2 starting:scale-96 starting:opacity-0";
+  "flex max-h-[90vh] w-[min(560px,calc(100vw-32px))] flex-col gap-4 overflow-hidden rounded-xl bg-surface-container-high p-6 text-on-surface shadow-elevation-3 transition-[opacity,translate,scale] duration-250 ease-[cubic-bezier(0.05,0.7,0.1,1)] starting:translate-y-2 starting:scale-96 starting:opacity-0 data-[state=closed]:animate-surface-out";
 
 type DialogProps = {
   open: boolean;
@@ -30,7 +31,7 @@ export function Dialog({ open, onOpenChange, title, description, icon, children,
     <RadixDialog.Root open={open} onOpenChange={onOpenChange}>
       <RadixDialog.Portal>
         <RadixDialog.Overlay className={overlay} />
-        <div className={center}>
+        <div className={center(open)}>
           <RadixDialog.Content
             className={cn(surface, className)}
             onInteractOutside={dismissible ? undefined : (event) => event.preventDefault()}
@@ -69,7 +70,7 @@ export function ConfirmDialog({ open, onOpenChange, title, description, confirmL
     <AlertDialog.Root open={open} onOpenChange={onOpenChange}>
       <AlertDialog.Portal>
         <AlertDialog.Overlay className={overlay} />
-        <div className={center}>
+        <div className={center(open)}>
           <AlertDialog.Content className={cn(surface, "w-[min(400px,calc(100vw-32px))]")}>
             <AlertDialog.Title className="type-headline-small">{title}</AlertDialog.Title>
             <AlertDialog.Description className="type-body-medium text-on-surface-variant">{description}</AlertDialog.Description>

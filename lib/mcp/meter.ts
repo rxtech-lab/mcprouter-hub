@@ -9,6 +9,8 @@ import type { CallerContext } from "@/lib/mcp/types";
 
 export type McpToolResponse = {
   content: Array<{ type: "text"; text: string }>;
+  /** For MCP Apps; the model only sees `content`. */
+  structuredContent?: Record<string, unknown>;
   isError?: boolean;
 };
 
@@ -59,7 +61,7 @@ function limitMessage(error: UsageLimitError) {
  */
 export async function meterToolCall(
   caller: CallerContext,
-  call: { service: string; tool: string },
+  { structured, ...call }: { service: string; tool: string; structured?: (value: unknown) => Record<string, unknown> },
   run: () => Promise<unknown>,
   dependencies: Partial<Dependencies> = {},
 ): Promise<McpToolResponse> {
@@ -100,7 +102,9 @@ export async function meterToolCall(
   }
 
   try {
-    const result = text(JSON.stringify(await run()));
+    const value = await run();
+    const result = text(JSON.stringify(value));
+    if (structured) result.structuredContent = structured(value);
     log("ok");
     return result;
   } catch (error) {

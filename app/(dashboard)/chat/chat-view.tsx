@@ -40,6 +40,7 @@ export function ChatView({ id, initialMessages, isNew = false }: { id: string; i
       title="Agent"
       actions={<ChatHistoryButton />}
       intro="The agent calls mcprouter tools for you. Tool calls count towards your plan, like calls from your own keys."
+      canCallAppTools
     />
   );
 }

@@ -62,6 +62,39 @@ export const responseSpec = z
   .strict();
 
 const identifier = /^[a-z][a-z0-9_]*$/;
+const httpsOrigin = z.url({ protocol: /^https$/ });
+
+/**
+ * The service's MCP App: `app.ts` in the service directory renders tool
+ * results inside a sandboxed iframe in hosts that support MCP Apps
+ * (`io.modelcontextprotocol/ui`). Other hosts keep getting the JSON text.
+ */
+export const appSpec = z
+  .object({
+    /** Origins the app may load images and fonts from, e.g. an icon CDN. */
+    resourceDomains: z.array(httpsOrigin).default([]),
+    /** Origins the app may fetch from. Prefer `tools/call` through the host instead. */
+    connectDomains: z.array(httpsOrigin).default([]),
+    /** Ask the host to draw a border around the app. */
+    prefersBorder: z.boolean().default(false),
+  })
+  .strict();
+const exportName = /^[a-zA-Z][a-zA-Z0-9]*$/;
+
+/**
+ * Hooks around the YAML-built HTTP call, for when the request or the body
+ * needs code but the rest of the tool doesn't. Each names an export in the
+ * service's `handlers.ts`.
+ */
+export const transformSpec = z
+  .object({
+    /** `RequestTransformer`: rewrites the built request (URL, method, body, headers) before it is fetched. */
+    request: z.string().regex(exportName).optional(),
+    /** `ResponseTransformer`: reshapes the parsed upstream body before `response` root/filter/search/pick/limit apply. */
+    response: z.string().regex(exportName).optional(),
+  })
+  .strict()
+  .refine((transform) => transform.request || transform.response, "transform needs a request or a response transformer");
 
 export const toolSpec = z
   .object({
@@ -80,14 +113,20 @@ export const toolSpec = z
     input: z.record(z.string().regex(/^[a-zA-Z][a-zA-Z0-9_]*$/), paramSpec).default({}),
     response: responseSpec.optional(),
     /** Name of an export in the service's `handlers.ts`, for anything YAML can't express. */
-    handler: z.string().regex(/^[a-zA-Z][a-zA-Z0-9]*$/).optional(),
+    handler: z.string().regex(exportName).optional(),
+    transform: transformSpec.optional(),
     cacheTtl: z.number().int().nonnegative().optional(),
     timeoutMs: z.number().int().positive().max(60_000).optional(),
+    /** Set to false to show this tool's results as plain JSON even though the service has an `app`. */
+    app: z.boolean().default(true),
   })
   .strict()
   .superRefine((tool, ctx) => {
     if (!tool.path && !tool.handler) {
       ctx.addIssue({ code: "custom", message: `tool ${tool.name} needs a path or a handler` });
+    }
+    if (tool.transform && tool.handler) {
+      ctx.addIssue({ code: "custom", message: `tool ${tool.name}: a handler already makes the request, so it cannot also have a transform` });
     }
     if (tool.body && tool.method !== "POST") {
       ctx.addIssue({ code: "custom", message: `tool ${tool.name}: body is only allowed with POST` });
@@ -114,6 +153,8 @@ export const serviceSpec = z
     id: z.string().regex(/^[a-z][a-z0-9-]*$/, "service ids are kebab-case"),
     title: z.string().min(1),
     description: z.string().optional(),
+    /** Former ids of services merged into this one; they still resolve here for old API keys, grants and URLs. */
+    aliases: z.array(z.string().regex(/^[a-z][a-z0-9-]*$/)).default([]),
     /** DATA.GOV.HK (CKAN) dataset ids this service covers; read by the tracker. */
     datasets: z.array(z.string().min(1)).default([]),
     baseUrl: z.url({ protocol: /^https?$/ }).optional(),
@@ -127,10 +168,12 @@ export const serviceSpec = z
       .strict()
       .optional(),
     cacheTtl: z.number().int().nonnegative().default(300),
+    app: appSpec.optional(),
     tools: z.array(toolSpec).min(1),
   })
   .strict()
   .superRefine((service, ctx) => {
+    if (service.aliases.includes(service.id)) ctx.addIssue({ code: "custom", message: "a service cannot alias its own id" });
     const seen = new Set<string>();
     for (const tool of service.tools) {
       if (seen.has(tool.name)) ctx.addIssue({ code: "custom", message: `duplicate tool name ${tool.name}` });
@@ -141,8 +184,10 @@ export const serviceSpec = z
     }
   });
 
+export type AppSpec = z.infer<typeof appSpec>;
 export type ParamSpec = z.infer<typeof paramSpec>;
 export type ResponseSpec = z.infer<typeof responseSpec>;
+export type TransformSpec = z.infer<typeof transformSpec>;
 export type ToolSpec = z.infer<typeof toolSpec>;
 export type ServiceSpec = z.infer<typeof serviceSpec>;
 

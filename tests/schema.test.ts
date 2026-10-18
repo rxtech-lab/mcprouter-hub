@@ -24,7 +24,7 @@ describe("service.yaml schema", () => {
 
   it("accepts every committed service", () => {
     const dir = path.join(import.meta.dirname, "../mcp/services");
-    for (const name of ["hko-weather", "kmb", "citybus", "mtr", "ha-aed", "td-carpark", "hk-holidays", "datagovhk-catalog"]) {
+    for (const name of ["hko-weather", "hk-bus", "mtr", "ha-aed", "td-carpark", "hk-holidays", "datagovhk-catalog"]) {
       expect(issues(parse(readFileSync(path.join(dir, name, "service.yaml"), "utf8"))), name).toEqual([]);
     }
   });
@@ -67,13 +67,26 @@ describe("service.yaml schema", () => {
     expect(issues(spec).join()).toMatch(/undeclared input nope/);
   });
 
+  it("rejects an empty transform and a transform on a handler tool", () => {
+    const empty = base();
+    empty.tools[3].transform = {};
+    expect(issues(empty)).toContain("transform needs a request or a response transformer");
+    const both = base();
+    both.tools[2].transform = { response: "unwrapFeed" };
+    expect(issues(both)).toContain("tool example_custom: a handler already makes the request, so it cannot also have a transform");
+  });
+
   it("checks handlers and directory names in parseService", () => {
     const missingFile = parseService({ directory: "example", yaml: fixture, handlerExports: null });
     expect(missingFile.problems.join()).toMatch(/handlers.ts does not exist/);
     const missingExport = parseService({ directory: "example", yaml: fixture, handlerExports: new Set(["other"]) });
     expect(missingExport.problems.join()).toMatch(/does not export it/);
-    const wrongDir = parseService({ directory: "elsewhere", yaml: fixture, handlerExports: new Set(["custom"]) });
+    const wrongDir = parseService({ directory: "elsewhere", yaml: fixture, handlerExports: new Set(["custom", "signRequest", "unwrapFeed"]) });
     expect(wrongDir.problems.join()).toMatch(/must match its directory name/);
+    const missingTransformer = parseService({ directory: "example", yaml: fixture, handlerExports: new Set(["custom", "signRequest"]) });
+    expect(missingTransformer.problems).toEqual([
+      'mcp/services/example/service.yaml: tool example_transformed uses response transformer "unwrapFeed" but handlers.ts does not export it',
+    ]);
     const invalidYaml = parseService({ directory: "example", yaml: "tools: [", handlerExports: null });
     expect(invalidYaml.problems.join()).toMatch(/invalid YAML/);
   });

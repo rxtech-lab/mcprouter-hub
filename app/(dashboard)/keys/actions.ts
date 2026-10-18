@@ -4,7 +4,7 @@ import { and, eq, isNull } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { db } from "@/db";
-import { apiKeys } from "@/db/schema";
+import { apiKeys, oauthGrants } from "@/db/schema";
 import { serviceById } from "@/generated/registry";
 import { runAction } from "@/lib/action-result";
 import { displayPrefix, generateApiKey, hashApiKey } from "@/lib/api-keys";
@@ -15,7 +15,7 @@ const scopes = z
   .array(z.string())
   .max(50)
   .refine((ids) => ids.every((id) => serviceById.has(id)), "Unknown service")
-  .transform((ids) => [...new Set(ids)].sort());
+  .transform((ids) => [...new Set(ids.map((id) => serviceById.get(id)!.id))].sort());
 
 const createSchema = z.object({
   name,
@@ -85,6 +85,21 @@ export async function revokeApiKey(input: { id: string }) {
     await db.update(apiKeys).set({ revokedAt: new Date() }).where(and(eq(apiKeys.id, data.id), eq(apiKeys.userId, user.id)));
     revalidatePath("/keys");
     revalidatePath("/dashboard");
+    return undefined;
+  });
+}
+
+export async function disconnectApp(input: { id: string }) {
+  return runAction(async () => {
+    const user = await requireActionUser();
+    const data = z.object({ id: z.string().min(1) }).parse(input);
+    const revoked = await db
+      .update(oauthGrants)
+      .set({ revokedAt: new Date() })
+      .where(and(eq(oauthGrants.id, data.id), eq(oauthGrants.userId, user.id), isNull(oauthGrants.revokedAt)))
+      .returning({ id: oauthGrants.id });
+    if (!revoked.length) throw new Error("NOT_FOUND");
+    revalidatePath("/keys/apps");
     return undefined;
   });
 }

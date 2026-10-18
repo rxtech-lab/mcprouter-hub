@@ -10,13 +10,13 @@ export function FilterChip({ selected, children, className, ...props }: Componen
       role="checkbox"
       aria-checked={selected}
       className={cn(
-        "state-layer inline-flex h-8 cursor-pointer items-center gap-2 rounded-sm px-3 type-label-large",
+        "state-layer inline-flex h-8 cursor-pointer items-center gap-2 rounded-sm px-3 type-label-large transition-[background-color,padding,border-color] duration-200 ease-emphasized",
         selected ? "bg-secondary-container pl-2 text-on-secondary-container" : "border border-outline text-on-surface-variant",
         className,
       )}
       {...props}
     >
-      {selected ? <Check size={18} /> : null}
+      {selected ? <Check size={18} className="animate-[fade-through_200ms_cubic-bezier(0.2,0,0,1)_both]" /> : null}
       {children}
     </button>
   );

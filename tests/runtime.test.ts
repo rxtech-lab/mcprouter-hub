@@ -122,6 +122,7 @@ describe("executeTool", () => {
   const definition: ServiceDefinition = {
     id: "example",
     title: "Example",
+    aliases: [],
     datasets: [],
     baseUrl: "https://api.example.test",
     cacheTtl: 60,
@@ -147,6 +148,62 @@ describe("executeTool", () => {
   it("rejects invalid input before calling upstream", async () => {
     await expect(executeTool(definition, tool, { lang: "fr" })).rejects.toThrow();
     expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  describe("transformers", () => {
+    const feedTool: ToolDefinition = {
+      name: "example_feed",
+      description: "d",
+      spec: spec({
+        name: "example_feed",
+        description: "d",
+        path: "/feed",
+        input: { q: { type: "string" } },
+        transform: { request: "signRequest", response: "unwrapFeed" },
+        response: { root: "entries", pick: ["id"], limit: 1 },
+      }),
+      inputSchema: z.object({ q: z.string() }),
+    };
+
+    it("rewrites the request before fetching and reshapes the body before response shaping", async () => {
+      fetchMock.mockImplementation(async () => new Response(JSON.stringify({ feed: { entries: [{ id: 1, x: 0 }, { id: 2, x: 0 }] } })));
+      const transformRequest = vi.fn(async (request: { url: string; method: "GET" | "POST" }, input: Record<string, unknown>) => ({
+        ...request,
+        url: `${request.url}&sig=${String(input.q).length}`,
+        headers: { "X-Signed": "yes" },
+      }));
+      const transformResponse = vi.fn((body: unknown) => (body as { feed: unknown }).feed);
+      const result = await executeTool(definition, { ...feedTool, transformRequest, transformResponse }, { q: "abc" });
+
+      expect(transformRequest).toHaveBeenCalledWith(
+        { url: "https://api.example.test/feed?q=abc", method: "GET", body: undefined, headers: undefined },
+        { q: "abc" },
+        expect.objectContaining({ service: definition, fetchUpstream: expect.any(Function) }),
+      );
+      const [url, init] = fetchMock.mock.calls[0];
+      expect(url).toBe("https://api.example.test/feed?q=abc&sig=3");
+      expect(init.headers["X-Signed"]).toBe("yes");
+      expect(result).toEqual({
+        data: [{ id: 1 }],
+        meta: { source: "https://api.example.test/feed?q=abc&sig=3", total: 2, returned: 1, truncated: true },
+      });
+    });
+
+    it("caches the raw body by the transformed request and transforms every call", async () => {
+      fetchMock.mockImplementation(async () => new Response(JSON.stringify({ feed: { entries: [{ id: 1 }] } })));
+      const transformResponse = vi.fn((body: unknown) => (body as { feed: unknown }).feed);
+      const tool = { ...feedTool, transformResponse };
+      await executeTool(definition, tool, { q: "a" });
+      await executeTool(definition, tool, { q: "a" });
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      expect(transformResponse).toHaveBeenCalledTimes(2);
+    });
+
+    it("refuses a transformed request that is not http(s)", async () => {
+      const tool = { ...feedTool, transformRequest: (request: { url: string; method: "GET" | "POST" }) => ({ ...request, url: "file:///etc/passwd" }) };
+      await expect(executeTool(definition, tool, { q: "a" })).rejects.toThrow(/http\(s\) URL/);
+      expect(fetchMock).not.toHaveBeenCalled();
+    });
   });
 
   it("runs custom handlers with a fetch helper", async () => {

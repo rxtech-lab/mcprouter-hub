@@ -38,3 +38,13 @@ tools:
     handler: custom
     input:
       flag: { type: boolean, default: false }
+  - name: example_transformed
+    description: YAML request with code transformers.
+    path: /feed
+    input:
+      q: { type: string, required: true }
+    transform:
+      request: signRequest
+      response: unwrapFeed
+    response:
+      root: entries

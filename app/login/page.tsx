@@ -16,26 +16,32 @@ const benefits = [
   { icon: <BarChart3 size={20} />, text: "Usage by key and tool, and your plan in one place" },
 ];
 
-export default async function LoginPage() {
-  if (await getCurrentUser()) redirect("/dashboard");
+/** Only same-site paths, so `?next=` can't be used to bounce users to another site. */
+function safeNext(value: string | string[] | undefined) {
+  return typeof value === "string" && value.startsWith("/") && !value.startsWith("//") && !value.includes("\\") ? value : "/dashboard";
+}
+
+export default async function LoginPage({ searchParams }: PageProps<"/login">) {
+  const next = safeNext((await searchParams).next);
+  if (await getCurrentUser()) redirect(next);
   const freeChat = freeChatConfig();
 
   async function authenticate() {
     "use server";
-    await signIn("rxlab", { redirectTo: "/dashboard" });
+    await signIn("rxlab", { redirectTo: next });
   }
 
   return (
     <main className="grid min-h-dvh bg-surface lg:grid-cols-[1.1fr_1fr]">
       {/* Brand pane: what you get by signing in. Hidden on small screens, where the form comes first. */}
-      <section className="relative hidden flex-col justify-between overflow-hidden bg-primary-container p-12 text-on-primary-container lg:m-3 lg:flex lg:rounded-xl">
+      <section className="relative hidden animate-page-in flex-col justify-between overflow-hidden bg-primary-container p-12 text-on-primary-container lg:m-3 lg:flex lg:rounded-xl">
         <Link href="/" className="flex items-center gap-3 self-start rounded-md">
           <Logo size={40} />
           <span className="type-title-large">mcprouter</span>
         </Link>
         <div className="flex max-w-lg flex-col gap-8">
           <h1 className="type-display-small">Hong Kong open data, ready for your AI.</h1>
-          <ul className="flex flex-col gap-4">
+          <ul className="stagger flex flex-col gap-4">
             {benefits.map((benefit) => (
               <li key={benefit.text} className="flex items-center gap-4 type-body-large">
                 <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-surface-container-lowest/60">{benefit.icon}</span>
@@ -59,7 +65,7 @@ export default async function LoginPage() {
           </Link>
         </div>
 
-        <div className="mx-auto flex w-full max-w-sm flex-1 flex-col justify-center py-12">
+        <div className="mx-auto flex w-full max-w-sm flex-1 animate-page-in flex-col justify-center py-12 [animation-delay:80ms]">
           <h2 className="type-headline-large">Sign in</h2>
           <p className="mt-2 type-body-large text-on-surface-variant">Use your RxLab account to manage API keys, usage and saved chats.</p>
 

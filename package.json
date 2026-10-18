@@ -16,6 +16,7 @@
     "theme": "bun scripts/theme.ts",
     "tracker:report": "bun scripts/tracker-report.ts",
     "catalog:sync": "bun scripts/sync-catalog.ts",
+    "telegram:webhook": "bun scripts/telegram-webhook.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push"

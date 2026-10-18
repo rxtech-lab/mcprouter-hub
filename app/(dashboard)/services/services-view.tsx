@@ -41,7 +41,7 @@ export function ServicesView({ services, allEndpoint, children }: { services: Se
       {children}
 
       {services.length ? (
-        <ul className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3" data-testid="service-list">
+        <ul className="stagger mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3" data-testid="service-list">
           {services.map((service, index) => (
             <li key={service.id}>
               <button

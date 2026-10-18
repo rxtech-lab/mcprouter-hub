@@ -57,7 +57,7 @@ export default async function OverviewPage() {
           <ButtonLink href="/chat" variant="elevated" icon={<MessageSquareText size={18} />}>Ask the agent</ButtonLink>
         </div>
       </section>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="Calls today" value={formatNumber(today)} icon={<Activity size={18} />} />
         <StatCard label="Calls, last 30 days" value={formatNumber(last30)} icon={<CalendarRange size={18} />} />
         <StatCard label="Active API keys" value={formatNumber(activeKeys)} icon={<KeyRound size={18} />} />

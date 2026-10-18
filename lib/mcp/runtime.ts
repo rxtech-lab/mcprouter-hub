@@ -2,7 +2,9 @@ import type { ParamSpec, ResponseSpec, ToolSpec } from "@/mcp/schema";
 import { pathPlaceholders } from "@/mcp/schema";
 import { cached } from "@/lib/mcp/cache";
 import { fetchUpstream, type UpstreamFormat } from "@/lib/mcp/fetcher";
-import type { HandlerContext, ServiceDefinition, ToolDefinition, ToolInput } from "@/lib/mcp/types";
+import type { HandlerContext, ServiceDefinition, ToolDefinition, ToolInput, UpstreamRequest } from "@/lib/mcp/types";
+
+export type { UpstreamRequest };
 
 /**
  * Shared executor for generated tools: builds the upstream request from the
@@ -12,13 +14,6 @@ import type { HandlerContext, ServiceDefinition, ToolDefinition, ToolInput } fro
 export type ToolResult = {
   data: unknown;
   meta: { source?: string; total?: number; returned?: number; truncated?: boolean };
-};
-
-export type UpstreamRequest = {
-  url: string;
-  method: "GET" | "POST";
-  body?: Record<string, unknown>;
-  headers?: Record<string, string>;
 };
 
 function placement(name: string, param: ParamSpec, tool: Pick<ToolSpec, "path">) {
@@ -144,6 +139,19 @@ export function handlerContext(service: ServiceDefinition, tool: ToolDefinition)
   };
 }
 
+/** A request transformer may only hand back a well-formed http(s) request. */
+function checkRequest(request: UpstreamRequest): UpstreamRequest {
+  let url: URL;
+  try {
+    url = new URL(request?.url);
+  } catch {
+    throw new Error("The request transformer returned an invalid URL");
+  }
+  if (url.protocol !== "https:" && url.protocol !== "http:") throw new Error("The request transformer must return an http(s) URL");
+  if (request.method !== "GET" && request.method !== "POST") throw new Error("The request transformer must return a GET or POST request");
+  return { ...request, body: request.method === "POST" ? request.body : undefined };
+}
+
 export async function executeTool(service: ServiceDefinition, tool: ToolDefinition, rawInput: ToolInput): Promise<ToolResult> {
   const input = tool.inputSchema.parse(rawInput) as ToolInput;
 
@@ -152,12 +160,16 @@ export async function executeTool(service: ServiceDefinition, tool: ToolDefiniti
     return tool.spec.response ? shapeResponse(data, tool.spec.response, input) : { data, meta: {} };
   }
 
-  const request = buildRequest(service, tool.spec, input);
+  const context = tool.transformRequest || tool.transformResponse ? handlerContext(service, tool) : null;
+  const built = buildRequest(service, tool.spec, input);
+  const request = tool.transformRequest ? checkRequest(await tool.transformRequest(built, input, context!)) : built;
   const format = tool.spec.response?.format ?? "json";
   const ttl = tool.spec.cacheTtl ?? service.cacheTtl;
-  const body = await cached(cacheKey(request, format), ttl, () =>
+  // The cache holds the raw upstream body, keyed by the request actually sent.
+  const raw = await cached(cacheKey(request, format), ttl, () =>
     fetchUpstream({ ...request, format, timeoutMs: tool.spec.timeoutMs }),
   );
+  const body = tool.transformResponse ? await tool.transformResponse(raw, input, context!) : raw;
   const result = shapeResponse(body, tool.spec.response, input);
   return { ...result, meta: { source: request.url, ...result.meta } };
 }
