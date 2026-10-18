@@ -41,16 +41,17 @@ describe("API tracker", () => {
     const { tracker } = resolveApis(registry(entry("API-0001") + entry("API-0002", ["d2"])), specs);
     const markdown = renderApisMarkdown(tracker!, specs);
     expect(markdown).toContain("**1 of 2 implemented**");
-    expect(markdown).toContain("| `API-0001` | [T API-0001](https://data.gov.hk/en-data/dataset/d1) | P | ✅ Implemented | [Service](mcp/services/svc/service.yaml) |");
-    expect(markdown).toContain("| `API-0002` | [T API-0002](https://data.gov.hk/en-data/dataset/d2) | P | 🕒 Coming soon | — |");
+    expect(markdown).toContain("| `API-0001` | [T API-0001](https://data.gov.hk/en-data/dataset/d1) | API | P | ✅ Implemented | [Service](mcp/services/svc/service.yaml) |");
+    expect(markdown).toContain("| `API-0002` | [T API-0002](https://data.gov.hk/en-data/dataset/d2) | API | P | 🕒 Coming soon | — |");
     expect(markdown).toContain("`API-0003`");
   });
 
   it("filters by text, status and category", () => {
     const api = (id: string, status: ApiEntry["status"], category: ApiEntry["category"]): ApiEntry => ({
-      id, title: `Title ${id}`, description: "", provider: "HKO", category, datasets: [`ds-${id}`], docs: "", status, services: [],
+      id, title: `Title ${id}`, description: "", provider: "HKO", category, datasets: [`ds-${id}`], kind: id === "API-0002" ? "files" : "api", docs: "", status, services: [],
     });
     const apis = [api("API-0001", "implemented", "weather"), api("API-0002", "coming-soon", "transport")];
+    expect(filterApis(apis, { kind: "files" }).map((row) => row.id)).toEqual(["API-0002"]);
     expect(filterApis(apis, { status: "coming-soon" }).map((row) => row.id)).toEqual(["API-0002"]);
     expect(filterApis(apis, { category: "weather" }).map((row) => row.id)).toEqual(["API-0001"]);
     expect(filterApis(apis, { query: "api-0002" }).map((row) => row.id)).toEqual(["API-0002"]);

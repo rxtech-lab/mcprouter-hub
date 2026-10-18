@@ -1,4 +1,4 @@
-// Bus and minibus chat cards: routes, stops and arrival boards in each operator's colours, as still pictures.
+// Bus, minibus and tram chat cards: routes, stops and arrival boards in each operator's colours, as still pictures.
 import { blocks, card, fmt, langOf, truncation, type Card, type CardBuilder, type CardInput, type Lang, type Row } from "../../apps/card";
 import { OPERATORS, operatorOf, type Operator } from "./operators";
 
@@ -190,6 +190,119 @@ function gmbRouteStopEta(result: CardInput, operator: Operator): Card {
   };
 }
 
+// ------------------------------------------------------------ New Lantao Bus
+
+/** NLB's notes carry HTML line breaks. */
+const plainText = (text: unknown) => String(text ?? "").replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, "").trim();
+
+function nlbRoutes(result: CardInput, operator: Operator): Card {
+  const list: Row[] = result.data ?? [];
+  const lang = langOf(result.input);
+  return {
+    ...brand(operator),
+    title: result.input?.route ? `Route ${result.input.route}` : `${operator.name} routes`,
+    subtitle: fmt.plural(list.length, "route"),
+    blocks: list.length
+      ? list.map((route) =>
+          card.row({
+            leading: { text: String(route.routeNo), tone: "accent" },
+            title: fmt.pick(route, "routeName", lang),
+            subtitle: [route.overnightRoute ? "Overnight" : null, route.specialRoute ? "Special service" : null].filter(Boolean).join(" · ") || null,
+          }),
+        )
+      : [card.text("No routes match.", true)],
+    footer: truncation(result),
+  };
+}
+
+function nlbRouteStops(result: CardInput, operator: Operator): Card {
+  const list: Row[] = result.data ?? [];
+  const lang = langOf(result.input);
+  return {
+    ...brand(operator),
+    title: `${operator.name} stops`,
+    subtitle: fmt.plural(list.length, "stop"),
+    blocks: list.map((stop, index) => card.row({ leading: { text: String(index + 1) }, title: fmt.pick(stop, "stopName", lang), subtitle: fmt.pick(stop, "stopLocation", lang) || null })),
+  };
+}
+
+function nlbEta(result: CardInput, operator: Operator): Card {
+  const body: Row = result.data ?? {};
+  const arrivals: Row[] = body.estimatedArrivals ?? [];
+  const etas = card.etas(arrivals.map((item) => fmt.eta(item.estimatedArrivalTime)));
+  const variant = arrivals.find((item) => item.routeVariantName)?.routeVariantName;
+  return {
+    ...brand(operator),
+    title: `${operator.name} arrivals`,
+    subtitle: `Route ${result.input?.routeId ?? ""}, stop ${result.input?.stopId ?? ""}`,
+    blocks: [card.row({ title: "Next buses", subtitle: variant || null, trailing: etas.length ? etas : [{ text: "No departures" }] })],
+    footer: plainText(body.message) || null,
+  };
+}
+
+// ------------------------------------------------------------ MTR Bus
+
+function mtrBus(result: CardInput, operator: Operator): Card {
+  const body: Row = result.data ?? {};
+  const stops: Row[] = body.busStop ?? [];
+  const route = body.routeName ?? result.input?.routeName ?? "";
+  const colour = String(body.routeColour ?? "").replace(/[^0-9a-f]/gi, "").slice(0, 6);
+  return {
+    ...brand(operator, route || operator.badge),
+    ...(colour.length === 6 ? { accent: `#${colour}` } : {}),
+    title: `MTR Bus ${route}`.trim(),
+    subtitle: body.routeStatusRemarkTitle || null,
+    blocks: blocks(
+      body.routeStatusRemarkContent && card.notice(body.routeStatusRemarkContent, "warning"),
+      stops.length
+        ? stops.map((stop) => {
+            const buses: Row[] = (stop.bus ?? []).slice(0, 3);
+            return card.row({
+              title: String(stop.busStopId),
+              subtitle: stop.isSuspended === "1" ? "Suspended" : stop.busStopRemark,
+              trailing: buses.length ? card.etas(buses.map((item) => item.departureTimeText || item.arrivalTimeText || "—")) : [{ text: "No buses" }],
+            });
+          })
+        : card.text("No stops reported for this route.", true),
+    ),
+  };
+}
+
+// ------------------------------------------------------------ trams
+
+const capitalise = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+
+function tramRoutes(result: CardInput, operator: Operator): Card {
+  const list: Row[] = result.data ?? [];
+  const lang = langOf(result.input);
+  return {
+    ...brand(operator),
+    title: "Tram routes",
+    subtitle: fmt.plural(list.length, "route"),
+    blocks: list.length
+      ? list.map((route) => card.row({ leading: { text: String(route.route), tone: "accent" }, title: `${fmt.pick(route, "orig", lang)} → ${fmt.pick(route, "dest", lang)}` }))
+      : [card.text("No routes match.", true)],
+  };
+}
+
+function tramStops(result: CardInput, operator: Operator): Card {
+  const list: Row[] = result.data ?? [];
+  const lang = langOf(result.input);
+  const directions = [...new Set(list.map((stop) => String(stop.direction)))];
+  return {
+    ...brand(operator),
+    title: result.input?.search ? `Tram stops matching “${result.input.search}”` : "Tram stops",
+    subtitle: fmt.plural(list.length, "stop"),
+    blocks: list.length
+      ? directions.flatMap((direction) => [
+          card.section(capitalise(direction)),
+          ...list.filter((stop) => stop.direction === direction).map((stop) => card.row({ leading: { text: String(stop.stop) }, title: fmt.pick(stop, "name", lang) })),
+        ])
+      : [card.text("No stops match.", true)],
+    footer: truncation(result),
+  };
+}
+
 const builders: Record<string, (result: CardInput, operator: Operator) => Card> = {
   kmb_routes: routes,
   kmb_stops: stops,
@@ -199,11 +312,17 @@ const builders: Record<string, (result: CardInput, operator: Operator) => Card> 
   citybus_routes: routes,
   citybus_route_stops: routeStops,
   citybus_eta: stopEta,
+  nlb_routes: nlbRoutes,
+  nlb_route_stops: nlbRouteStops,
+  nlb_eta: nlbEta,
+  mtr_bus_schedule: mtrBus,
   gmb_routes: gmbRoutes,
   gmb_route: gmbRoute,
   gmb_route_stops: gmbRouteStops,
   gmb_stop_eta: gmbStopEta,
   gmb_route_stop_eta: gmbRouteStopEta,
+  tram_routes: tramRoutes,
+  tram_stops: tramStops,
 };
 
 export const buildCard: CardBuilder = (result) => builders[result.tool]?.(result, operatorOf(result.tool)) ?? null;

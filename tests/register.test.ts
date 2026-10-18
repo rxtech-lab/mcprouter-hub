@@ -56,4 +56,14 @@ describe("registerServices", () => {
       expect(names).toEqual(serviceById.get("hk-bus")!.tools.map((tool) => tool.name));
     }
   });
+
+  it("hides every tool behind search_tools, read_tool and use_tool in search mode, keeping key scopes", async () => {
+    const { tools, resources, server } = fakeServer();
+    registerServices(server, services, { userId: "u", apiKeyId: "k", scopes: ["mtr"] }, "search");
+    expect(tools.map((tool) => tool.name)).toEqual(["search_tools", "read_tool", "use_tool"]);
+    expect(resources.map((resource) => resource.uri)).toEqual(["ui://mcprouter/mtr"]);
+    const read = tools.find((tool) => tool.name === "read_tool")!;
+    const outOfScope = (await read.handler({ name: "hko_current_weather" })) as { isError?: boolean };
+    expect(outOfScope.isError).toBe(true);
+  });
 });

@@ -1,10 +1,12 @@
 import { z } from "zod";
-import { API_CATEGORIES, API_STATUSES, type ApiCategory, type ApiStatus } from "@/lib/apis";
+import { API_CATEGORIES, API_KINDS, API_STATUSES, type ApiCategory, type ApiKind, type ApiStatus } from "@/lib/apis";
 
 const apiParamsSchema = z.object({
   q: z.string().trim().max(100).optional().catch(undefined),
   status: z.enum(Object.keys(API_STATUSES) as [ApiStatus, ...ApiStatus[]]).optional().catch(undefined),
   category: z.enum(Object.keys(API_CATEGORIES) as [ApiCategory, ...ApiCategory[]]).optional().catch(undefined),
+  kind: z.enum(Object.keys(API_KINDS) as [ApiKind, ...ApiKind[]]).optional().catch(undefined),
+  page: z.coerce.number().int().min(1).catch(1).default(1),
   /** Opens that API's details dialog. */
   api: z.string().max(20).optional().catch(undefined),
 });

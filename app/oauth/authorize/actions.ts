@@ -2,7 +2,9 @@
 
 import { redirect } from "next/navigation";
 import { requireActionUser } from "@/lib/auth";
+import { getT } from "@/lib/i18n/server";
 import { approveAuthorization, checkAuthorizationRequest, clientRedirect } from "@/lib/mcp/oauth";
+import { serviceScopesSchema } from "@/lib/service-scopes";
 import { siteUrl } from "@/lib/site";
 import { AUTHORIZE_PARAMS } from "./params";
 
@@ -21,6 +23,7 @@ export async function decideAuthorization(formData: FormData) {
   if (formData.get("decision") !== "allow") {
     redirect(clientRedirect(request.redirectUri, { error: "access_denied", error_description: "Access was declined." }, request.state, origin));
   }
-  const code = await approveAuthorization(user.id, request);
+  const scopes = serviceScopesSchema(await getT()).parse(formData.getAll("services").map(String));
+  const code = await approveAuthorization(user.id, request, scopes);
   redirect(clientRedirect(request.redirectUri, { code }, request.state, origin));
 }

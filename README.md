@@ -12,19 +12,23 @@ bun run catalog:sync            # optional: load the 3,830-dataset catalogue for
 bun run dev
 ```
 
-Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Gemini (web), Codex, Gemini CLI and Cursor opens as a dialog on `/keys/apps` (`?client=<id>&auth=key` picks the client and API-key flow). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/streamable` with `Authorization: Bearer mcpr_…`.
+Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Gemini (web), Codex, Gemini CLI and Cursor opens as a dialog on `/keys/apps` (`?client=<id>&auth=key` picks the client and API-key flow, `&tools=all` the endpoint that lists every tool). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/streamable` with `Authorization: Bearer mcpr_…`.
 To inspect it: `bunx @modelcontextprotocol/inspector` with that URL and header.
 
 ## Endpoints
 
 | Path | What |
 |---|---|
-| `/api/mcp/streamable` | Every service (Streamable HTTP, stateless) |
-| `/api/mcp/s/<service>/streamable` | One service, for a smaller tool list |
+| `/api/mcp/streamable` | Every service (Streamable HTTP, stateless), behind three search tools; `?tools=all` lists every tool |
+| `/api/mcp/s/<service>/streamable` | One service, for a smaller tool list, always listed by name |
 | `/api/chat` | The agent (AI SDK 7), used by `/chat` |
 | `/api/whatsapp` | WhatsApp bot webhook (WasenderAPI) |
 | `/api/telegram` | Telegram bot webhook (Bot API) |
 | `/api/cron/sync-catalog` | Daily catalogue sync (Vercel cron, `CRON_SECRET`) |
+
+The combined endpoint lists only `search_tools` (a query and an optional `limit`, default 8, at most 20; the same hybrid embedding and keyword ranking as the agent), `read_tool` (a tool's description and JSON Schema) and `use_tool` (a tool name and its `arguments`), so clients that cap or struggle with many tools stay usable. Only `use_tool` is metered, and it's logged under the real tool's name. Key scopes apply before search, so out-of-scope tools can't be found, read or used. `?tools=search` asks for this mode explicitly; the agent calls the route in-process and always gets every tool.
+
+`/settings` chooses what every endpoint exposes for that user, across API keys, OAuth apps and the agent: some regions (each service's `region`, ids in `mcp/regions.ts`), some services, and tools hidden within a service. Empty means everything, including services added later; key scopes narrow it further. Hidden tools can't be listed, searched or called, and a single-service endpoint whose service is hidden answers 403 `service_not_exposed`. The choices live in `mcp_settings`; the dialogs open from the URL (`?edit=regions|services|reset`, `?tools=<service>`).
 
 Keys arrive as a Bearer header or `?token=`. They're stored as a sha256 hash, can be limited to services, and every call is metered against rx-subscription when `BILLING_ENABLED=true`. With `RX_SUBSCRIPTION_CREDIT_UNIT` set, each call (including the dashboard agent's) first takes 1 from that balance (`POST /api/v1/balances`, refused when empty) and is then tracked on the usage item `RX_SUBSCRIPTION_USAGE_ITEM` (`POST /api/v1/usage`); without it, the usage item's plan allowance is the gate. rx-subscription keeps the usage log; the Usage pages read it back from `/api/v1/usage/statistics` and `/api/v1/balances/ledger`.
 
@@ -53,6 +57,7 @@ List the service's CKAN dataset ids under `datasets:`; the tracker counts them a
 ```yaml
 id: example
 title: Example
+region: hk                        # default; ids in mcp/regions.ts
 datasets: [some-ckan-id]
 baseUrl: https://api.example.gov.hk
 lang: { param: lang, map: { en: en, tc: tc, sc: sc } }   # applied to any input named `lang`
@@ -106,6 +111,8 @@ mount({
 
 `bun run codegen` checks the two agree (unknown or out-of-order ids, a service without `apis:`, or datasets that don't match fail the build) and writes [`APIS.md`](APIS.md), the tracker as a table, and `generated/apis.json`, which the public **Data sources → APIs** page (`/sources/apis`) reads. Commit `APIS.md` with the YAML change; a test fails when it's stale.
 
+The tracker covers the whole DATA.GOV.HK catalogue: `bun run apis:import` appends every dataset no entry lists yet (with the next ids, its DATA.GOV.HK category, and `kind: files` when it has no live API resource). Run it again when new datasets appear, then `bun run codegen`.
+
 ## Translations
 
 The UI is in English, Simplified Chinese (`zh-CN`) and Traditional Chinese for Hong Kong (`zh-HK`). The language menu sits in the navigation rail and in the public top app bar. Picking a language saves it in the `locale` cookie for a year. Until the user picks one, the locale follows the browser's `Accept-Language` (`zh-HK`, `zh-TW`, `zh-MO`, `zh-Hant` and `yue` read `zh-HK`; other Chinese reads `zh-CN`; anything else reads English). URLs stay the same in every language.
@@ -128,6 +135,7 @@ Translations live in gettext catalogues, `locales/<locale>/messages.po`, keyed b
 | `bun run i18n:extract` / `bun run i18n:check` | Update `locales/*/messages.po` from the source / check they're complete |
 | `bun run theme` | Regenerate `app/m3-tokens.css` from the seed colour |
 | `bun run catalog:sync [--limit N]` | Sync the CKAN catalogue without the cron's time budget |
+| `bun run apis:import [--dry-run]` | Add every DATA.GOV.HK dataset `mcp/apis.yaml` doesn't list yet |
 | `bun run tracker:report [--markdown]` | Tracker summary in the terminal |
 | `bun run test` / `bun run test:e2e` | vitest / Playwright (`DEV_BYPASS_AUTH`) |
 

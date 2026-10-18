@@ -1,6 +1,10 @@
 import { sql } from "drizzle-orm";
 import { index, integer, primaryKey, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 
+/** How an MCP connection lists tools: every tool by name, or only `search_tools`, `read_tool` and `use_tool`. */
+export const TOOL_MODES = ["all", "search"] as const;
+export type ToolMode = (typeof TOOL_MODES)[number];
+
 const createdAt = () =>
   integer("created_at", { mode: "timestamp_ms" }).notNull().default(sql`(unixepoch() * 1000)`);
 
@@ -16,6 +20,8 @@ export const apiKeys = sqliteTable(
     hash: text("hash").notNull(),
     /** Service ids the key may call. Empty means every service. */
     scopes: text("scopes", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
+    /** How tools are listed: `all` by name, or `search` behind search_tools, read_tool and use_tool. Null means the endpoint's default. */
+    toolMode: text("tool_mode", { enum: TOOL_MODES }),
     callCount: integer("call_count").notNull().default(0),
     lastUsedAt: integer("last_used_at", { mode: "timestamp_ms" }),
     expiresAt: integer("expires_at", { mode: "timestamp_ms" }),
@@ -161,6 +167,10 @@ export const oauthGrants = sqliteTable(
     resource: text("resource").notNull(),
     /** Set when the resource is a single-service endpoint; null means every service. */
     service: text("service"),
+    /** Service ids the client may call; `service` narrows it further. Empty means every service. */
+    scopes: text("scopes", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
+    /** How tools are listed: `all` by name, or `search` behind search_tools, read_tool and use_tool. Null means the endpoint's default. */
+    toolMode: text("tool_mode", { enum: TOOL_MODES }),
     scope: text("scope").notNull(),
     lastUsedAt: integer("last_used_at", { mode: "timestamp_ms" }),
     revokedAt: integer("revoked_at", { mode: "timestamp_ms" }),
@@ -209,6 +219,10 @@ export const whatsappLinks = sqliteTable(
     userEmail: text("user_email").notNull().default(""),
     /** Last four digits, shown as ••••1234. */
     phoneHint: text("phone_hint").notNull(),
+    /** Service ids the bot may call for this number. Empty means every service. */
+    scopes: text("scopes", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
+    /** How the bot's agent sees tools: `all` by name (the default), or `search` behind search_tools, read_tool and use_tool. */
+    toolMode: text("tool_mode", { enum: TOOL_MODES }),
     createdAt: createdAt(),
   },
   (table) => [index("whatsapp_links_user_idx").on(table.userId)],
@@ -226,6 +240,10 @@ export const telegramLinks = sqliteTable(
     userEmail: text("user_email").notNull().default(""),
     /** `@username` or first name at the time of linking. */
     displayName: text("display_name").notNull(),
+    /** Service ids the bot may call for this account. Empty means every service. */
+    scopes: text("scopes", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
+    /** How the bot's agent sees tools: `all` by name (the default), or `search` behind search_tools, read_tool and use_tool. */
+    toolMode: text("tool_mode", { enum: TOOL_MODES }),
     createdAt: createdAt(),
   },
   (table) => [index("telegram_links_user_idx").on(table.userId)],
@@ -243,6 +261,21 @@ export const introReads = sqliteTable(
   (table) => [primaryKey({ columns: [table.userId, table.cardId] })],
 );
 
+/**
+ * Which part of the catalogue a user's MCP endpoints expose, for every API key, OAuth app and the agent.
+ * No row, or empty lists, means everything. API key scopes narrow it further.
+ */
+export const mcpSettings = sqliteTable("mcp_settings", {
+  userId: text("user_id").primaryKey(),
+  /** Region ids to expose. Empty means every region. */
+  regions: text("regions", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
+  /** Service ids to expose. Empty means every service. */
+  services: text("services", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
+  /** Tool names hidden from otherwise exposed services. */
+  hiddenTools: text("hidden_tools", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
+  updatedAt: integer("updated_at", { mode: "timestamp_ms" }).notNull().$defaultFn(() => new Date()),
+});
+
 export type ApiKey = typeof apiKeys.$inferSelect;
 export type OAuthClient = typeof oauthClients.$inferSelect;
 export type OAuthGrant = typeof oauthGrants.$inferSelect;
@@ -252,3 +285,4 @@ export type DatasetStatusRow = typeof datasetStatus.$inferSelect;
 export type Chat = typeof chats.$inferSelect;
 export type WhatsAppLink = typeof whatsappLinks.$inferSelect;
 export type TelegramLink = typeof telegramLinks.$inferSelect;
+export type McpSettings = typeof mcpSettings.$inferSelect;

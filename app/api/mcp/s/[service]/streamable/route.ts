@@ -3,7 +3,7 @@ import { createServiceRoute } from "@/lib/mcp/handler";
 
 export const maxDuration = 60;
 
-/** One service per endpoint, for a smaller tool list: `/api/mcp/s/<service>/streamable`. */
+/** One service per endpoint, for a smaller tool list: `/api/mcp/s/<service>/streamable`. Its tools are always listed by name. */
 const handler = createServiceRoute((request) => {
   const segments = new URL(request.url).pathname.split("/");
   const service = serviceById.get(decodeURIComponent(segments[segments.indexOf("s") + 1] ?? ""));

@@ -6,7 +6,7 @@ import { POST } from "@/app/api/telegram/route";
 import { loadChat } from "@/lib/chat-store";
 import { commandOf, parseUpdate, sendPhoto, sendText, splitMessage, telegramConfig, toTelegramHtml, verifySecretToken, type IncomingMessage } from "@/lib/telegram/api";
 import { handleIncomingMessage, linkedMessage, telegramChatId, type BotDeps } from "@/lib/telegram/bot";
-import { createLinkToken, findLink, LINK_TOKEN_TTL_MS, linkAccount, listLinks, readLinkToken, signOutAccount, telegramHash, unlinkAccount } from "@/lib/telegram/link";
+import { createLinkToken, findLink, LINK_TOKEN_TTL_MS, linkAccount, listLinks, readLinkToken, signOutAccount, telegramHash, unlinkAccount, updateLinkScopes } from "@/lib/telegram/link";
 import type { Card } from "@/mcp/apps/card";
 
 vi.mock("next/headers", () => ({ headers: async () => new Headers({ host: "hub.test" }) }));
@@ -345,5 +345,18 @@ describe("/api/telegram", () => {
     expect((await post(edit)).status).toBe(401);
     expect((await post(edit, "wrong")).status).toBe(401);
     expect((await post(edit, "hook-secret")).status).toBe(200);
+  });
+});
+
+describe("link service limits", () => {
+  it("keeps them when the same account links again, and clears them for another account", async () => {
+    const claims = { telegramHash: telegramHash("scopes-1"), displayName: "@scopes", chatId: 1, expiresAt: Date.now() + 60_000 };
+    await linkAccount({ id: "scopes-alice", email: "" }, claims);
+    await updateLinkScopes("scopes-alice", claims.telegramHash, ["hk-bus"]);
+    await linkAccount({ id: "scopes-alice", email: "" }, claims);
+    expect((await findLink(claims.telegramHash))?.scopes).toEqual(["hk-bus"]);
+    await linkAccount({ id: "scopes-bob", email: "" }, claims);
+    expect(await findLink(claims.telegramHash)).toMatchObject({ userId: "scopes-bob", scopes: [] });
+    await expect(updateLinkScopes("scopes-alice", claims.telegramHash, [])).rejects.toThrow("NOT_FOUND");
   });
 });

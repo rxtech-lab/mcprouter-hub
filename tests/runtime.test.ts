@@ -123,6 +123,7 @@ describe("executeTool", () => {
     id: "example",
     title: "Example",
     aliases: [],
+    region: "hk",
     datasets: [],
     apis: [],
     baseUrl: "https://api.example.test",

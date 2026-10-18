@@ -1,4 +1,5 @@
 import { z } from "zod";
+import type { ToolMode } from "@/db/schema";
 
 /**
  * `AGENT_MCP_SERVERS` lists the MCP servers the agent can use, as JSON:
@@ -40,9 +41,9 @@ export function parseMcpServers(raw: string | undefined): McpServerConfig[] {
 /** Resolve "self" to this deployment's endpoint and attach the internal credentials. */
 export function resolveServer(
   server: McpServerConfig,
-  context: { origin: string; userId: string; internalKey: string | undefined; channel?: AgentChannel },
+  context: { origin: string; userId: string; internalKey: string | undefined; channel?: AgentChannel; scopes?: readonly string[]; toolMode?: ToolMode | null },
 ) {
-  if (server.url !== "self") return { name: server.name, url: server.url, headers: server.headers, self: false };
+  if (server.url !== "self") return { name: server.name, url: server.url, headers: server.headers, self: false, toolMode: null };
   if (!context.internalKey) throw new Error("MCPROUTER_INTERNAL_KEY must be set for the agent to use this app's MCP server");
   return {
     name: server.name,
@@ -52,7 +53,10 @@ export function resolveServer(
       Authorization: `Bearer ${context.internalKey}`,
       "x-mcprouter-user": context.userId,
       ...(context.channel ? { "x-mcprouter-channel": context.channel } : {}),
+      ...(context.scopes?.length ? { "x-mcprouter-scopes": context.scopes.join(",") } : {}),
+      ...(context.toolMode ? { "x-mcprouter-tools": context.toolMode } : {}),
     },
     self: true,
+    toolMode: context.toolMode ?? null,
   };
 }

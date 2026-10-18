@@ -1,4 +1,4 @@
-import type { ResponseTransformer } from "@/lib/mcp/types";
+import type { HandlerContext, ResponseTransformer, ToolHandler } from "@/lib/mcp/types";
 
 /**
  * KMB and Citybus route-stop feeds only carry stop ids. These transformers
@@ -50,4 +50,53 @@ export const citybusRouteStopNames: ResponseTransformer = async (body, _input, c
     }),
   );
   return { ...(body as object), data: list.map((item, index) => withStop(item, stops[index])) };
+};
+
+/** NLB spells its languages `_e`, `_c` and `_s`; rename them so search, cards and the app read `_en`, `_tc` and `_sc` like the other operators. */
+export const nlbNames: ResponseTransformer = (body) => {
+  if (!body || typeof body !== "object") return body;
+  const rename = (item: unknown) =>
+    item && typeof item === "object"
+      ? Object.fromEntries(Object.entries(item).map(([key, value]) => [key.replace(/_([ecs])$/, (_, code: string) => ({ e: "_en", c: "_tc", s: "_sc" })[code]!), value]))
+      : item;
+  return Object.fromEntries(Object.entries(body).map(([key, value]) => [key, Array.isArray(value) ? value.map(rename) : value]));
+};
+
+// Hong Kong Tramways publishes routes and stops as one CSV per language, with the same rows in the same order
+// and the column headers translated. Read the columns by position and join the three files row by row.
+
+const TRAM_DATA = "https://static.data.gov.hk/tramways/datasets";
+const TRAM_LANGS = ["en", "tc", "sc"] as const;
+
+async function tramCsv(file: string, context: HandlerContext): Promise<string[][][]> {
+  return Promise.all(
+    TRAM_LANGS.map(async (lang) => {
+      const rows = (await context.fetchUpstream(`${TRAM_DATA}/${file}_${lang}.csv`, { format: "csv", cacheTtl: STOP_TTL })) as Record<string, string>[];
+      return rows.map((row) => Object.values(row).map((value) => String(value ?? "").trim()));
+    }),
+  );
+}
+
+export const tramRoutes: ToolHandler = async (_input, context) => {
+  const [en, tc, sc] = await tramCsv("main_routes/tramways_main_routes", context);
+  return en.map(([route, orig, dest], index) => ({
+    route,
+    orig_en: orig,
+    orig_tc: tc[index]?.[1],
+    orig_sc: sc[index]?.[1],
+    dest_en: dest,
+    dest_tc: tc[index]?.[2],
+    dest_sc: sc[index]?.[2],
+  }));
+};
+
+export const tramStops: ToolHandler = async (_input, context) => {
+  const [en, tc, sc] = await tramCsv("tram_stops/summary_tram_stops", context);
+  return en.map(([direction, stop, name], index) => ({
+    direction: direction.toLowerCase(),
+    stop,
+    name_en: name,
+    name_tc: tc[index]?.[2],
+    name_sc: sc[index]?.[2],
+  }));
 };

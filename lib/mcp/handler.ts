@@ -1,13 +1,16 @@
 import type { AuthInfo } from "@modelcontextprotocol/server";
 import { createMcpHandler, withMcpAuth } from "mcp-handler";
-import type { CallChannel } from "@/db/schema";
-import { findUsableApiKey, GUEST_USER_PREFIX, INTERNAL_CHANNEL_HEADER, INTERNAL_USER_HEADER, matchesInternalKey } from "@/lib/api-keys";
+import { TOOL_MODES, type CallChannel } from "@/db/schema";
+import { findUsableApiKey, GUEST_USER_PREFIX, INTERNAL_CHANNEL_HEADER, INTERNAL_SCOPES_HEADER, INTERNAL_TOOLS_HEADER, INTERNAL_USER_HEADER, matchesInternalKey } from "@/lib/api-keys";
 import { ACCESS_TOKEN_PREFIX, authenticateAccessToken, OAUTH_SCOPE, oauthOrigin } from "@/lib/mcp/oauth";
 import { MCP_APP_EXTENSION, MCP_APP_MIME_TYPE } from "@/lib/mcp/apps";
+import { exposedServices, getExposure } from "@/lib/mcp/exposure";
+import { toolModeFrom, type ToolMode } from "@/lib/mcp/meta-tools";
 import { registerServices } from "@/lib/mcp/register";
 import type { CallerContext, ServiceDefinition } from "@/lib/mcp/types";
 
-type CallerExtra = { userId: string; apiKeyId: string | null; scopes: string[]; guest?: boolean; channel: CallChannel; oauthClientId?: string | null };
+/** `toolMode` is the connection's choice of how tools are listed; null leaves it to the endpoint. */
+type CallerExtra = { userId: string; apiKeyId: string | null; scopes: string[]; toolMode: ToolMode | null; guest?: boolean; channel: CallChannel; oauthClientId?: string | null };
 
 const AGENT_CHANNELS = new Set<CallChannel>(["web", "telegram", "whatsapp"]);
 
@@ -32,7 +35,11 @@ export async function verifyMcpToken(request: Request, bearerToken?: string): Pr
     if (!userId) return undefined;
     // Only the internal key can claim to be a guest, so a guest id can't be used to dodge billing.
     const guest = userId.startsWith(GUEST_USER_PREFIX);
-    const extra: CallerExtra = { userId, apiKeyId: null, scopes: [], guest, channel: agentChannel(request, guest) };
+    // The bots send the services their link may call; only the internal key can claim them.
+    const scopes = request.headers.get(INTERNAL_SCOPES_HEADER)?.split(",").map((id) => id.trim()).filter(Boolean) ?? [];
+    const claimedMode = request.headers.get(INTERNAL_TOOLS_HEADER)?.trim();
+    const toolMode = TOOL_MODES.find((mode) => mode === claimedMode) ?? null;
+    const extra: CallerExtra = { userId, apiKeyId: null, scopes, toolMode, guest, channel: agentChannel(request, guest) };
     return { token, clientId: "mcprouter-agent", scopes: [], extra };
   }
 
@@ -41,15 +48,25 @@ export async function verifyMcpToken(request: Request, bearerToken?: string): Pr
     if (bearerToken !== token) return undefined;
     const grant = await authenticateAccessToken(token, new URL(request.url).pathname);
     if (!grant) return undefined;
-    const scopes = grant.service ? [grant.service] : [];
-    const extra: CallerExtra = { userId: grant.userId, apiKeyId: null, scopes, channel: "oauth", oauthClientId: grant.clientId };
+    const scopes = grant.service ? [grant.service] : grant.scopes;
+    const extra: CallerExtra = { userId: grant.userId, apiKeyId: null, scopes, toolMode: grant.toolMode, channel: "oauth", oauthClientId: grant.clientId };
     return { token, clientId: grant.clientId, scopes: [OAUTH_SCOPE], expiresAt: Math.floor(grant.expiresAt.getTime() / 1000), extra };
   }
 
   const key = await findUsableApiKey(token);
   if (!key) return undefined;
-  const extra: CallerExtra = { userId: key.userId, apiKeyId: key.id, scopes: key.scopes, channel: "key" };
+  const extra: CallerExtra = { userId: key.userId, apiKeyId: key.id, scopes: key.scopes, toolMode: key.toolMode, channel: "key" };
   return { token, clientId: key.id, scopes: key.scopes, extra };
+}
+
+/**
+ * How to list tools: the connection's own choice (set in the dashboard) first, then `?tools=all|search`
+ * on endpoints that take it, then the endpoint's default.
+ */
+function toolModeFor(request: Request, defaultToolMode: ToolMode | undefined): ToolMode {
+  const chosen = (request.auth?.extra as CallerExtra | undefined)?.toolMode;
+  if (chosen) return chosen;
+  return defaultToolMode ? toolModeFrom(request, defaultToolMode) : "all";
 }
 
 function callerFrom(request: Request): CallerContext | null {
@@ -68,18 +85,27 @@ function callerFrom(request: Request): CallerContext | null {
 /**
  * Builds the route handler. The MCP server is created per request (the
  * transport is stateless) so the tool list can be cut down to what the
- * caller's key is scoped to.
+ * user exposes in settings and the caller's key is scoped to.
+ *
+ * With `defaultToolMode`, the endpoint takes `?tools=all|search` and falls back
+ * to that mode; without it, every tool is listed under its own name. Either way,
+ * a key, app or bot link with its own tool mode gets that mode.
  */
-export function createServiceRoute(selectServices: (request: Request) => readonly ServiceDefinition[] | null) {
+export function createServiceRoute(selectServices: (request: Request) => readonly ServiceDefinition[] | null, options: { defaultToolMode?: ToolMode } = {}) {
   const handler = async (request: Request) => {
     const caller = callerFrom(request);
     if (!caller) return Response.json({ error: "unauthorized" }, { status: 401 });
-    const services = selectServices(request);
-    if (!services) return Response.json({ error: "unknown_service" }, { status: 404 });
-    const mcp = createMcpHandler((server) => registerServices(server, services, caller), {
+    const requested = selectServices(request);
+    if (!requested) return Response.json({ error: "unknown_service" }, { status: 404 });
+    // The user's settings choose which regions, services and tools are exposed. Guests have no settings.
+    const services = caller.guest ? requested : exposedServices(requested, await getExposure(caller.userId));
+    if (requested.length === 1 && services.length === 0) return Response.json({ error: "service_not_exposed" }, { status: 403 });
+    const mode = toolModeFor(request, options.defaultToolMode);
+    const mcp = createMcpHandler((server) => registerServices(server, services, caller, mode), {
       serverInfo: { name: "mcprouter", version: "1.0.0" },
       // Tool results can render as MCP Apps; hosts without the extension still get JSON text.
-      capabilities: { extensions: { [MCP_APP_EXTENSION]: { mimeTypes: [MCP_APP_MIME_TYPE] } } },
+      // Declared up front so a caller allowed no services gets an empty tool list rather than "Method not found".
+      capabilities: { tools: {}, extensions: { [MCP_APP_EXTENSION]: { mimeTypes: [MCP_APP_MIME_TYPE] } } },
       verboseLogs: false,
     });
     return mcp(request);

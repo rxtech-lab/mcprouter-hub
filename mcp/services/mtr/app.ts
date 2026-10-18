@@ -1,4 +1,4 @@
-// MTR MCP App: next-train boards in line colours, Light Rail platforms and MTR Bus stops.
+// MTR MCP App: next-train boards in line colours and Light Rail platforms.
 import { app, fmt, h, mount, setAccent, ui, type Content, type Row, type View } from "../../apps/runtime";
 import { LINES, station } from "./stations";
 
@@ -72,43 +72,14 @@ function lightRail(view: View) {
   ];
 }
 
-function bus(view: View) {
-  const body: Row = view.data ?? {};
-  const stops: Row[] = body.busStop ?? [];
-  const route = body.routeName ?? view.input.routeName;
-  app.every(60_000);
-  const colour = String(body.routeColour ?? "").replace(/[^0-9a-f]/gi, "").slice(0, 6);
-  if (colour.length === 6) setAccent(`#${colour}`);
-  return [
-    ui.header({ badge: route, title: `MTR Bus ${route}`, subtitle: body.routeStatusRemarkTitle || null, actions: [ui.refreshButton()] }),
-    body.routeStatusRemarkContent ? ui.notice(body.routeStatusRemarkContent, "warning") : null,
-    stops.length
-      ? ui.more(
-          stops.map((stop) => {
-            const buses: Row[] = (stop.bus ?? []).slice(0, 3);
-            return ui.row({
-              title: h("span", { class: "mono" }, stop.busStopId),
-              subtitle: stop.isSuspended === "1" ? "Suspended" : stop.busStopRemark,
-              trailing: buses.length
-                ? h("span", { class: "etas" }, buses.map((item, index) => h("span", { class: `eta${index === 0 ? " eta-next" : ""}` }, item.departureTimeText || item.arrivalTimeText || "—")))
-                : h("span", { class: "muted" }, "No buses"),
-            });
-          }),
-          8,
-          "stops",
-        )
-      : ui.empty("No stops reported for this route."),
-  ];
-}
-
-const views: Record<string, (view: View) => Content> = { mtr_next_train: nextTrain, mtr_light_rail_schedule: lightRail, mtr_bus_schedule: bus };
+const views: Record<string, (view: View) => Content> = { mtr_next_train: nextTrain, mtr_light_rail_schedule: lightRail };
 
 mount({
   accent: "#ac2e44",
   render(view) {
     if (view.status === "loading") {
       const line = LINES[String(view.input.line ?? "").toUpperCase()];
-      const title = view.input.sta ? station(String(view.input.sta).toUpperCase()) : view.input.routeName || "MTR";
+      const title = view.input.sta ? station(String(view.input.sta).toUpperCase()) : "MTR";
       return [ui.header({ badge: view.input.line || "MTR", title, subtitle: line ? line.name : "Checking MTR…" }), ui.skeleton(3)];
     }
     const draw = view.tool ? views[view.tool] : undefined;

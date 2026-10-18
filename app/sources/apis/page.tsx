@@ -5,10 +5,23 @@ import { Badge } from "@/components/m3/chip";
 import { cn } from "@/components/m3/cn";
 import { ButtonLink } from "@/components/m3/button";
 import { EmptyState } from "@/components/m3/page-header";
+import { Pagination } from "@/components/m3/pagination";
 import { LinearProgress } from "@/components/m3/progress";
 import { SearchBar } from "@/components/m3/search-bar";
 import manifest from "@/generated/manifest.json";
-import { API_CATEGORIES, API_CATEGORY_LABELS, API_STATUSES, API_STATUS_LABELS, apiTracker, filterApis, findApi, type ApiEntry } from "@/lib/apis";
+import {
+  API_CATEGORIES,
+  API_CATEGORY_LABELS,
+  API_KIND_LABELS,
+  API_KINDS,
+  API_STATUSES,
+  API_STATUS_LABELS,
+  apiTracker,
+  APIS_PAGE_SIZE,
+  filterApis,
+  findApi,
+  type ApiEntry,
+} from "@/lib/apis";
 import { getT } from "@/lib/i18n/server";
 import type { Translator } from "@/lib/i18n/translate";
 import { listHref } from "../params";
@@ -27,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const PATH = "/sources/apis";
 
 function href(params: ApiParams) {
-  return listHref(PATH, { q: params.q, status: params.status, category: params.category, api: params.api });
+  return listHref(PATH, { q: params.q, status: params.status, category: params.category, kind: params.kind, page: params.page, api: params.api });
 }
 
 function StatusBadge({ api, t }: { api: ApiEntry; t: Translator }) {
@@ -56,11 +69,16 @@ function FilterLink({ href, selected, children }: { href: string; selected: bool
 
 export default async function ApisPage({ searchParams }: PageProps<"/sources/apis">) {
   const params = parseApiParams(await searchParams);
-  const rows = filterApis(apiTracker.apis, { query: params.q, status: params.status, category: params.category });
+  const matches = filterApis(apiTracker.apis, { query: params.q, status: params.status, category: params.category, kind: params.kind });
+  const pageCount = Math.max(1, Math.ceil(matches.length / APIS_PAGE_SIZE));
+  const page = Math.min(params.page, pageCount);
+  const rows = matches.slice((page - 1) * APIS_PAGE_SIZE, page * APIS_PAGE_SIZE);
   const selected = findApi(params.api);
   const { counts } = apiTracker;
   const total = apiTracker.apis.length;
-  const list = { ...params, api: undefined };
+  // Changing a filter starts again from page 1; opening a dialog keeps the page.
+  const list = { ...params, page, api: undefined };
+  const filters = { ...list, page: 1 };
   const t = await getT();
 
   return (
@@ -88,21 +106,30 @@ export default async function ApisPage({ searchParams }: PageProps<"/sources/api
         <SearchBar action={PATH} query={params.q} label={t("Search APIs")} placeholder={t("Search by name, id, provider or dataset")}>
           {params.status ? <input type="hidden" name="status" value={params.status} /> : null}
           {params.category ? <input type="hidden" name="category" value={params.category} /> : null}
+          {params.kind ? <input type="hidden" name="kind" value={params.kind} /> : null}
         </SearchBar>
       </div>
       <div className="mt-3 flex flex-col gap-2">
         <div className="flex flex-wrap gap-2" role="group" aria-label={t("Status")}>
-          <FilterLink href={href({ ...list, status: undefined })} selected={!params.status}>{t("All · {total}", { total })}</FilterLink>
+          <FilterLink href={href({ ...filters, status: undefined })} selected={!params.status}>{t("All · {total}", { total })}</FilterLink>
           {(Object.keys(API_STATUSES) as Array<keyof typeof API_STATUSES>).map((status) => (
-            <FilterLink key={status} href={href({ ...list, status })} selected={params.status === status}>
+            <FilterLink key={status} href={href({ ...filters, status })} selected={params.status === status}>
               {t(API_STATUS_LABELS[status])} · {counts[status]}
             </FilterLink>
           ))}
         </div>
+        <div className="flex flex-wrap gap-2" role="group" aria-label={t("Type")}>
+          <FilterLink href={href({ ...filters, kind: undefined })} selected={!params.kind}>{t("All types")}</FilterLink>
+          {(Object.keys(API_KINDS) as Array<keyof typeof API_KINDS>).map((kind) => (
+            <FilterLink key={kind} href={href({ ...filters, kind })} selected={params.kind === kind}>
+              {t(API_KIND_LABELS[kind])}
+            </FilterLink>
+          ))}
+        </div>
         <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 md:mx-0 md:flex-wrap md:px-0" role="group" aria-label={t("Category")}>
-          <FilterLink href={href({ ...list, category: undefined })} selected={!params.category}>{t("All categories")}</FilterLink>
+          <FilterLink href={href({ ...filters, category: undefined })} selected={!params.category}>{t("All categories")}</FilterLink>
           {(Object.keys(API_CATEGORIES) as Array<keyof typeof API_CATEGORIES>).map((category) => (
-            <FilterLink key={category} href={href({ ...list, category })} selected={params.category === category}>
+            <FilterLink key={category} href={href({ ...filters, category })} selected={params.category === category}>
               {t(API_CATEGORY_LABELS[category])}
             </FilterLink>
           ))}
@@ -114,27 +141,30 @@ export default async function ApisPage({ searchParams }: PageProps<"/sources/api
           <EmptyState title={params.q ? t("No APIs match “{query}”", { query: params.q }) : t("No APIs match these filters")}>{t("Try another search, or clear the filters.")}</EmptyState>
         </div>
       ) : (
-        <ul className="stagger mt-6 grid gap-3 md:grid-cols-2" data-testid="api-list">
-          {rows.map((api) => (
-            <li key={api.id}>
-              <Link
-                href={href({ ...list, api: api.id })}
-                scroll={false}
-                className="state-layer flex h-full flex-col gap-2 rounded-lg border border-outline-variant p-4 text-on-surface"
-              >
-                <span className="flex items-center justify-between gap-2">
-                  <code className="rounded-xs bg-surface-container-high px-2 py-0.5 font-mono text-[13px] text-on-surface-variant">{api.id}</code>
-                  <StatusBadge api={api} t={t} />
-                </span>
-                <span className="type-title-medium">{api.title}</span>
-                <span className="type-body-medium text-on-surface-variant">{api.description}</span>
-                <span className="mt-auto type-body-small text-on-surface-variant">
-                  {api.provider} · {t(API_CATEGORY_LABELS[api.category])}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <>
+          <ul className="stagger mt-6 grid gap-3 md:grid-cols-2" data-testid="api-list">
+            {rows.map((api) => (
+              <li key={api.id}>
+                <Link
+                  href={href({ ...list, api: api.id })}
+                  scroll={false}
+                  className="state-layer flex h-full flex-col gap-2 rounded-lg border border-outline-variant p-4 text-on-surface"
+                >
+                  <span className="flex items-center justify-between gap-2">
+                    <code className="rounded-xs bg-surface-container-high px-2 py-0.5 font-mono text-[13px] text-on-surface-variant">{api.id}</code>
+                    <StatusBadge api={api} t={t} />
+                  </span>
+                  <span className="type-title-medium">{api.title}</span>
+                  <span className="line-clamp-3 type-body-medium text-on-surface-variant">{api.description}</span>
+                  <span className="mt-auto type-body-small text-on-surface-variant">
+                    {api.provider} · {t(API_CATEGORY_LABELS[api.category])} · {t(API_KIND_LABELS[api.kind])}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          {pageCount > 1 ? <Pagination page={page} pageCount={pageCount} total={matches.length} noun={t.plural("API", "APIs", matches.length)} href={(next) => href({ ...list, page: next })} /> : null}
+        </>
       )}
 
       {selected ? <ApiDetails key={selected.id} api={selected} closeHref={href(list)} t={t} /> : null}
@@ -160,6 +190,7 @@ function ApiDetails({ api, closeHref, t }: { api: ApiEntry; closeHref: string; t
           <code className="rounded-xs bg-surface-container-highest px-2 py-0.5 font-mono text-[13px]">{api.id}</code>
           <StatusBadge api={api} t={t} />
           <Badge>{t(API_CATEGORY_LABELS[api.category])}</Badge>
+          <Badge>{t(API_KIND_LABELS[api.kind])}</Badge>
         </div>
         <dl className="grid gap-1">
           <dt className="type-label-large text-on-surface-variant">{t("Provider")}</dt>

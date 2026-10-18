@@ -28,7 +28,7 @@ export function checkKeyUsable(key: Pick<ApiKey, "revokedAt" | "expiresAt">, now
   return null;
 }
 
-/** Whether a key scoped to `scopes` may call `serviceId`. An empty scope list allows everything. */
+/** Whether a key scoped to `scopes` may call `serviceId`. An empty scope list allows everything; `[NO_SERVICES]` allows nothing. */
 export function keyAllowsService(scopes: readonly string[], serviceId: string) {
   return scopes.length === 0 || scopes.includes(serviceId);
 }
@@ -67,6 +67,10 @@ export function matchesInternalKey(candidate: string) {
 export const INTERNAL_USER_HEADER = "x-mcprouter-user";
 /** Which agent surface an internal call is for: `web`, `telegram` or `whatsapp`. */
 export const INTERNAL_CHANNEL_HEADER = "x-mcprouter-channel";
+/** Comma-separated service ids a bot link may call, sent with the internal key. Absent means every service. */
+export const INTERNAL_SCOPES_HEADER = "x-mcprouter-scopes";
+/** How a bot link lists tools (`all` or `search`), sent with the internal key. Absent means the endpoint's default. */
+export const INTERNAL_TOOLS_HEADER = "x-mcprouter-tools";
 
 /** Internal-key callers whose user id starts with this are signed-out visitors of the free agent. */
 export const GUEST_USER_PREFIX = "guest:";

@@ -23,6 +23,9 @@ Always call a tool for live or factual data instead of guessing, and say when da
 Times are Hong Kong time (UTC+8). Reply in the user's language; use tc data for Traditional Chinese questions.
 Be concise: summarise tool results, don't dump raw JSON.`;
 
+/** Added when this app's server lists only its three search tools instead of every tool. */
+export const SEARCH_MODE_NOTE = `Here search_tools only finds tool names: call read_tool for a tool's arguments, then use_tool with its name and arguments to run it.`;
+
 /** Today's date in Hong Kong. Day-level, so the cached instructions only change once a day. */
 export function agentInstructions(now = new Date()) {
   const today = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Hong_Kong" }).format(now);
@@ -30,6 +33,23 @@ export function agentInstructions(now = new Date()) {
 }
 
 type ResolvedServer = ReturnType<typeof resolveServer>;
+
+/** Whether this app's server is in search mode, so it already hands the model search_tools, read_tool and use_tool. */
+const inSearchMode = (servers: ResolvedServer[]) => servers.some((server) => server.self && server.toolMode === "search");
+
+/** The instructions, with the channel's note and, in search mode, how to reach tools. */
+function instructionsFor(servers: ResolvedServer[], channelNote: string | undefined) {
+  return [agentInstructions(), inSearchMode(servers) ? SEARCH_MODE_NOTE : null, channelNote].filter(Boolean).join("\n");
+}
+
+/**
+ * The model's tools. In search mode the server's own search tools stand in for the agent's tool search,
+ * so nothing is deferred (tools from other servers are loaded as they are).
+ */
+function modelTools(servers: ResolvedServer[], tools: ToolSet, messages: UIMessage[], channelTools: ToolSet | undefined) {
+  const served = inSearchMode(servers) ? tools : withToolSearch(tools, usedToolNames(messages), process.env.AI_EMBEDDING_MODEL || undefined);
+  return stableTools({ ...served, ...channelTools });
+}
 
 /** Every tool a server lists, across pages. */
 async function listAllTools(client: MCPClient) {
@@ -85,12 +105,12 @@ export async function streamAgentReply(options: {
 }) {
   const { tools, closeAll } = await connectTools(options.servers);
   try {
-    const instructions = options.channelNote ? `${agentInstructions()}\n${options.channelNote}` : agentInstructions();
+    const instructions = instructionsFor(options.servers, options.channelNote);
     const result = streamText({
       model: options.model,
       instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages(options.messages)),
-      tools: stableTools({ ...withToolSearch(tools, usedToolNames(options.messages), process.env.AI_EMBEDDING_MODEL || undefined), ...options.channelTools }),
+      tools: modelTools(options.servers, tools, options.messages, options.channelTools),
       providerOptions: gatewayCaching,
       // Each tool step resends the conversation; keep the breakpoint on its newest message.
       prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
@@ -143,12 +163,12 @@ export async function generateAgentReply(options: {
 }) {
   const { tools, closeAll } = await connectTools(options.servers);
   try {
-    const instructions = options.channelNote ? `${agentInstructions()}\n${options.channelNote}` : agentInstructions();
+    const instructions = instructionsFor(options.servers, options.channelNote);
     const result = await generateText({
       model: options.model,
       instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages(options.messages)),
-      tools: stableTools({ ...withToolSearch(tools, usedToolNames(options.messages), process.env.AI_EMBEDDING_MODEL || undefined), ...options.channelTools }),
+      tools: modelTools(options.servers, tools, options.messages, options.channelTools),
       providerOptions: gatewayCaching,
       prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
       stopWhen: isStepCount(options.maxSteps ?? 10),

@@ -1,17 +1,22 @@
 id: hk-bus
-title: Buses & Minibuses
+title: Buses, Minibuses & Trams
 description: >-
-  KMB / Long Win, Citybus and green minibus routes, stops and real-time estimated arrival times, in one place.
-  Tools are prefixed by operator (kmb_, citybus_, gmb_). When the operator of a route is unknown, look it up with
-  kmb_routes and citybus_routes; green minibus routes are numbered per region and found with gmb_route.
+  KMB / Long Win, Citybus, New Lantao Bus, MTR Bus and green minibus routes, stops and real-time estimated arrival
+  times, plus Hong Kong Tramways routes and stops, in one place. Tools are prefixed by operator (kmb_, citybus_,
+  nlb_, mtr_bus_, gmb_, tram_). When the operator of a route is unknown, look it up with kmb_routes, citybus_routes
+  and nlb_routes; green minibus routes are numbered per region and found with gmb_route.
 # Former service ids, so API keys, OAuth grants and /api/mcp/s/<id> URLs created before the merge keep working.
 aliases: [kmb, citybus]
 # Entries in mcp/apis.yaml this service implements.
-apis: [API-0003, API-0004, API-0005]
+apis: [API-0003, API-0004, API-0005, API-0016, API-0018, API-0019]
 datasets:
   - hk-td-tis_21-etakmb
   - ctb-eta-transport-realtime-eta
   - hk-td-sm_7-real-time-arrival-data-of-gmb
+  - mtr-mtr_bus-mtr-bus-eta-data
+  - nlb-bus-nlb-bus-service-v2
+  - hktramways-hktramways-main-routes
+  - hktramways-hktramways-tram-stops
 cacheTtl: 3600
 # Renders results in hosts that support MCP Apps; see app.ts. Each operator keeps its own colours.
 app: {}
@@ -141,6 +146,60 @@ tools:
       root: data
       pick: [route, dir, seq, dest_en, dest_tc, eta_seq, eta, rmk_en, rmk_tc, data_timestamp]
 
+  # New Lantao Bus (NLB) — https://rt.data.gov.hk/v2/transport/nlb
+  - name: nlb_routes
+    title: NLB routes
+    description: List New Lantao Bus (Lantau) routes. Each direction and variant of a route has its own routeId; use it with nlb_route_stops and nlb_eta.
+    baseUrl: &nlb https://rt.data.gov.hk/v2/transport/nlb
+    path: /route.php
+    query: { action: list }
+    cacheTtl: 86400
+    transform: { response: nlbNames }
+    input:
+      route: { type: string, in: local, transform: upper, description: "Route number to filter by, e.g. 1 or B2" }
+      search: { type: string, in: local, description: "Text to look for in the route name, e.g. Tai O or 大澳" }
+    response:
+      root: routes
+      filter: { routeNo: route }
+      search: { input: search, fields: [routeName_en, routeName_tc, routeName_sc] }
+      limit: 100
+  - name: nlb_route_stops
+    title: Stops on an NLB route
+    description: Ordered stops (stop id, names, coordinates and fares) of one New Lantao Bus route variant.
+    baseUrl: *nlb
+    path: /stop.php
+    query: { action: list }
+    cacheTtl: 86400
+    transform: { response: nlbNames }
+    input:
+      routeId: { type: string, required: true, description: "routeId from nlb_routes" }
+    response:
+      root: stops
+      limit: 150
+  - name: nlb_eta
+    title: NLB arrivals
+    description: Estimated arrival times of one New Lantao Bus route variant at one of its stops.
+    baseUrl: *nlb
+    path: /stop.php
+    query: { action: estimatedArrivals }
+    cacheTtl: 30
+    input:
+      routeId: { type: string, required: true, description: "routeId from nlb_routes" }
+      stopId: { type: string, required: true, description: "stopId from nlb_route_stops" }
+      language: { type: string, enum: [en, zh], default: en, description: "Response language" }
+
+  # MTR Bus — https://rt.data.gov.hk/v1/transport/mtr/bus
+  - name: mtr_bus_schedule
+    title: MTR Bus arrivals
+    description: Real-time arrival times for every stop of an MTR Bus route (feeder buses in Tuen Mun, Yuen Long and Tung Chung, e.g. K12, 506).
+    method: POST
+    baseUrl: https://rt.data.gov.hk/v1/transport/mtr
+    path: /bus/getSchedule
+    cacheTtl: 30
+    input:
+      routeName: { type: string, required: true, in: body, transform: upper, description: "MTR Bus route, e.g. K12" }
+      language: { type: string, enum: [en, zh], default: en, in: body, description: "Response language" }
+
   # Green minibus (GMB) — https://data.etagmb.gov.hk
   - name: gmb_routes
     title: Minibus routes in a region
@@ -218,3 +277,26 @@ tools:
       stopSeq: { type: integer, required: true, minimum: 1, description: "stop_seq of the stop on the route, from gmb_route_stops" }
     response:
       root: data
+
+  # Hong Kong Tramways — https://static.data.gov.hk/tramways (routes and stops only; no arrival times are published)
+  - name: tram_routes
+    title: Tram routes
+    description: Hong Kong Tramways main routes on Hong Kong Island, with their start and end.
+    handler: tramRoutes
+    cacheTtl: 86400
+    input:
+      search: { type: string, in: local, description: "Text in the start or end, e.g. Kennedy Town or 筲箕灣" }
+    response:
+      search: { input: search, fields: [orig_en, orig_tc, dest_en, dest_tc] }
+  - name: tram_stops
+    title: Tram stops
+    description: Hong Kong Tramways stops in running order for each direction, with stop codes (e.g. 02W, 37E) and names.
+    handler: tramStops
+    cacheTtl: 86400
+    input:
+      direction: { type: string, in: local, enum: [eastbound, westbound, northbound, southbound], description: "Only stops in this direction (north and southbound are the Happy Valley loop)" }
+      search: { type: string, in: local, description: "Text in the stop name, e.g. Causeway Bay or 銅鑼灣" }
+    response:
+      filter: { direction: direction }
+      search: { input: search, fields: [name_en, name_tc, name_sc] }
+      limit: 150

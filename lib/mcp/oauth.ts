@@ -3,7 +3,7 @@ import { and, count, eq, gt, isNotNull, isNull, lt, or } from "drizzle-orm";
 import { getPublicOrigin } from "mcp-handler";
 import { z } from "zod";
 import { db } from "@/db";
-import { oauthClients, oauthCodes, oauthGrants, oauthTokens, type OAuthClient, type OAuthGrant } from "@/db/schema";
+import { oauthClients, oauthCodes, oauthGrants, oauthTokens, type OAuthClient, type OAuthGrant, type ToolMode } from "@/db/schema";
 import { serviceById } from "@/generated/registry";
 import { shouldTouchLastUsed } from "@/lib/api-keys";
 
@@ -242,7 +242,8 @@ export function clientRedirect(redirectUri: string, values: Record<string, strin
 }
 
 /** Records the user's approval and returns a one-time authorization code. */
-export async function approveAuthorization(userId: string, request: AuthorizationRequest, now = new Date()) {
+/** `scopes` limits the client to some services; empty means every service. */
+export async function approveAuthorization(userId: string, request: AuthorizationRequest, scopes: string[] = [], now = new Date()) {
   const grantId = crypto.randomUUID();
   const code = secret();
   await db.insert(oauthGrants).values({
@@ -251,6 +252,8 @@ export async function approveAuthorization(userId: string, request: Authorizatio
     clientId: request.client.id,
     resource: request.resource.url,
     service: request.resource.service,
+    // A single-service endpoint is already limited to its service.
+    scopes: request.resource.service ? [] : scopes,
     scope: OAUTH_SCOPE,
     expiresAt: new Date(now.getTime() + GRANT_SECONDS * 1000),
     createdAt: now,
@@ -355,7 +358,8 @@ export async function revokeToken(token: string, clientId: string, now = new Dat
   if (row) await revokeGrant(row.grantId, now);
 }
 
-export type OAuthCaller = { userId: string; grantId: string; clientId: string; service: string | null; expiresAt: Date };
+/** `scopes` are the services the user let the client call; empty means every service. `toolMode` null means the endpoint's default. */
+export type OAuthCaller = { userId: string; grantId: string; clientId: string; service: string | null; scopes: string[]; toolMode: ToolMode | null; expiresAt: Date };
 
 /**
  * Resolves an access token for a request to `pathname`. A token for the
@@ -389,7 +393,7 @@ export async function authenticateAccessToken(token: string, pathname: string, n
       .where(eq(oauthGrants.id, row.grant.id))
       .catch((error) => console.error("[oauth] failed to update lastUsedAt", error));
   }
-  return { userId: row.grant.userId, grantId: row.grant.id, clientId: row.grant.clientId, service: row.grant.service, expiresAt: row.expiresAt };
+  return { userId: row.grant.userId, grantId: row.grant.id, clientId: row.grant.clientId, service: row.grant.service, scopes: row.grant.scopes, toolMode: row.grant.toolMode, expiresAt: row.expiresAt };
 }
 
 /** Drops expired codes and tokens, and grants that expired or were revoked (their tokens cascade). */

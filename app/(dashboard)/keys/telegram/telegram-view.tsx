@@ -1,22 +1,31 @@
 "use client";
 
-import { CircleCheck, Send, Unlink } from "lucide-react";
+import { CircleCheck, Wrench, Send, SlidersHorizontal, Unlink } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Button, ButtonLink } from "@/components/m3/button";
+import { ButtonLink } from "@/components/m3/button";
+import { ActionsMenu, ActionsMenuItem, ActionsMenuSeparator } from "@/components/actions-menu";
 import { Card } from "@/components/m3/card";
 import { ConfirmDialog } from "@/components/m3/dialog";
 import { EmptyState, PageHeader } from "@/components/m3/page-header";
+import { ServiceBadges } from "@/components/service-badges";
+import { ServicesDialog } from "@/components/services-dialog";
+import { ToolModeBadge, ToolModeDialog } from "@/components/tool-mode-dialog";
 import { useActionRunner } from "@/components/use-action-runner";
+import type { ToolMode } from "@/db/schema";
 import { formatDate } from "@/lib/format";
 import { useT } from "@/lib/i18n/client";
+import type { ServiceSelection } from "@/lib/service-selection";
 import { KeysTabs } from "../keys-tabs";
-import { unlinkTelegram } from "./actions";
+import { unlinkTelegram, updateTelegramServices, updateTelegramToolMode } from "./actions";
 
-export type LinkRow = { id: string; account: string; createdAt: string };
+export type LinkRow = { id: string; account: string; createdAt: string; scopes: ServiceSelection; toolMode: ToolMode | null };
 
-export function TelegramView({ links, botUsername, enabled, justLinked }: { links: LinkRow[]; botUsername: string | null; enabled: boolean; justLinked: boolean }) {
+export function TelegramView({ links, botUsername, enabled, justLinked, editing, editingTools }: { links: LinkRow[]; botUsername: string | null; enabled: boolean; justLinked: boolean; editing: LinkRow | null; editingTools: LinkRow | null }) {
   const [unlinking, setUnlinking] = useState<LinkRow | null>(null);
   const t = useT();
+  const router = useRouter();
+  const pathname = usePathname();
   const chat = botUsername ? `https://t.me/${botUsername}` : null;
   return (
     <>
@@ -62,16 +71,44 @@ export function TelegramView({ links, botUsername, enabled, justLinked }: { link
                 <div className="min-w-0 flex-1">
                   <h2 className="type-title-medium">{t("Telegram {account}", { account: link.account })}</h2>
                   <p className="type-body-small text-on-surface-variant">{t("Linked {date}. Tool calls count against your plan.", { date: formatDate(link.createdAt, t.locale) })}</p>
+                  <div className="mt-2 flex flex-wrap gap-1">
+                    <ServiceBadges value={link.scopes} />
+                    <ToolModeBadge value={link.toolMode} />
+                  </div>
                 </div>
-                <Button variant="text" icon={<Unlink size={18} />} onClick={() => setUnlinking(link)} aria-label={t("Unlink {name}", { name: link.account })}>
-                  {t("Unlink")}
-                </Button>
+                <ActionsMenu label={t("Actions for {name}", { name: link.account })}>
+                  <ActionsMenuItem icon={<SlidersHorizontal size={18} />} href={`${pathname}?services=${link.id}`}>{t("Change services")}</ActionsMenuItem>
+                  <ActionsMenuItem icon={<Wrench size={18} />} href={`${pathname}?toolMode=${link.id}`}>{t("Change tool mode")}</ActionsMenuItem>
+                  <ActionsMenuSeparator />
+                  <ActionsMenuItem icon={<Unlink size={18} />} onSelect={() => setUnlinking(link)} danger>{t("Unlink")}</ActionsMenuItem>
+                </ActionsMenu>
               </Card>
             </li>
           ))}
         </ul>
       )}
 
+      {editing ? (
+        <ServicesDialog
+          key={editing.id}
+          title={t("Change services")}
+          description={t("Choose which services the bot may call when {name} messages it.", { name: editing.account })}
+          legend={t("Services the bot may call")}
+          value={editing.scopes}
+          onSave={(services) => updateTelegramServices({ id: editing.id, services })}
+          // Dropping the query closes the dialog, so a reload doesn't reopen it.
+          onClose={() => router.replace(pathname, { scroll: false })}
+        />
+      ) : null}
+      {editingTools ? (
+        <ToolModeDialog
+          key={editingTools.id}
+          description={t("Choose how the bot sees tools when {name} messages it.", { name: editingTools.account })}
+          value={editingTools.toolMode}
+          onSave={(toolMode) => updateTelegramToolMode({ id: editingTools.id, toolMode })}
+          onClose={() => router.replace(pathname, { scroll: false })}
+        />
+      ) : null}
       {unlinking ? <UnlinkDialog link={unlinking} onClose={() => setUnlinking(null)} /> : null}
     </>
   );

@@ -404,10 +404,6 @@ msgstr "請為金鑰命名"
 msgid "Use 60 characters or fewer"
 msgstr "不可超過 60 個字元"
 
-#: app/(dashboard)/keys/actions.ts
-msgid "Unknown service"
-msgstr "不明服務"
-
 #: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Keys let MCP clients call mcprouter on your behalf. Clients that support OAuth can sign in instead. Each tool call counts against your plan."
 msgstr "金鑰讓 MCP 客戶端代表你調用 mcprouter。支援 OAuth 的客戶端可改為直接登入。每次工具調用均會計入你的計劃。"
@@ -432,10 +428,6 @@ msgstr "客戶端"
 msgid "Connected apps"
 msgstr "已連接的應用程式"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/services/services-view.tsx
-msgid "All services"
-msgstr "所有服務"
-
 #: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx
 msgid "Last used"
 msgstr "上次使用"
@@ -444,13 +436,33 @@ msgstr "上次使用"
 msgid "Connected"
 msgstr "已連接"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
-msgid "Disconnect {name}"
-msgstr "中斷連接 {name}"
+#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+msgid "Actions for {name}"
+msgstr "{name} 的操作"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+msgid "Change services"
+msgstr "更改服務"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx components/tool-mode-dialog.tsx
+msgid "Change tool mode"
+msgstr "更改工具模式"
 
 #: app/(dashboard)/keys/apps/apps-view.tsx
 msgid "Disconnect"
 msgstr "中斷連接"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx
+msgid "Choose which services “{name}” can call. It sees only their tools."
+msgstr "選擇「{name}」可調用的服務。它只會看到這些服務的工具。"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx app/oauth/authorize/services-field.tsx
+msgid "Services this app may call"
+msgstr "此應用程式可調用的服務"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx
+msgid "Choose how “{name}” sees tools. It picks this up the next time it lists tools."
+msgstr "選擇「{name}」如何看到工具。它下次列出工具時生效。"
 
 #: app/(dashboard)/keys/apps/apps-view.tsx
 msgid "Add {name}"
@@ -479,6 +491,26 @@ msgstr "登入"
 #: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/usage/clients/client-icon.tsx app/page.tsx
 msgid "API key"
 msgstr "API 金鑰"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/settings/settings-view.tsx
+msgid "Tools to expose"
+msgstr "要公開的工具"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx components/tool-mode-dialog.tsx
+msgid "Search tools"
+msgstr "搜尋工具"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx
+msgid "All tools"
+msgstr "所有工具"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx
+msgid "The client sees only search_tools, read_tool and use_tool, and finds the tools it needs, so its context stays small."
+msgstr "用戶端只會看到 search_tools、read_tool 和 use_tool，再自行找出所需工具，令上下文保持精簡。"
+
+#: app/(dashboard)/keys/apps/apps-view.tsx
+msgid "The client sees every tool by name. Some clients cap how many tools they load, so this suits clients without a limit."
+msgstr "用戶端會看到每個工具的名稱。部分用戶端會限制載入的工具數量，因此這適合沒有上限的用戶端。"
 
 #: app/(dashboard)/keys/apps/apps-view.tsx
 msgid "Disconnect this app?"
@@ -513,6 +545,10 @@ msgid "Create a key, then paste the ready-made config into Claude Code, Codex, G
 msgstr "建立金鑰後，將現成的設定貼上至 Claude Code、Codex、Gemini CLI、Cursor 或任何 MCP 客戶端。Claude、ChatGPT 和 Gemini 則透過 OAuth 登入，請參閱<link>設定客戶端</link>。"
 
 #: app/(dashboard)/keys/keys-view.tsx
+msgid "Choose how clients using “{name}” see tools. They pick this up the next time they list tools."
+msgstr "選擇使用「{name}」的用戶端如何看到工具。它們下次列出工具時生效。"
+
+#: app/(dashboard)/keys/keys-view.tsx
 msgid "Revoked"
 msgstr "已撤銷"
 
@@ -537,16 +573,8 @@ msgid "Never"
 msgstr "永不"
 
 #: app/(dashboard)/keys/keys-view.tsx
-msgid "Actions for {name}"
-msgstr "{name} 的操作"
-
-#: app/(dashboard)/keys/keys-view.tsx
 msgid "Rename"
 msgstr "重新命名"
-
-#: app/(dashboard)/keys/keys-view.tsx
-msgid "Change services"
-msgstr "更改服務"
 
 #: app/(dashboard)/keys/keys-view.tsx
 msgid "Revoke"
@@ -556,6 +584,10 @@ msgstr "撤銷"
 msgid "Services this key may call"
 msgstr "此金鑰可調用的服務"
 
+#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/services/services-view.tsx app/(dashboard)/settings/settings-view.tsx app/oauth/authorize/services-field.tsx components/service-badges.tsx components/services-dialog.tsx
+msgid "All services"
+msgstr "所有服務"
+
 #: app/(dashboard)/keys/keys-view.tsx lib/agent/dashboard-tools.ts
 msgid "Create API key"
 msgstr "建立 API 金鑰"
@@ -564,7 +596,7 @@ msgstr "建立 API 金鑰"
 msgid "The key is shown once, right after you create it."
 msgstr "金鑰只會在建立後顯示一次。"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/m3/dialog.tsx
+#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
 msgid "Cancel"
 msgstr "取消"
 
@@ -632,11 +664,11 @@ msgstr "Claude、ChatGPT 及其他以 OAuth 登入的客戶端無需金鑰。請
 msgid "Rename key"
 msgstr "重新命名金鑰"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/tracker/dataset-table.tsx
+#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
 msgid "Saving…"
 msgstr "正在儲存…"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/tracker/dataset-table.tsx
+#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
 msgid "Save"
 msgstr "儲存"
 
@@ -652,11 +684,11 @@ msgstr "金鑰已重新命名"
 msgid "Choose which services “{name}” can call. Clients see only these tools."
 msgstr "選擇「{name}」可調用的服務。客戶端只會看到這些工具。"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx components/services-dialog.tsx
 msgid "Saving services…"
 msgstr "正在儲存服務…"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx components/services-dialog.tsx
 msgid "Services updated"
 msgstr "服務已更新"
 
@@ -721,12 +753,20 @@ msgid "Linked {date}. Tool calls count against your plan."
 msgstr "於 {date} 連結。工具調用會計入你的計劃。"
 
 #: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
-msgid "Unlink {name}"
-msgstr "解除連結 {name}"
-
-#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Unlink"
 msgstr "解除連結"
+
+#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+msgid "Choose which services the bot may call when {name} messages it."
+msgstr "選擇{name}傳送訊息時，機械人可調用的服務。"
+
+#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+msgid "Services the bot may call"
+msgstr "機械人可調用的服務"
+
+#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+msgid "Choose how the bot sees tools when {name} messages it."
+msgstr "選擇 {name} 發訊息時機械人如何看到工具。"
 
 #: app/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Unlink this Telegram account?"
@@ -800,7 +840,7 @@ msgstr "服務"
 msgid "{services} services, {tools} tools. Use the combined endpoint for everything, or a service endpoint for a smaller tool list."
 msgstr "{services} 項服務，{tools} 個工具。使用綜合端點調用所有工具，或使用個別服務端點以取得較精簡的工具列表。"
 
-#: app/(dashboard)/services/page.tsx
+#: app/(dashboard)/services/page.tsx components/service-combobox.tsx
 msgid "Search services"
 msgstr "搜尋服務"
 
@@ -808,7 +848,7 @@ msgstr "搜尋服務"
 msgid "Search services, tools and datasets"
 msgstr "搜尋服務、工具和數據集"
 
-#: app/(dashboard)/services/page.tsx
+#: app/(dashboard)/services/page.tsx components/service-combobox.tsx
 msgid "No services match “{query}”"
 msgstr "沒有與「{query}」相符的服務"
 
@@ -829,7 +869,7 @@ msgstr "複製端點"
 msgid "Endpoint copied"
 msgstr "端點已複製"
 
-#: app/(dashboard)/services/services-view.tsx app/page.tsx app/sources/apis/page.tsx app/sources/page.tsx
+#: app/(dashboard)/services/services-view.tsx app/page.tsx app/sources/apis/page.tsx app/sources/page.tsx components/service-combobox.tsx
 msgid "{count} tool"
 msgid_plural "{count} tools"
 msgstr[0] "{count} 個工具"
@@ -865,6 +905,171 @@ msgstr "輸入 Schema"
 #: app/(dashboard)/services/services-view.tsx
 msgid "Datasets:"
 msgstr "數據集："
+
+#: app/(dashboard)/settings/actions.ts
+msgid "Unknown region"
+msgstr "未知地區"
+
+#: app/(dashboard)/settings/actions.ts
+msgid "Unknown tool"
+msgstr "未知工具"
+
+#: app/(dashboard)/settings/actions.ts app/(dashboard)/settings/settings-view.tsx
+msgid "Keep at least one tool, or hide the whole service instead"
+msgstr "請保留至少一個工具，或改為隱藏整個服務"
+
+#: app/(dashboard)/settings/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts
+msgid "Settings"
+msgstr "設定"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Exposed"
+msgstr "已開放"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Region hidden"
+msgstr "地區已隱藏"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Hidden"
+msgstr "已隱藏"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "All tools hidden"
+msgstr "所有工具已隱藏"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Choose which regions, services and tools your MCP endpoints expose. This applies to every API key, OAuth app and the agent; a key limited to some services narrows it further."
+msgstr "選擇你的 MCP 端點開放哪些地區、服務和工具。設定適用於所有 API 密鑰、OAuth 應用程式和助理；只限部分服務的密鑰會再進一步收窄範圍。"
+
+#: app/(dashboard)/settings/page.tsx app/(dashboard)/settings/settings-view.tsx
+msgid "Expose everything"
+msgstr "全部開放"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Regions"
+msgstr "地區"
+
+#: app/(dashboard)/settings/page.tsx app/(dashboard)/tracker/datasets/page.tsx
+msgid "All"
+msgstr "全部"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Services exposed"
+msgstr "已開放服務"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Tools exposed"
+msgstr "已開放工具"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Only services from {regions} are exposed."
+msgstr "只開放來自{regions}的服務。"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Services from every region are exposed, including regions added later: {regions}."
+msgstr "開放所有地區的服務，包括日後新增的地區：{regions}。"
+
+#: app/(dashboard)/settings/page.tsx app/(dashboard)/settings/settings-view.tsx
+msgid "Change regions"
+msgstr "更改地區"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Services and tools"
+msgstr "服務和工具"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "No services are exposed, so MCP clients and the agent have no tools. Choose services to expose some."
+msgstr "沒有開放任何服務，所以 MCP 客戶端和 AI 助理都沒有可用的工具。請選擇要開放的服務。"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Only the services you picked are exposed. New services stay hidden until you add them."
+msgstr "只開放你選擇的服務。新服務會保持隱藏，直至你加入。"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "Every service is exposed, including new ones. Pick some to expose only those."
+msgstr "開放所有服務，包括新服務。選擇部分服務即只開放這些服務。"
+
+#: app/(dashboard)/settings/page.tsx app/(dashboard)/settings/settings-view.tsx
+msgid "Choose services"
+msgstr "選擇服務"
+
+#: app/(dashboard)/settings/page.tsx
+msgid "{visible} of {total} tools"
+msgstr "{visible} / {total} 個工具"
+
+#: app/(dashboard)/settings/page.tsx app/(dashboard)/settings/settings-view.tsx
+msgid "Choose tools"
+msgstr "選擇工具"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Saving regions…"
+msgstr "正在儲存地區…"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Regions updated"
+msgstr "已更新地區"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Expose only services whose data comes from these regions. Choose All to include regions added later."
+msgstr "只開放資料來自這些地區的服務。選擇「所有地區」即包括日後新增的地區。"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Regions to expose"
+msgstr "要開放的地區"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "All regions"
+msgstr "所有地區"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "MCP clients and the agent see only these services. Choose All to expose every service, including new ones."
+msgstr "MCP 用戶端和助理只會看到這些服務。選擇「所有服務」即開放所有服務，包括新服務。"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Services to expose"
+msgstr "要開放的服務"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "{count} of these is outside the regions you expose, so it stays hidden."
+msgid_plural "{count} of these are outside the regions you expose, so they stay hidden."
+msgstr[0] "其中 {count} 個不在你開放的地區內，因此會保持隱藏。"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Saving tools…"
+msgstr "正在儲存工具…"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Tools updated"
+msgstr "已更新工具"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Tools of {service} that MCP clients and the agent can call."
+msgstr "MCP 用戶端和助理可以呼叫的{service}工具。"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Unselect all"
+msgstr "取消全選"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Select all"
+msgstr "全選"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Expose everything?"
+msgstr "要全部開放嗎？"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Every region, service and tool will be exposed again, including ones added later."
+msgstr "所有地區、服務和工具都會再次開放，包括日後新增的項目。"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Resetting…"
+msgstr "正在重設…"
+
+#: app/(dashboard)/settings/settings-view.tsx
+msgid "Everything is exposed"
+msgstr "已全部開放"
 
 #: app/(dashboard)/tracker/actions.ts
 msgid "Say why this dataset is skipped"
@@ -1046,10 +1251,6 @@ msgstr "按標題或 ID 搜尋"
 #: app/(dashboard)/tracker/datasets/page.tsx
 msgid "Filter by status"
 msgstr "按狀態篩選"
-
-#: app/(dashboard)/tracker/datasets/page.tsx
-msgid "All"
-msgstr "全部"
 
 #: app/(dashboard)/tracker/datasets/page.tsx
 msgid "Remove {filter}"
@@ -1437,8 +1638,8 @@ msgid "Call the {service} tools as you. Each tool call counts against your plan,
 msgstr "以你的身分調用 {service} 工具。每次工具調用都會計入你的計劃，與使用 API 金鑰的調用相同。"
 
 #: app/oauth/authorize/page.tsx
-msgid "Call every mcprouter service as you. Each tool call counts against your plan, like calls made with an API key."
-msgstr "以你的身分調用所有 mcprouter 服務。每次工具調用都會計入你的計劃，與使用 API 金鑰的調用相同。"
+msgid "Call mcprouter services as you, all of them or only the ones you pick below. Each tool call counts against your plan, like calls made with an API key."
+msgstr "以你的身分調用 mcprouter 服務，可以是全部，或只限你在下面選擇的服務。每次工具調用都會計入你的方案，與使用 API 金鑰的調用相同。"
 
 #: app/oauth/authorize/page.tsx
 msgid "It can't see or change your keys, chats or billing. Disconnect it any time under API keys → Connected apps."
@@ -1447,6 +1648,10 @@ msgstr "它無法查看或更改你的金鑰、對話或帳單。你可隨時在
 #: app/oauth/authorize/page.tsx
 msgid "You'll be sent back to {target}. Only allow apps you trust."
 msgstr "你將被帶回 {target}。請只允許你信任的應用程式。"
+
+#: app/oauth/authorize/services-field.tsx
+msgid "You can change this later under API keys → Connected apps."
+msgstr "你之後可以在「API 金鑰 → 已連接的應用程式」中更改。"
 
 #: app/page.tsx
 msgid "Telegram & WhatsApp"
@@ -1677,6 +1882,14 @@ msgid "All · {total}"
 msgstr "全部 · {total}"
 
 #: app/sources/apis/page.tsx
+msgid "Type"
+msgstr "類型"
+
+#: app/sources/apis/page.tsx
+msgid "All types"
+msgstr "所有類型"
+
+#: app/sources/apis/page.tsx
 msgid "Category"
 msgstr "類別"
 
@@ -1695,6 +1908,11 @@ msgstr "沒有符合這些篩選條件的 API"
 #: app/sources/apis/page.tsx
 msgid "Try another search, or clear the filters."
 msgstr "請嘗試其他搜尋字詞，或清除篩選條件。"
+
+#: app/sources/apis/page.tsx
+msgid "API"
+msgid_plural "APIs"
+msgstr[0] "個 API"
 
 #: app/sources/apis/page.tsx
 msgid "API docs"
@@ -2131,6 +2349,30 @@ msgstr "關閉"
 msgid "Page sections"
 msgstr "頁面章節"
 
+#: components/service-badges.tsx
+msgid "No services"
+msgstr "沒有服務"
+
+#: components/service-combobox.tsx
+msgid "Remove {service}"
+msgstr "移除{service}"
+
+#: components/service-combobox.tsx
+msgid "No services, so no tools are available. Turn on All or pick some services."
+msgstr "沒有服務，所以沒有可用的工具。請開啟「全部」或選擇一些服務。"
+
+#: components/service-combobox.tsx
+msgid "Search services and tools"
+msgstr "搜尋服務和工具"
+
+#: components/service-combobox.tsx
+msgid "Searching…"
+msgstr "搜尋中…"
+
+#: components/service-combobox.tsx
+msgid "Showing {shown} of {total}. Type to narrow it down."
+msgstr "顯示 {total} 個中的 {shown} 個。輸入關鍵字以縮窄範圍。"
+
 #: components/site-footer.tsx
 msgid "Data from DATA.GOV.HK and its providers."
 msgstr "數據來自 DATA.GOV.HK 及其數據提供者。"
@@ -2138,6 +2380,42 @@ msgstr "數據來自 DATA.GOV.HK 及其數據提供者。"
 #: components/site-header.tsx
 msgid "Dashboard"
 msgstr "控制台"
+
+#: components/tool-mode-dialog.tsx
+msgid "Endpoint default"
+msgstr "端點預設"
+
+#: components/tool-mode-dialog.tsx
+msgid "Search tools on the all-services endpoint, every tool on a single-service one. ?tools= in the URL can switch it."
+msgstr "全部服務端點使用搜尋工具，單一服務端點列出每個工具。可用 URL 中的 ?tools= 切換。"
+
+#: components/tool-mode-dialog.tsx
+msgid "Every tool"
+msgstr "所有工具"
+
+#: components/tool-mode-dialog.tsx
+msgid "Each tool is listed by name. Some clients cap how many tools they load."
+msgstr "按名稱列出每個工具。部分用戶端會限制載入的工具數量。"
+
+#: components/tool-mode-dialog.tsx
+msgid "Search, read and use"
+msgstr "搜尋、讀取和使用"
+
+#: components/tool-mode-dialog.tsx
+msgid "Only search_tools, read_tool and use_tool are listed, so the tool list stays small. Searching and reading are free."
+msgstr "只列出 search_tools、read_tool 和 use_tool，工具列表保持精簡。搜尋和讀取不收費。"
+
+#: components/tool-mode-dialog.tsx
+msgid "How tools are listed"
+msgstr "工具列出方式"
+
+#: components/tool-mode-dialog.tsx
+msgid "Saving tool mode…"
+msgstr "正在儲存工具模式…"
+
+#: components/tool-mode-dialog.tsx
+msgid "Tool mode updated"
+msgstr "工具模式已更新"
 
 #: lib/action-result.ts
 msgid "Invalid input"
@@ -2198,6 +2476,74 @@ msgstr "地點及地址"
 #: lib/apis.ts
 msgid "Government"
 msgstr "政府"
+
+#: lib/apis.ts
+msgid "Commerce & industry"
+msgstr "工商業"
+
+#: lib/apis.ts
+msgid "Development"
+msgstr "發展"
+
+#: lib/apis.ts
+msgid "Population"
+msgstr "人口"
+
+#: lib/apis.ts
+msgid "Law & security"
+msgstr "法律及保安"
+
+#: lib/apis.ts
+msgid "Employment & labour"
+msgstr "就業及勞工"
+
+#: lib/apis.ts
+msgid "Social welfare"
+msgstr "社會福利"
+
+#: lib/apis.ts
+msgid "IT & broadcasting"
+msgstr "資訊科技及廣播"
+
+#: lib/apis.ts
+msgid "Recreation & culture"
+msgstr "康樂及文化"
+
+#: lib/apis.ts
+msgid "Education"
+msgstr "教育"
+
+#: lib/apis.ts
+msgid "City management"
+msgstr "城市管理"
+
+#: lib/apis.ts
+msgid "Housing"
+msgstr "房屋"
+
+#: lib/apis.ts
+msgid "Legislature"
+msgstr "立法機關"
+
+#: lib/apis.ts
+msgid "Tourism"
+msgstr "旅遊"
+
+#: lib/apis.ts
+msgid "Food"
+msgstr "食物"
+
+#: lib/apis.ts
+msgid "Miscellaneous"
+msgstr "其他"
+
+#: lib/apis.ts
+msgid "Live API"
+msgstr "實時 API"
+
+#: lib/apis.ts
+msgid "Data files"
+msgstr "數據檔案"
 
 #: lib/intro-cards.ts
 msgid "Welcome to your dashboard"
@@ -2450,6 +2796,14 @@ msgstr "將客戶端指向 Streamable HTTP 端點。支援 MCP 授權的客戶�
 #: lib/mcp-clients.ts
 msgid "Send the key as a Bearer token. Clients that only speak stdio can go through mcp-remote."
 msgstr "將金鑰作為 Bearer 權杖發送。只支援 stdio 的客戶端可透過 mcp-remote 連接。"
+
+#: lib/regions.ts
+msgid "Hong Kong"
+msgstr "香港"
+
+#: lib/service-scopes.ts
+msgid "Unknown service"
+msgstr "不明服務"
 
 #: lib/tracker.ts
 msgid "Converted"

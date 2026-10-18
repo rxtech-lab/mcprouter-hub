@@ -1,23 +1,28 @@
 "use client";
 
-import { DropdownMenu } from "radix-ui";
-import { KeyRound, MoreVertical, Pencil, Plus, ShieldCheck, Trash2, TriangleAlert } from "lucide-react";
+import { KeyRound, Pencil, Plus, ShieldCheck, Trash2, TriangleAlert, Wrench } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Button, IconButton } from "@/components/m3/button";
+import { ActionsMenu, ActionsMenuItem, ActionsMenuSeparator } from "@/components/actions-menu";
+import { Button } from "@/components/m3/button";
 import { Card } from "@/components/m3/card";
-import { Badge, FilterChip } from "@/components/m3/chip";
+import { Badge } from "@/components/m3/chip";
 import { CodeBlock } from "@/components/m3/code-block";
 import { cn } from "@/components/m3/cn";
 import { ConfirmDialog, Dialog } from "@/components/m3/dialog";
 import { EmptyState, PageHeader } from "@/components/m3/page-header";
 import { SelectField, TextField } from "@/components/m3/text-field";
+import { ServiceCombobox, type ServiceChoice } from "@/components/service-combobox";
+import { ServiceBadges } from "@/components/service-badges";
+import { ToolModeBadge, ToolModeDialog, ToolModeField } from "@/components/tool-mode-dialog";
 import { useActionRunner } from "@/components/use-action-runner";
+import type { ToolMode } from "@/db/schema";
 import { formatDate, formatNumber, formatRelative } from "@/lib/format";
 import { useT } from "@/lib/i18n/client";
 import { KEY_CLIENTS } from "@/lib/mcp-clients";
-import { createApiKey, renameApiKey, revokeApiKey, updateApiKeyScopes } from "./actions";
+import { selectionToScopes, type ServiceSelection } from "@/lib/service-selection";
+import { createApiKey, renameApiKey, revokeApiKey, updateApiKeyScopes, updateApiKeyToolMode } from "./actions";
 import { KeysTabs } from "./keys-tabs";
 
 export type KeyRow = {
@@ -25,6 +30,8 @@ export type KeyRow = {
   name: string;
   prefix: string;
   scopes: string[];
+  /** Null means the endpoint's default. */
+  toolMode: ToolMode | null;
   callCount: number;
   lastUsedAt: string | null;
   expiresAt: string | null;
@@ -32,7 +39,7 @@ export type KeyRow = {
   status: "active" | "revoked" | "expired" | "unknown";
 };
 
-type ServiceOption = { id: string; title: string };
+type ServiceOption = ServiceChoice;
 
 type Mode =
   | { kind: "none" }
@@ -40,10 +47,11 @@ type Mode =
   | { kind: "reveal"; name: string; key: string }
   | { kind: "rename"; key: KeyRow }
   | { kind: "scopes"; key: KeyRow }
+  | { kind: "toolMode"; key: KeyRow }
   | { kind: "revoke"; key: KeyRow };
 
 /** A dialog opened from the URL, e.g. by the agent. */
-export type OpenDialog = { kind: "create"; name?: string } | { kind: "rename" | "scopes" | "revoke"; key: KeyRow };
+export type OpenDialog = { kind: "create"; name?: string } | { kind: "rename" | "scopes" | "toolMode" | "revoke"; key: KeyRow };
 
 type KeysViewProps = { keys: KeyRow[]; services: ServiceOption[]; endpoint: string; initial?: OpenDialog };
 
@@ -56,7 +64,7 @@ export function KeysView({ keys, services, endpoint, initial }: KeysViewProps) {
     // The dialog came from the URL; drop it so a reload doesn't reopen it.
     if (initial) router.replace(pathname, { scroll: false });
   };
-  const titles = new Map(services.map((service) => [service.id, service.title]));
+  const byId = new Map(services.map((service) => [service.id, service]));
   const t = useT();
 
   return (
@@ -83,7 +91,7 @@ export function KeysView({ keys, services, endpoint, initial }: KeysViewProps) {
         <ul className="flex flex-col gap-3" aria-label={t("API keys")}>
           {keys.map((key) => (
             <li key={key.id}>
-              <KeyCard apiKey={key} titles={titles} onSelect={(kind) => setMode({ kind, key } as Mode)} />
+              <KeyCard apiKey={key} services={byId} onSelect={(kind) => setMode({ kind, key } as Mode)} />
             </li>
           ))}
         </ul>
@@ -99,12 +107,21 @@ export function KeysView({ keys, services, endpoint, initial }: KeysViewProps) {
       {mode.kind === "reveal" ? <RevealKeyDialog name={mode.name} apiKey={mode.key} endpoint={endpoint} onClose={close} /> : null}
       {mode.kind === "rename" ? <RenameKeyDialog apiKey={mode.key} onClose={close} /> : null}
       {mode.kind === "scopes" ? <ScopesDialog apiKey={mode.key} services={services} onClose={close} /> : null}
+      {mode.kind === "toolMode" ? (
+        <ToolModeDialog
+          description={t("Choose how clients using “{name}” see tools. They pick this up the next time they list tools.", { name: mode.key.name })}
+          value={mode.key.toolMode}
+          allowDefault
+          onSave={(toolMode) => updateApiKeyToolMode({ id: mode.key.id, toolMode })}
+          onClose={close}
+        />
+      ) : null}
       {mode.kind === "revoke" ? <RevokeDialog apiKey={mode.key} onClose={close} /> : null}
     </>
   );
 }
 
-function KeyCard({ apiKey, titles, onSelect }: { apiKey: KeyRow; titles: Map<string, string>; onSelect: (kind: "rename" | "scopes" | "revoke") => void }) {
+function KeyCard({ apiKey, services, onSelect }: { apiKey: KeyRow; services: Map<string, ServiceOption>; onSelect: (kind: "rename" | "scopes" | "toolMode" | "revoke") => void }) {
   const active = apiKey.status === "active";
   const t = useT();
   return (
@@ -120,11 +137,8 @@ function KeyCard({ apiKey, titles, onSelect }: { apiKey: KeyRow; titles: Map<str
         </div>
         <p className="mt-1 font-mono text-sm text-on-surface-variant">{apiKey.prefix}…</p>
         <div className="mt-3 flex flex-wrap gap-1">
-          {apiKey.scopes.length === 0 ? (
-            <Badge tone="primary">{t("All services")}</Badge>
-          ) : (
-            apiKey.scopes.map((scope) => <Badge key={scope}>{titles.get(scope) ?? scope}</Badge>)
-          )}
+          <ServiceBadges value={toSelection(apiKey.scopes, services)} />
+          <ToolModeBadge value={apiKey.toolMode} allowDefault />
         </div>
         <dl className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1 type-body-small text-on-surface-variant sm:grid-cols-4">
           <div><dt className="inline">{t("Calls")} </dt><dd className="inline text-on-surface tabular-nums">{formatNumber(apiKey.callCount, t.locale)}</dd></div>
@@ -134,63 +148,34 @@ function KeyCard({ apiKey, titles, onSelect }: { apiKey: KeyRow; titles: Map<str
         </dl>
       </div>
       {active ? (
-        <DropdownMenu.Root>
-          <DropdownMenu.Trigger asChild>
-            <IconButton label={t("Actions for {name}", { name: apiKey.name })}>
-              <MoreVertical size={20} />
-            </IconButton>
-          </DropdownMenu.Trigger>
-          <DropdownMenu.Portal>
-            <DropdownMenu.Content align="end" sideOffset={4} className="z-50 min-w-48 rounded-xs bg-surface-container py-2 shadow-elevation-2">
-              <MenuItem icon={<Pencil size={18} />} onSelect={() => onSelect("rename")}>{t("Rename")}</MenuItem>
-              <MenuItem icon={<ShieldCheck size={18} />} onSelect={() => onSelect("scopes")}>{t("Change services")}</MenuItem>
-              <DropdownMenu.Separator className="my-2 h-px bg-outline-variant" />
-              <MenuItem icon={<Trash2 size={18} />} onSelect={() => onSelect("revoke")} danger>{t("Revoke")}</MenuItem>
-            </DropdownMenu.Content>
-          </DropdownMenu.Portal>
-        </DropdownMenu.Root>
+        <ActionsMenu label={t("Actions for {name}", { name: apiKey.name })}>
+          <ActionsMenuItem icon={<Pencil size={18} />} onSelect={() => onSelect("rename")}>{t("Rename")}</ActionsMenuItem>
+          <ActionsMenuItem icon={<ShieldCheck size={18} />} onSelect={() => onSelect("scopes")}>{t("Change services")}</ActionsMenuItem>
+          <ActionsMenuItem icon={<Wrench size={18} />} onSelect={() => onSelect("toolMode")}>{t("Change tool mode")}</ActionsMenuItem>
+          <ActionsMenuSeparator />
+          <ActionsMenuItem icon={<Trash2 size={18} />} onSelect={() => onSelect("revoke")} danger>{t("Revoke")}</ActionsMenuItem>
+        </ActionsMenu>
       ) : null}
     </Card>
   );
 }
 
-function MenuItem({ icon, children, onSelect, danger }: { icon: React.ReactNode; children: React.ReactNode; onSelect: () => void; danger?: boolean }) {
-  return (
-    <DropdownMenu.Item
-      onSelect={onSelect}
-      className={cn(
-        "flex h-12 cursor-pointer items-center gap-3 px-3 type-label-large outline-none data-[highlighted]:bg-on-surface/8",
-        danger ? "text-error" : "text-on-surface",
-      )}
-    >
-      {icon}
-      {children}
-    </DropdownMenu.Item>
-  );
+/** Saved scopes as a picker selection; ids no longer in the catalogue are dropped. */
+function toSelection(scopes: string[], byId: Map<string, ServiceOption>): ServiceSelection {
+  return scopes.length ? scopes.flatMap((id) => byId.get(id) ?? []) : "all";
 }
 
-function ServicePicker({ services, value, onChange }: { services: ServiceOption[]; value: string[]; onChange: (value: string[]) => void }) {
-  const all = value.length === 0;
+function ServicePicker({ services, value, onChange, disabled }: { services: ServiceOption[]; value: string[]; onChange: (value: string[]) => void; disabled?: boolean }) {
   const t = useT();
+  const byId = new Map(services.map((service) => [service.id, service]));
   return (
-    <fieldset className="flex flex-col gap-2">
-      <legend className="pb-2 type-body-small text-on-surface-variant">{t("Services this key may call")}</legend>
-      <div className="flex flex-wrap gap-2">
-        <FilterChip selected={all} onClick={() => onChange([])}>{t("All services")}</FilterChip>
-        {services.map((service) => {
-          const selected = value.includes(service.id);
-          return (
-            <FilterChip
-              key={service.id}
-              selected={selected}
-              onClick={() => onChange(selected ? value.filter((id) => id !== service.id) : [...value, service.id])}
-            >
-              {service.title}
-            </FilterChip>
-          );
-        })}
-      </div>
-    </fieldset>
+    <ServiceCombobox
+      legend={t("Services this key may call")}
+      allLabel={t("All services")}
+      value={toSelection(value, byId)}
+      onChange={(next) => onChange(selectionToScopes(next))}
+      disabled={disabled}
+    />
   );
 }
 
@@ -206,6 +191,7 @@ type CreateKeyDialogProps = {
 function CreateKeyDialog({ open, services, initialName, onClose, onCreated }: CreateKeyDialogProps) {
   const [name, setName] = useState(initialName ?? "");
   const [scopes, setScopes] = useState<string[]>([]);
+  const [toolMode, setToolMode] = useState<ToolMode | null>(null);
   const [expires, setExpires] = useState("0");
   const { pending, run } = useActionRunner();
   const t = useT();
@@ -213,6 +199,7 @@ function CreateKeyDialog({ open, services, initialName, onClose, onCreated }: Cr
   const reset = () => {
     setName("");
     setScopes([]);
+    setToolMode(null);
     setExpires("0");
   };
 
@@ -241,7 +228,7 @@ function CreateKeyDialog({ open, services, initialName, onClose, onCreated }: Cr
         onSubmit={(event) => {
           event.preventDefault();
           run(
-            () => createApiKey({ name, scopes, expiresInDays: Number(expires) as 0 | 30 | 90 | 365 }),
+            () => createApiKey({ name, scopes, toolMode, expiresInDays: Number(expires) as 0 | 30 | 90 | 365 }),
             { progress: t("Creating key…"), success: t("Key created") },
             (data) => {
               reset();
@@ -257,7 +244,8 @@ function CreateKeyDialog({ open, services, initialName, onClose, onCreated }: Cr
           <option value="90">{t("In 90 days")}</option>
           <option value="365">{t("In 1 year")}</option>
         </SelectField>
-        <ServicePicker services={services} value={scopes} onChange={setScopes} />
+        <ServicePicker services={services} value={scopes} onChange={setScopes} disabled={pending} />
+        <ToolModeField value={toolMode} onChange={setToolMode} allowDefault disabled={pending} />
       </form>
     </Dialog>
   );
@@ -376,7 +364,7 @@ function ScopesDialog({ apiKey, services, onClose }: { apiKey: KeyRow; services:
         </>
       }
     >
-      <ServicePicker services={services} value={scopes} onChange={setScopes} />
+      <ServicePicker services={services} value={scopes} onChange={setScopes} disabled={pending} />
     </Dialog>
   );
 }
