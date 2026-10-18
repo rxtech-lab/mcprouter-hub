@@ -2,6 +2,7 @@
 
 import { Dialog as RadixDialog, AlertDialog } from "radix-ui";
 import type { ReactNode } from "react";
+import { useT } from "@/lib/i18n/client";
 import { Button } from "./button";
 import { cn } from "./cn";
 
@@ -66,6 +67,7 @@ type ConfirmDialogProps = {
 
 /** M3 confirmation dialog, built on Radix AlertDialog so it can't be dismissed by clicking outside. */
 export function ConfirmDialog({ open, onOpenChange, title, description, confirmLabel, destructive, pending, onConfirm }: ConfirmDialogProps) {
+  const t = useT();
   return (
     <AlertDialog.Root open={open} onOpenChange={onOpenChange}>
       <AlertDialog.Portal>
@@ -76,7 +78,7 @@ export function ConfirmDialog({ open, onOpenChange, title, description, confirmL
             <AlertDialog.Description className="type-body-medium text-on-surface-variant">{description}</AlertDialog.Description>
             <div className="flex justify-end gap-2 pt-2">
               <AlertDialog.Cancel asChild>
-                <Button variant="text" disabled={pending}>Cancel</Button>
+                <Button variant="text" disabled={pending}>{t("Cancel")}</Button>
               </AlertDialog.Cancel>
               <Button
                 variant={destructive ? "danger" : "filled"}
@@ -86,7 +88,8 @@ export function ConfirmDialog({ open, onOpenChange, title, description, confirmL
                   onConfirm();
                 }}
               >
-                {pending ? "Working…" : confirmLabel}
+                {pending ? t("Working…") : confirmLabel}
+
               </Button>
             </div>
           </AlertDialog.Content>

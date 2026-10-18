@@ -7,21 +7,25 @@ import { db } from "@/db";
 import { DATASET_STATUSES, datasets, datasetStatus } from "@/db/schema";
 import { runAction } from "@/lib/action-result";
 import { isAdmin, requireActionUser } from "@/lib/auth";
+import { getT } from "@/lib/i18n/server";
+import type { Translator } from "@/lib/i18n/translate";
 
-const schema = z
-  .object({
-    datasetId: z.string().min(1),
-    status: z.enum(DATASET_STATUSES).nullable(),
-    reason: z.string().trim().max(500).optional().transform((value) => value || null),
-    priority: z.number().int().min(0).max(3),
-  })
-  .refine((value) => value.status !== "skipped" || value.reason, { message: "Say why this dataset is skipped", path: ["reason"] });
+// Built per request so the validation message comes back in the user's language.
+const schema = (t: Translator) =>
+  z
+    .object({
+      datasetId: z.string().min(1),
+      status: z.enum(DATASET_STATUSES).nullable(),
+      reason: z.string().trim().max(500).optional().transform((value) => value || null),
+      priority: z.number().int().min(0).max(3),
+    })
+    .refine((value) => value.status !== "skipped" || value.reason, { message: t("Say why this dataset is skipped"), path: ["reason"] });
 
-export async function setDatasetStatus(input: z.input<typeof schema>) {
+export async function setDatasetStatus(input: z.input<ReturnType<typeof schema>>) {
   return runAction(async () => {
     const user = await requireActionUser();
     if (!isAdmin(user)) throw new Error("FORBIDDEN");
-    const data = schema.parse(input);
+    const data = schema(await getT()).parse(input);
     const [dataset] = await db.select({ id: datasets.id }).from(datasets).where(eq(datasets.id, data.datasetId)).limit(1);
     if (!dataset) throw new Error("NOT_FOUND");
     if (data.status === null) {

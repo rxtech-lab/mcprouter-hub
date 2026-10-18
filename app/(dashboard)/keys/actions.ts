@@ -9,19 +9,24 @@ import { serviceById } from "@/generated/registry";
 import { runAction } from "@/lib/action-result";
 import { displayPrefix, generateApiKey, hashApiKey } from "@/lib/api-keys";
 import { requireActionUser } from "@/lib/auth";
+import { getT } from "@/lib/i18n/server";
+import type { Translator } from "@/lib/i18n/translate";
 
-const name = z.string().trim().min(1, "Give the key a name").max(60, "Use 60 characters or fewer");
-const scopes = z
-  .array(z.string())
-  .max(50)
-  .refine((ids) => ids.every((id) => serviceById.has(id)), "Unknown service")
-  .transform((ids) => [...new Set(ids.map((id) => serviceById.get(id)!.id))].sort());
+// Built per request so validation messages come back in the user's language.
+const nameSchema = (t: Translator) => z.string().trim().min(1, t("Give the key a name")).max(60, t("Use 60 characters or fewer"));
+const scopesSchema = (t: Translator) =>
+  z
+    .array(z.string())
+    .max(50)
+    .refine((ids) => ids.every((id) => serviceById.has(id)), t("Unknown service"))
+    .transform((ids) => [...new Set(ids.map((id) => serviceById.get(id)!.id))].sort());
 
-const createSchema = z.object({
-  name,
-  scopes,
-  expiresInDays: z.union([z.literal(0), z.literal(30), z.literal(90), z.literal(365)]),
-});
+const createSchema = (t: Translator) =>
+  z.object({
+    name: nameSchema(t),
+    scopes: scopesSchema(t),
+    expiresInDays: z.union([z.literal(0), z.literal(30), z.literal(90), z.literal(365)]),
+  });
 
 async function ownedKey(userId: string, id: string) {
   const [key] = await db
@@ -33,10 +38,10 @@ async function ownedKey(userId: string, id: string) {
   return key;
 }
 
-export async function createApiKey(input: z.input<typeof createSchema>) {
+export async function createApiKey(input: z.input<ReturnType<typeof createSchema>>) {
   return runAction(async () => {
     const user = await requireActionUser();
-    const data = createSchema.parse(input);
+    const data = createSchema(await getT()).parse(input);
     const plaintext = generateApiKey();
     const [row] = await db
       .insert(apiKeys)
@@ -58,7 +63,7 @@ export async function createApiKey(input: z.input<typeof createSchema>) {
 export async function renameApiKey(input: { id: string; name: string }) {
   return runAction(async () => {
     const user = await requireActionUser();
-    const data = z.object({ id: z.string().min(1), name }).parse(input);
+    const data = z.object({ id: z.string().min(1), name: nameSchema(await getT()) }).parse(input);
     await ownedKey(user.id, data.id);
     await db.update(apiKeys).set({ name: data.name }).where(and(eq(apiKeys.id, data.id), eq(apiKeys.userId, user.id)));
     revalidatePath("/keys");
@@ -69,7 +74,7 @@ export async function renameApiKey(input: { id: string; name: string }) {
 export async function updateApiKeyScopes(input: { id: string; scopes: string[] }) {
   return runAction(async () => {
     const user = await requireActionUser();
-    const data = z.object({ id: z.string().min(1), scopes }).parse(input);
+    const data = z.object({ id: z.string().min(1), scopes: scopesSchema(await getT()) }).parse(input);
     await ownedKey(user.id, data.id);
     await db.update(apiKeys).set({ scopes: data.scopes }).where(and(eq(apiKeys.id, data.id), eq(apiKeys.userId, user.id)));
     revalidatePath("/keys");

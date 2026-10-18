@@ -5,9 +5,11 @@ import { DefaultChatTransport, type UIMessage } from "ai";
 import { useEffect } from "react";
 import { ChatPanel } from "@/components/agent/chat-panel";
 import { useSnackbar } from "@/components/m3/snackbar";
+import { useT } from "@/lib/i18n/client";
 import { ChatHistoryButton, useChatHistory } from "./chat-history";
 
 export function ChatView({ id, initialMessages, isNew = false }: { id: string; initialMessages: UIMessage[]; isNew?: boolean }) {
+  const t = useT();
   const snackbar = useSnackbar();
   const history = useChatHistory();
   const { messages, sendMessage, status, stop } = useChat({
@@ -18,7 +20,7 @@ export function ChatView({ id, initialMessages, isNew = false }: { id: string; i
       // Earlier messages are stored on the server; only the newest one is sent.
       prepareSendMessagesRequest: ({ id, messages }) => ({ body: { id, message: messages.at(-1) } }),
     }),
-    onError: (error) => snackbar.show(error.message || "The agent could not answer. Try again.", { tone: "error" }),
+    onError: (error) => snackbar.show(error.message || t("The agent could not answer. Try again."), { tone: "error" }),
     onFinish: () => history?.refresh(),
   });
 
@@ -37,9 +39,10 @@ export function ChatView({ id, initialMessages, isNew = false }: { id: string; i
       status={status}
       onSend={(text) => sendMessage({ text })}
       onStop={() => stop()}
-      title="Agent"
+      title={t("Agent")}
       actions={<ChatHistoryButton />}
-      intro="The agent calls mcprouter tools for you. Tool calls count towards your plan, like calls from your own keys."
+      intro={t("The agent calls mcprouter tools for you. Tool calls count towards your plan, like calls from your own keys.")}
+
       canCallAppTools
     />
   );

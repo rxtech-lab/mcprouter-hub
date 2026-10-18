@@ -1,10 +1,25 @@
 import tracker from "@/generated/apis.json";
+import { msg } from "@/lib/i18n/translate";
 import { API_CATEGORIES, API_STATUSES, type ApiCategory, type ApiEntry, type ApiStatus, type ApiTracker } from "@/mcp/apis";
 
 /** The API tracker, generated from `mcp/apis.yaml` and the service YAML files. */
 export const apiTracker = tracker as ApiTracker;
 
 export { API_CATEGORIES, API_STATUSES, type ApiCategory, type ApiEntry, type ApiStatus };
+
+/** UI labels for each status, marked for translation; render with `t(API_STATUS_LABELS[status])`. */
+export const API_STATUS_LABELS: Record<ApiStatus, string> = { implemented: msg("Implemented"), "coming-soon": msg("Coming soon") };
+
+/** UI labels for each category, marked for translation; render with `t(API_CATEGORY_LABELS[category])`. */
+export const API_CATEGORY_LABELS: Record<ApiCategory, string> = {
+  transport: msg("Transport"),
+  weather: msg("Weather"),
+  environment: msg("Environment"),
+  health: msg("Health"),
+  finance: msg("Finance"),
+  places: msg("Places & addresses"),
+  government: msg("Government"),
+};
 
 export type ApiFilters = { query?: string; status?: ApiStatus; category?: ApiCategory };
 

@@ -7,6 +7,7 @@ import { ServiceIcon } from "@/components/service-icon";
 import manifest from "@/generated/manifest.json";
 import { serviceApis } from "@/lib/apis";
 import { freeChatConfig } from "@/lib/free-chat";
+import { getT } from "@/lib/i18n/server";
 import { findService, serviceDatasets } from "@/lib/sources";
 import { BackLink } from "../back-link";
 import { DatasetItem } from "../dataset-item";
@@ -24,10 +25,11 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
   const index = manifest.services.indexOf(service);
   const rows = await serviceDatasets(service.datasets);
   const apis = serviceApis(service.id);
+  const t = await getT();
 
   return (
     <>
-      <BackLink href="/sources">Data sources</BackLink>
+      <BackLink href="/sources">{t("Data sources")}</BackLink>
       <section className="flex flex-col gap-6 rounded-xl bg-surface-container-low p-6 md:flex-row md:items-center md:p-8">
         <ServiceIcon id={service.id} index={index} size="lg" />
         <div className="min-w-0 flex-1">
@@ -35,14 +37,14 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
           <p className="mt-2 max-w-2xl type-body-large text-on-surface-variant">{service.description}</p>
         </div>
         <div className="flex flex-wrap gap-2">
-          {freeChatConfig().enabled ? <ButtonLink href="/#try" icon={<MessageSquareText size={18} />}>Try it free</ButtonLink> : null}
-          <ButtonLink href="/keys" variant="outlined" icon={<KeyRound size={18} />}>Get an API key</ButtonLink>
+          {freeChatConfig().enabled ? <ButtonLink href="/#try" icon={<MessageSquareText size={18} />}>{t("Try it free")}</ButtonLink> : null}
+          <ButtonLink href="/keys" variant="outlined" icon={<KeyRound size={18} />}>{t("Get an API key")}</ButtonLink>
         </div>
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-1 type-title-large">Tools</h2>
-        <p className="mb-4 type-body-medium text-on-surface-variant">What your assistant can call through this service.</p>
+        <h2 className="mb-1 type-title-large">{t("Tools")}</h2>
+        <p className="mb-4 type-body-medium text-on-surface-variant">{t("What your assistant can call through this service.")}</p>
         <ul className="stagger grid gap-3 md:grid-cols-2">
           {service.tools.map((tool) => (
             <li key={tool.name} className="flex flex-col gap-2 rounded-lg bg-surface-container-low p-4">
@@ -54,8 +56,8 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-1 type-title-large">APIs</h2>
-        <p className="mb-4 type-body-medium text-on-surface-variant">Upstream APIs this service implements, by their tracker id.</p>
+        <h2 className="mb-1 type-title-large">{t("APIs")}</h2>
+        <p className="mb-4 type-body-medium text-on-surface-variant">{t("Upstream APIs this service implements, by their tracker id.")}</p>
         <ul className="stagger grid gap-3 md:grid-cols-2">
           {apis.map((api) => (
             <li key={api.id}>
@@ -70,8 +72,8 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
       </section>
 
       <section className="mt-10">
-        <h2 className="mb-1 type-title-large">Source datasets</h2>
-        <p className="mb-4 type-body-medium text-on-surface-variant">Published on DATA.GOV.HK and fetched live when a tool is called.</p>
+        <h2 className="mb-1 type-title-large">{t("Source datasets")}</h2>
+        <p className="mb-4 type-body-medium text-on-surface-variant">{t("Published on DATA.GOV.HK and fetched live when a tool is called.")}</p>
         <ul className="flex flex-col gap-3">
           {rows.map((row) => <DatasetItem key={row.id} dataset={row} showProvider />)}
         </ul>
@@ -79,7 +81,7 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
 
       <div className="mt-10">
         <ButtonLink href="/sources/providers" variant="text">
-          Browse every DATA.GOV.HK provider <ArrowRight size={16} />
+          {t("Browse every DATA.GOV.HK provider")} <ArrowRight size={16} />
         </ButtonLink>
       </div>
     </>

@@ -1,13 +1,18 @@
 import { desc, eq } from "drizzle-orm";
+import type { Metadata } from "next";
 import { db } from "@/db";
 import { apiKeys } from "@/db/schema";
 import { serviceById, services } from "@/generated/registry";
 import { checkKeyUsable } from "@/lib/api-keys";
 import { requirePageUser } from "@/lib/auth";
+import { getT } from "@/lib/i18n/server";
 import { siteUrl } from "@/lib/site";
 import { KeysView, type KeyRow } from "./keys-view";
 
-export const metadata = { title: "API keys" };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("API keys") };
+}
 
 export default async function KeysPage() {
   const user = await requirePageUser();

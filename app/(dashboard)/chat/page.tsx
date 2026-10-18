@@ -1,8 +1,14 @@
 import { generateId } from "ai";
+import type { Metadata } from "next";
 import { requirePageUser } from "@/lib/auth";
+import { getT } from "@/lib/i18n/server";
 import { ChatView } from "./chat-view";
 
-export const metadata = { title: "Agent" };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("Agent") };
+}
+
 
 export default async function NewChatPage() {
   await requirePageUser();

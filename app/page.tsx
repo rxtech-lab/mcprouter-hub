@@ -12,6 +12,8 @@ import { SetupSteps } from "@/components/setup-steps";
 import { SiteHeader } from "@/components/site-header";
 import { getCurrentUser } from "@/lib/auth";
 import { freeChatConfig } from "@/lib/free-chat";
+import { getT } from "@/lib/i18n/server";
+import { msg } from "@/lib/i18n/translate";
 import { MCP_CLIENTS, mcpClientById } from "@/lib/mcp-clients";
 import { siteUrl } from "@/lib/site";
 import { telegramConfig } from "@/lib/telegram/api";
@@ -34,18 +36,18 @@ const clientTones = [
 ];
 
 const timeline = [
-  { id: "top", label: "Overview" },
-  { id: "services", label: "Services" },
-  { id: "clients", label: "Clients" },
-  { id: "chat-apps", label: "Telegram & WhatsApp" },
-  { id: "how", label: "How it works" },
-  { id: "get-started", label: "Get started" },
+  { id: "top", label: msg("Overview") },
+  { id: "services", label: msg("Services") },
+  { id: "clients", label: msg("Clients") },
+  { id: "chat-apps", label: msg("Telegram & WhatsApp") },
+  { id: "how", label: msg("How it works") },
+  { id: "get-started", label: msg("Get started") },
 ];
 
 const steps = [
-  { icon: <KeyRound size={24} />, title: "Create a key", body: "Sign in, then create an API key scoped to the services you need." },
-  { icon: <Plug size={24} />, title: "Connect your client", body: "Sign in from Claude, Claude Code, ChatGPT, Codex, Cursor or any MCP client." },
-  { icon: <MessageSquareText size={24} />, title: "Just ask", body: "“When's the next 1A bus?” Your assistant calls the right tool, live." },
+  { icon: <KeyRound size={24} />, title: msg("Create a key"), body: msg("Sign in, then create an API key scoped to the services you need.") },
+  { icon: <Plug size={24} />, title: msg("Connect your client"), body: msg("Sign in from Claude, Claude Code, ChatGPT, Codex, Cursor or any MCP client.") },
+  { icon: <MessageSquareText size={24} />, title: msg("Just ask"), body: msg("“When's the next 1A bus?” Your assistant calls the right tool, live.") },
 ];
 
 export default async function Home({ searchParams }: PageProps<"/">) {
@@ -54,6 +56,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
   const telegram = telegramConfig();
   const whatsAppNumber = process.env.WHATSAPP_BOT_NUMBER?.replace(/\D/g, "") || null;
   const user = await getCurrentUser();
+  const t = await getT();
   const { client: clientParam } = await searchParams;
   // Signed-in users go straight to the full guide; everyone else gets a preview dialog first.
   const preview = user ? undefined : mcpClientById(typeof clientParam === "string" ? clientParam : undefined);
@@ -67,9 +70,9 @@ export default async function Home({ searchParams }: PageProps<"/">) {
       icon: Send,
       tone: "bg-primary-container text-on-primary-container",
       accent: "bg-primary text-on-primary",
-      body: "Message the bot like a friend. Link your account once and every answer uses your plan.",
-      question: "Next 1A bus from Star Ferry?",
-      answer: "The next **1A** leaves Star Ferry in **4 min**, then 11 and 19 min.",
+      body: t("Message the bot like a friend. Link your account once and every answer uses your plan."),
+      question: t("Next 1A bus from Star Ferry?"),
+      answer: t("The next **1A** leaves Star Ferry in **4 min**, then 11 and 19 min."),
       href: telegram.botUsername ? `https://t.me/${telegram.botUsername}` : "/keys/telegram",
       enabled: telegram.enabled,
     },
@@ -78,9 +81,9 @@ export default async function Home({ searchParams }: PageProps<"/">) {
       icon: MessageCircle,
       tone: "bg-tertiary-container text-on-tertiary-container",
       accent: "bg-tertiary text-on-tertiary",
-      body: "Ask about buses, weather or A&E waits right in WhatsApp, no app or setup needed.",
-      question: "Any typhoon signal today?",
-      answer: "**No tropical cyclone signal** is in force. 28°C with a chance of showers.",
+      body: t("Ask about buses, weather or A&E waits right in WhatsApp, no app or setup needed."),
+      question: t("Any typhoon signal today?"),
+      answer: t("**No tropical cyclone signal** is in force. 28°C with a chance of showers."),
       href: whatsAppNumber ? `https://wa.me/${whatsAppNumber}` : "/keys/whatsapp",
       enabled: whatsAppConfig().enabled,
     },
@@ -93,27 +96,26 @@ export default async function Home({ searchParams }: PageProps<"/">) {
         <section id="top" className="scroll-mt-24 grid animate-page-in items-center gap-10 overflow-hidden rounded-xl bg-primary-container px-6 py-12 text-on-primary-container md:px-12 md:py-16 lg:grid-cols-[1.15fr_1fr]">
           <div className="flex flex-col gap-6">
             <span className="inline-flex h-8 items-center gap-2 self-start rounded-sm bg-surface-container-lowest/60 px-3 type-label-large">
-              <Wrench size={16} /> {manifest.services.length} services · {toolCount} MCP tools
+              <Wrench size={16} /> {t("{services} services · {tools} MCP tools", { services: manifest.services.length, tools: toolCount })}
             </span>
-            <h1 className="type-display-small md:type-display-large">Hong Kong open data, as tools your AI can call.</h1>
+            <h1 className="type-display-small md:type-display-large">{t("Hong Kong open data, as tools your AI can call.")}</h1>
             <p className="max-w-xl type-body-large opacity-90">
-              Weather, buses, MTR, A&amp;E waiting times, car parks, public holidays and the whole DATA.GOV.HK catalogue — live, through one
-              MCP endpoint and one API key.
+              {t("Weather, buses, MTR, A&E waiting times, car parks, public holidays and the whole DATA.GOV.HK catalogue — live, through one MCP endpoint and one API key.")}
             </p>
             <div className="flex flex-wrap gap-3">
               <ButtonLink href="/dashboard" className="h-14 rounded-lg px-6">
-                Open dashboard <ArrowRight size={18} />
+                {t("Open dashboard")} <ArrowRight size={18} />
               </ButtonLink>
             </div>
             {freeChat.enabled ? (
-              <p className="type-body-medium opacity-80">Try it right here: {freeChat.dailyLimit} free messages a day, no account needed.</p>
+              <p className="type-body-medium opacity-80">{t("Try it right here: {limit} free messages a day, no account needed.", { limit: freeChat.dailyLimit })}</p>
             ) : null}
           </div>
           {freeChat.enabled ? <HeroChat dailyLimit={freeChat.dailyLimit} /> : <ToolCallPreview />}
         </section>
 
         <section id="services" className="scroll-mt-24">
-          <SectionHeading eyebrow="Services" title="Everything Hongkongers check on their phone" />
+          <SectionHeading eyebrow={t("Services")} title={t("Everything Hongkongers check on their phone")} />
           <ul className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {manifest.services.map((service, index) => (
               <li key={service.id}>
@@ -124,7 +126,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
                     <p className="line-clamp-3 type-body-medium text-on-surface-variant">{service.description}</p>
                   </div>
                   <span className="type-label-medium text-on-surface-variant">
-                    {service.tools.length} {service.tools.length === 1 ? "tool" : "tools"}
+                    {t.plural("{count} tool", "{count} tools", service.tools.length)}
                   </span>
                 </Link>
               </li>
@@ -132,18 +134,18 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           </ul>
           <div className="mt-6 flex flex-wrap gap-2">
             <ButtonLink href="/sources" variant="tonal">
-              Read more about the data sources <ArrowRight size={18} />
+              {t("Read more about the data sources")} <ArrowRight size={18} />
             </ButtonLink>
             <ButtonLink href="/sources/providers" variant="text">
-              Search all providers
+              {t("Search all providers")}
             </ButtonLink>
           </div>
         </section>
 
         <section id="clients" className="scroll-mt-24">
-          <SectionHeading eyebrow="Clients" title="Works with the assistants you already use" />
+          <SectionHeading eyebrow={t("Clients")} title={t("Works with the assistants you already use")} />
           <p className="-mt-4 mb-8 max-w-2xl type-body-large text-on-surface-variant">
-            One MCP endpoint for every client. Most sign in with OAuth, so there&apos;s no key to copy; the rest take an API key.
+            {t("One MCP endpoint for every client. Most sign in with OAuth, so there's no key to copy; the rest take an API key.")}
           </p>
           <ul className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {clients.map((client, index) => {
@@ -162,15 +164,15 @@ export default async function Home({ searchParams }: PageProps<"/">) {
                       </span>
                       <div className="flex flex-wrap justify-end gap-1.5">
                         <span className="rounded-sm border border-outline-variant px-2 py-0.5 type-label-small text-on-surface-variant">OAuth</span>
-                        {client.apiKey ? <span className="rounded-sm border border-outline-variant px-2 py-0.5 type-label-small text-on-surface-variant">API key</span> : null}
+                        {client.apiKey ? <span className="rounded-sm border border-outline-variant px-2 py-0.5 type-label-small text-on-surface-variant">{t("API key")}</span> : null}
                       </div>
                     </div>
                     <div className="mt-auto flex flex-col gap-1 pt-8">
-                      <h3 className="type-headline-small">{client.name}</h3>
-                      <p className="type-body-medium text-on-surface-variant">{client.kind}</p>
+                      <h3 className="type-headline-small">{t(client.name)}</h3>
+                      <p className="type-body-medium text-on-surface-variant">{t(client.kind)}</p>
                     </div>
                     <span className="mt-4 inline-flex items-center gap-2 type-label-large text-primary">
-                      Set up {client.name}
+                      {t("Set up {name}", { name: t(client.name) })}
                       <ArrowRight size={16} className="transition-transform duration-300 ease-emphasized group-hover:translate-x-1" />
                     </span>
                   </Link>
@@ -188,17 +190,17 @@ export default async function Home({ searchParams }: PageProps<"/">) {
                 <Plug size={24} />
               </span>
               <div className="flex flex-1 flex-col">
-                <h3 className="type-title-large">Using something else?</h3>
-                <p className="type-body-medium text-on-surface-variant">Any client that speaks MCP over streamable HTTP can connect with the endpoint URL and an API key.</p>
+                <h3 className="type-title-large">{t("Using something else?")}</h3>
+                <p className="type-body-medium text-on-surface-variant">{t("Any client that speaks MCP over streamable HTTP can connect with the endpoint URL and an API key.")}</p>
               </div>
               <ArrowRight size={20} className="shrink-0 text-on-surface-variant transition-transform duration-300 ease-emphasized group-hover:translate-x-1" />
             </Link>
           ) : null}
 
           <div id="chat-apps" className="mt-16 mb-8 flex scroll-mt-24 flex-col gap-2">
-            <span className="type-label-large text-primary">Chat apps</span>
-            <h3 className="type-headline-medium">No AI app? Just message the bot.</h3>
-            <p className="max-w-2xl type-body-large text-on-surface-variant">The same live Hong Kong data on Telegram and WhatsApp. Nothing to install or configure.</p>
+            <span className="type-label-large text-primary">{t("Chat apps")}</span>
+            <h3 className="type-headline-medium">{t("No AI app? Just message the bot.")}</h3>
+            <p className="max-w-2xl type-body-large text-on-surface-variant">{t("The same live Hong Kong data on Telegram and WhatsApp. Nothing to install or configure.")}</p>
           </div>
           <ul className="stagger grid gap-4 md:grid-cols-2">
             {bots.map((bot) => {
@@ -218,13 +220,13 @@ export default async function Home({ searchParams }: PageProps<"/">) {
                         <Icon size={30} />
                       </span>
                       <div className="flex flex-col">
-                        <h4 className="type-headline-small">{bot.name} bot</h4>
+                        <h4 className="type-headline-small">{t("{name} bot", { name: bot.name })}</h4>
                         {bot.enabled ? (
                           <span className="inline-flex items-center gap-1.5 type-label-medium opacity-80">
-                            <span className="size-2 rounded-full bg-current" /> Online now
+                            <span className="size-2 rounded-full bg-current" /> {t("Online now")}
                           </span>
                         ) : (
-                          <span className="type-label-medium opacity-80">Coming soon</span>
+                          <span className="type-label-medium opacity-80">{t("Coming soon")}</span>
                         )}
                       </div>
                     </div>
@@ -238,7 +240,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
                     </div>
 
                     <span className={`mt-auto inline-flex h-12 items-center gap-2 self-start rounded-full px-6 type-label-large ${bot.accent}`}>
-                      Chat on {bot.name}
+                      {t("Chat on {name}", { name: bot.name })}
                       <ArrowRight size={18} className="transition-transform duration-300 ease-emphasized group-hover:translate-x-1" />
                     </span>
                   </Link>
@@ -249,7 +251,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
         </section>
 
         <section id="how" className="scroll-mt-24">
-          <SectionHeading eyebrow="How it works" title="From sign-in to answers in a minute" />
+          <SectionHeading eyebrow={t("How it works")} title={t("From sign-in to answers in a minute")} />
           <ol className="stagger grid gap-4 md:grid-cols-3">
             {steps.map((step, index) => (
               <li key={step.title} className="flex flex-col gap-4 rounded-lg border border-outline-variant p-6">
@@ -257,8 +259,8 @@ export default async function Home({ searchParams }: PageProps<"/">) {
                   <span className="flex size-12 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container">{step.icon}</span>
                   <span className="type-display-small text-outline-variant tabular-nums">{index + 1}</span>
                 </div>
-                <h3 className="type-title-large">{step.title}</h3>
-                <p className="type-body-medium text-on-surface-variant">{step.body}</p>
+                <h3 className="type-title-large">{t(step.title)}</h3>
+                <p className="type-body-medium text-on-surface-variant">{t(step.body)}</p>
               </li>
             ))}
           </ol>
@@ -268,28 +270,28 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           <div className="flex items-center gap-5">
             <Logo size={56} />
             <div>
-              <h2 className="type-headline-medium">Ready when your assistant is.</h2>
-              <p className="mt-1 type-body-large text-on-surface-variant">Free to start. Every tool call is metered on your dashboard.</p>
+              <h2 className="type-headline-medium">{t("Ready when your assistant is.")}</h2>
+              <p className="mt-1 type-body-large text-on-surface-variant">{t("Free to start. Every tool call is metered on your dashboard.")}</p>
             </div>
           </div>
           <ButtonLink href="/login" className="h-14 rounded-lg px-6">
-            Get an API key <ArrowRight size={18} />
+            {t("Get an API key")} <ArrowRight size={18} />
           </ButtonLink>
         </section>
       </main>
 
       <SiteFooter />
-      <ScrollTimeline sections={timeline} />
+      <ScrollTimeline sections={timeline.map((section) => ({ ...section, label: t(section.label) }))} />
 
       {preview ? (
         <ClientSetupDialog
           key={preview.id}
-          name={preview.name}
-          kind={preview.kind}
+          name={t(preview.name)}
+          kind={t(preview.kind)}
           signInHref={`/login?${new URLSearchParams({ next: setupHref(preview.id) })}`}
         >
           <SetupSteps steps={preview.oauth(`${await siteUrl()}/api/mcp/streamable`)} />
-          {preview.note ? <p className="mt-4 rounded-sm bg-surface-container p-3 type-body-medium text-on-surface-variant">{preview.note}</p> : null}
+          {preview.note ? <p className="mt-4 rounded-sm bg-surface-container p-3 type-body-medium text-on-surface-variant">{t(preview.note)}</p> : null}
         </ClientSetupDialog>
       ) : null}
     </div>
@@ -311,22 +313,24 @@ function BoldText({ text }: { text: string }) {
 }
 
 /** A static illustration of an agent turn: the question, the tool call and the answer. */
-function ToolCallPreview() {
+async function ToolCallPreview() {
+  const t = await getT();
   return (
     <div aria-hidden className="flex flex-col gap-3 rounded-lg bg-surface-container-lowest p-4 text-on-surface shadow-elevation-2 md:p-5">
-      <p className="self-end rounded-lg rounded-br-xs bg-primary px-4 py-2 type-body-medium text-on-primary">Is it going to rain? Any warnings?</p>
+      <p className="self-end rounded-lg rounded-br-xs bg-primary px-4 py-2 type-body-medium text-on-primary">{t("Is it going to rain? Any warnings?")}</p>
       {["hko_current_weather", "hko_warning_summary"].map((tool) => (
         <div key={tool} className="flex items-center gap-3 rounded-md border border-outline-variant px-3 py-2">
           <span className="flex size-7 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container">
             <Wrench size={14} />
           </span>
           <span className="flex-1 truncate font-mono text-[13px]">{tool}</span>
-          <span className="type-label-medium text-on-surface-variant">Done</span>
+          <span className="type-label-medium text-on-surface-variant">{t("Done")}</span>
         </div>
       ))}
       <p className="type-body-medium">
-        It&apos;s <strong>27°C</strong> at the Observatory with <strong>79% humidity</strong>. No rain in the past hour and{" "}
-        <strong>no warnings are in force</strong>.
+        {t.rich("It's <strong>27°C</strong> at the Observatory with <strong>79% humidity</strong>. No rain in the past hour and <strong>no warnings are in force</strong>.", {
+          strong: (chunks) => <strong>{chunks}</strong>,
+        })}
       </p>
     </div>
   );

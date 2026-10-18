@@ -1,25 +1,29 @@
 "use client";
 
 import { Copy } from "lucide-react";
+import { useT } from "@/lib/i18n/client";
 import { Button, IconButton } from "./button";
 import { useSnackbar } from "./snackbar";
 
 export function useCopy() {
+  const t = useT();
   const snackbar = useSnackbar();
-  return async (value: string, what = "Copied") => {
+  return async (value: string, what = t("Copied")) => {
     try {
       await navigator.clipboard.writeText(value);
-      snackbar.show(`${what} to the clipboard`, { tone: "success" });
+      snackbar.show(t("{what} to the clipboard", { what }), { tone: "success" });
     } catch {
-      snackbar.show("Could not copy. Select the text and copy it manually.", { tone: "error" });
+      snackbar.show(t("Could not copy. Select the text and copy it manually."), { tone: "error" });
     }
   };
 }
 
-export function CopyIconButton({ value, label = "Copy", what }: { value: string; label?: string; what?: string }) {
+export function CopyIconButton({ value, label, what }: { value: string; label?: string; what?: string }) {
+  const t = useT();
   const copy = useCopy();
   return (
-    <IconButton label={label} onClick={() => copy(value, what)}>
+    <IconButton label={label ?? t("Copy")} onClick
+={() => copy(value, what)}>
       <Copy size={18} />
     </IconButton>
   );

@@ -10,6 +10,7 @@ import { ConfirmDialog, Dialog } from "@/components/m3/dialog";
 import { useSnackbar } from "@/components/m3/snackbar";
 import { useActionRunner } from "@/components/use-action-runner";
 import { formatRelative } from "@/lib/format";
+import { useT } from "@/lib/i18n/client";
 import type { ChatPage, ChatSummary } from "@/lib/chat-store";
 import { deleteChatHistory, listChatHistory } from "./actions";
 
@@ -82,6 +83,7 @@ export function ChatHistoryProvider({ initial, children }: { initial: ChatPage; 
 }
 
 function SearchField() {
+  const t = useT();
   const history = useChatHistory();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -104,8 +106,8 @@ function SearchField() {
       <Search size={18} />
       <input
         type="search"
-        aria-label="Search chats"
-        placeholder="Search chats"
+        aria-label={t("Search chats")}
+        placeholder={t("Search chats")}
         value={text}
         onChange={(event) => setText(event.target.value)}
         className="min-w-0 flex-1 bg-transparent type-body-medium text-on-surface outline-none placeholder:text-on-surface-variant"
@@ -115,6 +117,7 @@ function SearchField() {
 }
 
 function HistoryList({ onNavigate }: { onNavigate?: () => void }) {
+  const t = useT();
   const history = useChatHistory();
   const router = useRouter();
   const { pending, run } = useActionRunner();
@@ -124,7 +127,7 @@ function HistoryList({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <>
       {history.items.length === 0 && !history.loading ? (
-        <p className="px-4 py-6 text-center type-body-medium text-on-surface-variant">{history.query ? "No chats match your search." : "Your chats will appear here."}</p>
+        <p className="px-4 py-6 text-center type-body-medium text-on-surface-variant">{history.query ? t("No chats match your search.") : t("Your chats will appear here.")}</p>
       ) : null}
       <ul className="flex flex-col gap-0.5" data-testid="chat-history">
         {history.items.map((item) => {
@@ -141,10 +144,10 @@ function HistoryList({ onNavigate }: { onNavigate?: () => void }) {
                 )}
               >
                 <span className={cn("truncate type-label-large", active ? undefined : "text-on-surface")}>{item.title}</span>
-                <span className={cn("type-body-small", active ? "text-on-secondary-container/80" : "text-on-surface-variant")}>{formatRelative(item.updatedAt)}</span>
+                <span className={cn("type-body-small", active ? "text-on-secondary-container/80" : "text-on-surface-variant")}>{formatRelative(item.updatedAt, undefined, t.locale)}</span>
               </Link>
               <IconButton
-                label={`Delete “${item.title}”`}
+                label={t("Delete “{title}”", { title: item.title })}
                 onClick={() => setDeleting(item)}
                 className="absolute top-1/2 right-1 -translate-y-1/2 opacity-0 group-focus-within:opacity-100 group-hover:opacity-100 focus-visible:opacity-100 max-md:opacity-100"
               >
@@ -155,26 +158,26 @@ function HistoryList({ onNavigate }: { onNavigate?: () => void }) {
         })}
       </ul>
       {history.loading ? (
-        <div className="flex justify-center py-3 text-on-surface-variant" role="status" aria-label="Loading chats">
+        <div className="flex justify-center py-3 text-on-surface-variant" role="status" aria-label={t("Loading chats")}>
           <LoaderCircle size={20} className="animate-spin" />
         </div>
       ) : history.nextCursor ? (
         <div className="flex justify-center py-2">
-          <Button variant="text" onClick={history.loadMore}>Load more</Button>
+          <Button variant="text" onClick={history.loadMore}>{t("Load more")}</Button>
         </div>
       ) : null}
       <ConfirmDialog
         open={deleting !== null}
         onOpenChange={(open) => !open && setDeleting(null)}
-        title="Delete chat?"
-        description={deleting ? `“${deleting.title}” and all its messages will be deleted. This can't be undone.` : ""}
-        confirmLabel="Delete"
+        title={t("Delete chat?")}
+        description={deleting ? t("“{title}” and all its messages will be deleted. This can't be undone.", { title: deleting.title }) : ""}
+        confirmLabel={t("Delete")}
         destructive
         pending={pending}
         onConfirm={() => {
           if (!deleting) return;
           const target = deleting;
-          run(() => deleteChatHistory({ id: target.id }), { progress: "Deleting chat…", success: "Chat deleted" }, () => {
+          run(() => deleteChatHistory({ id: target.id }), { progress: t("Deleting chat…"), success: t("Chat deleted") }, () => {
             setDeleting(null);
             history.remove(target.id);
             if (target.id === history.activeId) router.push("/chat");
@@ -187,11 +190,12 @@ function HistoryList({ onNavigate }: { onNavigate?: () => void }) {
 
 /** Chat history beside the conversation on medium screens and up. */
 export function ChatSidebar() {
+  const t = useT();
   return (
-    <aside className="hidden w-72 shrink-0 flex-col gap-3 bg-surface pt-4 pr-3 md:flex" aria-label="Chat history">
-      <ButtonLink href="/chat" variant="tonal" icon={<MessageSquarePlus size={20} />} className="h-14 self-start rounded-lg px-5 shadow-elevation-1">New chat</ButtonLink>
+    <aside className="hidden w-72 shrink-0 flex-col gap-3 bg-surface pt-4 pr-3 md:flex" aria-label={t("Chat history")}>
+      <ButtonLink href="/chat" variant="tonal" icon={<MessageSquarePlus size={20} />} className="h-14 self-start rounded-lg px-5 shadow-elevation-1">{t("New chat")}</ButtonLink>
       <SearchField />
-      <h2 className="px-4 pt-2 type-title-small text-on-surface-variant">Recent</h2>
+      <h2 className="px-4 pt-2 type-title-small text-on-surface-variant">{t("Recent")}</h2>
       <div className="-mr-3 min-h-0 flex-1 overflow-y-auto pr-3 pb-4">
         <HistoryList />
       </div>
@@ -201,16 +205,18 @@ export function ChatSidebar() {
 
 /** On small screens the history opens in a dialog from the chat header. */
 export function ChatHistoryButton() {
+  const t = useT();
   const [open, setOpen] = useState(false);
   return (
     <div className="flex items-center gap-1 md:hidden">
-      <Link href="/chat" aria-label="New chat" title="New chat" className="state-layer inline-flex size-10 items-center justify-center rounded-full text-on-surface-variant">
+      <Link href="/chat" aria-label={t("New chat")} title={t("New chat")} className="state-layer inline-flex size-10 items-center justify-center rounded-full text-on-surface-variant">
         <MessageSquarePlus size={20} />
       </Link>
-      <IconButton label="Chat history" onClick={() => setOpen(true)}>
+      <IconButton label={t("Chat history")} onClick={() => setOpen(true)}>
         <History size={20} />
       </IconButton>
-      <Dialog open={open} onOpenChange={setOpen} title="Chats" className="h-[80vh]">
+      <Dialog open={open} onOpenChange={setOpen} title={t("Chats")} className="h-[80vh]">
+
         <div className="flex flex-col gap-3">
           <SearchField />
           <HistoryList onNavigate={() => setOpen(false)} />

@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/components/m3/cn";
+import { useT } from "@/lib/i18n/client";
 
+/** `label` is shown as given, so callers pass it already translated. */
 export type TimelineSection = { id: string; label: string };
 
 /** How long the rail stays up after the last scroll event. */
@@ -16,6 +18,7 @@ const ANCHOR = 0.35;
  * On wide screens it sits in the page margin, so hovering there brings it back without scrolling.
  */
 export function ScrollTimeline({ sections }: { sections: TimelineSection[] }) {
+  const t = useT();
   const [visible, setVisible] = useState(false);
   const [held, setHeld] = useState(false);
   const [active, setActive] = useState(0);
@@ -83,7 +86,7 @@ export function ScrollTimeline({ sections }: { sections: TimelineSection[] }) {
 
   return (
     <nav
-      aria-label="Page sections"
+      aria-label={t("Page sections")}
       onPointerEnter={() => setHeld(true)}
       onPointerLeave={() => setHeld(false)}
       onFocus={() => setHeld(true)}

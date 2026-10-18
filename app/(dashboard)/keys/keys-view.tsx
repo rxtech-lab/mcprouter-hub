@@ -14,6 +14,7 @@ import { EmptyState, PageHeader } from "@/components/m3/page-header";
 import { SelectField, TextField } from "@/components/m3/text-field";
 import { useActionRunner } from "@/components/use-action-runner";
 import { formatDate, formatNumber, formatRelative } from "@/lib/format";
+import { useT } from "@/lib/i18n/client";
 import { KEY_CLIENTS } from "@/lib/mcp-clients";
 import { createApiKey, renameApiKey, revokeApiKey, updateApiKeyScopes } from "./actions";
 import { KeysTabs } from "./keys-tabs";
@@ -44,27 +45,30 @@ export function KeysView({ keys, services, endpoint }: { keys: KeyRow[]; service
   const [mode, setMode] = useState<Mode>({ kind: "none" });
   const close = () => setMode({ kind: "none" });
   const titles = new Map(services.map((service) => [service.id, service.title]));
+  const t = useT();
 
   return (
     <>
       <PageHeader
-        title="API keys"
-        description="Keys let MCP clients call mcprouter on your behalf. Clients that support OAuth can sign in instead. Each tool call counts against your plan."
+        title={t("API keys")}
+        description={t("Keys let MCP clients call mcprouter on your behalf. Clients that support OAuth can sign in instead. Each tool call counts against your plan.")}
         actions={
           <Button icon={<Plus size={18} />} onClick={() => setMode({ kind: "create" })}>
-            Create key
+            {t("Create key")}
           </Button>
         }
       />
       <KeysTabs />
 
       {keys.length === 0 ? (
-        <EmptyState icon={<KeyRound size={32} />} title="No API keys yet">
-          Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude and ChatGPT sign in with OAuth instead, see{" "}
-          <Link href="/keys/apps?client=claude" className="text-primary underline">Set up a client</Link>.
+        <EmptyState icon={<KeyRound size={32} />} title={t("No API keys yet")}>
+          {t.rich(
+            "Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude and ChatGPT sign in with OAuth instead, see <link>Set up a client</link>.",
+            { link: (chunks) => <Link href="/keys/apps?client=claude" className="text-primary underline">{chunks}</Link> },
+          )}
         </EmptyState>
       ) : (
-        <ul className="flex flex-col gap-3" aria-label="API keys">
+        <ul className="flex flex-col gap-3" aria-label={t("API keys")}>
           {keys.map((key) => (
             <li key={key.id}>
               <KeyCard apiKey={key} titles={titles} onSelect={(kind) => setMode({ kind, key } as Mode)} />
@@ -89,6 +93,7 @@ export function KeysView({ keys, services, endpoint }: { keys: KeyRow[]; service
 
 function KeyCard({ apiKey, titles, onSelect }: { apiKey: KeyRow; titles: Map<string, string>; onSelect: (kind: "rename" | "scopes" | "revoke") => void }) {
   const active = apiKey.status === "active";
+  const t = useT();
   return (
     <Card className={cn("flex flex-wrap items-start gap-4", !active && "opacity-60")} data-testid="key-card">
       <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-container text-on-primary-container">
@@ -97,37 +102,37 @@ function KeyCard({ apiKey, titles, onSelect }: { apiKey: KeyRow; titles: Map<str
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
           <h2 className="type-title-medium">{apiKey.name}</h2>
-          {apiKey.status === "revoked" ? <Badge tone="error">Revoked</Badge> : null}
-          {apiKey.status === "expired" ? <Badge tone="error">Expired</Badge> : null}
+          {apiKey.status === "revoked" ? <Badge tone="error">{t("Revoked")}</Badge> : null}
+          {apiKey.status === "expired" ? <Badge tone="error">{t("Expired")}</Badge> : null}
         </div>
         <p className="mt-1 font-mono text-sm text-on-surface-variant">{apiKey.prefix}…</p>
         <div className="mt-3 flex flex-wrap gap-1">
           {apiKey.scopes.length === 0 ? (
-            <Badge tone="primary">All services</Badge>
+            <Badge tone="primary">{t("All services")}</Badge>
           ) : (
             apiKey.scopes.map((scope) => <Badge key={scope}>{titles.get(scope) ?? scope}</Badge>)
           )}
         </div>
         <dl className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1 type-body-small text-on-surface-variant sm:grid-cols-4">
-          <div><dt className="inline">Calls </dt><dd className="inline text-on-surface tabular-nums">{formatNumber(apiKey.callCount)}</dd></div>
-          <div><dt className="inline">Last used </dt><dd className="inline text-on-surface">{formatRelative(apiKey.lastUsedAt)}</dd></div>
-          <div><dt className="inline">Created </dt><dd className="inline text-on-surface">{formatDate(apiKey.createdAt)}</dd></div>
-          <div><dt className="inline">Expires </dt><dd className="inline text-on-surface">{apiKey.expiresAt ? formatDate(apiKey.expiresAt) : "Never"}</dd></div>
+          <div><dt className="inline">{t("Calls")} </dt><dd className="inline text-on-surface tabular-nums">{formatNumber(apiKey.callCount, t.locale)}</dd></div>
+          <div><dt className="inline">{t("Last used")} </dt><dd className="inline text-on-surface">{formatRelative(apiKey.lastUsedAt, undefined, t.locale)}</dd></div>
+          <div><dt className="inline">{t("Created")} </dt><dd className="inline text-on-surface">{formatDate(apiKey.createdAt, t.locale)}</dd></div>
+          <div><dt className="inline">{t("Expires")} </dt><dd className="inline text-on-surface">{apiKey.expiresAt ? formatDate(apiKey.expiresAt, t.locale) : t("Never")}</dd></div>
         </dl>
       </div>
       {active ? (
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
-            <IconButton label={`Actions for ${apiKey.name}`}>
+            <IconButton label={t("Actions for {name}", { name: apiKey.name })}>
               <MoreVertical size={20} />
             </IconButton>
           </DropdownMenu.Trigger>
           <DropdownMenu.Portal>
             <DropdownMenu.Content align="end" sideOffset={4} className="z-50 min-w-48 rounded-xs bg-surface-container py-2 shadow-elevation-2">
-              <MenuItem icon={<Pencil size={18} />} onSelect={() => onSelect("rename")}>Rename</MenuItem>
-              <MenuItem icon={<ShieldCheck size={18} />} onSelect={() => onSelect("scopes")}>Change services</MenuItem>
+              <MenuItem icon={<Pencil size={18} />} onSelect={() => onSelect("rename")}>{t("Rename")}</MenuItem>
+              <MenuItem icon={<ShieldCheck size={18} />} onSelect={() => onSelect("scopes")}>{t("Change services")}</MenuItem>
               <DropdownMenu.Separator className="my-2 h-px bg-outline-variant" />
-              <MenuItem icon={<Trash2 size={18} />} onSelect={() => onSelect("revoke")} danger>Revoke</MenuItem>
+              <MenuItem icon={<Trash2 size={18} />} onSelect={() => onSelect("revoke")} danger>{t("Revoke")}</MenuItem>
             </DropdownMenu.Content>
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
@@ -153,11 +158,12 @@ function MenuItem({ icon, children, onSelect, danger }: { icon: React.ReactNode;
 
 function ServicePicker({ services, value, onChange }: { services: ServiceOption[]; value: string[]; onChange: (value: string[]) => void }) {
   const all = value.length === 0;
+  const t = useT();
   return (
     <fieldset className="flex flex-col gap-2">
-      <legend className="pb-2 type-body-small text-on-surface-variant">Services this key may call</legend>
+      <legend className="pb-2 type-body-small text-on-surface-variant">{t("Services this key may call")}</legend>
       <div className="flex flex-wrap gap-2">
-        <FilterChip selected={all} onClick={() => onChange([])}>All services</FilterChip>
+        <FilterChip selected={all} onClick={() => onChange([])}>{t("All services")}</FilterChip>
         {services.map((service) => {
           const selected = value.includes(service.id);
           return (
@@ -180,6 +186,7 @@ function CreateKeyDialog({ open, services, onClose, onCreated }: { open: boolean
   const [scopes, setScopes] = useState<string[]>([]);
   const [expires, setExpires] = useState("0");
   const { pending, run } = useActionRunner();
+  const t = useT();
 
   const reset = () => {
     setName("");
@@ -191,17 +198,17 @@ function CreateKeyDialog({ open, services, onClose, onCreated }: { open: boolean
     <Dialog
       open={open}
       onOpenChange={(next) => !next && !pending && onClose()}
-      title="Create API key"
-      description="The key is shown once, right after you create it."
+      title={t("Create API key")}
+      description={t("The key is shown once, right after you create it.")}
       actions={
         <>
-          <Button variant="text" onClick={onClose} disabled={pending}>Cancel</Button>
+          <Button variant="text" onClick={onClose} disabled={pending}>{t("Cancel")}</Button>
           <Button
             type="submit"
             form="create-key-form"
             disabled={pending || !name.trim()}
           >
-            {pending ? "Creating…" : "Create"}
+            {pending ? t("Creating…") : t("Create")}
           </Button>
         </>
       }
@@ -213,7 +220,7 @@ function CreateKeyDialog({ open, services, onClose, onCreated }: { open: boolean
           event.preventDefault();
           run(
             () => createApiKey({ name, scopes, expiresInDays: Number(expires) as 0 | 30 | 90 | 365 }),
-            { progress: "Creating key…", success: "Key created" },
+            { progress: t("Creating key…"), success: t("Key created") },
             (data) => {
               reset();
               onCreated(data.name, data.key);
@@ -221,12 +228,12 @@ function CreateKeyDialog({ open, services, onClose, onCreated }: { open: boolean
           );
         }}
       >
-        <TextField label="Name" placeholder="e.g. Claude Code on my laptop" value={name} onChange={(event) => setName(event.target.value)} maxLength={60} autoFocus required />
-        <SelectField label="Expires" value={expires} onChange={(event) => setExpires(event.target.value)}>
-          <option value="0">Never</option>
-          <option value="30">In 30 days</option>
-          <option value="90">In 90 days</option>
-          <option value="365">In 1 year</option>
+        <TextField label={t("Name")} placeholder={t("e.g. Claude Code on my laptop")} value={name} onChange={(event) => setName(event.target.value)} maxLength={60} autoFocus required />
+        <SelectField label={t("Expires")} value={expires} onChange={(event) => setExpires(event.target.value)}>
+          <option value="0">{t("Never")}</option>
+          <option value="30">{t("In 30 days")}</option>
+          <option value="90">{t("In 90 days")}</option>
+          <option value="365">{t("In 1 year")}</option>
         </SelectField>
         <ServicePicker services={services} value={scopes} onChange={setScopes} />
       </form>
@@ -237,24 +244,25 @@ function CreateKeyDialog({ open, services, onClose, onCreated }: { open: boolean
 function RevealKeyDialog({ name, apiKey, endpoint, onClose }: { name: string; apiKey: string; endpoint: string; onClose: () => void }) {
   const [clientId, setClientId] = useState(KEY_CLIENTS[0].id);
   const client = KEY_CLIENTS.find((option) => option.id === clientId) ?? KEY_CLIENTS[0];
+  const t = useT();
   return (
     <Dialog
       open
       dismissible={false}
       onOpenChange={(next) => !next && onClose()}
-      title={`“${name}” is ready`}
+      title={t("“{name}” is ready", { name })}
       className="w-[min(680px,calc(100vw-32px))]"
-      actions={<Button onClick={onClose}>Done</Button>}
+      actions={<Button onClick={onClose}>{t("Done")}</Button>}
     >
       <div className="flex flex-col gap-4 py-1">
         <p className="flex items-start gap-2 rounded-sm bg-tertiary-container p-3 type-body-medium text-on-tertiary-container">
           <TriangleAlert size={18} className="mt-0.5 shrink-0" />
-          Copy this key now. It is stored only as a hash, so it can&apos;t be shown again.
+          {t("Copy this key now. It is stored only as a hash, so it can't be shown again.")}
         </p>
         <div data-testid="revealed-key">
-          <CodeBlock code={apiKey} label="API key" what="Key copied" />
+          <CodeBlock code={apiKey} label={t("API key")} what={t("Key copied")} />
         </div>
-        <div role="tablist" aria-label="Client" className="flex overflow-x-auto border-b border-outline-variant">
+        <div role="tablist" aria-label={t("Client")} className="flex overflow-x-auto border-b border-outline-variant">
           {KEY_CLIENTS.map((option) => (
             <button
               key={option.id}
@@ -267,24 +275,25 @@ function RevealKeyDialog({ name, apiKey, endpoint, onClose }: { name: string; ap
                 client.id === option.id ? "border-primary text-primary" : "border-transparent text-on-surface-variant",
               )}
             >
-              {option.name}
+              {t(option.name)}
             </button>
           ))}
         </div>
-        <ol key={client.id} role="tabpanel" aria-label={client.name} className="animate-fade-through flex flex-col gap-3">
+        <ol key={client.id} role="tabpanel" aria-label={t(client.name)} className="animate-fade-through flex flex-col gap-3">
           {client.apiKey(endpoint, apiKey).map((step, index) => (
             <li key={index} className="flex flex-col gap-2">
               <p className="type-body-medium">
                 <span className="tabular-nums text-on-surface-variant">{index + 1}. </span>
-                {step.text}
+                {t(step.text)}
               </p>
-              {step.code ? <CodeBlock code={step.code} what="Config copied" /> : null}
+              {step.code ? <CodeBlock code={step.code} what={t("Config copied")} /> : null}
             </li>
           ))}
         </ol>
         <p className="type-body-small text-on-surface-variant">
-          Claude, ChatGPT and other clients that sign in with OAuth don&apos;t need a key. See{" "}
-          <Link href="/keys/apps?client=claude" className="text-primary underline">Set up a client</Link>.
+          {t.rich("Claude, ChatGPT and other clients that sign in with OAuth don't need a key. See <link>Set up a client</link>.", {
+            link: (chunks) => <Link href="/keys/apps?client=claude" className="text-primary underline">{chunks}</Link>,
+          })}
         </p>
       </div>
     </Dialog>
@@ -294,16 +303,17 @@ function RevealKeyDialog({ name, apiKey, endpoint, onClose }: { name: string; ap
 function RenameKeyDialog({ apiKey, onClose }: { apiKey: KeyRow; onClose: () => void }) {
   const [name, setName] = useState(apiKey.name);
   const { pending, run } = useActionRunner();
+  const t = useT();
   return (
     <Dialog
       open
       onOpenChange={(next) => !next && !pending && onClose()}
-      title="Rename key"
+      title={t("Rename key")}
       actions={
         <>
-          <Button variant="text" onClick={onClose} disabled={pending}>Cancel</Button>
+          <Button variant="text" onClick={onClose} disabled={pending}>{t("Cancel")}</Button>
           <Button type="submit" form="rename-key-form" disabled={pending || !name.trim() || name.trim() === apiKey.name}>
-            {pending ? "Saving…" : "Save"}
+            {pending ? t("Saving…") : t("Save")}
           </Button>
         </>
       }
@@ -313,10 +323,10 @@ function RenameKeyDialog({ apiKey, onClose }: { apiKey: KeyRow; onClose: () => v
         className="py-1"
         onSubmit={(event) => {
           event.preventDefault();
-          run(() => renameApiKey({ id: apiKey.id, name }), { progress: "Renaming key…", success: "Key renamed" }, onClose);
+          run(() => renameApiKey({ id: apiKey.id, name }), { progress: t("Renaming key…"), success: t("Key renamed") }, onClose);
         }}
       >
-        <TextField label="Name" value={name} onChange={(event) => setName(event.target.value)} maxLength={60} autoFocus required />
+        <TextField label={t("Name")} value={name} onChange={(event) => setName(event.target.value)} maxLength={60} autoFocus required />
       </form>
     </Dialog>
   );
@@ -325,20 +335,21 @@ function RenameKeyDialog({ apiKey, onClose }: { apiKey: KeyRow; onClose: () => v
 function ScopesDialog({ apiKey, services, onClose }: { apiKey: KeyRow; services: ServiceOption[]; onClose: () => void }) {
   const [scopes, setScopes] = useState(apiKey.scopes);
   const { pending, run } = useActionRunner();
+  const t = useT();
   return (
     <Dialog
       open
       onOpenChange={(next) => !next && !pending && onClose()}
-      title="Change services"
-      description={`Choose which services “${apiKey.name}” can call. Clients see only these tools.`}
+      title={t("Change services")}
+      description={t("Choose which services “{name}” can call. Clients see only these tools.", { name: apiKey.name })}
       actions={
         <>
-          <Button variant="text" onClick={onClose} disabled={pending}>Cancel</Button>
+          <Button variant="text" onClick={onClose} disabled={pending}>{t("Cancel")}</Button>
           <Button
             disabled={pending}
-            onClick={() => run(() => updateApiKeyScopes({ id: apiKey.id, scopes }), { progress: "Saving services…", success: "Services updated" }, onClose)}
+            onClick={() => run(() => updateApiKeyScopes({ id: apiKey.id, scopes }), { progress: t("Saving services…"), success: t("Services updated") }, onClose)}
           >
-            {pending ? "Saving…" : "Save"}
+            {pending ? t("Saving…") : t("Save")}
           </Button>
         </>
       }
@@ -350,16 +361,17 @@ function ScopesDialog({ apiKey, services, onClose }: { apiKey: KeyRow; services:
 
 function RevokeDialog({ apiKey, onClose }: { apiKey: KeyRow; onClose: () => void }) {
   const { pending, run } = useActionRunner();
+  const t = useT();
   return (
     <ConfirmDialog
       open
       onOpenChange={(next) => !next && !pending && onClose()}
-      title="Revoke this key?"
-      description={`Clients using “${apiKey.name}” (${apiKey.prefix}…) will stop working immediately. This can't be undone.`}
-      confirmLabel="Revoke"
+      title={t("Revoke this key?")}
+      description={t("Clients using “{name}” ({prefix}…) will stop working immediately. This can't be undone.", { name: apiKey.name, prefix: apiKey.prefix })}
+      confirmLabel={t("Revoke")}
       destructive
       pending={pending}
-      onConfirm={() => run(() => revokeApiKey({ id: apiKey.id }), { progress: "Revoking key…", success: "Key revoked" }, onClose)}
+      onConfirm={() => run(() => revokeApiKey({ id: apiKey.id }), { progress: t("Revoking key…"), success: t("Key revoked") }, onClose)}
     />
   );
 }

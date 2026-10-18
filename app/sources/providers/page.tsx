@@ -6,25 +6,30 @@ import { EmptyState } from "@/components/m3/page-header";
 import { Pagination } from "@/components/m3/pagination";
 import { SearchBar } from "@/components/m3/search-bar";
 import { formatNumber } from "@/lib/format";
+import { getT } from "@/lib/i18n/server";
 import { listProviders, SOURCES_PAGE_SIZE } from "@/lib/sources";
 import { listHref, parseListParams } from "../params";
 import { SourcesHeader } from "../sources-header";
 
-export const metadata: Metadata = { title: "Data providers", description: "Search the government departments and organisations publishing on DATA.GOV.HK." };
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getT();
+  return { title: t("Data providers"), description: t("Search the government departments and organisations publishing on DATA.GOV.HK.") };
+}
 
 export default async function ProvidersPage({ searchParams }: PageProps<"/sources/providers">) {
   const params = parseListParams(await searchParams);
   const { rows, total } = await listProviders({ query: params.q, page: params.page });
   const pageCount = Math.max(1, Math.ceil(total / SOURCES_PAGE_SIZE));
+  const t = await getT();
 
   return (
     <>
       <SourcesHeader />
-      <SearchBar action="/sources/providers" query={params.q} label="Search providers" placeholder="Search departments and organisations" />
+      <SearchBar action="/sources/providers" query={params.q} label={t("Search providers")} placeholder={t("Search departments and organisations")} />
       {rows.length === 0 ? (
         <div className="mt-6">
-          <EmptyState title={params.q ? `No providers match “${params.q}”` : "The catalogue hasn't been synced yet"}>
-            {params.q ? "Try a shorter name, or an abbreviation such as HKO or TD." : "Provider details appear after the daily DATA.GOV.HK catalogue sync."}
+          <EmptyState title={params.q ? t("No providers match “{query}”", { query: params.q }) : t("The catalogue hasn't been synced yet")}>
+            {params.q ? t("Try a shorter name, or an abbreviation such as HKO or TD.") : t("Provider details appear after the daily DATA.GOV.HK catalogue sync.")}
           </EmptyState>
         </div>
       ) : (
@@ -39,9 +44,9 @@ export default async function ProvidersPage({ searchParams }: PageProps<"/source
                   <span className="flex min-w-0 flex-1 flex-col gap-1">
                     <span className="type-title-medium">{provider.title}</span>
                     <span className="flex flex-wrap items-center gap-2 type-body-small text-on-surface-variant">
-                      {formatNumber(provider.total)} {provider.total === 1 ? "dataset" : "datasets"}
-                      {provider.apis ? <> · {formatNumber(provider.apis)} with APIs</> : null}
-                      {provider.covered ? <Badge tone="primary">{provider.covered} in mcprouter</Badge> : null}
+                      {t.plural("{n} dataset", "{n} datasets", provider.total, { n: formatNumber(provider.total, t.locale) })}
+                      {provider.apis ? <> · {t("{n} with APIs", { n: formatNumber(provider.apis, t.locale) })}</> : null}
+                      {provider.covered ? <Badge tone="primary">{t("{count} in mcprouter", { count: provider.covered })}</Badge> : null}
                     </span>
                   </span>
                   <ChevronRight size={20} className="shrink-0 text-on-surface-variant" />
@@ -49,7 +54,7 @@ export default async function ProvidersPage({ searchParams }: PageProps<"/source
               </li>
             ))}
           </ul>
-          <Pagination page={params.page} pageCount={pageCount} total={total} noun={total === 1 ? "provider" : "providers"} href={(page) => listHref("/sources/providers", { q: params.q, page })} />
+          <Pagination page={params.page} pageCount={pageCount} total={total} noun={t.plural("provider", "providers", total)} href={(page) => listHref("/sources/providers", { q: params.q, page })} />
         </>
       )}
     </>

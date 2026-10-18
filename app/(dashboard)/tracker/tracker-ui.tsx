@@ -6,17 +6,20 @@ import { LinearProgress } from "@/components/m3/progress";
 import { SearchBar } from "@/components/m3/search-bar";
 import { listHref } from "@/app/sources/params";
 import { formatNumber } from "@/lib/format";
+import { getT } from "@/lib/i18n/server";
 import { percent, type Progress } from "@/lib/tracker";
 
-export function NotSynced() {
+export async function NotSynced() {
+  const t = await getT();
   return (
-    <EmptyState title="The catalogue hasn't been synced yet">
-      Run <code className="font-mono">bun run catalog:sync</code>, or wait for the daily cron, to load the DATA.GOV.HK catalogue.
+    <EmptyState title={t("The catalogue hasn't been synced yet")}>
+      {t.rich("Run {command}, or wait for the daily cron, to load the DATA.GOV.HK catalogue.", { command: <code className="font-mono">bun run catalog:sync</code> })}
     </EmptyState>
   );
 }
 
-export function ProgressRow({ progress, href }: { progress: Progress; href: string }) {
+export async function ProgressRow({ progress, href }: { progress: Progress; href: string }) {
+  const t = await getT();
   return (
     <li>
       <Link href={href} className="state-layer -mx-2 block rounded-xs px-2 py-1.5">
@@ -26,7 +29,7 @@ export function ProgressRow({ progress, href }: { progress: Progress; href: stri
             {progress.converted} / {progress.total}
           </span>
         </div>
-        <LinearProgress value={progress.total ? progress.converted / progress.total : 0} className="mt-1" label={`${progress.label} converted`} />
+        <LinearProgress value={progress.total ? progress.converted / progress.total : 0} className="mt-1" label={t("{name} converted", { name: progress.label })} />
       </Link>
     </li>
   );
@@ -34,16 +37,22 @@ export function ProgressRow({ progress, href }: { progress: Progress; href: stri
 
 const GROUP_PAGE_SIZE = 24;
 
-/** Searchable, paginated grid of category or provider progress cards; each opens the filtered dataset list. */
-export function GroupGrid({ groups, path, query, page, noun, placeholder, hrefFor }: {
+/**
+ * Searchable, paginated grid of category or provider progress cards; each opens the filtered dataset list.
+ * Callers pass the translated wording: `noun(count)` for the pagination count, `empty` for the no-match title.
+ */
+export async function GroupGrid({ groups, path, query, page, noun, searchLabel, empty, placeholder, hrefFor }: {
   groups: Progress[];
   path: string;
   query?: string;
   page: number;
-  noun: [string, string];
+  noun: (count: number) => string;
+  searchLabel: string;
+  empty: string;
   placeholder: string;
   hrefFor: (group: Progress) => string;
 }) {
+  const t = await getT();
   const words = query?.toLowerCase().split(/\s+/).filter(Boolean) ?? [];
   const filtered = groups.filter((group) => words.every((word) => `${group.label} ${group.key}`.toLowerCase().includes(word)));
   const pageCount = Math.max(1, Math.ceil(filtered.length / GROUP_PAGE_SIZE));
@@ -52,10 +61,10 @@ export function GroupGrid({ groups, path, query, page, noun, placeholder, hrefFo
 
   return (
     <>
-      <SearchBar action={path} query={query} label={`Search ${noun[1]}`} placeholder={placeholder} />
+      <SearchBar action={path} query={query} label={searchLabel} placeholder={placeholder} />
       {visible.length === 0 ? (
         <div className="mt-6">
-          <EmptyState title={`No ${noun[1]} match “${query}”`}>Try a shorter word.</EmptyState>
+          <EmptyState title={empty}>{t("Try a shorter word.")}</EmptyState>
         </div>
       ) : (
         <>
@@ -69,16 +78,16 @@ export function GroupGrid({ groups, path, query, page, noun, placeholder, hrefFo
                   </span>
                   <span className="mt-auto flex flex-col gap-1">
                     <span className="flex items-baseline justify-between gap-2 type-body-small text-on-surface-variant tabular-nums">
-                      <span>{formatNumber(group.converted)} of {formatNumber(group.total)} converted</span>
+                      <span>{t("{converted} of {total} converted", { converted: formatNumber(group.converted, t.locale), total: formatNumber(group.total, t.locale) })}</span>
                       <span className="type-label-large text-primary">{percent(group.converted, group.total)}</span>
                     </span>
-                    <LinearProgress value={group.total ? group.converted / group.total : 0} label={`${group.label} converted`} />
+                    <LinearProgress value={group.total ? group.converted / group.total : 0} label={t("{name} converted", { name: group.label })} />
                   </span>
                 </Link>
               </li>
             ))}
           </ul>
-          <Pagination page={current} pageCount={pageCount} total={filtered.length} noun={filtered.length === 1 ? noun[0] : noun[1]} href={(next) => listHref(path, { q: query, page: next })} />
+          <Pagination page={current} pageCount={pageCount} total={filtered.length} noun={noun(filtered.length)} href={(next) => listHref(path, { q: query, page: next })} />
         </>
       )}
     </>

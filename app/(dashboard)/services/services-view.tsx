@@ -9,6 +9,7 @@ import { CodeBlock } from "@/components/m3/code-block";
 import { CopyIconButton } from "@/components/m3/copy-button";
 import { Dialog } from "@/components/m3/dialog";
 import { ServiceIcon } from "@/components/service-icon";
+import { useT } from "@/lib/i18n/client";
 
 export type ServiceCard = {
   id: string;
@@ -22,6 +23,7 @@ export type ServiceCard = {
 type Tool = ServiceCard["tools"][number];
 
 export function ServicesView({ services, allEndpoint, children }: { services: ServiceCard[]; allEndpoint: string; children: ReactNode }) {
+  const t = useT();
   const [open, setOpen] = useState<ServiceCard | null>(null);
   // The schema replaces the service details inside the same dialog rather than stacking a second one.
   const [tool, setTool] = useState<Tool | null>(null);
@@ -33,9 +35,9 @@ export function ServicesView({ services, allEndpoint, children }: { services: Se
   return (
     <>
       <Card variant="filled" className="mb-6 flex flex-wrap items-center gap-3">
-        <span className="type-label-large text-on-surface-variant">All services</span>
+        <span className="type-label-large text-on-surface-variant">{t("All services")}</span>
         <code className="min-w-0 flex-1 truncate font-mono text-sm">{allEndpoint}</code>
-        <CopyIconButton value={allEndpoint} label="Copy endpoint" what="Endpoint copied" />
+        <CopyIconButton value={allEndpoint} label={t("Copy endpoint")} what={t("Endpoint copied")} />
       </Card>
 
       {children}
@@ -54,7 +56,7 @@ export function ServicesView({ services, allEndpoint, children }: { services: Se
                   <span className="type-title-medium">{service.title}</span>
                   <span className="line-clamp-2 type-body-small text-on-surface-variant">{service.description}</span>
                   <span className="mt-1">
-                    <Badge tone="primary">{service.tools.length} {service.tools.length === 1 ? "tool" : "tools"}</Badge>
+                    <Badge tone="primary">{t.plural("{count} tool", "{count} tools", service.tools.length)}</Badge>
                   </span>
                 </span>
                 <ChevronRight size={20} className="mt-3 shrink-0 text-on-surface-variant" />
@@ -72,27 +74,27 @@ export function ServicesView({ services, allEndpoint, children }: { services: Se
         className="w-[min(720px,calc(100vw-32px))]"
         actions={
           <>
-            {tool ? <Button variant="text" icon={<ArrowLeft size={16} />} onClick={() => setTool(null)}>Back</Button> : null}
-            <Button variant="text" onClick={close}>Close</Button>
+            {tool ? <Button variant="text" icon={<ArrowLeft size={16} />} onClick={() => setTool(null)}>{t("Back")}</Button> : null}
+            <Button variant="text" onClick={close}>{t("Close")}</Button>
           </>
         }
       >
         {open && tool ? (
           <div className="flex flex-col gap-3">
             <p className="type-body-medium">{tool.description}</p>
-            <CodeBlock code={tool.schema} label="Input JSON Schema" what="Schema copied" />
+            <CodeBlock code={tool.schema} label={t("Input JSON Schema")} what={t("Schema copied")} />
           </div>
         ) : open ? (
           <div className="flex flex-col gap-4">
             <div>
-              <span className="type-label-large text-on-surface-variant">Endpoint</span>
+              <span className="type-label-large text-on-surface-variant">{t("Endpoint")}</span>
               <div className="mt-1 flex items-center gap-2 rounded-sm bg-surface-container px-3">
                 <code className="min-w-0 flex-1 truncate py-2 font-mono text-[13px]">{open.endpoint}</code>
-                <CopyIconButton value={open.endpoint} label={`Copy ${open.title} endpoint`} what="Endpoint copied" />
+                <CopyIconButton value={open.endpoint} label={t("Copy {service} endpoint", { service: open.title })} what={t("Endpoint copied")} />
               </div>
             </div>
             <div>
-              <span className="type-label-large text-on-surface-variant">Tools</span>
+              <span className="type-label-large text-on-surface-variant">{t("Tools")}</span>
               <ul className="divide-y divide-outline-variant">
                 {open.tools.map((item) => (
                   <li key={item.name} className="flex flex-wrap items-center gap-3 py-3">
@@ -101,7 +103,7 @@ export function ServicesView({ services, allEndpoint, children }: { services: Se
                       <p className="type-body-medium text-on-surface-variant">{item.description}</p>
                     </div>
                     <Button variant="outlined" icon={<Braces size={16} />} onClick={() => setTool(item)}>
-                      Input schema
+                      {t("Input schema")}
                     </Button>
                   </li>
                 ))}
@@ -109,7 +111,7 @@ export function ServicesView({ services, allEndpoint, children }: { services: Se
             </div>
             {open.datasets.length ? (
               <p className="type-body-small text-on-surface-variant">
-                Datasets: {open.datasets.map((id) => (
+                {t("Datasets:")} {open.datasets.map((id) => (
                   <a key={id} className="mr-2 underline decoration-outline-variant hover:text-primary" href={`https://data.gov.hk/en-data/dataset/${id}`} target="_blank" rel="noreferrer">{id}</a>
                 ))}
               </p>

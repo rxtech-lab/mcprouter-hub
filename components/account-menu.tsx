@@ -3,6 +3,7 @@
 import { LoaderCircle, LogOut } from "lucide-react";
 import { DropdownMenu } from "radix-ui";
 import { useTransition } from "react";
+import { useT } from "@/lib/i18n/client";
 
 type Props = {
   name: string;
@@ -13,6 +14,7 @@ type Props = {
 
 /** Avatar at the foot of the navigation rail; opens a menu with the account and sign out. */
 export function AccountMenu({ name, email, signOut }: Props) {
+  const t = useT();
   const [pending, startTransition] = useTransition();
   const initials = name
     .split(/\s+/)
@@ -26,7 +28,7 @@ export function AccountMenu({ name, email, signOut }: Props) {
       <DropdownMenu.Trigger asChild>
         <button
           type="button"
-          aria-label="Account"
+          aria-label={t("Account")}
           title={name}
           className="state-layer inline-flex size-10 cursor-pointer items-center justify-center rounded-full bg-tertiary-container type-label-large text-on-tertiary-container data-[state=open]:ring-2 data-[state=open]:ring-primary"
         >
@@ -39,7 +41,7 @@ export function AccountMenu({ name, email, signOut }: Props) {
             <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-tertiary-container type-label-large text-on-tertiary-container">{initials || "?"}</span>
             <div className="min-w-0">
               <p className="truncate type-title-small text-on-surface">{name}</p>
-              <p className="truncate type-body-small text-on-surface-variant">{signOut ? email || "Signed in" : "Development bypass"}</p>
+              <p className="truncate type-body-small text-on-surface-variant">{signOut ? email || t("Signed in") : t("Development bypass")}</p>
             </div>
           </div>
           {signOut ? (
@@ -54,7 +56,8 @@ export function AccountMenu({ name, email, signOut }: Props) {
                 className="state-layer flex h-12 cursor-pointer items-center gap-3 px-3 type-label-large text-on-surface outline-none data-[disabled]:opacity-60 data-[highlighted]:bg-on-surface/8"
               >
                 {pending ? <LoaderCircle size={20} className="animate-spin text-on-surface-variant" /> : <LogOut size={20} className="text-on-surface-variant" />}
-                {pending ? "Signing out…" : "Sign out"}
+                {pending ? t("Signing out…") : t("Sign out")}
+
               </DropdownMenu.Item>
             </>
           ) : null}
