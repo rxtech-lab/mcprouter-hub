@@ -6,7 +6,7 @@ import { parseMcpServers, resolveServer } from "@/lib/agent/mcp-servers";
 import { generateAgentReply } from "@/lib/agent/run";
 import { SIGN_OUT_NOTE, signOutTool } from "@/lib/agent/sign-out-tool";
 import { isOverLimit } from "@/lib/billing/allowance";
-import { cardsForToolResults } from "@/lib/cards";
+import { cardsForVisuals } from "@/lib/cards";
 import { renderCardPng } from "@/lib/cards/render";
 import { deleteChat, ensureChat, loadChat, saveMessages } from "@/lib/chat-store";
 import { commandOf, sendPhoto, sendText, sendTyping, type IncomingMessage, type LinkButton, type TelegramConfig } from "@/lib/telegram/api";
@@ -63,8 +63,8 @@ function defaultReply(deps: BotDeps) {
       resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "telegram", scopes: user.scopes, toolMode: user.toolMode }),
     );
     const signOut = signOutTool();
-    const { text, toolOutputs } = await generateAgentReply({ servers, messages, model: deps.config.model, channelNote: TELEGRAM_CHANNEL_NOTE, channelTools: signOut.tools });
-    return { text, cards: cardsForToolResults(toolOutputs), signOut: signOut.requested() };
+    const { text, visuals } = await generateAgentReply({ servers, messages, model: deps.config.model, channelNote: TELEGRAM_CHANNEL_NOTE, channelTools: signOut.tools });
+    return { text, cards: cardsForVisuals(visuals), signOut: signOut.requested() };
   };
 }
 

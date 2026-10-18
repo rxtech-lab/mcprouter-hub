@@ -2194,6 +2194,19 @@ msgid "Result"
 msgstr "结果"
 
 #: components/agent/chat-panel.tsx
+msgid "Running {tool}"
+msgstr "正在运行 {tool}"
+
+#: components/agent/chat-panel.tsx
+msgid "Used {count} tool"
+msgid_plural "Used {count} tools"
+msgstr[0] "已使用 {count} 个工具"
+
+#: components/agent/chat-panel.tsx components/agent/tool-app.tsx
+msgid "Loading results"
+msgstr "正在加载结果"
+
+#: components/agent/chat-panel.tsx
 msgid "Agent is responding"
 msgstr "智能体正在回复"
 
@@ -2260,10 +2273,6 @@ msgstr "{tool} 结果"
 #: components/agent/tool-app.tsx
 msgid "View data"
 msgstr "查看数据"
-
-#: components/agent/tool-app.tsx
-msgid "Loading results"
-msgstr "正在加载结果"
 
 #: components/charts.tsx
 msgid "{label}: {total} in total"

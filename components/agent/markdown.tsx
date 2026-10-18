@@ -1,5 +1,6 @@
 import { createElement, memo, type ElementType } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
+import remarkCjkFriendly from "remark-cjk-friendly";
 import remarkGfm from "remark-gfm";
 
 // Renders `tag` with fixed classes, dropping react-markdown's `node` prop.
@@ -37,7 +38,7 @@ const components: Components = {
 
 export const Markdown = memo(function Markdown({ children }: { children: string }) {
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+    <ReactMarkdown remarkPlugins={[remarkGfm, remarkCjkFriendly]} components={components}>
       {children}
     </ReactMarkdown>
   );
