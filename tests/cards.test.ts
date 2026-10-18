@@ -120,6 +120,21 @@ describe("card builders", () => {
     ]);
   });
 
+  it("lists a day's high and low tides with their heights", () => {
+    const card = cardForToolResult(
+      result("hko-tides", "hko_tide_times", { station: "QUB" }, {
+        station: { code: "QUB", name: "Quarry Bay" },
+        days: [{ date: "2026-10-18", tides: [{ time: "00:30", type: "high", heightM: 2.27 }, { time: "09:47", type: "low", heightM: 1.03 }] }],
+      }),
+    )!;
+    expect(card.title).toBe("Tides at Quarry Bay");
+    expect(card.footer).toBe("Sun 18 Oct · Hong Kong time");
+    expect(card.blocks).toEqual([
+      { kind: "row", leading: { text: "High", tone: "info" }, title: "00:30", trailing: [{ text: "2.27 m", tone: "accent" }] },
+      { kind: "row", leading: { text: "Low", tone: "neutral" }, title: "09:47", trailing: [{ text: "1.03 m", tone: "accent" }] },
+    ]);
+  });
+
   it("has no card for tools whose result doesn't picture well, or data a builder can't read", () => {
     expect(cardForToolResult(result("datagovhk-catalog", "datagovhk_archive_get_file", {}, { content: "a,b" }))).toBeNull();
     expect(cardForToolResult(result("hko-weather", "hko_earthquake", {}, {}))).toBeNull();

@@ -569,6 +569,104 @@ const cases: Case[] = [
     data: { date: "2030-01-06", isPublicHoliday: false, holiday: null, isSunday: true, note: expect.stringMatching(/outside the range/) },
   },
 
+  // hko-tides
+  {
+    tool: "hko_tide_times",
+    input: { station: "quarry bay", date: "2026-10-18", days: 2 },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=HLT&station=QUB&year=2026&rformat=json" },
+    reply: {
+      fields: ["Month", "Date", "Time", "Height(m)", "Time", "Height(m)", "Time", "Height(m)", "Time", "Height(m)"],
+      data: [
+        ["10", "17", "1013", "0.98", "1745", "1.63", "2257", "1.55", "", ""],
+        ["10", "18", "0030", "2.27", "0947", "1.03", "", "", "", ""],
+        ["10", "19", "0059", "2.20", "1021", "1.07", "1802", "1.81", "2324", "1.62"],
+      ],
+    },
+    data: {
+      station: { code: "QUB", name: "Quarry Bay" },
+      timeZone: "Asia/Hong_Kong",
+      heightUnit: "metres above Chart Datum",
+      days: [
+        { date: "2026-10-18", tides: [{ time: "00:30", type: "high", heightM: 2.27 }, { time: "09:47", type: "low", heightM: 1.03 }] },
+        {
+          date: "2026-10-19",
+          tides: [
+            { time: "00:59", type: "high", heightM: 2.2 },
+            { time: "10:21", type: "low", heightM: 1.07 },
+            { time: "18:02", type: "high", heightM: 1.81 },
+            { time: "23:24", type: "low", heightM: 1.62 },
+          ],
+        },
+      ],
+    },
+    ttl: 86400,
+  },
+  {
+    name: "hko_tide_times warns about a closed station and a year with no predictions",
+    tool: "hko_tide_times",
+    input: { station: "芝麻灣", date: "2030-01-01", lang: "tc" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=HLT&station=CMW&year=2030&rformat=json" },
+    reply: "Please include valid parameters in API request. For details, please refer to <a href=\"https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf\">Hong Kong Observatory Open Data API Documentation</a>.",
+    data: {
+      station: { code: "CMW", name: "芝麻灣" },
+      timeZone: "Asia/Hong_Kong",
+      heightUnit: "metres above Chart Datum",
+      note: "Chi Ma Wan tide station closed in 1997; its predictions may have large errors. The Observatory has no tide predictions for Chi Ma Wan in 2030.",
+      days: [],
+    },
+  },
+  {
+    name: "hko_tide_times rejects an unknown station",
+    tool: "hko_tide_times",
+    input: { station: "Stanley", date: "2026-10-18" },
+    error: /Unknown tide station "Stanley".*QUB \(Quarry Bay\)/,
+  },
+  {
+    tool: "hko_tide_observations",
+    input: { station: "bay" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/tide/ALL_en.csv" },
+    reply: `${BOM}Tide Station,Date,Time,Height(m)\nQuarry Bay,2026-10-18,23:05,2.02\nShek Pik,2026-10-18,23:05,1.96\nWaglan Island,2026-10-18,23:05,----`,
+    data: [{ code: "QUB", name: "Quarry Bay", time: "2026-10-18T23:05:00+08:00", heightM: 2.02 }],
+    ttl: 120,
+  },
+  {
+    name: "hko_tide_observations reads Chinese names and missing readings",
+    tool: "hko_tide_observations",
+    input: { lang: "sc", station: "WAG" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/hko_data/tide/ALL_sc.csv" },
+    reply: `${BOM}潮汐站,日期,时间,高度（米）\n鰂鱼涌,2026-10-18,23:10,2.02\n横澜岛,2026-10-18,23:10,----`,
+    data: [{ code: "WAG", name: "横澜岛", time: "2026-10-18T23:10:00+08:00", heightM: null }],
+  },
+  {
+    tool: "hko_sun_moon",
+    input: { date: "2026-10-18", endDate: "2026-10-19" },
+    request: { url: "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=SRS&year=2026&rformat=json" },
+    reply: {
+      fields: ["YYYY-MM-DD", "RISE", "TRAN.", "SET"],
+      data: [["2026-10-17", "06:20", "12:09", "17:57"], ["2026-10-18", "06:21", "12:09", "17:56"], ["2026-10-19", "06:21", "12:09", "17:55"]],
+    },
+    lookups: {
+      "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=MRS&year=2026&rformat=json": {
+        fields: ["YYYY-MM-DD", "RISE", "TRAN.", "SET"],
+        data: [["2026-10-18", "12:48", "18:14", "23:43"], ["2026-10-19", "13:38", "19:05", ""]],
+      },
+    },
+    data: {
+      timeZone: "Asia/Hong_Kong",
+      days: [
+        { date: "2026-10-18", sunrise: "06:21", sunTransit: "12:09", sunset: "17:56", moonrise: "12:48", moonTransit: "18:14", moonset: "23:43" },
+        { date: "2026-10-19", sunrise: "06:21", sunTransit: "12:09", sunset: "17:55", moonrise: "13:38", moonTransit: "19:05", moonset: null },
+      ],
+    },
+    ttl: 86400,
+  },
+  {
+    name: "hko_sun_moon rejects a range that ends before it starts",
+    tool: "hko_sun_moon",
+    input: { date: "2026-10-18", endDate: "2026-10-01" },
+    error: /endDate/,
+  },
+
   // hko-weather
   {
     tool: "hko_current_weather",
