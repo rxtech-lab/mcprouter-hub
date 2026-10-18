@@ -2,11 +2,11 @@
 
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
-import { ArrowUp, ChevronDown, ChevronUp, CircleAlert, Maximize2, Minimize2, RotateCcw, Square } from "lucide-react";
+import { ArrowUp, ChevronDown, ChevronUp, CircleAlert, Maximize2, MessageSquareText, Minimize2, RotateCcw, Square } from "lucide-react";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { IconButton } from "@/components/m3/button";
+import { Button, IconButton } from "@/components/m3/button";
 import { cn } from "@/components/m3/cn";
 import type { FreeChatQuota } from "@/lib/free-chat";
 import { getFreeChatQuota } from "@/lib/free-chat-actions";
@@ -37,6 +37,9 @@ function saveMessages(messages: UIMessage[]) {
     // Storage is full or blocked (private mode): the chat still works, it just isn't kept.
   }
 }
+
+/** Fired by the hero's "Ask the agent" button to pull the docked sheet up on phones. */
+const openEvent = "hero-chat:open";
 
 function subscribeToMobile(onChange: () => void) {
   const query = window.matchMedia(mobileQuery);
@@ -118,6 +121,12 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
     sendRef.current = send;
   });
   const askFromApp = useCallback((text: string) => sendRef.current(text), []);
+
+  useEffect(() => {
+    const onOpen = () => setExpanded(true);
+    window.addEventListener(openEvent, onOpen);
+    return () => window.removeEventListener(openEvent, onOpen);
+  }, []);
 
   // The full-screen chat owns the screen: the page behind it stops scrolling and Escape folds it back down.
   useEffect(() => {
@@ -280,7 +289,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
                 }
               }}
               placeholder={usedUp ? t("No free messages left today") : t("Ask about weather, buses, MTR…")}
-              className="max-h-28 min-h-10 flex-1 resize-none bg-transparent py-2 type-body-large outline-none placeholder:text-on-surface-variant disabled:opacity-60"
+              className="max-h-28 min-h-10 min-w-0 flex-1 resize-none bg-transparent py-2 type-body-large outline-none placeholder:truncate placeholder:text-on-surface-variant disabled:opacity-60"
             />
             {busy ? (
               <IconButton label={t("Stop")} variant="tonal" onClick={() => stop()}>
@@ -314,4 +323,13 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
   if (mobile) return createPortal(panel, document.body);
   if (fullScreen) return <>{createPortal(panel, document.body)}<div aria-hidden className="h-[32rem] rounded-xl bg-surface-container-low max-md:hidden" /></>;
   return panel;
+}
+
+/** Hero call to action on phones, where the chat is docked below the fold: opens it full screen. */
+export function HeroChatButton({ className, children }: { className?: string; children: ReactNode }) {
+  return (
+    <Button variant="tonal" icon={<MessageSquareText size={18} />} onClick={() => window.dispatchEvent(new Event(openEvent))} className={className}>
+      {children}
+    </Button>
+  );
 }

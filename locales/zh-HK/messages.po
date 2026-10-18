@@ -320,7 +320,7 @@ msgstr "{services} 項服務及 {tools} 個工具已準備就緒。"
 msgid "API keys"
 msgstr "API 金鑰"
 
-#: app/(dashboard)/dashboard/page.tsx components/agent/hero-chat.tsx
+#: app/(dashboard)/dashboard/page.tsx app/page.tsx components/agent/hero-chat.tsx
 msgid "Ask the agent"
 msgstr "詢問 AI 助理"
 
@@ -2341,6 +2341,14 @@ msgstr "處理中…"
 #: components/m3/navigation.tsx
 msgid "Main"
 msgstr "主導覽"
+
+#: components/m3/navigation.tsx
+msgid "Open navigation"
+msgstr "開啟導覽"
+
+#: components/m3/navigation.tsx
+msgid "Close navigation"
+msgstr "關閉導覽"
 
 #: components/m3/pagination.tsx
 msgid "{total} {noun} · page {page} of {pageCount}"

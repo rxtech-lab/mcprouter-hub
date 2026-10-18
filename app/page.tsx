@@ -1,7 +1,7 @@
 import { ArrowRight, Code, Globe, KeyRound, type LucideIcon, MessageCircle, MessageSquareText, MousePointer2, Plug, Send, Sparkle, Sparkles, Terminal, Wrench } from "lucide-react";
 import Link from "next/link";
 import manifest from "@/generated/manifest.json";
-import { HeroChat } from "@/components/agent/hero-chat";
+import { HeroChat, HeroChatButton } from "@/components/agent/hero-chat";
 import { Logo } from "@/components/logo";
 import { ButtonLink } from "@/components/m3/button";
 import { ServiceIcon } from "@/components/service-icon";
@@ -107,6 +107,9 @@ export default async function Home({ searchParams }: PageProps<"/">) {
               <ButtonLink href="/dashboard" className="h-14 rounded-lg px-6">
                 {t("Open dashboard")} <ArrowRight size={18} />
               </ButtonLink>
+              {freeChat.enabled ? (
+                <HeroChatButton className="h-14 rounded-lg px-6 md:hidden">{t("Ask the agent")}</HeroChatButton>
+              ) : null}
             </div>
             {freeChat.enabled ? (
               <p className="type-body-medium opacity-80">{t("Try it right here: {limit} free messages a day, no account needed.", { limit: freeChat.dailyLimit })}</p>
