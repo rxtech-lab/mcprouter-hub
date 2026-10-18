@@ -1,5 +1,6 @@
 import "server-only";
 import { and, asc, count, desc, eq, inArray, isNull, like, max, or, sql, type SQL } from "drizzle-orm";
+import { connection } from "next/server";
 import { db } from "@/db";
 import { datasets } from "@/db/schema";
 import manifest from "@/generated/manifest.json";
@@ -23,7 +24,9 @@ const coveredCount = coveredIds.length
   ? sql<number>`sum(case when ${inArray(datasets.id, coveredIds)} then 1 else 0 end)`
   : sql<number>`0`;
 
+/** Catalogue counts change with the daily sync, so read them per request rather than at build time. */
 export async function catalogueTotals() {
+  await connection();
   const [row] = await db
     .select({ datasets: count(), providers: sql<number>`count(distinct ${datasets.organization})` })
     .from(datasets)
@@ -105,6 +108,7 @@ export async function listProviderDatasets(id: string, { query, apiOnly, page }:
 /** Catalogue rows behind a service, in the order the service lists them. */
 export async function serviceDatasets(ids: string[]) {
   if (ids.length === 0) return [];
+  await connection();
   const rows = await db.select(datasetColumns).from(datasets).where(inArray(datasets.id, ids));
   return ids.map((id) => rows.find((row) => row.id === id) ?? { id, titleEn: id, titleTc: null, organization: null, organizationTitle: null, formats: [], isApi: false, url: null, metadataModified: null });
 }
