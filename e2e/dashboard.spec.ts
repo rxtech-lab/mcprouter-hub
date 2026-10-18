@@ -5,7 +5,7 @@ test("create a key, see it once, then revoke it", async ({ page }) => {
   await page.goto("/keys");
   await page.getByRole("button", { name: "Create key" }).click();
   await page.getByLabel("Name").fill(name);
-  await page.getByRole("checkbox", { name: "KMB / LWB Bus" }).click();
+  await page.getByRole("checkbox", { name: "Buses & Minibuses" }).click();
   await page.getByRole("button", { name: "Create", exact: true }).click();
 
   const revealed = page.getByTestId("revealed-key");
@@ -44,9 +44,13 @@ test("tracker and services pages load", async ({ page }) => {
   await page.getByRole("navigation", { name: "Tracker views" }).getByRole("link", { name: "Datasets" }).click();
   await expect(page).toHaveURL(/\/tracker\/datasets/);
   await page.goto("/services");
-  await expect(page.getByRole("heading", { name: "Hong Kong Observatory Weather" })).toBeVisible();
-  await page.getByRole("button", { name: "Input schema" }).first().click();
-  await expect(page.getByRole("dialog")).toContainText("Input JSON Schema");
+  await expect(page.getByRole("heading", { name: "Services", level: 1 })).toBeVisible();
+  await page.getByRole("button", { name: /^Hong Kong Observatory Weather/ }).click();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog.getByRole("heading", { name: "Hong Kong Observatory Weather" })).toBeVisible();
+  await expect(dialog).toContainText("hko_current_weather");
+  await dialog.getByRole("button", { name: "Input schema" }).first().click();
+  await expect(dialog).toContainText("Input JSON Schema");
 });
 
 test("the agent shows tool calls", async ({ page }) => {

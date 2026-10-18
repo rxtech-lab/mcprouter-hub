@@ -44,7 +44,7 @@ test("an OAuth client discovers sign-in, gets approved and calls the MCP endpoin
   });
   await page.goto(authorizeUrl.href);
   await expect(page.getByRole("heading", { name: /Allow E2E agent to use mcprouter/ })).toBeVisible();
-  await expect(page.getByText("the KMB / LWB Bus tools", { exact: false })).toBeVisible();
+  await expect(page.getByText("the Buses & Minibuses tools", { exact: false })).toBeVisible();
   await page.getByRole("button", { name: "Allow" }).click();
   await expect.poll(() => returned?.searchParams.get("code") ?? null).not.toBeNull();
   expect(returned!.searchParams.get("state")).toBe("e2e-state");
@@ -66,7 +66,7 @@ test("an OAuth client discovers sign-in, gets approved and calls the MCP endpoin
   // 5. The app shows up under Connected apps and can be disconnected.
   await page.goto("/keys/apps");
   const card = page.getByTestId("app-card").filter({ hasText: "E2E agent" }).first();
-  await expect(card).toContainText("KMB / LWB Bus");
+  await expect(card).toContainText("Buses & Minibuses");
   await card.getByRole("button", { name: "Disconnect E2E agent" }).click();
   await page.getByRole("alertdialog").getByRole("button", { name: "Disconnect" }).click();
   await expect(page.getByTestId("snackbar")).toContainText("App disconnected");
