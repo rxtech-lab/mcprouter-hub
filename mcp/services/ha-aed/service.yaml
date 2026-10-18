@@ -1,6 +1,8 @@
 id: ha-aed
 title: Hospital Authority A&E Waiting Times
 description: Current waiting times at the accident and emergency departments of Hong Kong public hospitals, by triage category.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0002]
 datasets:
   - hospital-hadata-ae-waiting-time
 baseUrl: https://www.ha.org.hk/opendata/aed

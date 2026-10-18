@@ -54,7 +54,7 @@ function defaultReply(deps: BotDeps) {
   return async (messages: UIMessage[], user: LinkedUser): Promise<AgentAnswer> => {
     // The member's own agent, with the same servers and billing as the web chat.
     const servers = parseMcpServers(process.env.AGENT_MCP_SERVERS).map((server) =>
-      resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY }),
+      resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "whatsapp" }),
     );
     const signOut = signOutTool();
     const { text, toolOutputs } = await generateAgentReply({ servers, messages, model: deps.config.model, channelNote: WHATSAPP_CHANNEL_NOTE, channelTools: signOut.tools });

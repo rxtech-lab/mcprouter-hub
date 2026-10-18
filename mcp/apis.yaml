@@ -1,0 +1,385 @@
+# API tracker: the single source of truth for which upstream APIs mcprouter serves or plans to serve.
+#
+# - Every entry has a permanent id (API-NNNN). Add new APIs at the end with the next number; never reuse,
+#   renumber or reorder ids. Codegen rejects ids that aren't strictly ascending.
+# - Status is not written here. An API is implemented when a service YAML lists its id under `apis:`
+#   (and its datasets under `datasets:`); otherwise it shows as "Coming soon".
+# - Put the id in the pull request that implements it, e.g. `feat(mcp): add AQHI (API-0031)`.
+# - `bun run codegen` validates this file and regenerates APIS.md and the website's /sources/apis page.
+#
+# Fields: id, title, description, provider, category (transport | weather | environment | health | finance |
+# places | government), datasets (DATA.GOV.HK CKAN ids), docs (optional; defaults to the first dataset's page).
+
+apis:
+  - id: API-0001
+    title: DATA.GOV.HK catalogue
+    description: Search the CKAN catalogue, read dataset metadata, browse the historical archive and filter CSV resources.
+    provider: Digital Policy Office
+    category: government
+    datasets: [hk-dpo-datagovhk1-open-dataset-list]
+    docs: https://data.gov.hk/en/help/api-spec
+
+  - id: API-0002
+    title: A&E waiting times
+    description: Current waiting times at public hospital accident and emergency departments, by triage category.
+    provider: Hospital Authority
+    category: health
+    datasets: [hospital-hadata-ae-waiting-time]
+
+  - id: API-0003
+    title: KMB / Long Win bus arrivals
+    description: KMB and Long Win routes, stops and real-time estimated arrival times.
+    provider: Transport Department
+    category: transport
+    datasets: [hk-td-tis_21-etakmb]
+
+  - id: API-0004
+    title: Citybus arrivals
+    description: Citybus routes, stops and real-time "Next Bus" arrival times.
+    provider: Citybus Limited
+    category: transport
+    datasets: [ctb-eta-transport-realtime-eta]
+
+  - id: API-0005
+    title: Green minibus arrivals
+    description: Green minibus routes, stops and real-time arrival times.
+    provider: Transport Department
+    category: transport
+    datasets: [hk-td-sm_7-real-time-arrival-data-of-gmb]
+
+  - id: API-0006
+    title: Public holidays
+    description: Hong Kong general holidays from the 1823 calendar feed.
+    provider: Digital Policy Office
+    category: government
+    datasets: [hk-dpo-statistic-cal]
+
+  - id: API-0007
+    title: Current weather report
+    description: Latest temperature, humidity, rainfall and UV index across Hong Kong.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-current-weather-report]
+    docs: https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf
+
+  - id: API-0008
+    title: Local weather forecast
+    description: The Observatory's forecast for today and tomorrow.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-local-weather-forecast]
+
+  - id: API-0009
+    title: 9-day weather forecast
+    description: Daily forecast for the next nine days, with sea and soil temperatures.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-9-day-weather-forecast]
+
+  - id: API-0010
+    title: Weather warnings
+    description: Warning signals in force, and the details of each.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-weather-warning-summary, hk-hko-rss-weather-warning-information]
+
+  - id: API-0011
+    title: Special weather tips
+    description: Short notices about notable weather.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-special-weather-tips]
+
+  - id: API-0012
+    title: Earthquakes
+    description: Quick earthquake messages and locally felt earth tremor reports.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-quick-earthquake-messages, hk-hko-rss-locally-felt-earth-tremor-report]
+
+  - id: API-0013
+    title: Gregorian–lunar calendar
+    description: Lunar date, zodiac year and solar term for a Gregorian date.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-gregorian-lunar-calendar-conversion-table]
+
+  - id: API-0014
+    title: MTR next train
+    description: Next train times at MTR heavy rail stations.
+    provider: MTR Corporation Limited
+    category: transport
+    datasets: [mtr-data2-nexttrain-data]
+
+  - id: API-0015
+    title: Light Rail next train
+    description: Next Light Rail trains at each platform.
+    provider: MTR Corporation Limited
+    category: transport
+    datasets: [mtr-lrnt_data-light-rail-nexttrain-data]
+
+  - id: API-0016
+    title: MTR Bus arrivals
+    description: Arrival times of MTR Bus and feeder bus routes.
+    provider: MTR Corporation Limited
+    category: transport
+    datasets: [mtr-mtr_bus-mtr-bus-eta-data]
+
+  - id: API-0017
+    title: Car park vacancy (one-stop)
+    description: Car park locations, opening hours, prices and real-time vacancies.
+    provider: Digital Policy Office
+    category: transport
+    datasets: [hk-dpo-datagovhk1-carpark-info-vacancy]
+
+  - id: API-0018
+    title: New Lantao Bus arrivals
+    description: NLB routes, stops and real-time arrival times on Lantau.
+    provider: New Lantao Bus Company (1973) Limited
+    category: transport
+    datasets: [nlb-bus-nlb-bus-service-v2]
+
+  - id: API-0019
+    title: Tram routes and stops
+    description: Hong Kong Tramways main routes and tram stop locations.
+    provider: Hong Kong Tramways, Limited
+    category: transport
+    datasets: [hktramways-hktramways-main-routes, hktramways-hktramways-tram-stops]
+
+  - id: API-0020
+    title: Sun Ferry arrivals
+    description: Estimated arrival times of the next Sun Ferry sailings.
+    provider: Sun Ferry Services Company Limited
+    category: transport
+    datasets: [sunferry-eta-eta]
+
+  - id: API-0021
+    title: Hong Kong & Kowloon Ferry
+    description: Timetables, fares and estimated arrival times of HKKF sailings.
+    provider: Hong Kong & Kowloon Ferry Limited
+    category: transport
+    datasets: [hkkf-hkkfdata-hkkf-eta-data]
+
+  - id: API-0022
+    title: Fortune Ferry and Water Taxi arrivals
+    description: Estimated arrival times of Fortune Ferry and Hong Kong Water Taxi sailings.
+    provider: Fortune Ferry Company Limited
+    category: transport
+    datasets: [ff-fortune-schedule2, ff-watertaxi-schedule2]
+
+  - id: API-0023
+    title: Flight information
+    description: Arrivals and departures at Hong Kong International Airport.
+    provider: Airport Authority Hong Kong
+    category: transport
+    datasets: [aahk-team1-flight-info]
+
+  - id: API-0024
+    title: Special traffic news
+    description: Road closures, incidents and traffic arrangements as they're announced.
+    provider: Transport Department
+    category: transport
+    datasets: [hk-td-tis_19-special-traffic-news-v2]
+
+  - id: API-0025
+    title: Journey time indicators
+    description: Estimated driving times to major destinations, shown on roadside indicators.
+    provider: Transport Department
+    category: transport
+    datasets: [hk-td-sm_8-journey-time-indicators-v2]
+
+  - id: API-0026
+    title: Traffic snapshot images
+    description: Latest images from traffic cameras across Hong Kong.
+    provider: Transport Department
+    category: transport
+    datasets: [hk-td-tis_2-traffic-snapshot-images]
+
+  - id: API-0027
+    title: Land boundary control point waiting times
+    description: Current queueing times at the land border crossings, arrival and departure.
+    provider: Immigration Department
+    category: transport
+    datasets: [hk-immd-set28-land-boundary-control-points-waiting-time]
+
+  - id: API-0028
+    title: Metered parking spaces
+    description: Locations of metered parking spaces and the occupancy of those with new meters.
+    provider: Transport Department
+    category: transport
+    datasets: [hk-td-msd_1-metered-parking-spaces-data]
+
+  - id: API-0029
+    title: Kowloon East parking vacancy
+    description: Real-time parking vacancies in Kwun Tong, Kowloon Bay, San Po Kong and Kai Tak.
+    provider: Development Bureau
+    category: transport
+    datasets: [hk-devb-sps-sps]
+
+  - id: API-0030
+    title: Rainfall in the past hour
+    description: Hourly rainfall recorded by automatic weather stations, by district.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-rainfall-in-the-past-hour]
+
+  - id: API-0031
+    title: Air Quality Health Index
+    description: Current AQHI at each monitoring station, with the health risk range and forecast.
+    provider: Environmental Protection Department
+    category: environment
+    datasets: [hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations, hk-epd-airteam-current-air-quality-health-index-range-and-forecast]
+
+  - id: API-0032
+    title: Tides
+    description: Latest tidal observations and predicted times and heights of high and low tides.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-latest-tidal-info, hk-hko-rss-times-and-heights-of-high-and-low-tides]
+
+  - id: API-0033
+    title: Tropical cyclone tracks
+    description: Current and forecast positions of tropical cyclones near Hong Kong.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-tc-track-info]
+
+  - id: API-0034
+    title: UV index
+    description: Latest 15-minute mean UV index during the day.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-latest-fifteen-minute-mean-uv-index]
+
+  - id: API-0035
+    title: Lightning
+    description: Cloud-to-ground and cloud-to-cloud lightning counts over Hong Kong in the past hour.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-cloud-ground-lightning-count-past-hour]
+
+  - id: API-0036
+    title: Sun and moon times
+    description: Times of sunrise, sun transit, sunset, moonrise, moon transit and moonset.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-times-of-sunrise-suntransit-sunset, hk-hko-rss-times-of-moonrise-moontransit-moonset]
+
+  - id: API-0037
+    title: Regional weather
+    description: Latest 1-minute temperature, humidity, pressure and 10-minute wind at each weather station.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets:
+      - hk-hko-rss-latest-one-minute-mean-air-temp
+      - hk-hko-rss-latest-one-minute-mean-rh
+      - hk-hko-rss-latest-one-minute-mean-sea-level-pressure
+      - hk-hko-rss-latest-ten-minute-wind-info
+
+  - id: API-0038
+    title: Heat stress
+    description: Hong Kong Heat Index and Wet Bulb Globe Temperature.
+    provider: Hong Kong Observatory
+    category: weather
+    datasets: [hk-hko-rss-hong-kong-heat-index, hk-hko-rss-wet-bulb-globe-temperature]
+
+  - id: API-0039
+    title: Weather and radiation level report
+    description: Daily weather and ambient gamma radiation readings across Hong Kong.
+    provider: Hong Kong Observatory
+    category: environment
+    datasets: [hk-hko-rss-weather-and-radiation-level-report]
+
+  - id: API-0040
+    title: Beach water quality
+    description: Water quality grading of gazetted bathing beaches.
+    provider: Environmental Protection Department
+    category: environment
+    datasets: [hk-epd-beachteam-beach-water-quality-grading]
+
+  - id: API-0041
+    title: Red tide
+    description: Where red tides have been sighted, and the latest situation.
+    provider: Agriculture, Fisheries and Conservation Department
+    category: environment
+    datasets: [hk-afcd-afcdlist-red-tide-location]
+
+  - id: API-0042
+    title: Specialist outpatient waiting times
+    description: Waiting times for new case bookings at public specialist outpatient clinics.
+    provider: Hospital Authority
+    category: health
+    datasets: [hospital-hadata-sop-waiting-time]
+
+  - id: API-0043
+    title: Family medicine clinic quota
+    description: Remaining consultation quota at public general outpatient clinics.
+    provider: Hospital Authority
+    category: health
+    datasets: [hospital-hadata-fmc-quota]
+
+  - id: API-0044
+    title: Flu Express
+    description: Weekly influenza surveillance figures.
+    provider: Department of Health
+    category: health
+    datasets: [hk-dh-chpsebcddr-flu-express]
+
+  - id: API-0045
+    title: Licensed pharmacies
+    description: Pharmacies licensed to sell poisons, with addresses.
+    provider: Department of Health
+    category: health
+    datasets: [hk-dh-dh_do-hk-dh-do-licensed-pharmacy]
+
+  - id: API-0046
+    title: Exchange rates
+    description: Daily HKD exchange rates and the effective exchange rate index.
+    provider: Hong Kong Monetary Authority
+    category: finance
+    datasets: [hk-hkma-t06-t060103er-eeri-daily]
+    docs: https://apidocs.hkma.gov.hk/
+
+  - id: API-0047
+    title: HIBOR
+    description: Daily Hong Kong Interbank Offered Rates.
+    provider: Hong Kong Monetary Authority
+    category: finance
+    datasets: [hk-hkma-t06-t060303hk-interbank-ir-daily]
+    docs: https://apidocs.hkma.gov.hk/
+
+  - id: API-0048
+    title: Interbank liquidity
+    description: Daily aggregate balance, HKD interbank liquidity and the convertibility undertakings.
+    provider: Hong Kong Monetary Authority
+    category: finance
+    datasets: [hk-hkma-dms-daily-figures-interbank-liquidity]
+    docs: https://apidocs.hkma.gov.hk/
+
+  - id: API-0049
+    title: Address lookup
+    description: Turn free-text addresses into structured addresses with coordinates.
+    provider: Digital Policy Office
+    category: places
+    datasets: [hk-dpo-als_01-als]
+
+  - id: API-0050
+    title: Post offices
+    description: Post office locations and opening hours.
+    provider: Hongkong Post
+    category: places
+    datasets: [hk-hkpo-hkpo_ds01-hkpo-post-office]
+
+  - id: API-0051
+    title: Swimming pools
+    description: Public swimming pools, with facilities and opening details.
+    provider: Leisure and Cultural Services Department
+    category: places
+    datasets: [hk-lcsd-csdi-swimming-pools]
+
+  - id: API-0052
+    title: Government press releases
+    description: Press releases from the Hong Kong Government.
+    provider: Information Services Department
+    category: government
+    datasets: [hk-isd-gnmis-gnmis]

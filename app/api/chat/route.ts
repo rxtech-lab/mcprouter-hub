@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   let servers;
   try {
     servers = parseMcpServers(process.env.AGENT_MCP_SERVERS).map((server) =>
-      resolveServer(server, { origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY }),
+      resolveServer(server, { origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "web" }),
     );
   } catch (error) {
     return Response.json({ error: (error as Error).message }, { status: 500 });

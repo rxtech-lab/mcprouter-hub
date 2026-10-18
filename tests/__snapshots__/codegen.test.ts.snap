@@ -17,6 +17,7 @@ export const service: ServiceDefinition = {
   "datasets": [
     "example-dataset"
   ],
+  "apis": [],
   "baseUrl": "https://api.example.test/v1",
   "lang": {
     "param": "language",

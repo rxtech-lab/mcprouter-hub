@@ -19,3 +19,18 @@ test("the landing page hero is a live free chat", async ({ page }) => {
   await expect(chat.getByRole("textbox", { name: "Message" })).toBeVisible();
   await expect(chat.getByRole("status")).toContainText(/free messages left today/);
 });
+
+test("API tracker: filter by status and open an API's details", async ({ page }) => {
+  await page.goto("/sources");
+  await page.getByRole("link", { name: /^APIs/ }).click();
+  await expect(page).toHaveURL(/\/sources\/apis$/);
+  await page.getByRole("link", { name: /^Coming soon/ }).click();
+  await expect(page).toHaveURL(/status=coming-soon/);
+  await expect(page.getByTestId("api-list").getByText("Implemented")).toHaveCount(0);
+
+  await page.goto("/sources/apis?api=API-0014");
+  const dialog = page.getByRole("dialog", { name: "MTR next train" });
+  await expect(dialog.getByText("API-0014")).toBeVisible();
+  await dialog.getByRole("button", { name: "Close" }).click();
+  await expect(page).toHaveURL(/\/sources\/apis$/);
+});

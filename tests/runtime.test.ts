@@ -124,6 +124,7 @@ describe("executeTool", () => {
     title: "Example",
     aliases: [],
     datasets: [],
+    apis: [],
     baseUrl: "https://api.example.test",
     cacheTtl: 60,
     tools: [],

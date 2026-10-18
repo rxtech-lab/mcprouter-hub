@@ -1,6 +1,8 @@
 id: hk-holidays
 title: Hong Kong Public Holidays
 description: General holidays in Hong Kong, from the 1823 calendar feed.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0006]
 datasets:
   - hk-dpo-statistic-cal
 cacheTtl: 86400

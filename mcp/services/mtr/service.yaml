@@ -1,6 +1,8 @@
 id: mtr
 title: MTR
 description: Next train schedules for MTR heavy rail lines and Light Rail, and MTR Bus arrival times.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0014, API-0015, API-0016]
 datasets:
   - mtr-data2-nexttrain-data
   - mtr-lrnt_data-light-rail-nexttrain-data

@@ -14,6 +14,9 @@ export const mcpServerSchema = z.object({
 
 export type McpServerConfig = z.infer<typeof mcpServerSchema>;
 
+/** The agent surface calls are logged under on the usage page. */
+export type AgentChannel = "web" | "telegram" | "whatsapp";
+
 export const DEFAULT_AGENT_SERVERS: McpServerConfig[] = [{ name: "hk", url: "self", headers: {} }];
 
 export function parseMcpServers(raw: string | undefined): McpServerConfig[] {
@@ -35,13 +38,21 @@ export function parseMcpServers(raw: string | undefined): McpServerConfig[] {
 }
 
 /** Resolve "self" to this deployment's endpoint and attach the internal credentials. */
-export function resolveServer(server: McpServerConfig, context: { origin: string; userId: string; internalKey: string | undefined }) {
+export function resolveServer(
+  server: McpServerConfig,
+  context: { origin: string; userId: string; internalKey: string | undefined; channel?: AgentChannel },
+) {
   if (server.url !== "self") return { name: server.name, url: server.url, headers: server.headers, self: false };
   if (!context.internalKey) throw new Error("MCPROUTER_INTERNAL_KEY must be set for the agent to use this app's MCP server");
   return {
     name: server.name,
     url: `${context.origin}/api/mcp/streamable`,
-    headers: { ...server.headers, Authorization: `Bearer ${context.internalKey}`, "x-mcprouter-user": context.userId },
+    headers: {
+      ...server.headers,
+      Authorization: `Bearer ${context.internalKey}`,
+      "x-mcprouter-user": context.userId,
+      ...(context.channel ? { "x-mcprouter-channel": context.channel } : {}),
+    },
     self: true,
   };
 }

@@ -1,9 +1,11 @@
-import { ArrowRight, KeyRound, MessageSquareText } from "lucide-react";
+import { ArrowRight, ChevronRight, KeyRound, MessageSquareText } from "lucide-react";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ButtonLink } from "@/components/m3/button";
 import { ServiceIcon } from "@/components/service-icon";
 import manifest from "@/generated/manifest.json";
+import { serviceApis } from "@/lib/apis";
 import { freeChatConfig } from "@/lib/free-chat";
 import { findService, serviceDatasets } from "@/lib/sources";
 import { BackLink } from "../back-link";
@@ -21,6 +23,7 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
   if (service.id !== id) permanentRedirect(`/sources/${service.id}`);
   const index = manifest.services.indexOf(service);
   const rows = await serviceDatasets(service.datasets);
+  const apis = serviceApis(service.id);
 
   return (
     <>
@@ -45,6 +48,22 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
             <li key={tool.name} className="flex flex-col gap-2 rounded-lg bg-surface-container-low p-4">
               <code className="self-start rounded-xs bg-secondary-container px-2 py-0.5 font-mono text-[13px] text-on-secondary-container">{tool.name}</code>
               <p className="type-body-medium text-on-surface-variant">{tool.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="mb-1 type-title-large">APIs</h2>
+        <p className="mb-4 type-body-medium text-on-surface-variant">Upstream APIs this service implements, by their tracker id.</p>
+        <ul className="stagger grid gap-3 md:grid-cols-2">
+          {apis.map((api) => (
+            <li key={api.id}>
+              <Link href={`/sources/apis?api=${api.id}`} className="state-layer flex h-full items-center gap-3 rounded-lg border border-outline-variant p-4 text-on-surface">
+                <code className="shrink-0 rounded-xs bg-surface-container-high px-2 py-0.5 font-mono text-[13px] text-on-surface-variant">{api.id}</code>
+                <span className="min-w-0 flex-1 type-title-small">{api.title}</span>
+                <ChevronRight size={18} className="shrink-0 text-on-surface-variant" />
+              </Link>
             </li>
           ))}
         </ul>

@@ -118,6 +118,15 @@ function file(view: View) {
   ];
 }
 
+function resource(view: View) {
+  const data: Row = view.data ?? {};
+  return [
+    ui.header({ badge: data.resource?.format || "RES", title: data.resource?.name || "Resource", subtitle: view.input.dataset }),
+    h("pre", { class: "kv mono", style: { display: "block", maxHeight: "320px", overflow: "auto", whiteSpace: "pre-wrap" } }, String(data.content ?? "")),
+    data.omittedCharacters ? ui.footer(view, `${data.omittedCharacters} more characters not shown`) : null,
+  ];
+}
+
 function csv(view: View) {
   const data: Row = view.data ?? {};
   const rows: Row[] = data.rows ?? (Array.isArray(data) ? data : []);
@@ -131,6 +140,7 @@ function csv(view: View) {
 const views: Record<string, (view: View) => Content> = {
   datagovhk_search_datasets: search,
   datagovhk_dataset_details: details,
+  datagovhk_get_resource: resource,
   datagovhk_archive_list_files: archiveFiles,
   datagovhk_archive_file_versions: versions,
   datagovhk_archive_get_file: file,

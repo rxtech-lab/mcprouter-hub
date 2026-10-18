@@ -46,7 +46,7 @@ A token is bound to the `resource` the user approved: a token for `/api/mcp/stre
 2. For anything YAML can't express, set `handler: name` on the tool and export `name` from `mcp/services/<id>/handlers.ts`. When only the HTTP call or its body needs code, keep the YAML request and add `transform` instead (see below).
 3. Run `bun run codegen` (also runs on `bun install`, `dev` and `build`). `generated/` is gitignored.
 
-List the service's CKAN dataset ids under `datasets:`; the tracker counts them as converted.
+List the service's CKAN dataset ids under `datasets:`; the tracker counts them as converted. List the [API tracker](#api-tracker) ids it implements under `apis:`.
 
 ### YAML in brief
 
@@ -100,11 +100,17 @@ mount({
 
 `app.callTool`, `app.refresh`, `app.openLink` and `app.sendMessage` go through the host. In this app's chat they work for members (and are billed); visitors' apps can only open links and ask follow-ups.
 
+## API tracker
+
+[`mcp/apis.yaml`](mcp/apis.yaml) is the single source of truth for the upstream APIs mcprouter serves or plans to serve. Each entry has a permanent id (`API-0001`, `API-0002`, …); new APIs go at the end with the next number, and ids are never reused or renumbered. Status isn't written there: an API is **implemented** when a service YAML lists its id under `apis:`, and **coming soon** otherwise. A pull request that implements an API puts its id in the title, e.g. `feat(mcp): add AQHI (API-0031)`.
+
+`bun run codegen` checks the two agree (unknown or out-of-order ids, a service without `apis:`, or datasets that don't match fail the build) and writes [`APIS.md`](APIS.md), the tracker as a table, and `generated/apis.json`, which the public **Data sources → APIs** page (`/sources/apis`) reads. Commit `APIS.md` with the YAML change; a test fails when it's stale.
+
 ## Scripts
 
 | Script | |
 |---|---|
-| `bun run codegen [--check]` | YAML → `generated/` |
+| `bun run codegen [--check]` | YAML → `generated/` and `APIS.md` |
 | `bun run theme` | Regenerate `app/m3-tokens.css` from the seed colour |
 | `bun run catalog:sync [--limit N]` | Sync the CKAN catalogue without the cron's time budget |
 | `bun run tracker:report [--markdown]` | Tracker summary in the terminal |

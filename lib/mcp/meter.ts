@@ -70,14 +70,23 @@ export async function meterToolCall(
   const log = (status: ToolCallLog["status"], errorCode: string | null = null) =>
     deps.defer(
       deps
-        .log({ userId: caller.userId, apiKeyId: caller.apiKeyId, ...call, status, errorCode, latencyMs: Date.now() - startedAt })
+        .log({
+          userId: caller.userId,
+          apiKeyId: caller.apiKeyId,
+          channel: caller.channel ?? null,
+          oauthClientId: caller.oauthClientId ?? null,
+          ...call,
+          status,
+          errorCode,
+          latencyMs: Date.now() - startedAt,
+        })
         .catch((error) => console.error("[meter] failed to log tool call", error)),
     );
 
   // The free agent has its own daily message limit; its tool calls are not charged to anyone.
   if (deps.billingEnabled && !caller.guest) {
     const idempotencyKey = `mcp:${caller.userId}:${crypto.randomUUID()}`;
-    const metadata = { service: call.service, tool: call.tool, apiKeyId: caller.apiKeyId };
+    const metadata = { service: call.service, tool: call.tool, apiKeyId: caller.apiKeyId, channel: caller.channel ?? null };
     const record = () => deps.record({ rxlabUserId: caller.userId, item: billingConfig.usageItem, idempotencyKey, metadata });
     try {
       if (deps.creditUnit) {

@@ -1,6 +1,8 @@
 id: datagovhk-catalog
 title: DATA.GOV.HK Catalogue
 description: Search the DATA.GOV.HK catalogue of 3,800+ datasets, read dataset details, browse the historical archive and query CSV resources.
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0001]
 datasets:
   - hk-dpo-datagovhk1-open-dataset-list
 baseUrl: https://api.data.gov.hk
@@ -20,7 +22,7 @@ tools:
       limit: { type: integer, minimum: 1, maximum: 50, default: 20, description: "Maximum results" }
   - name: datagovhk_dataset_details
     title: Dataset details
-    description: Full CKAN metadata for one DATA.GOV.HK dataset - description, provider, update frequency, data dictionary and every resource with its format and URL.
+    description: Full CKAN metadata for one DATA.GOV.HK dataset - description, provider, update frequency, data dictionary and every resource with its format and URL. Read a resource with datagovhk_get_resource.
     baseUrl: https://data.gov.hk
     path: /{lang}-data/api/3/action/package_show
     input:
@@ -29,6 +31,14 @@ tools:
     response:
       root: result
       pick: [name, title, notes, organization, groups, update_frequency, data_dictionary, metadata_modified, resources]
+  - name: datagovhk_get_resource
+    title: Read a resource
+    description: Current content of one resource (JSON, XML, CSV, text…) of a DATA.GOV.HK dataset, fetched live from the URL the dataset publishes. Long files are cut off; the result says how many characters were omitted. For large CSVs, query them with datagovhk_filter_csv instead.
+    handler: getResource
+    input:
+      dataset: { type: string, required: true, description: "Dataset id, e.g. hk-hko-rss-current-weather-report" }
+      resource: { type: string, description: "Resource id, name or URL from datagovhk_dataset_details. Defaults to the dataset's first resource" }
+      maxChars: { type: integer, minimum: 1000, maximum: 50000, default: 20000, description: "Maximum characters to return" }
   - name: datagovhk_archive_list_files
     title: Historical archive - list files
     description: List files kept in the DATA.GOV.HK historical archive between two dates, optionally filtered by category, provider, format or a search term.

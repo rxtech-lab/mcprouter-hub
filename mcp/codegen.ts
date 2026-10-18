@@ -1,4 +1,5 @@
 import { parse as parseYaml } from "yaml";
+import { renderApisMarkdown, resolveApis } from "./apis";
 import { serviceSpec, type ParamSpec, type ServiceSpec } from "./schema";
 
 /**
@@ -171,6 +172,7 @@ export type Manifest = {
     description?: string;
     aliases: string[];
     datasets: string[];
+    apis: string[];
     tools: Array<{ name: string; description: string }>;
   }>;
   /** Dataset id → service ids that convert it. */
@@ -189,6 +191,7 @@ export function buildManifest(specs: ServiceSpec[]): Manifest {
       ...(spec.description ? { description: spec.description } : {}),
       aliases: spec.aliases,
       datasets: spec.datasets,
+      apis: spec.apis,
       tools: spec.tools.map((tool) => ({ name: tool.name, description: tool.description })),
     })),
     datasets: Object.fromEntries(Object.entries(datasets).sort(([a], [b]) => a.localeCompare(b))),
@@ -199,8 +202,11 @@ export function generateAppStyles(styles: string): string {
   return [HEADER, "// Source: mcp/apps/styles.css", "", `export const APP_STYLES = ${JSON.stringify(styles)};`, ""].join("\n");
 }
 
-/** Validate every source and return the generated files, keyed by path relative to the repo root. */
-export function generate(sources: ServiceSource[], appStyles = ""): Map<string, string> {
+/**
+ * Validate every source and return the generated files, keyed by path relative to the repo root.
+ * With `apisYaml` (`mcp/apis.yaml`), also checks the services against the API tracker and writes it out.
+ */
+export function generate(sources: ServiceSource[], appStyles = "", apisYaml?: string): Map<string, string> {
   const problems: string[] = [];
   const specs: ServiceSpec[] = [];
   const scripts = new Map<string, string | null>();
@@ -228,6 +234,8 @@ export function generate(sources: ServiceSource[], appStyles = ""): Map<string, 
       owners.set(tool.name, spec.id);
     }
   }
+  const apis = apisYaml === undefined ? null : resolveApis(apisYaml, specs);
+  if (apis) problems.push(...apis.problems);
   if (problems.length) throw new CodegenError(problems);
 
   const files = new Map<string, string>();
@@ -235,5 +243,9 @@ export function generate(sources: ServiceSource[], appStyles = ""): Map<string, 
   files.set("generated/registry.ts", generateRegistry(specs));
   files.set("generated/app-styles.ts", generateAppStyles(appStyles));
   files.set("generated/manifest.json", `${JSON.stringify(buildManifest(specs), null, 2)}\n`);
+  if (apis?.tracker) {
+    files.set("generated/apis.json", `${JSON.stringify(apis.tracker, null, 2)}\n`);
+    files.set("APIS.md", renderApisMarkdown(apis.tracker, specs));
+  }
   return files;
 }

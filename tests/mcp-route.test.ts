@@ -4,7 +4,7 @@ import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vite
 import { db } from "@/db";
 import { toolCalls } from "@/db/schema";
 import { services } from "@/generated/registry";
-import { INTERNAL_USER_HEADER } from "@/lib/api-keys";
+import { INTERNAL_CHANNEL_HEADER, INTERNAL_USER_HEADER } from "@/lib/api-keys";
 import { setCacheForTesting } from "@/lib/mcp/cache";
 import { createServiceRoute } from "@/lib/mcp/handler";
 
@@ -26,11 +26,12 @@ let nextId = 1;
 
 type RpcResponse = { result?: Record<string, unknown> & { tools?: Array<Record<string, unknown>>; content?: Array<{ type: string; text: string }>; isError?: boolean }; error?: { code: number; message: string } };
 
-function rpcRequest(method: string, params: unknown, options: { user?: string; token?: string | null; path?: string } = {}) {
+function rpcRequest(method: string, params: unknown, options: { user?: string; token?: string | null; path?: string; channel?: string } = {}) {
   const headers: Record<string, string> = { "content-type": "application/json", accept: "application/json, text/event-stream" };
   const token = options.token === undefined ? INTERNAL_KEY : options.token;
   if (token) headers.authorization = `Bearer ${token}`;
   if (options.user !== "") headers[INTERNAL_USER_HEADER] = options.user ?? "user-1";
+  if (options.channel) headers[INTERNAL_CHANNEL_HEADER] = options.channel;
   return new Request(`https://hub.example${options.path ?? "/api/mcp/streamable"}`, {
     method: "POST",
     headers,
@@ -138,7 +139,15 @@ describe("MCP endpoint", () => {
       meta: { source: "https://data.etabus.gov.hk/v1/transport/kmb/stop-eta/ABC123", total: 1, returned: 1, truncated: false },
     });
     expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(await loggedCalls("route-ok", 1)).toMatchObject([{ service: busService.id, tool: "kmb_stop_eta", status: "ok", errorCode: null, apiKeyId: null }]);
+    expect(await loggedCalls("route-ok", 1)).toMatchObject([{ service: busService.id, tool: "kmb_stop_eta", status: "ok", errorCode: null, apiKeyId: null, channel: "web" }]);
+  });
+
+  it("logs the agent channel the internal caller names, and the web chat for anything else", async () => {
+    fetchMock.mockImplementation(async () => new Response(JSON.stringify({ data: [] })));
+    await callTool("kmb_stop_eta", { stopId: "ABC123" }, { user: "route-telegram", channel: "telegram" });
+    await callTool("kmb_stop_eta", { stopId: "ABC123" }, { user: "route-spoofed", channel: "oauth" });
+    expect(await loggedCalls("route-telegram", 1)).toMatchObject([{ channel: "telegram", oauthClientId: null }]);
+    expect(await loggedCalls("route-spoofed", 1)).toMatchObject([{ channel: "web" }]);
   });
 
   it("sends a POST tool's arguments as the JSON body", async () => {
