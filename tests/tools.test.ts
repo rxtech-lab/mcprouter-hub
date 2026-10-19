@@ -2320,8 +2320,189 @@ const cases: Case[] = [
 </image-list>`,
     data: [{ key: "K505F", region: "九龍", district: "黃大仙區", description: "龍翔道/竹園道", latitude: 22.34290651, longitude: 114.1845919, imageUrl: "https://tdcctv.data.one.gov.hk/K505F.JPG" }],
   },
-];
+  // hk-taxi-fleet
+  {
+    tool: "amigo_taxi_fleet",
+    input: { status: "V", taxiType: "O", lat: 22.3, long: 114.17, radiusKm: 5 },
+    request: { url: "https://api.amigo.taxi/webx/v1/vehicle/list" },
+    reply: {
+      taxis: [
+        { veh_id: "AMG1001", taxi_type: "O", passenger_cap: 4, op_status: "V", lat: 22.301, long: 114.171, time_stamp: "2026-10-19T12:00:00Z" },
+        { veh_id: "AMG1002", taxi_type: "O", passenger_cap: 5, op_status: "V", lat: 22.45, long: 114.17, time_stamp: "2026-10-19T12:00:00Z" },
+        { veh_id: "AMG1003", taxi_type: "P", passenger_cap: 4, op_status: "O", lat: 22.301, long: 114.171, time_stamp: "2026-10-19T12:00:00Z" },
+      ],
+    },
+    data: [
+      {
+        veh_id: "AMG1001",
+        taxi_type: "O",
+        taxi_type_label: "Ordinary",
+        passenger_cap: 4,
+        op_status: "V",
+        status_label: "Vacant",
+        lat: 22.301,
+        long: 114.171,
+        time_stamp: "2026-10-19T12:00:00Z",
+        distance_km: 0.15,
+      },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 30,
+  },
+  {
+    tool: "big_boss_taxi_fleet",
+    input: { vehId: "BBT002" },
+    request: { url: "https://data.bigboss.hk/api/opendata/get_data/all" },
+    reply: {
+      taxis: [
+        { veh_id: "BBT001", taxi_type: "O", passenger_cap: 4, op_status: "V", lat: 22.31, long: 114.18, time_stamp: "2026-10-19T12:00:00Z" },
+        { veh_id: "BBT002", taxi_type: "W", passenger_cap: 5, op_status: "N", lat: 22.32, long: 114.19, time_stamp: "2026-10-19T12:00:00Z" },
+      ],
+    },
+    data: [
+      {
+        veh_id: "BBT002",
+        taxi_type: "W",
+        taxi_type_label: "Wheelchair",
+        passenger_cap: 5,
+        op_status: "N",
+        status_label: "Not in service",
+        lat: 22.32,
+        long: 114.19,
+        time_stamp: "2026-10-19T12:00:00Z",
+      },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 30,
+  },
 
+  // censtatd-shipping
+  {
+    tool: "shipping_port_cargo_throughput",
+    input: { freq: "Y", period: "2025", direction: "Total", shipmentType: "Total" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55110&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", description: "Request Confirmation" } },
+      dataSet: [
+        { DIRECTION: "", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", TRANS: "T", TRANSDesc: "Total", freq: "Y", period: "2024", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 176731, sd_value: "" },
+        { DIRECTION: "", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", TRANS: "T", TRANSDesc: "Total", freq: "Y", period: "2025", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 171186, sd_value: "" },
+        { DIRECTION: "In", DIRECTIONDesc: "Inward", SHIPMENT_TYPE: "DS", SHIPMENT_TYPEDesc: "Direct shipment", TRANS: "S", TRANSDesc: "Seaborne", freq: "Y", period: "2025", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 62507, sd_value: "" },
+      ],
+    },
+    data: [
+      { DIRECTION: "Total", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "Total", TRANS: "T", TRANSDesc: "Total", freq: "Y", period: "2025", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 171186, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_seaborne_cargo_throughput",
+    input: { freq: "Y", period: "2025", direction: "In" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55111&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", description: "Request Confirmation" } },
+      dataSet: [
+        { DIRECTION: "In", DIRECTIONDesc: "Inward", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "Y", period: "2024", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 73000, sd_value: "" },
+        { DIRECTION: "In", DIRECTIONDesc: "Inward", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "Y", period: "2025", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 71500, sd_value: "" },
+      ],
+    },
+    data: [
+      { DIRECTION: "In", DIRECTIONDesc: "Inward", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "Total", freq: "Y", period: "2025", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 71500, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_seaborne_cargo_monthly",
+    input: { period: "202512" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55111A&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", description: "Request Confirmation" } },
+      dataSet: [
+        { DIRECTION: "", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "M", period: "202511", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 9100, sd_value: "" },
+        { DIRECTION: "", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "M", period: "202512", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 9500, sd_value: "" },
+      ],
+    },
+    data: [
+      { DIRECTION: "Total", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "Total", freq: "M", period: "202512", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 9500, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_river_cargo_throughput",
+    input: { freq: "Q", period: "2025" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55112&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", description: "Request Confirmation" } },
+      dataSet: [
+        { DIRECTION: "", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "Q", period: "202509", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 14200, sd_value: "" },
+        { DIRECTION: "", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "Q", period: "202512", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 15100, sd_value: "" },
+      ],
+    },
+    data: [
+      { DIRECTION: "Total", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "Total", freq: "Q", period: "202512", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 15100, sd_value: "" },
+      { DIRECTION: "Total", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "Total", freq: "Q", period: "202509", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 14200, sd_value: "" },
+    ],
+    meta: { total: 2, returned: 2, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_river_cargo_monthly",
+    input: { period: "202512", direction: "Out" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55112A&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", description: "Request Confirmation" } },
+      dataSet: [
+        { DIRECTION: "Out", DIRECTIONDesc: "Outward", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "M", period: "202512", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 2100, sd_value: "" },
+      ],
+    },
+    data: [
+      { DIRECTION: "Out", DIRECTIONDesc: "Outward", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "Total", freq: "M", period: "202512", sv: "CGO_WT", svDesc: "(\x27000 tonnes)", figure: 2100, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_port_cargo_seasonally_adjusted",
+    input: { period: "202512", direction: "Total" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55113&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", description: "Request Confirmation" } },
+      dataSet: [
+        { DIRECTION: "", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "Q", period: "202512", sv: "SA_CGO_WT_chg", svDesc: "%", figure: 1.8, sd_value: "" },
+      ],
+    },
+    data: [
+      { DIRECTION: "Total", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "Total", freq: "Q", period: "202512", sv: "SA_CGO_WT_chg", svDesc: "%", figure: 1.8, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_port_cargo_gba_city",
+    input: { city: "Shenzhen", period: "2025", lang: "tc" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55114&full_series=1&lang=tc" },
+    reply: {
+      header: { status: { name: "Success", description: "Request Confirmation" } },
+      dataSet: [
+        { DIRECTION: "", DIRECTIONDesc: "總計", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "總計", TRANS: "T", TRANSDesc: "總計", COUNTRY: "SZ", COUNTRYDesc: "深圳 (Shenzhen)", freq: "Y", period: "2025", sv: "CGO_WT", svDesc: "(千公噸)", figure: 18500, sd_value: "" },
+        { DIRECTION: "", DIRECTIONDesc: "總計", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "總計", TRANS: "T", TRANSDesc: "總計", COUNTRY: "GZ", COUNTRYDesc: "廣州 (Guangzhou)", freq: "Y", period: "2025", sv: "CGO_WT", svDesc: "(千公噸)", figure: 22100, sd_value: "" },
+      ],
+    },
+    data: [
+      { DIRECTION: "Total", DIRECTIONDesc: "總計", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "總計", TRANS: "T", TRANSDesc: "總計", COUNTRY: "SZ", COUNTRYDesc: "深圳 (Shenzhen)", freq: "Y", period: "2025", sv: "CGO_WT", svDesc: "(千公噸)", figure: 18500, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    name: "shipping_port_cargo_throughput rejects a malformed period",
+    tool: "shipping_port_cargo_throughput",
+    input: { period: "2025-Q1" },
+    error: /period/,
+  },
+];
 const fetchMock = vi.fn<(url: string, init: RequestInit) => Promise<Response>>();
 let cache = memoryCache();
 
@@ -2478,5 +2659,19 @@ describe("MCP tool upstream behaviour", () => {
       String(url).endsWith("tc_list.xml") ? new Response("<TropicalCycloneList></TropicalCycloneList>") : new Response("<html>Not found</html>", { status: 404 }),
     );
     await expect(executeTool(service, tool, { id: 2602 })).rejects.toThrow(/no track for tropical cyclone 2602/);
+  });
+
+  it("reports a malformed taxi fleet payload", async () => {
+    const { service, tool } = find("amigo_taxi_fleet");
+    fetchMock.mockImplementation(async () => new Response(JSON.stringify({ unexpected: true })));
+    await expect(executeTool(service, tool, {})).rejects.toMatchObject({ code: "upstream_parse" });
+  });
+
+  it("reports a C&SD validation failure returned with HTTP 200", async () => {
+    const { service, tool } = find("shipping_port_cargo_throughput");
+    fetchMock.mockImplementation(async () =>
+      new Response(JSON.stringify({ header: { status: { name: "Fail", description: "Validation Fail" } }, error: { code: "E006", message: "Invalid Table ID" } })),
+    );
+    await expect(executeTool(service, tool, {})).rejects.toMatchObject({ code: "upstream_parse", message: expect.stringMatching(/Validation Fail/) });
   });
 });

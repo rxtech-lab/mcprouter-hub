@@ -50,15 +50,15 @@ describe("card builders", () => {
 
   it("groups bus arrivals by route and reads the asked-for language", () => {
     const rows = [
-      { route: "1A", dir: "O", seq: 5, dest_en: "STAR FERRY", dest_tc: "尖沙咀碼頭", eta: soon(3) },
-      { route: "1A", dir: "O", seq: 5, dest_en: "STAR FERRY", dest_tc: "尖沙咀碼頭", eta: soon(14) },
-      { route: "N216", dir: "O", seq: 5, dest_en: "YAU TONG", dest_tc: "油塘", eta: null, rmk_tc: "最後班次已開出" },
+      { route: "1A", dir: "O", seq: 5, dest_en: "STAR FERRY", dest_tc: "\u5c16\u6c99\u5480\u78bc\u982d", eta: soon(3) },
+      { route: "1A", dir: "O", seq: 5, dest_en: "STAR FERRY", dest_tc: "\u5c16\u6c99\u5480\u78bc\u982d", eta: soon(14) },
+      { route: "N216", dir: "O", seq: 5, dest_en: "YAU TONG", dest_tc: "\u6cb9\u5858", eta: null, rmk_tc: "\u6700\u5f8c\u73ed\u6b21\u5df2\u958b\u51fa" },
     ];
     const card = cardForToolResult(result("hk-bus", "kmb_stop_eta", { stopId: "AB12", lang: "tc" }, rows))!;
     expect(card).toMatchObject({ badge: "KMB", accent: "#e1251b", subtitle: "AB12" });
     expect(card.blocks.map((block) => block.kind === "row" && [block.title, block.trailing?.map((chip) => chip.text)])).toEqual([
-      ["To 尖沙咀碼頭", ["3 min", "14 min"]],
-      ["To 油塘", ["最後班次已開出"]],
+      ["To \u5c16\u6c99\u5480\u78bc\u982d", ["3 min", "14 min"]],
+      ["To \u6cb9\u5858", ["\u6700\u5f8c\u73ed\u6b21\u5df2\u958b\u51fa"]],
     ]);
   });
 
@@ -77,7 +77,7 @@ describe("card builders", () => {
       result("hko-weather", "hko_current_weather", {}, { temperature: { data: [{ place: "Hong Kong Observatory", value: 27 }] }, warningMessage: "Strong Monsoon Signal" }),
     )!;
     expect(card.blocks.slice(0, 2)).toEqual([
-      { kind: "hero", value: "27°C", label: "Hong Kong Observatory", detail: undefined, tone: undefined },
+      { kind: "hero", value: "27\u00b0C", label: "Hong Kong Observatory", detail: undefined, tone: undefined },
       { kind: "notice", text: "Strong Monsoon Signal", tone: "warning" },
     ]);
   });
@@ -90,11 +90,11 @@ describe("card builders", () => {
         { scheduled: "2026-10-18T23:55+08:00", flight: "UO 848", airline: "HKE", destinations: ["NRT"], status: null, state: "scheduled" },
       ], { total: 3, returned: 3, truncated: false }),
     )!;
-    expect(card.title).toBe("Departures · Sun 18 Oct");
+    expect(card.title).toBe("Departures \u00b7 Sun 18 Oct");
     expect(card.blocks).toEqual([
       { kind: "notice", text: "1 flight cancelled", tone: "warning" },
-      { kind: "row", leading: { text: "00:05" }, title: "CX 261", subtitle: "To CDG · Gate 7 · Also QF 8261", trailing: [{ text: "Dep 00:46", tone: "success" }], muted: false },
-      { kind: "row", leading: { text: "07:40" }, title: "5X 003", subtitle: "To BLR · CGN", trailing: [{ text: "Cancelled", tone: "danger" }], muted: true },
+      { kind: "row", leading: { text: "00:05" }, title: "CX 261", subtitle: "To CDG \u00b7 Gate 7 \u00b7 Also QF 8261", trailing: [{ text: "Dep 00:46", tone: "success" }], muted: false },
+      { kind: "row", leading: { text: "07:40" }, title: "5X 003", subtitle: "To BLR \u00b7 CGN", trailing: [{ text: "Cancelled", tone: "danger" }], muted: true },
       { kind: "row", leading: { text: "23:55" }, title: "UO 848", subtitle: "To NRT", trailing: [{ text: "Scheduled", tone: "neutral" }], muted: false },
     ]);
   });
@@ -152,13 +152,13 @@ describe("card builders", () => {
   it("lists tracked tropical cyclones with their intensity and distance from Hong Kong", () => {
     const current = { time: "2026-10-01T02:00:00+08:00", category: "typhoon", intensity: "Typhoon", maximumWindKmh: 120, latitude: 20.1, longitude: 118.4, distanceKm: 501, bearing: "ESE" };
     const card = cardForToolResult(
-      result("hko-cyclone", "hko_tropical_cyclones", {}, { cyclones: [{ id: 2641, name: "SURIGAE", englishName: "SURIGAE", chineseName: "舒力基", current, closestApproach: null, forecastPoints: 4 }] }),
+      result("hko-cyclone", "hko_tropical_cyclones", {}, { cyclones: [{ id: 2641, name: "SURIGAE", englishName: "SURIGAE", chineseName: "\u8212\u529b\u57fa", current, closestApproach: null, forecastPoints: 4 }] }),
     )!;
     expect(card.blocks).toEqual([
       {
         kind: "row",
         leading: { text: "2641" },
-        title: "SURIGAE 舒力基",
+        title: "SURIGAE \u8212\u529b\u57fa",
         subtitle: "501 km ESE of Hong Kong at Thu 1 Oct, 02:00",
         trailing: [{ text: "Typhoon", tone: "danger" }, { text: "120 km/h" }],
       },
@@ -188,7 +188,7 @@ describe("card builders", () => {
         kind: "row",
         leading: { text: "H1" },
         title: "Gloucester Road eastbound near Revenue Tower",
-        subtitle: "Cross Harbour Tunnel · Eastern Harbour Crossing",
+        subtitle: "Cross Harbour Tunnel \u00b7 Eastern Harbour Crossing",
         trailing: [{ text: "CH 4 min", tone: "success" }, { text: "EH Traffic congestion", tone: "danger" }],
       },
     ]);
@@ -199,11 +199,11 @@ describe("card builders", () => {
     const card = cardForToolResult(
       result("epd-beach", "beach_water_quality", {}, { updated: "2026-10-16T14:04:42+08:00", count: 2, beaches: [beach("RB", "Repulse Bay Beach", 1, "Good"), beach("DW", "Deep Water Bay Beach", 3, "Poor")] }),
     )!;
-    expect(card).toMatchObject({ badge: "≈", accent: "#00838f", subtitle: "2 beaches · graded Fri 16 Oct, 14:04" });
+    expect(card).toMatchObject({ badge: "\u2248", accent: "#00838f", subtitle: "2 beaches \u00b7 graded Fri 16 Oct, 14:04" });
     expect(card.blocks).toEqual([
       { kind: "notice", text: "Below the swimming standard: Deep Water Bay Beach", tone: "warning" },
-      { kind: "row", leading: { text: "DW" }, title: "Deep Water Bay Beach", subtitle: "Southern", trailing: [{ text: "Poor · 3", tone: "warning" }] },
-      { kind: "row", leading: { text: "RB" }, title: "Repulse Bay Beach", subtitle: "Southern", trailing: [{ text: "Good · 1", tone: "success" }] },
+      { kind: "row", leading: { text: "DW" }, title: "Deep Water Bay Beach", subtitle: "Southern", trailing: [{ text: "Poor \u00b7 3", tone: "warning" }] },
+      { kind: "row", leading: { text: "RB" }, title: "Repulse Bay Beach", subtitle: "Southern", trailing: [{ text: "Good \u00b7 1", tone: "success" }] },
     ]);
   });
 
@@ -215,7 +215,7 @@ describe("card builders", () => {
       }),
     )!;
     expect(card.title).toBe("Tides at Quarry Bay");
-    expect(card.footer).toBe("Sun 18 Oct · Hong Kong time");
+    expect(card.footer).toBe("Sun 18 Oct \u00b7 Hong Kong time");
     expect(card.blocks).toEqual([
       { kind: "row", leading: { text: "High", tone: "info" }, title: "00:30", trailing: [{ text: "2.27 m", tone: "accent" }] },
       { kind: "row", leading: { text: "Low", tone: "neutral" }, title: "09:47", trailing: [{ text: "1.03 m", tone: "accent" }] },
@@ -262,11 +262,11 @@ describe("card builders", () => {
   it("shows ferry sailings with their departure, fast ferries marked", () => {
     const sailing = { direction: null, from: "Central", to: "Cheung Chau", eta: null, status: "scheduled", fast: true };
     const card = cardForToolResult(
-      result("hk-ferry", "ferry_arrivals", { route: "CECC" }, { operator: "Sun Ferry", route: "CECC", name: "Central – Cheung Chau", updatedAt: "2026-10-18T23:10:08+08:00", sailings: [{ ...sailing, departure: "2026-10-19T06:10:00+08:00" }] }),
+      result("hk-ferry", "ferry_arrivals", { route: "CECC" }, { operator: "Sun Ferry", route: "CECC", name: "Central \u2013 Cheung Chau", updatedAt: "2026-10-18T23:10:08+08:00", sailings: [{ ...sailing, departure: "2026-10-19T06:10:00+08:00" }] }),
     )!;
-    expect(card).toMatchObject({ title: "Central – Cheung Chau", subtitle: "Sun Ferry · route CECC", footer: "Updated 23:10" });
+    expect(card).toMatchObject({ title: "Central \u2013 Cheung Chau", subtitle: "Sun Ferry \u00b7 route CECC", footer: "Updated 23:10" });
     expect(card.blocks).toEqual([
-      { kind: "row", leading: { text: "06:10" }, title: "Central → Cheung Chau", subtitle: null, trailing: [{ text: "Fast", tone: "info" }, { text: "Departs 06:10" }] },
+      { kind: "row", leading: { text: "06:10" }, title: "Central \u2192 Cheung Chau", subtitle: null, trailing: [{ text: "Fast", tone: "info" }, { text: "Departs 06:10" }] },
     ]);
   });
 
@@ -280,7 +280,7 @@ describe("card builders", () => {
       occupied: spaces - vacant,
       notInUse: 0,
       noData: 0,
-      hours: ["Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00"],
+      hours: ["Mon\u2013Sat 08:00\u201324:00; Sun and public holidays 10:00\u201322:00"],
       maxStayMinutes: [30],
       hourlyRate: [16],
       latitude: 22.278,
@@ -298,8 +298,44 @@ describe("card builders", () => {
     expect(card).toMatchObject({ title: "Metered parking: road", subtitle: "Updated 21:49", footer: null });
     expect(card.blocks).toEqual([
       { kind: "stats", items: [{ label: "Vacant", value: "15" }, { label: "Occupied", value: "25" }, { label: "Spaces", value: "40" }] },
-      { kind: "row", title: "Lockhart Road", subtitle: "Wan Chai · Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00", trailing: [{ text: "15 free", tone: "success" }, { text: "of 38" }] },
-      { kind: "row", title: "Stewart Road", subtitle: "Wan Chai · Mon–Sat 08:00–24:00; Sun and public holidays 10:00–22:00", trailing: [{ text: "0 free", tone: "danger" }, { text: "of 2" }] },
+      { kind: "row", title: "Lockhart Road", subtitle: "Wan Chai \u00b7 Mon\u2013Sat 08:00\u201324:00; Sun and public holidays 10:00\u201322:00", trailing: [{ text: "15 free", tone: "success" }, { text: "of 38" }] },
+      { kind: "row", title: "Stewart Road", subtitle: "Wan Chai \u00b7 Mon\u2013Sat 08:00\u201324:00; Sun and public holidays 10:00\u201322:00", trailing: [{ text: "0 free", tone: "danger" }, { text: "of 2" }] },
+    ]);
+  });
+
+  it("shows taxi fleet status and distance", () => {
+    const card = cardForToolResult(
+      result("hk-taxi-fleet", "amigo_taxi_fleet", { status: "V" }, [
+        { veh_id: "AMG1001", taxi_type: "U", taxi_type_label: "Urban (Red)", passenger_cap: 4, op_status: "V", status_label: "Vacant", distance_km: 1.25 },
+      ]),
+    )!;
+    expect(card).toMatchObject({ accent: "#d97706", badge: "AMG", title: "Amigo Fleet", subtitle: "1 vehicles \u00b7 Status V" });
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        leading: { text: "U", tone: "accent" },
+        title: "AMG1001",
+        subtitle: "Urban (Red) \u00b7 4 seats \u00b7 1.25 km",
+        trailing: [{ text: "Vacant", tone: "success" }],
+      },
+    ]);
+  });
+
+  it("shows shipping statistics rows with throughput figures", () => {
+    const card = cardForToolResult(
+      result("censtatd-shipping", "shipping_port_cargo_throughput", { period: "2025", freq: "Y" }, [
+        { freq: "Y", period: "2025", DIRECTIONDesc: "Inward", SHIPMENT_TYPEDesc: "Direct shipment", TRANSDesc: "Seaborne", svDesc: "('000 tonnes)", figure: 62507, sd_value: "" },
+      ]),
+    )!;
+    expect(card).toMatchObject({ accent: "#0f766e", badge: "SHIP", title: "Port Cargo Throughput", subtitle: "Period 2025 \u00b7 Freq Y \u00b7 1 rows" });
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        leading: { text: "Y 2025", tone: "accent" },
+        title: "Inward \u00b7 Direct shipment",
+        subtitle: "Seaborne \u00b7 ('000 tonnes)",
+        trailing: [{ text: "62,507 ('000 tonnes)", tone: "accent" }],
+      },
     ]);
   });
 
@@ -342,7 +378,7 @@ describe("uiSpecCard", () => {
       elements: {
         card: { type: "Card", props: { title: "Hong Kong now", subtitle: "HKO" }, children: ["grid", "warn", "list", "table", "kv", "source"] },
         grid: { type: "Grid", props: {}, children: ["temp", "humidity"] },
-        temp: { type: "Metric", props: { label: "Temperature", value: "28", unit: "°C" } },
+        temp: { type: "Metric", props: { label: "Temperature", value: "28", unit: "\u00b0C" } },
         humidity: { type: "Metric", props: { label: "Humidity", value: "71", unit: "%" } },
         warn: { type: "Alert", props: { title: "Thunderstorm warning", message: "Until 23:00", tone: "error" } },
         list: { type: "List", props: { items: [{ title: "1A", subtitle: "Star Ferry", trailing: "3 min" }] } },
@@ -353,7 +389,7 @@ describe("uiSpecCard", () => {
     });
     expect(card).toMatchObject({ title: "Hong Kong now", subtitle: "HKO", badge: "H", accent: "#216487" });
     expect(card.blocks).toEqual([
-      { kind: "stats", items: [{ label: "Temperature", value: "28°C" }, { label: "Humidity", value: "71%" }] },
+      { kind: "stats", items: [{ label: "Temperature", value: "28\u00b0C" }, { label: "Humidity", value: "71%" }] },
       { kind: "notice", text: "Thunderstorm warning: Until 23:00", tone: "danger" },
       { kind: "row", title: "1A", subtitle: "Star Ferry", trailing: [{ text: "3 min", tone: "accent" }] },
       { kind: "row", title: "QMH", subtitle: "Region: HK Island", trailing: [{ text: "2 hours", tone: "accent" }] },
@@ -367,12 +403,12 @@ describe("uiSpecCard", () => {
       root: "stack",
       elements: {
         stack: { type: "Stack", props: {}, children: ["heading", "metric", "stack"] },
-        heading: { type: "Heading", props: { text: "九天天氣預報" } },
-        metric: { type: "Metric", props: { label: "最高", value: "32", unit: "°C" } },
+        heading: { type: "Heading", props: { text: "\u4e5d\u5929\u5929\u6c23\u9810\u5831" } },
+        metric: { type: "Metric", props: { label: "\u6700\u9ad8", value: "32", unit: "\u00b0C" } },
       },
     });
-    expect(card).toMatchObject({ title: "九天天氣預報", badge: "九" });
-    expect(card.blocks).toEqual([{ kind: "hero", value: "32°C", label: "最高", detail: null }]);
+    expect(card).toMatchObject({ title: "\u4e5d\u5929\u5929\u6c23\u9810\u5831", badge: "\u4e5d" });
+    expect(card.blocks).toEqual([{ kind: "hero", value: "32\u00b0C", label: "\u6700\u9ad8", detail: null }]);
   });
 });
 
@@ -403,7 +439,7 @@ describe("render", () => {
     expect(new Set(chars).size).toBe(chars.length);
     for (const char of "Test cardmcprouter+4") expect(chars).toContain(char);
     // Satori draws an ellipsis where it cuts text; without it in the subset it shows as a box.
-    expect(chars).toContain("…");
+    expect(chars).toContain("\u2026");
   });
 
   it("draws an SVG and a PNG twice its size", async () => {

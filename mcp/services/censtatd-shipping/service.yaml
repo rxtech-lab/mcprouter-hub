@@ -1,0 +1,275 @@
+id: censtatd-shipping
+title: Hong Kong Shipping Statistics
+description: Port, seaborne and river cargo throughput statistics, seasonally adjusted quarter-to-quarter changes, and Greater Bay Area city breakdowns from the Census and Statistics Department (Tables 410-55110 to 410-55114).
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0638, API-0639, API-0640, API-0641, API-0642, API-0643, API-0644]
+datasets:
+  - hk-censtatd-tablechart-410-55110
+  - hk-censtatd-tablechart-410-55111
+  - hk-censtatd-tablechart-410-55111a
+  - hk-censtatd-tablechart-410-55112
+  - hk-censtatd-tablechart-410-55112a
+  - hk-censtatd-tablechart-410-55113
+  - hk-censtatd-tablechart-410-55114
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map: { en: en, tc: tc, sc: sc }
+cacheTtl: 3600
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: shipping_port_cargo_throughput
+    title: Port cargo throughput (Table 410-55110)
+    description: Hong Kong port cargo throughput (seaborne and river combined) in '000 tonnes and year-on-year % change, annually and quarterly, by direction (Total, Inward, Outward) and shipment type (Total, Direct Shipment, Transhipment). Newest periods first.
+    path: /get.php
+    query: { id: "410-55110", full_series: 1 }
+    transform: { response: normalizeShippingTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, Q]
+        description: "Frequency: Y = Annual, Q = Quarterly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or quarter period to filter by, e.g. 2025 (matches 2025 and its quarters) or 202606
+      direction:
+        type: string
+        in: local
+        enum: [Total, In, Out]
+        description: "Cargo movement direction: Total, In (Inward) or Out (Outward)"
+      shipmentType:
+        type: string
+        in: local
+        enum: [Total, DS, TS]
+        description: "Shipment type: Total, DS (Direct Shipment) or TS (Transhipment)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq, DIRECTION: direction, SHIPMENT_TYPE: shipmentType }
+      limit: 100
+
+  - name: shipping_seaborne_cargo_throughput
+    title: Seaborne cargo throughput (Table 410-55111)
+    description: Hong Kong seaborne cargo throughput (vessels plying beyond river trade limits) in '000 tonnes and year-on-year % change, annually and quarterly, by direction (Total, Inward, Outward) and shipment type (Total, Direct Shipment, Transhipment). Newest periods first.
+    path: /get.php
+    query: { id: "410-55111", full_series: 1 }
+    transform: { response: normalizeShippingTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, Q]
+        description: "Frequency: Y = Annual, Q = Quarterly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or quarter period to filter by, e.g. 2025 or 202606
+      direction:
+        type: string
+        in: local
+        enum: [Total, In, Out]
+        description: "Cargo movement direction: Total, In (Inward) or Out (Outward)"
+      shipmentType:
+        type: string
+        in: local
+        enum: [Total, DS, TS]
+        description: "Shipment type: Total, DS (Direct Shipment) or TS (Transhipment)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq, DIRECTION: direction, SHIPMENT_TYPE: shipmentType }
+      limit: 100
+
+  - name: shipping_seaborne_cargo_monthly
+    title: Seaborne cargo throughput by month (Table 410-55111A)
+    description: Hong Kong seaborne cargo throughput by month and year in '000 tonnes and year-on-year % change, by direction (Total, Inward, Outward) and shipment type (Total, Direct Shipment, Transhipment). Newest periods first.
+    path: /get.php
+    query: { id: "410-55111A", full_series: 1 }
+    transform: { response: normalizeShippingTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, M]
+        description: "Frequency: Y = Annual, M = Monthly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or month period to filter by, e.g. 2025 or 202607
+      direction:
+        type: string
+        in: local
+        enum: [Total, In, Out]
+        description: "Cargo movement direction: Total, In (Inward) or Out (Outward)"
+      shipmentType:
+        type: string
+        in: local
+        enum: [Total, DS, TS]
+        description: "Shipment type: Total, DS (Direct Shipment) or TS (Transhipment)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq, DIRECTION: direction, SHIPMENT_TYPE: shipmentType }
+      limit: 100
+
+  - name: shipping_river_cargo_throughput
+    title: River cargo throughput (Table 410-55112)
+    description: Hong Kong river cargo throughput (vessels plying within river trade limits) in '000 tonnes and year-on-year % change, annually and quarterly, by direction (Total, Inward, Outward) and shipment type (Total, Direct Shipment, Transhipment). Newest periods first.
+    path: /get.php
+    query: { id: "410-55112", full_series: 1 }
+    transform: { response: normalizeShippingTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, Q]
+        description: "Frequency: Y = Annual, Q = Quarterly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or quarter period to filter by, e.g. 2025 or 202606
+      direction:
+        type: string
+        in: local
+        enum: [Total, In, Out]
+        description: "Cargo movement direction: Total, In (Inward) or Out (Outward)"
+      shipmentType:
+        type: string
+        in: local
+        enum: [Total, DS, TS]
+        description: "Shipment type: Total, DS (Direct Shipment) or TS (Transhipment)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq, DIRECTION: direction, SHIPMENT_TYPE: shipmentType }
+      limit: 100
+
+  - name: shipping_river_cargo_monthly
+    title: River cargo throughput by month (Table 410-55112A)
+    description: Hong Kong river cargo throughput by month and year in '000 tonnes and year-on-year % change, by direction (Total, Inward, Outward) and shipment type (Total, Direct Shipment, Transhipment). Newest periods first.
+    path: /get.php
+    query: { id: "410-55112A", full_series: 1 }
+    transform: { response: normalizeShippingTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, M]
+        description: "Frequency: Y = Annual, M = Monthly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or month period to filter by, e.g. 2025 or 202607
+      direction:
+        type: string
+        in: local
+        enum: [Total, In, Out]
+        description: "Cargo movement direction: Total, In (Inward) or Out (Outward)"
+      shipmentType:
+        type: string
+        in: local
+        enum: [Total, DS, TS]
+        description: "Shipment type: Total, DS (Direct Shipment) or TS (Transhipment)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq, DIRECTION: direction, SHIPMENT_TYPE: shipmentType }
+      limit: 100
+
+  - name: shipping_port_cargo_seasonally_adjusted
+    title: Seasonally adjusted port cargo change (Table 410-55113)
+    description: Quarter-to-quarter percentage change of seasonally adjusted series of Hong Kong port cargo throughput, by direction (Total, Inward, Outward) and shipment type (Total, Direct Shipment, Transhipment). Newest quarters first.
+    path: /get.php
+    query: { id: "410-55113", full_series: 1 }
+    transform: { response: normalizeShippingTable }
+    input:
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or quarter period to filter by, e.g. 2025 or 202606
+      direction:
+        type: string
+        in: local
+        enum: [Total, In, Out]
+        description: "Cargo movement direction: Total, In (Inward) or Out (Outward)"
+      shipmentType:
+        type: string
+        in: local
+        enum: [Total, DS, TS]
+        description: "Shipment type: Total, DS (Direct Shipment) or TS (Transhipment)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { DIRECTION: direction, SHIPMENT_TYPE: shipmentType }
+      limit: 100
+
+  - name: shipping_port_cargo_gba_city
+    title: Port cargo throughput by GBA city (Table 410-55114)
+    description: Hong Kong port cargo throughput with Greater Bay Area (GBA) cities (Shenzhen, Guangzhou, Dongguan, Foshan, Zhuhai, Huizhou, Zhongshan, Jiangmen, Zhaoqing, Macao and All GBA Cities) in '000 tonnes and year-on-year % change, annually and quarterly. Newest periods first.
+    path: /get.php
+    query: { id: "410-55114", full_series: 1 }
+    transform: { response: normalizeShippingTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, Q]
+        description: "Frequency: Y = Annual, Q = Quarterly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or quarter period to filter by, e.g. 2025 or 202606
+      city:
+        type: string
+        in: local
+        description: GBA city name or code to search for (English or Chinese), e.g. Shenzhen, Guangzhou, Macao, 深圳 or 631GBA_SZ
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq }
+      search: { input: city, fields: [COUNTRY, COUNTRYDesc] }
+      limit: 100
