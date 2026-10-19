@@ -1,6 +1,7 @@
 import type { Visual } from "@/lib/agent/display-tools";
 import { uiSpecCard } from "@/lib/cards/ui-card";
 import type { Card, CardBuilder, CardInput } from "@/mcp/apps/card";
+import { buildCard as shippingCard } from "@/mcp/services/censtatd-shipping/card";
 import { buildCard as catalogCard } from "@/mcp/services/datagovhk-catalog/card";
 import { buildCard as aqhiCard } from "@/mcp/services/epd-aqhi/card";
 import { buildCard as beachCard } from "@/mcp/services/epd-beach/card";
@@ -10,6 +11,7 @@ import { buildCard as borderCard } from "@/mcp/services/hk-border/card";
 import { buildCard as busCard } from "@/mcp/services/hk-bus/card";
 import { buildCard as ferryCard } from "@/mcp/services/hk-ferry/card";
 import { buildCard as holidaysCard } from "@/mcp/services/hk-holidays/card";
+import { buildCard as taxiFleetCard } from "@/mcp/services/hk-taxi-fleet/card";
 import { buildCard as cycloneCard } from "@/mcp/services/hko-cyclone/card";
 import { buildCard as regionalWeatherCard } from "@/mcp/services/hko-regional/card";
 import { buildCard as tidesCard } from "@/mcp/services/hko-tides/card";
@@ -27,6 +29,7 @@ import { buildCard as trafficCard } from "@/mcp/services/td-traffic/card";
  */
 
 const BUILDERS: Record<string, CardBuilder> = {
+  "censtatd-shipping": shippingCard,
   "datagovhk-catalog": catalogCard,
   "epd-aqhi": aqhiCard,
   "epd-beach": beachCard,
@@ -36,6 +39,7 @@ const BUILDERS: Record<string, CardBuilder> = {
   "hk-bus": busCard,
   "hk-ferry": ferryCard,
   "hk-holidays": holidaysCard,
+  "hk-taxi-fleet": taxiFleetCard,
   "hko-cyclone": cycloneCard,
   "hko-regional": regionalWeatherCard,
   "hko-tides": tidesCard,

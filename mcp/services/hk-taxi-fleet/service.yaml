@@ -1,0 +1,116 @@
+id: hk-taxi-fleet
+title: Licensed Taxi Fleets
+description: Real-time vehicle locations, operating status, taxi types and passenger capacities for Hong Kong licensed taxi fleets (Amigo and Big Boss Taxi).
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0121, API-0153]
+datasets:
+  - amigo-tis_41-taxi-fleet-information-amigo
+  - big-boss-taxi-tis_42-taxi-fleet-information-bbt
+cacheTtl: 30
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: amigo_taxi_fleet
+    title: Amigo taxi fleet status
+    description: Real-time locations and operating status of Amigo fleet taxis in Hong Kong. Filter by operating status (V = Vacant, O = Occupied, N = Not in service), taxi type (O = Ordinary, P = Premium, W = Wheelchair), passenger capacity, or sort nearest-first from a WGS84 coordinate.
+    baseUrl: https://api.amigo.taxi
+    path: /webx/v1/vehicle/list
+    transform: { response: normalizeTaxiFleet }
+    input:
+      status:
+        type: string
+        in: local
+        transform: upper
+        enum: [V, O, N]
+        description: "Operating status: V = Vacant (available for hire), O = Occupied, N = Not in service"
+      taxiType:
+        type: string
+        in: local
+        transform: upper
+        enum: [O, P, W]
+        description: "Taxi type: O = Ordinary, P = Premium, W = Wheelchair-accessible"
+      passengerCap:
+        type: integer
+        in: local
+        minimum: 1
+        maximum: 10
+        description: Passenger capacity to filter by, e.g. 4 or 6
+      vehId:
+        type: string
+        in: local
+        description: Vehicle ID substring to search for, e.g. AMG182
+      lat:
+        type: number
+        in: local
+        minimum: 22.1
+        maximum: 22.6
+        description: Reference WGS84 latitude in Hong Kong to sort taxis nearest-first
+      long:
+        type: number
+        in: local
+        minimum: 113.8
+        maximum: 114.5
+        description: Reference WGS84 longitude in Hong Kong to sort taxis nearest-first
+      radiusKm:
+        type: number
+        in: local
+        minimum: 0.1
+        maximum: 50
+        description: Maximum distance in km from (lat, long) when both coordinates are provided
+    response:
+      root: taxis
+      filter: { op_status: status, taxi_type: taxiType, passenger_cap: passengerCap }
+      search: { input: vehId, fields: [veh_id] }
+      limit: 100
+  - name: big_boss_taxi_fleet
+    title: Big Boss Taxi fleet status
+    description: Real-time locations and operating status of Big Boss Taxi (BBT) fleet vehicles in Hong Kong. Filter by operating status (V = Vacant, O = Occupied, N = Not in service), taxi type (O = Ordinary, P = Premium, W = Wheelchair), passenger capacity, or sort nearest-first from a WGS84 coordinate.
+    baseUrl: https://data.bigboss.hk
+    path: /api/opendata/get_data/all
+    transform: { response: normalizeTaxiFleet }
+    input:
+      status:
+        type: string
+        in: local
+        transform: upper
+        enum: [V, O, N]
+        description: "Operating status: V = Vacant (available for hire), O = Occupied, N = Not in service"
+      taxiType:
+        type: string
+        in: local
+        transform: upper
+        enum: [O, P, W]
+        description: "Taxi type: O = Ordinary, P = Premium, W = Wheelchair-accessible"
+      passengerCap:
+        type: integer
+        in: local
+        minimum: 1
+        maximum: 10
+        description: Passenger capacity to filter by, e.g. 4 or 5
+      vehId:
+        type: string
+        in: local
+        description: Vehicle ID substring to search for, e.g. BBT677
+      lat:
+        type: number
+        in: local
+        minimum: 22.1
+        maximum: 22.6
+        description: Reference WGS84 latitude in Hong Kong to sort taxis nearest-first
+      long:
+        type: number
+        in: local
+        minimum: 113.8
+        maximum: 114.5
+        description: Reference WGS84 longitude in Hong Kong to sort taxis nearest-first
+      radiusKm:
+        type: number
+        in: local
+        minimum: 0.1
+        maximum: 50
+        description: Maximum distance in km from (lat, long) when both coordinates are provided
+    response:
+      root: taxis
+      filter: { op_status: status, taxi_type: taxiType, passenger_cap: passengerCap }
+      search: { input: vehId, fields: [veh_id] }
+      limit: 100

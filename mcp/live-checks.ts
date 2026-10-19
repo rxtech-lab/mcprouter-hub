@@ -48,6 +48,15 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // censtatd-shipping
+  shipping_port_cargo_throughput: { input: {}, check: nonEmpty },
+  shipping_seaborne_cargo_throughput: { input: {}, check: nonEmpty },
+  shipping_seaborne_cargo_monthly: { input: {}, check: nonEmpty },
+  shipping_river_cargo_throughput: { input: {}, check: nonEmpty },
+  shipping_river_cargo_monthly: { input: {}, check: nonEmpty },
+  shipping_port_cargo_seasonally_adjusted: { input: {}, check: nonEmpty },
+  shipping_port_cargo_gba_city: { input: {}, check: nonEmpty },
+
   // datagovhk-catalog
   datagovhk_search_datasets: { input: { query: "weather" }, check: nonEmpty },
   datagovhk_dataset_details: { input: { id: "hk-hko-rss-current-weather-report" } },
@@ -110,6 +119,10 @@ export const liveCases: Record<string, LiveCase> = {
   // hk-holidays
   hk_public_holidays: { input: {}, check: nonEmpty },
   hk_is_public_holiday: { input: { date: dashed(hkDate()) } },
+
+  // hk-taxi-fleet
+  amigo_taxi_fleet: { input: {}, check: nonEmpty },
+  big_boss_taxi_fleet: { input: {}, check: nonEmpty },
 
   // hko-weather
   hko_current_weather: { input: {} },
