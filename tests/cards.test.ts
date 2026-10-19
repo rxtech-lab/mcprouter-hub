@@ -321,6 +321,24 @@ describe("card builders", () => {
     ]);
   });
 
+  it("shows transport and postal statistics cards with localised indicators", () => {
+    const card = cardForToolResult(
+      result("censtatd-transport", "postal_services_statistics", { period: "202606", freq: "Q" }, [
+        { freq: "Q", period: "202606", PMDesc: "Local", indicatorDesc: "Hongkong Post processed parcels", svDesc: "Thousands parcels", figure: 3, sd_value: "" },
+      ]),
+    )!;
+    expect(card).toMatchObject({ accent: "#1d4ed8", badge: "C&SD", title: "Postal Services Statistics", subtitle: "Period 202606 · Freq Q · 1 rows" });
+    expect(card.blocks).toEqual([
+      {
+        kind: "row",
+        leading: { text: "Q 202606", tone: "accent" },
+        title: "Hongkong Post processed parcels · Local",
+        subtitle: "Thousands parcels",
+        trailing: [{ text: "3 Thousands parcels", tone: "accent" }],
+      },
+    ]);
+  });
+
   it("shows shipping statistics rows with throughput figures", () => {
     const card = cardForToolResult(
       result("censtatd-shipping", "shipping_port_cargo_throughput", { period: "2025", freq: "Y" }, [

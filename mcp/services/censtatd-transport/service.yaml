@@ -1,0 +1,176 @@
+id: censtatd-transport
+title: Hong Kong Transport & Postal Statistics
+description: Air cargo inward and outward movements, air transport service capacity, airport arrival transit passengers, postal services and seafarers statistics from the Census and Statistics Department (Tables 410-92011, 635-92076, 635-93002, 635-93003 and 650-93021).
+# Entries in mcp/apis.yaml this service implements.
+apis: [API-0650, API-0725, API-0726, API-0727, API-0755]
+datasets:
+  - hk-censtatd-tablechart-410-92011
+  - hk-censtatd-tablechart-635-92076
+  - hk-censtatd-tablechart-635-93002
+  - hk-censtatd-tablechart-635-93003
+  - hk-censtatd-tablechart-650-93021
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map: { en: en, tc: tc, sc: sc }
+cacheTtl: 3600
+# Renders results in hosts that support MCP Apps; see app.ts.
+app: {}
+tools:
+  - name: air_cargo_movements
+    title: Air cargo inward and outward movements (Table 410-92011)
+    description: Inward (Discharged) and outward (Loaded) movements of cargo by air at Hong Kong International Airport in '000 tonnes, annually and quarterly, by region (Total, Asia, Australasia and Oceania, Europe, North America, Other regions). Excludes mail. Newest periods first.
+    path: /get.php
+    query: { id: "410-92011", full_series: 1 }
+    transform: { response: normalizeTransportTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, Q]
+        description: "Frequency: Y = Annual, Q = Quarterly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or quarter period to filter by, e.g. 2025 or 202603
+      region:
+        type: string
+        in: local
+        enum: [Total, Asia, AustO, EU, NorthA, Other]
+        description: "World region: Total, Asia, AustO (Australasia and Oceania), EU (Europe), NorthA (North America) or Other"
+      direction:
+        type: string
+        in: local
+        enum: [Total, Discharged, Loaded]
+        description: "Cargo movement direction: Total, Discharged (inward) or Loaded (outward)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq, REGION: region, DIRECTION: direction }
+      limit: 100
+
+  - name: postal_services_statistics
+    title: Postal services statistics (Table 635-92076)
+    description: Hongkong Post processed letter mail (million articles) and parcels (thousand parcels), annually and quarterly, by postal handling category (Local, Posted to places outside Hong Kong, From outside Hong Kong for local delivery, In transit). Newest periods first.
+    path: /get.php
+    query: { id: "635-92076", full_series: 1 }
+    transform: { response: normalizeTransportTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, Q]
+        description: "Frequency: Y = Annual, Q = Quarterly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or quarter period to filter by, e.g. 2025 or 202606
+      mailType:
+        type: string
+        in: local
+        enum: [HKPOST_LETTER_M, HKPOST_PARCELS]
+        description: "Mail indicator: HKPOST_LETTER_M (processed letter mail, million articles) or HKPOST_PARCELS (processed parcels, thousand parcels)"
+      category:
+        type: string
+        in: local
+        enum: [PM_LO, PM_OHK, PM_OHKL, PM_TR]
+        description: "Postal handling category: PM_LO (Local), PM_OHK (Posted to places outside Hong Kong), PM_OHKL (From outside Hong Kong for local delivery) or PM_TR (In transit)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq, sv: mailType, PM: category }
+      limit: 100
+
+  - name: air_transport_capacity
+    title: Air transport service capacity (Table 635-93002)
+    description: Annual statistics on the capacity of Hong Kong air transport services (scheduled international airlines, scheduled and non-scheduled international flight movements, incoming scheduled passenger flights per week, and total weekly seat capacity). Newest years first.
+    path: /get.php
+    query: { id: "635-93002", full_series: 1 }
+    transform: { response: normalizeTransportTable }
+    input:
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}$
+        description: Year to filter by, e.g. 2025
+      indicator:
+        type: string
+        in: local
+        enum: [SCHFLIGHT_AIRLINE, AIR_FIGHT_MT-SCH, AIR_FIGHT_MT-NONSCH, IN_SCHPASS_FLIGHT, AIR_SEAT_CAP]
+        description: "Indicator code: SCHFLIGHT_AIRLINE (scheduled airlines), AIR_FIGHT_MT-SCH (scheduled flights), AIR_FIGHT_MT-NONSCH (non-scheduled flights), IN_SCHPASS_FLIGHT (incoming weekly passenger flights) or AIR_SEAT_CAP (weekly seat capacity)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { sv: indicator }
+      limit: 100
+
+  - name: seafarers_statistics
+    title: Seafarers statistics (Table 635-93003)
+    description: Annual Marine Department statistics on Hong Kong seafarers (shipping companies listed with the Mercantile Marine Office, seafarers registered under the Merchant Shipping (Seafarers) Ordinance, and employment agreements during the year). Newest years first.
+    path: /get.php
+    query: { id: "635-93003", full_series: 1 }
+    transform: { response: normalizeTransportTable }
+    input:
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}$
+        description: Year to filter by, e.g. 2025
+      indicator:
+        type: string
+        in: local
+        enum: [SHIP_COM, HK_SEAFARER, HK_SEAFARER_AGREE]
+        description: "Indicator code: SHIP_COM (listed shipping companies), HK_SEAFARER (registered HK seafarers) or HK_SEAFARER_AGREE (employment agreements)"
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { sv: indicator }
+      limit: 100
+
+  - name: airport_arrival_transit_passengers
+    title: Airport arrival transit passengers (Table 650-93021)
+    description: Arrival transit passengers via Hong Kong International Airport (in thousands), annually and quarterly, from Civil Aviation Department and C&SD. Newest periods first.
+    path: /get.php
+    query: { id: "650-93021", full_series: 1 }
+    transform: { response: normalizeTransportTable }
+    input:
+      freq:
+        type: string
+        in: local
+        transform: upper
+        enum: [Y, Q]
+        description: "Frequency: Y = Annual, Q = Quarterly"
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(\d{2})?$
+        description: Year or quarter period to filter by, e.g. 2025 or 202606
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Response language
+    response:
+      root: dataSet
+      filter: { freq: freq }
+      limit: 100
