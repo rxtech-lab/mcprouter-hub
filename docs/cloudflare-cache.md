@@ -12,9 +12,14 @@ internal query parameters before the proxy makes its cache decision.
 
 The optional Cloudflare cache policy is deliberately narrow:
 
-- HTTPS GET requests to `mcprouter.app`, on `/`, `/sources`, and the service detail
+- HTTPS GET requests to `mcprouter.app`, on `/`, `/sources`, `/sources/apis`, and the service detail
   paths generated from the service manifest. No future routes are opted in implicitly.
-- No query string, Cookie, Authorization, Accept-Language, Range, server action,
+- No query string except the public API catalogue's `api`, `page`, `status`,
+  `category`, and `kind` parameters (at most 512 raw query characters). Keep the
+  complete query string in Cloudflare's default cache key: different API selections,
+  filters, and pages contain different content. Free-text `q` searches, unknown
+  parameters, and internal `_rsc` queries bypass. Other routes still require no query.
+- No Cookie, Authorization, Accept-Language, Range, server action,
   RSC, or Next.js router/prefetch headers. Empty headers also bypass.
 - Five minutes at Cloudflare (`Cloudflare-CDN-Cache-Control`); browser and Vercel
   cache policies remain unchanged. Successful responses respect the origin TTL;
@@ -57,13 +62,25 @@ curl -sS -D - -o /dev/null https://mcprouter.app/sources
 curl -sS -D - -o /dev/null https://mcprouter.app/sources
 ```
 
+Also repeat the actual crawler URL from the Vercel logs:
+
+```sh
+curl -sS -D - -o /dev/null 'https://mcprouter.app/sources/apis?api=API-2426&page=50&status=coming-soon'
+```
+
+Repeat with a different `api` and `page` and confirm the returned HTML differs.
+Each full URL needs its own initial fill; a crawl of previously unseen URLs still
+reaches Vercel once per Cloudflare location and cache lifetime. This policy reduces
+repeat origin requests, not the number of unique URL combinations a crawler visits.
+
 Expect MISS then HIT with increasing Age and no Set-Cookie. A miss may require
 another request in the same Cloudflare location. Cloudflare consumes its private
 cache-control header, so check it directly on a trusted origin/local production
 build with `Host: mcprouter.app` if needed.
 
 Repeat with a Cookie header (a test-only fake session cookie is sufficient),
-`Accept-Language: zh-HK`, `RSC: 1`, a router-prefetch header, a query string, and a
+`Accept-Language: zh-HK`, `RSC: 1`, a router-prefetch header, an unsupported query
+(for example `/sources/apis?q=weather` or `?_rsc=test`), and a
 POST; none may receive the cached HTML. Verify Chinese pages still render Chinese,
 the signed-in header still shows Dashboard, and authenticated APIs remain live.
 Check the page's HTML and its Next.js client navigation, not only response headers.

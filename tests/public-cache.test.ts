@@ -33,9 +33,24 @@ describe("public crawler caching", () => {
   });
 
   it.each(PUBLIC_CACHE_EXCLUDED_HEADERS)("bypasses cache when %s is present, even empty", async (name) => {
-    const req = request("/sources", { [name.toUpperCase()]: "" });
+    const req = request("/sources/apis?api=API-2426&page=50&status=coming-soon", { [name.toUpperCase()]: "" });
     expect(isPublicCacheRequest(req)).toBe(false);
     expect((await proxy(req, event))?.headers.get("Cloudflare-CDN-Cache-Control")).toBe("no-store");
+  });
+
+  it.each([
+    "/sources/apis",
+    "/sources/apis?api=API-2426&page=50&status=coming-soon",
+    "/sources/apis?status=coming-soon&page=50&api=API-2426",
+    "/sources/apis?api=API-2427&page=49",
+    "/sources/apis?category=weather&kind=rest&page=2",
+  ])("caches public catalogue variant %s without initializing a session", async (path) => {
+    const response = await proxy(request(path), event);
+    expect(authProxy).not.toHaveBeenCalled();
+    expect(response?.headers.get("set-cookie")).toBeNull();
+    expect(response?.headers.get("Cloudflare-CDN-Cache-Control")).toBe(PUBLIC_CACHE_CONTROL);
+    // The middleware must not rewrite URLs or collapse query variants.
+    expect(response?.headers.get("x-middleware-rewrite")).toBeNull();
   });
 
   it("keeps session refresh and its cookies for signed-in requests", async () => {
@@ -53,7 +68,13 @@ describe("public crawler caching", () => {
     expect(response?.headers.get("Cloudflare-CDN-Cache-Control")).toBe("no-store");
   });
 
-  it.each(["/?client=codex", "/sources?_rsc=test", "/sources?q=weather"])("does not cache query variant %s", async (path) => {
+  it.each([
+    "/?client=codex", "/sources?_rsc=test", "/sources?q=weather",
+    "/sources?api=API-2426", "/sources/hko-weather?page=2",
+    "/sources/apis?q=weather", "/sources/apis?api=API-2426&_rsc=test",
+    "/sources/apis?unknown=value", "/sources/apis?%61pi=API-2426",
+    "/sources/apis?API=API-2426", `/sources/apis?api=${"x".repeat(509)}`,
+  ])("does not cache query variant %s", async (path) => {
     expect((await proxy(request(path), event))?.headers.get("Cloudflare-CDN-Cache-Control")).toBe("no-store");
   });
 
@@ -90,6 +111,9 @@ describe("public crawler caching", () => {
       ],
     }, browser_ttl: { mode: "respect_origin" } });
     expect(cache.expression).toContain("not http.request.headers.truncated");
+    expect(cache.expression).toContain('http.request.uri.path eq "/sources/apis"');
+    expect(cache.expression).toContain('all(http.request.uri.args.names[*] in {"api" "page" "status" "category" "kind"})');
+    expect(cache.expression).toContain("len(http.request.uri.query) le 512");
     for (const name of PUBLIC_CACHE_EXCLUDED_HEADERS) {
       expect(cache.expression).toContain(`not any(lower(http.request.headers.names[*])[*] eq "${name}")`);
     }
