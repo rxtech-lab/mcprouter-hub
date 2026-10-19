@@ -1,5 +1,7 @@
 import { ArrowRight, Code, Globe, KeyRound, type LucideIcon, MessageCircle, MessageSquareText, MousePointer2, Plug, Send, Sparkle, Sparkles, Terminal, Wrench } from "lucide-react";
 import Link from "next/link";
+import { Suspense } from "react";
+import { LandingPricing } from "@/components/landing-pricing";
 import manifest from "@/generated/manifest.json";
 import { HeroChat, HeroChatButton } from "@/components/agent/hero-chat";
 import { Logo } from "@/components/logo";
@@ -42,6 +44,7 @@ const timeline = [
   { id: "clients", label: msg("Clients") },
   { id: "chat-apps", label: msg("Telegram & WhatsApp") },
   { id: "how", label: msg("How it works") },
+  { id: "pricing", label: msg("Pricing") },
   { id: "get-started", label: msg("Get started") },
 ];
 
@@ -104,9 +107,10 @@ export default async function Home({ searchParams }: PageProps<"/">) {
               {t("Live public data for anyone, through one MCP endpoint and one API key. We're starting with Hong Kong: weather, buses, MTR, A&E waiting times, car parks, public holidays and the whole DATA.GOV.HK catalogue.")}
             </p>
             <div className="flex flex-wrap gap-3">
-              <ButtonLink href="/dashboard" className="h-14 rounded-lg px-6">
+              <ButtonLink href="/dashboard" className="h-14 rounded-lg px-6" data-analytics-event="get_started" data-analytics-label="hero">
                 {t("Open dashboard")} <ArrowRight size={18} />
               </ButtonLink>
+              <ButtonLink href="#pricing" variant="outlined" className="h-14 rounded-lg px-6" data-analytics-event="pricing_click" data-analytics-label="hero">{t("View pricing")}</ButtonLink>
               {freeChat.enabled ? (
                 <HeroChatButton className="h-14 rounded-lg px-6 md:hidden">{t("Ask the agent")}</HeroChatButton>
               ) : null}
@@ -158,6 +162,8 @@ export default async function Home({ searchParams }: PageProps<"/">) {
                 <li key={client.id}>
                   <Link
                     href={clientHref(client.id)}
+                    data-analytics-event="client_setup"
+                    data-analytics-label={client.id}
                     scroll={false}
                     className="group state-layer relative flex h-full min-h-56 flex-col overflow-hidden rounded-xl bg-surface-container-low p-6 text-on-surface transition-[box-shadow,translate] duration-300 ease-emphasized hover:-translate-y-1 hover:shadow-elevation-2"
                   >
@@ -269,6 +275,10 @@ export default async function Home({ searchParams }: PageProps<"/">) {
             ))}
           </ol>
         </section>
+
+        <Suspense fallback={<section id="pricing" className="scroll-mt-24 animate-pulse rounded-xl bg-surface-container-low p-8" aria-busy="true">{t("Loading pricing…")}</section>}>
+          <LandingPricing />
+        </Suspense>
 
         <section id="get-started" className="flex scroll-mt-24 flex-col items-start gap-6 rounded-xl bg-surface-container-high p-8 md:flex-row md:items-center md:justify-between md:p-12">
           <div className="flex items-center gap-5">

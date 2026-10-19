@@ -62,50 +62,6 @@ msgstr "需要 {plan}"
 msgid "Requires a paid plan"
 msgstr "需要付費計劃"
 
-#: app/(dashboard)/billing/page.tsx
-msgid "per day"
-msgstr "每日"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "per week"
-msgstr "每星期"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "per month"
-msgstr "每月"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "per year"
-msgstr "每年"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "every {count} days"
-msgstr "每 {count} 日"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "every {count} weeks"
-msgstr "每 {count} 星期"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "every {count} months"
-msgstr "每 {count} 個月"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "every {count} years"
-msgstr "每 {count} 年"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "one-off"
-msgstr "一次性"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "every {count} {interval}s"
-msgstr "每 {count} 個 {interval}"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "per {interval}"
-msgstr "每 {interval}"
-
 #: app/(dashboard)/billing/page.tsx app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/page.tsx
 msgid "Billing is not configured"
 msgstr "未設定帳單"
@@ -114,11 +70,11 @@ msgstr "未設定帳單"
 msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show plans and usage."
 msgstr "設定 RX_SUBSCRIPTION_URL 及 RX_SUBSCRIPTION_API_KEY 以顯示計劃及用量。"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Each MCP tool call counts as one call against your plan."
 msgstr "每次 MCP 工具調用均計為你計劃中的一次調用。"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Metering is switched off on this deployment, so tool calls are free for now."
 msgstr "此部署已關閉計量，工具調用暫時免費。"
 
@@ -151,11 +107,11 @@ msgstr "計劃"
 msgid "Included when you have no plan"
 msgstr "未有計劃時已包括"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Start {days}-day trial"
 msgstr "開始 {days} 日試用"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Choose plan"
 msgstr "選擇計劃"
 
@@ -1661,7 +1617,11 @@ msgstr "Telegram 和 WhatsApp"
 msgid "How it works"
 msgstr "運作方式"
 
-#: app/page.tsx
+#: app/page.tsx components/landing-pricing.tsx components/site-header.tsx
+msgid "Pricing"
+msgstr "收費"
+
+#: app/page.tsx components/landing-pricing.tsx
 msgid "Get started"
 msgstr "開始使用"
 
@@ -1724,6 +1684,10 @@ msgstr "人人可用的即時公共數據，只需一個 MCP 端點和一個 API
 #: app/page.tsx
 msgid "Open dashboard"
 msgstr "開啟控制台"
+
+#: app/page.tsx
+msgid "View pricing"
+msgstr "查看收費"
 
 #: app/page.tsx
 msgid "Try it right here: {limit} free messages a day, no account needed."
@@ -1792,6 +1756,10 @@ msgstr "在 {name} 上對話"
 #: app/page.tsx
 msgid "From sign-in to answers in a minute"
 msgstr "由登入到取得答案，只需一分鐘"
+
+#: app/page.tsx
+msgid "Loading pricing…"
+msgstr "正在載入收費…"
 
 #: app/page.tsx
 msgid "Ready when your assistant is."
@@ -2314,6 +2282,34 @@ msgstr "所有綫路正常 🚇"
 msgid "Thanks!"
 msgstr "謝謝！"
 
+#: components/landing-pricing.tsx
+msgid "A plan for every assistant"
+msgstr "適合每位助手的方案"
+
+#: components/landing-pricing.tsx
+msgid "One MCP endpoint for every client."
+msgstr "一個 MCP 端點，連接所有用戶端。"
+
+#: components/landing-pricing.tsx
+msgid "Find your plan"
+msgstr "尋找適合你的方案"
+
+#: components/landing-pricing.tsx
+msgid "Free for now"
+msgstr "目前免費"
+
+#: components/landing-pricing.tsx
+msgid "See current plans, credits and top-ups on the billing page."
+msgstr "前往帳單頁面查看目前方案、額度和增值選項。"
+
+#: components/landing-pricing.tsx
+msgid "View plans"
+msgstr "查看方案"
+
+#: components/landing-pricing.tsx
+msgid "Need more calls? Explore top-ups on the billing page."
+msgstr "需要更多呼叫次數？前往帳單頁面查看增值選項。"
+
 #: components/language-menu.tsx
 msgid "Language"
 msgstr "語言"
@@ -2569,6 +2565,50 @@ msgstr "實時 API"
 #: lib/apis.ts
 msgid "Data files"
 msgstr "數據檔案"
+
+#: lib/billing/format.ts
+msgid "per day"
+msgstr "每日"
+
+#: lib/billing/format.ts
+msgid "per week"
+msgstr "每星期"
+
+#: lib/billing/format.ts
+msgid "per month"
+msgstr "每月"
+
+#: lib/billing/format.ts
+msgid "per year"
+msgstr "每年"
+
+#: lib/billing/format.ts
+msgid "every {count} days"
+msgstr "每 {count} 日"
+
+#: lib/billing/format.ts
+msgid "every {count} weeks"
+msgstr "每 {count} 星期"
+
+#: lib/billing/format.ts
+msgid "every {count} months"
+msgstr "每 {count} 個月"
+
+#: lib/billing/format.ts
+msgid "every {count} years"
+msgstr "每 {count} 年"
+
+#: lib/billing/format.ts
+msgid "one-off"
+msgstr "一次性"
+
+#: lib/billing/format.ts
+msgid "every {count} {interval}s"
+msgstr "每 {count} 個 {interval}"
+
+#: lib/billing/format.ts
+msgid "per {interval}"
+msgstr "每 {interval}"
 
 #: lib/intro-cards.ts
 msgid "Welcome to your dashboard"
