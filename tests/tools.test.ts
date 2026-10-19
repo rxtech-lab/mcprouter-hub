@@ -2497,6 +2497,182 @@ const cases: Case[] = [
     ttl: 3600,
   },
   {
+    tool: "shipping_container_throughput",
+    input: { freq: "Y", period: "2025", direction: "Total", containerType: "Laden" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55290&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { DIRECTION: "", DIRECTIONDesc: "Total", CONTAINER_TYPE: "", CONTAINER_TYPEDesc: "Total", freq: "Y", period: "2025", sv: "PORT_CONTAINER_TP", svDesc: "(\x27000 TEUs)", figure: 13688, sd_value: "" },
+        { DIRECTION: "", DIRECTIONDesc: "Total", CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", freq: "Y", period: "2025", sv: "PORT_CONTAINER_TP", svDesc: "(\x27000 TEUs)", figure: 10845, sd_value: "" },
+      ],
+    },
+    data: [
+      { DIRECTION: "Total", DIRECTIONDesc: "Total", CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", freq: "Y", period: "2025", sv: "PORT_CONTAINER_TP", svDesc: "(\x27000 TEUs)", figure: 10845, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_laden_container_throughput",
+    input: { freq: "Q", period: "202606", direction: "Out", shipmentType: "TS" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55291&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", DIRECTION: "Out", DIRECTIONDesc: "Outward", SHIPMENT_TYPE: "TS", SHIPMENT_TYPEDesc: "Transhipment", freq: "Q", period: "202606", sv: "PORT_CONTAINER_TP", svDesc: "Year-on-year % change", figure: 3.4, sd_value: "" },
+      ],
+    },
+    data: [
+      { CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", DIRECTION: "Out", DIRECTIONDesc: "Outward", SHIPMENT_TYPE: "TS", SHIPMENT_TYPEDesc: "Transhipment", freq: "Q", period: "202606", sv: "PORT_CONTAINER_TP", svDesc: "Year-on-year % change", figure: 3.4, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_laden_container_seasonally_adjusted",
+    input: { period: "202606", direction: "Total", shipmentType: "Total" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55292&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", DIRECTION: "", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "", SHIPMENT_TYPEDesc: "Total", freq: "Q", period: "202606", sv: "SA_CONTAINER_TP", svDesc: "Quarter-to-quarter % Change", figure: 1.2, sd_value: "" },
+      ],
+    },
+    data: [
+      { CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", DIRECTION: "Total", DIRECTIONDesc: "Total", SHIPMENT_TYPE: "Total", SHIPMENT_TYPEDesc: "Total", freq: "Q", period: "202606", sv: "SA_CONTAINER_TP", svDesc: "Quarter-to-quarter % Change", figure: 1.2, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_laden_container_gba_city",
+    input: { freq: "Q", period: "202606", city: "Zhongshan" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55293&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", COUNTRY: "631GBA_ZS", COUNTRYDesc: "Zhongshan", freq: "Q", period: "202606", sv: "PORT_CONTAINER_TP", svDesc: "Year-on-year % change", figure: 3.3, sd_value: "" },
+        { CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", COUNTRY: "631GBA_SZ", COUNTRYDesc: "Shenzhen", freq: "Q", period: "202606", sv: "PORT_CONTAINER_TP", svDesc: "Year-on-year % change", figure: 4.1, sd_value: "" },
+      ],
+    },
+    data: [
+      { CONTAINER_TYPE: "Laden", CONTAINER_TYPEDesc: "Laden", COUNTRY: "631GBA_ZS", COUNTRYDesc: "Zhongshan", freq: "Q", period: "202606", sv: "PORT_CONTAINER_TP", svDesc: "Year-on-year % change", figure: 3.3, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "shipping_container_handling_location",
+    input: { freq: "M", period: "202607", location: "CT", direction: "Total", containerType: "Total" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-55294&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { CHL: "", CHLDesc: "Total", DIRECTION: "", DIRECTIONDesc: "Total", CONTAINER_TYPE: "", CONTAINER_TYPEDesc: "Total", freq: "M", period: "202607", sv: "PORT_CONTAINER_TP", svDesc: "(\x27000 TEUs)", figure: 1150, sd_value: "p" },
+        { CHL: "CT", CHLDesc: "Kwai Tsing Container Terminals", DIRECTION: "", DIRECTIONDesc: "Total", CONTAINER_TYPE: "", CONTAINER_TYPEDesc: "Total", freq: "M", period: "202607", sv: "PORT_CONTAINER_TP", svDesc: "(\x27000 TEUs)", figure: 890, sd_value: "p" },
+      ],
+    },
+    data: [
+      { CHL: "CT", CHLDesc: "Kwai Tsing Container Terminals", DIRECTION: "Total", DIRECTIONDesc: "Total", CONTAINER_TYPE: "Total", CONTAINER_TYPEDesc: "Total", freq: "M", period: "202607", sv: "PORT_CONTAINER_TP", svDesc: "(\x27000 TEUs)", figure: 890, sd_value: "p" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+
+  // censtatd-transport
+  {
+    tool: "air_cargo_movements",
+    input: { freq: "Q", period: "202603", region: "NorthA", direction: "Loaded" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=410-92011&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { REGION: "", REGIONDesc: "Total", DIRECTION: "", DIRECTIONDesc: "Total", freq: "Q", period: "202603", sv: "AIR_CARGO_THROUGHPUT", svDesc: "(\x27000 tonnes)", figure: 1120, sd_value: "" },
+        { REGION: "NorthA", REGIONDesc: "North America", DIRECTION: 2, DIRECTIONDesc: "Loaded", freq: "Q", period: "202603", sv: "AIR_CARGO_THROUGHPUT", svDesc: "(\x27000 tonnes)", figure: 138, sd_value: "" },
+      ],
+    },
+    data: [
+      { REGION: "NorthA", REGIONDesc: "North America", DIRECTION: "Loaded", DIRECTIONDesc: "Loaded", freq: "Q", period: "202603", sv: "AIR_CARGO_THROUGHPUT", svDesc: "(\x27000 tonnes)", indicatorDesc: "Air cargo throughput", figure: 138, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "postal_services_statistics",
+    input: { freq: "Q", period: "202606", mailType: "HKPOST_PARCELS", category: "PM_OHKL", lang: "tc" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=635-92076&full_series=1&lang=tc" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { PM: "PM_LO", PMDesc: "本地", freq: "Q", period: "202606", sv: "HKPOST_PARCELS", svDesc: "千件包裹", figure: 3, sd_value: "" },
+        { PM: "PM_OHKL", PMDesc: "本地派遞的從外地寄出", freq: "Q", period: "202606", sv: "HKPOST_PARCELS", svDesc: "千件包裹", figure: 62, sd_value: "" },
+      ],
+    },
+    data: [
+      { PM: "PM_OHKL", PMDesc: "本地派遞的從外地寄出", freq: "Q", period: "202606", sv: "HKPOST_PARCELS", svDesc: "千件包裹", indicatorDesc: "香港郵政處理的包裹", figure: 62, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "air_transport_capacity",
+    input: { period: "2025", indicator: "AIR_SEAT_CAP" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=635-93002&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { freq: "Y", period: "2024", sv: "AIR_SEAT_CAP", svDesc: "Number", figure: 760900, sd_value: "" },
+        { freq: "Y", period: "2025", sv: "AIR_SEAT_CAP", svDesc: "Number", figure: 818036, sd_value: "" },
+      ],
+    },
+    data: [
+      { freq: "Y", period: "2025", sv: "AIR_SEAT_CAP", svDesc: "Number", indicatorDesc: "Total seat capacity per week", figure: 818036, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "seafarers_statistics",
+    input: { period: "2025", indicator: "HK_SEAFARER_AGREE" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=635-93003&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { freq: "Y", period: "2025", sv: "HK_SEAFARER", svDesc: "Number", figure: 1210, sd_value: "" },
+        { freq: "Y", period: "2025", sv: "HK_SEAFARER_AGREE", svDesc: "Number", figure: 582, sd_value: "" },
+      ],
+    },
+    data: [
+      { freq: "Y", period: "2025", sv: "HK_SEAFARER_AGREE", svDesc: "Number", indicatorDesc: "Employment agreements of HK registered seafarers", figure: 582, sd_value: "" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    tool: "airport_arrival_transit_passengers",
+    input: { freq: "Q", period: "202606" },
+    request: { url: "https://www.censtatd.gov.hk/api/get.php?id=650-93021&full_series=1&lang=en" },
+    reply: {
+      header: { status: { name: "Success", code: 0 } },
+      dataSet: [
+        { freq: "Q", period: "202603", sv: "AIRPORT_ARRIVAL_TRANSIT", svDesc: "Thousands", figure: 48, sd_value: "" },
+        { freq: "Q", period: "202606", sv: "AIRPORT_ARRIVAL_TRANSIT", svDesc: "Thousands", figure: 52, sd_value: "p" },
+      ],
+    },
+    data: [
+      { freq: "Q", period: "202606", sv: "AIRPORT_ARRIVAL_TRANSIT", svDesc: "Thousands", indicatorDesc: "Arrival transits via Hong Kong Airport", figure: 52, sd_value: "p" },
+    ],
+    meta: { total: 1, returned: 1, truncated: false },
+    ttl: 3600,
+  },
+  {
+    name: "air_transport_capacity rejects a non-4-digit year period",
+    tool: "air_transport_capacity",
+    input: { period: "202506" },
+    error: /period/,
+  },
+  {
     name: "shipping_port_cargo_throughput rejects a malformed period",
     tool: "shipping_port_cargo_throughput",
     input: { period: "2025-Q1" },
@@ -2665,6 +2841,12 @@ describe("MCP tool upstream behaviour", () => {
     const { service, tool } = find("amigo_taxi_fleet");
     fetchMock.mockImplementation(async () => new Response(JSON.stringify({ unexpected: true })));
     await expect(executeTool(service, tool, {})).rejects.toMatchObject({ code: "upstream_parse" });
+  });
+
+  it("reports a malformed C&SD transport response without dataSet", async () => {
+    const { service, tool } = find("air_cargo_movements");
+    fetchMock.mockImplementation(async () => new Response(JSON.stringify({ header: { status: { code: 0, name: "Success" } } })));
+    await expect(executeTool(service, tool, {})).rejects.toMatchObject({ code: "upstream_parse", message: expect.stringMatching(/dataSet/) });
   });
 
   it("reports a C&SD validation failure returned with HTTP 200", async () => {

@@ -56,6 +56,18 @@ export const liveCases: Record<string, LiveCase> = {
   shipping_river_cargo_monthly: { input: {}, check: nonEmpty },
   shipping_port_cargo_seasonally_adjusted: { input: {}, check: nonEmpty },
   shipping_port_cargo_gba_city: { input: {}, check: nonEmpty },
+  shipping_container_throughput: { input: {}, check: nonEmpty },
+  shipping_laden_container_throughput: { input: {}, check: nonEmpty },
+  shipping_laden_container_seasonally_adjusted: { input: {}, check: nonEmpty },
+  shipping_laden_container_gba_city: { input: {}, check: nonEmpty },
+  shipping_container_handling_location: { input: {}, check: nonEmpty },
+
+  // censtatd-transport
+  air_cargo_movements: { input: {}, check: nonEmpty },
+  postal_services_statistics: { input: {}, check: nonEmpty },
+  air_transport_capacity: { input: {}, check: nonEmpty },
+  seafarers_statistics: { input: {}, check: nonEmpty },
+  airport_arrival_transit_passengers: { input: {}, check: nonEmpty },
 
   // datagovhk-catalog
   datagovhk_search_datasets: { input: { query: "weather" }, check: nonEmpty },

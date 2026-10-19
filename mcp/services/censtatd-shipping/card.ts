@@ -11,6 +11,11 @@ const TITLES: Record<string, string> = {
   shipping_river_cargo_monthly: "River Cargo by Month",
   shipping_port_cargo_seasonally_adjusted: "Seasonally Adjusted Port Cargo",
   shipping_port_cargo_gba_city: "Port Cargo by GBA City",
+  shipping_container_throughput: "Container Throughput",
+  shipping_laden_container_throughput: "Laden Container Throughput",
+  shipping_laden_container_seasonally_adjusted: "Seasonally Adjusted Laden Container",
+  shipping_laden_container_gba_city: "Laden Container by GBA City",
+  shipping_container_handling_location: "Container by Handling Location",
 };
 
 function figureTone(row: Row): Tone {
@@ -36,6 +41,7 @@ function buildShippingCard(result: CardInput): Card {
     result.input?.period ? `Period ${result.input.period}` : "Latest periods",
     result.input?.freq ? `Freq ${result.input.freq}` : null,
     result.input?.city ? `City: ${result.input.city}` : null,
+    result.input?.location ? `Loc: ${result.input.location}` : null,
     `${rows.length} rows`,
   ]
     .filter(Boolean)
@@ -50,7 +56,14 @@ function buildShippingCard(result: CardInput): Card {
       ? rows.map((row) => {
           const label = row.COUNTRYDesc
             ? String(row.COUNTRYDesc)
-            : [row.DIRECTIONDesc || row.DIRECTION, row.SHIPMENT_TYPEDesc || row.SHIPMENT_TYPE].filter(Boolean).join(" · ");
+            : [
+                row.CHLDesc,
+                row.DIRECTIONDesc || row.DIRECTION,
+                row.SHIPMENT_TYPEDesc || row.SHIPMENT_TYPE,
+                row.CONTAINER_TYPEDesc || row.CONTAINER_TYPE,
+              ]
+                .filter(Boolean)
+                .join(" · ");
           const sub = [row.TRANSDesc, row.svDesc, row.sd_value ? `Note: ${row.sd_value}` : null].filter(Boolean).join(" · ");
           return card.row({
             leading: { text: `${row.freq ? `${row.freq} ` : ""}${row.period ?? ""}`.trim(), tone: "accent" },

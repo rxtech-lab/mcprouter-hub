@@ -9,6 +9,11 @@ const TITLES: Record<string, string> = {
   shipping_river_cargo_monthly: "River Cargo by Month (410-55112A)",
   shipping_port_cargo_seasonally_adjusted: "Seasonally Adjusted Port Cargo Change (410-55113)",
   shipping_port_cargo_gba_city: "Port Cargo by GBA City (410-55114)",
+  shipping_container_throughput: "Container Throughput (410-55290)",
+  shipping_laden_container_throughput: "Laden Container Throughput (410-55291)",
+  shipping_laden_container_seasonally_adjusted: "Seasonally Adjusted Laden Container Change (410-55292)",
+  shipping_laden_container_gba_city: "Laden Container by GBA City (410-55293)",
+  shipping_container_handling_location: "Container by Handling Location (410-55294)",
 };
 
 function figureTone(row: Row): Tone {
@@ -34,6 +39,7 @@ function tableView(view: View) {
     view.input?.period ? `Period ${view.input.period}` : "Latest periods",
     view.input?.freq ? `Freq ${view.input.freq}` : null,
     view.input?.city ? `City: ${view.input.city}` : null,
+    view.input?.location ? `Loc: ${view.input.location}` : null,
     `${rows.length} rows`,
   ]
     .filter(Boolean)
@@ -51,7 +57,14 @@ function tableView(view: View) {
           rows.map((row) => {
             const label = row.COUNTRYDesc
               ? String(row.COUNTRYDesc)
-              : [row.DIRECTIONDesc || row.DIRECTION, row.SHIPMENT_TYPEDesc || row.SHIPMENT_TYPE].filter(Boolean).join(" · ");
+              : [
+                  row.CHLDesc,
+                  row.DIRECTIONDesc || row.DIRECTION,
+                  row.SHIPMENT_TYPEDesc || row.SHIPMENT_TYPE,
+                  row.CONTAINER_TYPEDesc || row.CONTAINER_TYPE,
+                ]
+                  .filter(Boolean)
+                  .join(" · ");
             const sub = [row.TRANSDesc, row.svDesc, row.sd_value ? `Note: ${row.sd_value}` : null].filter(Boolean).join(" · ");
             return ui.row({
               leading: ui.badge(`${row.freq ? `${row.freq} ` : ""}${row.period ?? ""}`.trim()),
