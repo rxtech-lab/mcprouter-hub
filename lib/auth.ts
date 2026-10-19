@@ -2,6 +2,7 @@ import NextAuth, { type NextAuthResult } from "next-auth";
 import { connection, type NextMiddleware } from "next/server";
 import { createRxLabAuth, type RxLabAuthResult } from "@rxtech-lab/authjs-rxlab";
 import { redirect } from "next/navigation";
+import { headers } from "next/headers";
 
 const rxLabConfigured = Boolean(
   process.env.AUTH_ISSUER &&
@@ -67,6 +68,9 @@ export async function getCurrentUser(): Promise<AppUser | null> {
   await connection();
   if (isDevelopmentBypass) return DEVELOPMENT_USER;
   if (!rxLabConfigured) return null;
+  // A cookie-free visitor cannot have an Auth.js browser session. Avoid
+  // initializing auth while rendering the public page and its shared header.
+  if (!(await headers()).has("cookie")) return null;
   const session = await auth();
   if (!session?.user?.id) return null;
   return {
