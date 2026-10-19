@@ -10,6 +10,16 @@ In GA4 **Admin → Data streams → Web → Enhanced measurement**, disable **Pa
 
 Landing-page pricing reads the public rx-subscription catalogue on the server, shares price/interval formatting with Billing, and sends visitors to `/billing` to choose or manage a plan. If the catalogue is unavailable, it shows a billing link; when metering is off, it explains that calls are currently free. No prices are hardcoded.
 
+Feature usage events:
+
+| Usage | GA4 event | Parameters |
+| --- | --- | --- |
+| Dashboard chat submissions | `chat_message_sent` | `surface=dashboard`, `chat_type=signed_in` |
+| Landing-page chat submissions | `chat_message_sent` | `surface=landing_page`, `chat_type=guest` |
+| Dashboard API keys tab visits | `api_keys_viewed` | `surface=dashboard`, `page_path=/keys` |
+
+Chat submissions include typed messages, starter questions, MCP App follow-ups and dashboard `?ask=` prompts. They count send attempts, including attempts that later fail, rather than completed responses. API keys visits include direct loads and navigation back to the tab; opening or closing a dialog through query parameters does not add another visit. Connected apps, setup and messaging integration pages are excluded. In GA4, register `surface` as an event-scoped custom dimension to compare the chats in reports; the existing `chat_type` parameter remains available. After deployment, verify both chat surfaces and `api_keys_viewed` in Realtime/DebugView.
+
 ## Quick start
 
 ```sh

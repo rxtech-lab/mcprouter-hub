@@ -10,8 +10,9 @@ export async function SiteFooter() {
         <span className="flex items-center gap-2">
           <Logo size={20} /> mcprouter
         </span>
-        <nav className="flex gap-4">
+        <nav className="flex flex-wrap items-center gap-4">
           <Link href="/sources" className="hover:text-on-surface">{t("Data sources")}</Link>
+          <a href="mailto:support@rxlab.app" className="hover:text-on-surface">support@rxlab.app</a>
           <span>{t("Data from DATA.GOV.HK and its providers.")}</span>
         </nav>
       </div>

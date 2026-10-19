@@ -63,3 +63,16 @@ export function trackPageView(pathname: string) {
     page_referrer: document.referrer ? new URL(document.referrer).origin : "",
   });
 }
+
+/** Count submissions, including suggested questions and MCP App follow-ups, without their text. */
+export function trackChatMessage(surface: "dashboard" | "landing_page") {
+  trackEvent("chat_message_sent", {
+    chat_type: surface === "dashboard" ? "signed_in" : "guest",
+    surface,
+  });
+}
+
+/** Called on pathname changes, so query-driven key dialogs do not count as tab visits. */
+export function trackFeatureView(pathname: string) {
+  if (pathname === "/keys") trackEvent("api_keys_viewed", { surface: "dashboard", page_path: "/keys" });
+}

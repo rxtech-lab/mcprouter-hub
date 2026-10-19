@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { analyticsPath, trackEvent, trackPageView } from "@/lib/analytics";
+import { analyticsPath, trackEvent, trackFeatureView, trackPageView } from "@/lib/analytics";
 
 /** Mounted once in the root layout; explicit labels avoid collecting user content. */
 export function Analytics() {
@@ -10,6 +10,12 @@ export function Analytics() {
   const searchParams = useSearchParams();
   const navigation = `${pathname}?${searchParams.toString()}`;
   const lastPath = useRef<string | null>(null);
+  const lastFeaturePath = useRef<string | null>(null);
+  useEffect(() => {
+    if (lastFeaturePath.current === pathname) return;
+    lastFeaturePath.current = pathname;
+    trackFeatureView(pathname);
+  }, [pathname]);
   useEffect(() => {
     if (lastPath.current === navigation) return;
     lastPath.current = navigation;

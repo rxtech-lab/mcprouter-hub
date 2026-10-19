@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { ChatPanel, SUGGESTIONS } from "@/components/agent/chat-panel";
 import { useSnackbar } from "@/components/m3/snackbar";
 import { useT } from "@/lib/i18n/client";
+import { trackChatMessage } from "@/lib/analytics";
 import { msg } from "@/lib/i18n/translate";
 import { ChatHistoryButton, useChatHistory } from "./chat-history";
 
@@ -40,6 +41,7 @@ export function ChatView({ id, initialMessages, isNew = false, initialPrompt }: 
   useEffect(() => {
     if (!initialPrompt || prompted.current) return;
     prompted.current = true;
+    trackChatMessage("dashboard");
     void sendMessage({ text: initialPrompt });
     // eslint-disable-next-line react-hooks/exhaustive-deps -- once, on open
   }, []);
@@ -63,7 +65,10 @@ export function ChatView({ id, initialMessages, isNew = false, initialPrompt }: 
     <ChatPanel
       messages={messages}
       status={status}
-      onSend={(text) => sendMessage({ text })}
+      onSend={(text) => {
+        trackChatMessage("dashboard");
+        void sendMessage({ text });
+      }}
       onStop={() => stop()}
       title={t("Agent")}
       actions={<ChatHistoryButton />}
