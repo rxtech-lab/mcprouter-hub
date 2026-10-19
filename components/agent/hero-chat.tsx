@@ -1,6 +1,6 @@
 "use client";
 
-import { trackEvent } from "@/lib/analytics";
+import { trackChatMessage } from "@/lib/analytics";
 
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
@@ -112,7 +112,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
 
   const send = (text: string) => {
     if (!text.trim() || busy || usedUp) return;
-    trackEvent("chat_message_sent", { chat_type: "guest" });
+    trackChatMessage("landing_page");
     setError(null);
     setQuota((current) => (current ? { ...current, remaining: Math.max(0, current.remaining - 1), used: current.used + 1 } : current));
     void sendMessage({ text: text.trim() });
