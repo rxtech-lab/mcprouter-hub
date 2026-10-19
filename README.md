@@ -2,6 +2,14 @@
 
 Open data as MCP tools for everyone, starting with Hong Kong (DATA.GOV.HK), with RxLab sign-in, rx-subscription billing, a Material 3 dashboard, an AI agent and a conversion tracker.
 
+### Web analytics and public pricing
+
+Firebase Analytics uses the `mcprouter` web app and GA4 stream `G-F4NMJNMGMF`. It loads only in the browser and records initial and client-side page views (including query-driven navigation), labelled navigation/pricing/client setup clicks, chat submissions and successful checkout starts. Custom events omit message text, query values, credentials and conversation IDs. Set `NEXT_PUBLIC_ANALYTICS_ENABLED=false` at build time to disable collection, for example in test deployments. Analytics failures do not block app interactions.
+
+In GA4 **Admin → Data streams → Web → Enhanced measurement**, disable **Page changes based on browser history events** (or switch off automatic Page views) to avoid duplicate page views alongside the app's manual tracking. Disable automatic site search and form interaction measurement to keep user input out of analytics. See [Google's manual pageview setup](https://developers.google.com/analytics/devguides/collection/ga4/views). Verify visits and the `chat_message_sent`, `select_plan`, `pricing_click`, `client_setup`, `navigation_click`, `get_started` and `begin_checkout` events in Realtime/DebugView after deployment. Checkout starts are recorded after the checkout URL is successfully created; returning to the success URL is not treated as a verified purchase.
+
+Landing-page pricing reads the public rx-subscription catalogue on the server, shares price/interval formatting with Billing, and sends visitors to `/billing` to choose or manage a plan. If the catalogue is unavailable, it shows a billing link; when metering is off, it explains that calls are currently free. No prices are hardcoded.
+
 ## Quick start
 
 ```sh

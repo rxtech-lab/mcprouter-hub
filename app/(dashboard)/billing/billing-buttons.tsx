@@ -1,5 +1,6 @@
 "use client";
 
+import { trackEvent } from "@/lib/analytics";
 import { ExternalLink } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/m3/button";
@@ -15,7 +16,7 @@ export function ProductButton({ kind, productId, label, current, disabled }: { k
   return (
     <Button
       disabled={pending || disabled}
-      onClick={() => run(() => startCheckout({ kind, productId }), { progress: t("Opening checkout…"), success: t("Redirecting to checkout") }, (data) => window.location.assign(data.url))}
+      onClick={() => run(() => startCheckout({ kind, productId }), { progress: t("Opening checkout…"), success: t("Redirecting to checkout") }, (data) => { trackEvent("begin_checkout", { product_kind: kind, product_id: productId }); window.location.assign(data.url); })}
     >
       {pending ? t("Opening…") : label}
     </Button>

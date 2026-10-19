@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import { Analytics } from "@/components/analytics";
 import { Roboto_Flex, Roboto_Mono } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n/client";
 import { getMessages } from "@/lib/i18n/messages";
@@ -44,6 +46,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang={locale} className={`${roboto.variable} ${robotoMono.variable} h-full antialiased`}>
       <body className="min-h-full">
+        <Suspense fallback={null}><Analytics /></Suspense>
         <I18nProvider locale={locale} messages={getMessages(locale)}>
           {children}
         </I18nProvider>

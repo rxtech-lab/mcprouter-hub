@@ -10,6 +10,7 @@ import { msg } from "@/lib/i18n/translate";
 
 const links = [
   { href: "/sources", label: msg("Data sources"), key: "sources" },
+  { href: "/#pricing", label: msg("Pricing"), key: "pricing" },
 ] as const;
 
 /** Top app bar for the public pages: landing, data sources and the free agent. */
@@ -27,6 +28,8 @@ export async function SiteHeader({ active, className }: { active?: (typeof links
             <Link
               key={link.key}
               href={link.href}
+              data-analytics-event="navigation_click"
+              data-analytics-label={link.key}
               aria-current={active === link.key ? "page" : undefined}
               className={cn(
                 "state-layer inline-flex h-10 items-center rounded-full px-4 type-label-large",
@@ -53,7 +56,7 @@ async function SessionAction() {
 
 function AccountAction({ signedIn, label }: { signedIn: boolean; label: string }) {
   return (
-    <ButtonLink href={signedIn ? "/dashboard" : "/login"} variant="filled" className="ml-1 max-sm:px-4">
+    <ButtonLink href={signedIn ? "/dashboard" : "/login"} variant="filled" className="ml-1 max-sm:px-4" data-analytics-event="navigation_click" data-analytics-label={signedIn ? "dashboard" : "login"}>
       {label}
     </ButtonLink>
   );

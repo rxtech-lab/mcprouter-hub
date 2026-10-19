@@ -1,5 +1,7 @@
 "use client";
 
+import { trackEvent } from "@/lib/analytics";
+
 import type { UIMessage } from "ai";
 import { ArrowUp, ChevronDown, CircleAlert, CircleCheck, ExternalLink, LayoutDashboard, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
@@ -372,6 +374,7 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
 
   const send = (text: string) => {
     if (!text.trim() || busy || disabled) return;
+    trackEvent("chat_message_sent", { chat_type: "signed_in" });
     onSend(text.trim());
     setInput("");
   };
