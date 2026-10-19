@@ -2,7 +2,7 @@
  * Calls every MCP tool against its real upstream, then renders each result in
  * the service's MCP App in Chromium. Inputs live in mcp/live-checks.ts.
  *
- *   bun run live-check [--state <file>] [--threshold <n>] [--only <service|tool>] [--no-apps]
+ *   bun run live-check [--state <file>] [--threshold <n>] [--only <service|tool>[,...]] [--no-apps]
  *
  * With --state, failures are counted across runs in that JSON file. A check
  * that fails --threshold runs in a row (default 3) is reported to Telegram
@@ -24,11 +24,13 @@ const { values: args } = parseArgs({
   options: {
     state: { type: "string" },
     threshold: { type: "string", default: "3" },
-    only: { type: "string" },
+    only: { type: "string", multiple: true },
     "no-apps": { type: "boolean", default: false },
   },
 });
 const threshold = Math.max(1, Number(args.threshold) || 3);
+// --only may repeat or hold a comma-separated list.
+const only = new Set((args.only ?? []).flatMap((value) => value.split(",")).map((value) => value.trim()).filter(Boolean));
 
 const ATTEMPTS = 3;
 const TIMEOUT_MS = 45_000;
@@ -134,9 +136,9 @@ async function runApp(browser: Browser, service: ServiceDefinition, tool: ToolDe
 // ---------------------------------------------------------------- run
 
 const selected = services
-  .map((service) => ({ service, tools: service.tools.filter((tool) => !args.only || args.only === service.id || args.only === tool.name) }))
+  .map((service) => ({ service, tools: service.tools.filter((tool) => only.size === 0 || only.has(service.id) || only.has(tool.name)) }))
   .filter((entry) => entry.tools.length > 0);
-if (selected.length === 0) throw new Error(`Nothing matches --only ${args.only}`);
+if (selected.length === 0) throw new Error(`Nothing matches --only ${[...only].join(",")}`);
 
 const browser = args["no-apps"] ? null : await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
 const checks: Check[] = [];
@@ -182,7 +184,7 @@ for (const check of checks) {
   state[check.id] = entry;
 }
 // A partial run (--only) leaves other checks' counts alone; a full run drops checks that no longer exist.
-if (!args.only) for (const id of Object.keys(state)) if (!checks.some((check) => check.id === id)) delete state[id];
+if (only.size === 0) for (const id of Object.keys(state)) if (!checks.some((check) => check.id === id)) delete state[id];
 
 // ---------------------------------------------------------------- report
 
