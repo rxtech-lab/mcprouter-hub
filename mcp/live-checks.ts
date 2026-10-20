@@ -106,6 +106,18 @@ export const liveCases: Record<string, LiveCase> = {
   real_gross_domestic_income: { input: { limit: 1 }, check: nonEmptyPage },
   gni_and_per_capita: { input: { limit: 1 }, check: nonEmptyPage },
 
+  // Finance batch 031: period-free checks.
+  epif_income_components: { input: { limit: 1 }, check: nonEmptyPage },
+  epif_countries: { input: { limit: 1 }, check: nonEmptyPage },
+  epif_real: { input: { limit: 1 }, check: nonEmptyPage },
+  gross_national_disposable_income: { input: { limit: 1 }, check: nonEmptyPage },
+  rest_of_world_account: { input: { limit: 1 }, check: nonEmptyPage },
+  balance_of_payments: { input: { limit: 1 }, check: nonEmptyPage },
+  bop_gdp_ratios: { input: { limit: 1 }, check: nonEmptyPage },
+  bop_current_capital_account: { input: { limit: 1 }, check: nonEmptyPage },
+  bop_financial_account: { input: { limit: 1 }, check: nonEmptyPage },
+  current_account_seasonal_changes: { input: { limit: 1 }, check: nonEmptyPage },
+
   // Finance batch 029: period-free checks.
   cxdm_groups_current: { input: { limit: 1 }, check: nonEmptyPage },
   cxdm_groups_chained: { input: { limit: 1 }, check: nonEmptyPage },

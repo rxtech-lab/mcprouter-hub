@@ -1,0 +1,1013 @@
+id: censtatd-external-accounts
+title: Hong Kong External Income & Balance of Payments
+description: Official C&SD Finance tables for external primary income flows by income and country, real income
+  flows, disposable national income, rest of world accounts and balance of payments.
+apis:
+  - API-0551
+  - API-0552
+  - API-0553
+  - API-0554
+  - API-0555
+  - API-0556
+  - API-0557
+  - API-0558
+  - API-0559
+  - API-0560
+datasets:
+  - hk-censtatd-tablechart-310-36202
+  - hk-censtatd-tablechart-310-36203
+  - hk-censtatd-tablechart-310-36204
+  - hk-censtatd-tablechart-310-36205
+  - hk-censtatd-tablechart-310-37011
+  - hk-censtatd-tablechart-315-37001
+  - hk-censtatd-tablechart-315-37002
+  - hk-censtatd-tablechart-315-37003
+  - hk-censtatd-tablechart-315-37004
+  - hk-censtatd-tablechart-315-37005
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: epif_income_components
+    title: External primary income flows (EPIF) by income component at current market prices (310-36202)
+    description: External primary income flows (EPIF) by income component at current market prices. Official C&SD
+      Table 310-36202. Newest periods first; page with nextOffset. Preserve original units, figures, missing
+      values and revision flags. Components include overlapping totals and children; do not sum them. Filter
+      inflow, outflow and net flow separately; do not sum them.
+    path: /get.php
+    query:
+      id: 310-36202
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - CUREPIF
+      component:
+        type: string
+        in: local
+        description: "INC_CPNT source codes: TOTAL = Total; CEI = Compensation of employees; DIInvIncI = Direct
+          investment income; OIInvIncI = Other investment income; PIInvIncI = Portfolio investment income;
+          RAInvIncI = Income on reserve assets; CEO = Compensation of employees; DIInvIncO = Direct investment
+          income; OIInvIncO = Other investment income; PIInvIncO = Portfolio investment income"
+        enum:
+          - CEI
+          - CEO
+          - DIInvIncI
+          - DIInvIncO
+          - OIInvIncI
+          - OIInvIncO
+          - PIInvIncI
+          - PIInvIncO
+          - RAInvIncI
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - level
+          - yoy
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+      flow:
+        type: string
+        in: local
+        enum:
+          - EPIFI
+          - EPIFN
+          - EPIFO
+        description: EPIFI = Inflow; EPIFO = Outflow; EPIFN = Net flow. Original FLOWS and FLOWSDesc are preserved.
+  - name: epif_countries
+    title: External primary income flows (EPIF) by selected major source/destination country/territory at current
+      market prices (310-36203)
+    description: External primary income flows (EPIF) by selected major source/destination country/territory at
+      current market prices. Official C&SD Table 310-36203. Newest periods first; page with nextOffset.
+      Preserve original units, figures, missing values and revision flags. Components include overlapping
+      totals and children; do not sum them. Filter inflow, outflow and net flow separately; do not sum them.
+    path: /get.php
+    query:
+      id: 310-36203
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - CUREPIF
+      component:
+        type: string
+        in: local
+        description: "COUNTRY source codes: TOTAL = Total; BM = Bermuda; CN = Chinese Mainland; GB = United Kingdom;
+          KY = Cayman Islands; OTHERS_GNI = Other countries/territories; SG = Singapore; US = United States of
+          America; VG = British Virgin Islands"
+        enum:
+          - BM
+          - CN
+          - GB
+          - KY
+          - OTHERS_GNI
+          - SG
+          - TOTAL
+          - US
+          - VG
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+      flow:
+        type: string
+        in: local
+        enum:
+          - EPIFI
+          - EPIFN
+          - EPIFO
+        description: EPIFI = Inflow; EPIFO = Outflow; EPIFN = Net flow. Original FLOWS and FLOWSDesc are preserved.
+  - name: epif_real
+    title: External primary income flows (EPIF) in real terms (310-36204)
+    description: External primary income flows (EPIF) in real terms. Official C&SD Table 310-36204. Newest periods
+      first; page with nextOffset. Preserve original units, figures, missing values and revision flags.
+      Components include overlapping totals and children; do not sum them. Filter inflow, outflow and net flow
+      separately; do not sum them.
+    path: /get.php
+    query:
+      id: 310-36204
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - REPIF
+      component:
+        type: string
+        in: local
+        description: No source component dimension; TOTAL selects the whole table. Use flow separately where available.
+        enum:
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+      flow:
+        type: string
+        in: local
+        enum:
+          - EPIFI
+          - EPIFN
+          - EPIFO
+        description: EPIFI = Inflow; EPIFO = Outflow; EPIFN = Net flow. Original FLOWS and FLOWSDesc are preserved.
+  - name: gross_national_disposable_income
+    title: Gross National Disposable Income (GNDI) at current market prices (310-36205)
+    description: "Gross National Disposable Income (GNDI) at current market prices. Official C&SD Table 310-36205.
+      Newest periods first; page with nextOffset. Preserve original units, figures, missing values and
+      revision flags. Components include overlapping totals and children; do not sum them. "
+    path: /get.php
+    query:
+      id: 310-36205
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - GNDI
+      component:
+        type: string
+        in: local
+        description: No source component dimension; TOTAL selects the whole table. Use flow separately where available.
+        enum:
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - level
+          - yoy
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: rest_of_world_account
+    title: Rest of the world account (310-37011)
+    description: "Rest of the world account. Official C&SD Table 310-37011. Newest periods first; page with
+      nextOffset. Preserve original units, figures, missing values and revision flags. Components include
+      overlapping totals and children; do not sum them. "
+    path: /get.php
+    query:
+      id: 310-37011
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - RWA
+      component:
+        type: string
+        in: local
+        description: "RWA_COMPONENT source codes: BAGS = External balance of goods and services  ; CACPB = Change in
+          net worth due to saving (current external balance) and capital transfers  ; CEBA = Current external
+          balance  ; CPAB = Acquisitions, <i>less</i> disposals of non-produced non-financial assets; CPLP =
+          <i>less</i> Capital transfers payable; CPLR = Capital transfers receivable; EXG = Exports of goods;
+          EXGS = Exports of goods and services; EXS = Exports of services; IMG = Imports of goods; IMGS =
+          Imports of goods and services; IMS = Imports of services; NLNB = Net lending(+)/net borrowing(-)  ;
+          PSRCE = Compensation of employees; PSRCTIW = Current taxes on income, wealth, etc.; PSROT = Other
+          current transfers; PSRPE = Adjustment for the change in pension entitlements; PSRPI = Property
+          income; PSRSOB = Social contributions and benefits; PSRTPI = Taxes on production and imports,
+          <i>less</i> subsidies; PSUCE = Compensation of employees; PSUCTIW = Current taxes on income, wealth,
+          etc.; PSUOT = Other current transfers; PSUPE = Adjustment for the change in pension entitlements;
+          PSUPI = Property income; PSUSOB = Social contributions and benefits; PSUTPI = Taxes on production
+          and imports, <i>less</i> subsidies"
+        enum:
+          - BAGS
+          - CACPB
+          - CEBA
+          - CPAB
+          - CPLP
+          - CPLR
+          - EXG
+          - EXGS
+          - EXS
+          - IMG
+          - IMGS
+          - IMS
+          - NLNB
+          - PSRCE
+          - PSRCTIW
+          - PSROT
+          - PSRPE
+          - PSRPI
+          - PSRSOB
+          - PSRTPI
+          - PSUCE
+          - PSUCTIW
+          - PSUOT
+          - PSUPE
+          - PSUPI
+          - PSUSOB
+          - PSUTPI
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: balance_of_payments
+    title: Balance of Payments (BoP) (315-37001)
+    description: "Balance of Payments (BoP). Official C&SD Table 315-37001. Newest periods first; page with
+      nextOffset. Preserve original units, figures, missing values and revision flags. Components include
+      overlapping totals and children; do not sum them. "
+    path: /get.php
+    query:
+      id: 315-37001
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - BOP
+      component:
+        type: string
+        in: local
+        description: "BOP_COMPONENT source codes: BOP_C = Overall Balance of Payments; CPA = Capital account; CRA =
+          Current account; DI = Direct investment; FA = Financial account; FD = Financial derivatives; FNRA =
+          Financial non-reserve assets; G = Goods; NEO = Net errors and omissions; OI = Other investment; PI =
+          Portfolio investment; PYIN = Primary income; RA = Reserve assets; S = Services; SI = Secondary
+          income"
+        enum:
+          - BOP_C
+          - CPA
+          - CRA
+          - DI
+          - FA
+          - FD
+          - FNRA
+          - G
+          - NEO
+          - OI
+          - PI
+          - PYIN
+          - RA
+          - S
+          - SI
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: bop_gdp_ratios
+    title: BoP as a ratio to Gross Domestic Product (GDP) (315-37002)
+    description: BoP as a ratio to Gross Domestic Product (GDP). Official C&SD Table 315-37002. Newest periods
+      first; page with nextOffset. Preserve original units, figures, missing values and revision flags.
+      Components include overlapping totals and children; do not sum them. Ratios to GDP in percent, not
+      monetary levels or growth rates.
+    path: /get.php
+    query:
+      id: 315-37002
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - RGDP
+      component:
+        type: string
+        in: local
+        description: "BOP_COMPONENT source codes: BOP_C = Overall Balance of Payments; CRA = Current account; FNRA =
+          Financial non-reserve assets; GS = Goods and services; GSC = Credit; GSD = Debit; PYIN = Primary
+          income; PYINC = Credit; PYIND = Debit"
+        enum:
+          - BOP_C
+          - CRA
+          - FNRA
+          - GS
+          - GSC
+          - GSD
+          - PYIN
+          - PYINC
+          - PYIND
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - ratio
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: bop_current_capital_account
+    title: "BoP: current account and capital account (315-37003)"
+    description: "BoP: current account and capital account. Official C&SD Table 315-37003. Newest periods first;
+      page with nextOffset. Preserve original units, figures, missing values and revision flags. Components
+      include overlapping totals and children; do not sum them. "
+    path: /get.php
+    query:
+      id: 315-37003
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - BOP
+      component:
+        type: string
+        in: local
+        description: "BOP_COMPONENT source codes: CEC = Compensation of employees; CED = Compensation of employees;
+          CPA = Capital account; CPAC = Credit; CPAD = Debit; CRA = Current account; CRAC = Credit; CRAD =
+          Debit; DIDIInvIncC = Dividends and withdrawals from income of quasi-corporations; DIDIInvIncD =
+          Dividends and withdrawals from income of quasi-corporations; DIInvIncC = Direct investment income;
+          DIInvIncD = Direct investment income; FSC = Financial services; FSD = Financial services; G = Goods;
+          GC = Credit; GD = Debit; IDIInvIncC = Income on equity and investment fund shares; IDIInvIncD =
+          Income on equity and investment fund shares; InsPenC = Insurance and pension services; InsPenD =
+          Insurance and pension services; IntDIInvIncC = Interest; IntDIInvIncD = Interest; IntPIInvIncC =
+          Interest; IntPIInvIncCL = Long-term; IntPIInvIncCS = Short-term; IntPIInvIncD = Interest;
+          IntPIInvIncDL = Long-term; IntPIInvIncDS = Short-term; InvIncC = Investment income; InvIncD =
+          Investment income; InvIncPIInvIncC = Investment income on equity and investment fund shares;
+          InvIncPIInvIncD = Investment income on equity and investment fund shares; NEGC = Of which : Net
+          exports of goods under merchanting; OIInvIncC = Other investment income; OIInvIncD = Other
+          investment income; OSC = Other services; OSD = Other services; OSDMS = Manufacturing services;
+          PIInvIncC = Portfolio investment income; PIInvIncD = Portfolio investment income; PYIN = Primary
+          income; PYINC = Credit; PYIND = Debit; RAInvIncC = Income on reserve assets; RIDIInvIncC =
+          Reinvested earnings; RIDIInvIncD = Reinvested earnings; S = Services; SC = Credit; SD = Debit; SI =
+          Secondary income; SIC = Credit; SICG = General government; SICO = Other sectors; SID = Debit; SIDG =
+          General government; SIDO = Other sectors; TranC = Transport; TranD = Transport; TravC = Travel;
+          TravD = Travel"
+        enum:
+          - CEC
+          - CED
+          - CPA
+          - CPAC
+          - CPAD
+          - CRA
+          - CRAC
+          - CRAD
+          - DIDIInvIncC
+          - DIDIInvIncD
+          - DIInvIncC
+          - DIInvIncD
+          - FSC
+          - FSD
+          - G
+          - GC
+          - GD
+          - IDIInvIncC
+          - IDIInvIncD
+          - InsPenC
+          - InsPenD
+          - IntDIInvIncC
+          - IntDIInvIncD
+          - IntPIInvIncC
+          - IntPIInvIncCL
+          - IntPIInvIncCS
+          - IntPIInvIncD
+          - IntPIInvIncDL
+          - IntPIInvIncDS
+          - InvIncC
+          - InvIncD
+          - InvIncPIInvIncC
+          - InvIncPIInvIncD
+          - NEGC
+          - OIInvIncC
+          - OIInvIncD
+          - OSC
+          - OSD
+          - OSDMS
+          - PIInvIncC
+          - PIInvIncD
+          - PYIN
+          - PYINC
+          - PYIND
+          - RAInvIncC
+          - RIDIInvIncC
+          - RIDIInvIncD
+          - S
+          - SC
+          - SD
+          - SI
+          - SIC
+          - SICG
+          - SICO
+          - SID
+          - SIDG
+          - SIDO
+          - TranC
+          - TranD
+          - TravC
+          - TravD
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: bop_financial_account
+    title: "BoP: financial account (315-37004)"
+    description: "BoP: financial account. Official C&SD Table 315-37004. Newest periods first; page with
+      nextOffset. Preserve original units, figures, missing values and revision flags. Components include
+      overlapping totals and children; do not sum them. "
+    path: /get.php
+    query:
+      id: 315-37004
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - BOP
+      component:
+        type: string
+        in: local
+        description: "BOP_COMPONENT source codes: DI = Direct investment; DIA = Assets; DIAD = Debt instruments;
+          DIADBtw = Between fellow enterprises; DIADDInvt = Direct investment enterprises in direct investor;
+          DIADDIor = Direct investor in direct investment enterprises; DIAE = Equity and investment fund
+          shares; DIAEE = Equity other than reinvestment of earnings; DIAEEBtw = Between fellow enterprises;
+          DIAEEDInvt = Direct investment enterprises in direct investor; DIAEEDIor = Direct investor in direct
+          investment enterprises; DIAER = Reinvestment of earnings; DIL = Liabilities; DILD = Debt
+          instruments; DILDBtw = Between fellow enterprises; DILDDInvt = Direct investor to direct investment
+          enterprises; DILDDIor = Direct investment enterprises to direct investor; DILE = Equity and
+          investment fund shares; DILEE = Equity other than reinvestment of earnings; DILEEBtw = Between
+          fellow enterprises; DILEEDInvt = Direct investor to direct investment enterprises; DILEEDIor =
+          Direct investment enterprises to direct investor; DILER = Reinvestment of earnings; FA = Financial
+          account; FD = Financial derivatives; FDA = Assets; FDAB = Banks; FDAO = Other sectors; FDL =
+          Liabilities; FDLB = Banks; FDLO = Other sectors; FNRA = Financial non-reserve assets; OI = Other
+          investment; OIA = Assets; OIAC = Currency and deposits; OIACB = Banks; OIACO = Other sectors; OIAL =
+          Loans; OIALB = Banks; OIALO = Other sectors; OIAO = Other assets; OIAOB = Banks; OIAOO = Other
+          sectors; OIAT = Trade credit and advances; OIL = Liabilities; OILC = Currency and deposits; OILCB =
+          Banks; OILCO = Other sectors; OILL = Loans; OILLB = Banks; OILLO = Other sectors; OILO = Other
+          liabilities; OILOB = Banks; OILOO = Other sectors; OILT = Trade credit and advances; PI = Portfolio
+          investment; PIA = Assets; PIAD = Debt securities; PIADB = Banks; PIADBL = Long-term; PIADBS =
+          Short-term; PIADO = Other sectors; PIADOL = Long-term; PIADOS = Short-term; PIAE = Equity and
+          investment fund shares; PIAEB = Banks; PIAEO = Other sectors; PIL = Liabilities; PILD = Debt
+          securities; PILDB = Banks; PILDBL = Long-term; PILDBS = Short-term; PILDO = Other sectors; PILDOL =
+          Long-term; PILDOS = Short-term; PILE = Equity and investment fund shares; PILEB = Banks; PILEO =
+          Other sectors; RA = Reserve assets"
+        enum:
+          - DI
+          - DIA
+          - DIAD
+          - DIADBtw
+          - DIADDInvt
+          - DIADDIor
+          - DIAE
+          - DIAEE
+          - DIAEEBtw
+          - DIAEEDInvt
+          - DIAEEDIor
+          - DIAER
+          - DIL
+          - DILD
+          - DILDBtw
+          - DILDDInvt
+          - DILDDIor
+          - DILE
+          - DILEE
+          - DILEEBtw
+          - DILEEDInvt
+          - DILEEDIor
+          - DILER
+          - FA
+          - FD
+          - FDA
+          - FDAB
+          - FDAO
+          - FDL
+          - FDLB
+          - FDLO
+          - FNRA
+          - OI
+          - OIA
+          - OIAC
+          - OIACB
+          - OIACO
+          - OIAL
+          - OIALB
+          - OIALO
+          - OIAO
+          - OIAOB
+          - OIAOO
+          - OIAT
+          - OIL
+          - OILC
+          - OILCB
+          - OILCO
+          - OILL
+          - OILLB
+          - OILLO
+          - OILO
+          - OILOB
+          - OILOO
+          - OILT
+          - PI
+          - PIA
+          - PIAD
+          - PIADB
+          - PIADBL
+          - PIADBS
+          - PIADO
+          - PIADOL
+          - PIADOS
+          - PIAE
+          - PIAEB
+          - PIAEO
+          - PIL
+          - PILD
+          - PILDB
+          - PILDBL
+          - PILDBS
+          - PILDO
+          - PILDOL
+          - PILDOS
+          - PILE
+          - PILEB
+          - PILEO
+          - RA
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: current_account_seasonal_changes
+    title: Percentage changes of seasonally adjusted current account (315-37005)
+    description: Percentage changes of seasonally adjusted current account. Official C&SD Table 315-37005. Newest
+      periods first; page with nextOffset. Preserve original units, figures, missing values and revision
+      flags. Components include overlapping totals and children; do not sum them. Seasonally adjusted
+      quarter-to-quarter percent changes, not annual growth.
+    path: /get.php
+    query:
+      id: 315-37005
+      full_series: 1
+    transform:
+      response: normalizeExternalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - CRASA
+      component:
+        type: string
+        in: local
+        description: "BOP_COMPONENT source codes: CRAC = Credit; CRAD = Debit; GC = Credit; GD = Debit; PYINC =
+          Credit; PYIND = Debit; SC = Credit; SD = Debit; SIC = Credit; SID = Debit"
+        enum:
+          - CRAC
+          - CRAD
+          - GC
+          - GD
+          - PYINC
+          - PYIND
+          - SC
+          - SD
+          - SIC
+          - SID
+      measure:
+        type: string
+        in: local
+        description: level = HK$ million; yoy = year-on-year percent change; ratio = percent of GDP; qoq = seasonally
+          adjusted quarter-to-quarter percent change. Original localized units are preserved in svDesc.
+        enum:
+          - qoq
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
