@@ -6,6 +6,7 @@ import {
   createUIMessageStreamResponse,
   generateText,
   isStepCount,
+  hasToolCall,
   streamText,
   toUIMessageStream,
   type ToolSet,
@@ -16,6 +17,9 @@ import type { resolveServer } from "@/lib/agent/mcp-servers";
 import { selfMcpFetch } from "@/lib/agent/self-fetch";
 import { APP_TOOL_HINT, chosenVisuals, definitionHasApp, SHOW_UI_NOTE, showUiTools } from "@/lib/agent/display-tools";
 import { usedToolNames, withToolSearch } from "@/lib/agent/tool-search";
+import { REQUEST_INPUT_TOOL_NAME, USER_INPUT_NOTE, userInputTools } from "@/lib/agent/user-input";
+import { LOCATION_NOTE, REQUEST_LOCATION_TOOL_NAME, locationTools } from "@/lib/agent/location";
+import { mapTools } from "@/lib/agent/map";
 
 export const AGENT_INSTRUCTIONS = `You are the mcprouter assistant. You answer questions with live open data through your tools. Coverage starts with Hong Kong:
 weather and warnings, bus and minibus (KMB, Citybus, green minibus) and MTR arrivals, A&E waiting times, car parks, public holidays and the DATA.GOV.HK catalogue.
@@ -97,6 +101,13 @@ async function connectTools(servers: ResolvedServer[]) {
   return { tools, appTools, closeAll };
 }
 
+/** Keep provider data tools and their visual apps in the same scope, while always offering UI composition. */
+export function scopedAgentTools(tools: ToolSet, appTools: ReadonlySet<string>, scope: readonly string[]) {
+  const scoped = Object.fromEntries(Object.entries(tools).filter(([name]) => scope.includes(name)));
+  if (!Object.keys(scoped).length) throw new Error("No tools available for this API");
+  return stableTools({ ...scoped, ...showUiTools(new Set([...appTools].filter((name) => name in scoped))), ...mapTools(), ...userInputTools(), ...locationTools() });
+}
+
 /** Streams one agent reply as a UI message response, calling `onFinished` with the full conversation. */
 export async function streamAgentReply(options: {
   servers: ResolvedServer[];
@@ -108,20 +119,23 @@ export async function streamAgentReply(options: {
   channelNote?: string;
   /** The channel's own tools (e.g. the dashboard tools); always loaded, never behind `search_tools`. */
   channelTools?: ToolSet;
+  /** Catalogue chat: a server-resolved allowlist, loaded immediately without global tool search. */
+  toolScope?: string[];
   onFinished?: (messages: UIMessage[]) => Promise<void>;
 }) {
   const { tools, appTools, closeAll } = await connectTools(options.servers);
   try {
-    const instructions = instructionsFor(options.servers, options.channelNote);
+    const scopedTools = options.toolScope ? scopedAgentTools(tools, appTools, options.toolScope) : undefined;
+    const instructions = `${instructionsFor(options.servers, options.channelNote)}\n${USER_INPUT_NOTE}\n${LOCATION_NOTE}`;
     const result = streamText({
       model: options.model,
       instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages(options.messages)),
-      tools: modelTools(options.servers, tools, options.messages, { ...options.channelTools, ...showUiTools(appTools) }),
+      tools: scopedTools ?? modelTools(options.servers, tools, options.messages, { ...options.channelTools, ...showUiTools(appTools), ...mapTools(), ...userInputTools(), ...locationTools() }),
       providerOptions: gatewayCaching,
       // Each tool step resends the conversation; keep the breakpoint on its newest message.
       prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
-      stopWhen: isStepCount(options.maxSteps ?? 10),
+      stopWhen: [isStepCount(options.maxSteps ?? 10), hasToolCall(REQUEST_INPUT_TOOL_NAME), hasToolCall(REQUEST_LOCATION_TOOL_NAME)],
       onEnd: async ({ totalUsage }) => {
         const { cacheReadTokens = 0, cacheWriteTokens = 0, noCacheTokens = 0 } = totalUsage.inputTokenDetails;
         console.info(`[agent] input tokens: ${cacheReadTokens} cached, ${cacheWriteTokens} written to cache, ${noCacheTokens} uncached`);

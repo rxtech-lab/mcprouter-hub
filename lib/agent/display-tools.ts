@@ -11,7 +11,8 @@ export const APP_TOOL_HINT = `Has a visual app: call ${SHOW_TOOL_UI_TOOL_NAME} w
 export const SHOW_UI_NOTE = `The user doesn't see your tool calls, only your text and the UI you choose to show (a live view on the web, a picture card in chat apps). After getting live data, show it visually:
 - When a tool whose description says "Has a visual app" returned the data the user asked about (weather, arrivals, A&E waits, car parks…), call ${SHOW_TOOL_UI_TOOL_NAME} with its name.
 - Otherwise, when numbers, a list or a comparison would read better as UI, compose one with ${SHOW_UI_TOOL_NAME} from the data you got (never invent values).
-Show each result once, with one of the two. Skip both for a one-line answer (e.g. a yes/no holiday check), for lookups that only fed another call, and for failed calls. Then keep the text short: the UI carries the details.`;
+- When show_map is available, use it for places or routes with sourced coordinates. Pins show places; route lines require actual ordered geometry from data, never guessed directions or straight connections between stops.
+Show each result once, with the most suitable display tool. Skip visuals for a one-line answer (e.g. a yes/no holiday check), for lookups that only fed another call, and for failed calls. Then keep the text short: the UI carries the details.`;
 
 /** Whether an MCP tool definition comes with an MCP App (`_meta.ui.resourceUri`, or the older `ui/resourceUri`). */
 export function definitionHasApp(definition: { _meta?: unknown }) {

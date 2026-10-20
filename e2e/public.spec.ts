@@ -13,11 +13,14 @@ test("data sources: services, a service's tools, and provider search", async ({ 
   await expect(page.getByText("No providers match")).toBeVisible();
 });
 
-test("the landing page hero is a live free chat", async ({ page }) => {
+test("the landing page hero is a live chat with member usage", async ({ page }) => {
   await page.goto("/");
   const chat = page.getByTestId("hero-chat");
   await expect(chat.getByRole("textbox", { name: "Message" })).toBeVisible();
-  await expect(chat.getByRole("status")).toContainText(/free messages left today/);
+  // The e2e server uses DEV_BYPASS_AUTH, so the visitor is a signed-in member.
+  await expect(chat.getByTestId("chat-allowance")).toContainText("Plan allowance");
+  await expect(chat.getByTestId("chat-allowance")).toContainText("Credits");
+  await expect(chat.getByRole("textbox", { name: "Message" })).toBeEnabled();
 });
 
 test("landing pricing links to dedicated billing on desktop and mobile", async ({ page }) => {

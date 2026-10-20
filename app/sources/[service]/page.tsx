@@ -6,18 +6,18 @@ import { ButtonLink } from "@/components/m3/button";
 import { ServiceIcon } from "@/components/service-icon";
 import manifest from "@/generated/manifest.json";
 import { serviceApis } from "@/lib/apis";
-import { freeChatConfig } from "@/lib/free-chat";
 import { getT } from "@/lib/i18n/server";
 import { findService, serviceDatasets } from "@/lib/sources";
 import { BackLink } from "../back-link";
 import { DatasetItem } from "../dataset-item";
+import { ApiDialog, ApiToolButton } from "../apis/api-dialog";
 
 export async function generateMetadata({ params }: PageProps<"/sources/[service]">): Promise<Metadata> {
   const service = findService((await params).service);
   return service ? { title: service.title, description: service.description } : {};
 }
 
-export default async function ServicePage({ params }: PageProps<"/sources/[service]">) {
+export default async function ServicePage({ params, searchParams }: PageProps<"/sources/[service]">) {
   const id = (await params).service;
   const service = findService(id);
   if (!service) notFound();
@@ -26,6 +26,16 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
   const rows = await serviceDatasets(service.datasets);
   const apis = serviceApis(service.id);
   const t = await getT();
+  const query = await searchParams;
+  const chatOpen = query.chat === "1";
+  const closeQuery = new URLSearchParams();
+  for (const [key, value] of Object.entries(query)) {
+    if (["chat", "fullscreen", "panel", "minimized"].includes(key)) continue;
+    for (const item of Array.isArray(value) ? value : value === undefined ? [] : [value]) closeQuery.append(key, item);
+  }
+  const closeHref = `/sources/${service.id}${closeQuery.size ? `?${closeQuery}` : ""}`;
+  const chatQuery = new URLSearchParams(closeQuery);
+  chatQuery.set("chat", "1");
 
   return (
     <>
@@ -37,7 +47,7 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
           <p className="mt-2 max-w-2xl type-body-large text-on-surface-variant">{service.description}</p>
         </div>
         <div className="flex flex-wrap gap-2">
-          {freeChatConfig().enabled ? <ButtonLink href="/#try" icon={<MessageSquareText size={18} />}>{t("Try it free")}</ButtonLink> : null}
+          {service.tools.length ? <ButtonLink href={`/sources/${service.id}?${chatQuery}`} scroll={false} icon={<MessageSquareText size={18} />}>{t("Chat")}</ButtonLink> : null}
           <ButtonLink href="/keys" variant="outlined" icon={<KeyRound size={18} />}>{t("Get an API key")}</ButtonLink>
         </div>
       </section>
@@ -84,6 +94,25 @@ export default async function ServicePage({ params }: PageProps<"/sources/[servi
           {t("Browse every DATA.GOV.HK provider")} <ArrowRight size={16} />
         </ButtonLink>
       </div>
+      {chatOpen && service.tools.length ? (
+        <ApiDialog apiId={service.id} serviceId={service.id} title={service.title} description={service.description} closeHref={closeHref} canChat>
+          <section>
+            <h3 className="mb-2 type-title-medium">{t("Available tools")}</h3>
+            <ul className="flex flex-col gap-2">
+              {service.tools.map((tool) => (
+                <li key={tool.name} className="rounded-md border border-outline-variant p-3">
+                  <ApiToolButton name={tool.name} />
+                  <p className="mt-1 type-body-small text-on-surface-variant">{tool.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section className="mt-5">
+            <h3 className="mb-2 type-title-medium">{t("Display tools")}</h3>
+            <div className="flex flex-wrap gap-3"><ApiToolButton name="show_ui" /><ApiToolButton name="show_tool_ui" /><ApiToolButton name="show_map" /></div>
+          </section>
+        </ApiDialog>
+      ) : null}
     </>
   );
 }
