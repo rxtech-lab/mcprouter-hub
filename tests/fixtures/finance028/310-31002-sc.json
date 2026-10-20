@@ -1,0 +1,531 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=310-31002&api_popup=1"
+    },
+    "title": "按主要开支组成部分划分的本地生产总值 - 以当时市价计算",
+    "tablenote": [
+      "在香港，首次公布的某一期间的按开支组成部分划分的本地生产总值数字称为「预先估计数字」。当获得更多数据后，这些数字会作出修订。继预先估计数字后公布的所有数字均称为「修订数字」。这些「修订数字」在纳入更多数据后，在日后仍会作出进一步定期修订。这例行修订符合国际一贯的做法，即尽早采用部分数据来编制和公布本地生产总值数字。一般而言，已采纳了全部定期资料来源所得的最终数据编制而成的数字，则为最终的数字。 本地生产总值 = 私人消费开支 + 政府消费开支 + 本地固定资本形成总额 + 存货增减 + 货品出口与服务输出 - 货品进口与服务输入 最终需求 = 本地内部需求 + 货品出口与服务输出 本地内部需求 = 私人消费开支 + 政府消费开支 + 本地固定资本形成总额 + 存货增减",
+      "数字是根据《2008年国民账户体系》的标准，采用所有权转移原则记录外地加工货品及转手商贸活动编制而成的。用户必须注意本统计表的货品出口及进口数字与对外商品贸易统计数字有所不同，因后者并不是采用所有权转移原则编制。",
+      "r 修订数字",
+      "N.A. 没有数字",
+      "[φ3] 数字代表增减少于 0.05%。"
+    ],
+    "source": "政府统计处国民收入统计组（一）一 (查询电话 : 3863 2727  查询电邮：gdp-e@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 3329843,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CIV",
+      "GDP_COMPONENTDesc": "存货增减",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 44403,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "DD",
+      "GDP_COMPONENTDesc": "本地内部需求",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 3232899,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FD",
+      "GDP_COMPONENTDesc": "最终需求",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 9890091,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 418768,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定资本形成总额",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 563949,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "货品进口 (离岸价)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 5831920,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MGS",
+      "GDP_COMPONENTDesc": "<u><i>减：</i></u>货品进口与服务输入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 6560248,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 728328,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 2205779,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "货品出口 (离岸价)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 5758766,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XGS",
+      "GDP_COMPONENTDesc": "货品出口与服务输出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 6657192,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 898426,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 842406,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CIV",
+      "GDP_COMPONENTDesc": "存货增减",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 28737,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "DD",
+      "GDP_COMPONENTDesc": "本地内部需求",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 862987,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FD",
+      "GDP_COMPONENTDesc": "最终需求",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 3104096,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 101633,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定资本形成总额",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 149290,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "货品进口 (离岸价)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 2073310,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MGS",
+      "GDP_COMPONENTDesc": "<u><i>减：</i></u>货品进口与服务输入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 2261690,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 188380,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 583327,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "货品出口 (离岸价)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 2014209,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XGS",
+      "GDP_COMPONENTDesc": "货品出口与服务输出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 2241109,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 226900,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 4.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "DD",
+      "GDP_COMPONENTDesc": "本地内部需求",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 5.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FD",
+      "GDP_COMPONENTDesc": "最终需求",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 11.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定资本形成总额",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 6.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "货品进口 (离岸价)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 17.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MGS",
+      "GDP_COMPONENTDesc": "<u><i>减：</i></u>货品进口与服务输入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 15.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "货品出口 (离岸价)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 16.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XGS",
+      "GDP_COMPONENTDesc": "货品出口与服务输出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 15,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 7.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 6.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "DD",
+      "GDP_COMPONENTDesc": "本地内部需求",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 8.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FD",
+      "GDP_COMPONENTDesc": "最终需求",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 29.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 1.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定资本形成总额",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 7.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "货品进口 (离岸价)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 45.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MGS",
+      "GDP_COMPONENTDesc": "<u><i>减：</i></u>货品进口与服务输入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 41.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 7.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 4.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "货品出口 (离岸价)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 45,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XGS",
+      "GDP_COMPONENTDesc": "货品出口与服务输出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 40.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 10.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    }
+  ]
+}

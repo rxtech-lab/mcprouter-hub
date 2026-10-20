@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-gdp
+slug: censtatd-gdp
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

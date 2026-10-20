@@ -1,0 +1,366 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-32021&api_popup=1"
+    },
+    "title": "Government consumption expenditure (GCE) by component at current market prices",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated.",
+      "r Revised figure",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 34,
+      "started": "2026-10-20T17:47:55+00:00",
+      "finished": "2026-10-20T17:47:55+00:00",
+      "durationSeconds": 0.105943
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 720,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 814,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "Purchases of goods and services",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 302,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Sales by government departments not engaged in market activities to households and enterprises",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 208,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 398,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 515,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "Purchases of goods and services",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 207,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Sales by government departments not engaged in market activities to households and enterprises",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 90,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.7,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.3,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "Purchases of goods and services",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 30.5,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Sales by government departments not engaged in market activities to households and enterprises",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.8,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 20.6,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "Purchases of goods and services",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 32.4,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Sales by government departments not engaged in market activities to households and enterprises",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Sales by government departments not engaged in market activities to households and enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "Purchases of goods and services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Sales by government departments not engaged in market activities to households and enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "Purchases of goods and services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Sales by government departments not engaged in market activities to households and enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 9013,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "Purchases of goods and services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 45737,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 101633,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 64909,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Sales by government departments not engaged in market activities to households and enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 32866,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "Purchases of goods and services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 199332,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 418768,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 252302,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "Compensation of employees",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 246908,
+      "sd_value": "r"
+    }
+  ]
+}

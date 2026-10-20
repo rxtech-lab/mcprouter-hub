@@ -1,0 +1,390 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=310-31011&api_popup=1"
+    },
+    "title": "按组成部分划分的私人消费开支 - 以当时市价计算",
+    "tablenote": [
+      "在香港，首次公布的某一期间的按开支组成部分划分的本地生产总值数字称为「预先估计数字」。当获得更多数据后，这些数字会作出修订。继预先估计数字后公布的所有数字均称为「修订数字」。这些「修订数字」在纳入更多数据后，在日后仍会作出进一步定期修订。这例行修订符合国际一贯的做法，即尽早采用部分数据来编制和公布本地生产总值数字。一般而言，已采纳了全部定期资料来源所得的最终数据编制而成的数字，则为最终的数字。",
+      "r 修订数字",
+      "N.A. 没有数字",
+      "[φ3] 数字代表增减少于 0.05%。"
+    ],
+    "source": "政府统计处国民收入统计组（一）一 (查询电话 : 3863 2727  查询电邮：gdp-e@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 2210466,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMD",
+      "GDP_COMPONENTDesc": "耐用品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 145224,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMF",
+      "GDP_COMPONENTDesc": "食品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 225043,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMG",
+      "GDP_COMPONENTDesc": "消费品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 498522,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMND",
+      "GDP_COMPONENTDesc": "非耐用品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 353298,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMS",
+      "GDP_COMPONENTDesc": "服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 1486901,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "NXDM",
+      "GDP_COMPONENTDesc": "<u><i>减：</i></u>非本地居民在本地市场的开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 198558,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 2205779,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "REA",
+      "GDP_COMPONENTDesc": "本地居民在境外的开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 193871,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 579875,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMD",
+      "GDP_COMPONENTDesc": "耐用品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 30947,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMF",
+      "GDP_COMPONENTDesc": "食品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 61573,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMG",
+      "GDP_COMPONENTDesc": "消费品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 126373,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMND",
+      "GDP_COMPONENTDesc": "非耐用品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 95426,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMS",
+      "GDP_COMPONENTDesc": "服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 391929,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "NXDM",
+      "GDP_COMPONENTDesc": "<u><i>减：</i></u>非本地居民在本地市场的开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 47221,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 583327,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "REA",
+      "GDP_COMPONENTDesc": "本地居民在境外的开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百万港元",
+      "figure": 50673,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMD",
+      "GDP_COMPONENTDesc": "耐用品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 1.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMF",
+      "GDP_COMPONENTDesc": "食品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": -0.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMG",
+      "GDP_COMPONENTDesc": "消费品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": -0.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMND",
+      "GDP_COMPONENTDesc": "非耐用品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": -0.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMS",
+      "GDP_COMPONENTDesc": "服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "NXDM",
+      "GDP_COMPONENTDesc": "<u><i>减：</i></u>非本地居民在本地市场的开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 10.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "REA",
+      "GDP_COMPONENTDesc": "本地居民在境外的开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 4.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 5.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMD",
+      "GDP_COMPONENTDesc": "耐用品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 12.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMF",
+      "GDP_COMPONENTDesc": "食品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMG",
+      "GDP_COMPONENTDesc": "消费品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 6.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMND",
+      "GDP_COMPONENTDesc": "非耐用品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMS",
+      "GDP_COMPONENTDesc": "服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 5.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "NXDM",
+      "GDP_COMPONENTDesc": "<u><i>减：</i></u>非本地居民在本地市场的开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 7.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 4.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "REA",
+      "GDP_COMPONENTDesc": "本地居民在境外的开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    }
+  ]
+}

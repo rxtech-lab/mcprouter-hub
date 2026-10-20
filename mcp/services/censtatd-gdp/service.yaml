@@ -1,0 +1,531 @@
+id: censtatd-gdp
+title: Hong Kong GDP & Consumption Statistics
+description: Official C&SD Finance tables for GDP, real growth, expenditure, contributions, deflators, seasonally adjusted GDP and private consumption expenditure.
+apis: [API-0521, API-0522, API-0523, API-0524, API-0525, API-0526, API-0527, API-0528, API-0529, API-0530]
+datasets:
+  - hk-censtatd-tablechart-310-30001
+  - hk-censtatd-tablechart-310-31001
+  - hk-censtatd-tablechart-310-31002
+  - hk-censtatd-tablechart-310-31003
+  - hk-censtatd-tablechart-310-31004
+  - hk-censtatd-tablechart-310-31005
+  - hk-censtatd-tablechart-310-31006
+  - hk-censtatd-tablechart-310-31007
+  - hk-censtatd-tablechart-310-31011
+  - hk-censtatd-tablechart-310-31012
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map: { en: en, tc: tc, sc: sc }
+cacheTtl: 3600
+tools:
+  - name: gdp_real_growth
+    title: "Percentage change of Gross Domestic Product (GDP) and selected major expenditure components in real terms (310-30001)"
+    description: "Percentage change of Gross Domestic Product (GDP) and selected major expenditure components in real terms. Official C&SD Table 310-30001. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-30001", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["CON", "SA1"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: TOTAL = Total GDP; GCE = Government consumption expenditure; GDFCF = Gross domestic fixed capital formation; MG = Imports of goods (f.o.b.); MS = Imports of services; PCE = Private consumption expenditure; XG = Exports of goods (f.o.b.); XS = Exports of services. TOTAL means total GDP."
+        enum: ["GCE", "GDFCF", "MG", "MS", "PCE", "TOTAL", "XG", "XS"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["qoq", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: gdp_and_per_capita
+    title: "Gross Domestic Product (GDP), implicit price deflator of GDP and per capita GDP (310-31001)"
+    description: "Gross Domestic Product (GDP), implicit price deflator of GDP and per capita GDP. Official C&SD Table 310-31001. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31001", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["CON", "CONPGDP", "CUR", "CURPGDP", "DEF", "SA1"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: TOTAL = Total GDP. TOTAL means total GDP."
+        enum: ["TOTAL"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["level", "qoq", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: gdp_expenditure_current
+    title: "Gross Domestic Product (GDP) by major expenditure component at current market prices (310-31002)"
+    description: "Gross Domestic Product (GDP) by major expenditure component at current market prices. Official C&SD Table 310-31002. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31002", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: TOTAL = Total; CIV = Changes in inventories; DD = Domestic demand; FD = Final demand; GCE = Government consumption expenditure; GDFCF = Gross domestic fixed capital formation; MG = Imports of goods (f.o.b.); MGS = Less: Imports of goods and services; MS = Imports of services; PCE = Private consumption expenditure; XG = Exports of goods (f.o.b.); XGS = Exports of goods and services; XS = Exports of services. TOTAL means total GDP."
+        enum: ["CIV", "DD", "FD", "GCE", "GDFCF", "MG", "MGS", "MS", "PCE", "TOTAL", "XG", "XGS", "XS"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: gdp_expenditure_chained
+    title: "Gross Domestic Product (GDP) by major expenditure component in chained (2024) dollars (310-31003)"
+    description: "Gross Domestic Product (GDP) by major expenditure component in chained (2024) dollars. Official C&SD Table 310-31003. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31003", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["CON"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: TOTAL = Total; CIV = Changes in inventories; DD = Domestic demand; FD = Final demand; GCE = Government consumption expenditure; GDFCF = Gross domestic fixed capital formation; MG = Imports of goods (f.o.b.); MGS = Imports of goods and services; MS = Imports of services; PCE = Private consumption expenditure; XG = Exports of goods (f.o.b.); XGS = Exports of goods and services; XS = Exports of services. TOTAL means total GDP."
+        enum: ["CIV", "DD", "FD", "GCE", "GDFCF", "MG", "MGS", "MS", "PCE", "TOTAL", "XG", "XGS", "XS"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: gdp_growth_contributions
+    title: "Component contribution to year-on-year percentage change in real terms of Gross Domestic Product (GDP) (310-31004)"
+    description: "Component contribution to year-on-year percentage change in real terms of Gross Domestic Product (GDP). Official C&SD Table 310-31004. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31004", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["CON"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: TOTAL = Total; CIV = Changes in inventories; GCE = Government consumption expenditure; GDFCF = Gross domestic fixed capital formation; MG = Imports of goods (f.o.b.); MS = Imports of services; PCE = Private consumption expenditure; XG = Exports of goods (f.o.b.); XS = Exports of services. TOTAL means total GDP."
+        enum: ["CIV", "GCE", "GDFCF", "MG", "MS", "PCE", "TOTAL", "XG", "XS"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["contribution"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: gdp_implicit_deflators
+    title: "Implicit price deflators (IPD) of Gross Domestic Product (GDP) and its major expenditure components (310-31005)"
+    description: "Implicit price deflators (IPD) of Gross Domestic Product (GDP) and its major expenditure components. Official C&SD Table 310-31005. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31005", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["DEF"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: TOTAL = Total; DD = Domestic demand; FD = Final demand; GCE = Government consumption expenditure; GDFCF = Gross domestic fixed capital formation; MG = Imports of goods (f.o.b.); MS = Imports of services; PCE = Private consumption expenditure; XG = Exports of goods (f.o.b.); XS = Exports of services. TOTAL means total GDP."
+        enum: ["DD", "FD", "GCE", "GDFCF", "MG", "MS", "PCE", "TOTAL", "XG", "XS"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: gdp_expenditure_ratios
+    title: "Ratio of major expenditure components to Gross Domestic Product (GDP) at current market prices (310-31006)"
+    description: "Ratio of major expenditure components to Gross Domestic Product (GDP) at current market prices. Official C&SD Table 310-31006. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31006", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: TOTAL = Total; GCE = Government consumption expenditure; GDCF = Gross domestic capital formation; MG = Less: Imports of goods (f.o.b.); MS = Less: Imports of services; PCE = Private consumption expenditure; XG = Exports of goods (f.o.b.); XS = Exports of services. TOTAL means total GDP."
+        enum: ["GCE", "GDCF", "MG", "MS", "PCE", "TOTAL", "XG", "XS"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["ratio"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: gdp_seasonally_adjusted
+    title: "Seasonally adjusted Gross Domestic Product (GDP) and its major expenditure components in chained (2024) dollars, and implicit price deflator (IPD) of GDP (310-31007)"
+    description: "Seasonally adjusted Gross Domestic Product (GDP) and its major expenditure components in chained (2024) dollars, and implicit price deflator (IPD) of GDP. Official C&SD Table 310-31007. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31007", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["SA1", "SA_DEF"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: TOTAL = Total; GCE = Government consumption expenditure; MG = Imports of goods (f.o.b.); MS = Imports of services; PCE = Private consumption expenditure; XG = Exports of goods (f.o.b.); XS = Exports of services. TOTAL means total GDP."
+        enum: ["GCE", "MG", "MS", "PCE", "TOTAL", "XG", "XS"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["level", "qoq"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: pce_components_current
+    title: "Private consumption expenditure (PCE) by component at current market prices (310-31011)"
+    description: "Private consumption expenditure (PCE) by component at current market prices. Official C&SD Table 310-31011. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31011", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: CXDM = Consumption expenditure in the domestic market; CXDMD = Consumer durables; CXDMF = Food; CXDMG = Consumer goods; CXDMND = Consumer non-durables; CXDMS = Services; NXDM = Less: Expenditure of non-residents in the domestic market; PCE = Private consumption expenditure; REA = Expenditure of residents abroad. TOTAL means total GDP."
+        enum: ["CXDM", "CXDMD", "CXDMF", "CXDMG", "CXDMND", "CXDMS", "NXDM", "PCE", "REA"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.
+  - name: pce_components_chained
+    title: "Private consumption expenditure (PCE) by component in chained (2024) dollars (310-31012)"
+    description: "Private consumption expenditure (PCE) by component in chained (2024) dollars. Official C&SD Table 310-31012. Newest periods first; use offset to page through history. Figures retain original units, missing-value and revision flags. Filter measure to distinguish levels from growth rates; chained components may not add to GDP. GDP quarter codes end in 03, 06, 09 or 12."
+    path: /get.php
+    query: { id: "310-31012", full_series: 1 }
+    transform: { response: normalizeGdpTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "Filter a year (2025) or exact quarter (202503 = Q1). Annual-only tables accept years."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars, DEF deflator, CURPGDP/CONPGDP per capita, SA1 seasonally adjusted GDP, SA_DEF seasonally adjusted GDP deflator."
+        enum: ["CON"]
+      component:
+        type: string
+        in: local
+        description: "Expenditure component: CXDM = Consumption expenditure in the domestic market; CXDMD = Consumer durables; CXDMF = Food; CXDMG = Consumer goods; CXDMND = Consumer non-durables; CXDMS = Services; NXDM = Expenditure of non-residents in the domestic market; PCE = Private consumption expenditure; REA = Expenditure of residents abroad. TOTAL means total GDP."
+        enum: ["CXDM", "CXDMD", "CXDMF", "CXDMG", "CXDMND", "CXDMS", "NXDM", "PCE", "REA"]
+      measure:
+        type: string
+        in: local
+        description: "level = monetary value or index; yoy = year-on-year change; qoq = quarter-to-quarter change; contribution = percentage points; ratio = percent of GDP."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: "Maximum observations per page."
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: "Observation offset after filtering; continue with nextOffset."
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for the official title, units, component descriptions and notes.

@@ -1,0 +1,180 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-31007&api_popup=1"
+    },
+    "title": "Seasonally adjusted Gross Domestic Product (GDP) and its major expenditure components in chained (2024) dollars, and implicit price deflator (IPD) of GDP",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated. Seasonally adjusted data series is not compiled for gross domestic capital formation as no clear seasonal pattern is identified in this expenditure component.",
+      "Figures are compiled based on the change of ownership principle in recording goods sent abroad for processing and merchanting under the standards stipulated in the System of National Accounts 2008.  Users should note that the figures of exports and imports of goods in this table are different from those published in external merchandise trade statistics which are not compiled based on the change of ownership principle.",
+      "r Revised figure",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "HK$ million",
+      "figure": 856442,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "HK$ million",
+      "figure": 103341,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "Imports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "HK$ million",
+      "figure": 1788105,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "HK$ million",
+      "figure": 188765,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "HK$ million",
+      "figure": 562904,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "Exports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "HK$ million",
+      "figure": 1780096,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "HK$ million",
+      "figure": 228031,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": -0.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": -1.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "Imports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 3.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 1.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 0.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "Exports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 1.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA_DEF",
+      "svDesc": "Index (Year 2024=100)",
+      "figure": 102.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA_DEF",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 3.1,
+      "sd_value": "r"
+    }
+  ]
+}

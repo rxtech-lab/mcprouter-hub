@@ -50,7 +50,8 @@ describe("agent tool search", () => {
 
   it("ignores filler words and returns nothing for unrelated queries", () => {
     expect(rankTools("what is the", catalogue)).toEqual([]);
-    expect(rankTools("stock prices", catalogue)).toEqual([]);
+    // GDP now includes current-price tables; use a term outside the catalogue.
+    expect(rankTools("quantum entanglement", catalogue)).toEqual([]);
   });
 
   it("finds tools by meaning when no keyword matches", async () => {

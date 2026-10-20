@@ -1,0 +1,248 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-32024&api_popup=1"
+    },
+    "title": "Individual and collective consumption at current market prices",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated.",
+      "Collective consumption refers to government services provided to the community as a whole (e.g. security services provided by police).  In economic terms, they are called public goods.  It is equal to government consumption expenditure less government consumption expenditure for individual use.",
+      "Individual consumption covers goods and services which are actually consumed by households (e.g. educational services), irrespective of whether the ultimate bearers of the expenses are households themselves (e.g. employing private tutors) or private non-profit institutions (e.g. attending Caritas schools) or government (e.g. attending government schools).  It is equal to the sum of private consumption expenditure and government consumption expenditure for individual use.",
+      "r Revised figure",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 22,
+      "started": "2026-10-20T17:47:56+00:00",
+      "finished": "2026-10-20T17:47:56+00:00",
+      "durationSeconds": 0.021024
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "COL_CON",
+      "GDP_COMPONENTDesc": "Collective consumption",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 375,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 471,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE_IND",
+      "GDP_COMPONENTDesc": "Government consumption expenditure for individual use",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 96,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "IND_CON",
+      "GDP_COMPONENTDesc": "Individual consumption",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 5858,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 5762,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "COL_CON",
+      "GDP_COMPONENTDesc": "Collective consumption",
+      "freq": "Y",
+      "period": "1962",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE_IND",
+      "GDP_COMPONENTDesc": "Government consumption expenditure for individual use",
+      "freq": "Y",
+      "period": "1962",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.3,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "IND_CON",
+      "GDP_COMPONENTDesc": "Individual consumption",
+      "freq": "Y",
+      "period": "1962",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.7,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "IND_CON",
+      "GDP_COMPONENTDesc": "Individual consumption",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE_IND",
+      "GDP_COMPONENTDesc": "Government consumption expenditure for individual use",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COL_CON",
+      "GDP_COMPONENTDesc": "Collective consumption",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2205779,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "IND_CON",
+      "GDP_COMPONENTDesc": "Individual consumption",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2375193,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE_IND",
+      "GDP_COMPONENTDesc": "Government consumption expenditure for individual use",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 169414,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 418768,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COL_CON",
+      "GDP_COMPONENTDesc": "Collective consumption",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 249354,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COL_CON",
+      "GDP_COMPONENTDesc": "Collective consumption",
+      "freq": "Y",
+      "period": "2003",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "COL_CON",
+      "GDP_COMPONENTDesc": "Collective consumption",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 243693,
+      "sd_value": "r"
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-31012&api_popup=1"
+    },
+    "title": "Private consumption expenditure (PCE) by component in chained (2024) dollars",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised. All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data. In general, the figures are finalised when finalised data from all regular sources are incorporated.",
+      "The chained (2024) dollar series is derived by extrapolation of the current price value for the reference year (2024) backward and forward using the chain volume index as the extrapolator.  As the extrapolation process is carried out for PCE and its components independently in calculating the chained dollar series, discrepancies may exist between the chain volume measure of PCE and the sum of the chain volume measures of its components.",
+      "r Revised figure",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 2186722,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMD",
+      "GDP_COMPONENTDesc": "Consumer durables",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 148645,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMF",
+      "GDP_COMPONENTDesc": "Food",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 225212,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMG",
+      "GDP_COMPONENTDesc": "Consumer goods",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 502586,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMND",
+      "GDP_COMPONENTDesc": "Consumer non-durables",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 353941,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMS",
+      "GDP_COMPONENTDesc": "Services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 1458924,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "NXDM",
+      "GDP_COMPONENTDesc": "Expenditure of non-residents in the domestic market",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 197521,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 2180287,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "REA",
+      "GDP_COMPONENTDesc": "Expenditure of residents abroad",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 191086,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 567058,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMD",
+      "GDP_COMPONENTDesc": "Consumer durables",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 31805,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMF",
+      "GDP_COMPONENTDesc": "Food",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 61544,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMG",
+      "GDP_COMPONENTDesc": "Consumer goods",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 127413,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMND",
+      "GDP_COMPONENTDesc": "Consumer non-durables",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 95608,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMS",
+      "GDP_COMPONENTDesc": "Services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 378101,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "NXDM",
+      "GDP_COMPONENTDesc": "Expenditure of non-residents in the domestic market",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 46245,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 568557,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "REA",
+      "GDP_COMPONENTDesc": "Expenditure of residents abroad",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 47744,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMD",
+      "GDP_COMPONENTDesc": "Consumer durables",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMF",
+      "GDP_COMPONENTDesc": "Food",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMG",
+      "GDP_COMPONENTDesc": "Consumer goods",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMND",
+      "GDP_COMPONENTDesc": "Consumer non-durables",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMS",
+      "GDP_COMPONENTDesc": "Services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "NXDM",
+      "GDP_COMPONENTDesc": "Expenditure of non-residents in the domestic market",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 10,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "REA",
+      "GDP_COMPONENTDesc": "Expenditure of residents abroad",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMD",
+      "GDP_COMPONENTDesc": "Consumer durables",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMF",
+      "GDP_COMPONENTDesc": "Food",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMG",
+      "GDP_COMPONENTDesc": "Consumer goods",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMND",
+      "GDP_COMPONENTDesc": "Consumer non-durables",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDMS",
+      "GDP_COMPONENTDesc": "Services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "NXDM",
+      "GDP_COMPONENTDesc": "Expenditure of non-residents in the domestic market",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "REA",
+      "GDP_COMPONENTDesc": "Expenditure of residents abroad",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    }
+  ]
+}

@@ -82,6 +82,30 @@ export const liveCases: Record<string, LiveCase> = {
   seafarers_statistics: { input: {}, check: nonEmpty },
   airport_arrival_transit_passengers: { input: {}, check: nonEmpty },
 
+  // Finance batch 028: latest observations without tying checks to a fixed year.
+  gdp_real_growth: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_and_per_capita: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_expenditure_current: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_expenditure_chained: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_growth_contributions: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_implicit_deflators: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_expenditure_ratios: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_seasonally_adjusted: { input: { limit: 1 }, check: nonEmptyPage },
+  pce_components_current: { input: { limit: 1 }, check: nonEmptyPage },
+  pce_components_chained: { input: { limit: 1 }, check: nonEmptyPage },
+
+  // Finance batch 029: period-free checks.
+  cxdm_groups_current: { input: { limit: 1 }, check: nonEmptyPage },
+  cxdm_groups_chained: { input: { limit: 1 }, check: nonEmptyPage },
+  cxdm_groups_distribution: { input: { limit: 1 }, check: nonEmptyPage },
+  gce_components_current: { input: { limit: 1 }, check: nonEmptyPage },
+  gce_components_chained: { input: { limit: 1 }, check: nonEmptyPage },
+  gce_functions_current: { input: { limit: 1 }, check: nonEmptyPage },
+  individual_collective_consumption: { input: { limit: 1 }, check: nonEmptyPage },
+  gdfcf_components_current: { input: { limit: 1 }, check: nonEmptyPage },
+  gdfcf_components_chained: { input: { limit: 1 }, check: nonEmptyPage },
+  services_trade_components_current: { input: { limit: 1 }, check: nonEmptyPage },
+
   // datagovhk-catalog
   datagovhk_search_datasets: { input: { query: "weather" }, check: nonEmpty },
   datagovhk_dataset_details: { input: { id: "hk-hko-rss-current-weather-report" } },

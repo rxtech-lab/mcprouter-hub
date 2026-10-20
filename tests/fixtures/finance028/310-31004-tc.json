@@ -1,0 +1,200 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=310-31004&api_popup=1"
+    },
+    "title": "各組成部分在本地生產總值的按年實質變動百分率中所佔的比率",
+    "tablenote": [
+      "在香港，首次公布的某一期間的按開支組成部分劃分的本地生產總值數字稱為「預先估計數字」。當獲得更多數據後，這些數字會作出修訂。繼預先估計數字後公布的所有數字均稱為「修訂數字」。這些「修訂數字」在納入更多數據後，在日後仍會作出進一步定期修訂。這例行修訂符合國際一貫的做法，即盡早採用部分數據來編製和公布本地生產總值數字。一般而言，已採納了全部定期資料來源所得的最終數據編製而成的數字，則為最終的數字。     由於數字經四捨五入，分項總和未必與總數相等。",
+      "數字是根據《2008年國民賬戶體系》的標準，採用所有權轉移原則記錄外地加工貨品及轉手商貿活動編製而成的。",
+      "[φ42] 數字代表介於 +/- 0.05個百分點之間（但不等於+/-0.05個百分點）。",
+      "r 修訂數字"
+    ],
+    "source": "政府統計處國民收入統計組（一）一 (查詢電話 : 3863 2727  查詢電郵：gdp-e@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 3.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CIV",
+      "GDP_COMPONENTDesc": "存貨增減",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 1.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消費開支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 0.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 0.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "貨品進口 (離岸價)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": -19.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": -0.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消費開支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 1.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "貨品出口 (離岸價)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 18.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 1.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CIV",
+      "GDP_COMPONENTDesc": "存貨增減",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消費開支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 0,
+      "sd_value": "r,[φ42]"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 0.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "貨品進口 (離岸價)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": -50.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": -0.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "私人消費開支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "貨品出口 (離岸價)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 49.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百分點",
+      "figure": 0.9,
+      "sd_value": "r"
+    }
+  ]
+}

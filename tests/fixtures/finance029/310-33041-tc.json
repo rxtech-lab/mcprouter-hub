@@ -1,0 +1,1246 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=310-33041&api_popup=1"
+    },
+    "title": "按服務組成部分劃分的服務輸出及輸入 - 以當時市價計算",
+    "tablenote": [
+      "在香港，首次公布的某一期間的按開支組成部分劃分的本地生產總值數字稱為「預先估計數字」。當獲得更多數據後，這些數字會作出修訂。繼預先估計數字後公布的所有數字均稱為「修訂數字」。這些「修訂數字」在納入更多數據後，在日後仍會作出進一步定期修訂。這例行修訂符合國際一貫的做法，即盡早採用部分數據來編製和公布本地生產總值數字。一般而言，已採納了全部定期資料來源所得的最終數據編製而成的數字，則為最終的數字。     數字是根據《2008年國民賬戶體系》的標準，採用所有權轉移原則記錄外地加工貨品及轉手商貿活動編製而成的。",
+      "N.A. 沒有數字",
+      "[φ3] 數字代表增減少於 0.05%。",
+      "r 修訂數字"
+    ],
+    "source": "政府統計處國民收入統計組 (一) 三 (查詢電話：3863 2717  查詢電郵：gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 122,
+      "started": "2026-10-20T17:47:57+00:00",
+      "finished": "2026-10-20T17:47:57+00:00",
+      "durationSeconds": 0.190538
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "製造服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 26.9,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 36.7,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 18,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "製造服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1274,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "製造服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 104,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 20450,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 286,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1118,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 826,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 5840,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 4436,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 8437,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 9263,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 5379,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 6529,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 9127,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 12024,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 29090,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 4953,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 7009,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 5846,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "製造服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 29212,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1896,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1491,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1043,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 11265,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 7878,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 13698,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 14741,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 27538,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 10352,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 11285,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 20387,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 226900,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 74994,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 41222,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 45916,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 62239,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 46727,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 43006,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 37819,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 60610,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 3721,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 4679,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 18112,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 188380,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "製造服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 24309,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 59263,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 898426,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 274778,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 152877,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 193487,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 236564,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 186370,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 171765,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 155375,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 247306,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 14605,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 14927,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 77004,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 728328,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "製造服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 91581,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 243791,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 10.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 12.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 12.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 7.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 4.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 6.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 6.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 5.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 6.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 14.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 9.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 7.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "製造服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 10.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 12.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服務輸出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 7.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "運輸",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -1.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 10.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅遊",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 6.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 5.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 5.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 5.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 6.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 5.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保險及退休金服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 6.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 9.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服務輸入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "製造服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 2.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 12.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服務",
+      "freq": "Y",
+      "period": "1995",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 11.5,
+      "sd_value": "r"
+    }
+  ]
+}

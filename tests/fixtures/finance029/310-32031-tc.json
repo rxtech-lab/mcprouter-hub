@@ -1,0 +1,847 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=310-32031&api_popup=1"
+    },
+    "title": "按組成部分劃分的本地固定資本形成總額 - 以當時市價計算",
+    "tablenote": [
+      "在香港，首次公布的某一期間的按開支組成部分劃分的本地生產總值數字稱為「預先估計數字」。當獲得更多數據後，這些數字會作出修訂。繼預先估計數字後公布的所有數字均稱為「修訂數字」。這些「修訂數字」在納入更多數據後，在日後仍會作出進一步定期修訂。這例行修訂符合國際一貫的做法，即盡早採用部分數據來編製和公布本地生產總值數字。一般而言，已採納了全部定期資料來源所得的最終數據編製而成的數字，則為最終的數字。",
+      "擁有權轉讓費用歸類為私營部門。",
+      "r 修訂數字",
+      "N.A. 沒有數字",
+      "[φ3] 數字代表增減少於 0.05%。"
+    ],
+    "source": "政府統計處國民收入統計組（一）一 (查詢電話 : 3863 2727  查詢電郵：gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 82,
+      "started": "2026-10-20T17:47:57+00:00",
+      "finished": "2026-10-20T17:47:57+00:00",
+      "durationSeconds": 0.222481
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 2767,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 2256,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 511,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "擁有權轉讓費用",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 52,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 3841,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 3289,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 552,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "機器、設備及知識產權產品",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1022,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 981,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 41,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1327,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1030,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 297,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "擁有權轉讓費用",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 59,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 2147,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1825,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 322,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "機器、設備及知識產權產品",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 761,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 736,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 25,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -19.4,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -31.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -33.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -22.7,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "擁有權轉讓費用",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -19.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -21.8,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -23,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "機器、設備及知識產權產品",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -26.8,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 31.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 26.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 48.8,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "擁有權轉讓費用",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -44.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 14.6,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 48.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "機器、設備及知識產權產品",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 4.3,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 3.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 40,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 13.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 31.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "機器、設備及知識產權產品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 28,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -20.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 23,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 7.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "擁有權轉讓費用",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 77,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -32,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -12.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 5.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 39.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "機器、設備及知識產權產品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 29.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 1.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 9.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 6.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "擁有權轉讓費用",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 26.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 0.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -14.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": -8.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 13532,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 57870,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "機器、設備及知識產權產品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 71402,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 38087,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 111203,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 149290,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "擁有權轉讓費用",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 11289,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 24555,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 42044,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 66599,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 57110,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 186669,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "機器、設備及知識產權產品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 243779,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 198511,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 365438,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "本地固定資本形成總額",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 563949,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "擁有權轉讓費用",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 27436,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 141401,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "私營部門",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 151333,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 292734,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "公營部門",
+      "freq": "Q",
+      "period": "200006",
+      "sv": "CUR",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "樓宇及建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 318909,
+      "sd_value": "r"
+    }
+  ]
+}

@@ -1,0 +1,531 @@
+id: censtatd-gdp-expenditure
+title: Hong Kong Consumption, Investment & Services Trade
+description: Official C&SD Finance tables for domestic consumption by commodity, government consumption by component and function, individual and collective consumption, fixed capital formation and services trade.
+apis: [API-0531, API-0532, API-0533, API-0534, API-0535, API-0536, API-0537, API-0538, API-0539, API-0540]
+datasets:
+  - hk-censtatd-tablechart-310-31013
+  - hk-censtatd-tablechart-310-31014
+  - hk-censtatd-tablechart-310-31015
+  - hk-censtatd-tablechart-310-32021
+  - hk-censtatd-tablechart-310-32022
+  - hk-censtatd-tablechart-310-32023
+  - hk-censtatd-tablechart-310-32024
+  - hk-censtatd-tablechart-310-32031
+  - hk-censtatd-tablechart-310-32032
+  - hk-censtatd-tablechart-310-33041
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map: { en: en, tc: tc, sc: sc }
+cacheTtl: 3600
+tools:
+  - name: cxdm_groups_current
+    title: "Consumption expenditure in the domestic market (CXDM) by commodity and service group at current market prices (310-31013)"
+    description: "Consumption expenditure in the domestic market (CXDM) by commodity and service group at current market prices. Official C&SD Table 310-31013. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Annual observations only. "
+    path: /get.php
+    query: { id: "310-31013", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "CXDM = Consumption expenditure in the domestic market; CXDM1 = Food and non-alcoholic beverages; CXDM10 = Medical care and health expenses; CXDM11 = Transport and communication; CXDM12 = Recreation and entertainment; CXDM13 = Education; CXDM14 = Other services; CXDM2 = Alcoholic beverages; CXDM3 = Tobacco; CXDM4 = Clothing, footwear and other personal effects; CXDM5 = Rent, rates, water and housing maintenance charges; CXDM6 = Fuel and light; CXDM7 = Furniture, furnishings and household equipment; CXDM8 = Household operation; CXDM9 = Personal care"
+        enum: ["CXDM", "CXDM1", "CXDM10", "CXDM11", "CXDM12", "CXDM13", "CXDM14", "CXDM2", "CXDM3", "CXDM4", "CXDM5", "CXDM6", "CXDM7", "CXDM8", "CXDM9"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: cxdm_groups_chained
+    title: "Consumption expenditure in the domestic market (CXDM) by commodity and service group in chained (2024) dollars (310-31014)"
+    description: "Consumption expenditure in the domestic market (CXDM) by commodity and service group in chained (2024) dollars. Official C&SD Table 310-31014. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Annual observations only. Chained-dollar components may not sum to the total."
+    path: /get.php
+    query: { id: "310-31014", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CON"]
+      component:
+        type: string
+        in: local
+        description: "CXDM = Consumption expenditure in the domestic market; CXDM1 = Food and non-alcoholic beverages; CXDM10 = Medical care and health expenses; CXDM11 = Transport and communication; CXDM12 = Recreation and entertainment; CXDM13 = Education; CXDM14 = Other services; CXDM2 = Alcoholic beverages; CXDM3 = Tobacco; CXDM4 = Clothing, footwear and other personal effects; CXDM5 = Rent, rates, water and housing maintenance charges; CXDM6 = Fuel and light; CXDM7 = Furniture, furnishings and household equipment; CXDM8 = Household operation; CXDM9 = Personal care"
+        enum: ["CXDM", "CXDM1", "CXDM10", "CXDM11", "CXDM12", "CXDM13", "CXDM14", "CXDM2", "CXDM3", "CXDM4", "CXDM5", "CXDM6", "CXDM7", "CXDM8", "CXDM9"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: cxdm_groups_distribution
+    title: "Percentage distribution of consumption expenditure in the domestic market (CXDM) by commodity and service group at current market prices (310-31015)"
+    description: "Percentage distribution of consumption expenditure in the domestic market (CXDM) by commodity and service group at current market prices. Official C&SD Table 310-31015. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Annual observations only. Distribution means percent of total consumption, not percent of GDP. "
+    path: /get.php
+    query: { id: "310-31015", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "CXDM = Consumption expenditure in the domestic market; CXDM1 = Food and non-alcoholic beverages; CXDM10 = Medical care and health expenses; CXDM11 = Transport and communication; CXDM12 = Recreation and entertainment; CXDM13 = Education; CXDM14 = Other services; CXDM2 = Alcoholic beverages; CXDM3 = Tobacco; CXDM4 = Clothing, footwear and other personal effects; CXDM5 = Rent, rates, water and housing maintenance charges; CXDM6 = Fuel and light; CXDM7 = Furniture, furnishings and household equipment; CXDM8 = Household operation; CXDM9 = Personal care"
+        enum: ["CXDM", "CXDM1", "CXDM10", "CXDM11", "CXDM12", "CXDM13", "CXDM14", "CXDM2", "CXDM3", "CXDM4", "CXDM5", "CXDM6", "CXDM7", "CXDM8", "CXDM9"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["distribution"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: gce_components_current
+    title: "Government consumption expenditure (GCE) by component at current market prices (310-32021)"
+    description: "Government consumption expenditure (GCE) by component at current market prices. Official C&SD Table 310-32021. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Quarter codes end in 03, 06, 09 or 12. "
+    path: /get.php
+    query: { id: "310-32021", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "CE = Compensation of employees; GCE = Government consumption expenditure; PU = Purchases of goods and services; SAL = Less: Sales by government departments not engaged in market activities to households and enterprises"
+        enum: ["CE", "GCE", "PU", "SAL"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: gce_components_chained
+    title: "Government consumption expenditure (GCE) by component in chained (2024) dollars (310-32022)"
+    description: "Government consumption expenditure (GCE) by component in chained (2024) dollars. Official C&SD Table 310-32022. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Quarter codes end in 03, 06, 09 or 12. Chained-dollar components may not sum to the total."
+    path: /get.php
+    query: { id: "310-32022", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CON"]
+      component:
+        type: string
+        in: local
+        description: "CE = Compensation of employees; GCE = Government consumption expenditure; PU = Purchases of goods and services; SAL = Sales by government departments not engaged in market activities to households and enterprises"
+        enum: ["CE", "GCE", "PU", "SAL"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: gce_functions_current
+    title: "Government consumption expenditure (GCE) by social and economic function at current market prices (310-32023)"
+    description: "Government consumption expenditure (GCE) by social and economic function at current market prices. Official C&SD Table 310-32023. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Annual observations only. Distribution means percent of total consumption, not percent of GDP. "
+    path: /get.php
+    query: { id: "310-32023", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "GCE = Government consumption expenditure; GCE_econ = Economic affairs; GCE_edu = Education; GCE_envir = Environmental protection; GCE_health = Health; GCE_housing = Housing and community amenities; GCE_public = General public services; GCE_recre = Recreation, culture and religion; GCE_safety = Public order, safety and defence; GCE_social = Social  protection"
+        enum: ["GCE", "GCE_econ", "GCE_edu", "GCE_envir", "GCE_health", "GCE_housing", "GCE_public", "GCE_recre", "GCE_safety", "GCE_social"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "distribution"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: individual_collective_consumption
+    title: "Individual and collective consumption at current market prices (310-32024)"
+    description: "Individual and collective consumption at current market prices. Official C&SD Table 310-32024. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Annual observations only. "
+    path: /get.php
+    query: { id: "310-32024", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "COL_CON = Collective consumption; GCE = Government consumption expenditure; GCE_IND = Government consumption expenditure for individual use; IND_CON = Individual consumption; PCE = Private consumption expenditure"
+        enum: ["COL_CON", "GCE", "GCE_IND", "IND_CON", "PCE"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: gdfcf_components_current
+    title: "Gross domestic fixed capital formation (GDFCF) by component at current market prices (310-32031)"
+    description: "Gross domestic fixed capital formation (GDFCF) by component at current market prices. Official C&SD Table 310-32031. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Quarter codes end in 03, 06, 09 or 12. "
+    path: /get.php
+    query: { id: "310-32031", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "BC = Building and construction; BC_PR = Private sector; BC_PU = Public sector; COT = Costs of ownership transfer; GDFCF = Gross domestic fixed capital formation; GDFCF_PR = Private sector; GDFCF_PU = Public sector; ME = Machinery, equipment and intellectual property products; ME_PR = Private sector; ME_PU = Public sector"
+        enum: ["BC", "BC_PR", "BC_PU", "COT", "GDFCF", "GDFCF_PR", "GDFCF_PU", "ME", "ME_PR", "ME_PU"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: gdfcf_components_chained
+    title: "Gross domestic fixed capital formation (GDFCF) by component in chained (2024) dollars (310-32032)"
+    description: "Gross domestic fixed capital formation (GDFCF) by component in chained (2024) dollars. Official C&SD Table 310-32032. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Quarter codes end in 03, 06, 09 or 12. Chained-dollar components may not sum to the total."
+    path: /get.php
+    query: { id: "310-32032", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CON"]
+      component:
+        type: string
+        in: local
+        description: "BC = Building and construction; BC_PR = Private sector; BC_PU = Public sector; COT = Costs of ownership transfer; GDFCF = Gross domestic fixed capital formation; GDFCF_PR = Private sector; GDFCF_PU = Public sector; ME = Machinery, equipment and intellectual property products; ME_PR = Private sector; ME_PU = Public sector"
+        enum: ["BC", "BC_PR", "BC_PU", "COT", "GDFCF", "GDFCF_PR", "GDFCF_PU", "ME", "ME_PR", "ME_PU"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
+  - name: services_trade_components_current
+    title: "Exports and imports of services by service component at current market prices (310-33041)"
+    description: "Exports and imports of services by service component at current market prices. Official C&SD Table 310-33041. Newest observations first. Page with offset; preserve original figures, units, missing values and revision flags. Quarter codes end in 03, 06, 09 or 12. "
+    path: /get.php
+    query: { id: "310-33041", full_series: 1 }
+    transform: { response: normalizeExpenditureTable }
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum: ["Q", "Y"]
+      period:
+        type: string
+        in: local
+        description: "A four-digit year or exact quarter (202503 = Q1) where available. A year matches all observations in that year."
+        pattern: '^\d{4}(03|06|09|12)?$'
+      indicator:
+        type: string
+        in: local
+        description: "C&SD indicator: CUR current prices, CON chained dollars. Use measure to distinguish levels, growth and distributions."
+        enum: ["CUR"]
+      component:
+        type: string
+        in: local
+        description: "FINS_XS = Financial services; MANU_MS = Manufacturing services; MS = Imports of services; OS_FINS_MS = Financial services; OS_INS_MS = Insurance and pension services; OS_INS_XS = Insurance and pension services; OS_MS = Other services; OS_OTH_MS = Others; OS_OTH_XS = Others; OS_XS = Other services; TRANS_MS = Transport; TRANS_XS = Transport; TRA_MS = Travel; TRA_XS = Travel; XS = Exports of services"
+        enum: ["FINS_XS", "MANU_MS", "MS", "OS_FINS_MS", "OS_INS_MS", "OS_INS_XS", "OS_MS", "OS_OTH_MS", "OS_OTH_XS", "OS_XS", "TRANS_MS", "TRANS_XS", "TRA_MS", "TRA_XS", "XS"]
+      measure:
+        type: string
+        in: local
+        description: "level = HK$ million; yoy = year-on-year percent change; distribution = percentage share of the table total."
+        enum: ["level", "yoy"]
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum: [en, tc, sc]
+        default: en
+        description: Language for official titles, units, component descriptions and notes.
