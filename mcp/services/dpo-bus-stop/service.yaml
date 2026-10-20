@@ -1,0 +1,35 @@
+id: dpo-bus-stop
+title: Citybus & NLB Stop Batches
+description: DPO batch APIs for all routes and estimated arrivals at one Citybus or New Lantao Bus stop.
+apis: [API-1541]
+datasets: [hk-dpo-datagovhk1-transport-bus-route-list-and-eta-spcific-bus-stop]
+baseUrl: https://rt.data.gov.hk
+cacheTtl: 30
+lang:
+  param: lang
+  map: { en: en, tc: zh-hant, sc: zh-hans }
+tools:
+  - name: dpo_bus_stop_routes
+    title: Routes serving a Citybus or NLB stop
+    description: Routes serving a Citybus or NLB stop. Supply the operator-specific stop ID (Citybus six digits; NLB a numeric ID from nlb_route_stops). Returns a generated timestamp and up to 200 records, with explicit truncation; continue using nextOffset and the same inputs. Empty or null ETA means no prediction, not an immediate arrival. Upstream errors may be transient; retry 429 or 502 later.
+    path: /v1.1/transport/batch/stop-route/{operator}/{stopId}
+    cacheTtl: 3600
+    transform: { request: validateStop, response: batch }
+    input:
+      limit: { type: integer, in: local, minimum: 1, maximum: 200, default: 200 }
+      offset: { type: integer, in: local, minimum: 0, maximum: 1000000, default: 0 }
+      operator: { type: string, enum: [CTB, NLB], required: true, description: "Bus operator" }
+      stopId: { type: string, pattern: '^[0-9]{1,6}$', required: true, description: "Citybus six-digit stop ID or NLB numeric stop ID" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: dpo_bus_stop_eta
+    title: All Citybus or NLB arrivals at a stop
+    description: All Citybus or NLB arrivals at a stop. Supply the operator-specific stop ID (Citybus six digits; NLB a numeric ID from nlb_route_stops). Returns a generated timestamp and up to 200 records, with explicit truncation; continue using nextOffset and the same inputs. Empty or null ETA means no prediction, not an immediate arrival. Upstream errors may be transient; retry 429 or 502 later.
+    path: /v1/transport/batch/stop-eta/{operator}/{stopId}
+    cacheTtl: 30
+    transform: { request: validateStop, response: batch }
+    input:
+      limit: { type: integer, in: local, minimum: 1, maximum: 200, default: 200 }
+      offset: { type: integer, in: local, minimum: 0, maximum: 1000000, default: 0 }
+      operator: { type: string, enum: [CTB, NLB], required: true, description: "Bus operator" }
+      stopId: { type: string, pattern: '^[0-9]{1,6}$', required: true, description: "Citybus six-digit stop ID or NLB numeric stop ID" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }

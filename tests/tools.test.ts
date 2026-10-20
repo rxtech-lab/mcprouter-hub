@@ -6,6 +6,7 @@ import { services } from "@/generated/registry";
 import { setCacheForTesting } from "@/lib/mcp/cache";
 import { executeTool } from "@/lib/mcp/runtime";
 import type { ServiceDefinition, ToolDefinition, ToolInput } from "@/lib/mcp/types";
+import { transportCases } from "./transport003-cases";
 
 /**
  * Runs every generated MCP tool against a stubbed upstream: checks the HTTP
@@ -187,6 +188,7 @@ const sensorOccupancy = [
 ].join("\n");
 
 const cases: Case[] = [
+  ...transportCases,
   // citybus
   {
     tool: "citybus_routes",

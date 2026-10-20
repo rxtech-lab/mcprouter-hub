@@ -1,0 +1,16 @@
+id: gpa-carparks
+title: Government Public Car Parks
+description: Locations, spaces, vehicle types, opening hours, fees and chargers at GPA government car parks open to the public, parsed from the official CSV files.
+apis: [API-1969]
+datasets: [hk-gpa-msd-gpa-psi-t-cp]
+cacheTtl: 86400
+tools:
+  - name: gpa_public_carparks
+    title: Government public car parks
+    description: GPA public car parks with address, district, capacity by vehicle type, height restrictions, opening hours, fees, charger counts and contact details. Uses official CSV downloads rather than the malformed upstream JSON. Source values are preserved as text, including mixed vehicle counts and unavailable markers. These are capacities, not live vacancies. Translated files may differ in freshness and row order; paginate with nextOffset and the same language and filters.
+    handler: carparks
+    input:
+      search: { type: string, pattern: '^.{1,100}$', description: "Text in name, district, address or vehicle type, in the selected language" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Source file language" }
+      limit: { type: integer, minimum: 1, maximum: 100, default: 20 }
+      offset: { type: integer, minimum: 0, maximum: 1000000, default: 0 }

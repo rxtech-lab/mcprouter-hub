@@ -1,0 +1,31 @@
+{
+  "type": "StopRoute",
+  "version": "1.1",
+  "generated_timestamp": "2026-10-20T08:06:23+08:00",
+  "data": [
+    {
+      "co": "CTB",
+      "dir": "O",
+      "overnightRoute": null,
+      "route": "12",
+      "routeId": null,
+      "routeName": null,
+      "seq": 11,
+      "specialRoute": null,
+      "stop": "001001",
+      "data_timestamp": "2026-10-20T05:00:03+08:00"
+    },
+    {
+      "co": "CTB",
+      "dir": "O",
+      "overnightRoute": null,
+      "route": "12M",
+      "routeId": null,
+      "routeName": null,
+      "seq": 6,
+      "specialRoute": null,
+      "stop": "001001",
+      "data_timestamp": "2026-10-20T05:00:03+08:00"
+    }
+  ]
+}

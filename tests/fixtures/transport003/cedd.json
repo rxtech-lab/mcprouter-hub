@@ -1,0 +1,34 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "features": [
+    {
+      "attributes": {
+        "STRUCTURE_": "HP077",
+        "OBJECTID_1": "1",
+        "OBJECTID": 1
+      },
+      "geometry": {
+        "x": 114.24828820352111,
+        "y": 22.26875599237688
+      }
+    },
+    {
+      "attributes": {
+        "STRUCTURE_": "HP078",
+        "OBJECTID_1": "2",
+        "OBJECTID": 2
+      },
+      "geometry": {
+        "x": 114.18564298961525,
+        "y": 22.235861020841494
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

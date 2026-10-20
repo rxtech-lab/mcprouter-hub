@@ -1,4 +1,5 @@
 import { cached } from "@/lib/mcp/cache";
+import { UpstreamError } from "@/lib/mcp/fetcher";
 import type { ResponseTransformer, ToolHandler, ToolInput } from "@/lib/mcp/types";
 
 /**
@@ -239,7 +240,14 @@ export type VehicleQuarter = {
 /** One row per control point and quarter, with a column per vehicle type; only the asked (or latest) year. */
 export const customsVehicles: ResponseTransformer = (body, input: ToolInput) => {
   const lang = language(input.lang);
+  const headers = { en: "Land Boundary Control Points", tc: "陸路邊境管制站", sc: "陆路边境管制站" };
+  if (!Array.isArray(body) || !body.length || Object.keys(body[0] ?? {})[0]?.trim() !== headers[lang]) {
+    throw new UpstreamError("upstream_parse", "Customs vehicle statistics CSV has an unexpected header; retry later or check the published resource.");
+  }
   const rows = cells(body).filter((row) => row[0]);
+  if (rows.some((row) => row.length !== 5 || !/^\d{4}$/.test(row[2]) || !/^(?:Q[1-4]|第[1-4]季|-)$/.test(row[3]))) {
+    throw new UpstreamError("upstream_parse", "Customs vehicle statistics CSV has a malformed year or quarter; retry later or check the published resource.");
+  }
   const latest = Math.max(...rows.map((row) => number(row[2]) ?? 0));
   const year = typeof input.year === "number" ? input.year : latest;
   const byKey = new Map<string, VehicleQuarter>();

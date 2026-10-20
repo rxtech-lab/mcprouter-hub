@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **62 of 3819 implemented**, 3757 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **68 of 3819 implemented**, 3751 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -78,21 +78,21 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1234` | [Distribution of aircraft noise levels recorded at various districts in rolling 12 months](https://data.gov.hk/en-data/dataset/hk-cad-cadpsi1-aircraft-noise-annual-data) | Files | Civil Aviation Department | 🕒 Coming soon | — |
 | `API-1235` | [List of Advanced Operations Permission Holders issued according to Small Unmanned Aircraft Order](https://data.gov.hk/en-data/dataset/hk-cad-cadpsi1-aop-holders) | Files | Civil Aviation Department | 🕒 Coming soon | — |
 | `API-1236` | [No. of NOTAM processed](https://data.gov.hk/en-data/dataset/hk-cad-cadpsi1-notam-data) | Files | Civil Aviation Department | 🕒 Coming soon | — |
-| `API-1237` | [Paragliding Activity Areas](https://data.gov.hk/en-data/dataset/hk-cad-cadpsi1-paragliding-area-location-data) | API | Civil Aviation Department | 🕒 Coming soon | — |
+| `API-1237` | [Paragliding Activity Areas](https://data.gov.hk/en-data/dataset/hk-cad-cadpsi1-paragliding-area-location-data) | API | Civil Aviation Department | ✅ Implemented | [Paragliding Activity Areas](mcp/services/cad-paragliding/service.yaml) |
 | `API-1238` | [Water Dispensers in Civil Aviation Department](https://data.gov.hk/en-data/dataset/hk-cad-cadpsi1-water-dispensers-in-cad) | Files | Civil Aviation Department | 🕒 Coming soon | — |
-| `API-1264` | [Public Piers](https://data.gov.hk/en-data/dataset/hk-cedd-csu-public-piers) | API | Civil Engineering and Development Department | 🕒 Coming soon | — |
+| `API-1264` | [Public Piers](https://data.gov.hk/en-data/dataset/hk-cedd-csu-public-piers) | API | Civil Engineering and Development Department | ✅ Implemented | [Public Piers](mcp/services/cedd-piers/service.yaml) |
 | `API-1294` | [Electric Vehicle Charging Stations](https://data.gov.hk/en-data/dataset/clp-team1-electric-vehicle-charging-stations) | API | CLP Power Hong Kong Limited | 🕒 Coming soon | — |
 | `API-1424` | [Customs Statistics on Control Points Passenger Throughput](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-passenger-clearance) | Files | Customs and Excise Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
 | `API-1427` | [Customs Statistics on Land Boundary Control Points Vehicular Throughput](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-vehicle-clearance) | API | Customs and Excise Department | ✅ Implemented | [Border Control Points](mcp/services/hk-border/service.yaml) |
-| `API-1541` | [Estimated arrival time of a specific bus stop for Citybus and New Lantao Bus](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-transport-bus-route-list-and-eta-spcific-bus-stop) | API | Digital Policy Office | 🕒 Coming soon | — |
+| `API-1541` | [Estimated arrival time of a specific bus stop for Citybus and New Lantao Bus](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-transport-bus-route-list-and-eta-spcific-bus-stop) | API | Digital Policy Office | ✅ Implemented | [Citybus & NLB Stop Batches](mcp/services/dpo-bus-stop/service.yaml) |
 | `API-1543` | [Journey Time Indicators (City Dashboard Version)](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk2-city-dashboard-journey-time) | Files | Digital Policy Office | 🕒 Coming soon | — |
 | `API-1545` | [Parking Vacancy Data (City Dashboard Version)](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk2-city-dashboard-parking-vacancy) | Files | Digital Policy Office | 🕒 Coming soon | — |
 | `API-1548` | [Traffic Speed Map (City Dashboard Version)](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk2-city-dashboard-traffic-speed) | Files | Digital Policy Office | 🕒 Coming soon | — |
-| `API-1825` | [Electric Vehicle Chargers for Public Access](https://data.gov.hk/en-data/dataset/hk-epd-evcpateam-evc-1) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-1825` | [Electric Vehicle Chargers for Public Access](https://data.gov.hk/en-data/dataset/hk-epd-evcpateam-evc-1) | API | Environmental Protection Department | ✅ Implemented | [Public EV Chargers](mcp/services/epd-ev-chargers/service.yaml) |
 | `API-1920` | [List of Ferry Service Timetables and Fare Tables of Fortune Ferry Company Limited](https://data.gov.hk/en-data/dataset/ff-fortune-schedule1) | Files | Fortune Ferry Company Limited | 🕒 Coming soon | — |
 | `API-1921` | [Hong Kong Water Taxi Service Timetable and Fare Table](https://data.gov.hk/en-data/dataset/ff-watertaxi-schedule1) | Files | Fortune Ferry Company Limited | 🕒 Coming soon | — |
-| `API-1969` | [Government car parks open for public use under the purview of GPA](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-t-cp) | API | Government Property Agency | 🕒 Coming soon | — |
-| `API-1984` | [Barrier Fence](https://data.gov.hk/en-data/dataset/hk-hyd-csdi-barrier-fence) | API | Highways Department | 🕒 Coming soon | — |
+| `API-1969` | [Government car parks open for public use under the purview of GPA](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-t-cp) | API | Government Property Agency | ✅ Implemented | [Government Public Car Parks](mcp/services/gpa-carparks/service.yaml) |
+| `API-1984` | [Barrier Fence](https://data.gov.hk/en-data/dataset/hk-hyd-csdi-barrier-fence) | API | Highways Department | ✅ Implemented | [Barrier Fences](mcp/services/hyd-barrier-fence/service.yaml) |
 | `API-1985` | [Bridge](https://data.gov.hk/en-data/dataset/hk-hyd-csdi-bridge) | API | Highways Department | 🕒 Coming soon | — |
 | `API-1986` | [Cover to Walkway](https://data.gov.hk/en-data/dataset/hk-hyd-csdi-cover-to-walkway) | API | Highways Department | 🕒 Coming soon | — |
 | `API-1987` | [Crash Cushion](https://data.gov.hk/en-data/dataset/hk-hyd-csdi-crash-cushion) | API | Highways Department | 🕒 Coming soon | — |

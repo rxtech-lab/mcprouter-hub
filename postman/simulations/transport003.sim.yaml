@@ -1,0 +1,5 @@
+simulation: transport003
+routing: path
+mocks:
+  - routeKey: upstream
+    path: ../mocks/transport003/config.yaml
