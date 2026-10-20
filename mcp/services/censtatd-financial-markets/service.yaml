@@ -1,0 +1,790 @@
+id: censtatd-financial-markets
+title: Hong Kong Mainland Investment, Money & Public Finance
+description: Official C&SD Finance tables for outward direct investment in Mainland China, currency
+  circulation, money supply, interest rates, exchange rates and government revenue and expenditure.
+apis:
+  - API-0571
+  - API-0572
+  - API-0596
+  - API-0597
+  - API-0598
+  - API-0599
+  - API-0600
+  - API-0601
+  - API-0602
+  - API-0603
+datasets:
+  - hk-censtatd-tablechart-315-38031
+  - hk-censtatd-tablechart-315-38032
+  - hk-censtatd-tablechart-340-45001
+  - hk-censtatd-tablechart-340-45011
+  - hk-censtatd-tablechart-340-45012
+  - hk-censtatd-tablechart-340-45021
+  - hk-censtatd-tablechart-340-45022
+  - hk-censtatd-tablechart-340-46001
+  - hk-censtatd-tablechart-340-46002
+  - hk-censtatd-tablechart-340-47001
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: mainland_outward_di_regions
+    title: Position and flow of outward direct investment (DI) in Chinese Mainland by region (315-38031)
+    description: Position and flow of outward direct investment (DI) in Chinese Mainland by region. Official C&SD
+      Table 315-38031. Newest observations first; paginate with nextOffset. Preserve original figures, units,
+      missing values and revision flags. Totals overlap children; do not sum them.
+    path: /get.php
+    query:
+      id: 315-38031
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - DI_OUTFLOW
+          - DI_POS_ODI
+      component:
+        type: string
+        in: local
+        description: CG = Guangdong Province; CN = Chinese Mainland; NG = Places outside Guangdong Province
+        enum:
+          - CG
+          - CN
+          - NG
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - amount_billion
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: mainland_outward_di_activities
+    title: Position and flow of Hong Kong's outward direct investment (DI) in Chinese Mainland by major economic
+      activity of the direct investment enterprise groups (DIEGs) in Chinese Mainland (315-38032)
+    description: Position and flow of Hong Kong's outward direct investment (DI) in Chinese Mainland by major
+      economic activity of the direct investment enterprise groups (DIEGs) in Chinese Mainland. Official C&SD
+      Table 315-38032. Newest observations first; paginate with nextOffset. Preserve original figures, units,
+      missing values and revision flags. Totals overlap children; do not sum them.
+    path: /get.php
+    query:
+      id: 315-38032
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - DI_OUTFLOW
+          - DI_POS_ODI
+      component:
+        type: string
+        in: local
+        description: TOTAL = Total; DI_10 = Manufacturing; DI_100-120 = Investment and holding, real estate,
+          professional and business services; DI_130 = Other activities; DI_30 = Import/export, wholesale and
+          retail trades; DI_40 = Accommodation and food services; DI_50 = Transportation, storage, postal and
+          courier services; DI_60 = Information and communications; DI_70 = Banking; DI_90 = Financing (except
+          banking, investment and holding companies)
+        enum:
+          - DI_10
+          - DI_100-120
+          - DI_130
+          - DI_30
+          - DI_40
+          - DI_50
+          - DI_60
+          - DI_70
+          - DI_90
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - amount_billion
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: currency_in_circulation
+    title: Currency in circulation (340-45001)
+    description: Currency in circulation. Official C&SD Table 340-45001. Newest observations first; paginate with
+      nextOffset. Preserve original figures, units, missing values and revision flags. Totals overlap
+      children; do not sum them.
+    path: /get.php
+    query:
+      id: 340-45001
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - LT_AI
+          - LT_CIR
+          - LT_PUB
+          - LT_PUB_SA
+      component:
+        type: string
+        in: local
+        description: 1 = Commercial bank issues; 2 = Government issues; TOTAL = Total; NONE = No component dimension
+          for this indicator
+        enum:
+          - "1"
+          - "2"
+          - NONE
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - amount_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: money_supply_all_currencies
+    title: Money supply (all currencies) (340-45011)
+    description: Money supply (all currencies). Official C&SD Table 340-45011. Newest observations first; paginate
+      with nextOffset. Preserve original figures, units, missing values and revision flags. Totals overlap
+      children; do not sum them.
+    path: /get.php
+    query:
+      id: 340-45011
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - M1
+          - M2
+          - M3
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension for this indicator
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - amount_million
+          - yoy
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: money_supply_currency
+    title: Money supply (Hong Kong dollar and foreign currency) (340-45012)
+    description: Money supply (Hong Kong dollar and foreign currency). Official C&SD Table 340-45012. Newest
+      observations first; paginate with nextOffset. Preserve original figures, units, missing values and
+      revision flags. Totals overlap children; do not sum them.
+    path: /get.php
+    query:
+      id: 340-45012
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - M1
+          - M1_SA
+          - M2
+          - M2_SW
+          - M3
+          - M3_SW
+      component:
+        type: string
+        in: local
+        description: 1 = HK dollar; 3 = Foreign currency; TOTAL = Total
+        enum:
+          - "1"
+          - "3"
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - amount_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: hkd_interest_rates
+    title: Hong Kong dollar interest rates (340-45021)
+    description: Hong Kong dollar interest rates. Official C&SD Table 340-45021. Newest observations first;
+      paginate with nextOffset. Preserve original figures, units, missing values and revision flags. Totals
+      overlap children; do not sum them. Period average interest rates in percent per annum.
+    path: /get.php
+    query:
+      id: 340-45021
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - M
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - BL_RATE
+          - S_DEP_RATE
+          - T_DEP_RATE
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension for this indicator; 12M = 12 months; 1M = 1 month; 1W = 1 week; 3M
+          = 3 months; 6M = 6 months
+        enum:
+          - 12M
+          - 1M
+          - 1W
+          - 3M
+          - 6M
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - interest_rate
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: hkd_interest_settlement_rates
+    title: Hong Kong dollar Interest Settlement Rates (340-45022)
+    description: Hong Kong dollar Interest Settlement Rates. Official C&SD Table 340-45022. Newest observations
+      first; paginate with nextOffset. Preserve original figures, units, missing values and revision flags.
+      Totals overlap children; do not sum them. End-of-period settlement rates in percent per annum.
+    path: /get.php
+    query:
+      id: 340-45022
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - SET_RATE
+      component:
+        type: string
+        in: local
+        description: 0N = Overnight; 1M = 1 month; 1W = 1 week; 3M = 3 months; 6M = 6 months
+        enum:
+          - 0N
+          - 1M
+          - 1W
+          - 3M
+          - 6M
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - interest_rate
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: exchange_rates
+    title: Exchange rates (340-46001)
+    description: Exchange rates. Official C&SD Table 340-46001. Newest observations first; paginate with
+      nextOffset. Preserve original figures, units, missing values and revision flags. Totals overlap
+      children; do not sum them. HK dollars per unit of foreign currency, as defined in the source notes.
+    path: /get.php
+    query:
+      id: 340-46001
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - M
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - FC_AUD
+          - FC_CAD
+          - FC_CHF
+          - FC_CNY
+          - FC_EUR
+          - FC_GBP
+          - FC_IDR
+          - FC_INR
+          - FC_JPY
+          - FC_MYR
+          - FC_PHP
+          - FC_SGD
+          - FC_THB
+          - FC_TWD
+          - FC_USD
+          - FC_WON
+          - FC_ZAR
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension for this indicator
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - exchange_rate
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: hkd_effective_exchange_indices
+    title: Effective exchange rate indices for the Hong Kong dollar(January 2020 = 100) (340-46002)
+    description: "Effective exchange rate indices for the Hong Kong dollar(January 2020 = 100). Official C&SD
+      Table 340-46002. Newest observations first; paginate with nextOffset. Preserve original figures, units,
+      missing values and revision flags. Totals overlap children; do not sum them. Index base: January 2020 =
+      100."
+    path: /get.php
+    query:
+      id: 340-46002
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - M
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - EERI_E
+          - EERI_I
+          - EERI_T
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension for this indicator
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - index
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.
+  - name: government_revenue_expenditure
+    title: Government revenue and expenditure under the General Revenue Account (340-47001)
+    description: Government revenue and expenditure under the General Revenue Account. Official C&SD Table
+      340-47001. Newest observations first; paginate with nextOffset. Preserve original figures, units,
+      missing values and revision flags. Totals overlap children; do not sum them. Financial year runs from 1
+      April to 31 March; period retains the provider year code.
+    path: /get.php
+    query:
+      id: 340-47001
+      full_series: 1
+    transform:
+      response: normalizeFinancialTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period. A year matches all periods in that year; combine
+          with freq for annual only.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Original C&SD statistical variable code. Distinguishes position/flow, monetary aggregates, rates
+          and revenue/expenditure.
+        enum:
+          - EXP_GRA
+          - REV_GRA
+      component:
+        type: string
+        in: local
+        description: REV_1 = Direct taxes; REV_2 = Indirect taxes; REV_3 = Other revenue; REV_4 = Transfers from
+          Funds; REV_5 = Total revenue; EXP_1 = Actual expenditure during the period; EXP_2 = Transfers to
+          Funds; EXP_8 = Total expenditure on General Revenue Account
+        enum:
+          - EXP_1
+          - EXP_2
+          - EXP_8
+          - REV_1
+          - REV_2
+          - REV_3
+          - REV_4
+          - REV_5
+      measure:
+        type: string
+        in: local
+        description: "Original units retained: amount_million/billion = HK$ million/billion; yoy = year-on-year
+          percent change; interest_rate = percent per annum; exchange_rate = HK dollars per foreign unit;
+          index = January 2020 base 100."
+        enum:
+          - amount_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering. Continue with nextOffset using the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, units and dimension labels.

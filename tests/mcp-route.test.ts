@@ -1,3 +1,4 @@
+import { marketsCases } from "./finance033-cases";
 import { migrate } from "drizzle-orm/libsql/migrator";
 import { eq } from "drizzle-orm";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
@@ -250,6 +251,37 @@ describe("Finance batch 032 MCP routes", () => {
     expect(result.content![0].text).toContain("503");
     fetchMock.mockResolvedValueOnce(Response.json({ header: { status: { name: "Fail", code: 1 } } }));
     const failed = await callTool("external_debt", {});
+    expect(failed.isError).toBe(true);
+    expect(failed.content![0].text).toContain("official web table");
+  });
+});
+
+describe("Finance batch 033 MCP routes", () => {
+  it.each(marketsCases)("discovers and calls $tool on the scoped route", async ({ tool, input, request, reply, data }) => {
+    const service = services.find((candidate) => candidate.id === "censtatd-financial-markets")!;
+    const route = createServiceRoute(() => [service]);
+    const options = { path: "/api/mcp/s/censtatd-financial-markets/streamable", scopes: service.id };
+    const listed = await rpc(route, "tools/list", {}, options);
+    expect(listed.result!.tools!.map((entry) => entry.name)).toEqual(service.tools.map((entry) => entry.name));
+    fetchMock.mockImplementation(async (url) => {
+      expect(url).toBe(request.url);
+      return Response.json(reply);
+    });
+    const called = await rpc(route, "tools/call", { name: tool, arguments: input }, options);
+    expect(called.result!.isError).toBeFalsy();
+    expect(JSON.parse(called.result!.content![0].text).data).toEqual(data);
+    const invalid = await rpc(route, "tools/call", { name: tool, arguments: { limit: 101 } }, options);
+    expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("returns actionable tool errors for financial markets upstream failures", async () => {
+    fetchMock.mockResolvedValueOnce(new Response("Maintenance", { status: 503 }));
+    const result = await callTool("currency_in_circulation", {});
+    expect(result.isError).toBe(true);
+    expect(result.content![0].text).toContain("503");
+    fetchMock.mockResolvedValueOnce(Response.json({ header: { status: { name: "Fail", code: 1 } } }));
+    const failed = await callTool("currency_in_circulation", {});
     expect(failed.isError).toBe(true);
     expect(failed.content![0].text).toContain("official web table");
   });

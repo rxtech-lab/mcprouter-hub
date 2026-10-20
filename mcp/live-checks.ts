@@ -106,6 +106,17 @@ export const liveCases: Record<string, LiveCase> = {
   real_gross_domestic_income: { input: { limit: 1 }, check: nonEmptyPage },
   gni_and_per_capita: { input: { limit: 1 }, check: nonEmptyPage },
 
+  // Finance batch 033: period-free checks.
+  mainland_outward_di_regions: { input: { limit: 1 }, check: nonEmptyPage },
+  mainland_outward_di_activities: { input: { limit: 1 }, check: nonEmptyPage },
+  currency_in_circulation: { input: { limit: 1 }, check: nonEmptyPage },
+  money_supply_all_currencies: { input: { limit: 1 }, check: nonEmptyPage },
+  money_supply_currency: { input: { limit: 1 }, check: nonEmptyPage },
+  hkd_interest_rates: { input: { limit: 1 }, check: nonEmptyPage },
+  hkd_interest_settlement_rates: { input: { limit: 1 }, check: nonEmptyPage },
+  exchange_rates: { input: { limit: 1 }, check: nonEmptyPage },
+  hkd_effective_exchange_indices: { input: { limit: 1 }, check: nonEmptyPage },
+  government_revenue_expenditure: { input: { limit: 1 }, check: nonEmptyPage },
   // Finance batch 032: period-free checks.
   net_investment_flows_sector: { input: { limit: 1 }, check: nonEmptyPage },
   international_investment_position: { input: { limit: 1 }, check: nonEmptyPage },
