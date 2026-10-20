@@ -1,7 +1,7 @@
 "use client";
 
 import type { UIMessage } from "ai";
-import { ArrowUp, ChevronDown, CircleAlert, CircleCheck, ExternalLink, LayoutDashboard, LoaderCircle, Search, Sparkles, Square, Wrench } from "lucide-react";
+import { ArrowUp, ChevronDown, CircleAlert, CircleCheck, ExternalLink, LayoutDashboard, LoaderCircle, MapPin, Search, Sparkles, Square, Wrench } from "lucide-react";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { IconButton } from "@/components/m3/button";
 import { ACCOUNT_SUMMARY_TOOL_NAME, LIST_KEYS_TOOL_NAME, NAVIGATION_PART_TYPES, type DashboardNavigation } from "@/lib/agent/dashboard-tools";
@@ -12,7 +12,13 @@ import { useT } from "@/lib/i18n/client";
 import { msg } from "@/lib/i18n/translate";
 import { GenerativeUi } from "./generative-ui";
 import { Markdown } from "./markdown";
+import { UserLocationCard } from "./user-location";
+import { REQUEST_LOCATION_TOOL_NAME, locationRequestSchema, parseLocationAnswer } from "@/lib/agent/location";
+import { UserInputCard } from "./user-input";
+import { REQUEST_INPUT_TOOL_NAME, userInputSchema } from "@/lib/agent/user-input";
 import { McpAppHost, ToolAppCard, toolPartApp } from "./tool-app";
+import { SHOW_MAP_TOOL_NAME, mapSchema } from "@/lib/agent/map";
+import { AgentMapCard, MapCanvas } from "./map";
 
 export const SUGGESTIONS = [
   msg("What's the weather in Hong Kong right now? Any warnings?"),
@@ -234,11 +240,50 @@ function appCall(parts: Part[], toolName: string, before: number) {
   return null;
 }
 
+/** Structured messages keep their original data in history and show readable summaries. */
+function UserMessageText({ text }: { text: string }) {
+  const t = useT();
+  const location = parseLocationAnswer(text);
+  if (location) {
+    const capturedAt = new Intl.DateTimeFormat(t.locale, { dateStyle: "medium", timeStyle: "short", timeZone: "UTC" }).format(new Date(location.capturedAt));
+    const { latitude, longitude } = location;
+    const mapUrl = `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=16/${latitude}/${longitude}`;
+    return (
+      <div className="w-[min(320px,65vw)] max-w-full py-1" data-testid="shared-location-message">
+        <div className="flex items-start gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-current/10"><MapPin aria-hidden size={20} /></span>
+          <div className="min-w-0">
+            <p className="type-label-large">{t("Location shared")}</p>
+            <p className="mt-1 type-body-medium tabular-nums">{Math.abs(location.latitude).toFixed(5)}° {location.latitude < 0 ? "S" : "N"}, {Math.abs(location.longitude).toFixed(5)}° {location.longitude < 0 ? "W" : "E"}</p>
+            <p className="mt-1 type-body-small opacity-75">{t("Accuracy: ±{meters} m", { meters: location.accuracyMeters })}</p>
+            <time dateTime={location.capturedAt} className="mt-1 block type-body-small opacity-75">{capturedAt} UTC</time>
+          </div>
+        </div>
+        <div className="mt-3"><MapCanvas map={{ title: t("Location shared"), pins: [{ label: t("Location shared"), latitude, longitude }], routes: [] }} /></div>
+        <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="state-layer mt-1 inline-flex min-h-10 items-center gap-1 rounded-full px-2 type-label-large underline underline-offset-2">{t("Open in OpenStreetMap")}<ExternalLink aria-hidden size={14} /></a>
+      </div>
+    );
+  }
+  const toolName = /^Use this tool: ([a-zA-Z0-9_.:-]+)$/.exec(text.trim())?.[1];
+  if (!toolName) return <p className="whitespace-pre-wrap">{text}</p>;
+  return (
+    <div className="flex items-center gap-3 py-1" data-testid="tool-request-message">
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-on-primary-container/10"><Wrench aria-hidden size={20} /></span>
+      <div className="min-w-0">
+        <p className="type-label-medium opacity-75">{t("Use tool")}</p>
+        <p className="mt-0.5 type-title-medium capitalize">{toolName.replace(/[_.:-]+/g, " ")}</p>
+        <code className="mt-1 inline-block max-w-full rounded-sm bg-on-primary-container/10 px-2 py-0.5 font-mono text-xs break-all">{toolName}</code>
+      </div>
+    </div>
+  );
+}
+
 /**
  * A message's parts. Tool calls fold into one line per run; UI shows only where the agent asked for it:
  * a tool's MCP App with `show_tool_ui`, or a UI it composed with `show_ui`. The reply carries just the visuals that help.
  */
-export function MessageParts({ message }: { message: UIMessage }) {
+export function MessageParts({ message, onAnswer, inputDisabled = true }: { message: UIMessage; onAnswer?: (answer: string) => void; inputDisabled?: boolean }) {
+  const t = useT();
   const isUser = message.role === "user";
   const { parts } = message;
   const nodes: ReactNode[] = [];
@@ -257,8 +302,31 @@ export function MessageParts({ message }: { message: UIMessage }) {
     if (part.type === "step-start") return;
     if (part.type === "text" && !part.text.trim()) return;
     flush();
-    if (part.type === "text") {
-      nodes.push(isUser ? <p key={index} className="whitespace-pre-wrap">{part.text}</p> : <Markdown key={index}>{part.text}</Markdown>);
+    if (part.type === `tool-${SHOW_MAP_TOOL_NAME}`) {
+      const show = part as { state: ToolPart["state"]; input?: unknown; output?: { shown?: boolean } };
+      if (isRunning(show.state)) nodes.push(<UiSkeleton key={index} />);
+      else if (show.state === "output-available" && show.output?.shown) {
+        const parsed = mapSchema.safeParse(show.input);
+        if (parsed.success) nodes.push(<AgentMapCard key={index} map={parsed.data} />);
+        else nodes.push(<p key={index} role="status" className="type-body-small text-error">{t("This map could not be displayed.")}</p>);
+      } else if (show.state === "output-error" || show.state === "output-available") {
+        nodes.push(<p key={index} role="status" className="type-body-small text-error">{t("This map could not be displayed.")}</p>);
+      }
+    } else if (part.type === `tool-${REQUEST_LOCATION_TOOL_NAME}`) {
+      const requestPart = part as { state: string; input?: unknown };
+      const parsed = locationRequestSchema.safeParse(requestPart.input);
+      if (requestPart.state === "output-available" && parsed.success) {
+        nodes.push(<UserLocationCard key={index} reason={parsed.data.reason} disabled={inputDisabled} onAnswer={onAnswer} />);
+      } else if (isRunning(requestPart.state as ToolPart["state"])) nodes.push(<UiSkeleton key={index} />);
+    } else if (part.type === `tool-${REQUEST_INPUT_TOOL_NAME}`) {
+      const requestPart = part as { state: string; input?: unknown };
+      const parsed = userInputSchema.safeParse(requestPart.input);
+      if (requestPart.state === "output-available" && parsed.success) {
+        nodes.push(<UserInputCard key={index} request={parsed.data} disabled={inputDisabled} onAnswer={onAnswer} />);
+      } else if (isRunning(requestPart.state as ToolPart["state"])) nodes.push(<UiSkeleton key={index} />);
+      else if (requestPart.state === "output-error" && parsed.success) nodes.push(<Markdown key={index}>{parsed.data.question}</Markdown>);
+    } else if (part.type === "text") {
+      nodes.push(isUser ? <UserMessageText key={index} text={part.text} /> : <Markdown key={index}>{part.text}</Markdown>);
     } else if (part.type === SHOW_UI_PART_TYPE) {
       const show = part as ShowUiPart;
       if (isRunning(show.state)) nodes.push(<UiSkeleton key={index} />);
@@ -303,20 +371,19 @@ export function TypingDots() {
   );
 }
 
-function TurnItem({ turn, minHeight, busy }: { turn: Turn; minHeight?: number; busy: boolean }) {
+function TurnItem({ turn, minHeight, busy, onAnswer, inputDisabled }: { turn: Turn; minHeight?: number; busy: boolean; onAnswer: (answer: string) => void; inputDisabled: boolean }) {
   return (
     <li data-turn={turn.id} className="flex flex-col gap-4" style={{ minHeight }}>
       {turn.user ? (
-        // The question stays pinned to the top while its answer scrolls beneath it.
-        <div className="sticky top-0 z-10 flex justify-end bg-surface pb-2 md:bg-surface-container-lowest" data-testid="user-message">
-          <div className="max-h-40 max-w-[min(680px,90%)] origin-bottom-right overflow-y-auto rounded-[20px] rounded-br-xs bg-primary-container px-4 py-2 type-body-large wrap-anywhere text-on-primary-container animate-message-in">
+        <div className="flex justify-end pb-2" data-testid="user-message">
+          <div className={`${turn.user.parts.some((part) => part.type === "text" && parseLocationAnswer(part.text)) ? "" : "max-h-40"} max-w-[min(680px,90%)] origin-bottom-right overflow-y-auto rounded-[20px] rounded-br-xs bg-primary-container px-4 py-2 type-body-large wrap-anywhere text-on-primary-container animate-message-in`}>
             <MessageParts message={turn.user} />
           </div>
         </div>
       ) : null}
       {turn.replies.map((reply) => (
         <div key={reply.id} className="max-w-[min(680px,100%)] min-w-0 origin-top-left type-body-large wrap-break-word text-on-surface animate-message-in" data-testid="agent-message">
-          <MessageParts message={reply} />
+          <MessageParts message={reply} onAnswer={onAnswer} inputDisabled={inputDisabled || reply.id !== turn.replies.at(-1)?.id} />
         </div>
       ))}
       {busy ? <TypingDots /> : null}
@@ -342,12 +409,18 @@ type ChatPanelProps = {
   canCallAppTools?: boolean;
   /** Starter questions on the empty state. */
   suggestions?: string[];
+  placeholder?: string;
+  inputValue?: string;
+  onInputChange?: (value: string) => void;
+  inputRef?: React.Ref<HTMLTextAreaElement>;
 };
 
-/** The conversation: turns that pin each question to the top, suggestions when empty, and the composer. */
-export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false, canCallAppTools = false, suggestions = SUGGESTIONS }: ChatPanelProps) {
+/** The conversation: scroll new questions to the top, suggestions when empty, and the composer. */
+export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false, canCallAppTools = false, suggestions = SUGGESTIONS, placeholder, inputValue, onInputChange, inputRef }: ChatPanelProps) {
   const t = useT();
-  const [input, setInput] = useState("");
+  const [localInput, setLocalInput] = useState("");
+  const input = inputValue ?? localInput;
+  const setInput = onInputChange ?? setLocalInput;
   const scroller = useRef<HTMLDivElement>(null);
   const [viewportHeight, setViewportHeight] = useState<number>();
   const busy = status === "submitted" || status === "streaming";
@@ -363,7 +436,7 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
     return () => observer.disconnect();
   }, []);
 
-  // Pin each new question to the top; the answer then streams in below it.
+  // Scroll each new question to the top once; the answer then streams in below it.
   useEffect(() => {
     const element = scroller.current;
     const turn = lastTurnId ? element?.querySelector<HTMLElement>(`[data-turn="${CSS.escape(lastTurnId)}"]`) : null;
@@ -415,7 +488,7 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
             <ul className="flex flex-col gap-8 pb-4" aria-live="polite">
               {turns.map((turn) => {
                 const last = turn.id === lastTurnId;
-                return <TurnItem key={turn.id} turn={turn} minHeight={last ? viewportHeight : undefined} busy={last && busy} />;
+                return <TurnItem key={turn.id} turn={turn} minHeight={last ? viewportHeight : undefined} busy={last && busy} onAnswer={send} inputDisabled={!last || busy || disabled} />;
               })}
             </ul>
           </McpAppHost>
@@ -430,6 +503,7 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
         }}
       >
         <textarea
+          ref={inputRef}
           aria-label={t("Message")}
           rows={1}
           value={input}
@@ -441,7 +515,7 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
               send(input);
             }
           }}
-          placeholder={t("Ask about weather, buses, MTR, hospitals…")}
+          placeholder={placeholder ?? t("Ask about weather, buses, MTR, hospitals…")}
           className="max-h-40 min-h-10 min-w-0 flex-1 resize-none bg-transparent py-2 type-body-large outline-none placeholder:truncate placeholder:text-on-surface-variant disabled:opacity-60"
         />
         {busy ? (

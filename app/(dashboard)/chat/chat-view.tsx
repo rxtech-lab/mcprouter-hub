@@ -4,6 +4,7 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { useEffect, useRef } from "react";
 import { ChatPanel, SUGGESTIONS } from "@/components/agent/chat-panel";
+import { ChatAllowance } from "@/components/agent/chat-allowance";
 import { useSnackbar } from "@/components/m3/snackbar";
 import { useT } from "@/lib/i18n/client";
 import { trackChatMessage } from "@/lib/analytics";
@@ -74,6 +75,7 @@ export function ChatView({ id, initialMessages, isNew = false, initialPrompt }: 
       actions={<ChatHistoryButton />}
       intro={t("The agent calls mcprouter tools for you, and can link you to dashboard pages and actions like creating a key. Tool calls count towards your plan, like calls from your own keys.")}
       suggestions={DASHBOARD_SUGGESTIONS}
+      notice={<ChatAllowance status={status} />}
       canCallAppTools
     />
   );

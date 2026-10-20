@@ -119,7 +119,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
               <p className="type-body-medium opacity-80">{t("Try it right here: {limit} free messages a day, no account needed.", { limit: freeChat.dailyLimit })}</p>
             ) : null}
           </div>
-          {freeChat.enabled ? <HeroChat dailyLimit={freeChat.dailyLimit} /> : <ToolCallPreview />}
+          {freeChat.enabled ? <HeroChat /> : <ToolCallPreview />}
         </section>
 
         <section id="services" className="scroll-mt-24">

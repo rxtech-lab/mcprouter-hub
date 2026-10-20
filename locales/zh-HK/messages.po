@@ -95,7 +95,7 @@ msgid "{n} call this period"
 msgid_plural "{n} calls this period"
 msgstr[0] "本週期 {n} 次調用"
 
-#: app/(dashboard)/billing/page.tsx app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(dashboard)/billing/page.tsx app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
 msgid "Resets {date}"
 msgstr "於 {date} 重設"
 
@@ -215,7 +215,7 @@ msgstr "為 Claude Code 建立 API 金鑰"
 msgid "Show me the dashboard tour"
 msgstr "帶我瀏覽控制台導覽"
 
-#: app/(dashboard)/chat/chat-view.tsx components/agent/hero-chat.tsx
+#: app/(dashboard)/chat/chat-view.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx
 msgid "The agent could not answer. Try again."
 msgstr "AI 助理未能回答，請再試一次。"
 
@@ -308,7 +308,7 @@ msgstr "過去 30 日，香港時間"
 msgid "Usage"
 msgstr "用量"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
 msgid "Usage is unavailable right now."
 msgstr "暫時未能取得用量。"
 
@@ -552,7 +552,7 @@ msgstr "建立 API 金鑰"
 msgid "The key is shown once, right after you create it."
 msgstr "金鑰只會在建立後顯示一次。"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
+#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
 msgid "Cancel"
 msgstr "取消"
 
@@ -1426,7 +1426,7 @@ msgstr "沒有調用"
 msgid "{n} failed or denied"
 msgstr "{n} 次失敗或被拒絕"
 
-#: app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/layout.tsx lib/agent/dashboard-tools.ts
+#: app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/layout.tsx components/agent/chat-allowance.tsx lib/agent/dashboard-tools.ts
 msgid "Credits"
 msgstr "額度"
 
@@ -1483,7 +1483,7 @@ msgstr "用量檢視"
 msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show usage."
 msgstr "請設定 RX_SUBSCRIPTION_URL 和 RX_SUBSCRIPTION_API_KEY 以顯示用量。"
 
-#: app/(dashboard)/usage/page.tsx
+#: app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
 msgid "Plan allowance"
 msgstr "計劃配額"
 
@@ -1785,9 +1785,9 @@ msgstr "天文台錄得 <strong>27°C</strong>，<strong>相對濕度 79%</stron
 msgid "Data sources"
 msgstr "數據來源"
 
-#: app/sources/[service]/page.tsx
-msgid "Try it free"
-msgstr "免費試用"
+#: app/sources/[service]/page.tsx app/sources/apis/api-dialog.tsx
+msgid "Chat"
+msgstr "聊天"
 
 #: app/sources/[service]/page.tsx
 msgid "What your assistant can call through this service."
@@ -1812,6 +1812,54 @@ msgstr "發布於 DATA.GOV.HK，調用工具時實時擷取。"
 #: app/sources/[service]/page.tsx
 msgid "Browse every DATA.GOV.HK provider"
 msgstr "瀏覽所有 DATA.GOV.HK 數據提供者"
+
+#: app/sources/[service]/page.tsx app/sources/apis/page.tsx
+msgid "Available tools"
+msgstr "可用工具"
+
+#: app/sources/[service]/page.tsx app/sources/apis/page.tsx
+msgid "Display tools"
+msgstr "顯示工具"
+
+#: app/sources/apis/api-dialog.tsx
+msgid "Minimize"
+msgstr "最小化"
+
+#: app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx
+msgid "Full screen"
+msgstr "全螢幕"
+
+#: app/sources/apis/api-dialog.tsx
+msgid "API workspace"
+msgstr "API 工作區"
+
+#: app/sources/apis/api-dialog.tsx
+msgid "Details & tools"
+msgstr "詳情與工具"
+
+#: app/sources/apis/api-dialog.tsx
+msgid "API details and tools"
+msgstr "API 詳情和工具"
+
+#: app/sources/apis/api-dialog.tsx
+msgid "Resize panels"
+msgstr "調整面板大小"
+
+#: app/sources/apis/api-dialog.tsx
+msgid "Chat with this API"
+msgstr "與此 API 聊天"
+
+#: app/sources/apis/api-dialog.tsx components/m3/snackbar.tsx
+msgid "Dismiss"
+msgstr "關閉"
+
+#: app/sources/apis/api-dialog.tsx
+msgid "Ask about {title}. Only the tools listed in the details panel are available here."
+msgstr "詢問有關 {title} 的問題。此處只可使用詳情面板中列出的工具。"
+
+#: app/sources/apis/api-dialog.tsx
+msgid "Ask about {title}…"
+msgstr "詢問有關 {title} 的問題…"
 
 #: app/sources/apis/page.tsx
 msgid "API tracker"
@@ -1885,6 +1933,18 @@ msgstr[0] "個 API"
 #: app/sources/apis/page.tsx
 msgid "API docs"
 msgstr "API 文件"
+
+#: app/sources/apis/page.tsx
+msgid "Show a custom view of the results."
+msgstr "以自訂介面顯示結果。"
+
+#: app/sources/apis/page.tsx
+msgid "Show an API tool's visual app."
+msgstr "顯示 API 工具的視覺化應用。"
+
+#: app/sources/apis/page.tsx
+msgid "Show a map with pins and routes."
+msgstr "顯示帶標記和路線的地圖。"
 
 #: app/sources/apis/page.tsx
 msgid "Served by"
@@ -2081,6 +2141,34 @@ msgstr "正在登出…"
 msgid "Sign out"
 msgstr "登出"
 
+#: components/agent/chat-allowance.tsx
+msgid "Loading usage…"
+msgstr "正在載入用量…"
+
+#: components/agent/chat-allowance.tsx
+msgid "{remaining} of {limit} free messages left today."
+msgstr "今日剩餘 {remaining}/{limit} 則免費訊息。"
+
+#: components/agent/chat-allowance.tsx
+msgid "Sign in to view credits"
+msgstr "登入以查看額度"
+
+#: components/agent/chat-allowance.tsx
+msgid "Unlimited"
+msgstr "無限制"
+
+#: components/agent/chat-allowance.tsx
+msgid "{remaining} of {limit} calls left"
+msgstr "剩餘 {remaining}/{limit} 次調用"
+
+#: components/agent/chat-allowance.tsx
+msgid "Unavailable"
+msgstr "暫時無法取得"
+
+#: components/agent/chat-allowance.tsx
+msgid "Tool calls are free on this deployment."
+msgstr "此部署的工具調用免費。"
+
 #: components/agent/chat-panel.tsx
 msgid "What's the weather in Hong Kong right now? Any warnings?"
 msgstr "香港現在天氣如何？有沒有天氣警告？"
@@ -2175,6 +2263,26 @@ msgid "Loading results"
 msgstr "正在載入結果"
 
 #: components/agent/chat-panel.tsx
+msgid "Location shared"
+msgstr "已分享位置"
+
+#: components/agent/chat-panel.tsx
+msgid "Accuracy: ±{meters} m"
+msgstr "精確度：±{meters} 米"
+
+#: components/agent/chat-panel.tsx components/agent/map.tsx
+msgid "Open in OpenStreetMap"
+msgstr "在 OpenStreetMap 中開啟"
+
+#: components/agent/chat-panel.tsx
+msgid "Use tool"
+msgstr "使用工具"
+
+#: components/agent/chat-panel.tsx
+msgid "This map could not be displayed."
+msgstr "無法顯示此地圖。"
+
+#: components/agent/chat-panel.tsx
 msgid "Agent is responding"
 msgstr "AI 助理正在回覆"
 
@@ -2211,10 +2319,6 @@ msgid "Exit full screen"
 msgstr "退出全螢幕"
 
 #: components/agent/hero-chat.tsx
-msgid "Full screen"
-msgstr "全螢幕"
-
-#: components/agent/hero-chat.tsx
 msgid "Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?"
 msgstr "你好！我可以為你查詢政府實時數據：天氣、巴士、港鐵、急症室輪候時間等。你想知道甚麼？"
 
@@ -2230,9 +2334,33 @@ msgstr "查詢天氣、巴士、港鐵…"
 msgid "You've used today's {limit} free messages. More at midnight Hong Kong time."
 msgstr "你已用完今日的 {limit} 則免費訊息。香港時間午夜後重設。"
 
-#: components/agent/hero-chat.tsx
-msgid "Sign in for more"
-msgstr "登入以取得更多"
+#: components/agent/map.tsx
+msgid "Zoom in"
+msgstr "放大"
+
+#: components/agent/map.tsx
+msgid "Zoom out"
+msgstr "縮小"
+
+#: components/agent/map.tsx
+msgid "Fit map"
+msgstr "顯示完整地圖"
+
+#: components/agent/map.tsx
+msgid "Improve this map"
+msgstr "改善此地圖"
+
+#: components/agent/map.tsx
+msgid "Map tiles are unavailable. Pins and routes are still shown."
+msgstr "地圖底圖暫時無法載入，標記和路線仍會顯示。"
+
+#: components/agent/map.tsx
+msgid "Expand map"
+msgstr "展開地圖"
+
+#: components/agent/map.tsx
+msgid "Close map"
+msgstr "關閉地圖"
 
 #: components/agent/tool-app.tsx
 msgid "{tool} results"
@@ -2241,6 +2369,78 @@ msgstr "{tool} 結果"
 #: components/agent/tool-app.tsx
 msgid "View data"
 msgstr "查看數據"
+
+#: components/agent/user-input.tsx
+msgid "Your input is needed"
+msgstr "需要你提供資料"
+
+#: components/agent/user-input.tsx components/agent/user-location.tsx
+msgid "Answer sent"
+msgstr "已傳送回答"
+
+#: components/agent/user-input.tsx components/agent/user-location.tsx
+msgid "Previous question"
+msgstr "之前的問題"
+
+#: components/agent/user-input.tsx
+msgid "Answer question"
+msgstr "回答問題"
+
+#: components/agent/user-input.tsx
+msgid "Choose an option"
+msgstr "選擇一個選項"
+
+#: components/agent/user-input.tsx
+msgid "Or enter your own answer"
+msgstr "或輸入自己的回答"
+
+#: components/agent/user-input.tsx
+msgid "Your answer"
+msgstr "你的回答"
+
+#: components/agent/user-input.tsx
+msgid "Send answer"
+msgstr "傳送回答"
+
+#: components/agent/user-location.tsx
+msgid "Location is unavailable in this browser. Enter a place in chat instead."
+msgstr "此瀏覽器無法取得位置。請在聊天中輸入地點。"
+
+#: components/agent/user-location.tsx
+msgid "Could not get your location. Try again or enter a place in chat."
+msgstr "無法取得你的位置。請重試或在聊天中輸入地點。"
+
+#: components/agent/user-location.tsx
+msgid "Location permission was denied. Enter a place in chat instead."
+msgstr "位置權限被拒絕。請在聊天中輸入地點。"
+
+#: components/agent/user-location.tsx
+msgid "Use your location?"
+msgstr "使用你的位置？"
+
+#: components/agent/user-location.tsx
+msgid "Review location request"
+msgstr "檢視位置請求"
+
+#: components/agent/user-location.tsx
+msgid "Sharing sends your coordinates and accuracy to this chat and the tools used to answer. Your browser may ask for permission. You can enter a place instead."
+msgstr "分享會將你的座標和精確度傳送至此聊天及用於回答的工具。瀏覽器可能會要求權限。你也可以輸入地點。"
+
+#: components/agent/user-location.tsx
+msgid "I prefer not to share my device location. Please ask me for a place instead."
+msgstr "我不想分享裝置位置。請詢問我要查詢的地點。"
+
+#: components/agent/user-location.tsx
+msgid "Enter a place instead"
+msgstr "改為輸入地點"
+
+#: components/agent/user-location.tsx
+msgid "Share location"
+msgstr "分享位置"
+
+#: components/agent/user-location.tsx
+msgid "Getting your location…"
+msgstr "正在取得你的位置…"
 
 #: components/charts.tsx
 msgid "{label}: {total} in total"
@@ -2361,10 +2561,6 @@ msgstr "清除搜尋"
 #: components/m3/search-bar.tsx
 msgid "Search"
 msgstr "搜尋"
-
-#: components/m3/snackbar.tsx
-msgid "Dismiss"
-msgstr "關閉"
 
 #: components/scroll-timeline.tsx
 msgid "Page sections"

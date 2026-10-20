@@ -5,13 +5,12 @@ import { trackChatMessage } from "@/lib/analytics";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { ArrowUp, ChevronDown, ChevronUp, CircleAlert, Maximize2, MessageSquareText, Minimize2, RotateCcw, Square } from "lucide-react";
-import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { Button, IconButton } from "@/components/m3/button";
 import { cn } from "@/components/m3/cn";
-import type { FreeChatQuota } from "@/lib/free-chat";
-import { getFreeChatQuota } from "@/lib/free-chat-actions";
+import type { ChatAllowance as Allowance } from "@/lib/chat-allowance";
+import { ChatAllowance } from "./chat-allowance";
 import { useT } from "@/lib/i18n/client";
 import { MessageParts, SUGGESTIONS, TypingDots } from "./chat-panel";
 import { McpAppHost } from "./tool-app";
@@ -50,14 +49,14 @@ function subscribeToMobile(onChange: () => void) {
 }
 
 /**
- * The free, signed-out agent, embedded in the landing page hero. On phones it is a small sheet
+ * The session-aware agent, embedded in the landing page hero. On phones it is a small sheet
  * docked at the bottom of the screen that grows into a full-screen chat when tapped. On larger
  * screens it can be expanded to fill the window.
  */
-export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
+export function HeroChat() {
   const t = useT();
   const [input, setInput] = useState("");
-  const [quota, setQuota] = useState<FreeChatQuota | null>(null);
+  const [allowance, setAllowance] = useState<Allowance | null>(null);
   const [error, setError] = useState<string | null>(null);
   const scroller = useRef<HTMLDivElement>(null);
   const mobile = useSyncExternalStore(subscribeToMobile, () => window.matchMedia(mobileQuery).matches, () => false);
@@ -65,29 +64,12 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
   const open = !mobile || expanded;
   const fullScreen = !mobile && expanded;
 
-  const refreshQuota = async () => {
-    const result = await getFreeChatQuota();
-    if (result.ok) setQuota(result.data);
-  };
-  // The page is static, so the visitor's allowance is fetched once it loads.
-  useEffect(() => {
-    let active = true;
-    void getFreeChatQuota().then((result) => {
-      if (active && result.ok) setQuota(result.data);
-    });
-    return () => {
-      active = false;
-    };
-  }, []);
-
   const { messages, setMessages, sendMessage, status, stop } = useChat({
     // Free chats aren't stored, so the whole conversation goes with each message.
     transport: new DefaultChatTransport({ api: "/api/free-chat" }),
     onError: (failure) => {
       setError(failure.message || t("The agent could not answer. Try again."));
-      void refreshQuota();
     },
-    onFinish: () => void refreshQuota(),
   });
   const busy = status === "submitted" || status === "streaming";
 
@@ -102,7 +84,9 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
   useEffect(() => {
     if (restored.current && !busy) saveMessages(messages);
   }, [messages, busy]);
+  const quota = allowance?.kind === "guest" ? allowance.quota : null;
   const usedUp = quota?.remaining === 0;
+  const unavailable = allowance === null;
 
   // Follow the answer as it streams in.
   useEffect(() => {
@@ -111,10 +95,9 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
   }, [messages, status]);
 
   const send = (text: string) => {
-    if (!text.trim() || busy || usedUp) return;
+    if (!text.trim() || busy || usedUp || unavailable) return;
     trackChatMessage("landing_page");
     setError(null);
-    setQuota((current) => (current ? { ...current, remaining: Math.max(0, current.remaining - 1), used: current.used + 1 } : current));
     void sendMessage({ text: text.trim() });
     setInput("");
   };
@@ -146,8 +129,8 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
     };
   }, [expanded]);
 
-  const remaining = quota?.remaining ?? dailyLimit;
-  const limit = quota?.limit ?? dailyLimit;
+  const remaining = quota?.remaining ?? 0;
+  const limit = quota?.limit ?? 0;
   const lastMessage = messages.at(-1);
   const preview = lastMessage?.parts.findLast((part) => part.type === "text")?.text;
 
@@ -191,7 +174,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
           <h2 className="type-title-small">{t("Ask the agent")}</h2>
           {!open ? (
             <p className="truncate type-body-small text-on-surface-variant">
-              {busy ? t("Thinking…") : (preview ?? t("{remaining} of {limit} free messages left today. Saved in this browser only.", { remaining, limit }))}
+              {busy ? t("Thinking…") : (preview ?? (quota ? t("{remaining} of {limit} free messages left today. Saved in this browser only.", { remaining, limit }) : t("Ask the agent")))}
             </p>
           ) : null}
         </div>
@@ -237,7 +220,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
                     <button
                       key={suggestion}
                       type="button"
-                      disabled={usedUp}
+                      disabled={usedUp || unavailable}
                       onClick={() => send(t(suggestion))}
                       className="state-layer cursor-pointer rounded-sm border border-outline px-3 py-1.5 text-left type-label-large text-on-surface-variant disabled:cursor-default disabled:opacity-40"
                     >
@@ -256,7 +239,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
                       </li>
                     ) : (
                       <li key={message.id} className="type-body-medium" data-testid="agent-message">
-                        <MessageParts message={message} />
+                        <MessageParts message={message} onAnswer={send} inputDisabled={message.id !== messages.at(-1)?.id || busy || usedUp || unavailable} />
                       </li>
                     ),
                   )}
@@ -283,7 +266,7 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
               aria-label={t("Message")}
               rows={1}
               value={input}
-              disabled={usedUp}
+              disabled={usedUp || unavailable}
               onChange={(event) => setInput(event.target.value)}
               onKeyDown={(event) => {
                 if (event.key === "Enter" && !event.shiftKey && !event.nativeEvent.isComposing) {
@@ -299,23 +282,18 @@ export function HeroChat({ dailyLimit }: { dailyLimit: number }) {
                 <Square size={18} />
               </IconButton>
             ) : (
-              <IconButton label={t("Send")} variant="filled" type="submit" disabled={usedUp || !input.trim()}>
+              <IconButton label={t("Send")} variant="filled" type="submit" disabled={usedUp || unavailable || !input.trim()}>
                 <ArrowUp size={20} />
               </IconButton>
             )}
           </form>
-          <p role="status" className={cn("mt-2 flex items-center gap-1.5 px-2 type-body-small", error || usedUp ? "text-error" : "text-on-surface-variant")}>
-            {error || usedUp ? <CircleAlert size={14} className="shrink-0" /> : null}
-            <span className="min-w-0 flex-1">
-              {error ??
-                (usedUp
-                  ? t("You've used today's {limit} free messages. More at midnight Hong Kong time.", { limit })
-                  : t("{remaining} of {limit} free messages left today. Saved in this browser only.", { remaining, limit }))}
-            </span>
-            <Link href="/login" className="shrink-0 type-label-large text-primary hover:underline">
-              {t("Sign in for more")}
-            </Link>
-          </p>
+          {error || usedUp ? (
+            <p role="status" className="mt-2 flex items-center gap-1.5 px-2 type-body-small text-error">
+              <CircleAlert size={14} className="shrink-0" />
+              <span>{error ?? t("You've used today's {limit} free messages. More at midnight Hong Kong time.", { limit })}</span>
+            </p>
+          ) : null}
+          <ChatAllowance status={status} onChange={setAllowance} />
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ import { getT } from "@/lib/i18n/server";
 import type { Translator } from "@/lib/i18n/translate";
 import { listHref } from "../params";
 import { SourcesHeader } from "../sources-header";
-import { ApiDialog } from "./api-dialog";
+import { ApiDialog, ApiToolButton } from "./api-dialog";
 import { parseApiParams, type ApiParams } from "./params";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -176,6 +176,8 @@ function ApiDetails({ api, closeHref, t }: { api: ApiEntry; closeHref: string; t
   const services = api.services.map((id) => manifest.services.find((service) => service.id === id)).filter((service) => service !== undefined);
   return (
     <ApiDialog
+      apiId={api.id}
+      canChat={api.status === "implemented" && services.some((service) => service.tools.length > 0)}
       title={api.title}
       description={api.description}
       closeHref={closeHref}
@@ -196,6 +198,29 @@ function ApiDetails({ api, closeHref, t }: { api: ApiEntry; closeHref: string; t
           <dt className="type-label-large text-on-surface-variant">{t("Provider")}</dt>
           <dd className="type-body-large">{api.provider}</dd>
         </dl>
+        {services.length ? (
+          <section>
+            <h3 className="mb-2 type-title-medium">{t("Available tools")}</h3>
+            <ul className="flex flex-col gap-2">
+              {services.flatMap((service) => service.tools).map((tool) => (
+                <li key={tool.name} className="rounded-md border border-outline-variant p-3">
+                  <ApiToolButton name={tool.name} />
+                  <p className="mt-1 type-body-small text-on-surface-variant">{tool.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+        {api.status === "implemented" && services.some((service) => service.tools.length > 0) ? (
+          <section>
+            <h3 className="mb-2 type-title-medium">{t("Display tools")}</h3>
+            <ul className="flex flex-col gap-2">
+              <li className="rounded-md border border-outline-variant p-3"><ApiToolButton name="show_ui" /><p className="mt-1 type-body-small text-on-surface-variant">{t("Show a custom view of the results.")}</p></li>
+              <li className="rounded-md border border-outline-variant p-3"><ApiToolButton name="show_tool_ui" /><p className="mt-1 type-body-small text-on-surface-variant">{t("Show an API tool's visual app.")}</p></li>
+              <li className="rounded-md border border-outline-variant p-3"><ApiToolButton name="show_map" /><p className="mt-1 type-body-small text-on-surface-variant">{t("Show a map with pins and routes.")}</p></li>
+            </ul>
+          </section>
+        ) : null}
         {services.length ? (
           <section>
             <h3 className="mb-2 type-label-large text-on-surface-variant">{t("Served by")}</h3>

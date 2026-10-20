@@ -18,6 +18,7 @@ export default defineConfig({
       TURSO_DATABASE_URL: "file:e2e.db",
       NEXT_PUBLIC_SITE_URL: `http://localhost:${port}`,
       BILLING_ENABLED: "false",
+      NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: "pk.e2e-mapbox-token",
     },
   },
 });
