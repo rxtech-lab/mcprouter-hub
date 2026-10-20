@@ -1,0 +1,1017 @@
+id: censtatd-investment
+title: Hong Kong International Investment & External Debt
+description: Official C&SD Finance tables for net investment flows by sector, international investment
+  position, currency composition, external debt, and inward/outward direct investment by country and economic
+  activity.
+apis:
+  - API-0561
+  - API-0562
+  - API-0563
+  - API-0564
+  - API-0565
+  - API-0566
+  - API-0567
+  - API-0568
+  - API-0569
+  - API-0570
+datasets:
+  - hk-censtatd-tablechart-315-37006
+  - hk-censtatd-tablechart-315-37021
+  - hk-censtatd-tablechart-315-37022
+  - hk-censtatd-tablechart-315-37023
+  - hk-censtatd-tablechart-315-37031
+  - hk-censtatd-tablechart-315-38001
+  - hk-censtatd-tablechart-315-38011
+  - hk-censtatd-tablechart-315-38012
+  - hk-censtatd-tablechart-315-38021
+  - hk-censtatd-tablechart-315-38022
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: net_investment_flows_sector
+    title: Net investment flows by sector (315-37006)
+    description: Net investment flows by sector. Official C&SD Table 315-37006. Newest periods first; page with
+      nextOffset. Original units, figures, missing values and revision flags are preserved. Position, flow and
+      income are distinct statistical variables. Totals overlap their children; do not sum them. Amounts
+      retain their source units; do not rescale or treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-37006
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: BOP. Position, transaction flows and income are separate series;
+          retain svDesc units."
+        enum:
+          - BOP
+      component:
+        type: string
+        in: local
+        description: "BOP_COMPONENT codes: DI = Direct investment; DIB = Banks; DIO = Other sectors; FD = Financial
+          derivatives; FDB = Banks; FDO = Other sectors; FNRA = Financial non-reserve assets; FNRB = Banks;
+          FNRO = Other sectors; OI = Other investment; OIB = Banks; OIO = Other sectors; PI = Portfolio
+          investment; PIB = Banks; PIO = Other sectors. Totals overlap children; do not sum them."
+        enum:
+          - DI
+          - DIB
+          - DIO
+          - FD
+          - FDB
+          - FDO
+          - FNRA
+          - FNRB
+          - FNRO
+          - OI
+          - OIB
+          - OIO
+          - PI
+          - PIB
+          - PIO
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: international_investment_position
+    title: International Investment Position by standard component (position as at end of period) (315-37021)
+    description: International Investment Position by standard component (position as at end of period). Official
+      C&SD Table 315-37021. Newest periods first; page with nextOffset. Original units, figures, missing
+      values and revision flags are preserved. Position, flow and income are distinct statistical variables.
+      Totals overlap their children; do not sum them. Amounts retain their source units; do not rescale or
+      treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-37021
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: IIP. Position, transaction flows and income are separate series;
+          retain svDesc units."
+        enum:
+          - IIP
+      component:
+        type: string
+        in: local
+        description: "IIP_COMPONENT codes: IIP_ATS = Assets; IIP_ATS_DI = Direct investment; IIP_ATS_DI_DB = Debt
+          instruments; IIP_ATS_DI_DB_BFE = Between fellow enterprises; IIP_ATS_DI_DB_DIR = Direct investor in
+          direct investment enterprises; IIP_ATS_DI_DB_RIT = Direct investment enterprises in direct investor;
+          IIP_ATS_DI_EI = Equity and investment fund shares; IIP_ATS_DI_EI_BFE = Between fellow enterprises;
+          IIP_ATS_DI_EI_DIR = Direct investor in direct investment enterprises; IIP_ATS_DI_EI_RIT = Direct
+          investment enterprises in direct investor; IIP_ATS_FD = Financial derivatives; IIP_ATS_FD_BANK =
+          Banks; IIP_ATS_FD_OS = Other sectors; IIP_ATS_OI = Other investment; IIP_ATS_OI_CD = Currency and
+          deposits; IIP_ATS_OI_CD_BANK = Banks; IIP_ATS_OI_CD_OS = Other sectors; IIP_ATS_OI_LN = Loans;
+          IIP_ATS_OI_LN_BANK = Banks; IIP_ATS_OI_LN_OS = Other sectors; IIP_ATS_OI_OA = Other assets;
+          IIP_ATS_OI_OA_BANK = Banks; IIP_ATS_OI_OA_OS = Other sectors; IIP_ATS_OI_TC = Trade credit and
+          advances; IIP_ATS_PI = Portfolio investment; IIP_ATS_PI_DB = Debt securities; IIP_ATS_PI_DB_LT =
+          Long-term; IIP_ATS_PI_DB_LT_BK = Banks; IIP_ATS_PI_DB_LT_OS = Other sectors; IIP_ATS_PI_DB_ST =
+          Short-term; IIP_ATS_PI_DB_ST_BK = Banks; IIP_ATS_PI_DB_ST_OS = Other sectors; IIP_ATS_PI_EI = Equity
+          and investment fund shares; IIP_ATS_PI_EI_BANK = Banks; IIP_ATS_PI_EI_OS = Other sectors; IIP_ATS_RA
+          = Reserve assets; IIP_LIA = Liabilities; IIP_LIA_DI = Direct investment; IIP_LIA_DI_DB = Debt
+          instruments; IIP_LIA_DI_DB_BFE = Between fellow enterprises; IIP_LIA_DI_DB_DIR = Direct investor to
+          direct investment enterprises; IIP_LIA_DI_DB_RIT = Direct investment enterprises to direct investor;
+          IIP_LIA_DI_EI = Equity and investment fund shares; IIP_LIA_DI_EI_BFE = Between fellow enterprises;
+          IIP_LIA_DI_EI_DIR = Direct investor to direct investment enterprises; IIP_LIA_DI_EI_RIT = Direct
+          investment enterprises to direct investor; IIP_LIA_FD = Financial derivatives; IIP_LIA_FD_BANK =
+          Banks; IIP_LIA_FD_OS = Other sectors; IIP_LIA_OI = Other investment; IIP_LIA_OI_CD = Currency and
+          deposits; IIP_LIA_OI_CD_BANK = Banks; IIP_LIA_OI_CD_OS = Other sectors; IIP_LIA_OI_LN = Loans;
+          IIP_LIA_OI_LN_BANK = Banks; IIP_LIA_OI_LN_OS = Other sectors; IIP_LIA_OI_OL = Other liabilities;
+          IIP_LIA_OI_OL_BANK = Banks; IIP_LIA_OI_OL_OS = Other sectors; IIP_LIA_OI_TC = Trade credit and
+          advances; IIP_LIA_PI = Portfolio investment; IIP_LIA_PI_DB = Debt securities; IIP_LIA_PI_DB_LT =
+          Long-term; IIP_LIA_PI_DB_LT_BK = Banks; IIP_LIA_PI_DB_LT_OS = Other sectors; IIP_LIA_PI_DB_ST =
+          Short-term; IIP_LIA_PI_DB_ST_BK = Banks; IIP_LIA_PI_DB_ST_OS = Other sectors; IIP_LIA_PI_EI = Equity
+          and investment fund shares; IIP_LIA_PI_EI_BANK = Banks; IIP_LIA_PI_EI_OS = Other sectors; NIIP = Net
+          International Investment Position. Totals overlap children; do not sum them."
+        enum:
+          - IIP_ATS
+          - IIP_ATS_DI
+          - IIP_ATS_DI_DB
+          - IIP_ATS_DI_DB_BFE
+          - IIP_ATS_DI_DB_DIR
+          - IIP_ATS_DI_DB_RIT
+          - IIP_ATS_DI_EI
+          - IIP_ATS_DI_EI_BFE
+          - IIP_ATS_DI_EI_DIR
+          - IIP_ATS_DI_EI_RIT
+          - IIP_ATS_FD
+          - IIP_ATS_FD_BANK
+          - IIP_ATS_FD_OS
+          - IIP_ATS_OI
+          - IIP_ATS_OI_CD
+          - IIP_ATS_OI_CD_BANK
+          - IIP_ATS_OI_CD_OS
+          - IIP_ATS_OI_LN
+          - IIP_ATS_OI_LN_BANK
+          - IIP_ATS_OI_LN_OS
+          - IIP_ATS_OI_OA
+          - IIP_ATS_OI_OA_BANK
+          - IIP_ATS_OI_OA_OS
+          - IIP_ATS_OI_TC
+          - IIP_ATS_PI
+          - IIP_ATS_PI_DB
+          - IIP_ATS_PI_DB_LT
+          - IIP_ATS_PI_DB_LT_BK
+          - IIP_ATS_PI_DB_LT_OS
+          - IIP_ATS_PI_DB_ST
+          - IIP_ATS_PI_DB_ST_BK
+          - IIP_ATS_PI_DB_ST_OS
+          - IIP_ATS_PI_EI
+          - IIP_ATS_PI_EI_BANK
+          - IIP_ATS_PI_EI_OS
+          - IIP_ATS_RA
+          - IIP_LIA
+          - IIP_LIA_DI
+          - IIP_LIA_DI_DB
+          - IIP_LIA_DI_DB_BFE
+          - IIP_LIA_DI_DB_DIR
+          - IIP_LIA_DI_DB_RIT
+          - IIP_LIA_DI_EI
+          - IIP_LIA_DI_EI_BFE
+          - IIP_LIA_DI_EI_DIR
+          - IIP_LIA_DI_EI_RIT
+          - IIP_LIA_FD
+          - IIP_LIA_FD_BANK
+          - IIP_LIA_FD_OS
+          - IIP_LIA_OI
+          - IIP_LIA_OI_CD
+          - IIP_LIA_OI_CD_BANK
+          - IIP_LIA_OI_CD_OS
+          - IIP_LIA_OI_LN
+          - IIP_LIA_OI_LN_BANK
+          - IIP_LIA_OI_LN_OS
+          - IIP_LIA_OI_OL
+          - IIP_LIA_OI_OL_BANK
+          - IIP_LIA_OI_OL_OS
+          - IIP_LIA_OI_TC
+          - IIP_LIA_PI
+          - IIP_LIA_PI_DB
+          - IIP_LIA_PI_DB_LT
+          - IIP_LIA_PI_DB_LT_BK
+          - IIP_LIA_PI_DB_LT_OS
+          - IIP_LIA_PI_DB_ST
+          - IIP_LIA_PI_DB_ST_BK
+          - IIP_LIA_PI_DB_ST_OS
+          - IIP_LIA_PI_EI
+          - IIP_LIA_PI_EI_BANK
+          - IIP_LIA_PI_EI_OS
+          - NIIP
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: iip_gdp_ratios
+    title: International Investment Position as a ratio to Gross Domestic Product (GDP) (315-37022)
+    description: International Investment Position as a ratio to Gross Domestic Product (GDP). Official C&SD Table
+      315-37022. Newest periods first; page with nextOffset. Original units, figures, missing values and
+      revision flags are preserved. Position, flow and income are distinct statistical variables. Totals
+      overlap their children; do not sum them. Includes both monetary amounts and ratios to GDP; use measure
+      to select.
+    path: /get.php
+    query:
+      id: 315-37022
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: IIP; IIP_R. Position, transaction flows and income are separate
+          series; retain svDesc units."
+        enum:
+          - IIP
+          - IIP_R
+      component:
+        type: string
+        in: local
+        description: "IIP_COMPONENT codes: IIP_ATS = Assets; IIP_LIA = Liabilities; NIIP = Net International
+          Investment Position. Totals overlap children; do not sum them."
+        enum:
+          - IIP_ATS
+          - IIP_LIA
+          - NIIP
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+          - ratio
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: iip_currency_composition
+    title: Currency composition of International Investment Position (position as at end of period) (315-37023)
+    description: Currency composition of International Investment Position (position as at end of period).
+      Official C&SD Table 315-37023. Newest periods first; page with nextOffset. Original units, figures,
+      missing values and revision flags are preserved. Position, flow and income are distinct statistical
+      variables. Totals overlap their children; do not sum them. Amounts retain their source units; do not
+      rescale or treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-37023
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: IIP. Position, transaction flows and income are separate series;
+          retain svDesc units."
+        enum:
+          - IIP
+      component:
+        type: string
+        in: local
+        description: "IIP_COMPONENT codes: IIP_ATS = Assets; IIP_ATS_DI = Direct investment; IIP_ATS_DI_DB = Debt
+          instruments; IIP_ATS_DI_EI = Equity and investment fund shares; IIP_ATS_FD = Financial derivatives;
+          IIP_ATS_OI = Other investment; IIP_ATS_PI = Portfolio investment; IIP_ATS_PI_DB = Debt securities;
+          IIP_ATS_PI_EI = Equity and investment fund shares; IIP_ATS_RA = Reserve assets; IIP_LIA =
+          Liabilities; IIP_LIA_DI = Direct investment; IIP_LIA_DI_DB = Debt instruments; IIP_LIA_DI_EI =
+          Equity and investment fund shares; IIP_LIA_FD = Financial derivatives; IIP_LIA_OI = Other
+          investment; IIP_LIA_PI = Portfolio investment; IIP_LIA_PI_DB = Debt securities; IIP_LIA_PI_EI =
+          Equity and investment fund shares; NIIP = Net International Investment Position. Totals overlap
+          children; do not sum them."
+        enum:
+          - IIP_ATS
+          - IIP_ATS_DI
+          - IIP_ATS_DI_DB
+          - IIP_ATS_DI_EI
+          - IIP_ATS_FD
+          - IIP_ATS_OI
+          - IIP_ATS_PI
+          - IIP_ATS_PI_DB
+          - IIP_ATS_PI_EI
+          - IIP_ATS_RA
+          - IIP_LIA
+          - IIP_LIA_DI
+          - IIP_LIA_DI_DB
+          - IIP_LIA_DI_EI
+          - IIP_LIA_FD
+          - IIP_LIA_OI
+          - IIP_LIA_PI
+          - IIP_LIA_PI_DB
+          - IIP_LIA_PI_EI
+          - NIIP
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      currency:
+        type: string
+        in: local
+        description: "Currency denomination: TOTAL = all currencies, HKD = Hong Kong dollar, USD = US dollar, OC =
+          other currencies. Amounts remain in HK$ million."
+        enum:
+          - HKD
+          - OC
+          - TOTAL
+          - USD
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: external_debt
+    title: External Debt (position as at end of period) (315-37031)
+    description: External Debt (position as at end of period). Official C&SD Table 315-37031. Newest periods
+      first; page with nextOffset. Original units, figures, missing values and revision flags are preserved.
+      Position, flow and income are distinct statistical variables. Totals overlap their children; do not sum
+      them. Amounts retain their source units; do not rescale or treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-37031
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: ED. Position, transaction flows and income are separate series;
+          retain svDesc units."
+        enum:
+          - ED
+      component:
+        type: string
+        in: local
+        description: "ED_COMPONENT codes: ED = Gross External Debt; ED_BANK = Banks; ED_BANK_LT = Long-term;
+          ED_BANK_LT_CD = Currency and deposits; ED_BANK_LT_DB = Debt securities; ED_BANK_LT_LN = Loans;
+          ED_BANK_LT_OD = Other debt liabilities; ED_BANK_ST = Short-term; ED_BANK_ST_CD = Currency and
+          deposits; ED_BANK_ST_DB = Debt securities; ED_BANK_ST_LN = Loans; ED_BANK_ST_OD = Other debt
+          liabilities; ED_DI = Direct investment : intercompany lending; ED_DI_BFE = Debt liabilities between
+          fellow enterprises; ED_DI_ENT = Debt liabilities of direct investment enterprises to direct
+          investor; ED_DI_INV = Debt liabilities of direct investor to direct investment enterprises; ED_GOV =
+          General government; ED_GOV_LT = Long-term; ED_GOV_LT_DB = Debt securities; ED_GOV_LT_LN = Loans;
+          ED_GOV_LT_OD = Other debt liabilities; ED_GOV_ST = Short-term; ED_GOV_ST_CD = Currency and deposits;
+          ED_GOV_ST_DB = Debt securities; ED_GOV_ST_LN = Loans; ED_GOV_ST_OD = Other debt liabilities; ED_MA =
+          Monetary authority; ED_MA_LT = Long-term; ED_MA_LT_DB = Debt securities; ED_MA_LT_LN = Loans;
+          ED_MA_LT_OD = Other debt liabilities; ED_MA_ST = Short-term; ED_MA_ST_CD = Currency and deposits;
+          ED_MA_ST_DB = Debt securities; ED_MA_ST_LN = Loans; ED_MA_ST_OD = Other debt liabilities; ED_OS =
+          Other sectors; ED_OS_LT = Long-term; ED_OS_LT_DB = Debt securities; ED_OS_LT_LN = Loans; ED_OS_LT_OD
+          = Other debt liabilities; ED_OS_LT_TC = Trade credit and advances; ED_OS_ST = Short-term;
+          ED_OS_ST_CD = Currency and deposits; ED_OS_ST_DB = Debt securities; ED_OS_ST_LN = Loans; ED_OS_ST_OD
+          = Other debt liabilities; ED_OS_ST_TC = Trade credit and advances. Totals overlap children; do not
+          sum them."
+        enum:
+          - ED
+          - ED_BANK
+          - ED_BANK_LT
+          - ED_BANK_LT_CD
+          - ED_BANK_LT_DB
+          - ED_BANK_LT_LN
+          - ED_BANK_LT_OD
+          - ED_BANK_ST
+          - ED_BANK_ST_CD
+          - ED_BANK_ST_DB
+          - ED_BANK_ST_LN
+          - ED_BANK_ST_OD
+          - ED_DI
+          - ED_DI_BFE
+          - ED_DI_ENT
+          - ED_DI_INV
+          - ED_GOV
+          - ED_GOV_LT
+          - ED_GOV_LT_DB
+          - ED_GOV_LT_LN
+          - ED_GOV_LT_OD
+          - ED_GOV_ST
+          - ED_GOV_ST_CD
+          - ED_GOV_ST_DB
+          - ED_GOV_ST_LN
+          - ED_GOV_ST_OD
+          - ED_MA
+          - ED_MA_LT
+          - ED_MA_LT_DB
+          - ED_MA_LT_LN
+          - ED_MA_LT_OD
+          - ED_MA_ST
+          - ED_MA_ST_CD
+          - ED_MA_ST_DB
+          - ED_MA_ST_LN
+          - ED_MA_ST_OD
+          - ED_OS
+          - ED_OS_LT
+          - ED_OS_LT_DB
+          - ED_OS_LT_LN
+          - ED_OS_LT_OD
+          - ED_OS_LT_TC
+          - ED_OS_ST
+          - ED_OS_ST_CD
+          - ED_OS_ST_DB
+          - ED_OS_ST_LN
+          - ED_OS_ST_OD
+          - ED_OS_ST_TC
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: direct_investment_statistics
+    title: Direct investment (DI) statistics of Hong Kong (315-38001)
+    description: Direct investment (DI) statistics of Hong Kong. Official C&SD Table 315-38001. Newest periods
+      first; page with nextOffset. Original units, figures, missing values and revision flags are preserved.
+      Position, flow and income are distinct statistical variables. Totals overlap their children; do not sum
+      them. Amounts retain their source units; do not rescale or treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-38001
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: DI_INCOME_INFLOW; DI_INCOME_OUTFLOW; DI_INFLOW; DI_OUTFLOW;
+          DI_POS. Position, transaction flows and income are separate series; retain svDesc units."
+        enum:
+          - DI_INCOME_INFLOW
+          - DI_INCOME_OUTFLOW
+          - DI_INFLOW
+          - DI_OUTFLOW
+          - DI_POS
+      component:
+        type: string
+        in: local
+        description: "DI_COMPONENT codes: DIA = Direct investment assets; DIL = Direct investment liabilities. Totals
+          overlap children; do not sum them."
+        enum:
+          - DIA
+          - DIL
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: inward_direct_investment_countries
+    title: Position, flow and income of inward direct investment (DI) of Hong Kong by selected major investor
+      country/territory (315-38011)
+    description: Position, flow and income of inward direct investment (DI) of Hong Kong by selected major
+      investor country/territory. Official C&SD Table 315-38011. Newest periods first; page with nextOffset.
+      Original units, figures, missing values and revision flags are preserved. Position, flow and income are
+      distinct statistical variables. Totals overlap their children; do not sum them. Amounts retain their
+      source units; do not rescale or treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-38011
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: DI_INCOME_OUTFLOW; DI_INFLOW; DI_POS_IDI. Position, transaction
+          flows and income are separate series; retain svDesc units."
+        enum:
+          - DI_INCOME_OUTFLOW
+          - DI_INFLOW
+          - DI_POS_IDI
+      component:
+        type: string
+        in: local
+        description: "COUNTRY codes: BM = Bermuda; CA = Canada; CN = Chinese Mainland; GB = United Kingdom; JP =
+          Japan; KY = Cayman Islands; OTHERS_IDI = Other countries/territories; SG = Singapore; TOTAL = Total;
+          TW = Taiwan; US = United States of America; VG = British Virgin Islands. Totals overlap children; do
+          not sum them."
+        enum:
+          - BM
+          - CA
+          - CN
+          - GB
+          - JP
+          - KY
+          - OTHERS_IDI
+          - SG
+          - TOTAL
+          - TW
+          - US
+          - VG
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: inward_direct_investment_activities
+    title: Position and flow of inward direct investment (DI) of Hong Kong by major economic activity of Hong Kong
+      enterprise groups (315-38012)
+    description: Position and flow of inward direct investment (DI) of Hong Kong by major economic activity of
+      Hong Kong enterprise groups. Official C&SD Table 315-38012. Newest periods first; page with nextOffset.
+      Original units, figures, missing values and revision flags are preserved. Position, flow and income are
+      distinct statistical variables. Totals overlap their children; do not sum them. Amounts retain their
+      source units; do not rescale or treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-38012
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: DI_INFLOW; DI_POS_IDI. Position, transaction flows and income are
+          separate series; retain svDesc units."
+        enum:
+          - DI_INFLOW
+          - DI_POS_IDI
+      component:
+        type: string
+        in: local
+        description: "ACTIVITY codes: DI_10 = Manufacturing; DI_100-120 = Investment and holding, real estate,
+          professional and business services; DI_130 = Other activities; DI_20 = Construction; DI_30 =
+          Import/export, wholesale and retail trades; DI_40 = Accommodation and food services; DI_50 =
+          Transportation, storage, postal and courier services; DI_60 = Information and communications; DI_70
+          = Banking; DI_80 = Insurance; DI_90 = Financing (except banking, investment and holding companies);
+          TOTAL = Total. Totals overlap children; do not sum them."
+        enum:
+          - DI_10
+          - DI_100-120
+          - DI_130
+          - DI_20
+          - DI_30
+          - DI_40
+          - DI_50
+          - DI_60
+          - DI_70
+          - DI_80
+          - DI_90
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: outward_direct_investment_countries
+    title: Position, flow and income of outward direct investment (DI) of Hong Kong by selected major recipient
+      country/territory (315-38021)
+    description: Position, flow and income of outward direct investment (DI) of Hong Kong by selected major
+      recipient country/territory. Official C&SD Table 315-38021. Newest periods first; page with nextOffset.
+      Original units, figures, missing values and revision flags are preserved. Position, flow and income are
+      distinct statistical variables. Totals overlap their children; do not sum them. Amounts retain their
+      source units; do not rescale or treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-38021
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: DI_INCOME_INFLOW; DI_OUTFLOW; DI_POS_ODI. Position, transaction
+          flows and income are separate series; retain svDesc units."
+        enum:
+          - DI_INCOME_INFLOW
+          - DI_OUTFLOW
+          - DI_POS_ODI
+      component:
+        type: string
+        in: local
+        description: "COUNTRY codes: AU = Australia; BM = Bermuda; CN = Chinese Mainland; GB = United Kingdom; JP =
+          Japan; KY = Cayman Islands; OTHERS_ODI = Other countries/territories; SG = Singapore; TH = Thailand;
+          TOTAL = Total; US = United States of America; VG = British Virgin Islands. Totals overlap children;
+          do not sum them."
+        enum:
+          - AU
+          - BM
+          - CN
+          - GB
+          - JP
+          - KY
+          - OTHERS_ODI
+          - SG
+          - TH
+          - TOTAL
+          - US
+          - VG
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.
+  - name: outward_direct_investment_activities
+    title: Position and flow of outward direct investment (DI) of Hong Kong by major economic activity of Hong
+      Kong enterprise groups (315-38022)
+    description: Position and flow of outward direct investment (DI) of Hong Kong by major economic activity of
+      Hong Kong enterprise groups. Official C&SD Table 315-38022. Newest periods first; page with nextOffset.
+      Original units, figures, missing values and revision flags are preserved. Position, flow and income are
+      distinct statistical variables. Totals overlap their children; do not sum them. Amounts retain their
+      source units; do not rescale or treat unavailable values as zero.
+    path: /get.php
+    query:
+      id: 315-38022
+      full_series: 1
+    transform:
+      response: normalizeInvestment
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year, matching all observations in that year; quarterly tables also accept YYYY03,
+          YYYY06, YYYY09 or YYYY12.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable: DI_OUTFLOW; DI_POS_ODI. Position, transaction flows and income
+          are separate series; retain svDesc units."
+        enum:
+          - DI_OUTFLOW
+          - DI_POS_ODI
+      component:
+        type: string
+        in: local
+        description: "ACTIVITY codes: DI_10 = Manufacturing; DI_100-120 = Investment and holding, real estate,
+          professional and business services; DI_130 = Other activities; DI_20 = Construction; DI_30 =
+          Import/export, wholesale and retail trades; DI_40 = Accommodation and food services; DI_50 =
+          Transportation, storage, postal and courier services; DI_60 = Information and communications; DI_70
+          = Banking; DI_80 = Insurance; DI_90 = Financing (except banking, investment and holding companies);
+          TOTAL = Total. Totals overlap children; do not sum them."
+        enum:
+          - DI_10
+          - DI_100-120
+          - DI_130
+          - DI_20
+          - DI_30
+          - DI_40
+          - DI_50
+          - DI_60
+          - DI_70
+          - DI_80
+          - DI_90
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = amount in the original svDesc unit (HK$ million or HK$ billion); ratio = percent of GDP.
+          Never add amounts to ratios.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for the official title, dimension labels, units and notes.

@@ -1,0 +1,2916 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=315-37021&api_popup=1"
+    },
+    "title": "International Investment Position by standard component (position as at end of period)",
+    "tablenote": [
+      "Figures may not add up to the total due to rounding.     Net International Investment Position is the difference between total external financial assets and total external financial liabilities.     Quarterly International Investment Position are available as from the reference quarter of Q1 2010.",
+      "[*3] Figure is not released due to relatively insignificant magnitude and/or in order to safeguard confidentiality of information provided by individual establishments.",
+      "N.A. Not available",
+      "@ Figure is subject to revision later on."
+    ],
+    "source": "Balance of Payments Branch (1),  Census and Statistics Department  (Enquiry telephone no. : 3863 2329  Enquiry e-mail : bop@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 289,
+      "started": "2026-10-20T21:01:57+00:00",
+      "finished": "2026-10-20T21:01:57+00:00",
+      "durationSeconds": 0.413552
+    }
+  },
+  "dataSet": [
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "Assets",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 9249299,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI",
+      "IIP_COMPONENTDesc": "Direct investment",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3397426,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB",
+      "IIP_COMPONENTDesc": "Debt instruments",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 839849,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 100926,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_DIR",
+      "IIP_COMPONENTDesc": "Direct investor in direct investment enterprises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 622671,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises in direct investor",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 116252,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2557578,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_DIR",
+      "IIP_COMPONENTDesc": "Direct investor in direct investment enterprises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2557578,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises in direct investor",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD",
+      "IIP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 131063,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 123152,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 7911,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI",
+      "IIP_COMPONENTDesc": "Other investment",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3529784,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD",
+      "IIP_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3055856,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2709509,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 346347,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN",
+      "IIP_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 394978,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 345279,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 49699,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA",
+      "IIP_COMPONENTDesc": "Other assets",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 45003,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 10261,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 34742,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_TC",
+      "IIP_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 33946,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI",
+      "IIP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1394320,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB",
+      "IIP_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 705739,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT",
+      "IIP_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 524023,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 327111,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 196912,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST",
+      "IIP_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 181716,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 164918,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 16799,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 688581,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 548,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 688033,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_RA",
+      "IIP_COMPONENTDesc": "Reserve assets",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 796706,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "Liabilities",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 7529769,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI",
+      "IIP_COMPONENTDesc": "Direct investment",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3835034,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB",
+      "IIP_COMPONENTDesc": "Debt instruments",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 700442,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 200724,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_DIR",
+      "IIP_COMPONENTDesc": "Direct investor to direct investment enterprises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 223345,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises to direct investor",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 276374,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3134592,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_DIR",
+      "IIP_COMPONENTDesc": "Direct investor to direct investment enterprises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises to direct investor",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3134592,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD",
+      "IIP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 97582,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 92904,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 4678,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI",
+      "IIP_COMPONENTDesc": "Other investment",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2402676,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD",
+      "IIP_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2172135,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2172135,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN",
+      "IIP_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 186885,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 186885,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL",
+      "IIP_COMPONENTDesc": "Other liabilities",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 19119,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3078,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 16041,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_TC",
+      "IIP_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 24537,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI",
+      "IIP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1194477,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB",
+      "IIP_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 118023,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT",
+      "IIP_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 74948,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 27719,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 47229,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST",
+      "IIP_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 43075,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 21168,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 21907,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1076454,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 63165,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1013290,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "Net International Investment Position",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1719529,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "Assets",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 21047978,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI",
+      "IIP_COMPONENTDesc": "Direct investment",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 7386502,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB",
+      "IIP_COMPONENTDesc": "Debt instruments",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1400546,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_DIR",
+      "IIP_COMPONENTDesc": "Direct investor in direct investment enterprises",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises in direct investor",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 5985956,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_DIR",
+      "IIP_COMPONENTDesc": "Direct investor in direct investment enterprises",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises in direct investor",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD",
+      "IIP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 340671,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI",
+      "IIP_COMPONENTDesc": "Other investment",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 4862968,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD",
+      "IIP_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3937155,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN",
+      "IIP_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 714861,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA",
+      "IIP_COMPONENTDesc": "Other assets",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 100179,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_TC",
+      "IIP_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 110773,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI",
+      "IIP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 6528099,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB",
+      "IIP_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2449742,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT",
+      "IIP_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1856817,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST",
+      "IIP_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 592925,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 4078357,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_RA",
+      "IIP_COMPONENTDesc": "Reserve assets",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1929739,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "Liabilities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 15425525,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI",
+      "IIP_COMPONENTDesc": "Direct investment",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 8013110,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB",
+      "IIP_COMPONENTDesc": "Debt instruments",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1123900,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_DIR",
+      "IIP_COMPONENTDesc": "Direct investor to direct investment enterprises",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises to direct investor",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 6889210,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_DIR",
+      "IIP_COMPONENTDesc": "Direct investor to direct investment enterprises",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises to direct investor",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD",
+      "IIP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 311501,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI",
+      "IIP_COMPONENTDesc": "Other investment",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 4425184,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD",
+      "IIP_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3795166,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN",
+      "IIP_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 472302,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL",
+      "IIP_COMPONENTDesc": "Other liabilities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 83358,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_TC",
+      "IIP_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 74357,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI",
+      "IIP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2675729,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB",
+      "IIP_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 130947,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT",
+      "IIP_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 101131,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST",
+      "IIP_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 29816,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2544782,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "Net International Investment Position",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 5622454,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "Assets",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 60122806,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI",
+      "IIP_COMPONENTDesc": "Direct investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 20873426,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB",
+      "IIP_COMPONENTDesc": "Debt instruments",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3174974,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 808457,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_DIR",
+      "IIP_COMPONENTDesc": "Direct investor in direct investment enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2033966,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises in direct investor",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 332551,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 17698452,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "@,[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_DIR",
+      "IIP_COMPONENTDesc": "Direct investor in direct investment enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 17698452,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises in direct investor",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "@,[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD",
+      "IIP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 912857,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 899277,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 13580,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI",
+      "IIP_COMPONENTDesc": "Other investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 13438797,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD",
+      "IIP_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 9986510,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 6504515,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3481995,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN",
+      "IIP_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2772523,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2734969,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 37554,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA",
+      "IIP_COMPONENTDesc": "Other assets",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 397774,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 209813,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 187960,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_TC",
+      "IIP_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 281991,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI",
+      "IIP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 21566904,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB",
+      "IIP_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 8287357,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT",
+      "IIP_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 7037350,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 5122406,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1914943,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST",
+      "IIP_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1250007,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1131103,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 118904,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 13279548,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 583562,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 12695986,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_RA",
+      "IIP_COMPONENTDesc": "Reserve assets",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3330822,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "Liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 40613062,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI",
+      "IIP_COMPONENTDesc": "Direct investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 22034261,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB",
+      "IIP_COMPONENTDesc": "Debt instruments",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2509450,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 579039,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_DIR",
+      "IIP_COMPONENTDesc": "Direct investor to direct investment enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 762995,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises to direct investor",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1167416,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 19524811,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "@,[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_DIR",
+      "IIP_COMPONENTDesc": "Direct investor to direct investment enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "@,[*3]"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises to direct investor",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 19514446,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD",
+      "IIP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1064625,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 988265,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 76360,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI",
+      "IIP_COMPONENTDesc": "Other investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 12380380,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD",
+      "IIP_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 8093626,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 8041847,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 51778,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN",
+      "IIP_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3463810,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3463810,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL",
+      "IIP_COMPONENTDesc": "Other liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 499533,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 139021,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 360512,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_TC",
+      "IIP_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 323412,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI",
+      "IIP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 5133795,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB",
+      "IIP_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1164458,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT",
+      "IIP_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 960314,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 132906,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 827408,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST",
+      "IIP_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 204145,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 110064,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 94081,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3969337,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 58036,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3911301,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "Net International Investment Position",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 19509744,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "202503",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "Assets",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 62863474,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI",
+      "IIP_COMPONENTDesc": "Direct investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 21790052,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB",
+      "IIP_COMPONENTDesc": "Debt instruments",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3302767,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_DIR",
+      "IIP_COMPONENTDesc": "Direct investor in direct investment enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_DB_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises in direct investor",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 18487285,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_DIR",
+      "IIP_COMPONENTDesc": "Direct investor in direct investment enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_DI_EI_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises in direct investor",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD",
+      "IIP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1046609,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_FD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI",
+      "IIP_COMPONENTDesc": "Other investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 14189121,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD",
+      "IIP_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 10189266,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_CD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN",
+      "IIP_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2968002,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_LN_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA",
+      "IIP_COMPONENTDesc": "Other assets",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 672250,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_OA_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_OI_TC",
+      "IIP_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 359603,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI",
+      "IIP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 22340740,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB",
+      "IIP_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 9147279,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT",
+      "IIP_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 7743124,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_LT_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST",
+      "IIP_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1404155,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_DB_ST_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 13193461,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_PI_EI_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS_RA",
+      "IIP_COMPONENTDesc": "Reserve assets",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3496951,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "Liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 43449806,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI",
+      "IIP_COMPONENTDesc": "Direct investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 22915608,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB",
+      "IIP_COMPONENTDesc": "Debt instruments",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 2607687,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_DIR",
+      "IIP_COMPONENTDesc": "Direct investor to direct investment enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_DB_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises to direct investor",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 20307920,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_BFE",
+      "IIP_COMPONENTDesc": "Between fellow enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_DIR",
+      "IIP_COMPONENTDesc": "Direct investor to direct investment enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_DI_EI_RIT",
+      "IIP_COMPONENTDesc": "Direct investment enterprises to direct investor",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD",
+      "IIP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1240548,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_FD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI",
+      "IIP_COMPONENTDesc": "Other investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 13850074,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD",
+      "IIP_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 9006681,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_CD_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN",
+      "IIP_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 3625772,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_LN_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL",
+      "IIP_COMPONENTDesc": "Other liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 819151,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_OL_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_OI_TC",
+      "IIP_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 398470,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI",
+      "IIP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 5443577,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB",
+      "IIP_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1411317,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT",
+      "IIP_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 1150875,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_LT_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST",
+      "IIP_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 260442,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST_BK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_DB_ST_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI",
+      "IIP_COMPONENTDesc": "Equity and investment fund shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 4032260,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI_BANK",
+      "IIP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA_PI_EI_OS",
+      "IIP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,@"
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "Net International Investment Position",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "HK$ million",
+      "figure": 19413667,
+      "sd_value": "@"
+    }
+  ]
+}

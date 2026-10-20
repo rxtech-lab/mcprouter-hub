@@ -1,0 +1,264 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=315-37022&api_popup=1"
+    },
+    "title": "国际投资头寸相对本地生产总值的比率",
+    "tablenote": [
+      "国际投资头寸净值是对外金融资产总值与对外金融负债总值之间的差额。     按季国际投资头寸由2010年第1季统计季度开始编制。",
+      "@ 数字在日后会作出修订。"
+    ],
+    "source": "政府统计处国际收支平衡统计科 (一)  (查询电话：3863 2329  查询电邮：bop@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 24,
+      "started": "2026-10-20T21:01:57+00:00",
+      "finished": "2026-10-20T21:01:57+00:00",
+      "durationSeconds": 0.025409
+    }
+  },
+  "dataSet": [
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "资产",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 9249299,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "负债",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 7529769,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "国际投资头寸净值",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 1719529,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "资产",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 21047978,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "负债",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 15425525,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "国际投资头寸净值",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 5622454,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "资产",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 60122806,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 40613062,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "国际投资头寸净值",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 19509744,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "资产",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 62863474,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 43449806,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "国际投资头寸净值",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP",
+      "svDesc": "百万港元",
+      "figure": 19413667,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "资产",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 692,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "负债",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 563,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "国际投资头寸净值",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 129,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "资产",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 1243,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "负债",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 911,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "国际投资头寸净值",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 332,
+      "sd_value": ""
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "资产",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 1806,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 1220,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "国际投资头寸净值",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 586,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_ATS",
+      "IIP_COMPONENTDesc": "资产",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 1833,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "IIP_LIA",
+      "IIP_COMPONENTDesc": "负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 1267,
+      "sd_value": "@"
+    },
+    {
+      "IIP_COMPONENT": "NIIP",
+      "IIP_COMPONENTDesc": "国际投资头寸净值",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "IIP_R",
+      "svDesc": "相对本地生产总值的百分比",
+      "figure": 566,
+      "sd_value": "@"
+    }
+  ]
+}

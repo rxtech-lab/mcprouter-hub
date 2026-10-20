@@ -1,0 +1,624 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=315-37006&api_popup=1"
+    },
+    "title": "按界别划分的投资流量净值",
+    "tablenote": [
+      "由于数字经四舍五入，分项总和未必与总数相等。     自2023年6月起，金融账户的整系数列已采用新的正负号常规。自此，净资产增加（资金净流出）以正数值标示，而净资产减少（资金净流入）则以负数值标示。     在国际收支平衡架构下储备及非储备资产的估计数字是指交易数字。因估值方式改变（包括价格变动及汇率变动）及重新分类所导致的影响并没计算在内。",
+      "@ 数字在日后会作出修订。"
+    ],
+    "source": "政府统计处国际收支平衡统计科 (一)  (查询电话：3863 2329  查询电邮：bop@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 60,
+      "started": "2026-10-20T21:01:57+00:00",
+      "finished": "2026-10-20T21:01:57+00:00",
+      "durationSeconds": 0.091391
+    }
+  },
+  "dataSet": [
+    {
+      "BOP_COMPONENT": "DI",
+      "BOP_COMPONENTDesc": "直接投资",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 20806,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -12340,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 33145,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FD",
+      "BOP_COMPONENTDesc": "金融衍生工具",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -25550,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FDB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -28804,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FDO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 3254,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRA",
+      "BOP_COMPONENTDesc": "非储备金融资产",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 51192,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 261485,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -210294,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OI",
+      "BOP_COMPONENTDesc": "其他投资",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 226954,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 362810,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -135856,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PI",
+      "BOP_COMPONENTDesc": "证券投资",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -171018,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -60181,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -110837,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DI",
+      "BOP_COMPONENTDesc": "直接投资",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -5895,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -11000,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 5105,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FD",
+      "BOP_COMPONENTDesc": "金融衍生工具",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 13166,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FDB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 13373,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FDO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -207,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRA",
+      "BOP_COMPONENTDesc": "非储备金融资产",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 15612,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 86483,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -70870,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OI",
+      "BOP_COMPONENTDesc": "其他投资",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 36687,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 79668,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -42982,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PI",
+      "BOP_COMPONENTDesc": "证券投资",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -28346,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 4441,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -32786,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DI",
+      "BOP_COMPONENTDesc": "直接投资",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -164897,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -68487,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -96410,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FD",
+      "BOP_COMPONENTDesc": "金融衍生工具",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -46356,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FDB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -76819,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FDO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 30463,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRA",
+      "BOP_COMPONENTDesc": "非储备金融资产",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 624094,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 876100,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -252006,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OI",
+      "BOP_COMPONENTDesc": "其他投资",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 347564,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 537356,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -189791,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PI",
+      "BOP_COMPONENTDesc": "证券投资",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 487782,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 484050,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 3732,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DI",
+      "BOP_COMPONENTDesc": "直接投资",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -29097.995,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -46514.472,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 17416.477,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FD",
+      "BOP_COMPONENTDesc": "金融衍生工具",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -58256.536,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FDB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -57618.986,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FDO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -637.55,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRA",
+      "BOP_COMPONENTDesc": "非储备金融资产",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 76768.197,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 271539.999,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -194771.802,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OI",
+      "BOP_COMPONENTDesc": "其他投资",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -315687.937,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -124666.943,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -191020.994,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PI",
+      "BOP_COMPONENTDesc": "证券投资",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 479810.665,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PIB",
+      "BOP_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": 500340.4,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PIO",
+      "BOP_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "百万港元",
+      "figure": -20529.735,
+      "sd_value": "@"
+    }
+  ]
+}

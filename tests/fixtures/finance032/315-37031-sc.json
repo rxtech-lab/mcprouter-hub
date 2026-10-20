@@ -1,0 +1,1958 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=315-37031&api_popup=1"
+    },
+    "title": "对外债务（期末头寸）",
+    "tablenote": [
+      "由于数字经四舍五入，分项总和未必与总数相等。",
+      "由于数值较不显著及／或抽样误差较大，数字须谨慎阐释。",
+      "当长期贸易信贷和预付款的数字不予个别提供时，该数字会被纳入短期贸易信贷和预付款。",
+      "[*3] 由于数值较不显著及／或为使个别机构单位所提供的资料得以保密，数字不予公布。",
+      "N.A. 没有数字",
+      "@ 数字在日后会作出修订。"
+    ],
+    "source": "政府统计处国际收支平衡统计科 (一)  (查询电话：3863 2329  查询电邮：bop@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 193,
+      "started": "2026-10-20T21:01:58+00:00",
+      "finished": "2026-10-20T21:01:58+00:00",
+      "durationSeconds": 0.231262
+    }
+  },
+  "dataSet": [
+    {
+      "ED_COMPONENT": "ED",
+      "ED_COMPONENTDesc": "对外债务总额",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2830516,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK",
+      "ED_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1722226,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 55718,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 18633,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 35647,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1438,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1666508,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1638265,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 24606,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 3636,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI",
+      "ED_COMPONENTDesc": "直接投资 : 公司间借贷",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 807112,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_BFE",
+      "ED_COMPONENTDesc": "联属企业之间的债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 220690,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_ENT",
+      "ED_COMPONENTDesc": "直接投资企业对直接投资者的债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 305813,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_INV",
+      "ED_COMPONENTDesc": "直接投资者对直接投资企业的债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 280610,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV",
+      "ED_COMPONENTDesc": "政府机构",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA",
+      "ED_COMPONENTDesc": "金融当局",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1654,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1654,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1552,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 102,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS",
+      "ED_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 299524,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 212691,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 45756,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 154884,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 11208,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 843,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 86833,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 5148,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 32925,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 8491,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 40267,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED",
+      "ED_COMPONENTDesc": "对外债务总额",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2936828,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK",
+      "ED_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1722745,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 53778,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 18878,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 31777,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 3124,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1668966,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1642393,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 23722,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2851,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI",
+      "ED_COMPONENTDesc": "直接投资 : 公司间借贷",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 866344,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_BFE",
+      "ED_COMPONENTDesc": "联属企业之间的债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 248641,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_ENT",
+      "ED_COMPONENTDesc": "直接投资企业对直接投资者的债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 302121,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_INV",
+      "ED_COMPONENTDesc": "直接投资者对直接投资企业的债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 315581,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV",
+      "ED_COMPONENTDesc": "政府机构",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA",
+      "ED_COMPONENTDesc": "金融当局",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 28634,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 200,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 200,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 28434,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 600,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 27772,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 62,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS",
+      "ED_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 319105,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 213927,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 41560,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 163337,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 8188,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 842,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 105178,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 25983,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 39191,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 8181,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 31823,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "ED_COMPONENT": "ED",
+      "ED_COMPONENTDesc": "对外债务总额",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 16054289,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK",
+      "ED_COMPONENTDesc": "银行",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 8423838,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 274545,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 122508,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 132906,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 19131,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 8149293,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 7919339,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 110064,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 119890,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI",
+      "ED_COMPONENTDesc": "直接投资 : 公司间借贷",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2509450,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_BFE",
+      "ED_COMPONENTDesc": "联属企业之间的债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 579039,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_ENT",
+      "ED_COMPONENTDesc": "直接投资企业对直接投资者的债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1167416,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_INV",
+      "ED_COMPONENTDesc": "直接投资者对直接投资企业的债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 762995,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV",
+      "ED_COMPONENTDesc": "政府机构",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 154480,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 153425,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 153425,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1055,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "@,[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1055,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA",
+      "ED_COMPONENTDesc": "金融当局",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 84099,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2205,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2205,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 81894,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 51778,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 29566,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 550,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS",
+      "ED_COMPONENTDesc": "其他界别",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 4882422,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 3480341,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 671778,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2609390,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 199173,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "@,N.A."
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1402081,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 63460,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 854420,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 160789,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 323412,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED",
+      "ED_COMPONENTDesc": "对外债务总额",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 17869078,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK",
+      "ED_COMPONENTDesc": "银行",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 9413339,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 304578,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 154868,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 129825,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 19885,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 9108761,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 8745695,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 171388,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 191678,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI",
+      "ED_COMPONENTDesc": "直接投资 : 公司间借贷",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2607687,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_BFE",
+      "ED_COMPONENTDesc": "联属企业之间的债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 597054,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_ENT",
+      "ED_COMPONENTDesc": "直接投资企业对直接投资者的债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1231908,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_INV",
+      "ED_COMPONENTDesc": "直接投资者对直接投资企业的债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 778725,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV",
+      "ED_COMPONENTDesc": "政府机构",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 162802,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 162798,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 162798,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 5,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "@,[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 5,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA",
+      "ED_COMPONENTDesc": "金融当局",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 136576,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1988,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1988,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 134588,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 106117,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 8186,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 18585,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1699,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS",
+      "ED_COMPONENTDesc": "其他界别",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 5548674,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT",
+      "ED_COMPONENTDesc": "长期",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 3843171,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 856265,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 2694205,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 292701,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "@,N.A."
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST",
+      "ED_COMPONENTDesc": "短期",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 1705503,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_CD",
+      "ED_COMPONENTDesc": "货币和存款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_DB",
+      "ED_COMPONENTDesc": "债务证券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 80863,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_LN",
+      "ED_COMPONENTDesc": "贷款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 912983,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_OD",
+      "ED_COMPONENTDesc": "其他债务负债",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 313188,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_TC",
+      "ED_COMPONENTDesc": "贸易信贷和预付款",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "百万港元",
+      "figure": 398470,
+      "sd_value": "@"
+    }
+  ]
+}

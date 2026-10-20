@@ -1,0 +1,743 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=315-38011&api_popup=1"
+    },
+    "title": "Position, flow and income of inward direct investment (DI) of Hong Kong by selected major investor country/territory",
+    "tablenote": [
+      "The total of all countries/territories presented in this table is different from the aggregate direct investment liabilities presented in Table 315-38001 due to the adoption of different presentation principles, with the former compiled based on the \"directional principle\" and the latter based on the \"asset/liability principle\" in accordance with the international statistical standards. The total of all countries/territories in this table should be referred to in calculating the shares of individual investor countries/territories, while the direct investment liabilities in Table 315-38001 should be referred to in the analyses on aggregate statistics.     The position of direct investment refers to the value of inward direct investment at a specific time point.  Changes in the position between different time points are influenced by various factors, including flows of direct investment as well as other factors, such as price changes, exchange rate variations, reclassifications, etc.     Figures may not add up to the total due to rounding.     Country/Territory here refers to the immediate source economy. It does not necessarily reflect the country/territory from which the funds are initially mobilised.     Negative inflow does not necessarily relate to equity withdrawal. It may be the result of repayment of loans owed to non-resident affiliates.     Selected major investor country/territory are selected based on the position of Hong Kong's inward DI from individual investor countries/territories in recent years."
+    ],
+    "source": "Survey of External Claims, Liabilities and Income Balance of Payments Section (2)1, Census and Statistics Department (Enquiry telephone no. : 3863 2269  Enquiry e-mail : di@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 72,
+      "started": "2026-10-20T21:01:58+00:00",
+      "finished": "2026-10-20T21:01:58+00:00",
+      "durationSeconds": 0.028312
+    }
+  },
+  "dataSet": [
+    {
+      "COUNTRY": "",
+      "COUNTRYDesc": "Total",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 1627.2,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "BM",
+      "COUNTRYDesc": "Bermuda",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 198.1,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CA",
+      "COUNTRYDesc": "Canada",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 6.8,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CN",
+      "COUNTRYDesc": "Chinese Mainland",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 205.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "GB",
+      "COUNTRYDesc": "United Kingdom",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 149.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "JP",
+      "COUNTRYDesc": "Japan",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 105.5,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "KY",
+      "COUNTRYDesc": "Cayman Islands",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 77.8,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "OTHERS_IDI",
+      "COUNTRYDesc": "Other countries/territories",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 214.5,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "SG",
+      "COUNTRYDesc": "Singapore",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 37.5,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "TW",
+      "COUNTRYDesc": "Taiwan",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 8.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "US",
+      "COUNTRYDesc": "United States of America",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 108.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "VG",
+      "COUNTRYDesc": "British Virgin Islands",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 514.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "",
+      "COUNTRYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 18231,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "BM",
+      "COUNTRYDesc": "Bermuda",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 709,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CA",
+      "COUNTRYDesc": "Canada",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 253.7,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CN",
+      "COUNTRYDesc": "Chinese Mainland",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 5953.4,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "GB",
+      "COUNTRYDesc": "United Kingdom",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 1540.1,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "JP",
+      "COUNTRYDesc": "Japan",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 254.5,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "KY",
+      "COUNTRYDesc": "Cayman Islands",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 1912.5,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "OTHERS_IDI",
+      "COUNTRYDesc": "Other countries/territories",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 973.2,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "SG",
+      "COUNTRYDesc": "Singapore",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 310.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "TW",
+      "COUNTRYDesc": "Taiwan",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 372.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "US",
+      "COUNTRYDesc": "United States of America",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 411.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "VG",
+      "COUNTRYDesc": "British Virgin Islands",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_IDI",
+      "svDesc": "HK$ billion",
+      "figure": 5538.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "",
+      "COUNTRYDesc": "Total",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 131.8,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "BM",
+      "COUNTRYDesc": "Bermuda",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 13.8,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CA",
+      "COUNTRYDesc": "Canada",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": -0.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CN",
+      "COUNTRYDesc": "Chinese Mainland",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 16.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "GB",
+      "COUNTRYDesc": "United Kingdom",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "JP",
+      "COUNTRYDesc": "Japan",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 11.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "KY",
+      "COUNTRYDesc": "Cayman Islands",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "OTHERS_IDI",
+      "COUNTRYDesc": "Other countries/territories",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 34.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "SG",
+      "COUNTRYDesc": "Singapore",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 2.2,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "TW",
+      "COUNTRYDesc": "Taiwan",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "US",
+      "COUNTRYDesc": "United States of America",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 12.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "VG",
+      "COUNTRYDesc": "British Virgin Islands",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 20.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "",
+      "COUNTRYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 1451.4,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "BM",
+      "COUNTRYDesc": "Bermuda",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 33.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CA",
+      "COUNTRYDesc": "Canada",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 32.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CN",
+      "COUNTRYDesc": "Chinese Mainland",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 479.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "GB",
+      "COUNTRYDesc": "United Kingdom",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 160,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "JP",
+      "COUNTRYDesc": "Japan",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 24.7,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "KY",
+      "COUNTRYDesc": "Cayman Islands",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 96.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "OTHERS_IDI",
+      "COUNTRYDesc": "Other countries/territories",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 102.5,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "SG",
+      "COUNTRYDesc": "Singapore",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 44.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "TW",
+      "COUNTRYDesc": "Taiwan",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 17.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "US",
+      "COUNTRYDesc": "United States of America",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 62.5,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "VG",
+      "COUNTRYDesc": "British Virgin Islands",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 396.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "",
+      "COUNTRYDesc": "Total",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 95,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "BM",
+      "COUNTRYDesc": "Bermuda",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 20.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CA",
+      "COUNTRYDesc": "Canada",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CN",
+      "COUNTRYDesc": "Chinese Mainland",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 19.1,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "GB",
+      "COUNTRYDesc": "United Kingdom",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 7.7,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "JP",
+      "COUNTRYDesc": "Japan",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "KY",
+      "COUNTRYDesc": "Cayman Islands",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "OTHERS_IDI",
+      "COUNTRYDesc": "Other countries/territories",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 14.1,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "SG",
+      "COUNTRYDesc": "Singapore",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "TW",
+      "COUNTRYDesc": "Taiwan",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "US",
+      "COUNTRYDesc": "United States of America",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 7.1,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "VG",
+      "COUNTRYDesc": "British Virgin Islands",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 23.4,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "",
+      "COUNTRYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 1076.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "BM",
+      "COUNTRYDesc": "Bermuda",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 17.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CA",
+      "COUNTRYDesc": "Canada",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 13.3,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "CN",
+      "COUNTRYDesc": "Chinese Mainland",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 466,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "GB",
+      "COUNTRYDesc": "United Kingdom",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 39.8,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "JP",
+      "COUNTRYDesc": "Japan",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 14.6,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "KY",
+      "COUNTRYDesc": "Cayman Islands",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 88.7,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "OTHERS_IDI",
+      "COUNTRYDesc": "Other countries/territories",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 151.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "SG",
+      "COUNTRYDesc": "Singapore",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "TW",
+      "COUNTRYDesc": "Taiwan",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 10.7,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "US",
+      "COUNTRYDesc": "United States of America",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 32,
+      "sd_value": ""
+    },
+    {
+      "COUNTRY": "VG",
+      "COUNTRYDesc": "British Virgin Islands",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 237,
+      "sd_value": ""
+    }
+  ]
+}
