@@ -94,6 +94,18 @@ export const liveCases: Record<string, LiveCase> = {
   pce_components_current: { input: { limit: 1 }, check: nonEmptyPage },
   pce_components_chained: { input: { limit: 1 }, check: nonEmptyPage },
 
+  // Finance batch 030: period-free checks.
+  services_trade_components_chained: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_activity_current: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_production_current: { input: { limit: 1 }, check: nonEmptyPage },
+  activity_output_factor_income: { input: { limit: 1 }, check: nonEmptyPage },
+  production_account: { input: { limit: 1 }, check: nonEmptyPage },
+  generation_of_income_account: { input: { limit: 1 }, check: nonEmptyPage },
+  national_accounts_aggregates: { input: { limit: 1 }, check: nonEmptyPage },
+  gdp_activity_chained: { input: { limit: 1 }, check: nonEmptyPage },
+  real_gross_domestic_income: { input: { limit: 1 }, check: nonEmptyPage },
+  gni_and_per_capita: { input: { limit: 1 }, check: nonEmptyPage },
+
   // Finance batch 029: period-free checks.
   cxdm_groups_current: { input: { limit: 1 }, check: nonEmptyPage },
   cxdm_groups_chained: { input: { limit: 1 }, check: nonEmptyPage },

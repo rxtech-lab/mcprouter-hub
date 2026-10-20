@@ -1,0 +1,1268 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-33042&api_popup=1"
+    },
+    "title": "Exports and imports of services by service component in chained (2024) dollars",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called “advance estimates”.  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called “revised figures”.  These “revised figures” are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated.      Figures are compiled based on the change of ownership principle in recording goods sent abroad for processing and merchanting under the standards stipulated in the System of National Accounts 2008.",
+      "The chained (2024) dollar series is derived by extrapolation of the current price value for the reference year (2024) backward and forward using the chain volume index as the extrapolator.  As the extrapolation process is carried out for trade in services and its components independently in calculating the chained dollar series, discrepancies may exist between the chain volume measure of trade in services and the sum of the chain volume measures of its components.",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%.",
+      "r Revised figure",
+      "n.y.a. Not yet available"
+    ],
+    "source": "National Income Section (1)3,   Census and Statistics Department   (Enquiry telephone no. : 3863 2717   Enquiry e-mail : gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 124,
+      "started": "2026-10-20T18:02:12+00:00",
+      "finished": "2026-10-20T18:02:12+00:00",
+      "durationSeconds": 0.179673
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "Manufacturing services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 20.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.9,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 23.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "1981",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -7.9,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "198909",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "Manufacturing services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "202403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "Manufacturing services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 10,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "Manufacturing services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3],r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 4035,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "Manufacturing services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 294,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 65117,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 775,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 3228,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 4695,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 15764,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 11761,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 37715,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 42109,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 18805,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 35420,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 25782,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 40042,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 120846,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 15985,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 30327,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 7607,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "Manufacturing services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 25715,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 16597,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 18018,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 36520,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 16236,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 19929,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 32941,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 232761,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "Manufacturing services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 93825,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 727794,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 244299,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 180730,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 232397,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 192659,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 157273,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 281368,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 887518,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 51858,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "Manufacturing services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 22421,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 180591,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "Financial services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "Insurance and pension services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 59778,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "Others",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 44232,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 58385,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "Travel",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 45010,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 40007,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "Transport",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 70508,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 211608,
+      "sd_value": "r"
+    }
+  ]
+}

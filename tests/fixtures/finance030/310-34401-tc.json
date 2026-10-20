@@ -1,0 +1,324 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=310-34401&api_popup=1"
+    },
+    "title": "帳戶序列: 生產帳戶 - 以當時價格計算",
+    "tablenote": [
+      "由於數字經四捨五入，分項總和未必與總數相等。",
+      "r 修訂數字"
+    ],
+    "source": "政府統計處國民收入統計組 (二) 一 (查詢電話：3863 2743 查詢電郵：gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 30,
+      "started": "2026-10-20T18:02:13+00:00",
+      "finished": "2026-10-20T18:02:13+00:00",
+      "durationSeconds": 0.012532
+    }
+  },
+  "dataSet": [
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1283035,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "金融公司",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 164195,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "政府",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 112027,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "住戶",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 139111,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "非金融公司",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 867703,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 3113485,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "金融公司",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 816222,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "政府",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 334668,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "住戶",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 311269,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "非金融公司",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1651327,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 2681283,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "金融公司",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 238419,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "政府",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 138757,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "住戶",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 154472,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "非金融公司",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 2149635,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 5924201,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "金融公司",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 1264231,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "政府",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 444628,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "住戶",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 358306,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "非金融公司",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 3857036,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 1398248,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "金融公司",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 74224,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "政府",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 26730,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "住戶",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 15361,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "非金融公司",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 1281932,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 2810715,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "金融公司",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 448009,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "政府",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 109960,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "住戶",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 47038,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "非金融公司",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 2205709,
+      "sd_value": "r"
+    }
+  ]
+}

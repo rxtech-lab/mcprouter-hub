@@ -9,6 +9,7 @@ import type { ServiceDefinition, ToolDefinition, ToolInput } from "@/lib/mcp/typ
 import { transportCases } from "./transport003-cases";
 import { financeCases } from "./finance028-cases";
 import { expenditureCases } from "./finance029-cases";
+import { accountsCases } from "./finance030-cases";
 
 /**
  * Runs every generated MCP tool against a stubbed upstream: checks the HTTP
@@ -193,6 +194,7 @@ const cases: Case[] = [
   ...transportCases,
   ...financeCases,
   ...expenditureCases,
+  ...accountsCases,
   // citybus
   {
     tool: "citybus_routes",

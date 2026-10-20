@@ -1,0 +1,1714 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-34201&api_popup=1"
+    },
+    "title": "Gross output, intermediate consumption, value added and factor income by economic activity at current prices",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by economic activity in respect of a period are called \"preliminary figures\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the preliminary figures, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated.",
+      "r Revised figure"
+    ],
+    "source": "National Income Section (2)1, Census and Statistics Department (Enquiry telephone no. : 3863 2743  Enquiry e-mail : gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 169,
+      "started": "2026-10-20T18:02:12+00:00",
+      "finished": "2026-10-20T18:02:12+00:00",
+      "durationSeconds": 0.044504
+    }
+  },
+  "dataSet": [
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1283035,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1168,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 61399,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 37671,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 62532,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 276977,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 97598,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 37843,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 42871,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 164195,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 118248,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 243423,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 139111,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1120265,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 3113485,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1189,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 29768,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 34294,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 132561,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 536260,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 191151,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 62349,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 104113,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 816222,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 254425,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 639884,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 311269,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 2915674,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 2681283,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 3502,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 222534,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 48504,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 124216,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 956480,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 206723,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 66584,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 102793,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 238419,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 191675,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 365382,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 154472,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 2282528,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 5924201,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 3514,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 286664,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 80185,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 252282,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 1353500,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 538161,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 137213,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 236192,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 1264231,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 481057,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 932896,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 358306,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 5301557,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 1398248,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 2334,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 161135,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 10832,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 61684,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 679503,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 109125,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 28741,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 59921,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 74224,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 73428,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 121959,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 15361,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 1162262,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 2810715,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 2324,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 256896,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 45891,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 119721,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 817240,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 347010,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 74864,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 132079,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 448009,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 226632,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 293012,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 47038,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 2385883,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 663106,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 457,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 31550,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 6097,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 53678,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 138090,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 44940,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 30394,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 24754,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 76225,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 58311,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 198610,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 571324,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 1526763,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 511,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 23418,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 10420,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 108440,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 224095,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 85145,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 61348,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 50257,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 268320,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 189756,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 505053,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "HK$ million",
+      "figure": 1383973,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 594456,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 704,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 29080,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 31403,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 8423,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 134012,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 50186,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 6232,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 17467,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 86737,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 58706,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 42869,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 128637,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 524846,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": -3088,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 1526801,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 672,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 5779,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 23558,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 22934,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 302443,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 102512,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": -1224,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 52289,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 543093,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 61285,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 129090,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 284369,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "HK$ million",
+      "figure": 1473857,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 25473,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 769,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 172,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 431,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 4875,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 2472,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 1217,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 651,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 1232,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 1231,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 1944,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 10474,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 24095,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 59922,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 570,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 316,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 1187,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 9722,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 3494,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 2225,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 1568,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 4808,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 3385,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 5741,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 26900,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "HK$ million",
+      "figure": 57843,
+      "sd_value": "r"
+    }
+  ]
+}

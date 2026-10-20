@@ -1,0 +1,1268 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=310-33042&api_popup=1"
+    },
+    "title": "按服务组成部分划分的服务输出及输入 - 以2024年环比物量计算",
+    "tablenote": [
+      "在香港，首次公布的某一期间的按开支组成部分划分的本地生产总值数字称为「预先估计数字」。当获得更多数据后，这些数字会作出修订。继预先估计数字后公布的所有数字均称为「修订数字」。这些「修订数字」在纳入更多数据后，在日后仍会作出进一步定期修订。这例行修订符合国际一贯的做法，即尽早采用部分数据来编制和公布本地生产总值数字。一般而言，已采纳了全部定期资料来源所得的最终数据编制而成的数字，则为最终的数字。     数字是根据《2008年国民账户体系》的标准，采用所有权转移原则记录外地加工货品及转手商贸活动编制而成的。",
+      "以2024年环比物量计算的价值是应用环比物量指数作为外推指标，以外推法把参照年2024年的以当时价格计算的数值向前及向后推算。由于在编制以环比物量计算的数列时，服务贸易及其组成部分的外推过程是独立地进行，所以以环比物量计算的服务贸易与其以环比物量计算的组成部分的总和可能出现差额。",
+      "N.A. 没有数字",
+      "[φ3] 数字代表增减少于 0.05%。",
+      "r 修订数字",
+      "n.y.a. 暂时没有数字"
+    ],
+    "source": "政府统计处国民收入统计组 (一) 三 (查询电话：3863 2717  查询电邮：gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 124,
+      "started": "2026-10-20T18:02:13+00:00",
+      "finished": "2026-10-20T18:02:13+00:00",
+      "durationSeconds": 0.177531
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "制造服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 20.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1.9,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 23.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "1981",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": -7.9,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Q",
+      "period": "198909",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "制造服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "202403",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 7.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "制造服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 5.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 4.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 10,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 5.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 6.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 2.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "制造服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 0,
+      "sd_value": "[φ3],r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 4.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 7.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 4035,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "制造服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 294,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 65117,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 775,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 3228,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 4695,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 15764,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 11761,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 37715,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 42109,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 18805,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 35420,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 25782,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 40042,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Y",
+      "period": "1980",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 120846,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 15985,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Q",
+      "period": "198003",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 30327,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 7607,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "制造服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 25715,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 16597,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 18018,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 36520,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 16236,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 19929,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Q",
+      "period": "199803",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 32941,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 232761,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "制造服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 93825,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 727794,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 244299,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "n.y.a.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 180730,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 232397,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 192659,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 157273,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 281368,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 887518,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FINS_XS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 51858,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MANU_MS",
+      "GDP_COMPONENTDesc": "制造服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 22421,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "服务输入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 180591,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_FINS_MS",
+      "GDP_COMPONENTDesc": "金融服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_MS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_INS_XS",
+      "GDP_COMPONENTDesc": "保险及退休金服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_MS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 59778,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_MS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_OTH_XS",
+      "GDP_COMPONENTDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A.,r"
+    },
+    {
+      "GDP_COMPONENT": "OS_XS",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 44232,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_MS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 58385,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRA_XS",
+      "GDP_COMPONENTDesc": "旅游",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 45010,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_MS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 40007,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "TRANS_XS",
+      "GDP_COMPONENTDesc": "运输",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 70508,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "服务输出",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 211608,
+      "sd_value": "r"
+    }
+  ]
+}

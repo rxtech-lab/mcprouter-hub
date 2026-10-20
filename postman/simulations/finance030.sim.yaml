@@ -1,0 +1,5 @@
+simulation: finance030
+routing: path
+mocks:
+  - routeKey: censtatd
+    path: ../mocks/censtatd-national-accounts/config.yaml

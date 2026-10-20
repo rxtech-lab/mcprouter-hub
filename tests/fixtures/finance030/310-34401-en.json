@@ -1,0 +1,324 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-34401&api_popup=1"
+    },
+    "title": "Sequence of Accounts: production account at current prices",
+    "tablenote": [
+      "Figures may not add up to the total due to rounding.",
+      "r Revised figure"
+    ],
+    "source": "National Income Section (2)1, Census and Statistics Department (Enquiry telephone no. : 3863 2743 Enquiry e-mail : gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 30,
+      "started": "2026-10-20T18:02:12+00:00",
+      "finished": "2026-10-20T18:02:12+00:00",
+      "durationSeconds": 0.022147
+    }
+  },
+  "dataSet": [
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1283035,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "Financial corporations",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 164195,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "General government",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 112027,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "Households",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 139111,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "Non-financial corporations",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 867703,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 3113485,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "Financial corporations",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 816222,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "General government",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 334668,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "Households",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 311269,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "Non-financial corporations",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1651327,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 2681283,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "Financial corporations",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 238419,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "General government",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 138757,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "Households",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 154472,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "Non-financial corporations",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 2149635,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 5924201,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "Financial corporations",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 1264231,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "General government",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 444628,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "Households",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 358306,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "Non-financial corporations",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "HK$ million",
+      "figure": 3857036,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 1398248,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "Financial corporations",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 74224,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "General government",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 26730,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "Households",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 15361,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "Non-financial corporations",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 1281932,
+      "sd_value": ""
+    },
+    {
+      "INS_SECTOR": "",
+      "INS_SECTORDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 2810715,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_FIN_CORP",
+      "INS_SECTORDesc": "Financial corporations",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 448009,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_GOV",
+      "INS_SECTORDesc": "General government",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 109960,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_HH",
+      "INS_SECTORDesc": "Households",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 47038,
+      "sd_value": "r"
+    },
+    {
+      "INS_SECTOR": "GDPP_OTH_CORP",
+      "INS_SECTORDesc": "Non-financial corporations",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "HK$ million",
+      "figure": 2205709,
+      "sd_value": "r"
+    }
+  ]
+}
