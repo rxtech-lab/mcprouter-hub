@@ -192,7 +192,7 @@ Every webhook must carry the secret in `X-Telegram-Bot-Api-Secret-Token`. Linkin
 
 ### Chat cards
 
-Each service with an app also has `mcp/services/<id>/card.ts`, which turns a tool result into a `Card` (header, rows, chips, notices; see `mcp/apps/card.ts`) mirroring its `app.ts`, and is registered in `lib/cards/index.ts`. `lib/cards/render.ts` lays the card out with [satori](https://github.com/vercel/satori) into an SVG and rasterises it to a 1080px-wide PNG with sharp. Text is drawn in Noto Sans HK, fetched from Google Fonts subset to the characters on the card, so English and Chinese both render without system fonts. A reply sends at most three cards (the latest result per tool and input); long lists stop at ten rows. A card that fails to render is skipped and the text answer still goes out.
+Each service with an app also has `mcp/services/<id>/card.ts`, which turns a tool result into a `Card` (header, rows, chips, notices; see `mcp/apps/card.ts`) mirroring its `app.ts`, and is registered in `lib/cards/index.ts`. `lib/cards/render.ts` lays the card out with [satori](https://github.com/vercel/satori) into an SVG and rasterises it to a 1080px-wide PNG with sharp. Text is drawn in Noto Sans HK with Noto Sans SC as a fallback on cards containing Chinese (the HK font lacks Simplified Chinese glyphs such as 节 and 诞). Both families are fetched from Google Fonts subset to the characters on the card, so English and Chinese render without system fonts. A reply sends at most three cards (the latest result per tool and input); long lists stop at ten rows. A card that fails to render is skipped and the text answer still goes out.
 
 ## Tracker
 

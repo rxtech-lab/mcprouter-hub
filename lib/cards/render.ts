@@ -16,6 +16,8 @@ const PADDING = 20;
 /** A picture can't scroll, so long lists stop here with a "+N more" line. */
 const MAX_ROWS = 10;
 const FONT_FAMILY = "Noto Sans HK";
+// The HK font omits some Simplified Chinese glyphs, including 节 and 诞.
+const FALLBACK_FONT_FAMILY = "Noto Sans SC";
 
 const COLOURS = {
   background: "#ffffff",
@@ -131,7 +133,7 @@ export function cardTree(card: Card): Element {
   const accentText = card.onAccent ?? "#ffffff";
   return div(
     // Satori adds padding to the width, so the content box is what's left of the canvas.
-    { width: WIDTH - 2 * PADDING, maxWidth: WIDTH - 2 * PADDING, overflow: "hidden", flexDirection: "column", gap: 8, padding: PADDING, background: COLOURS.background, color: COLOURS.text, fontFamily: FONT_FAMILY, borderTop: `6px solid ${card.accent}` },
+    { width: WIDTH - 2 * PADDING, maxWidth: WIDTH - 2 * PADDING, overflow: "hidden", flexDirection: "column", gap: 8, padding: PADDING, background: COLOURS.background, color: COLOURS.text, fontFamily: `${FONT_FAMILY}, ${FALLBACK_FONT_FAMILY}`, borderTop: `6px solid ${card.accent}` },
     div(
       { alignItems: "center", gap: 12, marginBottom: 4 },
       div(
@@ -168,12 +170,12 @@ function characters(element: Element | string): string {
 type Font = { name: string; data: ArrayBuffer; weight: 400 | 700; style: "normal" };
 
 /**
- * Noto Sans HK, subset by Google Fonts to just the characters drawn: it covers
- * English and Traditional Chinese, and a subset is a few kilobytes rather than megabytes.
+ * Subset each family to the characters drawn, keeping downloads small.
+ * HK supplies the preferred local forms; SC covers missing Simplified Chinese.
  */
-async function loadFont(weight: 400 | 700, chars: string, fetcher: typeof fetch): Promise<Font> {
+async function loadFont(family: string, weight: 400 | 700, chars: string, fetcher: typeof fetch): Promise<Font> {
   const unique = [...new Set(chars)].join("");
-  const css = await fetcher(`https://fonts.googleapis.com/css2?family=${encodeURIComponent(FONT_FAMILY)}:wght@${weight}&text=${encodeURIComponent(unique)}`, {
+  const css = await fetcher(`https://fonts.googleapis.com/css2?family=${encodeURIComponent(family)}:wght@${weight}&text=${encodeURIComponent(unique)}`, {
     signal: AbortSignal.timeout(8_000),
   }).then((response) => (response.ok ? response.text() : Promise.reject(new Error(`Google Fonts ${response.status}`))));
   const url = /src: url\((.+?)\) format\('(?:opentype|truetype)'\)/.exec(css)?.[1];
@@ -181,13 +183,14 @@ async function loadFont(weight: 400 | 700, chars: string, fetcher: typeof fetch)
   const data = await fetcher(url, { signal: AbortSignal.timeout(8_000) }).then((response) =>
     response.ok ? response.arrayBuffer() : Promise.reject(new Error(`Font download ${response.status}`)),
   );
-  return { name: FONT_FAMILY, data, weight, style: "normal" };
+  return { name: family, data, weight, style: "normal" };
 }
 
 export async function renderCardSvg(card: Card, fetcher: typeof fetch = fetch) {
   const tree = cardTree(card);
   const chars = characters(tree) + ELLIPSIS;
-  const fonts = await Promise.all([loadFont(400, chars, fetcher), loadFont(700, chars, fetcher)]);
+  const families = /\p{Script=Han}/u.test(chars) ? [FONT_FAMILY, FALLBACK_FONT_FAMILY] : [FONT_FAMILY];
+  const fonts = await Promise.all(families.flatMap((family) => ([400, 700] as const).map((weight) => loadFont(family, weight, chars, fetcher))));
   return satori(tree as unknown as Parameters<typeof satori>[0], { width: WIDTH, fonts });
 }
 
