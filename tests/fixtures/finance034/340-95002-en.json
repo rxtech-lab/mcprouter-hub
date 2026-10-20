@@ -1,0 +1,53 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=340-95002&api_popup=1"
+    },
+    "title": "Average daily turnover of Exchange Fund Bills and Notes issued by the Hong Kong Monetary Authority",
+    "tablenote": [],
+    "source": "Hong Kong Monetary Authority  For further information, please visit the website of the Hong Kong Monetary Authority  (www.hkma.gov.hk/eng)  (Enquiry telephone no.: 2878 8222  Enquiry e-mail: publicenquiry@hkma.gov.hk)",
+    "count": {
+      "noOfRecords": 4,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.003552
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2010",
+      "sv": "ADT_EXFBN",
+      "svDesc": "HK$ billion",
+      "figure": 372.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201003",
+      "sv": "ADT_EXFBN",
+      "svDesc": "HK$ billion",
+      "figure": 297.1,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ADT_EXFBN",
+      "svDesc": "HK$ billion",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ADT_EXFBN",
+      "svDesc": "HK$ billion",
+      "figure": 18.4,
+      "sd_value": ""
+    }
+  ]
+}

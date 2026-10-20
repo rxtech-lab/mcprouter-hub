@@ -1,0 +1,425 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=340-47012&api_popup=1"
+    },
+    "title": "Government expenditure (General Revenue Account and the funds)",
+    "tablenote": [
+      "Financial year runs from 1 April to 31 March.",
+      "Figures have been adjusted to exclude repayment of principal on Government Bonds. The corresponding “Total capital expenditure” and “Total government expenditure” have been revised accordingly.",
+      "- Not applicable"
+    ],
+    "source": "Financial Services and the Treasury Bureau, Government Secretariat  For further information, please visit the website of the Financial Services and the Treasury Bureau, Government Secretariat (www.fstb.gov.hk).  (Enquiry telephone no.: 2810 3658   Enquiry e-mail : h_div@fstb.gov.hk)",
+    "count": {
+      "noOfRecords": 40,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.037265
+    }
+  },
+  "dataSet": [
+    {
+      "EXP_TYPE": "",
+      "EXP_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 70366,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 1,
+      "EXP_TYPEDesc": "Operating expenditure",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 50206,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 111,
+      "EXP_TYPEDesc": "Personal emoluments",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 18855,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 112,
+      "EXP_TYPEDesc": "Personnel related expenses (excluding pensions)",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 1803,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 113,
+      "EXP_TYPEDesc": "Pensions",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 1949,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 114,
+      "EXP_TYPEDesc": "Departmental expenses",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 3850,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 115,
+      "EXP_TYPEDesc": "Other charges - General Revenue Account",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 8402,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 116,
+      "EXP_TYPEDesc": "Other charges - Land Fund",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 117,
+      "EXP_TYPEDesc": "Subventions",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 14218,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 131,
+      "EXP_TYPEDesc": "General Revenue Account",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 1129,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 132,
+      "EXP_TYPEDesc": "Land Fund",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 2,
+      "EXP_TYPEDesc": "Capital expenditure",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 20160,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 21,
+      "EXP_TYPEDesc": "Plant, Equipment and Works",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 543,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 22,
+      "EXP_TYPEDesc": "Subventions",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 213,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 241,
+      "EXP_TYPEDesc": "Capital Works Reserve Fund",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 16627,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 242,
+      "EXP_TYPEDesc": "Capital Investment Fund",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 2777,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 243,
+      "EXP_TYPEDesc": "Loan Fund",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 245,
+      "EXP_TYPEDesc": "Disaster Relief Fund",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 246,
+      "EXP_TYPEDesc": "Innovation and Technology Fund",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 247,
+      "EXP_TYPEDesc": "Lotteries Fund",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": "",
+      "EXP_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 753220,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 1,
+      "EXP_TYPEDesc": "Operating expenditure",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 596713,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 111,
+      "EXP_TYPEDesc": "Personal emoluments",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 97637,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 112,
+      "EXP_TYPEDesc": "Personnel related expenses (excluding pensions)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 14840,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 113,
+      "EXP_TYPEDesc": "Pensions",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 49962,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 114,
+      "EXP_TYPEDesc": "Departmental expenses",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 57059,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 115,
+      "EXP_TYPEDesc": "Other charges - General Revenue Account",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 119806,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 116,
+      "EXP_TYPEDesc": "Other charges - Land Fund",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 117,
+      "EXP_TYPEDesc": "Subventions",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 220827,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 131,
+      "EXP_TYPEDesc": "General Revenue Account",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 36568,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 132,
+      "EXP_TYPEDesc": "Land Fund",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 12,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 2,
+      "EXP_TYPEDesc": "Capital expenditure",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 156507,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 21,
+      "EXP_TYPEDesc": "Plant, Equipment and Works",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 4461,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 22,
+      "EXP_TYPEDesc": "Subventions",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 3674,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 241,
+      "EXP_TYPEDesc": "Capital Works Reserve Fund",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 129962,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 242,
+      "EXP_TYPEDesc": "Capital Investment Fund",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 5367,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 243,
+      "EXP_TYPEDesc": "Loan Fund",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 2474,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 245,
+      "EXP_TYPEDesc": "Disaster Relief Fund",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 84,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 246,
+      "EXP_TYPEDesc": "Innovation and Technology Fund",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 8686,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 247,
+      "EXP_TYPEDesc": "Lotteries Fund",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "HK$ million",
+      "figure": 1799,
+      "sd_value": ""
+    }
+  ]
+}

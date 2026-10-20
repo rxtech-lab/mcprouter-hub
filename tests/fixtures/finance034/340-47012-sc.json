@@ -1,0 +1,425 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=340-47012&api_popup=1"
+    },
+    "title": "政府开支（一般收入帐目及各基金）",
+    "tablenote": [
+      "财政年度由4月1日至3月31日。",
+      "数字不包括政府债券本金的偿还款项（已作出调整）。「非经营开支总计」及「政府开支总额」已作出相应修订。",
+      "- 不适用"
+    ],
+    "source": "政府总部财经事务及库务局  如欲获取更多资料，请浏览政府总部财经事务及库务局网站 (www.fstb.gov.hk)。  (查询电话：2810 3658   查询电邮：h_div@fstb.gov.hk)",
+    "count": {
+      "noOfRecords": 40,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.024217
+    }
+  },
+  "dataSet": [
+    {
+      "EXP_TYPE": "",
+      "EXP_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 70366,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 1,
+      "EXP_TYPEDesc": "经营开支",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 50206,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 111,
+      "EXP_TYPEDesc": "个人薪酬",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 18855,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 112,
+      "EXP_TYPEDesc": "与员工有关连的开支（不包括退休金）",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 1803,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 113,
+      "EXP_TYPEDesc": "退休金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 1949,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 114,
+      "EXP_TYPEDesc": "部门开支",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 3850,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 115,
+      "EXP_TYPEDesc": "其他费用 - 政府一般收入帐目",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 8402,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 116,
+      "EXP_TYPEDesc": "其他费用 - 土地基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 117,
+      "EXP_TYPEDesc": "资助金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 14218,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 131,
+      "EXP_TYPEDesc": "政府一般收入帐目",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 1129,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 132,
+      "EXP_TYPEDesc": "土地基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 2,
+      "EXP_TYPEDesc": "非经营开支",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 20160,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 21,
+      "EXP_TYPEDesc": "机器、设备及工程",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 543,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 22,
+      "EXP_TYPEDesc": "资助金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 213,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 241,
+      "EXP_TYPEDesc": "基本工程储备基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 16627,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 242,
+      "EXP_TYPEDesc": "资本投资基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 2777,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 243,
+      "EXP_TYPEDesc": "贷款基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 245,
+      "EXP_TYPEDesc": "赈灾基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 246,
+      "EXP_TYPEDesc": "创新及科技基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": 247,
+      "EXP_TYPEDesc": "奖券基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "EXP_TYPE": "",
+      "EXP_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 753220,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 1,
+      "EXP_TYPEDesc": "经营开支",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 596713,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 111,
+      "EXP_TYPEDesc": "个人薪酬",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 97637,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 112,
+      "EXP_TYPEDesc": "与员工有关连的开支（不包括退休金）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 14840,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 113,
+      "EXP_TYPEDesc": "退休金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 49962,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 114,
+      "EXP_TYPEDesc": "部门开支",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 57059,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 115,
+      "EXP_TYPEDesc": "其他费用 - 政府一般收入帐目",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 119806,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 116,
+      "EXP_TYPEDesc": "其他费用 - 土地基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 117,
+      "EXP_TYPEDesc": "资助金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 220827,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 131,
+      "EXP_TYPEDesc": "政府一般收入帐目",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 36568,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 132,
+      "EXP_TYPEDesc": "土地基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 12,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 2,
+      "EXP_TYPEDesc": "非经营开支",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 156507,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 21,
+      "EXP_TYPEDesc": "机器、设备及工程",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 4461,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 22,
+      "EXP_TYPEDesc": "资助金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 3674,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 241,
+      "EXP_TYPEDesc": "基本工程储备基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 129962,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 242,
+      "EXP_TYPEDesc": "资本投资基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 5367,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 243,
+      "EXP_TYPEDesc": "贷款基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 2474,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 245,
+      "EXP_TYPEDesc": "赈灾基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 84,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 246,
+      "EXP_TYPEDesc": "创新及科技基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 8686,
+      "sd_value": ""
+    },
+    {
+      "EXP_TYPE": 247,
+      "EXP_TYPEDesc": "奖券基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_EXP",
+      "svDesc": "百万港元",
+      "figure": 1799,
+      "sd_value": ""
+    }
+  ]
+}

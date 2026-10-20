@@ -1,3 +1,4 @@
+import { governmentCases } from "./finance034-cases";
 import { marketsCases } from "./finance033-cases";
 import { migrate } from "drizzle-orm/libsql/migrator";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
@@ -201,6 +202,7 @@ const cases: Case[] = [
   ...externalCases,
   ...investmentCases,
   ...marketsCases,
+  ...governmentCases,
   // citybus
   {
     tool: "citybus_routes",

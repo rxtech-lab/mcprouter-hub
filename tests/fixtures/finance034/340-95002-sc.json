@@ -1,0 +1,53 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=340-95002&api_popup=1"
+    },
+    "title": "香港金融管理局发行的外汇基金票据及债券平均每日成交量",
+    "tablenote": [],
+    "source": "香港金融管理局  如欲获取更多资料，请浏览香港金融管理局网站(www.hkma.gov.hk/chi)。  (查询电话：2878 8222  查询电邮：publicenquiry@hkma.gov.hk)",
+    "count": {
+      "noOfRecords": 4,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.005952
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2010",
+      "sv": "ADT_EXFBN",
+      "svDesc": "十亿港元",
+      "figure": 372.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201003",
+      "sv": "ADT_EXFBN",
+      "svDesc": "十亿港元",
+      "figure": 297.1,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ADT_EXFBN",
+      "svDesc": "十亿港元",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ADT_EXFBN",
+      "svDesc": "十亿港元",
+      "figure": 18.4,
+      "sd_value": ""
+    }
+  ]
+}

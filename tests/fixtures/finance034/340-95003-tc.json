@@ -1,0 +1,1387 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=340-95003&api_popup=1"
+    },
+    "title": "在香港交易所上市的公司數目、總市值、所有上市證券平均每日成交金額、新證券發行數目及新證券發行集資金額",
+    "tablenote": [
+      "市場成交金額數值已對遲報及反駁交易作出調整。",
+      "包括債券及股本認股權證。",
+      "包括債券、單位信託基金／互惠基金、衍生認股權證、股本認股權證、牛熊證及股票掛鈎票據。",
+      "主板數字包括GEM轉板上市公司。",
+      "[-§25] 少於50萬元"
+    ],
+    "source": "香港交易及結算所有限公司  (查詢電話：2840 3895  查詢電郵：info@hkex.com.hk)",
+    "count": {
+      "noOfRecords": 136,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.0744
+    }
+  },
+  "dataSet": [
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 169,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 35,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 134,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 1244,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 128,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 1116,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 174,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 40,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 134,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 1158,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 116,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 1042,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 312,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 296,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 2374,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 417,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 1957,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 305,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 290,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 2443,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 493,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "數目",
+      "figure": 1950,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 134.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 20.2,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 114.5,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 20942.3,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 5210.3,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 15732,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 134.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 33.3,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 101.4,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 17920.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 4577,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 13343.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 72.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 69.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 47319.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 9847.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 37471.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 67.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 64.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 43256.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 10737,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "其他",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "十億港元",
+      "figure": 32519.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 537,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 68,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 469,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "[-§25]"
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 68580,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 18879,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 30429,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 19272,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 516,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 82,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 434,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "[-§25]"
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 64243,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 19248,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 28656,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 16340,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 141,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 136,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 249679,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 51904,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 142022,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 55752,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 116,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 113,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "[-§25]"
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 289416,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 77644,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 141468,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "百萬港元",
+      "figure": 70304,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 656,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 649,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 1280965,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 138456,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 310372,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 832137,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 244442,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 33962,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 210480,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 2762399,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 193504,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 93332,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 2475563,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 609601,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H 股",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 97518,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "其他股票",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 4521,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "百萬港元",
+      "figure": 507562,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-ALL_EQ",
+      "SECURITIES_MARKETDesc": "所有股票",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 14551,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-ALL_EQ",
+      "SECURITIES_MARKETDesc": "所有股票",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 107,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 14444,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-ALL_EQ",
+      "SECURITIES_MARKETDesc": "所有股票",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 3576,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-ALL_EQ",
+      "SECURITIES_MARKETDesc": "所有股票",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 3563,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-ALL_EQ",
+      "SECURITIES_MARKETDesc": "所有股票",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 42208,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-ALL_EQ",
+      "SECURITIES_MARKETDesc": "所有股票",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 118,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 42090,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-ALL_EQ",
+      "SECURITIES_MARKETDesc": "所有股票",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "主板",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 10018,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-ALL_EQ",
+      "SECURITIES_MARKETDesc": "所有股票",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 47,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "其他上市證券",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "數目",
+      "figure": 9971,
+      "sd_value": ""
+    }
+  ]
+}

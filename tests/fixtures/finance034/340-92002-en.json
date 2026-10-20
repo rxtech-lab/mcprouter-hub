@@ -1,0 +1,149 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=340-92002&api_popup=1"
+    },
+    "title": "Silver trading prices",
+    "tablenote": [],
+    "source": "Hong Kong Gold Exchange  For further information, please visit the website of the Hong Kong Gold Exchange (www.hkgx.com.hk).  (Enquiry telephone no.: 2660 2550 / 2544 1945   Enquiry e-mail: info@hkgx.com.hk)",
+    "count": {
+      "noOfRecords": 16,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.014614
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2023",
+      "sv": "SILVER_CLOSE_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 1860,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202301",
+      "sv": "SILVER_CLOSE_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 1852,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SILVER_CLOSE_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 5681,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202609",
+      "sv": "SILVER_CLOSE_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 4791,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2023",
+      "sv": "SILVER_HIGH_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 2040,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202301",
+      "sv": "SILVER_HIGH_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 1906,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SILVER_HIGH_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 6185,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202609",
+      "sv": "SILVER_HIGH_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 5292,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2023",
+      "sv": "SILVER_LOW_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 1563,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202301",
+      "sv": "SILVER_LOW_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 1825,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SILVER_LOW_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 2271,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202609",
+      "sv": "SILVER_LOW_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 4756,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2023",
+      "sv": "SILVER_OPEN_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 1900,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202301",
+      "sv": "SILVER_OPEN_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 1900,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SILVER_OPEN_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 2271,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202609",
+      "sv": "SILVER_OPEN_P",
+      "svDesc": "(HK$/10 oz.)",
+      "figure": 5218,
+      "sd_value": ""
+    }
+  ]
+}

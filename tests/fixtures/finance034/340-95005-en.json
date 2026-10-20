@@ -1,0 +1,407 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=340-95005&api_popup=1"
+    },
+    "title": "Trading value of Shanghai-Hong Kong / Shenzhen-Hong Kong Stock Connect",
+    "tablenote": [
+      "- Not applicable"
+    ],
+    "source": "Hong Kong Exchanges and Clearing Limited  (Enquiry telephone no.: 2840 3895  Enquiry e-mail: info@hkex.com.hk)",
+    "count": {
+      "noOfRecords": 48,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:12+00:00",
+      "durationSeconds": 0.025308
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "BUY_VALUE_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 19.6,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "BUY_VALUE_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 19.6,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BUY_VALUE_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 9308.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BUY_VALUE_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 2300.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "SELL_VALUE_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "SELL_VALUE_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SELL_VALUE_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 8507.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SELL_VALUE_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 2122.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "AVG_DAILY_BUY_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 0.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "AVG_DAILY_BUY_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 0.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_DAILY_BUY_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 39.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_DAILY_BUY_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 40.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "AVG_DAILY_SELL_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 0.2,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "AVG_DAILY_SELL_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 0.2,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_DAILY_SELL_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 35.9,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_DAILY_SELL_SSE",
+      "svDesc": "HK$ billion",
+      "figure": 37.2,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "TURNOVER_SSE",
+      "svDesc": "RMB billion",
+      "figure": 167.5,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "TURNOVER_SSE",
+      "svDesc": "RMB billion",
+      "figure": 167.5,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TURNOVER_SSE",
+      "svDesc": "RMB billion",
+      "figure": 23937.6,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TURNOVER_SSE",
+      "svDesc": "RMB billion",
+      "figure": 9438.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "AVG_DAILY_TURNOVER_SSE",
+      "svDesc": "RMB billion",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "AVG_DAILY_TURNOVER_SSE",
+      "svDesc": "RMB billion",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_DAILY_TURNOVER_SSE",
+      "svDesc": "RMB billion",
+      "figure": 101,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_DAILY_TURNOVER_SSE",
+      "svDesc": "RMB billion",
+      "figure": 165.6,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "BUY_VALUE_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "BUY_VALUE_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BUY_VALUE_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": 5741.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BUY_VALUE_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": 1266,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "SELL_VALUE_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "SELL_VALUE_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SELL_VALUE_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": 5137.5,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SELL_VALUE_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": 1363.8,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "AVG_DAILY_BUY_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "AVG_DAILY_BUY_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_DAILY_BUY_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": 24.2,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_DAILY_BUY_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": 22.2,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "AVG_DAILY_SELL_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "AVG_DAILY_SELL_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_DAILY_SELL_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": 21.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_DAILY_SELL_SZSE",
+      "svDesc": "HK$ billion",
+      "figure": 23.9,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "TURNOVER_SZSE",
+      "svDesc": "RMB billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "TURNOVER_SZSE",
+      "svDesc": "RMB billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TURNOVER_SZSE",
+      "svDesc": "RMB billion",
+      "figure": 26395.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TURNOVER_SZSE",
+      "svDesc": "RMB billion",
+      "figure": 11431,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2014",
+      "sv": "AVG_DAILY_TURNOVER_SZSE",
+      "svDesc": "RMB billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "201412",
+      "sv": "AVG_DAILY_TURNOVER_SZSE",
+      "svDesc": "RMB billion",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_DAILY_TURNOVER_SZSE",
+      "svDesc": "RMB billion",
+      "figure": 111.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_DAILY_TURNOVER_SZSE",
+      "svDesc": "RMB billion",
+      "figure": 200.5,
+      "sd_value": ""
+    }
+  ]
+}

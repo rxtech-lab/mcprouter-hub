@@ -1,0 +1,85 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=340-95006&api_popup=1"
+    },
+    "title": "Average daily turnover of 99 Tael Gold and Loco London Gold in the Hong Kong Gold Exchange",
+    "tablenote": [],
+    "source": "Hong Kong Gold Exchange  (Enquiry telephone no.: 2660 2550 / 2544 1945  Enquiry e-mail: info@hkgx.com.hk)",
+    "count": {
+      "noOfRecords": 8,
+      "started": "2026-10-20T23:02:12+00:00",
+      "finished": "2026-10-20T23:02:12+00:00",
+      "durationSeconds": 0.009286
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2010",
+      "sv": "ADT_CGSE",
+      "svDesc": "HK$ million",
+      "figure": 102,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201003",
+      "sv": "ADT_CGSE",
+      "svDesc": "HK$ million",
+      "figure": 78,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ADT_CGSE",
+      "svDesc": "HK$ million",
+      "figure": 2925,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ADT_CGSE",
+      "svDesc": "HK$ million",
+      "figure": 4216,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2010",
+      "sv": "ADT_LLG",
+      "svDesc": "US$ million",
+      "figure": 3232,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201003",
+      "sv": "ADT_LLG",
+      "svDesc": "US$ million",
+      "figure": 1924,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ADT_LLG",
+      "svDesc": "US$ million",
+      "figure": 8274,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ADT_LLG",
+      "svDesc": "US$ million",
+      "figure": 13319,
+      "sd_value": ""
+    }
+  ]
+}

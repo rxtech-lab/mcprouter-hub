@@ -1,0 +1,193 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=340-47002&api_popup=1"
+    },
+    "title": "Government revenue and expenditure under the General Revenue Account analysed by quarter",
+    "tablenote": [
+      "r Revised figure"
+    ],
+    "source": "Financial Services and the Treasury Bureau, Government Secretariat  For further information, please visit the website of the Financial Services and the Treasury Bureau (www.fstb.gov.hk).  (Enquiry telephone no.: 2810 3658   Enquiry e-mail : h_div@fstb.gov.hk)",
+    "count": {
+      "noOfRecords": 17,
+      "started": "2026-10-20T23:01:51+00:00",
+      "finished": "2026-10-20T23:01:51+00:00",
+      "durationSeconds": 0.014531
+    }
+  },
+  "dataSet": [
+    {
+      "TYPE_GRA": "REV_1",
+      "TYPE_GRADesc": "Direct taxes",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 16509,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_2",
+      "TYPE_GRADesc": "Indirect taxes",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 41108,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_3",
+      "TYPE_GRADesc": "Other revenue",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 9723,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_4",
+      "TYPE_GRADesc": "Transfers from Funds",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_5",
+      "TYPE_GRADesc": "Total revenue",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 67340,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_2",
+      "TYPE_GRADesc": "Indirect taxes",
+      "freq": "Q",
+      "period": "202603",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 53355,
+      "sd_value": "r"
+    },
+    {
+      "TYPE_GRA": "REV_1",
+      "TYPE_GRADesc": "Direct taxes",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 17487,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_2",
+      "TYPE_GRADesc": "Indirect taxes",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 51802,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_3",
+      "TYPE_GRADesc": "Other revenue",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 15126,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_4",
+      "TYPE_GRADesc": "Transfers from Funds",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_5",
+      "TYPE_GRADesc": "Total revenue",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "HK$ million",
+      "figure": 84415,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_1",
+      "TYPE_GRADesc": "Actual expenditure during the period",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "EXP_GRA",
+      "svDesc": "HK$ million",
+      "figure": 110062,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_2",
+      "TYPE_GRADesc": "Transfers to Funds",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "EXP_GRA",
+      "svDesc": "HK$ million",
+      "figure": 6074,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_8",
+      "TYPE_GRADesc": "Total expenditure on General Revenue Account",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "EXP_GRA",
+      "svDesc": "HK$ million",
+      "figure": 116136,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_1",
+      "TYPE_GRADesc": "Actual expenditure during the period",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "EXP_GRA",
+      "svDesc": "HK$ million",
+      "figure": 151446,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_2",
+      "TYPE_GRADesc": "Transfers to Funds",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "EXP_GRA",
+      "svDesc": "HK$ million",
+      "figure": 63,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_8",
+      "TYPE_GRADesc": "Total expenditure on General Revenue Account",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "EXP_GRA",
+      "svDesc": "HK$ million",
+      "figure": 151509,
+      "sd_value": ""
+    }
+  ]
+}
