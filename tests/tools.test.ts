@@ -10,6 +10,7 @@ import { transportCases } from "./transport003-cases";
 import { financeCases } from "./finance028-cases";
 import { expenditureCases } from "./finance029-cases";
 import { accountsCases } from "./finance030-cases";
+import { externalCases } from "./finance031-cases";
 
 /**
  * Runs every generated MCP tool against a stubbed upstream: checks the HTTP
@@ -195,6 +196,7 @@ const cases: Case[] = [
   ...financeCases,
   ...expenditureCases,
   ...accountsCases,
+  ...externalCases,
   // citybus
   {
     tool: "citybus_routes",
