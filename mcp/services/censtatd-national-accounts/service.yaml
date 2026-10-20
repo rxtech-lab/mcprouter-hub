@@ -1,0 +1,897 @@
+id: censtatd-national-accounts
+title: Hong Kong GDP by Activity & National Accounts
+description: Official C&SD Finance tables for services trade in chained dollars, GDP by economic activity,
+  production and income accounts, savings, net lending, real domestic income and national income per capita.
+apis:
+  - API-0541
+  - API-0542
+  - API-0543
+  - API-0544
+  - API-0545
+  - API-0546
+  - API-0547
+  - API-0548
+  - API-0549
+  - API-0550
+datasets:
+  - hk-censtatd-tablechart-310-33042
+  - hk-censtatd-tablechart-310-34101
+  - hk-censtatd-tablechart-310-34102
+  - hk-censtatd-tablechart-310-34201
+  - hk-censtatd-tablechart-310-34401
+  - hk-censtatd-tablechart-310-34402
+  - hk-censtatd-tablechart-310-34403
+  - hk-censtatd-tablechart-310-34501
+  - hk-censtatd-tablechart-310-35091
+  - hk-censtatd-tablechart-310-36201
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: services_trade_components_chained
+    title: Exports and imports of services by service component in chained (2024) dollars (310-33042)
+    description: "Exports and imports of services by service component in chained (2024) dollars. Official C&SD
+      Table 310-33042. Newest observations first; page using nextOffset. Preserve source figures, units and
+      revision flags. Quarter codes end in 03, 06, 09 or 12. Components include overlapping totals and
+      children; do not sum them. Chained-dollar components are non-additive. "
+    path: /get.php
+    query:
+      id: 310-33042
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - CON
+      component:
+        type: string
+        in: local
+        description: GDP_COMPONENT. TOTAL aliases an empty source code or a table without components. FINS_XS =
+          Financial services; MANU_MS = Manufacturing services; MS = Imports of services; OS_FINS_MS =
+          Financial services; OS_INS_MS = Insurance and pension services; OS_INS_XS = Insurance and pension
+          services; OS_MS = Other services; OS_OTH_MS = Others; OS_OTH_XS = Others; OS_XS = Other services;
+          TRANS_MS = Transport; TRANS_XS = Transport; TRA_MS = Travel; TRA_XS = Travel; XS = Exports of
+          services
+        enum:
+          - FINS_XS
+          - MANU_MS
+          - MS
+          - OS_FINS_MS
+          - OS_INS_MS
+          - OS_INS_XS
+          - OS_MS
+          - OS_OTH_MS
+          - OS_OTH_XS
+          - OS_XS
+          - TRANS_MS
+          - TRANS_XS
+          - TRA_MS
+          - TRA_XS
+          - XS
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+          - yoy
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: gdp_activity_current
+    title: Gross Domestic Product (GDP) by economic activity at current prices (310-34101)
+    description: "Gross Domestic Product (GDP) by economic activity at current prices. Official C&SD Table
+      310-34101. Newest observations first; page using nextOffset. Preserve source figures, units and revision
+      flags. Annual observations only. Components include overlapping totals and children; do not sum them.
+      share means percent contribution to GDP, not growth contribution. "
+    path: /get.php
+    query:
+      id: 310-34101
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - BASICGDPP
+      component:
+        type: string
+        in: local
+        description: ACTIVITY. TOTAL aliases an empty source code or a table without components. SECT_AB =
+          Agriculture, fishing, mining and quarrying; SECT_C = Manufacturing; SECT_DE = Electricity, gas and
+          water supply, and waste management; SECT_F = Construction; SECT_G = Import/export, wholesale and
+          retail trades; SECT_G1 = Import and export trade; SECT_G2 = Wholesale and retail trades; SECT_G21 =
+          Wholesale; SECT_G22 = Retail trade; SECT_H = Transportation, storage, postal and courier services;
+          SECT_H1 = Transportation and storage; SECT_H11 = Land transport; SECT_H12 = Water transport;
+          SECT_H13 = Air transport; SECT_H14 = Warehousing and other transportation services; SECT_H2 = Postal
+          and courier services; SECT_I = Accommodation and food services; SECT_I1 = Accommodation services;
+          SECT_I2 = Food and beverage services; SECT_J = Information and communications; SECT_J1 =
+          Telecommunications; SECT_J2 = Other information and communications services; SECT_K = Financing and
+          insurance; SECT_K1 = Financing; SECT_K2 = Insurance; SECT_L = Real estate; SECT_LMN = Real estate,
+          professional and business services; SECT_MN = Professional and business services; SECT_O = Public
+          administration; SECT_OWN = Ownership of premises; SECT_O_TO_T = Public administration, social and
+          personal services; SECT_P_TO_T = Social and personal services; SERVICES = Services; TOTAL = Total
+        enum:
+          - SECT_AB
+          - SECT_C
+          - SECT_DE
+          - SECT_F
+          - SECT_G
+          - SECT_G1
+          - SECT_G2
+          - SECT_G21
+          - SECT_G22
+          - SECT_H
+          - SECT_H1
+          - SECT_H11
+          - SECT_H12
+          - SECT_H13
+          - SECT_H14
+          - SECT_H2
+          - SECT_I
+          - SECT_I1
+          - SECT_I2
+          - SECT_J
+          - SECT_J1
+          - SECT_J2
+          - SECT_K
+          - SECT_K1
+          - SECT_K2
+          - SECT_L
+          - SECT_LMN
+          - SECT_MN
+          - SECT_O
+          - SECT_OWN
+          - SECT_O_TO_T
+          - SECT_P_TO_T
+          - SERVICES
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+          - yoy
+          - share
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: gdp_production_current
+    title: Gross Domestic Product (GDP) at current prices (310-34102)
+    description: "Gross Domestic Product (GDP) at current prices. Official C&SD Table 310-34102. Newest
+      observations first; page using nextOffset. Preserve source figures, units and revision flags. Annual
+      observations only. Statistical discrepancy is a percent of GDP, not HK$ million. "
+    path: /get.php
+    query:
+      id: 310-34102
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - BASICGDPP
+          - CUR
+          - CURTAXES_ON_PRODUCTS
+          - STAT_DISCREPANCY
+      component:
+        type: string
+        in: local
+        description: No source component dimension. TOTAL aliases an empty source code or a table without components.
+          TOTAL = Whole table; select an indicator
+        enum:
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+          - ratio
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: activity_output_factor_income
+    title: Gross output, intermediate consumption, value added and factor income by economic activity at current
+      prices (310-34201)
+    description: "Gross output, intermediate consumption, value added and factor income by economic activity at
+      current prices. Official C&SD Table 310-34201. Newest observations first; page using nextOffset.
+      Preserve source figures, units and revision flags. Annual observations only. Components include
+      overlapping totals and children; do not sum them. "
+    path: /get.php
+    query:
+      id: 310-34201
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - BASICGDPP
+          - CURCE
+          - CURGO
+          - CURGOS
+          - CURIC
+          - CURTAXES_ON_PRODUCTION
+      component:
+        type: string
+        in: local
+        description: ACTIVITY. TOTAL aliases an empty source code or a table without components. SECT_AB =
+          Agriculture, fishing, mining and quarrying; SECT_C = Manufacturing; SECT_DE = Electricity, gas and
+          water supply, and waste management; SECT_F = Construction; SECT_G = Import/export, wholesale and
+          retail trades; SECT_H = Transportation, storage, postal and courier services; SECT_I = Accommodation
+          and food services; SECT_J = Information and communications; SECT_K = Financing and insurance;
+          SECT_LMN = Real estate, professional and business services; SECT_OWN = Ownership of premises;
+          SECT_O_TO_T = Public administration, social and personal services; SERVICES = Services; TOTAL =
+          Total
+        enum:
+          - SECT_AB
+          - SECT_C
+          - SECT_DE
+          - SECT_F
+          - SECT_G
+          - SECT_H
+          - SECT_I
+          - SECT_J
+          - SECT_K
+          - SECT_LMN
+          - SECT_OWN
+          - SECT_O_TO_T
+          - SERVICES
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: production_account
+    title: "Sequence of Accounts: production account at current prices (310-34401)"
+    description: "Sequence of Accounts: production account at current prices. Official C&SD Table 310-34401.
+      Newest observations first; page using nextOffset. Preserve source figures, units and revision flags.
+      Annual observations only. Components include overlapping totals and children; do not sum them. "
+    path: /get.php
+    query:
+      id: 310-34401
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - BASICGDPP
+          - CURGO
+          - CURIC
+      component:
+        type: string
+        in: local
+        description: INS_SECTOR. TOTAL aliases an empty source code or a table without components. GDPP_FIN_CORP =
+          Financial corporations; GDPP_GOV = General government; GDPP_HH = Households; GDPP_OTH_CORP =
+          Non-financial corporations; TOTAL = Total
+        enum:
+          - GDPP_FIN_CORP
+          - GDPP_GOV
+          - GDPP_HH
+          - GDPP_OTH_CORP
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: generation_of_income_account
+    title: "Sequence of Accounts: generation of income account at current prices (310-34402)"
+    description: "Sequence of Accounts: generation of income account at current prices. Official C&SD Table
+      310-34402. Newest observations first; page using nextOffset. Preserve source figures, units and revision
+      flags. Annual observations only. Components include overlapping totals and children; do not sum them. "
+    path: /get.php
+    query:
+      id: 310-34402
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - BASICGDPP
+          - CURCE
+          - CURGOS
+          - CURTAXES_ON_PRODUCTION
+      component:
+        type: string
+        in: local
+        description: INS_SECTOR. TOTAL aliases an empty source code or a table without components. GDPP_FIN_CORP =
+          Financial corporations; GDPP_GOV = General government; GDPP_HH = Households; GDPP_OTH_CORP =
+          Non-financial corporations; TOTAL = Total
+        enum:
+          - GDPP_FIN_CORP
+          - GDPP_GOV
+          - GDPP_HH
+          - GDPP_OTH_CORP
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: national_accounts_aggregates
+    title: "Sequence of Accounts: relations among Gross Domestic Product (GDP), Gross National Income (GNI),
+      savings and net lending aggregates at current prices (310-34403)"
+    description: "Sequence of Accounts: relations among Gross Domestic Product (GDP), Gross National Income (GNI),
+      savings and net lending aggregates at current prices. Official C&SD Table 310-34403. Newest observations
+      first; page using nextOffset. Preserve source figures, units and revision flags. Annual observations
+      only. "
+    path: /get.php
+    query:
+      id: 310-34403
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - CUR
+          - CURCE
+          - CURGNI
+          - CURGOS
+          - CURTAXES_ON_PRODUCTION
+          - CURTAXES_ON_PRODUCTS
+          - GDPP_CIV
+          - GDPP_COL_CON
+          - GDPP_FCE
+          - GDPP_GDFCF
+          - GDPP_GSAVING
+          - GDPP_IND_CON
+          - GDPP_RWA_CPLN
+          - GDPP_RWA_CPLP
+          - GDPP_RWA_CPLR
+          - GDPP_RWA_NLNB
+          - GDPP_RWA_PSNCE
+          - GDPP_RWA_PSNOT
+          - GDPP_RWA_PSNPI
+          - GDPP_RWA_PSRCE
+          - GDPP_RWA_PSROT
+          - GDPP_RWA_PSRPI
+          - GDPP_RWA_PSUCE
+          - GDPP_RWA_PSUOT
+          - GDPP_RWA_PSUPI
+          - GNDI
+          - STAT_DISCREPANCY
+      component:
+        type: string
+        in: local
+        description: No source component dimension. TOTAL aliases an empty source code or a table without components.
+          TOTAL = Whole table; select an indicator
+        enum:
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: gdp_activity_chained
+    title: Gross Domestic Product (GDP) by economic activity in chained (2024) dollars (310-34501)
+    description: "Gross Domestic Product (GDP) by economic activity in chained (2024) dollars. Official C&SD Table
+      310-34501. Newest observations first; page using nextOffset. Preserve source figures, units and revision
+      flags. Quarter codes end in 03, 06, 09 or 12. Components include overlapping totals and children; do not
+      sum them. Chained-dollar components are non-additive. "
+    path: /get.php
+    query:
+      id: 310-34501
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - RGDPP
+      component:
+        type: string
+        in: local
+        description: ACTIVITY. TOTAL aliases an empty source code or a table without components. SECT_AB =
+          Agriculture, fishing, mining and quarrying; SECT_C = Manufacturing; SECT_DE = Electricity, gas and
+          water supply, and waste management; SECT_F = Construction; SECT_G = Import/export, wholesale and
+          retail trades; SECT_G1 = Import and export trade; SECT_G2 = Wholesale and retail trades; SECT_H =
+          Transportation, storage, postal and courier services; SECT_H1 = Transportation and storage; SECT_H2
+          = Postal and courier services; SECT_I = Accommodation and food services; SECT_J = Information and
+          communications; SECT_K = Financing and insurance; SECT_L = Real estate; SECT_LMN = Real estate,
+          professional and business services; SECT_MN = Professional and business services; SECT_OWN =
+          Ownership of premises; SECT_O_TO_T = Public administration, social and personal services; SERVICES =
+          Services; TAXES_ON_PRODUCT = Taxes on products
+        enum:
+          - SECT_AB
+          - SECT_C
+          - SECT_DE
+          - SECT_F
+          - SECT_G
+          - SECT_G1
+          - SECT_G2
+          - SECT_H
+          - SECT_H1
+          - SECT_H2
+          - SECT_I
+          - SECT_J
+          - SECT_K
+          - SECT_L
+          - SECT_LMN
+          - SECT_MN
+          - SECT_OWN
+          - SECT_O_TO_T
+          - SERVICES
+          - TAXES_ON_PRODUCT
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+          - yoy
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: real_gross_domestic_income
+    title: Real Gross Domestic Income (RGDI) in chained (2024) dollars (310-35091)
+    description: "Real Gross Domestic Income (RGDI) in chained (2024) dollars. Official C&SD Table 310-35091.
+      Newest observations first; page using nextOffset. Preserve source figures, units and revision flags.
+      Quarter codes end in 03, 06, 09 or 12. "
+    path: /get.php
+    query:
+      id: 310-35091
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - CONINCOME
+      component:
+        type: string
+        in: local
+        description: No source component dimension. TOTAL aliases an empty source code or a table without components.
+          TOTAL = Whole table; select an indicator
+        enum:
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+          - yoy
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.
+  - name: gni_and_per_capita
+    title: Gross National Income (GNI), real Gross National Income (RGNI), per capita GNI and per capita RGNI
+      (310-36201)
+    description: "Gross National Income (GNI), real Gross National Income (RGNI), per capita GNI and per capita
+      RGNI. Official C&SD Table 310-36201. Newest observations first; page using nextOffset. Preserve source
+      figures, units and revision flags. Quarter codes end in 03, 06, 09 or 12. CURGNI and CURPGNI are nominal
+      GNI and per capita GNI; RGNI and PRGNI are real GNI and real per capita GNI. Per capita levels use HK$,
+      aggregate levels use HK$ million. "
+    path: /get.php
+    query:
+      id: 310-36201
+      full_series: 1
+    transform:
+      response: normalizeNationalAccounts
+    input:
+      freq:
+        type: string
+        in: local
+        description: "Observation frequency: Y annual, Q quarterly where available."
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year (matches all observations in that year), or an exact quarter where available
+          (202503 = Q1).
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Official C&SD statistical variable code; units remain in svDesc. Filter measure separately for
+          levels and changes.
+        enum:
+          - CURGNI
+          - CURPGNI
+          - PRGNI
+          - RGNI
+      component:
+        type: string
+        in: local
+        description: No source component dimension. TOTAL aliases an empty source code or a table without components.
+          TOTAL = Whole table; select an indicator
+        enum:
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: level = monetary amount (original svDesc distinguishes HK$ million and per capita HK$); yoy =
+          year-on-year percent change; share = percent contribution to GDP; ratio = statistical discrepancy as
+          percent of GDP.
+        enum:
+          - level
+          - yoy
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Observation offset after filtering; continue with nextOffset.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language for official title, component descriptions, units and notes.

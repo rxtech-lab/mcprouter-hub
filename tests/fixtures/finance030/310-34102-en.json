@@ -1,0 +1,98 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-34102&api_popup=1"
+    },
+    "title": "Gross Domestic Product (GDP) at current prices",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by economic activity in respect of a period are called \"preliminary figures\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the preliminary figures, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated.     For longer series of GDP at current market prices, please refer to Table 310-31001.",
+      "GDP at basic prices plus taxes on products plus statistical discrepancy is equal to GDP compiled using the expenditure approach.",
+      "Statistical discrepancy refers to the difference in values of current price GDP compiled using the expenditure and production approaches, as a result of the adoption of different data sources and estimation methods in the compilation processes.  It is expressed as a percentage to GDP at current market prices.",
+      "r Revised figure"
+    ],
+    "source": "National Income Section (2)1, Census and Statistics Department (Enquiry telephone no. : 3863 2743  Enquiry e-mail : gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 9,
+      "started": "2026-10-20T18:02:12+00:00",
+      "finished": "2026-10-20T18:02:12+00:00",
+      "durationSeconds": 0.005187
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 1337501,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 3186526,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1283035,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 3113485,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "STAT_DISCREPANCY",
+      "svDesc": "(%)",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "STAT_DISCREPANCY",
+      "svDesc": "(%)",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "STAT_DISCREPANCY",
+      "svDesc": "(%)",
+      "figure": -0.3,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTS",
+      "svDesc": "HK$ million",
+      "figure": 31231,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTS",
+      "svDesc": "HK$ million",
+      "figure": 83005,
+      "sd_value": "r"
+    }
+  ]
+}

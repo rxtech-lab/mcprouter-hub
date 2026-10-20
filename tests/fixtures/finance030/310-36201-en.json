@@ -1,0 +1,306 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-36201&api_popup=1"
+    },
+    "title": "Gross National Income (GNI), real Gross National Income (RGNI), per capita GNI and per capita RGNI",
+    "tablenote": [
+      "Figures in this table are the latest data released on 14 September 2026.     In Hong Kong, the first released GNI statistics in respect of a period are called “preliminary figures”.  When more data become available, the preliminary figures will be revised.  All those figures published subsequently, after the preliminary figures, are called “revised figures”.  These “revised figures” are still subject to further regular revision later on when more data are incorporated.  The figures are finalised when finalised data from all regular sources are incorporated.",
+      "r Revised figure",
+      "P Preliminary figure",
+      "- Not applicable"
+    ],
+    "source": "Balance of Payments Section (2)2, Census and Statistics Department (Enquiry telephone no. : 3863 2291  Enquiry e-mail : gni@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 35,
+      "started": "2026-10-20T18:02:13+00:00",
+      "finished": "2026-10-20T18:02:14+00:00",
+      "durationSeconds": 0.029117
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "1993",
+      "sv": "CURGNI",
+      "svDesc": "HK$ million",
+      "figure": 936211,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "199903",
+      "sv": "CURGNI",
+      "svDesc": "HK$ million",
+      "figure": 305701,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGNI",
+      "svDesc": "HK$ million",
+      "figure": 3503492,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CURGNI",
+      "svDesc": "HK$ million",
+      "figure": 3664292,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CURGNI",
+      "svDesc": "HK$ million",
+      "figure": 966062,
+      "sd_value": "P"
+    },
+    {
+      "freq": "Y",
+      "period": "1993",
+      "sv": "CURGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "1998",
+      "sv": "CURGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.8,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "199903",
+      "sv": "CURGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CURGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.6,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CURGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.9,
+      "sd_value": "P"
+    },
+    {
+      "freq": "Y",
+      "period": "1993",
+      "sv": "CURPGNI",
+      "svDesc": "HK$",
+      "figure": 158653,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "199903",
+      "sv": "CURPGNI",
+      "svDesc": "HK$",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "202403",
+      "sv": "CURPGNI",
+      "svDesc": "HK$",
+      "figure": "",
+      "sd_value": "-,r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CURPGNI",
+      "svDesc": "HK$",
+      "figure": 488644,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CURPGNI",
+      "svDesc": "HK$",
+      "figure": "",
+      "sd_value": "-,P"
+    },
+    {
+      "freq": "Y",
+      "period": "1993",
+      "sv": "CURPGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "199903",
+      "sv": "CURPGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CURPGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.9,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CURPGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-,P"
+    },
+    {
+      "freq": "Y",
+      "period": "1993",
+      "sv": "PRGNI",
+      "svDesc": "HK$",
+      "figure": 260278,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "199903",
+      "sv": "PRGNI",
+      "svDesc": "HK$",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "PRGNI",
+      "svDesc": "HK$",
+      "figure": 481446,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "PRGNI",
+      "svDesc": "HK$",
+      "figure": "",
+      "sd_value": "-,P"
+    },
+    {
+      "freq": "Y",
+      "period": "1993",
+      "sv": "PRGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "199903",
+      "sv": "PRGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "PRGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "PRGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-,P"
+    },
+    {
+      "freq": "Y",
+      "period": "1993",
+      "sv": "RGNI",
+      "svDesc": "HK$ million",
+      "figure": 1535898,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "199903",
+      "sv": "RGNI",
+      "svDesc": "HK$ million",
+      "figure": 405239,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGNI",
+      "svDesc": "HK$ million",
+      "figure": 3610315,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGNI",
+      "svDesc": "HK$ million",
+      "figure": 929179,
+      "sd_value": "P"
+    },
+    {
+      "freq": "Y",
+      "period": "1993",
+      "sv": "RGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Q",
+      "period": "199903",
+      "sv": "RGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGNI",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.3,
+      "sd_value": "P"
+    }
+  ]
+}

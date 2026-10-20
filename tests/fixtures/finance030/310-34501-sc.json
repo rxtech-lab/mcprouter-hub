@@ -1,0 +1,1646 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=310-34501&api_popup=1"
+    },
+    "title": "按经济活动划分的本地生产总值 - 以2024年环比物量计算",
+    "tablenote": [
+      "整体物量估计与其组成部分相加的总和可能存在差额。「不可相加性」是环比物量计算的一个技术属性。     在香港，首次公布的某一期间的按经济活动划分的本地生产总值数字称为「初步数字」。当获得更多数据后，这些数字会作出修订。继初步数字后公布的所有数字均称为「修订数字」。这些「修订数字」在纳入更多数据后，在日后仍会作出进一步定期修订。这例行修订符合国际一贯的做法，即尽早采用部分数据来编制和公布本地生产总值数字。一般而言，已采纳了全部定期资料来源所得的最终数据编制而成的数字，则为最终的数字。",
+      "r 修订数字",
+      "P 初步数字",
+      "[φ3] 数字代表增减少于 0.05%。"
+    ],
+    "source": "政府统计处国民收入统计组 (二) 一 (查询电话：3863 2743  查询电邮：gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 162,
+      "started": "2026-10-20T18:02:14+00:00",
+      "finished": "2026-10-20T18:02:14+00:00",
+      "durationSeconds": 0.150826
+    }
+  },
+  "dataSet": [
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 2361,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "制造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 42102,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 32370,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 99654,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 263450,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "进出口贸易",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 211155,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批发及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 61380,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 107553,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "运输及仓库",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 106440,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "邮政及速递服务",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 4270,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 63854,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 43071,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保险",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 221876,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地产",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 87122,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地产、专业及商用服务",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 185165,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "专业及商用服务",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 93810,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社会及个人服务",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 391790,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "楼宇业权",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 223574,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服务",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 1457393,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "TAXES_ON_PRODUCT",
+      "ACTIVITYDesc": "产品税",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 61260,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 648,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "制造",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 9382,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 6639,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 26839,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 56746,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "进出口贸易",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 44974,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批发及零售",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 14040,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 24655,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "运输及仓库",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 24446,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "邮政及速递服务",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 948,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 16404,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 9748,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保险",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 58397,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地产",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 21714,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地产、专业及商用服务",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 44608,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "专业及商用服务",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 21667,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社会及个人服务",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 91691,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "楼宇业权",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 54931,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服务",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 343847,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "TAXES_ON_PRODUCT",
+      "ACTIVITYDesc": "产品税",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 17854,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 1189,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 1136,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "制造",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 30730,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 34115,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 122054,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 569005,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "进出口贸易",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 492882,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批发及零售",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 76122,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 198065,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "运输及仓库",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 189599,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "邮政及速递服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 8466,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 61889,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 105510,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保险",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 856976,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地产",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 94301,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地产、专业及商用服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 254240,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "专业及商用服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 159937,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社会及个人服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 653426,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "楼宇业权",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 312468,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 3011579,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "TAXES_ON_PRODUCT",
+      "ACTIVITYDesc": "产品税",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 105019,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 304,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "制造",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 7893,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 9184,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 26694,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 140161,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "进出口贸易",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 123196,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批发及零售",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 16966,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 43066,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "运输及仓库",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 41190,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "邮政及速递服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 1875,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 14643,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 24357,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保险",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 231869,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地产",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 22170,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地产、专业及商用服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 60397,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "专业及商用服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 38227,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社会及个人服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 166405,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "楼宇业权",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 76384,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 757283,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "TAXES_ON_PRODUCT",
+      "ACTIVITYDesc": "产品税",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "百万港元",
+      "figure": 29760,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "制造",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -8.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -2.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "进出口贸易",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批发及零售",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "运输及仓库",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "邮政及速递服务",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -5.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -9.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 11.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保险",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地产",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地产、专业及商用服务",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "专业及商用服务",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社会及个人服务",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "楼宇业权",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服务",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "TAXES_ON_PRODUCT",
+      "ACTIVITYDesc": "产品税",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -7.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -7.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "制造",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -4.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -1.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 8.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "进出口贸易",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 8.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批发及零售",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 4.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "运输及仓库",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 6.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "邮政及速递服务",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 18.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保险",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -6.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地产",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -5.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地产、专业及商用服务",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "专业及商用服务",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 7.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社会及个人服务",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 6.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "楼宇业权",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服务",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "TAXES_ON_PRODUCT",
+      "ACTIVITYDesc": "产品税",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -10.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -4.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "制造",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -0.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -7.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 6.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "进出口贸易",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 6.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批发及零售",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "运输及仓库",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "邮政及速递服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -0.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.3,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保险",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地产",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -2.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地产、专业及商用服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -0.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "专业及商用服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社会及个人服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 2.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "楼宇业权",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.3,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "TAXES_ON_PRODUCT",
+      "ACTIVITYDesc": "产品税",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 26.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Q",
+      "period": "202512",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0,
+      "sd_value": "[φ3],r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "农业、渔业、采矿及采石",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -6,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "制造",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 2.3,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "电力、燃气和自来水供应及废弃物管理",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 2.5,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -17,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 12.8,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "进出口贸易",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 13.6,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批发及零售",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 7.5,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.1,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "运输及仓库",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.2,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "邮政及速递服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -2.9,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": -0.1,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 2.9,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保险",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 7.4,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地产",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 4.6,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地产、专业及商用服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 2.4,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "专业及商用服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.2,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社会及个人服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.9,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "楼宇业权",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.8,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 5.1,
+      "sd_value": "P"
+    },
+    {
+      "ACTIVITY": "TAXES_ON_PRODUCT",
+      "ACTIVITYDesc": "产品税",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "RGDPP",
+      "svDesc": "按年变动百分率",
+      "figure": 17.1,
+      "sd_value": "P"
+    }
+  ]
+}

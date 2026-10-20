@@ -1,0 +1,2076 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=310-34101&api_popup=1"
+    },
+    "title": "按經濟活動劃分的本地生產總值 - 以當時價格計算",
+    "tablenote": [
+      "在香港，首次公布的某一期間的按經濟活動劃分的本地生產總值數字稱為「初步數字」。當獲得更多數據後，這些數字會作出修訂。繼初步數字後公布的所有數字均稱為「修訂數字」。這些「修訂數字」在納入更多數據後，在日後仍會作出進一步定期修訂。這例行修訂符合國際一貫的做法，即盡早採用部分數據來編製和公布本地生產總值數字。一般而言，已採納了全部定期資料來源所得的最終數據編製而成的數字，則為最終的數字。     以上的統計數字是按「香港標準行業分類2.0版」編製。用戶可下載按「香港標準行業分類1.1版」編製的以往統計數字以作參考。",
+      "指以基本價格計算的名義本地生產總值。在展示以當時價格計算按經濟活動劃分的本地生產總值時，各經濟活動組別以基本價格計算的增加價值的總和，加上產品稅及統計差額，相等於按開支組成部分劃分的本地生產總值。有關產品稅及統計差額數列，請參閱表310-34102。",
+      "r 修訂數字",
+      "[-φ32] 數字代表少於0.05%。"
+    ],
+    "source": "政府統計處國民收入統計組 (二) 一 (查詢電話：3863 2743  查詢電郵：gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 205,
+      "started": "2026-10-20T18:02:12+00:00",
+      "finished": "2026-10-20T18:02:12+00:00",
+      "durationSeconds": 0.057022
+    }
+  },
+  "dataSet": [
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1283035,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1168,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 61399,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 37671,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 62532,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 276977,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "進出口貿易",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 234643,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 42334,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "批發",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 11986,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 30348,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 97598,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "運輸及倉庫",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 92125,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "陸路運輸",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 37771,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "水上運輸",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 24053,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "航空運輸",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 28542,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "貨倉及其他運輸服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1758,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 5473,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 37843,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "住宿服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 9779,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "餐飲服務 ",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 28064,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 42871,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "電訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 20944,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "其他資訊及通訊服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 21927,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 164195,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "金融",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 132429,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 31765,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地產",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 64438,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 118248,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 53810,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "公共行政",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 112027,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 243423,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 139111,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 131396,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1120265,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 3113485,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1189,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 29768,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 34294,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 132561,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 536260,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "進出口貿易",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 460968,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 75292,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "批發",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 14895,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 60396,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 191151,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "運輸及倉庫",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 182751,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "陸路運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 49524,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "水上運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 49604,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "航空運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 76329,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "貨倉及其他運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 7295,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 8400,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 62349,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "住宿服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 17930,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "餐飲服務 ",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 44419,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 104113,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "電訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 44738,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "其他資訊及通訊服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 59375,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 816222,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "金融",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 707772,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 108450,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地產",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 96982,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 254425,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 157442,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "公共行政",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 334668,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 639884,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 311269,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 305216,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 2915674,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 4.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 21.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "進出口貿易",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 18.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "批發",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 7.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "運輸及倉庫",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "陸路運輸",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "水上運輸",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "航空運輸",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "貨倉及其他運輸服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "住宿服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "餐飲服務 ",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "電訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "其他資訊及通訊服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 12.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "金融",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 10.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地產",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "公共行政",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 8.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 19,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 10.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 87.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0,
+      "sd_value": "[-φ32]"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 100,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0,
+      "sd_value": "[-φ32],r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 17.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "進出口貿易",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 14.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "批發",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 6.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "運輸及倉庫",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 5.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "陸路運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "水上運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "航空運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "貨倉及其他運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.3,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "住宿服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 0.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "餐飲服務 ",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 3.3,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "電訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "其他資訊及通訊服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 1.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 26.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "金融",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 22.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 3.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地產",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 3.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 8.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "公共行政",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 10.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 20.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 10,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 9.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "佔本地生產總值的百分比",
+      "figure": 93.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -12.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -7.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "進出口貿易",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 1.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批發及零售",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "批發",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 10.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "零售",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -2.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "運輸及倉庫",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -3.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "陸路運輸",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -0.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "水上運輸",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -2.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "航空運輸",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "貨倉及其他運輸服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -17.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "郵政及速遞服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -10.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "住宿服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -10.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "餐飲服務 ",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -8.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 3.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "電訊",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 12.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "其他資訊及通訊服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -4.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -6.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "金融",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -9.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "保險",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地產",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -10,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -5.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "專業及商用服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "公共行政",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 10.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "社會及個人服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 0.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 6.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 5.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 5.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "進出口貿易",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 7.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -6.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "批發",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -2.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 9.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "運輸及倉庫",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 10.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "陸路運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 9.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "水上運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 18.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "航空運輸",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "貨倉及其他運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 6.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -8.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "住宿服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 7.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "餐飲服務 ",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 0.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 2.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "電訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": -0.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "其他資訊及通訊服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 4.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 12.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "金融",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 13.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "地產",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 2.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "公共行政",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 4.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 4.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "按年變動百分率",
+      "figure": 7,
+      "sd_value": "r"
+    }
+  ]
+}

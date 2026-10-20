@@ -1,0 +1,98 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=310-34102&api_popup=1"
+    },
+    "title": "本地生產總值 - 以當時價格計算",
+    "tablenote": [
+      "在香港，首次公布的某一期間的按經濟活動劃分的本地生產總值數字稱為「初步數字」。當獲得更多數據後，這些數字會作出修訂。繼初步數字後公布的所有數字均稱為「修訂數字」。這些「修訂數字」在納入更多數據後，在日後仍會作出進一步定期修訂。這例行修訂符合國際一貫的做法，即盡早採用部分數據來編製和公布本地生產總值數字。一般而言，已採納了全部定期資料來源所得的最終數據編製而成的數字，則為最終的數字。     有關較長數列的以當時市價計算的本地生產總值，請參閱表310-31001。",
+      "以基本價格計算的本地生產總值，加上產品稅及統計差額，相等於按開支組成部分劃分的本地生產總值。",
+      "統計差額指以當時價格計算，以開支面編製的本地生產總值與以生產面編製的本地生產總值之間的差額。這差額是由於在編製過程中數據來源及估算方法有所不同而引致的。統計差額是以其佔當時市價計算的本地生產總值的百分比來表示。",
+      "r 修訂數字"
+    ],
+    "source": "政府統計處國民收入統計組 (二) 一 (查詢電話：3863 2743  查詢電郵：gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 9,
+      "started": "2026-10-20T18:02:12+00:00",
+      "finished": "2026-10-20T18:02:12+00:00",
+      "durationSeconds": 0.004714
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1337501,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 3186526,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1283035,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 3113485,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "STAT_DISCREPANCY",
+      "svDesc": "(%)",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "STAT_DISCREPANCY",
+      "svDesc": "(%)",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "STAT_DISCREPANCY",
+      "svDesc": "(%)",
+      "figure": -0.3,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTS",
+      "svDesc": "百萬港元",
+      "figure": 31231,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTS",
+      "svDesc": "百萬港元",
+      "figure": 83005,
+      "sd_value": "r"
+    }
+  ]
+}

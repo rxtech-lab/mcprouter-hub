@@ -1,0 +1,456 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=310-34403&api_popup=1"
+    },
+    "title": "帳戶序列:  本地生產總值、本地居民總收入、儲蓄和淨貸款總量之間的關係 - 以當時價格計算",
+    "tablenote": [
+      "由於數字經四捨五入，分項總和未必與總數相等。",
+      "r 修訂數字"
+    ],
+    "source": "政府統計處國民收入統計組 (二) 一 (查詢電話：3863 2743 查詢電郵：gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 54,
+      "started": "2026-10-20T18:02:13+00:00",
+      "finished": "2026-10-20T18:02:13+00:00",
+      "durationSeconds": 0.031995
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSNCE",
+      "svDesc": "百萬港元",
+      "figure": -699,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSNCE",
+      "svDesc": "百萬港元",
+      "figure": -4914,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSUCE",
+      "svDesc": "百萬港元",
+      "figure": 1056,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSUCE",
+      "svDesc": "百萬港元",
+      "figure": 3571,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSRCE",
+      "svDesc": "百萬港元",
+      "figure": 1755,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSRCE",
+      "svDesc": "百萬港元",
+      "figure": 8484,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSNPI",
+      "svDesc": "百萬港元",
+      "figure": 11444,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSNPI",
+      "svDesc": "百萬港元",
+      "figure": 321880,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSUPI",
+      "svDesc": "百萬港元",
+      "figure": 426027,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSUPI",
+      "svDesc": "百萬港元",
+      "figure": 2230499,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSRPI",
+      "svDesc": "百萬港元",
+      "figure": 414582,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSRPI",
+      "svDesc": "百萬港元",
+      "figure": 1908620,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGNI",
+      "svDesc": "百萬港元",
+      "figure": 1348246,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGNI",
+      "svDesc": "百萬港元",
+      "figure": 3503492,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSNOT",
+      "svDesc": "百萬港元",
+      "figure": -10922,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSNOT",
+      "svDesc": "百萬港元",
+      "figure": -21357,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSUOT",
+      "svDesc": "百萬港元",
+      "figure": 4193,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSUOT",
+      "svDesc": "百萬港元",
+      "figure": 20658,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_PSROT",
+      "svDesc": "百萬港元",
+      "figure": 15115,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_PSROT",
+      "svDesc": "百萬港元",
+      "figure": 42015,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GNDI",
+      "svDesc": "百萬港元",
+      "figure": 1337324,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GNDI",
+      "svDesc": "百萬港元",
+      "figure": 3482135,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_FCE",
+      "svDesc": "百萬港元",
+      "figure": 909617,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_FCE",
+      "svDesc": "百萬港元",
+      "figure": 2551612,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_IND_CON",
+      "svDesc": "百萬港元",
+      "figure": 833021,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_IND_CON",
+      "svDesc": "百萬港元",
+      "figure": 2307919,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_COL_CON",
+      "svDesc": "百萬港元",
+      "figure": 76596,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_COL_CON",
+      "svDesc": "百萬港元",
+      "figure": 243693,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_GSAVING",
+      "svDesc": "百萬港元",
+      "figure": 427707,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_GSAVING",
+      "svDesc": "百萬港元",
+      "figure": 930523,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_CPLN",
+      "svDesc": "百萬港元",
+      "figure": 73,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_CPLN",
+      "svDesc": "百萬港元",
+      "figure": -794,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_CPLP",
+      "svDesc": "百萬港元",
+      "figure": 423,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_CPLP",
+      "svDesc": "百萬港元",
+      "figure": 15,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_CPLR",
+      "svDesc": "百萬港元",
+      "figure": 350,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_CPLR",
+      "svDesc": "百萬港元",
+      "figure": 809,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_GDFCF",
+      "svDesc": "百萬港元",
+      "figure": 354516,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_GDFCF",
+      "svDesc": "百萬港元",
+      "figure": 528564,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_CIV",
+      "svDesc": "百萬港元",
+      "figure": 14399,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_CIV",
+      "svDesc": "百萬港元",
+      "figure": -16637,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GDPP_RWA_NLNB",
+      "svDesc": "百萬港元",
+      "figure": 58865,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GDPP_RWA_NLNB",
+      "svDesc": "百萬港元",
+      "figure": 417803,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 1337501,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CUR",
+      "svDesc": "百萬港元",
+      "figure": 3186526,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "STAT_DISCREPANCY",
+      "svDesc": "百萬港元",
+      "figure": 23235,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "STAT_DISCREPANCY",
+      "svDesc": "百萬港元",
+      "figure": -9964,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTS",
+      "svDesc": "百萬港元",
+      "figure": 31231,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTS",
+      "svDesc": "百萬港元",
+      "figure": 83005,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 663106,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 1526763,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 594456,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 1526801,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 25473,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 59922,
+      "sd_value": "r"
+    }
+  ]
+}

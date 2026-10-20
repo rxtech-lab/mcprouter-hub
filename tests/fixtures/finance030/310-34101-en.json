@@ -1,0 +1,2076 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-34101&api_popup=1"
+    },
+    "title": "Gross Domestic Product (GDP) by economic activity at current prices",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by economic activity in respect of a period are called \"preliminary figures\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the preliminary figures, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated.     The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0.  Users may also download past statistics based on HSIC Version 1.1 for reference.",
+      "Refers to nominal GDP at basic prices.  GDP by economic activity at current prices is presented as the sum of value added of respective economic activities at basic price plus taxes on products plus statistical discrepancy, which is equal to GDP by expenditure component.  For data series of taxes on products and statistical discrepancy, please refer to Table 310-34102.",
+      "r Revised figure",
+      "[-φ32] Figure denotes less than 0.05%."
+    ],
+    "source": "National Income Section (2)1, Census and Statistics Department (Enquiry telephone no. : 3863 2743  Enquiry e-mail : gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 205,
+      "started": "2026-10-20T18:01:46+00:00",
+      "finished": "2026-10-20T18:01:46+00:00",
+      "durationSeconds": 0.068331
+    }
+  },
+  "dataSet": [
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1283035,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1168,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 61399,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 37671,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 62532,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 276977,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "Import and export trade",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 234643,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "Wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 42334,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "Wholesale",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 11986,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "Retail trade",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 30348,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 97598,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "Transportation and storage",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 92125,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "Land transport",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 37771,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "Water transport",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 24053,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "Air transport",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 28542,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "Warehousing and other transportation services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1758,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "Postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 5473,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 37843,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 9779,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "Food and beverage services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 28064,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 42871,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "Telecommunications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 20944,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "Other information and communications services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 21927,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 164195,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "Financing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 132429,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 31765,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "Real estate",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 64438,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 118248,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "Professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 53810,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "Public administration",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 112027,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 243423,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 139111,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "Social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 131396,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1120265,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 3113485,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 1189,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 29768,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 34294,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 132561,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 536260,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "Import and export trade",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 460968,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "Wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 75292,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "Wholesale",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 14895,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "Retail trade",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 60396,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 191151,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "Transportation and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 182751,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "Land transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 49524,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "Water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 49604,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "Air transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 76329,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "Warehousing and other transportation services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 7295,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "Postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 8400,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 62349,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 17930,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "Food and beverage services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 44419,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 104113,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "Telecommunications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 44738,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "Other information and communications services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 59375,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 816222,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "Financing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 707772,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 108450,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "Real estate",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 96982,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 254425,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "Professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 157442,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "Public administration",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 334668,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 639884,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 311269,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "Social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 305216,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "HK$ million",
+      "figure": 2915674,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 4.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 21.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "Import and export trade",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 18.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "Wholesale and retail trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "Wholesale",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "Retail trade",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 7.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "Transportation and storage",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "Land transport",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "Water transport",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "Air transport",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "Warehousing and other transportation services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "Postal and courier services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "Food and beverage services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "Telecommunications",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "Other information and communications services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 12.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "Financing",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 10.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "Real estate",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "Professional and business services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "Public administration",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 8.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 19,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "Social and personal services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 10.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 87.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0,
+      "sd_value": "[-φ32]"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 100,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0,
+      "sd_value": "[-φ32],r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 17.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "Import and export trade",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 14.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "Wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "Wholesale",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "Retail trade",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 6.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "Transportation and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 5.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "Land transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "Water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "Air transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "Warehousing and other transportation services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "Postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.3,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 0.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "Food and beverage services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 3.3,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "Telecommunications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "Other information and communications services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 1.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 26.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "Financing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 22.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 3.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "Real estate",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 3.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 8.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "Professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "Public administration",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 10.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 20.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 10,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "Social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 9.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "% contribution to GDP",
+      "figure": 93.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -12.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -7.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "Import and export trade",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "Wholesale and retail trades",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "Wholesale",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "Retail trade",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "Transportation and storage",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "Land transport",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "Water transport",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "Air transport",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "Warehousing and other transportation services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -17.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "Postal and courier services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -10.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -10.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "Food and beverage services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "Telecommunications",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "Other information and communications services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "Financing",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "Real estate",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -10,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -5.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "Professional and business services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "Public administration",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "Social and personal services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "Agriculture, fishing, mining and quarrying",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "Electricity, gas and water supply, and waste management",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G1",
+      "ACTIVITYDesc": "Import and export trade",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G2",
+      "ACTIVITYDesc": "Wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G21",
+      "ACTIVITYDesc": "Wholesale",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G22",
+      "ACTIVITYDesc": "Retail trade",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H1",
+      "ACTIVITYDesc": "Transportation and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H11",
+      "ACTIVITYDesc": "Land transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H12",
+      "ACTIVITYDesc": "Water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 18.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H13",
+      "ACTIVITYDesc": "Air transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H14",
+      "ACTIVITYDesc": "Warehousing and other transportation services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H2",
+      "ACTIVITYDesc": "Postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.9,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I1",
+      "ACTIVITYDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I2",
+      "ACTIVITYDesc": "Food and beverage services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.1,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J1",
+      "ACTIVITYDesc": "Telecommunications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.2,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J2",
+      "ACTIVITYDesc": "Other information and communications services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "Financing and insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K1",
+      "ACTIVITYDesc": "Financing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K2",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_L",
+      "ACTIVITYDesc": "Real estate",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "Real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_MN",
+      "ACTIVITYDesc": "Professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.4,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O",
+      "ACTIVITYDesc": "Public administration",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.6,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "Public administration, social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "Ownership of premises",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_P_TO_T",
+      "ACTIVITYDesc": "Social and personal services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "Services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": "r"
+    }
+  ]
+}

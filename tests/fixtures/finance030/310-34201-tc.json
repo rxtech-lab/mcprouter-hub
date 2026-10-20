@@ -1,0 +1,1714 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=310-34201&api_popup=1"
+    },
+    "title": "按經濟活動劃分的生產總額、中間投產消耗、增加價值及要素收益 - 以當時價格計算",
+    "tablenote": [
+      "在香港，首次公布的某一期間的按經濟活動劃分的本地生產總值數字稱為「初步數字」。當獲得更多數據後，這些數字會作出修訂。繼初步數字後公布的所有數字均稱為「修訂數字」。這些「修訂數字」在納入更多數據後，在日後仍會作出進一步定期修訂。這例行修訂符合國際一貫的做法，即盡早採用部分數據來編製和公布本地生產總值數字。一般而言，已採納了全部定期資料來源所得的最終數據編製而成的數字，則為最終的數字。",
+      "r 修訂數字"
+    ],
+    "source": "政府統計處國民收入統計組 (二) 一 (查詢電話：3863 2743  查詢電郵：gdp-p@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 169,
+      "started": "2026-10-20T18:02:12+00:00",
+      "finished": "2026-10-20T18:02:13+00:00",
+      "durationSeconds": 0.047348
+    }
+  },
+  "dataSet": [
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1283035,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1168,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 61399,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 37671,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 62532,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 276977,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 97598,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 37843,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 42871,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 164195,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 118248,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 243423,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 139111,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1120265,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 3113485,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 1189,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 29768,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 34294,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 132561,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 536260,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 191151,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 62349,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 104113,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 816222,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 254425,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 639884,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 311269,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "BASICGDPP",
+      "svDesc": "百萬港元",
+      "figure": 2915674,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 2681283,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 3502,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 222534,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 48504,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 124216,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 956480,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 206723,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 66584,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 102793,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 238419,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 191675,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 365382,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 154472,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 2282528,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 5924201,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 3514,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 286664,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 80185,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 252282,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 1353500,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 538161,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 137213,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 236192,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 1264231,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 481057,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 932896,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 358306,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGO",
+      "svDesc": "百萬港元",
+      "figure": 5301557,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 1398248,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 2334,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 161135,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 10832,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 61684,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 679503,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 109125,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 28741,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 59921,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 74224,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 73428,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 121959,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 15361,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 1162262,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 2810715,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 2324,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 256896,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 45891,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 119721,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 817240,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 347010,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 74864,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 132079,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 448009,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 226632,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 293012,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 47038,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURIC",
+      "svDesc": "百萬港元",
+      "figure": 2385883,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 663106,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 457,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 31550,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 6097,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 53678,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 138090,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 44940,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 30394,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 24754,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 76225,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 58311,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 198610,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 571324,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 1526763,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 511,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 23418,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 10420,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 108440,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 224095,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 85145,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 61348,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 50257,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 268320,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 189756,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 505053,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 0,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURCE",
+      "svDesc": "百萬港元",
+      "figure": 1383973,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 594456,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 704,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 29080,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 31403,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 8423,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 134012,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 50186,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 6232,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 17467,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 86737,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 58706,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 42869,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 128637,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 524846,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": -3088,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 1526801,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 672,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 5779,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 23558,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 22934,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 302443,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 102512,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": -1224,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 52289,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 543093,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 61285,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 129090,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 284369,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURGOS",
+      "svDesc": "百萬港元",
+      "figure": 1473857,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 25473,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 769,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 172,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 431,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 4875,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 2472,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 1217,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 651,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 1232,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 1231,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 1944,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 10474,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 24095,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 59922,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_AB",
+      "ACTIVITYDesc": "農業、漁業、採礦及採石",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 7,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_C",
+      "ACTIVITYDesc": "製造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 570,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_DE",
+      "ACTIVITYDesc": "電力、燃氣和自來水供應及廢棄物管理",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 316,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_F",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 1187,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_G",
+      "ACTIVITYDesc": "進出口貿易、批發及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 9722,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_H",
+      "ACTIVITYDesc": "運輸、倉庫、郵政及速遞服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 3494,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_I",
+      "ACTIVITYDesc": "住宿及膳食服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 2225,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_J",
+      "ACTIVITYDesc": "資訊及通訊",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 1568,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_K",
+      "ACTIVITYDesc": "金融及保險",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 4808,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_LMN",
+      "ACTIVITYDesc": "地產、專業及商用服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 3385,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_O_TO_T",
+      "ACTIVITYDesc": "公共行政、社會及個人服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 5741,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SECT_OWN",
+      "ACTIVITYDesc": "樓宇業權",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 26900,
+      "sd_value": "r"
+    },
+    {
+      "ACTIVITY": "SERVICES",
+      "ACTIVITYDesc": "服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CURTAXES_ON_PRODUCTION",
+      "svDesc": "百萬港元",
+      "figure": 57843,
+      "sd_value": "r"
+    }
+  ]
+}
