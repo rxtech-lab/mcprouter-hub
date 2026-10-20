@@ -1,14 +1,15 @@
 id: hk-bus
 title: Buses, Minibuses & Trams
 description: >-
-  KMB / Long Win, Citybus, New Lantao Bus, MTR Bus and green minibus routes, stops and real-time estimated arrival
-  times, plus Hong Kong Tramways routes and stops, in one place. Tools are prefixed by operator (kmb_, citybus_,
-  nlb_, mtr_bus_, gmb_, tram_). When the operator of a route is unknown, look it up with kmb_routes, citybus_routes
-  and nlb_routes; green minibus routes are numbered per region and found with gmb_route.
+  Hong Kong bus, minibus and tram routes, stops and real-time arrivals for KMB / Long Win,
+  Citybus, New Lantao Bus, MTR Bus, green minibuses and Hong Kong Tramways.
+  Use the bus tool for every operator. When a bus route's operator is unknown, check
+  the KMB, Citybus and NLB route actions. Green minibus routes are numbered per region.
+combinedTool: bus
 # Former service ids, so API keys, OAuth grants and /api/mcp/s/<id> URLs created before the merge keep working.
-aliases: [kmb, citybus]
+aliases: [kmb, citybus, dpo-bus-stop]
 # Entries in mcp/apis.yaml this service implements.
-apis: [API-0003, API-0004, API-0005, API-0016, API-0018, API-0019]
+apis: [API-0003, API-0004, API-0005, API-0016, API-0018, API-0019, API-1541]
 datasets:
   - hk-td-tis_21-etakmb
   - ctb-eta-transport-realtime-eta
@@ -17,7 +18,11 @@ datasets:
   - nlb-bus-nlb-bus-service-v2
   - hktramways-hktramways-main-routes
   - hktramways-hktramways-tram-stops
+  - hk-dpo-datagovhk1-transport-bus-route-list-and-eta-spcific-bus-stop
 cacheTtl: 3600
+lang:
+  param: lang
+  map: { en: en, tc: zh-hant, sc: zh-hans }
 # Renders results in hosts that support MCP Apps; see app.ts. Each operator keeps its own colours.
 app: {}
 tools:
@@ -300,3 +305,33 @@ tools:
       filter: { direction: direction }
       search: { input: search, fields: [name_en, name_tc, name_sc] }
       limit: 150
+
+  # Citybus / NLB stop batches
+  - name: dpo_bus_stop_routes
+    title: Routes serving a Citybus or NLB stop
+    description: Routes serving a Citybus or NLB stop. Supply the operator-specific stop ID (Citybus six digits; NLB a numeric ID from nlb_route_stops). Returns a generated timestamp and up to 200 records, with explicit truncation; continue using nextOffset and the same inputs. Empty or null ETA means no prediction, not an immediate arrival. Upstream errors may be transient; retry 429 or 502 later.
+    baseUrl: https://rt.data.gov.hk
+    app: false
+    path: /v1.1/transport/batch/stop-route/{operator}/{stopId}
+    cacheTtl: 3600
+    transform: { request: validateStop, response: batch }
+    input:
+      limit: { type: integer, in: local, minimum: 1, maximum: 200, default: 200 }
+      offset: { type: integer, in: local, minimum: 0, maximum: 1000000, default: 0 }
+      operator: { type: string, enum: [CTB, NLB], required: true, description: "Bus operator" }
+      stopId: { type: string, pattern: '^[0-9]{1,6}$', required: true, description: "Citybus six-digit stop ID or NLB numeric stop ID" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }
+  - name: dpo_bus_stop_eta
+    title: All Citybus or NLB arrivals at a stop
+    description: All Citybus or NLB arrivals at a stop. Supply the operator-specific stop ID (Citybus six digits; NLB a numeric ID from nlb_route_stops). Returns a generated timestamp and up to 200 records, with explicit truncation; continue using nextOffset and the same inputs. Empty or null ETA means no prediction, not an immediate arrival. Upstream errors may be transient; retry 429 or 502 later.
+    baseUrl: https://rt.data.gov.hk
+    app: false
+    path: /v1/transport/batch/stop-eta/{operator}/{stopId}
+    cacheTtl: 30
+    transform: { request: validateStop, response: batch }
+    input:
+      limit: { type: integer, in: local, minimum: 1, maximum: 200, default: 200 }
+      offset: { type: integer, in: local, minimum: 0, maximum: 1000000, default: 0 }
+      operator: { type: string, enum: [CTB, NLB], required: true, description: "Bus operator" }
+      stopId: { type: string, pattern: '^[0-9]{1,6}$', required: true, description: "Citybus six-digit stop ID or NLB numeric stop ID" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Response language" }

@@ -37,7 +37,7 @@ const TIMEOUT_MS = 45_000;
 
 type Check = { id: string; service: string; ok: boolean; error?: string; ms: number };
 
-const toolsByName = new Map(services.flatMap((service) => service.tools.map((tool) => [tool.name, { service, tool }] as const)));
+const toolsByName = new Map(services.flatMap((service) => service.tools.flatMap((tool) => [tool, ...(tool.operations ?? [])]).map((tool) => [tool.name, { service, tool }] as const)));
 
 function withTimeout<T>(promise: Promise<T>, ms: number, what: string): Promise<T> {
   let timer: ReturnType<typeof setTimeout>;
@@ -136,7 +136,7 @@ async function runApp(browser: Browser, service: ServiceDefinition, tool: ToolDe
 // ---------------------------------------------------------------- run
 
 const selected = services
-  .map((service) => ({ service, tools: service.tools.filter((tool) => only.size === 0 || only.has(service.id) || only.has(tool.name)) }))
+  .map((service) => ({ service, tools: service.tools.flatMap((tool) => [tool, ...(tool.operations ?? [])]).filter((tool) => only.size === 0 || only.has(service.id) || only.has(tool.name)) }))
   .filter((entry) => entry.tools.length > 0);
 if (selected.length === 0) throw new Error(`Nothing matches --only ${[...only].join(",")}`);
 

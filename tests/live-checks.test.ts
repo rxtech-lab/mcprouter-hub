@@ -3,7 +3,7 @@ import { services } from "@/generated/registry";
 import { hkDate, liveCases } from "@/mcp/live-checks";
 
 describe("live check inputs", () => {
-  const tools = services.flatMap((service) => service.tools);
+  const tools = services.flatMap((service) => service.tools.flatMap((tool) => [tool, ...(tool.operations ?? [])]));
 
   it("cover every tool, so the scheduled live check calls it", () => {
     expect(tools.map((tool) => tool.name).filter((name) => !liveCases[name])).toEqual([]);

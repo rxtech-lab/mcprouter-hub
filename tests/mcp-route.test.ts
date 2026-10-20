@@ -18,7 +18,7 @@ import { transportCases } from "./transport003-cases";
 const INTERNAL_KEY = "test-internal-key-0123456789";
 const allServices = createServiceRoute(() => services);
 // Looked up by tool, not id, so the test survives services being merged or renamed.
-const busService = services.find((service) => service.tools.some((tool) => tool.name === "kmb_stop_eta"))!;
+const busService = services.find((service) => service.tools.some((tool) => tool.name === "bus"))!;
 const busOnly = createServiceRoute(() => [busService]);
 const unknownService = createServiceRoute(() => null);
 
@@ -97,19 +97,21 @@ afterEach(() => {
 
 describe("transport batch 003 MCP routes", () => {
   it.each(transportCases)("discovers and calls $tool through its scoped service route", async (testCase) => {
-    const service = services.find((service) => service.tools.some((tool) => tool.name === testCase.tool))!;
+    const service = services.find((service) => service.tools.some((tool) => tool.name === testCase.tool || tool.operations?.some((operation) => operation.name === testCase.tool)))!;
+    const publicName = service.combinedTool ?? testCase.tool;
+    const input = service.combinedTool ? { ...testCase.input, action: testCase.tool } : testCase.input;
     const route = createServiceRoute(() => [service]);
     const options = { path: `/api/mcp/s/${service.id}/streamable`, scopes: service.id };
     const listed = await rpc(route, "tools/list", {}, options);
-    expect(listed.result!.tools!.map((tool) => tool.name)).toContain(testCase.tool);
+    expect(listed.result!.tools!.map((tool) => tool.name)).toContain(publicName);
     fetchMock.mockImplementation(async (url) => {
       expect(url).toBe(testCase.request.url);
       return new Response(typeof testCase.reply === "string" ? testCase.reply : JSON.stringify(testCase.reply));
     });
-    const { result } = await rpc(route, "tools/call", { name: testCase.tool, arguments: testCase.input }, options);
+    const { result } = await rpc(route, "tools/call", { name: publicName, arguments: input }, options);
     expect(result!.isError).toBeFalsy();
     expect(JSON.parse(result!.content![0].text).data).toEqual(testCase.data);
-    const invalid = await rpc(route, "tools/call", { name: testCase.tool, arguments: { ...testCase.input, ...(testCase.tool === "border_vehicle_throughput" ? { year: 2015 } : { limit: -1 }) } }, options);
+    const invalid = await rpc(route, "tools/call", { name: publicName, arguments: { ...input, ...(testCase.tool === "border_vehicle_throughput" ? { year: 2015 } : { limit: -1 }) } }, options);
     expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
@@ -128,11 +130,11 @@ describe("MCP endpoint", () => {
     const listed = result!.tools!;
     expect(listed.map((tool) => tool.name).sort()).toEqual(services.flatMap((service) => service.tools.map((tool) => tool.name)).sort());
 
-    const kmbStopEta = listed.find((tool) => tool.name === "kmb_stop_eta")!;
+    const kmbStopEta = listed.find((tool) => tool.name === "bus")!;
     expect(kmbStopEta).toMatchObject({
-      title: "KMB arrivals at a stop",
+      title: "Buses, Minibuses & Trams",
       annotations: { readOnlyHint: true, openWorldHint: true },
-      inputSchema: { type: "object", required: ["stopId"], properties: { stopId: { type: "string" }, route: { type: "string" } } },
+      inputSchema: { type: "object", required: ["action"], properties: { stopId: { type: "string" }, route: { type: "string" } } },
     });
   });
 
@@ -144,7 +146,7 @@ describe("MCP endpoint", () => {
     });
     try {
       const { tools } = await client.listTools();
-      expect(tools.map((tool) => tool.name)).toContain("kmb_stop_eta");
+      expect(tools.map((tool) => tool.name)).toContain("bus");
       expect(fetchMock).not.toHaveBeenCalled();
     } finally {
       await client.close();
@@ -162,7 +164,7 @@ describe("MCP endpoint", () => {
       expect(url).toBe("https://data.etabus.gov.hk/v1/transport/kmb/stop-eta/ABC123");
       return new Response(JSON.stringify({ data: [{ co: "KMB", route: "1A", dir: "O", eta: "2026-10-18T10:05:00+08:00" }, { co: "KMB", route: "2", dir: "O", eta: null }] }));
     });
-    const result = await callTool("kmb_stop_eta", { stopId: "ABC123", route: "1a" }, { user: "route-ok" });
+    const result = await callTool("bus", { action: "kmb_stop_eta", stopId: "ABC123", route: "1a" }, { user: "route-ok" });
 
     expect(result.isError).toBeFalsy();
     expect(JSON.parse(result.content![0].text)).toEqual({
@@ -170,20 +172,20 @@ describe("MCP endpoint", () => {
       meta: { source: "https://data.etabus.gov.hk/v1/transport/kmb/stop-eta/ABC123", total: 1, returned: 1, truncated: false },
     });
     expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(await loggedCalls("route-ok", 1)).toMatchObject([{ service: busService.id, tool: "kmb_stop_eta", status: "ok", errorCode: null, apiKeyId: null, channel: "web" }]);
+    expect(await loggedCalls("route-ok", 1)).toMatchObject([{ service: busService.id, tool: "bus", status: "ok", errorCode: null, apiKeyId: null, channel: "web" }]);
   });
 
   it("logs the agent channel the internal caller names, and the web chat for anything else", async () => {
     fetchMock.mockImplementation(async () => new Response(JSON.stringify({ data: [] })));
-    await callTool("kmb_stop_eta", { stopId: "ABC123" }, { user: "route-telegram", channel: "telegram" });
-    await callTool("kmb_stop_eta", { stopId: "ABC123" }, { user: "route-spoofed", channel: "oauth" });
+    await callTool("bus", { action: "kmb_stop_eta", stopId: "ABC123" }, { user: "route-telegram", channel: "telegram" });
+    await callTool("bus", { action: "kmb_stop_eta", stopId: "ABC123" }, { user: "route-spoofed", channel: "oauth" });
     expect(await loggedCalls("route-telegram", 1)).toMatchObject([{ channel: "telegram", oauthClientId: null }]);
     expect(await loggedCalls("route-spoofed", 1)).toMatchObject([{ channel: "web" }]);
   });
 
   it("sends a POST tool's arguments as the JSON body", async () => {
     fetchMock.mockImplementation(async () => new Response(JSON.stringify({ routeName: "K12", busStop: [] })));
-    const result = await callTool("mtr_bus_schedule", { routeName: "k12", language: "zh" });
+    const result = await callTool("bus", { action: "mtr_bus_schedule", routeName: "k12", language: "zh" });
 
     expect(JSON.parse(result.content![0].text).data).toEqual({ routeName: "K12", busStop: [] });
     const [url, init] = fetchMock.mock.calls[0];
@@ -290,16 +292,16 @@ describe("MCP endpoint in search mode", () => {
     const names = async (route: typeof searchRoute, key: string, path?: string) =>
       (await rpc(route, "tools/list", {}, { token: key, user: "", path })).result!.tools!.map((tool) => tool.name);
 
-    expect(await names(searchRoute, everyTool.key)).toContain("kmb_stop_eta");
+    expect(await names(searchRoute, everyTool.key)).toContain("bus");
     expect(await names(searchRoute, searchOnly.key, "/api/mcp/streamable?tools=all")).toEqual(["search_tools", "read_tool", "use_tool"]);
     expect(await names(busOnly, searchOnly.key, `/api/mcp/s/${busService.id}/streamable`)).toEqual(["search_tools", "read_tool", "use_tool"]);
     expect(await names(searchRoute, unset.key)).toEqual(["search_tools", "read_tool", "use_tool"]);
-    expect(await names(busOnly, unset.key, `/api/mcp/s/${busService.id}/streamable`)).toContain("kmb_stop_eta");
+    expect(await names(busOnly, unset.key, `/api/mcp/s/${busService.id}/streamable`)).toContain("bus");
   });
 
   it("keeps the per-service endpoint on real tool names, even with ?tools=search", async () => {
     const { result } = await rpc(busOnly, "tools/list", {}, { path: `/api/mcp/s/${busService.id}/streamable?tools=search` });
-    expect(result!.tools!.map((tool) => tool.name)).toContain("kmb_stop_eta");
+    expect(result!.tools!.map((tool) => tool.name)).toContain("bus");
   });
 
   it("searches tools, capped at the requested limit", async () => {
@@ -310,26 +312,26 @@ describe("MCP endpoint in search mode", () => {
     const { tools } = JSON.parse(result.content![0].text) as { tools: Array<{ name: string; service: string }> };
     expect(tools.length).toBeGreaterThan(0);
     expect(tools.length).toBeLessThanOrEqual(3);
-    expect(tools.map((tool) => tool.name)).toContain("kmb_stop_eta");
+    expect(tools.map((tool) => tool.name)).toContain("bus");
   });
 
   it("reads a tool's schema and rejects unknown tools", async () => {
-    const read = await call("read_tool", { name: "kmb_stop_eta" });
-    expect(JSON.parse(read.content![0].text)).toMatchObject({ name: "kmb_stop_eta", service: busService.id, inputSchema: { type: "object", required: ["stopId"] } });
+    const read = await call("read_tool", { name: "bus" });
+    expect(JSON.parse(read.content![0].text)).toMatchObject({ name: "bus", service: busService.id, inputSchema: { type: "object", required: ["action"] } });
     const unknown = await call("read_tool", { name: "nope" });
     expect(unknown.isError).toBe(true);
   });
 
   it("runs a tool through use_tool and logs it under the tool's own name", async () => {
     fetchMock.mockImplementation(async () => new Response(JSON.stringify({ data: [] })));
-    const result = await call("use_tool", { name: "kmb_stop_eta", arguments: { stopId: "ABC123" } }, { user: "route-use-tool" });
+    const result = await call("use_tool", { name: "bus", arguments: { action: "kmb_stop_eta", stopId: "ABC123" } }, { user: "route-use-tool" });
     expect(result.isError).toBeFalsy();
     expect(JSON.parse(result.content![0].text).meta.source).toBe("https://data.etabus.gov.hk/v1/transport/kmb/stop-eta/ABC123");
-    expect(await loggedCalls("route-use-tool", 1)).toMatchObject([{ service: busService.id, tool: "kmb_stop_eta", status: "ok" }]);
+    expect(await loggedCalls("route-use-tool", 1)).toMatchObject([{ service: busService.id, tool: "bus", status: "ok" }]);
   });
 
   it("validates use_tool arguments against the real tool's schema", async () => {
-    const result = await call("use_tool", { name: "kmb_stop_eta", arguments: {} }, { user: "route-use-invalid" });
+    const result = await call("use_tool", { name: "bus", arguments: { action: "kmb_stop_eta" } }, { user: "route-use-invalid" });
     expect(result.isError).toBe(true);
     expect(result.content![0].text).toMatch(/stopId/);
     expect(fetchMock).not.toHaveBeenCalled();
@@ -346,17 +348,17 @@ describe("MCP endpoint with exposure settings", () => {
   }
 
   it("lists only the services and tools the user exposes", async () => {
-    await expose("exposure-1", { services: [busService.id, weather.id], hiddenTools: ["kmb_stop_eta"] });
+    await expose("exposure-1", { services: [busService.id, weather.id], hiddenTools: ["bus"] });
     const { result } = await rpc(allServices, "tools/list", {}, { user: "exposure-1" });
-    const expected = [...busService.tools, ...weather.tools].map((tool) => tool.name).filter((name) => name !== "kmb_stop_eta");
+    const expected = [...busService.tools, ...weather.tools].map((tool) => tool.name).filter((name) => name !== "bus");
     expect(result!.tools!.map((tool) => tool.name).sort()).toEqual(expected.sort());
   });
 
   it("refuses a hidden tool, also through use_tool", async () => {
     await expose("exposure-2", { services: [weather.id] });
-    const direct = await rpc(allServices, "tools/call", { name: "kmb_stop_eta", arguments: { stopId: "X" } }, { user: "exposure-2" });
+    const direct = await rpc(allServices, "tools/call", { name: "bus", arguments: { action: "kmb_stop_eta", stopId: "X" } }, { user: "exposure-2" });
     expect(direct.error ?? direct.result?.isError).toBeTruthy();
-    const viaMeta = await rpc(searchRoute, "tools/call", { name: "use_tool", arguments: { name: "kmb_stop_eta", arguments: { stopId: "X" } } }, { user: "exposure-2" });
+    const viaMeta = await rpc(searchRoute, "tools/call", { name: "use_tool", arguments: { name: "bus", arguments: { action: "kmb_stop_eta", stopId: "X" } } }, { user: "exposure-2" });
     expect(viaMeta.result!.isError).toBe(true);
     expect(fetchMock).not.toHaveBeenCalled();
   });

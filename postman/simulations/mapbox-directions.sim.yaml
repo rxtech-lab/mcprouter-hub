@@ -1,0 +1,5 @@
+simulation: mapbox-directions
+routing: path
+mocks:
+  - routeKey: mapbox
+    path: ../mocks/mapbox-directions/config.yaml

@@ -3,6 +3,7 @@ import { db } from "@/db";
 import { mcpSettings } from "@/db/schema";
 import { serviceById } from "@/generated/registry";
 import type { ServiceDefinition } from "@/lib/mcp/types";
+import { combineServiceTools } from "@/lib/mcp/combined";
 
 /**
  * A user's choice of what their MCP endpoints expose: some regions, some
@@ -33,7 +34,7 @@ export function serviceExposure(service: ServiceDefinition, exposure: Exposure):
   if (exposure.regions.length && !exposure.regions.includes(service.region)) return "region";
   // Saved ids may be a service that was later merged into this one.
   if (exposure.services.length && !exposure.services.some((id) => serviceById.get(id)?.id === service.id)) return "service";
-  if (service.tools.every((tool) => exposure.hiddenTools.includes(tool.name))) return "tools";
+  if (service.tools.every((tool) => exposure.hiddenTools.includes(tool.name) || tool.operations?.every((operation) => exposure.hiddenTools.includes(operation.name)))) return "tools";
   return "exposed";
 }
 
@@ -43,5 +44,11 @@ export function exposedServices(services: readonly ServiceDefinition[], exposure
   const hidden = new Set(exposure.hiddenTools);
   return services
     .filter((service) => serviceExposure(service, exposure) === "exposed")
-    .map((service) => (service.tools.some((tool) => hidden.has(tool.name)) ? { ...service, tools: service.tools.filter((tool) => !hidden.has(tool.name)) } : service));
+    .map((service) => {
+      const tools = service.tools.filter((tool) => !hidden.has(tool.name));
+      if (service.combinedTool && tools[0]?.operations) {
+        return combineServiceTools({ ...service, tools: tools[0].operations.filter((operation) => !hidden.has(operation.name)) });
+      }
+      return { ...service, tools };
+    });
 }

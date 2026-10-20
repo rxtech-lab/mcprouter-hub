@@ -34,7 +34,7 @@ describe("agent tool search", () => {
   });
 
   it("finds the right service's tools for everyday questions", () => {
-    expect(top("KMB bus arrivals")).toEqual(expect.arrayContaining(["kmb_stop_eta", "kmb_route_eta"]));
+    expect(top("KMB bus arrivals")).toEqual(expect.arrayContaining(["bus"]));
     expect(top("next MTR train")[0]).toBe("mtr_next_train");
     expect(top("car park vacancy")[0]).toBe("carpark_vacancy");
     expect(top("A&E waiting time")[0]).toBe("ha_aed_waiting_times");
@@ -45,7 +45,7 @@ describe("agent tool search", () => {
     expect(top("parking")).toContain("carpark_vacancy");
     expect(top("subway")).toContain("mtr_next_train");
     expect(top("今日天氣")).toContain("hko_current_weather");
-    expect(top("巴士")).toEqual(expect.arrayContaining(["kmb_routes", "citybus_routes"]));
+    expect(top("巴士")).toEqual(expect.arrayContaining(["bus"]));
   });
 
   it("ignores filler words and returns nothing for unrelated queries", () => {

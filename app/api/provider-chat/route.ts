@@ -1,3 +1,4 @@
+import { AGENT_TOOL_STEPS, GUEST_AGENT_TOOL_STEPS } from "@/lib/agent/stop";
 import { validateUIMessages, type UIMessage } from "ai";
 import { cookies } from "next/headers";
 import { getCurrentUser } from "@/lib/auth";
@@ -67,7 +68,7 @@ export async function POST(request: Request) {
   try {
     return await streamAgentReply({
       servers, messages, model: user ? (process.env.AI_MODEL ?? config.model) : config.model,
-      maxSteps: user ? 10 : 6, headers,
+      maxSteps: user ? AGENT_TOOL_STEPS : GUEST_AGENT_TOOL_STEPS, headers,
       toolScope: scope.tools.map((tool) => tool.name),
       channelNote: `This conversation is exclusively about ${scope.title}. Its tools are already loaded. Use only these tools; explain when a question requires another provider.`,
     });

@@ -52,6 +52,7 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  bus: { input: { action: "kmb_routes", route: "1A" }, check: nonEmpty },
   // Transport batch 003: object results contain a bounded results array.
   cad_paragliding_areas: { input: { limit: 2 }, check: nonEmptyPage },
   cedd_public_piers: { input: { limit: 2 }, check: nonEmptyPage },

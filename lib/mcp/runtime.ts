@@ -155,6 +155,14 @@ function checkRequest(request: UpstreamRequest): UpstreamRequest {
 export async function executeTool(service: ServiceDefinition, tool: ToolDefinition, rawInput: ToolInput): Promise<ToolResult> {
   const input = tool.inputSchema.parse(rawInput) as ToolInput;
 
+  if (tool.operations) {
+    const operation = tool.operations.find((candidate) => candidate.name === input.action);
+    if (!operation) throw new Error("Unknown action");
+    const args = { ...input };
+    delete args.action;
+    return executeTool(service, operation, args);
+  }
+
   if (tool.handler) {
     const data = await tool.handler(input, handlerContext(service, tool));
     return tool.spec.response ? shapeResponse(data, tool.spec.response, input) : { data, meta: {} };

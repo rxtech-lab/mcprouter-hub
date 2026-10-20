@@ -830,7 +830,7 @@ msgid "{count} tool"
 msgid_plural "{count} tools"
 msgstr[0] "{count} 个工具"
 
-#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/client-setup-dialog.tsx
+#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/agent/map.tsx components/client-setup-dialog.tsx
 msgid "Close"
 msgstr "关闭"
 

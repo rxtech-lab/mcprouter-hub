@@ -5,8 +5,6 @@ import {
   createIdGenerator,
   createUIMessageStreamResponse,
   generateText,
-  isStepCount,
-  hasToolCall,
   streamText,
   toUIMessageStream,
   type ToolSet,
@@ -17,16 +15,19 @@ import type { resolveServer } from "@/lib/agent/mcp-servers";
 import { selfMcpFetch } from "@/lib/agent/self-fetch";
 import { APP_TOOL_HINT, chosenVisuals, definitionHasApp, SHOW_UI_NOTE, showUiTools } from "@/lib/agent/display-tools";
 import { usedToolNames, withToolSearch } from "@/lib/agent/tool-search";
-import { REQUEST_INPUT_TOOL_NAME, USER_INPUT_NOTE, userInputTools } from "@/lib/agent/user-input";
-import { LOCATION_NOTE, REQUEST_LOCATION_TOOL_NAME, locationTools } from "@/lib/agent/location";
+import { USER_INPUT_NOTE, userInputTools } from "@/lib/agent/user-input";
+import { LOCATION_NOTE, locationTools } from "@/lib/agent/location";
 import { mapTools } from "@/lib/agent/map";
+import { routeTools } from "@/lib/agent/route";
+import { agentLoop, COMPLETION_NOTE } from "@/lib/agent/stop";
 
 export const AGENT_INSTRUCTIONS = `You are the mcprouter assistant. You answer questions with live open data through your tools. Coverage starts with Hong Kong:
 weather and warnings, bus and minibus (KMB, Citybus, green minibus) and MTR arrivals, A&E waiting times, car parks, public holidays and the DATA.GOV.HK catalogue.
 Most tools are not loaded yet: call search_tools describing what you need (e.g. "when is the next bus", "is it going to rain") to load the right tools, then call them.
 Always call a tool for live or factual data instead of guessing, and say when data comes back empty.
 Times are Hong Kong time (UTC+8). Reply in the user's language; use tc data for Traditional Chinese questions.
-Be concise: summarise tool results, don't dump raw JSON.`;
+Be concise: summarise tool results, don't dump raw JSON.
+${COMPLETION_NOTE}`;
 
 /** Added when this app's server lists only its three search tools instead of every tool. */
 export const SEARCH_MODE_NOTE = `Here search_tools only finds tool names: call read_tool for a tool's arguments, then use_tool with its name and arguments to run it.`;
@@ -105,7 +106,7 @@ async function connectTools(servers: ResolvedServer[]) {
 export function scopedAgentTools(tools: ToolSet, appTools: ReadonlySet<string>, scope: readonly string[]) {
   const scoped = Object.fromEntries(Object.entries(tools).filter(([name]) => scope.includes(name)));
   if (!Object.keys(scoped).length) throw new Error("No tools available for this API");
-  return stableTools({ ...scoped, ...showUiTools(new Set([...appTools].filter((name) => name in scoped))), ...mapTools(), ...userInputTools(), ...locationTools() });
+  return stableTools({ ...scoped, ...showUiTools(new Set([...appTools].filter((name) => name in scoped))), ...mapTools(), ...routeTools(), ...userInputTools(), ...locationTools() });
 }
 
 /** Streams one agent reply as a UI message response, calling `onFinished` with the full conversation. */
@@ -131,11 +132,9 @@ export async function streamAgentReply(options: {
       model: options.model,
       instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages(options.messages)),
-      tools: scopedTools ?? modelTools(options.servers, tools, options.messages, { ...options.channelTools, ...showUiTools(appTools), ...mapTools(), ...userInputTools(), ...locationTools() }),
+      tools: scopedTools ?? modelTools(options.servers, tools, options.messages, { ...options.channelTools, ...showUiTools(appTools), ...mapTools(), ...routeTools(), ...userInputTools(), ...locationTools() }),
       providerOptions: gatewayCaching,
-      // Each tool step resends the conversation; keep the breakpoint on its newest message.
-      prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
-      stopWhen: [isStepCount(options.maxSteps ?? 10), hasToolCall(REQUEST_INPUT_TOOL_NAME), hasToolCall(REQUEST_LOCATION_TOOL_NAME)],
+      ...agentLoop(options.maxSteps),
       onEnd: async ({ totalUsage }) => {
         const { cacheReadTokens = 0, cacheWriteTokens = 0, noCacheTokens = 0 } = totalUsage.inputTokenDetails;
         console.info(`[agent] input tokens: ${cacheReadTokens} cached, ${cacheWriteTokens} written to cache, ${noCacheTokens} uncached`);
@@ -191,8 +190,7 @@ export async function generateAgentReply(options: {
       messages: markLastMessage(await convertToModelMessages(options.messages)),
       tools: modelTools(options.servers, tools, options.messages, { ...options.channelTools, ...showUiTools(appTools) }),
       providerOptions: gatewayCaching,
-      prepareStep: ({ messages: stepMessages }) => ({ messages: markLastMessage(stepMessages) }),
-      stopWhen: isStepCount(options.maxSteps ?? 10),
+      ...agentLoop(options.maxSteps),
     });
     return { text: result.text, visuals: chosenVisuals(result.steps.flatMap((step) => step.toolResults)) };
   } finally {

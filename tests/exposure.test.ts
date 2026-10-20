@@ -22,6 +22,7 @@ describe("exposedServices", () => {
   });
 
   it("drops hidden tools, and a service whose tools are all hidden", () => {
+    const bus = services.find((service) => service.id === "hko-weather")!;
     const [first, ...rest] = bus.tools.map((tool) => tool.name);
     const someHidden = exposedServices([bus], { ...OPEN_EXPOSURE, hiddenTools: [first] });
     expect(someHidden[0].tools.map((tool) => tool.name)).toEqual(rest);

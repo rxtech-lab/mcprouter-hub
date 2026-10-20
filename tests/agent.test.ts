@@ -63,7 +63,7 @@ describe("provider-scoped display tools", () => {
   it("offers both display tools without exposing unrelated provider tools or apps", async () => {
     const { scopedAgentTools } = await import("@/lib/agent/run");
     const tools = scopedAgentTools({ mtr_next_train: {}, hko_current_weather: {} } as never, new Set(["mtr_next_train", "hko_current_weather"]), ["mtr_next_train"]);
-    expect(Object.keys(tools)).toEqual(["mtr_next_train", "request_user_input", "request_user_location", "show_map", "show_tool_ui", "show_ui"]);
+    expect(Object.keys(tools)).toEqual(["draw_route", "mtr_next_train", "request_user_input", "request_user_location", "show_map", "show_tool_ui", "show_ui"]);
     const result = await tools.show_tool_ui.execute!({ tools: ["mtr_next_train", "hko_current_weather"] } as never, { toolCallId: "display", messages: [] } as never);
     expect(result).toMatchObject({ shown: ["mtr_next_train"], withoutApp: ["hko_current_weather"] });
     expect(() => scopedAgentTools({} as never, new Set(), [])).toThrow("No tools available");
