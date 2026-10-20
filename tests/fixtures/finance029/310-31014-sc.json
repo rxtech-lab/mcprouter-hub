@@ -1,0 +1,647 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=310-31014&api_popup=1"
+    },
+    "title": "按货品及服务组别划分在本地市场内的消费开支 - 以2024年环比物量计算",
+    "tablenote": [
+      "在香港，首次公布的某一期间的按开支组成部分划分的本地生产总值数字称为「预先估计数字」。当获得更多数据后，这些数字会作出修订。继预先估计数字后公布的所有数字均称为「修订数字」。这些「修订数字」在纳入更多数据后，在日后仍会作出进一步定期修订。这例行修订符合国际一贯的做法，即尽早采用部分数据来编制和公布本地生产总值数字。一般而言，已采纳了全部定期资料来源所得的最终数据编制而成的数字，则为最终的数字。",
+      "以2024年环比物量计算的价值是应用环比物量指数作为外推指标，以外推法把参照年2024年的以当时价格计算的数值向前及向后推算。由于在编制以环比物量计算的数列时，本地市场内的消费开支及其组成部分的外推过程是独立地进行，所以以环比物量计算的本地市场内的消费开支与其以环比物量计算的组成部分的总和可能出现差额。",
+      "r 修订数字",
+      "N.A. 没有数字",
+      "[φ3] 数字代表增减少于 0.05%。"
+    ],
+    "source": "政府统计处国民收入统计组（一）一 (查询电话 : 3863 2727  查询电邮：gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 62,
+      "started": "2026-10-20T17:47:55+00:00",
+      "finished": "2026-10-20T17:47:55+00:00",
+      "durationSeconds": 0.044571
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 132407,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM1",
+      "GDP_COMPONENTDesc": "食品及不含酒精饮品",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 53056,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM10",
+      "GDP_COMPONENTDesc": "医疗及保健",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 8110,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM11",
+      "GDP_COMPONENTDesc": "交通及通讯",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 5225,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM12",
+      "GDP_COMPONENTDesc": "娱乐及消遣",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 10334,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM13",
+      "GDP_COMPONENTDesc": "教育",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 10778,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM14",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 21136,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM2",
+      "GDP_COMPONENTDesc": "含酒精饮品",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 1677,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "烟草",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 16434,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM4",
+      "GDP_COMPONENTDesc": "衣履及其他个人用品",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 12967,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM5",
+      "GDP_COMPONENTDesc": "租金、差饷、水费及房屋维修费用",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 19554,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM6",
+      "GDP_COMPONENTDesc": "燃料及电力",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 2470,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM7",
+      "GDP_COMPONENTDesc": "家具及家居设备",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 1171,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM8",
+      "GDP_COMPONENTDesc": "家居管理开销",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 4184,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "个人护理",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 2214,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM1",
+      "GDP_COMPONENTDesc": "食品及不含酒精饮品",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM10",
+      "GDP_COMPONENTDesc": "医疗及保健",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM11",
+      "GDP_COMPONENTDesc": "交通及通讯",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM12",
+      "GDP_COMPONENTDesc": "娱乐及消遣",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM13",
+      "GDP_COMPONENTDesc": "教育",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM14",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM2",
+      "GDP_COMPONENTDesc": "含酒精饮品",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "烟草",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM4",
+      "GDP_COMPONENTDesc": "衣履及其他个人用品",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM5",
+      "GDP_COMPONENTDesc": "租金、差饷、水费及房屋维修费用",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM6",
+      "GDP_COMPONENTDesc": "燃料及电力",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM7",
+      "GDP_COMPONENTDesc": "家具及家居设备",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM8",
+      "GDP_COMPONENTDesc": "家居管理开销",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "个人护理",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "个人护理",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 0.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM8",
+      "GDP_COMPONENTDesc": "家居管理开销",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM7",
+      "GDP_COMPONENTDesc": "家具及家居设备",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 7.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM6",
+      "GDP_COMPONENTDesc": "燃料及电力",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 0.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM5",
+      "GDP_COMPONENTDesc": "租金、差饷、水费及房屋维修费用",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM4",
+      "GDP_COMPONENTDesc": "衣履及其他个人用品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": -1.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "烟草",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": -6.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM2",
+      "GDP_COMPONENTDesc": "含酒精饮品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 7.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM14",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 4.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM13",
+      "GDP_COMPONENTDesc": "教育",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM12",
+      "GDP_COMPONENTDesc": "娱乐及消遣",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM11",
+      "GDP_COMPONENTDesc": "交通及通讯",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": -0.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM10",
+      "GDP_COMPONENTDesc": "医疗及保健",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 2.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM1",
+      "GDP_COMPONENTDesc": "食品及不含酒精饮品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": -0.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "个人护理",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 71312,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM8",
+      "GDP_COMPONENTDesc": "家居管理开销",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 46459,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM7",
+      "GDP_COMPONENTDesc": "家具及家居设备",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 109469,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM6",
+      "GDP_COMPONENTDesc": "燃料及电力",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 25199,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM5",
+      "GDP_COMPONENTDesc": "租金、差饷、水费及房屋维修费用",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 344233,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM4",
+      "GDP_COMPONENTDesc": "衣履及其他个人用品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 194386,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "烟草",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 5486,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM2",
+      "GDP_COMPONENTDesc": "含酒精饮品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 12124,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM14",
+      "GDP_COMPONENTDesc": "其他服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 664687,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM13",
+      "GDP_COMPONENTDesc": "教育",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 67535,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM12",
+      "GDP_COMPONENTDesc": "娱乐及消遣",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 147071,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM11",
+      "GDP_COMPONENTDesc": "交通及通讯",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 154047,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM10",
+      "GDP_COMPONENTDesc": "医疗及保健",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 119502,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM1",
+      "GDP_COMPONENTDesc": "食品及不含酒精饮品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 225212,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 2186722,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "个人护理",
+      "freq": "Y",
+      "period": "1970",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "本地市场内的消费开支",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 2138720,
+      "sd_value": "r"
+    }
+  ]
+}

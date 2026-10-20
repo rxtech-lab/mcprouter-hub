@@ -1,0 +1,848 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-32032&api_popup=1"
+    },
+    "title": "Gross domestic fixed capital formation (GDFCF) by component in chained (2024) dollars",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated.",
+      "The chained (2024) dollar series is derived by extrapolation of the current price value for the reference year (2024) backward and forward using the chain volume index as the extrapolator.  As the extrapolation process is carried out for GDFCF and its components independently in calculating the chained dollar series, discrepancies may exist between the chain volume measure of GDFCF and the sum of the chain volume measures of its components.",
+      "Costs of ownership transfer are classified to the private sector.",
+      "r Revised figure",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 82,
+      "started": "2026-10-20T17:47:57+00:00",
+      "finished": "2026-10-20T17:47:57+00:00",
+      "durationSeconds": 0.249042
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 89950,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 72561,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 15818,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "Costs of ownership transfer",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 5878,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 54973,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 41542,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 12726,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "Machinery, equipment and intellectual property products",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 4613,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 4320,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 302,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 27663,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 21429,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 5613,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "Costs of ownership transfer",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 3943,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 18966,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 14167,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 4544,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "Machinery, equipment and intellectual property products",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 2344,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 2222,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 125,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -22.3,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -24.3,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -12.3,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "Costs of ownership transfer",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -11.3,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -17.6,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -12.9,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "Machinery, equipment and intellectual property products",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -25.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 17.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "Costs of ownership transfer",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -54,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.5,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 17.1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "Machinery, equipment and intellectual property products",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -12.7,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.8,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 19.6,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 27.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "Machinery, equipment and intellectual property products",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 23.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -22.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 19.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "Costs of ownership transfer",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 57.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -33.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 34.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "Machinery, equipment and intellectual property products",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 25.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "Costs of ownership transfer",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 37.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -15.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 12527,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 49772,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "Machinery, equipment and intellectual property products",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 62299,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 36336,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 102121,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 138457,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "Costs of ownership transfer",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 10813,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 23809,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 41536,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 65345,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 55899,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 180215,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "ME",
+      "GDP_COMPONENTDesc": "Machinery, equipment and intellectual property products",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 236114,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 194141,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 360028,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 554169,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "COT",
+      "GDP_COMPONENTDesc": "Costs of ownership transfer",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 29872,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PU",
+      "GDP_COMPONENTDesc": "Public sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 138242,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC_PR",
+      "GDP_COMPONENTDesc": "Private sector",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 149941,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 288183,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Q",
+      "period": "197503",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "BC",
+      "GDP_COMPONENTDesc": "Building and construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 318909,
+      "sd_value": "r"
+    }
+  ]
+}

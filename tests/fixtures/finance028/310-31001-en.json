@@ -1,0 +1,205 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-31001&api_popup=1"
+    },
+    "title": "Gross Domestic Product (GDP), implicit price deflator of GDP and per capita GDP",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated. Changes over time in the GDP at current prices can be factored into two components, reflecting:  (i)  changes in the prices of goods and services produced or purchased ; and  (ii) changes in their volumes. Changes in chained dollar estimates of GDP reflect changes in the volumes of goods and services produced or purchased from one period to another.  The effect of changes in prices has been removed. The rate of change of GDP in real terms for 2026 is forecast to be 3.5% to 4.5%.   For more information on the forecast of GDP, please visit the website of the Office of the Government Economist.",
+      "r Revised figure",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%.",
+      "- Not applicable"
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 3329843,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 842406,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.5,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.9,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 3301474,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "HK$ million",
+      "figure": 824319,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.6,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DEF",
+      "svDesc": "Index (Year 2024=100)",
+      "figure": 100.9,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DEF",
+      "svDesc": "Index (Year 2024=100)",
+      "figure": 102.2,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DEF",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.9,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DEF",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.4,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": "",
+      "sd_value": "-,r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA1",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": -0.6,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CURPGDP",
+      "svDesc": "HK$",
+      "figure": 444044,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CURPGDP",
+      "svDesc": "HK$",
+      "figure": "",
+      "sd_value": "-,r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CURPGDP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.8,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CURPGDP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-,r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CONPGDP",
+      "svDesc": "HK$",
+      "figure": 440261,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CONPGDP",
+      "svDesc": "HK$",
+      "figure": "",
+      "sd_value": "-,r"
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CONPGDP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CONPGDP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-,r"
+    },
+    {
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-31004&api_popup=1"
+    },
+    "title": "Component contribution to year-on-year percentage change in real terms of Gross Domestic Product (GDP)",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated. Figures may not add up to the total due to rounding.",
+      "Figures are compiled based on the change of ownership principle in recording goods sent abroad for processing and merchanting under the standards stipulated in the System of National Accounts 2008.",
+      "[φ42] Figure denotes between (but not equal to) +/- 0.05% point.",
+      "r Revised figure"
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 3.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CIV",
+      "GDP_COMPONENTDesc": "Changes in inventories",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 1.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 0.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 0.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "Imports of goods (f.o.b.)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": -19.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": -0.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 1.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "Exports of goods (f.o.b.)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 18.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 1.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CIV",
+      "GDP_COMPONENTDesc": "Changes in inventories",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 0,
+      "sd_value": "r,[φ42]"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 0.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "Imports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": -50.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": -0.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "Exports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 49.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "% point",
+      "figure": 0.9,
+      "sd_value": "r"
+    }
+  ]
+}

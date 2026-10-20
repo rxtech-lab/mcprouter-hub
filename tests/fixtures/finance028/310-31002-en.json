@@ -1,0 +1,531 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-31002&api_popup=1"
+    },
+    "title": "Gross Domestic Product (GDP) by major expenditure component at current market prices",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated. Gross Domestic Product = private consumption expenditure + government consumption expenditure + gross domestic fixed capital formation + changes in inventories + exports of goods and services - imports of goods and services Final demand  = domestic demand + exports of goods and services Domestic demand = private consumption expenditure + government consumption expenditure + gross domestic fixed capital formation + changes in inventories",
+      "Figures are compiled based on the change of ownership principle in recording goods sent abroad for processing and merchanting under the standards stipulated in the System of National Accounts 2008.  Users should note that the figures of exports and imports of goods in this table are different from those published in external merchandise trade statistics which are not compiled based on the change of ownership principle.",
+      "r Revised figure",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 3329843,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CIV",
+      "GDP_COMPONENTDesc": "Changes in inventories",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 44403,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "DD",
+      "GDP_COMPONENTDesc": "Domestic demand",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 3232899,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FD",
+      "GDP_COMPONENTDesc": "Final demand",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 9890091,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 418768,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 563949,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "Imports of goods (f.o.b.)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 5831920,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MGS",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Imports of goods and services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 6560248,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 728328,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2205779,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "Exports of goods (f.o.b.)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 5758766,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XGS",
+      "GDP_COMPONENTDesc": "Exports of goods and services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 6657192,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 898426,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 842406,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CIV",
+      "GDP_COMPONENTDesc": "Changes in inventories",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 28737,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "DD",
+      "GDP_COMPONENTDesc": "Domestic demand",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 862987,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FD",
+      "GDP_COMPONENTDesc": "Final demand",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 3104096,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 101633,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 149290,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "Imports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2073310,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MGS",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Imports of goods and services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2261690,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 188380,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 583327,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "Exports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2014209,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XGS",
+      "GDP_COMPONENTDesc": "Exports of goods and services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2241109,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 226900,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "DD",
+      "GDP_COMPONENTDesc": "Domestic demand",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FD",
+      "GDP_COMPONENTDesc": "Final demand",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "Imports of goods (f.o.b.)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 17.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MGS",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Imports of goods and services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 15.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "Exports of goods (f.o.b.)",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 16.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XGS",
+      "GDP_COMPONENTDesc": "Exports of goods and services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 15,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "DD",
+      "GDP_COMPONENTDesc": "Domestic demand",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "FD",
+      "GDP_COMPONENTDesc": "Final demand",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 29.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "Government consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GDFCF",
+      "GDP_COMPONENTDesc": "Gross domestic fixed capital formation",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MG",
+      "GDP_COMPONENTDesc": "Imports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 45.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MGS",
+      "GDP_COMPONENTDesc": "<u><i>Less:</i></u> Imports of goods and services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 41.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "MS",
+      "GDP_COMPONENTDesc": "Imports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.7,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PCE",
+      "GDP_COMPONENTDesc": "Private consumption expenditure",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XG",
+      "GDP_COMPONENTDesc": "Exports of goods (f.o.b.)",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 45,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XGS",
+      "GDP_COMPONENTDesc": "Exports of goods and services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 40.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "XS",
+      "GDP_COMPONENTDesc": "Exports of services",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "",
+      "GDP_COMPONENTDesc": "Total",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    }
+  ]
+}

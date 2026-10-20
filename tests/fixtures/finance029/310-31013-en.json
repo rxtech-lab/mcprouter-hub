@@ -1,0 +1,646 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=310-31013&api_popup=1"
+    },
+    "title": "Consumption expenditure in the domestic market (CXDM) by commodity and service group at current market prices",
+    "tablenote": [
+      "In Hong Kong, the first released figures on GDP by expenditure component in respect of a period are called \"advance estimates\".  When more data become available, the figures will be revised.  All those figures published subsequently, after the advance estimates, are called \"revised figures\".  These \"revised figures\" are still subject to further regular revision later on when more data are incorporated.  This routine revision is in accordance with the international practice to compile and release GDP figures at the earliest possible time by using only partial data.  In general, the figures are finalised when finalised data from all regular sources are incorporated.",
+      "r Revised figure",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "National Income Section (1)1, Census and Statistics Department (Enquiry telephone no. : 3863 2727  Enquiry e-mail : gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 62,
+      "started": "2026-10-20T17:47:21+00:00",
+      "finished": "2026-10-20T17:47:21+00:00",
+      "durationSeconds": 0.052227
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 10950,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM1",
+      "GDP_COMPONENTDesc": "Food and non-alcoholic beverages",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 3145,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM10",
+      "GDP_COMPONENTDesc": "Medical care and health expenses",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 320,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM11",
+      "GDP_COMPONENTDesc": "Transport and communication",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 710,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM12",
+      "GDP_COMPONENTDesc": "Recreation and entertainment",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 716,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM13",
+      "GDP_COMPONENTDesc": "Education",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 202,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM14",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 941,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM2",
+      "GDP_COMPONENTDesc": "Alcoholic beverages",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 231,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "Tobacco",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 238,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM4",
+      "GDP_COMPONENTDesc": "Clothing, footwear and other personal effects",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 1600,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM5",
+      "GDP_COMPONENTDesc": "Rent, rates, water and housing maintenance charges",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 1588,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM6",
+      "GDP_COMPONENTDesc": "Fuel and light",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 190,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM7",
+      "GDP_COMPONENTDesc": "Furniture, furnishings and household equipment",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 687,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM8",
+      "GDP_COMPONENTDesc": "Household operation",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 164,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "Personal care",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 218,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM1",
+      "GDP_COMPONENTDesc": "Food and non-alcoholic beverages",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM10",
+      "GDP_COMPONENTDesc": "Medical care and health expenses",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM11",
+      "GDP_COMPONENTDesc": "Transport and communication",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM12",
+      "GDP_COMPONENTDesc": "Recreation and entertainment",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM13",
+      "GDP_COMPONENTDesc": "Education",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM14",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM2",
+      "GDP_COMPONENTDesc": "Alcoholic beverages",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "Tobacco",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM4",
+      "GDP_COMPONENTDesc": "Clothing, footwear and other personal effects",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM5",
+      "GDP_COMPONENTDesc": "Rent, rates, water and housing maintenance charges",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM6",
+      "GDP_COMPONENTDesc": "Fuel and light",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM7",
+      "GDP_COMPONENTDesc": "Furniture, furnishings and household equipment",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM8",
+      "GDP_COMPONENTDesc": "Household operation",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "Personal care",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "Personal care",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM8",
+      "GDP_COMPONENTDesc": "Household operation",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM7",
+      "GDP_COMPONENTDesc": "Furniture, furnishings and household equipment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM6",
+      "GDP_COMPONENTDesc": "Fuel and light",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM5",
+      "GDP_COMPONENTDesc": "Rent, rates, water and housing maintenance charges",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM4",
+      "GDP_COMPONENTDesc": "Clothing, footwear and other personal effects",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "Tobacco",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM2",
+      "GDP_COMPONENTDesc": "Alcoholic beverages",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM14",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.9,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM13",
+      "GDP_COMPONENTDesc": "Education",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.8,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM12",
+      "GDP_COMPONENTDesc": "Recreation and entertainment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM11",
+      "GDP_COMPONENTDesc": "Transport and communication",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM10",
+      "GDP_COMPONENTDesc": "Medical care and health expenses",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.6,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM1",
+      "GDP_COMPONENTDesc": "Food and non-alcoholic beverages",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM9",
+      "GDP_COMPONENTDesc": "Personal care",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 71083,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM8",
+      "GDP_COMPONENTDesc": "Household operation",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 47221,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM7",
+      "GDP_COMPONENTDesc": "Furniture, furnishings and household equipment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 106874,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM6",
+      "GDP_COMPONENTDesc": "Fuel and light",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 25412,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM5",
+      "GDP_COMPONENTDesc": "Rent, rates, water and housing maintenance charges",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 358869,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM4",
+      "GDP_COMPONENTDesc": "Clothing, footwear and other personal effects",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 192686,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "Tobacco",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 5825,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM2",
+      "GDP_COMPONENTDesc": "Alcoholic beverages",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 11883,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM14",
+      "GDP_COMPONENTDesc": "Other services",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 672701,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM13",
+      "GDP_COMPONENTDesc": "Education",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 70020,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM12",
+      "GDP_COMPONENTDesc": "Recreation and entertainment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 147490,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM11",
+      "GDP_COMPONENTDesc": "Transport and communication",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 153315,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM10",
+      "GDP_COMPONENTDesc": "Medical care and health expenses",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 122044,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM1",
+      "GDP_COMPONENTDesc": "Food and non-alcoholic beverages",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 225043,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2210466,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CXDM3",
+      "GDP_COMPONENTDesc": "Tobacco",
+      "freq": "Y",
+      "period": "1994",
+      "sv": "CUR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "CXDM",
+      "GDP_COMPONENTDesc": "Consumption expenditure in the domestic market",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CUR",
+      "svDesc": "HK$ million",
+      "figure": 2138720,
+      "sd_value": "r"
+    }
+  ]
+}

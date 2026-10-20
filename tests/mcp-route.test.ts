@@ -9,6 +9,8 @@ import { setCacheForTesting } from "@/lib/mcp/cache";
 import { createServiceRoute } from "@/lib/mcp/handler";
 import { NO_SERVICES } from "@/lib/service-selection";
 import { transportCases } from "./transport003-cases";
+import { financeCases } from "./finance028-cases";
+import { expenditureCases } from "./finance029-cases";
 
 /**
  * Drives the MCP endpoint the way a client does: JSON-RPC over streamable
@@ -93,6 +95,68 @@ afterEach(() => {
   vi.unstubAllGlobals();
   setCacheForTesting(null);
   globalThis.fetch = realFetch;
+});
+
+describe("Finance batch 028 MCP routes", () => {
+  it.each(financeCases)("discovers and calls $tool on the scoped route", async ({ tool, input, request, reply, data }) => {
+    const service = services.find((candidate) => candidate.id === "censtatd-gdp")!;
+    const route = createServiceRoute(() => [service]);
+    const options = { path: "/api/mcp/s/censtatd-gdp/streamable", scopes: service.id };
+    const listed = await rpc(route, "tools/list", {}, options);
+    expect(listed.result!.tools!.map((entry) => entry.name)).toEqual(service.tools.map((entry) => entry.name));
+    fetchMock.mockImplementation(async (url) => {
+      expect(url).toBe(request.url);
+      return Response.json(reply);
+    });
+    const called = await rpc(route, "tools/call", { name: tool, arguments: input }, options);
+    expect(called.result!.isError).toBeFalsy();
+    expect(JSON.parse(called.result!.content![0].text).data).toEqual(data);
+    const invalid = await rpc(route, "tools/call", { name: tool, arguments: { limit: 101 } }, options);
+    expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("returns actionable tool errors for GDP upstream failures", async () => {
+    fetchMock.mockResolvedValueOnce(new Response("Maintenance", { status: 503 }));
+    const result = await callTool("gdp_and_per_capita", {});
+    expect(result.isError).toBe(true);
+    expect(result.content![0].text).toContain("503");
+    fetchMock.mockResolvedValueOnce(Response.json({ header: { status: { name: "Fail", code: 1 } } }));
+    const failed = await callTool("gdp_and_per_capita", {});
+    expect(failed.isError).toBe(true);
+    expect(failed.content![0].text).toContain("official web table");
+  });
+});
+
+describe("Finance batch 029 MCP routes", () => {
+  it.each(expenditureCases)("discovers and calls $tool on the scoped route", async ({ tool, input, request, reply, data }) => {
+    const service = services.find((candidate) => candidate.id === "censtatd-gdp-expenditure")!;
+    const route = createServiceRoute(() => [service]);
+    const options = { path: "/api/mcp/s/censtatd-gdp-expenditure/streamable", scopes: service.id };
+    const listed = await rpc(route, "tools/list", {}, options);
+    expect(listed.result!.tools!.map((entry) => entry.name)).toEqual(service.tools.map((entry) => entry.name));
+    fetchMock.mockImplementation(async (url) => {
+      expect(url).toBe(request.url);
+      return Response.json(reply);
+    });
+    const called = await rpc(route, "tools/call", { name: tool, arguments: input }, options);
+    expect(called.result!.isError).toBeFalsy();
+    expect(JSON.parse(called.result!.content![0].text).data).toEqual(data);
+    const invalid = await rpc(route, "tools/call", { name: tool, arguments: { limit: 101 } }, options);
+    expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("returns actionable tool errors for GDP upstream failures", async () => {
+    fetchMock.mockResolvedValueOnce(new Response("Maintenance", { status: 503 }));
+    const result = await callTool("gce_components_current", {});
+    expect(result.isError).toBe(true);
+    expect(result.content![0].text).toContain("503");
+    fetchMock.mockResolvedValueOnce(Response.json({ header: { status: { name: "Fail", code: 1 } } }));
+    const failed = await callTool("gce_components_current", {});
+    expect(failed.isError).toBe(true);
+    expect(failed.content![0].text).toContain("official web table");
+  });
 });
 
 describe("transport batch 003 MCP routes", () => {

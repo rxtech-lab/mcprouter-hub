@@ -1,0 +1,367 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=310-32022&api_popup=1"
+    },
+    "title": "按组成部分划分的政府消费开支 - 以2024年环比物量计算",
+    "tablenote": [
+      "在香港，首次公布的某一期间的按开支组成部分划分的本地生产总值数字称为「预先估计数字」。当获得更多数据后，这些数字会作出修订。继预先估计数字后公布的所有数字均称为「修订数字」。这些「修订数字」在纳入更多数据后，在日后仍会作出进一步定期修订。这例行修订符合国际一贯的做法，即尽早采用部分数据来编制和公布本地生产总值数字。一般而言，已采纳了全部定期资料来源所得的最终数据编制而成的数字，则为最终的数字。",
+      "以2024年环比物量计算的价值是应用环比物量指数作为外推指标，以外推法把参照年2024年的以当时价格计算的数值向前及向后推算。由于在编制以环比物量计算的数列时，政府消费开支及其组成部分的外推过程是独立地进行，所以以环比物量计算的政府消费开支与其以环比物量计算的组成部分的总和可能出现差额。",
+      "r 修订数字",
+      "N.A. 没有数字",
+      "[φ3] 数字代表增减少于 0.05%。"
+    ],
+    "source": "政府统计处国民收入统计组（一）一 (查询电话 : 3863 2727  查询电邮：gdp-e@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 34,
+      "started": "2026-10-20T17:47:56+00:00",
+      "finished": "2026-10-20T17:47:56+00:00",
+      "durationSeconds": 0.096826
+    }
+  },
+  "dataSet": [
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 23839,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 25050,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "购买货品及服务",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 5826,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "非参与商业活动政府部门售予住户及企业的销售额",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 3870,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 8344,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 9773,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "购买货品及服务",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 3099,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "非参与商业活动政府部门售予住户及企业的销售额",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 1462,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Y",
+      "period": "1966",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 11.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3.2,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "购买货品及服务",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 25.5,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "非参与商业活动政府部门售予住户及企业的销售额",
+      "freq": "Y",
+      "period": "1967",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Q",
+      "period": "197303",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "购买货品及服务",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 8.7,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "非参与商业活动政府部门售予住户及企业的销售额",
+      "freq": "Q",
+      "period": "197403",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3.5,
+      "sd_value": ""
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "非参与商业活动政府部门售予住户及企业的销售额",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 4.4,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "购买货品及服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 0,
+      "sd_value": "r,[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": -0.1,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "非参与商业活动政府部门售予住户及企业的销售额",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "购买货品及服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 2.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1.5,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 1.2,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "非参与商业活动政府部门售予住户及企业的销售额",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 8443,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "购买货品及服务",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 43689,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 98330,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 63084,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "SAL",
+      "GDP_COMPONENTDesc": "非参与商业活动政府部门售予住户及企业的销售额",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 32716,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "PU",
+      "GDP_COMPONENTDesc": "购买货品及服务",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 196215,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 413344,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 249845,
+      "sd_value": "r"
+    },
+    {
+      "GDP_COMPONENT": "GCE",
+      "GDP_COMPONENTDesc": "政府消费开支",
+      "freq": "Q",
+      "period": "198212",
+      "sv": "CON",
+      "svDesc": "按年变动百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "GDP_COMPONENT": "CE",
+      "GDP_COMPONENTDesc": "雇员报酬",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CON",
+      "svDesc": "百万港元",
+      "figure": 246908,
+      "sd_value": "r"
+    }
+  ]
+}
