@@ -1,3 +1,4 @@
+import { AGENT_TOOL_STEPS, GUEST_AGENT_TOOL_STEPS } from "@/lib/agent/stop";
 import { validateUIMessages, type UIMessage } from "ai";
 import { cookies } from "next/headers";
 import { DEFAULT_AGENT_SERVERS, resolveServer } from "@/lib/agent/mcp-servers";
@@ -75,7 +76,7 @@ export async function POST(request: Request) {
     servers,
     messages,
     model: user ? (process.env.AI_MODEL ?? config.model) : config.model,
-    maxSteps: user ? 10 : 6,
+    maxSteps: user ? AGENT_TOOL_STEPS : GUEST_AGENT_TOOL_STEPS,
     headers,
   });
 }

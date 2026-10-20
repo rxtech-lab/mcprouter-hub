@@ -325,4 +325,7 @@ const builders: Record<string, (result: CardInput, operator: Operator) => Card> 
   tram_stops: tramStops,
 };
 
-export const buildCard: CardBuilder = (result) => builders[result.tool]?.(result, operatorOf(result.tool)) ?? null;
+export const buildCard: CardBuilder = (result) => {
+  const action = result.tool === "bus" ? String(result.input?.action) : result.tool;
+  return builders[action]?.(result, operatorOf(action)) ?? null;
+};

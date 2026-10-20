@@ -1,6 +1,7 @@
 import { parse as parseYaml } from "yaml";
 import { renderApisMarkdown, resolveApis } from "./apis";
 import { serviceSpec, type ParamSpec, type ServiceSpec } from "./schema";
+import { combinedDescription } from "./combined";
 
 /**
  * Pure part of the code generator: YAML text in, file contents out. The CLI in
@@ -137,12 +138,13 @@ export function generateServiceModule(spec: ServiceSpec, appScript?: string | nu
     'import { registerServices } from "@/lib/mcp/register";',
     'import type { CallerContext, ServiceDefinition } from "@/lib/mcp/types";',
     ...(usesHandlers ? [`import * as handlers from "@/mcp/services/${spec.id}/handlers";`] : []),
+    ...(spec.combinedTool ? ['import { combineServiceTools } from "@/lib/mcp/combined";'] : []),
     "",
-    `export const service: ServiceDefinition = ${serviceJson},`,
+    `export const service: ServiceDefinition = ${spec.combinedTool ? "combineServiceTools(" : ""}${serviceJson},`,
     "  tools: [",
     ...toolBlocks.map((block) => `    ${block},`),
     "  ],",
-    "};",
+    spec.combinedTool ? "});" : "};",
     "",
     "export function registerTools(server: McpServer, caller: CallerContext) {",
     "  registerServices(server, [service], caller);",
@@ -192,7 +194,7 @@ export function buildManifest(specs: ServiceSpec[]): Manifest {
       aliases: spec.aliases,
       datasets: spec.datasets,
       apis: spec.apis,
-      tools: spec.tools.map((tool) => ({ name: tool.name, description: tool.description })),
+      tools: spec.combinedTool ? [{ name: spec.combinedTool, description: combinedDescription(spec.description, spec.tools) }] : spec.tools.map((tool) => ({ name: tool.name, description: tool.description })),
     })),
     datasets: Object.fromEntries(Object.entries(datasets).sort(([a], [b]) => a.localeCompare(b))),
   };

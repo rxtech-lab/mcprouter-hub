@@ -1,0 +1,10 @@
+version: 1
+name: mapbox-directions
+slug: mapbox-directions
+protocol: http
+port: 4904
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

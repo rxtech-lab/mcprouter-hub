@@ -5,15 +5,16 @@ import { trackChatMessage } from "@/lib/analytics";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { ArrowUp, ChevronDown, ChevronUp, CircleAlert, Maximize2, MessageSquareText, Minimize2, RotateCcw, Square } from "lucide-react";
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { Button, IconButton } from "@/components/m3/button";
 import { cn } from "@/components/m3/cn";
 import type { ChatAllowance as Allowance } from "@/lib/chat-allowance";
 import { ChatAllowance } from "./chat-allowance";
 import { useT } from "@/lib/i18n/client";
-import { MessageParts, SUGGESTIONS, TypingDots } from "./chat-panel";
+import { MessageParts, SUGGESTIONS, toTurns, TypingDots } from "./chat-panel";
 import { McpAppHost } from "./tool-app";
+import { useTurnScroll } from "./use-turn-scroll";
 
 /** Below Tailwind's `md` breakpoint the chat leaves the hero and docks at the bottom of the screen. */
 const mobileQuery = "(max-width: 767px)";
@@ -58,7 +59,6 @@ export function HeroChat() {
   const [input, setInput] = useState("");
   const [allowance, setAllowance] = useState<Allowance | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const scroller = useRef<HTMLDivElement>(null);
   const mobile = useSyncExternalStore(subscribeToMobile, () => window.matchMedia(mobileQuery).matches, () => false);
   const [expanded, setExpanded] = useState(false);
   const open = !mobile || expanded;
@@ -72,6 +72,9 @@ export function HeroChat() {
     },
   });
   const busy = status === "submitted" || status === "streaming";
+  const turns = useMemo(() => toTurns(messages), [messages]);
+  const lastTurnId = turns.at(-1)?.id;
+  const { scroller, viewportHeight } = useTurnScroll(lastTurnId, `${mobile}-${open}-${fullScreen}`);
 
   // Restore the last conversation once mounted (localStorage isn't available while server rendering).
   const restored = useRef(false);
@@ -87,12 +90,6 @@ export function HeroChat() {
   const quota = allowance?.kind === "guest" ? allowance.quota : null;
   const usedUp = quota?.remaining === 0;
   const unavailable = allowance === null;
-
-  // Follow the answer as it streams in.
-  useEffect(() => {
-    const element = scroller.current;
-    if (element) element.scrollTo({ top: element.scrollHeight, behavior: "smooth" });
-  }, [messages, status]);
 
   const send = (text: string) => {
     if (!text.trim() || busy || usedUp || unavailable) return;
@@ -209,7 +206,7 @@ export function HeroChat() {
       <div id="try-body" inert={!open} className={cn("flex min-h-0 flex-1 flex-col transition-opacity duration-300 ease-emphasized", open ? "opacity-100 delay-100" : "opacity-0")}>
         {/* Full screen scrolls edge to edge; only the conversation itself stays at a readable width. */}
         <div ref={scroller} className="min-h-0 flex-1 overflow-y-auto px-5 py-4" aria-live="polite">
-          <div className={cn("h-full", fullScreen && "mx-auto max-w-3xl")}>
+          <div className={cn(messages.length === 0 ? "h-full" : "min-h-full", fullScreen && "mx-auto max-w-3xl")}>
             {messages.length === 0 ? (
               <div className="flex h-full flex-col justify-end gap-3">
                 <p className="max-w-[85%] rounded-lg rounded-bl-xs bg-surface-container-high px-4 py-2 type-body-medium">
@@ -232,22 +229,21 @@ export function HeroChat() {
             ) : (
               <McpAppHost canCallTools={false} sendMessage={askFromApp}>
                 <ul className="flex flex-col gap-4">
-                  {messages.map((message) =>
-                    message.role === "user" ? (
-                      <li key={message.id} className="max-w-[85%] self-end rounded-lg rounded-br-xs bg-primary px-4 py-2 type-body-medium text-on-primary" data-testid="user-message">
-                        <MessageParts message={message} />
-                      </li>
-                    ) : (
-                      <li key={message.id} className="type-body-medium" data-testid="agent-message">
-                        <MessageParts message={message} onAnswer={send} inputDisabled={message.id !== messages.at(-1)?.id || busy || usedUp || unavailable} />
-                      </li>
-                    ),
-                  )}
-                  {busy ? (
-                    <li>
-                      <TypingDots />
+                  {turns.map((turn) => (
+                    <li key={turn.id} data-turn={turn.id} className="flex flex-col gap-4" style={{ minHeight: turn.id === lastTurnId ? viewportHeight : undefined }}>
+                      {turn.user ? (
+                        <div className="max-w-[85%] self-end rounded-lg rounded-br-xs bg-primary px-4 py-2 type-body-medium text-on-primary" data-testid="user-message">
+                          <MessageParts message={turn.user} />
+                        </div>
+                      ) : null}
+                      {turn.replies.map((message) => (
+                        <div key={message.id} className="type-body-medium" data-testid="agent-message">
+                          <MessageParts message={message} onAnswer={send} inputDisabled={message.id !== messages.at(-1)?.id || busy || usedUp || unavailable} />
+                        </div>
+                      ))}
+                      {busy && turn.id === lastTurnId ? <TypingDots /> : null}
                     </li>
-                  ) : null}
+                  ))}
                 </ul>
               </McpAppHost>
             )}

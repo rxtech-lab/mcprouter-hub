@@ -7,8 +7,8 @@ import { rankTools } from "@/lib/agent/tool-search";
 
 const fetchMock = vi.fn<typeof fetch>();
 function call(name: string, input: Record<string, unknown> = {}) {
-  const service = services.find((service) => service.tools.some((tool) => tool.name === name))!;
-  return executeTool(service, service.tools.find((tool) => tool.name === name)!, input);
+  const service = services.find((service) => service.tools.some((tool) => tool.name === name || tool.operations?.some((operation) => operation.name === name)))!;
+  return executeTool(service, service.tools.flatMap((tool) => tool.operations ?? [tool]).find((tool) => tool.name === name)!, input);
 }
 
 beforeEach(() => {
@@ -23,7 +23,7 @@ describe("transport batch 003", () => {
   it("registers each supported stable API exactly once and leaves blocked sources undeclared", () => {
     const supported: Record<string, string> = {
       "API-1237": "cad-paragliding", "API-1264": "cedd-piers", "API-1427": "hk-border",
-      "API-0029": "kowloon-east-parking", "API-1541": "dpo-bus-stop", "API-1825": "epd-ev-chargers",
+      "API-0029": "kowloon-east-parking", "API-1541": "hk-bus", "API-1825": "epd-ev-chargers",
       "API-1969": "gpa-carparks", "API-1984": "hyd-barrier-fence",
     };
     for (const [id, serviceId] of Object.entries(supported)) {
@@ -35,7 +35,7 @@ describe("transport batch 003", () => {
   it.each([
     ["paragliding activity areas", "cad_paragliding_areas"], ["public piers", "cedd_public_piers"],
     ["public EV chargers", "epd_public_ev_chargers"], ["barrier fences", "hyd_barrier_fences"],
-    ["government public car parks", "gpa_public_carparks"], ["DPO bus stop routes", "dpo_bus_stop_routes"],
+    ["government public car parks", "gpa_public_carparks"], ["DPO bus stop routes", "bus"],
   ])("discovers %s by ordinary text search", (query, expected) => {
     const candidates = services.flatMap((service) => service.tools.map((tool) => ({ name: tool.name, description: tool.description })));
     expect(rankTools(query, candidates).slice(0, 8)).toContain(expected);

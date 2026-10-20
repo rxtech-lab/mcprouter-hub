@@ -176,6 +176,8 @@ export const serviceSpec = z
       .strict()
       .optional(),
     cacheTtl: z.number().int().nonnegative().default(300),
+    /** Expose these operations through one tool with an action selector. */
+    combinedTool: z.string().regex(identifier).optional(),
     app: appSpec.optional(),
     tools: z.array(toolSpec).min(1),
   })

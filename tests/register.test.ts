@@ -37,7 +37,7 @@ describe("registerServices", () => {
   it("registers buses and minibuses together under one service", () => {
     const { names, server } = fakeServer();
     registerServices(server, services, { userId: "u", apiKeyId: "k", scopes: ["hk-bus"] });
-    for (const prefix of ["kmb_", "citybus_", "gmb_"]) expect(names.some((name) => name.startsWith(prefix)), prefix).toBe(true);
+    expect(names).toEqual(["bus"]);
   });
 
   it("registers one MCP App per service and points its tools at it", async () => {

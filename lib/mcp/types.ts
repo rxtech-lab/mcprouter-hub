@@ -40,6 +40,8 @@ export type ToolDefinition = {
   description: string;
   spec: Omit<ToolSpec, "handler">;
   inputSchema: z.ZodObject;
+  /** Internal operations of a single public tool; never registered separately. */
+  operations?: ToolDefinition[];
   handler?: ToolHandler;
   transformRequest?: RequestTransformer;
   transformResponse?: ResponseTransformer;

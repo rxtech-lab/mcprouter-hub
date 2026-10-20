@@ -2,6 +2,10 @@
 // arrival boards, and tram routes and stops, each drawn in its operator's colours.
 import { app, fmt, h, mount, setAccent, ui, type Content, type Row, type View } from "../../apps/runtime";
 import { OPERATORS, operatorOf, type Operator } from "./operators";
+import { arrivalBoard } from "./arrival-board";
+import { ARRIVAL_STYLES } from "./arrival-styles";
+
+document.head.append(h("style", null, ARRIVAL_STYLES));
 
 function plural(count: number, word: string) {
   return `${count} ${word}${count === 1 ? "" : "s"}`;
@@ -22,11 +26,6 @@ function groupArrivals(rows: Row[]): Arrivals[] {
     groups.get(key)!.etas.push({ eta: row.eta, remark: fmt.pick(row, "rmk") });
   }
   return [...groups.values()];
-}
-
-function updated(rows: Row[]) {
-  const stamp = rows[0]?.data_timestamp;
-  return stamp ? `Updated ${fmt.time(stamp)}` : null;
 }
 
 // ------------------------------------------------------------ KMB and Citybus
@@ -107,28 +106,7 @@ function routeStops(view: View, operator: Operator) {
 function stopEta(view: View, operator: Operator) {
   const rows: Row[] = view.data ?? [];
   const groups = groupArrivals(rows);
-  app.every(30_000);
-  return [
-    ui.header({
-      badge: operator === OPERATORS.citybus ? (view.input.route ?? operator.badge) : operator.badge,
-      title: view.input.route ? `Route ${view.input.route} arrivals` : "Arrivals at this stop",
-      subtitle: h("span", { class: "mono" }, view.input.stopId ?? ""),
-      actions: [ui.refreshButton()],
-    }),
-    groups.length
-      ? ui.list(
-          groups.map((group) =>
-            ui.row({
-              leading: ui.badge(group.first.route),
-              title: `To ${fmt.title(fmt.pick(group.first, "dest"))}`,
-              subtitle: group.etas[0]?.remark || null,
-              trailing: ui.etaChips(group.etas),
-            }),
-          ),
-        )
-      : ui.empty("No buses are due at this stop right now."),
-    ui.footer(view, updated(rows)),
-  ];
+  return arrivalBoard(view, operator, groups);
 }
 
 function routeEta(view: View, operator: Operator) {
@@ -445,14 +423,16 @@ const views: Record<string, (view: View, operator: Operator) => Content> = {
 mount({
   accent: OPERATORS.kmb.accent,
   render(view) {
-    const operator = operatorOf(view.tool);
+    const tool = view.tool?.split("__").pop();
+    const action = tool === "bus" ? String(view.input.action) : tool;
+    const operator = operatorOf(action);
     setAccent(operator.accent, operator.onAccent);
     if (view.status === "loading") {
       const route = view.input.route ?? view.input.routeName;
       const label = route ? `Route ${route}` : view.input.search || view.input.stopId || operator.name;
       return [ui.header({ badge: operator.badge, title: label, subtitle: `Checking ${operator.name}…` }), ui.skeleton(3)];
     }
-    const draw = view.tool ? views[view.tool] : undefined;
+    const draw = action ? views[action] : undefined;
     return draw ? draw(view, operator) : ui.generic(view.data);
   },
 });

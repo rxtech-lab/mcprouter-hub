@@ -26,6 +26,21 @@ describe("show_map", () => {
       { ...map, routes: [{ label: "x", coordinates: Array(1001).fill(map.pins[0]) }] },
     ]) expect(mapSchema.safeParse(input).success).toBe(false);
   });
+
+  it("displays a labeled schematic connection using stop coordinates in order", async () => {
+    const stops = [
+      { label: "1. Boarding", latitude: 22.286, longitude: 114.158 },
+      { label: "2. Intermediate stop", latitude: 22.29, longitude: 114.16 },
+      { label: "3. Alighting", latitude: 22.294, longitude: 114.168 },
+    ];
+    const input = {
+      title: "Bus stops — schematic connection",
+      pins: stops,
+      routes: [{ label: "Stop connections (schematic, not road geometry)", coordinates: stops.map(({ latitude, longitude }) => ({ latitude, longitude })) }],
+    };
+    expect(await mapTools().show_map.execute!(input, { toolCallId: "stops", messages: [] } as never)).toEqual({ shown: true });
+    expect(mapSchema.parse(input).routes[0].coordinates).toEqual(stops.map(({ latitude, longitude }) => ({ latitude, longitude })));
+  });
 });
 
 describe("map geometry", () => {

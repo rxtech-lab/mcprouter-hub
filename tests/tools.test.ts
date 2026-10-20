@@ -37,7 +37,7 @@ type Case = {
 
 const BOM = "﻿";
 
-const toolsByName = new Map(services.flatMap((service) => service.tools.map((tool) => [tool.name, { service, tool }] as const)));
+const toolsByName = new Map(services.flatMap((service) => service.tools.flatMap((tool) => (tool.operations ?? [tool]).map((operation) => [operation.name, { service, tool: operation }] as const))));
 
 function find(name: string): { service: ServiceDefinition; tool: ToolDefinition } {
   const entry = toolsByName.get(name);

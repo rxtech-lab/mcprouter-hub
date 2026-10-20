@@ -2,7 +2,8 @@
 
 import type { UIMessage } from "ai";
 import { ArrowUp, ChevronDown, CircleAlert, CircleCheck, ExternalLink, LayoutDashboard, LoaderCircle, MapPin, Search, Sparkles, Square, Wrench } from "lucide-react";
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useTurnScroll } from "./use-turn-scroll";
 import { IconButton } from "@/components/m3/button";
 import { ACCOUNT_SUMMARY_TOOL_NAME, LIST_KEYS_TOOL_NAME, NAVIGATION_PART_TYPES, type DashboardNavigation } from "@/lib/agent/dashboard-tools";
 import { SHOW_TOOL_UI_TOOL_NAME, SHOW_UI_TOOL_NAME } from "@/lib/agent/display-tools";
@@ -17,7 +18,7 @@ import { REQUEST_LOCATION_TOOL_NAME, locationRequestSchema, parseLocationAnswer 
 import { UserInputCard } from "./user-input";
 import { REQUEST_INPUT_TOOL_NAME, userInputSchema } from "@/lib/agent/user-input";
 import { McpAppHost, ToolAppCard, toolPartApp } from "./tool-app";
-import { SHOW_MAP_TOOL_NAME, mapSchema } from "@/lib/agent/map";
+import { DRAW_ROUTE_TOOL_NAME, SHOW_MAP_TOOL_NAME, mapSchema } from "@/lib/agent/map";
 import { AgentMapCard, MapCanvas } from "./map";
 
 export const SUGGESTIONS = [
@@ -298,15 +299,15 @@ export function MessageParts({ message, onAnswer, inputDisabled = true }: { mess
       group.push(part);
       return;
     }
-    // Step markers sit between tool calls; they don't end a run.
-    if (part.type === "step-start") return;
+    // Invisible metadata and reasoning must not split a visible run of tool calls.
+    if (part.type === "step-start" || part.type === "reasoning" || part.type.startsWith("data-") || part.type === "source-url" || part.type === "source-document") return;
     if (part.type === "text" && !part.text.trim()) return;
     flush();
-    if (part.type === `tool-${SHOW_MAP_TOOL_NAME}`) {
-      const show = part as { state: ToolPart["state"]; input?: unknown; output?: { shown?: boolean } };
+    if (part.type === `tool-${SHOW_MAP_TOOL_NAME}` || part.type === `tool-${DRAW_ROUTE_TOOL_NAME}`) {
+      const show = part as { state: ToolPart["state"]; input?: unknown; output?: { shown?: boolean; map?: unknown } };
       if (isRunning(show.state)) nodes.push(<UiSkeleton key={index} />);
       else if (show.state === "output-available" && show.output?.shown) {
-        const parsed = mapSchema.safeParse(show.input);
+        const parsed = mapSchema.safeParse(part.type === `tool-${DRAW_ROUTE_TOOL_NAME}` ? show.output.map : show.input);
         if (parsed.success) nodes.push(<AgentMapCard key={index} map={parsed.data} />);
         else nodes.push(<p key={index} role="status" className="type-body-small text-error">{t("This map could not be displayed.")}</p>);
       } else if (show.state === "output-error" || show.state === "output-available") {
@@ -347,7 +348,7 @@ export function MessageParts({ message, onAnswer, inputDisabled = true }: { mess
 type Turn = { id: string; user?: UIMessage; replies: UIMessage[] };
 
 // A turn is a user message plus the agent replies that follow it.
-function toTurns(messages: UIMessage[]): Turn[] {
+export function toTurns(messages: UIMessage[]): Turn[] {
   const turns: Turn[] = [];
   for (const message of messages) {
     if (message.role === "user" || turns.length === 0) {
@@ -421,27 +422,10 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
   const [localInput, setLocalInput] = useState("");
   const input = inputValue ?? localInput;
   const setInput = onInputChange ?? setLocalInput;
-  const scroller = useRef<HTMLDivElement>(null);
-  const [viewportHeight, setViewportHeight] = useState<number>();
   const busy = status === "submitted" || status === "streaming";
   const turns = useMemo(() => toTurns(messages), [messages]);
   const lastTurnId = turns.at(-1)?.id;
-
-  // The last turn fills the viewport so a new question can scroll all the way to the top.
-  useLayoutEffect(() => {
-    const element = scroller.current;
-    if (!element) return;
-    const observer = new ResizeObserver(() => setViewportHeight(element.clientHeight));
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
-
-  // Scroll each new question to the top once; the answer then streams in below it.
-  useEffect(() => {
-    const element = scroller.current;
-    const turn = lastTurnId ? element?.querySelector<HTMLElement>(`[data-turn="${CSS.escape(lastTurnId)}"]`) : null;
-    if (element && turn) element.scrollTo({ top: turn.offsetTop, behavior: "smooth" });
-  }, [lastTurnId]);
+  const { scroller, viewportHeight } = useTurnScroll(lastTurnId);
 
   const send = (text: string) => {
     if (!text.trim() || busy || disabled) return;
