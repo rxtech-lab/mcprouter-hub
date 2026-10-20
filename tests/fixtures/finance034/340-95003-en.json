@@ -1,0 +1,1387 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=340-95003&api_popup=1"
+    },
+    "title": "Number of listed companies, total market capitalisation, average daily turnover of all listed securities, number of new issues of securities and funds raised from new issues of securities on Hong Kong Exchanges and Clearing Limited",
+    "tablenote": [
+      "Market turnover values have been adjusted for late reported and rejected sales.",
+      "Including debts securities and equity warrants.",
+      "Including debts securities, unit trusts/mutual funds, derivative warrants, equity warrants, callable bull/bear contracts and equity linked instruments.",
+      "Figures of main board include transfer of listing from GEM.",
+      "[-§25] Less than $0.5 million"
+    ],
+    "source": "Hong Kong Exchanges and Clearing Limited  (Enquiry telephone no.: 2840 3895  Enquiry e-mail: info@hkex.com.hk)",
+    "count": {
+      "noOfRecords": 136,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.077535
+    }
+  },
+  "dataSet": [
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 169,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 35,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 134,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 1244,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 128,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 1116,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 174,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 40,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 134,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 1158,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 116,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 1042,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 312,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 296,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 2374,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 417,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 1957,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 305,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 290,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 2443,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 493,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "LC",
+      "svDesc": "Number",
+      "figure": 1950,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 134.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 20.2,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 114.5,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 20942.3,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 5210.3,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 15732,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 134.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 33.3,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 101.4,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 17920.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 4577,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 13343.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 72.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 69.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 47319.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 9847.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 37471.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 67.7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 64.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 43256.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 10737,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH",
+      "SECURITIES_MARKETDesc": "Others",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "TMC",
+      "svDesc": "HK$ billion",
+      "figure": 32519.8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 537,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 68,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 469,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[-§25]"
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 68580,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 18879,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 30429,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 19272,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 516,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 82,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 434,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[-§25]"
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 64243,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 19248,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 28656,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 16340,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 141,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 136,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 249679,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 51904,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 142022,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 55752,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 116,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 113,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[-§25]"
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 289416,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 77644,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 141468,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVG_TURNOVER",
+      "svDesc": "HK$ million",
+      "figure": 70304,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 656,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 649,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 1280965,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 138456,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 310372,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 832137,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 244442,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 33962,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 210480,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 2762399,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 193504,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 93332,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 2475563,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 609601,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-H",
+      "SECURITIES_MARKETDesc": "H Shares",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 97518,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_EQ",
+      "SECURITIES_MARKETDesc": "Other equity stocks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 4521,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "FUND_RAISED",
+      "svDesc": "HK$ million",
+      "figure": 507562,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-ALL_EQ",
+      "SECURITIES_MARKETDesc": "All equity stocks",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 14551,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-ALL_EQ",
+      "SECURITIES_MARKETDesc": "All equity stocks",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 107,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 14444,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-ALL_EQ",
+      "SECURITIES_MARKETDesc": "All equity stocks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 3576,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-ALL_EQ",
+      "SECURITIES_MARKETDesc": "All equity stocks",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "201003",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 3563,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-ALL_EQ",
+      "SECURITIES_MARKETDesc": "All equity stocks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 42208,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-ALL_EQ",
+      "SECURITIES_MARKETDesc": "All equity stocks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 118,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 42090,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM",
+      "SECURITIES_MARKETDesc": "GEM",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-ALL_EQ",
+      "SECURITIES_MARKETDesc": "All equity stocks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "GEM-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB",
+      "SECURITIES_MARKETDesc": "Main Board",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 10018,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-ALL_EQ",
+      "SECURITIES_MARKETDesc": "All equity stocks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 47,
+      "sd_value": ""
+    },
+    {
+      "SECURITIES_MARKET": "MB-OTH_SEC",
+      "SECURITIES_MARKETDesc": "Other listed securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SEC_ISSUE",
+      "svDesc": "Number",
+      "figure": 9971,
+      "sd_value": ""
+    }
+  ]
+}

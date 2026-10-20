@@ -1,0 +1,865 @@
+id: censtatd-government-markets
+title: Hong Kong Government Accounts & Market Trading
+description: Official C&SD Finance tables for quarterly government accounts, revenue and expenditure
+  including funds, silver prices, interbank trading, Exchange Fund instruments, HKEX securities and
+  derivatives, Stock Connect and gold turnover.
+apis:
+  - API-0604
+  - API-0605
+  - API-0606
+  - API-0607
+  - API-0608
+  - API-0609
+  - API-0610
+  - API-0611
+  - API-0612
+  - API-0613
+datasets:
+  - hk-censtatd-tablechart-340-47002
+  - hk-censtatd-tablechart-340-47011
+  - hk-censtatd-tablechart-340-47012
+  - hk-censtatd-tablechart-340-92002
+  - hk-censtatd-tablechart-340-95001
+  - hk-censtatd-tablechart-340-95002
+  - hk-censtatd-tablechart-340-95003
+  - hk-censtatd-tablechart-340-95004
+  - hk-censtatd-tablechart-340-95005
+  - hk-censtatd-tablechart-340-95006
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: government_quarterly_revenue_expenditure
+    title: Government revenue and expenditure under the General Revenue Account analysed by quarter (340-47002)
+    description: Government revenue and expenditure under the General Revenue Account analysed by quarter.
+      Official C&SD Table 340-47002. Newest observations first; paginate with nextOffset. Preserve
+      figures, units, missing values and revision flags; do not sum overlapping totals and children.
+      Calendar quarter codes end in 03/06/09/12; figures cover the quarter, not a cumulative annual
+      total.
+    path: /get.php
+    query:
+      id: 340-47002
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. Calendar quarter codes end in 03/06/09/12; figures cover the quarter, not a
+          cumulative annual total.
+        enum:
+          - EXP_GRA
+          - REV_GRA
+      component:
+        type: string
+        in: local
+        description: REV_1 = Direct taxes; REV_2 = Indirect taxes; REV_3 = Other revenue; REV_4 = Transfers from
+          Funds; REV_5 = Total revenue; EXP_1 = Actual expenditure during the period; EXP_2 = Transfers
+          to Funds; EXP_8 = Total expenditure on General Revenue Account
+        enum:
+          - EXP_1
+          - EXP_2
+          - EXP_8
+          - REV_1
+          - REV_2
+          - REV_3
+          - REV_4
+          - REV_5
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - amount_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: government_revenue_funds
+    title: Government revenue (General Revenue Account and the funds) (340-47011)
+    description: Government revenue (General Revenue Account and the funds). Official C&SD Table 340-47011.
+      Newest observations first; paginate with nextOffset. Preserve figures, units, missing values and
+      revision flags; do not sum overlapping totals and children. Financial year runs April to March;
+      preserve the provider year code.
+    path: /get.php
+    query:
+      id: 340-47011
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. Financial year runs April to March; preserve the provider year code.
+        enum:
+          - GOV_REV
+      component:
+        type: string
+        in: local
+        description: TOTAL = Total; 1 = Operating revenue; 1111 = Interest tax; 1112 = Profits tax; 1113 =
+          Personal assessment; 1114 = Property tax; 1115 = Salaries tax; 121 = Bets and sweeps tax; 122 =
+          Entertainments tax; 123 = Hotel accommodation tax; 124 = Stamp duties; 125 = Air passenger
+          departure tax; 126 = Cross Harbour Tunnel passage tax; 127 = Duties; 128 = General rates; 129 =
+          Motor vehicle taxes; 12X = Royalties and concessions; 12XI = Fees and charges (tax-loaded
+          fees); 131 = Fines, forfeitures and penalties; 132 = Properties and investments; 133 = Loans,
+          reimbursements, contributions and other receipts; 134 = Utilities; 135 = Fees and charges (non
+          tax-loaded fees); 1361 = General Revenue Account; 1362 = Land Fund; 137 = Dividends, interest
+          and other receipts from investments/loans - Land Fund; 138 = One-off transfer from other funds;
+          2 = Capital revenue; 211 = Estate duty; 212 = Taxi concessions; 221 = Land transactions; 222 =
+          Recovery from Housing Authority; 223 = Others; 2311 = Land premium; 2312 = Others; 232 =
+          Capital Investment Fund; 233 = Disaster Relief Fund; 234 = Loan Fund; 235 = Civil Service
+          Pension Reserve Fund; 236 = Innovation and Technology Fund; 237 = Lotteries Fund
+        enum:
+          - "1"
+          - "1111"
+          - "1112"
+          - "1113"
+          - "1114"
+          - "1115"
+          - "121"
+          - "122"
+          - "123"
+          - "124"
+          - "125"
+          - "126"
+          - "127"
+          - "128"
+          - "129"
+          - 12X
+          - 12XI
+          - "131"
+          - "132"
+          - "133"
+          - "134"
+          - "135"
+          - "1361"
+          - "1362"
+          - "137"
+          - "138"
+          - "2"
+          - "211"
+          - "212"
+          - "221"
+          - "222"
+          - "223"
+          - "2311"
+          - "2312"
+          - "232"
+          - "233"
+          - "234"
+          - "235"
+          - "236"
+          - "237"
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - amount_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: government_expenditure_funds
+    title: Government expenditure (General Revenue Account and the funds) (340-47012)
+    description: Government expenditure (General Revenue Account and the funds). Official C&SD Table
+      340-47012. Newest observations first; paginate with nextOffset. Preserve figures, units, missing
+      values and revision flags; do not sum overlapping totals and children. Financial year runs April to
+      March; preserve the provider year code.
+    path: /get.php
+    query:
+      id: 340-47012
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. Financial year runs April to March; preserve the provider year code.
+        enum:
+          - GOV_EXP
+      component:
+        type: string
+        in: local
+        description: TOTAL = Total; 1 = Operating expenditure; 111 = Personal emoluments; 112 = Personnel related
+          expenses (excluding pensions); 113 = Pensions; 114 = Departmental expenses; 115 = Other charges
+          - General Revenue Account; 116 = Other charges - Land Fund; 117 = Subventions; 131 = General
+          Revenue Account; 132 = Land Fund; 2 = Capital expenditure; 21 = Plant, Equipment and Works; 22
+          = Subventions; 241 = Capital Works Reserve Fund; 242 = Capital Investment Fund; 243 = Loan
+          Fund; 245 = Disaster Relief Fund; 246 = Innovation and Technology Fund; 247 = Lotteries Fund
+        enum:
+          - "1"
+          - "111"
+          - "112"
+          - "113"
+          - "114"
+          - "115"
+          - "116"
+          - "117"
+          - "131"
+          - "132"
+          - "2"
+          - "21"
+          - "22"
+          - "241"
+          - "242"
+          - "243"
+          - "245"
+          - "246"
+          - "247"
+          - TOTAL
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - amount_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: silver_trading_prices
+    title: Silver trading prices (340-92002)
+    description: Silver trading prices. Official C&SD Table 340-92002. Newest observations first; paginate
+      with nextOffset. Preserve figures, units, missing values and revision flags; do not sum overlapping
+      totals and children. Opening, closing, highest and lowest prices in HK dollars per 10 oz; no
+      conversion to per-ounce prices.
+    path: /get.php
+    query:
+      id: 340-92002
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - M
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. Opening, closing, highest and lowest prices in HK dollars per 10 oz; no conversion
+          to per-ounce prices.
+        enum:
+          - SILVER_CLOSE_P
+          - SILVER_HIGH_P
+          - SILVER_LOW_P
+          - SILVER_OPEN_P
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - silver_hkd_10oz
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: interbank_market
+    title: Hong Kong interbank market (340-95001)
+    description: Hong Kong interbank market. Official C&SD Table 340-95001. Newest observations first;
+      paginate with nextOffset. Preserve figures, units, missing values and revision flags; do not sum
+      overlapping totals and children. Three-month interbank rate is a period average in percent per
+      annum; daily trading is HK$ billion.
+    path: /get.php
+    query:
+      id: 340-95001
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. Three-month interbank rate is a period average in percent per annum; daily trading
+          is HK$ billion.
+        enum:
+          - AVE_DAILY_TRADE
+          - THREE_M_INTEREST
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - amount_billion
+          - interest_rate
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: exchange_fund_bills_notes_turnover
+    title: Average daily turnover of Exchange Fund Bills and Notes issued by the Hong Kong Monetary Authority
+      (340-95002)
+    description: Average daily turnover of Exchange Fund Bills and Notes issued by the Hong Kong Monetary
+      Authority. Official C&SD Table 340-95002. Newest observations first; paginate with nextOffset.
+      Preserve figures, units, missing values and revision flags; do not sum overlapping totals and
+      children.
+    path: /get.php
+    query:
+      id: 340-95002
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts.
+        enum:
+          - ADT_EXFBN
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - amount_billion
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: hkex_securities_statistics
+    title: Number of listed companies, total market capitalisation, average daily turnover of all listed
+      securities, number of new issues of securities and funds raised from new issues of securities on
+      Hong Kong Exchanges and Clearing Limited (340-95003)
+    description: Number of listed companies, total market capitalisation, average daily turnover of all
+      listed securities, number of new issues of securities and funds raised from new issues of
+      securities on Hong Kong Exchanges and Clearing Limited. Official C&SD Table 340-95003. Newest
+      observations first; paginate with nextOffset. Preserve figures, units, missing values and revision
+      flags; do not sum overlapping totals and children. Separate company/new-issue counts, HK$ billion
+      market capitalisation and HK$ million turnover/funds raised. Market totals overlap subcategories.
+    path: /get.php
+    query:
+      id: 340-95003
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. Separate company/new-issue counts, HK$ billion market capitalisation and HK$ million
+          turnover/funds raised. Market totals overlap subcategories.
+        enum:
+          - AVG_TURNOVER
+          - FUND_RAISED
+          - LC
+          - SEC_ISSUE
+          - TMC
+      component:
+        type: string
+        in: local
+        description: GEM = GEM; GEM-H = H Shares; GEM-OTH = Others; MB = Main Board; MB-H = H Shares; MB-OTH =
+          Others; GEM-OTH_EQ = Other equity stocks; GEM-OTH_SEC = Other listed securities; MB-OTH_EQ =
+          Other equity stocks; MB-OTH_SEC = Other listed securities; GEM-ALL_EQ = All equity stocks;
+          MB-ALL_EQ = All equity stocks
+        enum:
+          - GEM
+          - GEM-ALL_EQ
+          - GEM-H
+          - GEM-OTH
+          - GEM-OTH_EQ
+          - GEM-OTH_SEC
+          - MB
+          - MB-ALL_EQ
+          - MB-H
+          - MB-OTH
+          - MB-OTH_EQ
+          - MB-OTH_SEC
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - amount_billion
+          - amount_million
+          - count
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: hkex_derivatives_volume
+    title: Average daily volume of futures and options (in terms of contract) in the Hong Kong Exchanges and
+      Clearing Limited derivatives market (340-95004)
+    description: Average daily volume of futures and options (in terms of contract) in the Hong Kong
+      Exchanges and Clearing Limited derivatives market. Official C&SD Table 340-95004. Newest
+      observations first; paginate with nextOffset. Preserve figures, units, missing values and revision
+      flags; do not sum overlapping totals and children. Average daily futures and options volume in
+      contracts, not monetary turnover.
+    path: /get.php
+    query:
+      id: 340-95004
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. Average daily futures and options volume in contracts, not monetary turnover.
+        enum:
+          - ADT_HKEX
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - contracts
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: stock_connect_trading_values
+    title: Trading value of Shanghai-Hong Kong / Shenzhen-Hong Kong Stock Connect (340-95005)
+    description: Trading value of Shanghai-Hong Kong / Shenzhen-Hong Kong Stock Connect. Official C&SD Table
+      340-95005. Newest observations first; paginate with nextOffset. Preserve figures, units, missing
+      values and revision flags; do not sum overlapping totals and children. SSE and SZSE indicators
+      distinguish buy/sell values and daily averages in HK$ billion from turnover and daily turnover in
+      RMB billion; never sum different currencies.
+    path: /get.php
+    query:
+      id: 340-95005
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. SSE and SZSE indicators distinguish buy/sell values and daily averages in HK$
+          billion from turnover and daily turnover in RMB billion; never sum different currencies.
+        enum:
+          - AVG_DAILY_BUY_SSE
+          - AVG_DAILY_BUY_SZSE
+          - AVG_DAILY_SELL_SSE
+          - AVG_DAILY_SELL_SZSE
+          - AVG_DAILY_TURNOVER_SSE
+          - AVG_DAILY_TURNOVER_SZSE
+          - BUY_VALUE_SSE
+          - BUY_VALUE_SZSE
+          - SELL_VALUE_SSE
+          - SELL_VALUE_SZSE
+          - TURNOVER_SSE
+          - TURNOVER_SZSE
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - amount_billion
+          - rmb_billion
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: gold_exchange_turnover
+    title: Average daily turnover of 99 Tael Gold and Loco London Gold in the Hong Kong Gold Exchange
+      (340-95006)
+    description: Average daily turnover of 99 Tael Gold and Loco London Gold in the Hong Kong Gold Exchange.
+      Official C&SD Table 340-95006. Newest observations first; paginate with nextOffset. Preserve
+      figures, units, missing values and revision flags; do not sum overlapping totals and children.
+      ADT_CGSE is 99 Tael Gold turnover in HK$ million; ADT_LLG is Loco London Gold turnover in US$
+      million.
+    path: /get.php
+    query:
+      id: 340-95006
+      full_series: 1
+    transform:
+      response: normalizeGovernmentMarketTable
+    input:
+      freq:
+        type: string
+        in: local
+        description: Y annual; Q quarterly; M monthly. Only listed frequencies are supported.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit provider year or exact YYYYMM period where available. A year matches all
+          observations in that year; combine with freq.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: Original statistical variable code; select the series without combining amounts, currencies
+          or counts. ADT_CGSE is 99 Tael Gold turnover in HK$ million; ADT_LLG is Loco London Gold
+          turnover in US$ million.
+        enum:
+          - ADT_CGSE
+          - ADT_LLG
+      component:
+        type: string
+        in: local
+        description: NONE = No component dimension
+        enum:
+          - NONE
+      measure:
+        type: string
+        in: local
+        description: "Original units: amount_million/billion = HK$ million/billion; rmb_billion = RMB billion;
+          usd_million = US$ million; interest_rate = period average percent per annum; silver_hkd_10oz =
+          HK$ per 10 oz; count = number; contracts = number of contracts."
+        enum:
+          - amount_million
+          - usd_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and the same filters/language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, notes, units and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en

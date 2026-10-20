@@ -1,0 +1,85 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=340-95001&api_popup=1"
+    },
+    "title": "香港银行同业拆息市场",
+    "tablenote": [],
+    "source": "香港金融管理局  如欲获取更多资料，请浏览香港金融管理局网站(www.hkma.gov.hk/chi)。  (查询电话：2878 8222  查询电邮：publicenquiry@hkma.gov.hk)",
+    "count": {
+      "noOfRecords": 8,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.006047
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2010",
+      "sv": "THREE_M_INTEREST",
+      "svDesc": "期内平均数字，年率",
+      "figure": 0.25,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201003",
+      "sv": "THREE_M_INTEREST",
+      "svDesc": "期内平均数字，年率",
+      "figure": 0.13,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "THREE_M_INTEREST",
+      "svDesc": "期内平均数字，年率",
+      "figure": 3.05,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "THREE_M_INTEREST",
+      "svDesc": "期内平均数字，年率",
+      "figure": 2.74,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2010",
+      "sv": "AVE_DAILY_TRADE",
+      "svDesc": "十亿港元",
+      "figure": 210,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201003",
+      "sv": "AVE_DAILY_TRADE",
+      "svDesc": "十亿港元",
+      "figure": 169,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "AVE_DAILY_TRADE",
+      "svDesc": "十亿港元",
+      "figure": 689,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "AVE_DAILY_TRADE",
+      "svDesc": "十亿港元",
+      "figure": 801,
+      "sd_value": ""
+    }
+  ]
+}

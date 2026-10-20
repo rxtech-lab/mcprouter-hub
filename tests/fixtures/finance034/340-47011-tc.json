@@ -1,0 +1,847 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=340-47011&api_popup=1"
+    },
+    "title": "政府收入（一般收入帳目及各基金）",
+    "tablenote": [
+      "財政年度由4月1日至3月31日。  2014-15及2015-16年度財政儲備的投資收入已預留作房屋儲備金，並存放於外匯基金內，而沒有在2014年12月31日及2015年12月31日收取。房屋儲備金其後由2019-20年度至2022-23年度分四個財政年度撥回政府帳目，並記錄為投資收入。",
+      "各項收費之中含徵稅成分的費用已重新歸類為稅項收入。",
+      "數字不包括發行政府債券的款項（已作出調整）。「非經營收入總計」及「政府收入總額」已作出相應修訂。",
+      "[#7] 由於沒有1995至96年度以前各項收費中含徵稅成分的費用的資料，這項目的總額撥入其他收入之下。",
+      "- 不適用"
+    ],
+    "source": "政府總部財經事務及庫務局  如欲獲取更多資料，請瀏覽政府總部財經事務及庫務局網站 (www.fstb.gov.hk)。  (查詢電話：2810 3658   查詢電郵：h_div@fstb.gov.hk)",
+    "count": {
+      "noOfRecords": 82,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.061485
+    }
+  },
+  "dataSet": [
+    {
+      "REV_TYPE": "",
+      "REV_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 82430,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1,
+      "REV_TYPEDesc": "經營收入",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 73430,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1111,
+      "REV_TYPEDesc": "利息稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 35,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1112,
+      "REV_TYPEDesc": "利得稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 21231,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1113,
+      "REV_TYPEDesc": "個人入息課稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 879,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1114,
+      "REV_TYPEDesc": "物業稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 953,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1115,
+      "REV_TYPEDesc": "薪俸稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 10451,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 121,
+      "REV_TYPEDesc": "博彩及彩票稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4830,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 122,
+      "REV_TYPEDesc": "娛樂稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 129,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 123,
+      "REV_TYPEDesc": "酒店房租稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 271,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 124,
+      "REV_TYPEDesc": "印花稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 5464,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 125,
+      "REV_TYPEDesc": "飛機乘客離境稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 669,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 126,
+      "REV_TYPEDesc": "海底隧道使用稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 195,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 127,
+      "REV_TYPEDesc": "應課稅品稅項",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4628,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 128,
+      "REV_TYPEDesc": "一般差餉",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 1663,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 129,
+      "REV_TYPEDesc": "車輛稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 1735,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": "12X",
+      "REV_TYPEDesc": "專利稅及特權稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 746,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": "12XI",
+      "REV_TYPEDesc": "各項收費（含徵稅成分的費用）",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "[#7]"
+    },
+    {
+      "REV_TYPE": 131,
+      "REV_TYPEDesc": "罰款、沒收及罰金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 578,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 132,
+      "REV_TYPEDesc": "物業及投資",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 2337,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 133,
+      "REV_TYPEDesc": "貸款、償款、供款及其他收入",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 1705,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 134,
+      "REV_TYPEDesc": "公用事業",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4857,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 135,
+      "REV_TYPEDesc": "各項收費（不包含徵稅成分的費用）",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 5132,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1361,
+      "REV_TYPEDesc": "政府一般收入帳目",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4942,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1362,
+      "REV_TYPEDesc": "土地基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 137,
+      "REV_TYPEDesc": "來自投資／貸款的股息、利息及其他收入 ─ 土地基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 138,
+      "REV_TYPEDesc": "從其他基金一次過轉撥的款項",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 2,
+      "REV_TYPEDesc": "非經營收入",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 9000,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 211,
+      "REV_TYPEDesc": "遺產稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 490,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 212,
+      "REV_TYPEDesc": "的士專營權稅",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 208,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 221,
+      "REV_TYPEDesc": "土地交易",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 212,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 222,
+      "REV_TYPEDesc": "從房屋委員會收回的款項",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 223,
+      "REV_TYPEDesc": "其他",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 25,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 2311,
+      "REV_TYPEDesc": "地價收入",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 6917,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 2312,
+      "REV_TYPEDesc": "其他",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 541,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 232,
+      "REV_TYPEDesc": "資本投資基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 233,
+      "REV_TYPEDesc": "賑災基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 234,
+      "REV_TYPEDesc": "貸款基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 607,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 235,
+      "REV_TYPEDesc": "公務員退休金儲備基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 236,
+      "REV_TYPEDesc": "創新及科技基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 237,
+      "REV_TYPEDesc": "獎券基金",
+      "freq": "Y",
+      "period": "1989",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": "",
+      "REV_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 564909,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1,
+      "REV_TYPEDesc": "經營收入",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 531518,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1111,
+      "REV_TYPEDesc": "利息稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 1112,
+      "REV_TYPEDesc": "利得稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 177688,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1113,
+      "REV_TYPEDesc": "個人入息課稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 8223,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1114,
+      "REV_TYPEDesc": "物業稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 3983,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1115,
+      "REV_TYPEDesc": "薪俸稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 88879,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 121,
+      "REV_TYPEDesc": "博彩及彩票稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 28512,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 122,
+      "REV_TYPEDesc": "娛樂稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 123,
+      "REV_TYPEDesc": "酒店房租稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 124,
+      "REV_TYPEDesc": "印花稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 63880,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 125,
+      "REV_TYPEDesc": "飛機乘客離境稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 2279,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 126,
+      "REV_TYPEDesc": "海底隧道使用稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 127,
+      "REV_TYPEDesc": "應課稅品稅項",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 7331,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 128,
+      "REV_TYPEDesc": "一般差餉",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 32724,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 129,
+      "REV_TYPEDesc": "車輛稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4745,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": "12X",
+      "REV_TYPEDesc": "專利稅及特權稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4681,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": "12XI",
+      "REV_TYPEDesc": "各項收費（含徵稅成分的費用）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 8520,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 131,
+      "REV_TYPEDesc": "罰款、沒收及罰金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 2012,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 132,
+      "REV_TYPEDesc": "物業及投資",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 27271,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 133,
+      "REV_TYPEDesc": "貸款、償款、供款及其他收入",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4083,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 134,
+      "REV_TYPEDesc": "公用事業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4123,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 135,
+      "REV_TYPEDesc": "各項收費（不包含徵稅成分的費用）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 9355,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1361,
+      "REV_TYPEDesc": "政府一般收入帳目",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 5404,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 1362,
+      "REV_TYPEDesc": "土地基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 31000,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 137,
+      "REV_TYPEDesc": "來自投資／貸款的股息、利息及其他收入 ─ 土地基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 1825,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 138,
+      "REV_TYPEDesc": "從其他基金一次過轉撥的款項",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 15000,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 2,
+      "REV_TYPEDesc": "非經營收入",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 33391,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 211,
+      "REV_TYPEDesc": "遺產稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 212,
+      "REV_TYPEDesc": "的士專營權稅",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 221,
+      "REV_TYPEDesc": "土地交易",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "REV_TYPE": 222,
+      "REV_TYPEDesc": "從房屋委員會收回的款項",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 2656,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 223,
+      "REV_TYPEDesc": "其他",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 4334,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 2311,
+      "REV_TYPEDesc": "地價收入",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 13602,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 2312,
+      "REV_TYPEDesc": "其他",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 3726,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 232,
+      "REV_TYPEDesc": "資本投資基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 1958,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 233,
+      "REV_TYPEDesc": "賑災基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 12,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 234,
+      "REV_TYPEDesc": "貸款基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 1685,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 235,
+      "REV_TYPEDesc": "公務員退休金儲備基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 2072,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 236,
+      "REV_TYPEDesc": "創新及科技基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 1045,
+      "sd_value": ""
+    },
+    {
+      "REV_TYPE": 237,
+      "REV_TYPEDesc": "獎券基金",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GOV_REV",
+      "svDesc": "百萬港元",
+      "figure": 2291,
+      "sd_value": ""
+    }
+  ]
+}

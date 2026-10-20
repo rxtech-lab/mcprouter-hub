@@ -106,6 +106,18 @@ export const liveCases: Record<string, LiveCase> = {
   real_gross_domestic_income: { input: { limit: 1 }, check: nonEmptyPage },
   gni_and_per_capita: { input: { limit: 1 }, check: nonEmptyPage },
 
+  // Finance batch 034: period-free checks.
+  government_quarterly_revenue_expenditure: { input: { limit: 1 }, check: nonEmptyPage },
+  government_revenue_funds: { input: { limit: 1 }, check: nonEmptyPage },
+  government_expenditure_funds: { input: { limit: 1 }, check: nonEmptyPage },
+  silver_trading_prices: { input: { limit: 1 }, check: nonEmptyPage },
+  interbank_market: { input: { limit: 1 }, check: nonEmptyPage },
+  exchange_fund_bills_notes_turnover: { input: { limit: 1 }, check: nonEmptyPage },
+  hkex_securities_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  hkex_derivatives_volume: { input: { limit: 1 }, check: nonEmptyPage },
+  stock_connect_trading_values: { input: { limit: 1 }, check: nonEmptyPage },
+  gold_exchange_turnover: { input: { limit: 1 }, check: nonEmptyPage },
+
   // Finance batch 033: period-free checks.
   mainland_outward_di_regions: { input: { limit: 1 }, check: nonEmptyPage },
   mainland_outward_di_activities: { input: { limit: 1 }, check: nonEmptyPage },

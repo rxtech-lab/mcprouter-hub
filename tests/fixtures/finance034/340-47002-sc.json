@@ -1,0 +1,193 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=340-47002&api_popup=1"
+    },
+    "title": "按季政府一般收入帐目的收入和开支",
+    "tablenote": [
+      "r 修订数字"
+    ],
+    "source": "政府总部财经事务及库务局  如欲获取更多资料，请浏览财经事务及库务局网站 (www.fstb.gov.hk)。  (查询电话：2810 3658   查询电邮：h_div@fstb.gov.hk)",
+    "count": {
+      "noOfRecords": 17,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.009977
+    }
+  },
+  "dataSet": [
+    {
+      "TYPE_GRA": "REV_1",
+      "TYPE_GRADesc": "直接税",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 16509,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_2",
+      "TYPE_GRADesc": "间接税",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 41108,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_3",
+      "TYPE_GRADesc": "其他收入",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 9723,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_4",
+      "TYPE_GRADesc": "从各基金转拨的款项",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_5",
+      "TYPE_GRADesc": "总收入",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 67340,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_2",
+      "TYPE_GRADesc": "间接税",
+      "freq": "Q",
+      "period": "202603",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 53355,
+      "sd_value": "r"
+    },
+    {
+      "TYPE_GRA": "REV_1",
+      "TYPE_GRADesc": "直接税",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 17487,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_2",
+      "TYPE_GRADesc": "间接税",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 51802,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_3",
+      "TYPE_GRADesc": "其他收入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 15126,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_4",
+      "TYPE_GRADesc": "从各基金转拨的款项",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "REV_5",
+      "TYPE_GRADesc": "总收入",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REV_GRA",
+      "svDesc": "百万港元",
+      "figure": 84415,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_1",
+      "TYPE_GRADesc": "期内实际开支",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "EXP_GRA",
+      "svDesc": "百万港元",
+      "figure": 110062,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_2",
+      "TYPE_GRADesc": "转拨各基金的款项",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "EXP_GRA",
+      "svDesc": "百万港元",
+      "figure": 6074,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_8",
+      "TYPE_GRADesc": "一般收入帐目总开支",
+      "freq": "Q",
+      "period": "201906",
+      "sv": "EXP_GRA",
+      "svDesc": "百万港元",
+      "figure": 116136,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_1",
+      "TYPE_GRADesc": "期内实际开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "EXP_GRA",
+      "svDesc": "百万港元",
+      "figure": 151446,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_2",
+      "TYPE_GRADesc": "转拨各基金的款项",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "EXP_GRA",
+      "svDesc": "百万港元",
+      "figure": 63,
+      "sd_value": ""
+    },
+    {
+      "TYPE_GRA": "EXP_8",
+      "TYPE_GRADesc": "一般收入帐目总开支",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "EXP_GRA",
+      "svDesc": "百万港元",
+      "figure": 151509,
+      "sd_value": ""
+    }
+  ]
+}

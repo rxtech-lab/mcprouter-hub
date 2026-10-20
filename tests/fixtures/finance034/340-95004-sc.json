@@ -1,0 +1,55 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=340-95004&api_popup=1"
+    },
+    "title": "香港交易所衍生产品市场的期货及期权平均每日成交量 (以合约张数计算)",
+    "tablenote": [
+      "平均每日成交量为个别产品平均每日成交量的总和。"
+    ],
+    "source": "香港交易及结算所有限公司  (查询电话：2840 3895  查询电邮：info@hkex.com.hk)",
+    "count": {
+      "noOfRecords": 4,
+      "started": "2026-10-20T23:02:11+00:00",
+      "finished": "2026-10-20T23:02:11+00:00",
+      "durationSeconds": 0.004855
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2010",
+      "sv": "ADT_HKEX",
+      "svDesc": "合约张数",
+      "figure": 468097,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201003",
+      "sv": "ADT_HKEX",
+      "svDesc": "合约张数",
+      "figure": 417309,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ADT_HKEX",
+      "svDesc": "合约张数",
+      "figure": 1662751,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ADT_HKEX",
+      "svDesc": "合约张数",
+      "figure": 1790274,
+      "sd_value": ""
+    }
+  ]
+}

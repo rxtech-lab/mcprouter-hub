@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-government-markets
+slug: censtatd-government-markets
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true
