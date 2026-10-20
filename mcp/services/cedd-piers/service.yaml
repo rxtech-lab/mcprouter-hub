@@ -1,0 +1,18 @@
+id: cedd-piers
+title: Public Piers
+description: CEDD public piers with structure identifiers and WGS84 locations. The source publishes structure codes, not translated pier names. Search by structure code (e.g. HP077) or use a bounding box.
+apis: [API-1264]
+datasets: [hk-cedd-csu-public-piers]
+cacheTtl: 86400
+tools:
+  - name: cedd_public_piers
+    title: Public Piers
+    description: CEDD public piers with structure identifiers and WGS84 locations. The source publishes structure codes, not translated pier names. Search by structure code (e.g. HP077) or use a bounding box. Results are bounded to 100 records and 100 KB; nextOffset continues the query. Search supports SQL LIKE wildcards (% and _).
+    handler: query
+    input:
+      search: { type: string, pattern: '^.{1,100}$', description: "Text or code to find in published attributes" }
+      objectId: { type: integer, minimum: 1, description: "Exact source OBJECTID" }
+      bbox: { type: string, pattern: '^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$', description: "WGS84 west,south,east,north; spatial intersection" }
+      geometry: { type: boolean, default: true, description: "Include coordinates or polyline; oversized geometry is omitted explicitly" }
+      limit: { type: integer, minimum: 1, maximum: 100, default: 20, description: "Maximum records" }
+      offset: { type: integer, minimum: 0, maximum: 1000000, default: 0, description: "Use nextOffset from previous result with the same filters" }

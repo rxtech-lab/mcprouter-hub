@@ -1,0 +1,60 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPolyline",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "BF_UID": "BF1564E0410",
+        "LVL": 0,
+        "Shape__Length": 15.031116833322193
+      },
+      "geometry": {
+        "paths": [
+          [
+            [
+              114.12955707126265,
+              22.282807493349495
+            ],
+            [
+              114.12960207333784,
+              22.282829304587022
+            ],
+            [
+              114.12968252037098,
+              22.282876531084224
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "BF_UID": "BF1565E0410",
+        "LVL": 0,
+        "Shape__Length": 17.630028497050443
+      },
+      "geometry": {
+        "paths": [
+          [
+            [
+              114.162338260967,
+              22.281440110018515
+            ],
+            [
+              114.16250268283011,
+              22.281396156246252
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

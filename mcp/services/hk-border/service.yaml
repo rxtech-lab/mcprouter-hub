@@ -54,7 +54,7 @@ tools:
       search: { input: controlPoint, fields: [controlPoint] }
   - name: border_vehicle_throughput
     title: Vehicle throughput at land crossings
-    description: Vehicles cleared by Customs at each land boundary control point per quarter since 2016, in thousands, split into goods vehicles, passenger vehicles and private cars. Leave out the year for the latest year published.
+    description: Vehicles cleared by Customs at each land boundary control point per quarter since 2016, in thousands, split into goods vehicles, passenger vehicles and private cars. Annual totals have quarter null (source '-'); do not sum them with quarters, or All control points with individual crossings. Leave out the year for the latest year published. Uses the official CSV download, not a live traffic API.
     path: /passenger_land_{lang}.csv
     cacheTtl: 86400
     transform: { response: customsVehicles }

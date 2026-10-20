@@ -1,0 +1,82 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "features": [
+    {
+      "attributes": {
+        "NAME_OF_DISTRICT_COUNCIL_DISTRICT_EN": "Eastern",
+        "LOCATION_EN": "North Point Government Offices (GOLDWAY PARKING LIMITED)",
+        "ADDRESS_EN": "Car park on Portions of the Ground Floor and the Basement of North Point Government Office, No. 333 Java Road, North Point, Hong Kong",
+        "NAME_OF_DISTRICT_COUNCIL_DISTRICT_TC": "東區",
+        "LOCATION_TC": "北角政府合署 (金偉停車場有限公司)",
+        "ADDRESS_TC": "北角渣華道333號, 北角政府合署地下及地庫部分地方",
+        "NAME_OF_DISTRICT_COUNCIL_DISTRICT_SC": "东区",
+        "LOCATION_SC": "北角政府合署 (金伟停车场有限公司)",
+        "ADDRESS_SC": "北角渣华道333号, 北角政府合署地下及地库部分地方",
+        "STANDARD_BS1363_no": "0",
+        "MEDIUM_CCS_DC_COMBO_no": "0",
+        "MEDIUM_IEC62196_no": "29",
+        "MEDIUM_SAEJ1772_no": "0",
+        "MEDIUM_GB_T20234_2_AC__no": "0",
+        "MEDIUM_OTHERS_no": "0",
+        "QUICK_CHAdeMO_no": "0",
+        "QUICK_CCS_DC_COMBO_no": "0",
+        "QUICK_IEC62196_no": "0",
+        "QUICK_GB_T20234_3_DC__no": "0",
+        "QUICK_OTHERS_no": "0",
+        "FAST_CHAdeMO_no": "0",
+        "FAST_CCS_DC_COMBO_no": "0",
+        "FAST_GB_T20234_3_DC__no": "0",
+        "FAST_OTHERS_no": "0",
+        "REMARK_FOR__OTHERS_": "-",
+        "DATA_PATH": "https://ev-charger.epd.gov.hk/resource/ev_charger_avail/evca_ver_1_0.json",
+        "OBJECTID": 1
+      },
+      "geometry": {
+        "x": 114.20841100000007,
+        "y": 22.292275000000075
+      }
+    },
+    {
+      "attributes": {
+        "NAME_OF_DISTRICT_COUNCIL_DISTRICT_EN": "Sai Kung",
+        "LOCATION_EN": "Sai Kung Government Offices Carpark",
+        "ADDRESS_EN": "Man Nin Street No 24 ,Sai Kung",
+        "NAME_OF_DISTRICT_COUNCIL_DISTRICT_TC": "西貢區",
+        "LOCATION_TC": "西貢政府合署停車場",
+        "ADDRESS_TC": "西貢萬年街24號",
+        "NAME_OF_DISTRICT_COUNCIL_DISTRICT_SC": "西贡区",
+        "LOCATION_SC": "西贡政府合署停车场",
+        "ADDRESS_SC": "西贡万年街24号",
+        "STANDARD_BS1363_no": "0",
+        "MEDIUM_CCS_DC_COMBO_no": "0",
+        "MEDIUM_IEC62196_no": "27",
+        "MEDIUM_SAEJ1772_no": "0",
+        "MEDIUM_GB_T20234_2_AC__no": "0",
+        "MEDIUM_OTHERS_no": "0",
+        "QUICK_CHAdeMO_no": "0",
+        "QUICK_CCS_DC_COMBO_no": "0",
+        "QUICK_IEC62196_no": "0",
+        "QUICK_GB_T20234_3_DC__no": "0",
+        "QUICK_OTHERS_no": "0",
+        "FAST_CHAdeMO_no": "0",
+        "FAST_CCS_DC_COMBO_no": "0",
+        "FAST_GB_T20234_3_DC__no": "0",
+        "FAST_OTHERS_no": "0",
+        "REMARK_FOR__OTHERS_": "-",
+        "DATA_PATH": "https://ev-charger.epd.gov.hk/resource/ev_charger_avail/evca_ver_1_0.json",
+        "OBJECTID": 2
+      },
+      "geometry": {
+        "x": 114.27244300000007,
+        "y": 22.382026000000053
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

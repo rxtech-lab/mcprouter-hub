@@ -1,0 +1,10 @@
+version: 1
+name: transport003
+slug: transport003
+protocol: http
+port: 4903
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

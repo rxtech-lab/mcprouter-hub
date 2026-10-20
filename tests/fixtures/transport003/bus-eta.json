@@ -1,0 +1,39 @@
+{
+  "type": "StopETA",
+  "version": "1.0",
+  "generated_timestamp": "2026-10-20T08:06:23+08:00",
+  "data": [
+    {
+      "co": "NLB",
+      "route": "4",
+      "dir": null,
+      "seq": null,
+      "stop": "1",
+      "dest": "Tong Fuk",
+      "eta_seq": null,
+      "eta": "",
+      "rmk": "This route has no departure via this stop in next 60 mins",
+      "routeVariantName": "",
+      "departed": "",
+      "noGPS": "",
+      "wheelChair": "",
+      "data_timestamp": "2026-10-20T08:06:23+08:00"
+    },
+    {
+      "co": "NLB",
+      "route": "A35",
+      "dir": null,
+      "seq": null,
+      "stop": "1",
+      "dest": "HZMB Hong Kong Port",
+      "eta_seq": null,
+      "eta": "",
+      "rmk": "This route has no departure via this stop in next 60 mins",
+      "routeVariantName": "",
+      "departed": "",
+      "noGPS": "",
+      "wheelChair": "",
+      "data_timestamp": "2026-10-20T08:06:23+08:00"
+    }
+  ]
+}

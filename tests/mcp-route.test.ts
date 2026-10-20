@@ -8,6 +8,7 @@ import { displayPrefix, generateApiKey, hashApiKey, INTERNAL_CHANNEL_HEADER, INT
 import { setCacheForTesting } from "@/lib/mcp/cache";
 import { createServiceRoute } from "@/lib/mcp/handler";
 import { NO_SERVICES } from "@/lib/service-selection";
+import { transportCases } from "./transport003-cases";
 
 /**
  * Drives the MCP endpoint the way a client does: JSON-RPC over streamable
@@ -92,6 +93,33 @@ afterEach(() => {
   vi.unstubAllGlobals();
   setCacheForTesting(null);
   globalThis.fetch = realFetch;
+});
+
+describe("transport batch 003 MCP routes", () => {
+  it.each(transportCases)("discovers and calls $tool through its scoped service route", async (testCase) => {
+    const service = services.find((service) => service.tools.some((tool) => tool.name === testCase.tool))!;
+    const route = createServiceRoute(() => [service]);
+    const options = { path: `/api/mcp/s/${service.id}/streamable`, scopes: service.id };
+    const listed = await rpc(route, "tools/list", {}, options);
+    expect(listed.result!.tools!.map((tool) => tool.name)).toContain(testCase.tool);
+    fetchMock.mockImplementation(async (url) => {
+      expect(url).toBe(testCase.request.url);
+      return new Response(typeof testCase.reply === "string" ? testCase.reply : JSON.stringify(testCase.reply));
+    });
+    const { result } = await rpc(route, "tools/call", { name: testCase.tool, arguments: testCase.input }, options);
+    expect(result!.isError).toBeFalsy();
+    expect(JSON.parse(result!.content![0].text).data).toEqual(testCase.data);
+    const invalid = await rpc(route, "tools/call", { name: testCase.tool, arguments: { ...testCase.input, ...(testCase.tool === "border_vehicle_throughput" ? { year: 2015 } : { limit: -1 }) } }, options);
+    expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("returns a tool error for a blocked upstream", async () => {
+    fetchMock.mockResolvedValue(new Response("Unavailable", { status: 503 }));
+    const result = await callTool("gpa_public_carparks", {});
+    expect(result.isError).toBe(true);
+    expect(result.content![0].text).toContain("503");
+  });
 });
 
 describe("MCP endpoint", () => {

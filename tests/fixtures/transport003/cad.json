@@ -1,0 +1,88 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "features": [
+    {
+      "attributes": {
+        "Paragliding_Area_EN": "Long Ke Wan",
+        "Paragliding_Area_TC": "浪茄灣",
+        "Paragliding_Area_SC": "浪茄湾",
+        "Operating_Altitude": "SFC - 2000 ft AMSL",
+        "Latitude": "22.37667",
+        "Longitude": "114.36917",
+        "Boundary_1_Lat": "22.38333",
+        "Boundary_1_Long": "114.37972",
+        "Boundary_1_feature": null,
+        "Boundary_2_Lat": "22.36333",
+        "Boundary_2_Long": "114.38306",
+        "Boundary_2_feature": null,
+        "Boundary_3_Lat": "22.3625",
+        "Boundary_3_Long": "114.37806",
+        "Boundary_3_feature": null,
+        "Boundary_4_Lat": null,
+        "Boundary_4_Long": null,
+        "Boundary_4_feature": null,
+        "Boundary_5_Lat": null,
+        "Boundary_5_Long": null,
+        "Boundary_5_feature": null,
+        "Boundary_6_Lat": null,
+        "Boundary_6_Long": null,
+        "Boundary_6_feature": null,
+        "Boundary_7_Lat": null,
+        "Boundary_7_Long": null,
+        "Boundary_7_feature": null,
+        "Link": "https://www.ais.gov.hk/",
+        "Remarks": "Select eAIP (Current) and ENR 5.5 Aerial Sporting and Recreational Activities",
+        "OBJECTID": 1
+      },
+      "geometry": {
+        "x": 114.36917000000005,
+        "y": 22.376670000000047
+      }
+    },
+    {
+      "attributes": {
+        "Paragliding_Area_EN": "Pak Tam Au",
+        "Paragliding_Area_TC": "北潭凹",
+        "Paragliding_Area_SC": "北潭凹",
+        "Operating_Altitude": "SFC - 2000 ft AMSL",
+        "Latitude": "22.43611",
+        "Longitude": "114.30583",
+        "Boundary_1_Lat": "22.45806",
+        "Boundary_1_Long": "114.31417",
+        "Boundary_1_feature": null,
+        "Boundary_2_Lat": "22.43111",
+        "Boundary_2_Long": "114.37583",
+        "Boundary_2_feature": null,
+        "Boundary_3_Lat": "22.41833",
+        "Boundary_3_Long": "114.37222",
+        "Boundary_3_feature": null,
+        "Boundary_4_Lat": "22.42139",
+        "Boundary_4_Long": "114.3325",
+        "Boundary_4_feature": null,
+        "Boundary_5_Lat": "22.42806",
+        "Boundary_5_Long": "114.31",
+        "Boundary_5_feature": null,
+        "Boundary_6_Lat": null,
+        "Boundary_6_Long": null,
+        "Boundary_6_feature": null,
+        "Boundary_7_Lat": null,
+        "Boundary_7_Long": null,
+        "Boundary_7_feature": null,
+        "Link": "https://www.ais.gov.hk/",
+        "Remarks": "Select eAIP (Current) and ENR 5.5 Aerial Sporting and Recreational Activities",
+        "OBJECTID": 2
+      },
+      "geometry": {
+        "x": 114.30583000000001,
+        "y": 22.436110000000042
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

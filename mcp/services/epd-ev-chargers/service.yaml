@@ -1,0 +1,19 @@
+id: epd-ev-chargers
+title: Public EV Chargers
+description: Locations, addresses, districts and charger counts by connector and speed for publicly accessible EV chargers. Counts are installed chargers, not live vacancies. Names in en, tc or sc; original multilingual attributes retained.
+apis: [API-1825]
+datasets: [hk-epd-evcpateam-evc-1]
+cacheTtl: 86400
+tools:
+  - name: epd_public_ev_chargers
+    title: Public EV Chargers
+    description: Locations, addresses, districts and charger counts by connector and speed for publicly accessible EV chargers. Counts are installed chargers, not live vacancies. Names in en, tc or sc; original multilingual attributes retained. Results are bounded to 100 records and 100 KB; nextOffset continues the query. Search supports SQL LIKE wildcards (% and _).
+    handler: query
+    input:
+      search: { type: string, pattern: '^.{1,100}$', description: "Text or code to find in published attributes" }
+      objectId: { type: integer, minimum: 1, description: "Exact source OBJECTID" }
+      bbox: { type: string, pattern: '^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$', description: "WGS84 west,south,east,north; spatial intersection" }
+      geometry: { type: boolean, default: true, description: "Include coordinates or polyline; oversized geometry is omitted explicitly" }
+      limit: { type: integer, minimum: 1, maximum: 100, default: 20, description: "Maximum records" }
+      offset: { type: integer, minimum: 0, maximum: 1000000, default: 0, description: "Use nextOffset from previous result with the same filters" }
+      lang: { type: string, enum: [en, tc, sc], default: en, description: "Language of the name field; original attributes retained" }

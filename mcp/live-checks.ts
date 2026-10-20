@@ -29,6 +29,10 @@ const dashed = (yyyymmdd: string) => `${yyyymmdd.slice(0, 4)}-${yyyymmdd.slice(4
 
 /** Fails when a list tool comes back empty, which for these feeds means the upstream broke. */
 const nonEmpty = (result: ToolResult) => (Array.isArray(result.data) && result.data.length === 0 ? "Returned no rows" : null);
+const nonEmptyPage = (result: ToolResult) => {
+  const rows = (result.data as { results?: unknown[] } | null)?.results;
+  return Array.isArray(rows) && rows.length > 0 ? null : "Returned no dataset records";
+};
 
 const first = <T>(value: unknown, what: string): T => {
   const item = Array.isArray(value) ? value[0] : undefined;
@@ -48,6 +52,14 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Transport batch 003: object results contain a bounded results array.
+  cad_paragliding_areas: { input: { limit: 2 }, check: nonEmptyPage },
+  cedd_public_piers: { input: { limit: 2 }, check: nonEmptyPage },
+  epd_public_ev_chargers: { input: { limit: 2 }, check: nonEmptyPage },
+  hyd_barrier_fences: { input: { limit: 2 }, check: nonEmptyPage },
+  gpa_public_carparks: { input: { limit: 2 }, check: nonEmptyPage },
+  dpo_bus_stop_routes: { input: { operator: "CTB", stopId: "001001" }, check: nonEmptyPage },
+  dpo_bus_stop_eta: { input: { operator: "NLB", stopId: "1" }, check: nonEmptyPage },
   // censtatd-shipping
   shipping_port_cargo_throughput: { input: {}, check: nonEmpty },
   shipping_seaborne_cargo_throughput: { input: {}, check: nonEmpty },
