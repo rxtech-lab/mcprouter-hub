@@ -468,6 +468,33 @@ describe("render", () => {
     expect(png.readUInt32BE(16)).toBe(1080);
   });
 
+  it.each([400, 700])("renders Simplified Chinese glyphs instead of missing-glyph boxes at weight %s", async (weight) => {
+    // Real subsets: HK lacks 节/诞 while SC contains them. Keep this offline.
+    const chineseFetcher = vi.fn(async (input: string | URL | Request) => {
+      const url = new URL(String(input));
+      if (url.hostname === "fonts.googleapis.com") {
+        const family = url.searchParams.get("family")!.startsWith("Noto Sans SC") ? "sc" : "hk";
+        return new Response(`@font-face { src: url(https://fonts.gstatic.com/${family}) format('truetype'); }`);
+      }
+      return new Response(new Uint8Array(readFileSync(path.join(import.meta.dirname, "fixtures/card-fonts", `${url.pathname.slice(1)}.ttf`))));
+    }) as typeof fetch;
+    const glyphCard = (value: string): Card => ({
+      accent: "#c62828", badge: "HK", blocks: [],
+      title: weight === 700 ? value : "",
+      subtitle: weight === 400 ? value : null,
+    });
+    // U+0378 is unassigned: both fonts render it as the missing-glyph box.
+    const missing = await renderCardSvg(glyphCard("\u0378"), chineseFetcher);
+    for (const glyph of ["节", "诞", "節", "誕"]) {
+      expect(await renderCardSvg(glyphCard(glyph), chineseFetcher)).not.toBe(missing);
+    }
+    const families = vi.mocked(chineseFetcher).mock.calls
+      .map(([url]) => new URL(String(url)))
+      .filter((url) => url.hostname === "fonts.googleapis.com")
+      .map((url) => url.searchParams.get("family"));
+    expect(families).toEqual(expect.arrayContaining(["Noto Sans HK:wght@400", "Noto Sans HK:wght@700", "Noto Sans SC:wght@400", "Noto Sans SC:wght@700"]));
+  });
+
   it("fails when the font can't be loaded", async () => {
     const down = vi.fn(async () => new Response("", { status: 503 })) as unknown as typeof fetch;
     await expect(renderCardSvg(card, down)).rejects.toThrow("Google Fonts 503");
