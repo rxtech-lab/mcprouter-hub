@@ -1,0 +1,1958 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=315-37031&api_popup=1"
+    },
+    "title": "External Debt (position as at end of period)",
+    "tablenote": [
+      "Figures may not add up to the total due to rounding.",
+      "Statistics should be interpreted with caution due to relatively insignificant magnitude and/or large sampling error.",
+      "The figure of long-term trade credit and advances will be subsumed into short-term trade credit and advances when it is not separately available.",
+      "[*3] Figure is not released due to relatively insignificant magnitude and/or in order to safeguard confidentiality of information provided by individual establishments.",
+      "N.A. Not available",
+      "@ Figure is subject to revision later on."
+    ],
+    "source": "Balance of Payments Branch (1),  Census and Statistics Department  (Enquiry telephone no. : 3863 2329  Enquiry e-mail : bop@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 193,
+      "started": "2026-10-20T21:01:58+00:00",
+      "finished": "2026-10-20T21:01:58+00:00",
+      "durationSeconds": 0.236332
+    }
+  },
+  "dataSet": [
+    {
+      "ED_COMPONENT": "ED",
+      "ED_COMPONENTDesc": "Gross External Debt",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2830516,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK",
+      "ED_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1722226,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 55718,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 18633,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 35647,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1438,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1666508,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1638265,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 24606,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 3636,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI",
+      "ED_COMPONENTDesc": "Direct investment : intercompany lending",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 807112,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_BFE",
+      "ED_COMPONENTDesc": "Debt liabilities between fellow enterprises",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 220690,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_ENT",
+      "ED_COMPONENTDesc": "Debt liabilities of direct investment enterprises to direct investor",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 305813,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_INV",
+      "ED_COMPONENTDesc": "Debt liabilities of direct investor to direct investment enterprises",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 280610,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV",
+      "ED_COMPONENTDesc": "General government",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA",
+      "ED_COMPONENTDesc": "Monetary authority",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1654,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1654,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1552,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 102,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS",
+      "ED_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 299524,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 212691,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 45756,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 154884,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 11208,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 843,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 86833,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 5148,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 32925,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 8491,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 40267,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED",
+      "ED_COMPONENTDesc": "Gross External Debt",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2936828,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK",
+      "ED_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1722745,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 53778,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 18878,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 31777,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 3124,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1668966,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1642393,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 23722,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2851,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI",
+      "ED_COMPONENTDesc": "Direct investment : intercompany lending",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 866344,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_BFE",
+      "ED_COMPONENTDesc": "Debt liabilities between fellow enterprises",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 248641,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_ENT",
+      "ED_COMPONENTDesc": "Debt liabilities of direct investment enterprises to direct investor",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 302121,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_DI_INV",
+      "ED_COMPONENTDesc": "Debt liabilities of direct investor to direct investment enterprises",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 315581,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV",
+      "ED_COMPONENTDesc": "General government",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA",
+      "ED_COMPONENTDesc": "Monetary authority",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 28634,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 200,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 200,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 28434,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 600,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 27772,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 62,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS",
+      "ED_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 319105,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 213927,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 41560,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 163337,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 8188,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 842,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 105178,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 25983,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 39191,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 8181,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Q",
+      "period": "200203",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 31823,
+      "sd_value": ""
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "ED_COMPONENT": "ED",
+      "ED_COMPONENTDesc": "Gross External Debt",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 16054289,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK",
+      "ED_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 8423838,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 274545,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 122508,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 132906,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 19131,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 8149293,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 7919339,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 110064,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 119890,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI",
+      "ED_COMPONENTDesc": "Direct investment : intercompany lending",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2509450,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_BFE",
+      "ED_COMPONENTDesc": "Debt liabilities between fellow enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 579039,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_ENT",
+      "ED_COMPONENTDesc": "Debt liabilities of direct investment enterprises to direct investor",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1167416,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_INV",
+      "ED_COMPONENTDesc": "Debt liabilities of direct investor to direct investment enterprises",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 762995,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV",
+      "ED_COMPONENTDesc": "General government",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 154480,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 153425,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 153425,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1055,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "@,[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1055,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA",
+      "ED_COMPONENTDesc": "Monetary authority",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 84099,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2205,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2205,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 81894,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 51778,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 29566,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 550,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS",
+      "ED_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 4882422,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 3480341,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 671778,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2609390,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 199173,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "@,N.A."
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1402081,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 63460,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 854420,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 160789,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 323412,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED",
+      "ED_COMPONENTDesc": "Gross External Debt",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 17869078,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK",
+      "ED_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 9413339,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 304578,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 154868,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 129825,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 19885,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 9108761,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 8745695,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 171388,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_BANK_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 191678,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI",
+      "ED_COMPONENTDesc": "Direct investment : intercompany lending",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2607687,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_BFE",
+      "ED_COMPONENTDesc": "Debt liabilities between fellow enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 597054,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_ENT",
+      "ED_COMPONENTDesc": "Debt liabilities of direct investment enterprises to direct investor",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1231908,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_DI_INV",
+      "ED_COMPONENTDesc": "Debt liabilities of direct investor to direct investment enterprises",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 778725,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV",
+      "ED_COMPONENTDesc": "General government",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 162802,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 162798,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 162798,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 5,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "@,[*3]"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 5,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_GOV_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA",
+      "ED_COMPONENTDesc": "Monetary authority",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 136576,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1988,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1988,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 134588,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 106117,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 8186,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 18585,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_MA_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1699,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS",
+      "ED_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 5548674,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT",
+      "ED_COMPONENTDesc": "Long-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 3843171,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 856265,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 2694205,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 292701,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_LT_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "@,N.A."
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST",
+      "ED_COMPONENTDesc": "Short-term",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 1705503,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_CD",
+      "ED_COMPONENTDesc": "Currency and deposits",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 0,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_DB",
+      "ED_COMPONENTDesc": "Debt securities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 80863,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_LN",
+      "ED_COMPONENTDesc": "Loans",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 912983,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_OD",
+      "ED_COMPONENTDesc": "Other debt liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 313188,
+      "sd_value": "@"
+    },
+    {
+      "ED_COMPONENT": "ED_OS_ST_TC",
+      "ED_COMPONENTDesc": "Trade credit and advances",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "ED",
+      "svDesc": "HK$ million",
+      "figure": 398470,
+      "sd_value": "@"
+    }
+  ]
+}

@@ -1,0 +1,624 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=315-37006&api_popup=1"
+    },
+    "title": "Net investment flows by sector",
+    "tablenote": [
+      "Figures may not add up to the total due to rounding.     A new sign convention has been adopted for the entire series of the financial account since June 2023. From then on, an increase in net assets (net financial outflow) is indicated by a positive value while a decrease in net assets (net financial inflow) is indicated by a negative value.     The estimates of reserve and non-reserve assets under the Balance of Payments framework are transaction figures. Effects of valuation changes (including price changes and exchange rate changes) and reclassifications are not taken into account.",
+      "@ Figure is subject to revision later on."
+    ],
+    "source": "Balance of Payments Branch (1),  Census and Statistics Department  (Enquiry telephone no. : 3863 2329  Enquiry e-mail : bop@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 60,
+      "started": "2026-10-20T21:01:57+00:00",
+      "finished": "2026-10-20T21:01:57+00:00",
+      "durationSeconds": 0.193602
+    }
+  },
+  "dataSet": [
+    {
+      "BOP_COMPONENT": "DI",
+      "BOP_COMPONENTDesc": "Direct investment",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 20806,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -12340,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 33145,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FD",
+      "BOP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -25550,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FDB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -28804,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FDO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 3254,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRA",
+      "BOP_COMPONENTDesc": "Financial non-reserve assets",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 51192,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 261485,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -210294,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OI",
+      "BOP_COMPONENTDesc": "Other investment",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 226954,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 362810,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -135856,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PI",
+      "BOP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -171018,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -60181,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -110837,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DI",
+      "BOP_COMPONENTDesc": "Direct investment",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -5895,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -11000,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 5105,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FD",
+      "BOP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 13166,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FDB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 13373,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FDO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -207,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRA",
+      "BOP_COMPONENTDesc": "Financial non-reserve assets",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 15612,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 86483,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "FNRO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -70870,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OI",
+      "BOP_COMPONENTDesc": "Other investment",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 36687,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 79668,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "OIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -42982,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PI",
+      "BOP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -28346,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 4441,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "PIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -32786,
+      "sd_value": ""
+    },
+    {
+      "BOP_COMPONENT": "DI",
+      "BOP_COMPONENTDesc": "Direct investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -164897,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -68487,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -96410,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FD",
+      "BOP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -46356,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FDB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -76819,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FDO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 30463,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRA",
+      "BOP_COMPONENTDesc": "Financial non-reserve assets",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 624094,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 876100,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -252006,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OI",
+      "BOP_COMPONENTDesc": "Other investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 347564,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 537356,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -189791,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PI",
+      "BOP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 487782,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 484050,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 3732,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DI",
+      "BOP_COMPONENTDesc": "Direct investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -29097.995,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -46514.472,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "DIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 17416.477,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FD",
+      "BOP_COMPONENTDesc": "Financial derivatives",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -58256.536,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FDB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -57618.986,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FDO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -637.55,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRA",
+      "BOP_COMPONENTDesc": "Financial non-reserve assets",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 76768.197,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 271539.999,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "FNRO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -194771.802,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OI",
+      "BOP_COMPONENTDesc": "Other investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -315687.937,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -124666.943,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "OIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -191020.994,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PI",
+      "BOP_COMPONENTDesc": "Portfolio investment",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 479810.665,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PIB",
+      "BOP_COMPONENTDesc": "Banks",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": 500340.4,
+      "sd_value": "@"
+    },
+    {
+      "BOP_COMPONENT": "PIO",
+      "BOP_COMPONENTDesc": "Other sectors",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "BOP",
+      "svDesc": "HK$ million",
+      "figure": -20529.735,
+      "sd_value": "@"
+    }
+  ]
+}

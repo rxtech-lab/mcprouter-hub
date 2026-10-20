@@ -1,0 +1,265 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=315-38001&api_popup=1"
+    },
+    "title": "香港直接投資統計數字",
+    "tablenote": [
+      "由於採用了不同的展示原則，本表所載列的總量數字與表315-38011，315-38012，315-38021及315-38022所載列的所有國家／地區或經濟活動的總計有所不同。根據國際統計標準，前者是按「資產／負債原則」編製，而後者則是按「方向原則」編製。如要分析總量數字，應參考本表的直接投資數字；如要計算個別投資者或接受投資國家／地區或經濟活動的佔有率，應參考表315-38011，315-38012，315-38021及315-38022的數字。     直接投資頭寸是指在某特定時點，外來直接投資或向外直接投資的價值。不同時間點之間的頭寸的變化是受多種因素所影響，包括直接投資流量、價格變動、匯率波動和分類變動等其他因素。     按季直接投資頭寸由2010年第1季統計季度開始編製。     由於數字經四捨五入，分項總和未必與總數相等。",
+      "- 不適用",
+      "@ 數字在日後會作出修訂。"
+    ],
+    "source": "對外申索、負債及收益統計調查 政府統計處國際收支平衡統計組(二)一 (查詢電話：3863 2269  查詢電郵：di@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 24,
+      "started": "2026-10-20T21:01:58+00:00",
+      "finished": "2026-10-20T21:01:58+00:00",
+      "durationSeconds": 0.030492
+    }
+  },
+  "dataSet": [
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS",
+      "svDesc": "百萬港元",
+      "figure": 1955847,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS",
+      "svDesc": "百萬港元",
+      "figure": 1914275,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_POS",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_POS",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_POS",
+      "svDesc": "百萬港元",
+      "figure": 20873426,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_POS",
+      "svDesc": "百萬港元",
+      "figure": 22034261,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DI_POS",
+      "svDesc": "百萬港元",
+      "figure": 21790052,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DI_POS",
+      "svDesc": "百萬港元",
+      "figure": 22915608,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "百萬港元",
+      "figure": 128771,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "百萬港元",
+      "figure": 778375,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "百萬港元",
+      "figure": 39168,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Q",
+      "period": "202512",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "百萬港元",
+      "figure": 92661,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "百萬港元",
+      "figure": 107965,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_INFLOW",
+      "svDesc": "百萬港元",
+      "figure": 943272,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_INFLOW",
+      "svDesc": "百萬港元",
+      "figure": 45063,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Q",
+      "period": "202512",
+      "sv": "DI_INFLOW",
+      "svDesc": "百萬港元",
+      "figure": 207995,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_INFLOW",
+      "svDesc": "百萬港元",
+      "figure": 125629,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_INCOME_INFLOW",
+      "svDesc": "百萬港元",
+      "figure": 24954,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_INCOME_INFLOW",
+      "svDesc": "百萬港元",
+      "figure": 1304621,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "直接投資資產",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DI_INCOME_INFLOW",
+      "svDesc": "百萬港元",
+      "figure": 361108,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "百萬港元",
+      "figure": 136350,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "百萬港元",
+      "figure": 38805,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "百萬港元",
+      "figure": 1464161,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "直接投資負債",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "百萬港元",
+      "figure": 393215,
+      "sd_value": "@"
+    }
+  ]
+}

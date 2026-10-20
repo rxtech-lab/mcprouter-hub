@@ -1,0 +1,503 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=315-38022&api_popup=1"
+    },
+    "title": "按香港企业集团主要经济活动划分的香港向外直接投资头寸及流量",
+    "tablenote": [
+      "由于采用了不同的展示原则，本表所载列的所有经济活动的总计与表315-38001所载列的直接投资资产总数有所不同。根据国际统计标准，前者是按「方向原则」编制，而后者则是按「资产／负债原则」编制。如要计算个别经济活动的占有率，应参考本表的所有经济活动的总计；如要分析总量数字，应参考表315-38001的直接投资资产。     直接投资头寸是指在某特定时点，向外直接投资的价值。不同时间点之间的头寸的变化是受多种因素所影响，包括直接投资流量、价格变动、汇率波动和分类变动等其他因素。     由于数字经四舍五入，分项总和未必与总数相等。   一个香港企业集团主要包括一间香港母公司，及其香港附属公司、联营公司及分行。   就一个企业集团而言，经济活动是指整个企业集团在香港的主要经济活动，而不是资金被投放的境外企业的经济活动。若一个香港企业集团从事多类型活动，则该集团的经济活动是按集团最高营业收益的业务界定。   负流出不一定指撤走资金。负流出可能是由于境外有联系公司归还借款。"
+    ],
+    "source": "对外申索、负债及收益统计调查 政府统计处国际收支平衡统计组(二)一 (查询电话 : 3863 2269  查询电邮：di@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 48,
+      "started": "2026-10-20T21:01:59+00:00",
+      "finished": "2026-10-20T21:01:59+00:00",
+      "durationSeconds": 0.013581
+    }
+  },
+  "dataSet": [
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 1668.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_10",
+      "ACTIVITYDesc": "制造",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 149.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_100-120",
+      "ACTIVITYDesc": "投资及控股、地产、专业及商用服务",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 2124.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_130",
+      "ACTIVITYDesc": "其他活动",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 196.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_20",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 18.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_30",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 285.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_40",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 51.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_50",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 89.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_60",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 117.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_70",
+      "ACTIVITYDesc": "银行",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 65.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_80",
+      "ACTIVITYDesc": "保险",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 28.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_90",
+      "ACTIVITYDesc": "金融(银行、投资及控股公司除外)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 45.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 17071.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_10",
+      "ACTIVITYDesc": "制造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 398.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_100-120",
+      "ACTIVITYDesc": "投资及控股、地产、专业及商用服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 13447.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_130",
+      "ACTIVITYDesc": "其他活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 224.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_20",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 90.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_30",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 1466.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_40",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 109.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_50",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 181.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_60",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 116.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_70",
+      "ACTIVITYDesc": "银行",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 528.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_80",
+      "ACTIVITYDesc": "保险",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 341.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_90",
+      "ACTIVITYDesc": "金融(银行、投资及控股公司除外)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "十亿港元",
+      "figure": 167.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 115.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_10",
+      "ACTIVITYDesc": "制造",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 13.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_100-120",
+      "ACTIVITYDesc": "投资及控股、地产、专业及商用服务",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 121.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_130",
+      "ACTIVITYDesc": "其他活动",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 68.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_20",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_30",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 33.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_40",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 5.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_50",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": -0.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_60",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 69.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_70",
+      "ACTIVITYDesc": "银行",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_80",
+      "ACTIVITYDesc": "保险",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_90",
+      "ACTIVITYDesc": "金融(银行、投资及控股公司除外)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 13.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 723.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_10",
+      "ACTIVITYDesc": "制造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 20.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_100-120",
+      "ACTIVITYDesc": "投资及控股、地产、专业及商用服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 452.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_130",
+      "ACTIVITYDesc": "其他活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": -19.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_20",
+      "ACTIVITYDesc": "建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": -3.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_30",
+      "ACTIVITYDesc": "进出口贸易、批发及零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 105.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_40",
+      "ACTIVITYDesc": "住宿及膳食服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 3.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_50",
+      "ACTIVITYDesc": "运输、仓库、邮政及速递服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 36.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_60",
+      "ACTIVITYDesc": "资讯及通讯",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 23.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_70",
+      "ACTIVITYDesc": "银行",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 48,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_80",
+      "ACTIVITYDesc": "保险",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 47.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_90",
+      "ACTIVITYDesc": "金融(银行、投资及控股公司除外)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "十亿港元",
+      "figure": 7.8,
+      "sd_value": ""
+    }
+  ]
+}

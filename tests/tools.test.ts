@@ -10,6 +10,7 @@ import { transportCases } from "./transport003-cases";
 import { financeCases } from "./finance028-cases";
 import { expenditureCases } from "./finance029-cases";
 import { accountsCases } from "./finance030-cases";
+import { investmentCases } from "./finance032-cases";
 import { externalCases } from "./finance031-cases";
 
 /**
@@ -197,6 +198,7 @@ const cases: Case[] = [
   ...expenditureCases,
   ...accountsCases,
   ...externalCases,
+  ...investmentCases,
   // citybus
   {
     tool: "citybus_routes",

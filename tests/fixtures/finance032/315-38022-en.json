@@ -1,0 +1,503 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=315-38022&api_popup=1"
+    },
+    "title": "Position and flow of outward direct investment (DI) of Hong Kong by major economic activity of Hong Kong enterprise groups",
+    "tablenote": [
+      "The total of all economic activities presented in this table is different from the aggregate direct investment assets presented in Table 315-38001 due to the adoption of different presentation principles, with the former compiled based on the \"directional principle\" and the latter based on the \"asset/liability principle\" in accordance with the international statistical standards. The total of all economic activities in this table should be referred to in calculating the shares of individual economic activities, while the direct investment assets in Table 315-38001 should be referred to in the analyses on aggregate statistics.     The position of direct investment refers to the value of outward direct investment at a specific time point.  Changes in the position between different time points are influenced by various factors, including flows of direct investment as well as other factors, such as price changes, exchange rate variations, reclassifications, etc.     Figures may not add up to the total due to rounding.     A Hong Kong enterprise group (HKEG) mainly consists of a Hong Kong parent company, its Hong Kong subsidiaries, associates and branches.     For an enterprise group, economic activity here refers to the major economic activity of the whole enterprise group in Hong Kong, but not the economic activity of the non-resident enterprise into which the funds are invested. If a HKEG is engaged in a wide variety of activities, its economic activity is determined on the basis of the economic activity in respect of which the operating revenue is predominant.     Negative outflow does not necessarily relate to equity withdrawal. It may be the result of repayment of loans by non-resident affiliates."
+    ],
+    "source": "Survey of External Claims, Liabilities and Income Balance of Payments Section (2)1, Census and Statistics Department (Enquiry telephone no. : 3863 2269  Enquiry e-mail : di@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 48,
+      "started": "2026-10-20T21:01:59+00:00",
+      "finished": "2026-10-20T21:01:59+00:00",
+      "durationSeconds": 0.021456
+    }
+  },
+  "dataSet": [
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 1668.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_10",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 149.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_100-120",
+      "ACTIVITYDesc": "Investment and holding, real estate, professional and business services",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 2124.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_130",
+      "ACTIVITYDesc": "Other activities",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 196.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_20",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 18.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_30",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 285.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_40",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 51.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_50",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 89.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_60",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 117.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_70",
+      "ACTIVITYDesc": "Banking",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 65.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_80",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 28.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_90",
+      "ACTIVITYDesc": "Financing (except banking, investment and holding companies)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 45.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 17071.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_10",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 398.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_100-120",
+      "ACTIVITYDesc": "Investment and holding, real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 13447.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_130",
+      "ACTIVITYDesc": "Other activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 224.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_20",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 90.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_30",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 1466.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_40",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 109.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_50",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 181.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_60",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 116.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_70",
+      "ACTIVITYDesc": "Banking",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 528.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_80",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 341.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_90",
+      "ACTIVITYDesc": "Financing (except banking, investment and holding companies)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_POS_ODI",
+      "svDesc": "HK$ billion",
+      "figure": 167.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 115.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_10",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 13.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_100-120",
+      "ACTIVITYDesc": "Investment and holding, real estate, professional and business services",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 121.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_130",
+      "ACTIVITYDesc": "Other activities",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 68.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_20",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_30",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 33.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_40",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 5.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_50",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": -0.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_60",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 69.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_70",
+      "ACTIVITYDesc": "Banking",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_80",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_90",
+      "ACTIVITYDesc": "Financing (except banking, investment and holding companies)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 13.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "",
+      "ACTIVITYDesc": "Total",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 723.1,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_10",
+      "ACTIVITYDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 20.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_100-120",
+      "ACTIVITYDesc": "Investment and holding, real estate, professional and business services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 452.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_130",
+      "ACTIVITYDesc": "Other activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": -19.5,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_20",
+      "ACTIVITYDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": -3.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_30",
+      "ACTIVITYDesc": "Import/export, wholesale and retail trades",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 105.7,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_40",
+      "ACTIVITYDesc": "Accommodation and food services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 3.2,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_50",
+      "ACTIVITYDesc": "Transportation, storage, postal and courier services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 36.9,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_60",
+      "ACTIVITYDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 23.4,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_70",
+      "ACTIVITYDesc": "Banking",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 48,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_80",
+      "ACTIVITYDesc": "Insurance",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 47.6,
+      "sd_value": ""
+    },
+    {
+      "ACTIVITY": "DI_90",
+      "ACTIVITYDesc": "Financing (except banking, investment and holding companies)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ billion",
+      "figure": 7.8,
+      "sd_value": ""
+    }
+  ]
+}

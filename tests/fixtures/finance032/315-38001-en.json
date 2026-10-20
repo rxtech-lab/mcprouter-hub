@@ -1,0 +1,265 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=315-38001&api_popup=1"
+    },
+    "title": "Direct investment (DI) statistics of Hong Kong",
+    "tablenote": [
+      "The aggregate direct investment figures presented in this table are different from the total of all countries/territories or economic activities presented in Tables 315-38011, 315-38012, 315-38021 and 315-38022 due to the adoption of different presentation principles, with the former compiled based on the “asset/liability principle” and the latter based on the “directional principle” in accordance with the international statistical standards.  The direct investment figures in this table should be referred to in the analyses on aggregate statistics, while the figures in Tables 315-38011, 315-38012, 315-38021 and 315-38022 should be referred to in calculating the shares of individual investor or recipient countries/territories or economic activities.     The position of direct investment refers to the value of inward direct investment or outward direct investment at a specific time point.  Changes in the position between different time points are influenced by various factors, including flows of direct investment as well as other factors, such as price changes, exchange rate variations, reclassifications, etc.     Quarterly direct investment position is available as from the reference quarter of Q1 2010.     Figures may not add up to the total due to rounding.",
+      "- Not applicable",
+      "@ Figure is subject to revision later on."
+    ],
+    "source": "Survey of External Claims, Liabilities and Income Balance of Payments Section (2)1, Census and Statistics Department (Enquiry telephone no. : 3863 2269  Enquiry e-mail : di@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 24,
+      "started": "2026-10-20T21:01:58+00:00",
+      "finished": "2026-10-20T21:01:58+00:00",
+      "durationSeconds": 0.030748
+    }
+  },
+  "dataSet": [
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS",
+      "svDesc": "HK$ million",
+      "figure": 1955847,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_POS",
+      "svDesc": "HK$ million",
+      "figure": 1914275,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_POS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_POS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_POS",
+      "svDesc": "HK$ million",
+      "figure": 20873426,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_POS",
+      "svDesc": "HK$ million",
+      "figure": 22034261,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DI_POS",
+      "svDesc": "HK$ million",
+      "figure": 21790052,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DI_POS",
+      "svDesc": "HK$ million",
+      "figure": 22915608,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ million",
+      "figure": 128771,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ million",
+      "figure": 778375,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ million",
+      "figure": 39168,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Q",
+      "period": "202512",
+      "sv": "DI_OUTFLOW",
+      "svDesc": "HK$ million",
+      "figure": 92661,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ million",
+      "figure": 107965,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ million",
+      "figure": 943272,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ million",
+      "figure": 45063,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Q",
+      "period": "202512",
+      "sv": "DI_INFLOW",
+      "svDesc": "HK$ million",
+      "figure": 207995,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_INFLOW",
+      "svDesc": "HK$ million",
+      "figure": 125629,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_INCOME_INFLOW",
+      "svDesc": "HK$ million",
+      "figure": 24954,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_INCOME_INFLOW",
+      "svDesc": "HK$ million",
+      "figure": 1304621,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIA",
+      "DI_COMPONENTDesc": "Direct investment assets",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DI_INCOME_INFLOW",
+      "svDesc": "HK$ million",
+      "figure": 361108,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ million",
+      "figure": 136350,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Q",
+      "period": "199903",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ million",
+      "figure": 38805,
+      "sd_value": ""
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ million",
+      "figure": 1464161,
+      "sd_value": "@"
+    },
+    {
+      "DI_COMPONENT": "DIL",
+      "DI_COMPONENTDesc": "Direct investment liabilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "DI_INCOME_OUTFLOW",
+      "svDesc": "HK$ million",
+      "figure": 393215,
+      "sd_value": "@"
+    }
+  ]
+}

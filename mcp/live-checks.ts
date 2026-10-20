@@ -106,6 +106,18 @@ export const liveCases: Record<string, LiveCase> = {
   real_gross_domestic_income: { input: { limit: 1 }, check: nonEmptyPage },
   gni_and_per_capita: { input: { limit: 1 }, check: nonEmptyPage },
 
+  // Finance batch 032: period-free checks.
+  net_investment_flows_sector: { input: { limit: 1 }, check: nonEmptyPage },
+  international_investment_position: { input: { limit: 1 }, check: nonEmptyPage },
+  iip_gdp_ratios: { input: { limit: 1 }, check: nonEmptyPage },
+  iip_currency_composition: { input: { limit: 1 }, check: nonEmptyPage },
+  external_debt: { input: { limit: 1 }, check: nonEmptyPage },
+  direct_investment_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  inward_direct_investment_countries: { input: { limit: 1 }, check: nonEmptyPage },
+  inward_direct_investment_activities: { input: { limit: 1 }, check: nonEmptyPage },
+  outward_direct_investment_countries: { input: { limit: 1 }, check: nonEmptyPage },
+  outward_direct_investment_activities: { input: { limit: 1 }, check: nonEmptyPage },
+
   // Finance batch 031: period-free checks.
   epif_income_components: { input: { limit: 1 }, check: nonEmptyPage },
   epif_countries: { input: { limit: 1 }, check: nonEmptyPage },
