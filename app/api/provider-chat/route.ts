@@ -1,3 +1,5 @@
+import { consumeChatMessage, chatBillingMessage, DuplicateChatMessageError } from "@/lib/billing/chat";
+import { UsageLimitError } from "@/lib/billing/errors";
 import { AGENT_TOOL_STEPS, GUEST_AGENT_TOOL_STEPS } from "@/lib/agent/stop";
 import { validateUIMessages, type UIMessage } from "ai";
 import { cookies } from "next/headers";
@@ -54,7 +56,7 @@ export async function POST(request: Request) {
     // Never connect configured external servers or include dashboard/account tools in catalogue chat.
     servers = DEFAULT_AGENT_SERVERS.map((server) => resolveServer(server, {
       origin: new URL(request.url).origin, userId, internalKey: process.env.MCPROUTER_INTERNAL_KEY,
-      channel: "web", scopes: scope.services, toolMode: "all",
+      channel: "web", chatMetered: true, scopes: scope.services, toolMode: "all",
     }));
   } catch {
     return plain("The agent isn't available right now. Try again later.", 503);
@@ -65,6 +67,12 @@ export async function POST(request: Request) {
     if (!allowed) return plain("You've used today's free messages. Sign in to keep chatting, or come back tomorrow.", 429);
     headers.set("x-free-chat-remaining", String(quota.remaining));
   }
+  try {
+    if (user) await consumeChatMessage({ userId, messageId: messages.at(-1)!.id, channel: "web" });
+  } catch (error) {
+    return plain(chatBillingMessage(error), error instanceof DuplicateChatMessageError ? 409 : error instanceof UsageLimitError ? 402 : 503);
+  }
+
   try {
     return await streamAgentReply({
       servers, messages, model: user ? (process.env.AI_MODEL ?? config.model) : config.model,

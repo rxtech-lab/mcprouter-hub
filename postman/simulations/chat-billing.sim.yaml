@@ -1,0 +1,5 @@
+simulation: chat-billing
+routing: path
+mocks:
+  - routeKey: subscription
+    path: ../mocks/chat-billing/config.yaml

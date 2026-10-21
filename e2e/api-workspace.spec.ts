@@ -10,7 +10,7 @@ test("API workspace resizes, minimizes and preserves the conversation", async ({
   await expect(dialog.getByRole("button", { name: "show_ui", exact: true })).toBeVisible();
   await expect(dialog.getByRole("button", { name: "show_tool_ui", exact: true })).toBeVisible();
   const allowance = dialog.getByTestId("chat-allowance");
-  await expect(allowance).toContainText(/free messages left today|Plan allowance/);
+  await expect(allowance).toContainText(/free messages left today|Chat credits/);
   await expect(allowance).toContainText(/credits|Credits/);
   const initialBounds = await dialog.boundingBox();
   expect(initialBounds!.width).toBeLessThan(page.viewportSize()!.width);

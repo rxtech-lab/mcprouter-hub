@@ -53,6 +53,22 @@ describe("meterToolCall", () => {
     expect(value.increment).not.toHaveBeenCalled();
   });
 
+  it.each(["web", "telegram", "whatsapp"] as const)("includes tools in a metered %s chat message", async (channel) => {
+    const { value, settle } = deps({ creditUnit: "mcp-calls" });
+    const result = await meterToolCall({ userId: "member", apiKeyId: null, scopes: [], channel, chatMetered: true }, call, async () => ({ eta: 3 }), value);
+    await settle();
+    expect(result.isError).toBeUndefined();
+    expect(value.debit).not.toHaveBeenCalled();
+    expect(value.record).not.toHaveBeenCalled();
+    expect(value.log).toHaveBeenCalledWith(expect.objectContaining({ userId: "member", channel, status: "ok" }));
+  });
+
+  it("still bills an API-key caller claiming to be a metered chat", async () => {
+    const { value } = deps({ creditUnit: "mcp-calls" });
+    await meterToolCall({ ...caller, chatMetered: true }, call, async () => ({}), value);
+    expect(value.debit).toHaveBeenCalledOnce();
+  });
+
   it("refuses the call when the plan's allowance is used up", async () => {
     const run = vi.fn();
     const { value } = deps({ record: vi.fn(async () => { throw new UsageLimitError("mcp_calls", "limit_exceeded", 1000, 1000); }) });

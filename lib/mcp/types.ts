@@ -61,6 +61,8 @@ export type CallerContext = {
   scopes: string[];
   /** A signed-out visitor of the free agent: logged, but never billed. */
   guest?: boolean;
+  /** Trusted internal agent: the user message has already consumed one chat unit. */
+  chatMetered?: boolean;
   /** Where the call came from, for usage by client. */
   channel?: CallChannel;
   /** The OAuth client, when `channel` is `oauth`. */

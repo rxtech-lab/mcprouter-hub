@@ -1,3 +1,5 @@
+import { consumeChatMessage, chatBillingMessage, DuplicateChatMessageError } from "@/lib/billing/chat";
+import { UsageLimitError } from "@/lib/billing/errors";
 import { validateUIMessages, type UIMessage } from "ai";
 import { getCurrentUser } from "@/lib/auth";
 import { chatIdSchema, ensureChat, loadChat, saveMessages } from "@/lib/chat-store";
@@ -35,10 +37,16 @@ export async function POST(request: Request) {
   let servers;
   try {
     servers = parseMcpServers(process.env.AGENT_MCP_SERVERS).map((server) =>
-      resolveServer(server, { origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "web" }),
+      resolveServer(server, { origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "web", chatMetered: true }),
     );
   } catch (error) {
     return Response.json({ error: (error as Error).message }, { status: 500 });
+  }
+
+  try {
+    await consumeChatMessage({ userId: user.id, messageId: body.message.id, channel: "web" });
+  } catch (error) {
+    return new Response(chatBillingMessage(error), { status: error instanceof DuplicateChatMessageError ? 409 : error instanceof UsageLimitError ? 402 : 503, headers: { "content-type": "text/plain; charset=utf-8" } });
   }
 
   return streamAgentReply({

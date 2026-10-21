@@ -5,7 +5,8 @@ import type { ToolMode } from "@/db/schema";
 import { parseMcpServers, resolveServer } from "@/lib/agent/mcp-servers";
 import { generateAgentReply } from "@/lib/agent/run";
 import { SIGN_OUT_NOTE, signOutTool } from "@/lib/agent/sign-out-tool";
-import { isOverLimit } from "@/lib/billing/allowance";
+import { consumeChatMessage, DuplicateChatMessageError } from "@/lib/billing/chat";
+import { UsageLimitError } from "@/lib/billing/errors";
 import { cardsForVisuals } from "@/lib/cards";
 import { renderCardPng } from "@/lib/cards/render";
 import { deleteChat, ensureChat, loadChat, saveMessages } from "@/lib/chat-store";
@@ -40,7 +41,7 @@ export type BotDeps = {
   origin: string;
   findUser?: (from: string) => Promise<LinkedUser | null>;
   signOut?: (from: string) => Promise<boolean>;
-  overLimit?: (user: LinkedUser) => Promise<boolean>;
+  consumeChat?: typeof consumeChatMessage;
   reply?: (messages: UIMessage[], user: LinkedUser) => Promise<AgentAnswer>;
   send?: (to: string, text: string) => Promise<void>;
   sendCard?: (to: string, card: Card) => Promise<void>;
@@ -54,9 +55,9 @@ async function linkedUser(from: string) {
 
 function defaultReply(deps: BotDeps) {
   return async (messages: UIMessage[], user: LinkedUser): Promise<AgentAnswer> => {
-    // The member's own agent, with the same servers and billing as the web chat.
+    // The message is metered once; included tool calls retain the member identity and scopes.
     const servers = parseMcpServers(process.env.AGENT_MCP_SERVERS).map((server) =>
-      resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "whatsapp", scopes: user.scopes, toolMode: user.toolMode }),
+      resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "whatsapp", chatMetered: true, scopes: user.scopes, toolMode: user.toolMode }),
     );
     const signOut = signOutTool();
     const { text, visuals } = await generateAgentReply({ servers, messages, model: deps.config.model, channelNote: WHATSAPP_CHANNEL_NOTE, channelTools: signOut.tools });
@@ -82,7 +83,7 @@ export function linkedMessage(email: string) {
 }
 
 export function overLimitMessage(origin: string) {
-  return `You've used up your mcprouter allowance, so I can't look anything up right now. Sign in to top up or change your plan:\n${origin}/login?next=${encodeURIComponent("/billing")}`;
+  return `You have no chat credits left. Sign in to top up or change your plan:\n${origin}/login?next=${encodeURIComponent("/billing")}`;
 }
 
 /** Answers one incoming WhatsApp message. Never throws; failures are logged and, where possible, told to the user. */
@@ -93,7 +94,7 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
   const reply = deps.reply ?? defaultReply(deps);
   const findUser = deps.findUser ?? linkedUser;
   const signOut = deps.signOut ?? ((from: string) => signOutNumber(phoneHash(from)));
-  const overLimit = deps.overLimit ?? isOverLimit;
+  const consumeChat = deps.consumeChat ?? consumeChatMessage;
 
   try {
     if (message.text !== null && SIGN_OUT_COMMANDS.has(message.text.trim().toLowerCase())) {
@@ -128,7 +129,14 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
       return { status: "too-long" as const };
     }
 
-    if (await overLimit(user)) {
+    try {
+      await consumeChat({ userId: user.id, messageId: message.id, channel: "whatsapp" });
+    } catch (error) {
+      if (error instanceof DuplicateChatMessageError) return { status: "duplicate" as const };
+      if (!(error instanceof UsageLimitError)) {
+        await send(message.from, "Chat billing is temporarily unavailable. Please try again shortly.");
+        return { status: "failed" as const };
+      }
       await send(message.from, overLimitMessage(deps.origin));
       return { status: "limited" as const };
     }

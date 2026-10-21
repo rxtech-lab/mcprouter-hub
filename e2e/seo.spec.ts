@@ -49,23 +49,30 @@ test("robots and sitemap publish canonical content, excluding account and transi
   expect(xml).not.toMatch(/\/dashboard|\/keys|\?chat=|\?q=/);
 });
 
-test("API detail pages have their own canonical and return 404 for unknown IDs", async ({ page, request }) => {
-  // The public tracker links to the full detail page from its existing dialog.
-  await page.goto("/en/sources/hko-weather");
-  const link = page.locator('a[href^="/en/sources/api/"]').first();
-  const href = await link.getAttribute("href");
-  expect(href).toBeTruthy();
-  await link.click();
-  await expect(page).toHaveURL(`http://localhost:3199${href}`);
-  // Streamed metadata can briefly overlap with the previous route's metadata.
-  // Poll the complete set so persistent duplicates still fail the assertion.
-  await expect.poll(() => page.locator('link[rel="canonical"]').evaluateAll(
-    (links) => links.map((link) => link.getAttribute("href")),
-  )).toEqual([`http://localhost:3199${href}`]);
-  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  expect((await request.get("/en/sources/api/does-not-exist")).status()).toBe(404);
-  expect((await request.get("/en/guides/does-not-exist")).status()).toBe(404);
-});
+for (const { entry, path, locale } of [
+  { entry: "service", path: "/en/sources/hko-weather", locale: "en" },
+  { entry: "tracker dialog", path: "/zh-HK/sources/apis?api=API-0014", locale: "zh-HK" },
+]) {
+  test(`API detail pages have their own canonical and return 404 for unknown IDs (${entry})`, async ({ page, request }) => {
+    // Slow hydration reproduces an early client navigation leaving orphaned SSR
+    // metadata in the head. Document navigation must replace it in both flows.
+    const cdp = await page.context().newCDPSession(page);
+    await cdp.send("Emulation.setCPUThrottlingRate", { rate: 12 });
+    await page.goto(path);
+    const link = page.locator(`a[href^="/${locale}/sources/api/"]`).first();
+    const href = await link.getAttribute("href");
+    expect(href).toBeTruthy();
+    await link.click();
+    await expect(page).toHaveURL(`http://localhost:3199${href}`);
+    // Check the complete set so persistent duplicates still fail the assertion.
+    await expect.poll(() => page.locator('link[rel="canonical"]').evaluateAll(
+      (links) => links.map((link) => link.getAttribute("href")),
+    )).toEqual([`http://localhost:3199${href}`]);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    expect((await request.get(`/${locale}/sources/api/does-not-exist`)).status()).toBe(404);
+    expect((await request.get(`/${locale}/guides/does-not-exist`)).status()).toBe(404);
+  });
+}
 
 test("public guides and service content fit a mobile viewport", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });

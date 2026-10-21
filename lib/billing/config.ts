@@ -3,7 +3,11 @@ import "server-only";
 export const billingConfig = {
   enabled: process.env.BILLING_ENABLED === "true",
   /** rx-subscription usage item charged once per MCP tool call. */
-  usageItem: process.env.RX_SUBSCRIPTION_USAGE_ITEM?.trim() || "mcp_calls",
-  /** Balance unit that pays for calls past the plan allowance. Unset shows every balance. */
-  creditUnit: process.env.RX_SUBSCRIPTION_CREDIT_UNIT?.trim() || undefined,
+  usageItem: "mcp_calls",
+  /** Usage item shown for reference; it does not override the chat balance gate. */
+  chatUsageItem: "chat",
+  /** One unit debited before each user message, regardless of the plan's usage limit. */
+  chatCreditUnit: "chat",
+  /** Balance unit debited once per direct MCP call. Set undefined to use the MCP plan allowance. */
+  creditUnit: "mcp-calls" as string | undefined,
 } as const;

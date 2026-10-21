@@ -25,7 +25,7 @@ for (const mobile of [false, true]) {
     await expect(dialog.getByTestId("tool-request-message").locator("code")).toHaveText("parking_meter_vacancy");
     await expect(dialog.getByText("Use this tool: parking_meter_vacancy", { exact: true })).toHaveCount(0);
     await page.screenshot({ animations: "disabled", path: `/tmp/mcprouter-tool-message-${mobile ? "mobile" : "desktop"}.png` });
-    await expect(dialog.getByTestId("chat-allowance")).toContainText(/free messages left today|Plan allowance/);
+    await expect(dialog.getByTestId("chat-allowance")).toContainText(/free messages left today|Chat credits/);
     await dialog.getByRole("button", { name: "Full screen", exact: true }).click();
     await expect(page).toHaveURL(/fullscreen=1/);
     await dialog.getByRole("button", { name: "Minimize", exact: true }).click();

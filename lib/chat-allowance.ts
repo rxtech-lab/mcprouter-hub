@@ -11,6 +11,8 @@ export type ChatAllowance =
       billing: "ready" | "unavailable" | "unconfigured";
       metering: boolean;
       credits: { unit: string; name: string; available: number }[];
+      chatCredits: { unit: string; name: string; available: number }[];
+      chatAllowance: { used: number; limit: number | null; remaining: number | null; resetsAt: string | null } | null;
       allowance: { used: number; limit: number | null; remaining: number | null; resetsAt: string | null } | null;
     };
 
@@ -18,14 +20,17 @@ export type ChatAllowance =
 export async function currentChatAllowance(): Promise<ChatAllowance> {
   const user = await getCurrentUser();
   if (!user) return { kind: "guest", quota: await currentFreeChatQuota() };
-  const base = { kind: "member" as const, metering: billingConfig.enabled, credits: [], allowance: null };
+  const base = { kind: "member" as const, metering: billingConfig.enabled, credits: [], allowance: null, chatCredits: [], chatAllowance: null };
   if (!subscriptionConfigured) return { ...base, billing: "unconfigured" };
   try {
     const entitlements = await getEntitlements(user);
     const usage = entitlements.usage.find((item) => item.key === billingConfig.usageItem);
+    const chat = entitlements.usage.find((item) => item.key === billingConfig.chatUsageItem);
     return {
       ...base,
       billing: "ready",
+      chatCredits: entitlements.balances.filter((balance) => balance.unit === billingConfig.chatCreditUnit).map(({ unit, name, available }) => ({ unit, name, available })),
+      chatAllowance: chat ? { used: chat.used, limit: chat.limit, remaining: chat.limit === null ? null : (chat.remaining ?? Math.max(0, chat.limit - chat.used)), resetsAt: chat.resetsAt } : null,
       credits: entitlements.balances.filter((balance) => !billingConfig.creditUnit || balance.unit === billingConfig.creditUnit)
         .map(({ unit, name, available }) => ({ unit, name, available })),
       allowance: usage ? {

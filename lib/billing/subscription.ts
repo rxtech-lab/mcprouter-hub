@@ -147,6 +147,7 @@ export async function debitBalance(input: {
 }
 
 export type ResolvedPlan = {
+  pendingPlanChange?: { planId: string; planName: string; effectiveAt: string } | null;
   subscriptionId: string | null;
   planId: string;
   planKey: string;
@@ -306,6 +307,18 @@ export async function createBillingPortalSession(input: { user: AppUser; returnU
       kind: "portal",
       returnUrl: input.returnUrl,
     },
+  });
+  return body;
+}
+
+/** Creates a hosted review session; opening it does not change or charge a plan. */
+export async function createPlanChangeSession(input: {
+  user: AppUser; subscriptionId: string; planId: string; returnUrl: string; timing?: "immediate" | "next_period";
+}) {
+  const { body } = await request<{ url: string }>("/plan-changes", {
+    method: "POST",
+    body: { rxlabUserId: input.user.id, subscriptionId: input.subscriptionId,
+      planId: input.planId, returnUrl: input.returnUrl, timing: input.timing ?? "immediate" },
   });
   return body;
 }
