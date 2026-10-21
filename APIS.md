@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **138 of 3819 implemented**, 3681 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **144 of 3819 implemented**, 3675 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -584,7 +584,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | ID | API | Type | Provider | Status | Service |
 |---|---|---|---|---|---|
 | `API-0046` | [Exchange rates](https://apidocs.hkma.gov.hk/) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-0047` | [HIBOR](https://apidocs.hkma.gov.hk/) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
+| `API-0047` | [HIBOR](https://apidocs.hkma.gov.hk/) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA rates, liquidity and financial registers](mcp/services/hkma-finance/service.yaml) |
 | `API-0048` | [Interbank liquidity](https://apidocs.hkma.gov.hk/) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-0108` | [Spending data of Head 22 - Agriculture, Fisheries and Conservation Department](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-spending-data-head-22) | Files | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
 | `API-0124` | [Spending data of Head 25 - Architectural Services Department under General Revenue Account](https://data.gov.hk/en-data/dataset/hk-archsd-archsddata-aexph25) | Files | Architectural Services Department | 🕒 Coming soon | — |
@@ -690,7 +690,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1239` | [Departmental Expenditure of Head 33 – Civil Engineering and Development Department under the General Revenue Account for financial year 2023-24](https://data.gov.hk/en-data/dataset/hk-cedd-csu-cedd-asd-2324) | Files | Civil Engineering and Development Department | 🕒 Coming soon | — |
 | `API-1240` | [Departmental Expenditure of Head 33 – Civil Engineering and Development Department under the General Revenue Account for financial year 2024-25](https://data.gov.hk/en-data/dataset/hk-cedd-csu-cedd-asd-2425) | Files | Civil Engineering and Development Department | 🕒 Coming soon | — |
 | `API-1241` | [Departmental Expenditure of Head 33 – Civil Engineering and Development Department under the General Revenue Account for financial year 2025-26](https://data.gov.hk/en-data/dataset/hk-cedd-csu-cedd-asd-2526) | Files | Civil Engineering and Development Department | 🕒 Coming soon | — |
-| `API-1313` | [Registered Office Address of Live Local Companies and Principal Place of Business of Registered Non-Hong Kong Companies](https://data.gov.hk/en-data/dataset/hk-cr-crdata-list-addr) | API | Companies Registry | 🕒 Coming soon | — |
+| `API-1313` | [Registered Office Address of Live Local Companies and Principal Place of Business of Registered Non-Hong Kong Companies](https://data.gov.hk/en-data/dataset/hk-cr-crdata-list-addr) | API | Companies Registry | ✅ Implemented | [Companies Registry office addresses](mcp/services/cr-company-addresses/service.yaml) |
 | `API-1314` | [Licensing of Money Lenders](https://data.gov.hk/en-data/dataset/hk-cr-crdata-list-ml-licensees) | Files | Companies Registry | 🕒 Coming soon | — |
 | `API-1315` | [List of Newly Incorporated / Registered Companies and Companies which have changed Names (2017.01.02 - 2018.12.30)](https://data.gov.hk/en-data/dataset/hk-cr-crdata-list-newly-registered-companies-1718) | Files | Companies Registry | 🕒 Coming soon | — |
 | `API-1316` | [List of Newly Incorporated / Registered Companies and Companies which have changed Names (2018.12.31 - 2020.12.27)](https://data.gov.hk/en-data/dataset/hk-cr-crdata-list-newly-registered-companies-1920) | Files | Companies Registry | 🕒 Coming soon | — |
@@ -709,10 +709,10 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1329` | [Statistical Data on Money Lenders](https://data.gov.hk/en-data/dataset/hk-cr-crdata-stat-ml-fsd) | Files | Companies Registry | 🕒 Coming soon | — |
 | `API-1330` | [Statistical Data on Registered Non-Hong Kong Companies](https://data.gov.hk/en-data/dataset/hk-cr-crdata-stat-non-hk-companies) | Files | Companies Registry | 🕒 Coming soon | — |
 | `API-1331` | [Statistical Data on Prosecution](https://data.gov.hk/en-data/dataset/hk-cr-crdata-stat-prosecution) | Files | Companies Registry | 🕒 Coming soon | — |
-| `API-1332` | [List of Trust or Company Service Provider Licensees](https://data.gov.hk/en-data/dataset/hk-cr-crtcspdata-list-tcsp-licensees) | API | Companies Registry | 🕒 Coming soon | — |
+| `API-1332` | [List of Trust or Company Service Provider Licensees](https://data.gov.hk/en-data/dataset/hk-cr-crtcspdata-list-tcsp-licensees) | API | Companies Registry | ✅ Implemented | [Trust or company service provider licensees](mcp/services/cr-tcsp/service.yaml) |
 | `API-1421` | [Customs Statistics on Revenue Collection (Monthly)](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-mon-dc) | Files | Customs and Excise Department | 🕒 Coming soon | — |
 | `API-1425` | [Customs Statistics on Revenue Collection](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-revenue-collection) | Files | Customs and Excise Department | 🕒 Coming soon | — |
-| `API-1428` | [List of General Bonded, Public Bonded and C&E Warehouses](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-warehouse) | API | Customs and Excise Department | 🕒 Coming soon | — |
+| `API-1428` | [List of General Bonded, Public Bonded and C&E Warehouses](https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-warehouse) | API | Customs and Excise Department | ✅ Implemented | [Customs bonded warehouses](mcp/services/customs-warehouses/service.yaml) |
 | `API-1519` | [Spending data of Head 138 - Government Secretariat: Development Bureau (Planning and Lands Branch)](https://data.gov.hk/en-data/dataset/hk-devb-head138-head138) | Files | Development Bureau | 🕒 Coming soon | — |
 | `API-1520` | [Spending data of Head 159 - Government Secretariat: Development Bureau (Works Branch)](https://data.gov.hk/en-data/dataset/hk-devb-head159-gra-summary-item-spending-data) | Files | Development Bureau | 🕒 Coming soon | — |
 | `API-1566` | [Spending data of Head 47 - Government Secretariat: Digital Policy Office](https://data.gov.hk/en-data/dataset/hk-dpo-dpo_hp-spending-data-head-47) | Files | Digital Policy Office | 🕒 Coming soon | — |
@@ -725,8 +725,8 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1867` | [Spending data of Head 148–Government Secretariat: Financial Services and the Treasury Bureau (Financial Services Branch)](https://data.gov.hk/en-data/dataset/hk-fstb-tsyb-spending-data-fsb) | Files | Financial Services and the Treasury Bureau | 🕒 Coming soon | — |
 | `API-2009` | [Spending data of Head 060 - Highways Department](https://data.gov.hk/en-data/dataset/hk-hyd-gra-gra-summary-item-spending-data) | Files | Highways Department | 🕒 Coming soon | — |
 | `API-2153` | [Register of Securities Staff of AIs](https://data.gov.hk/en-data/dataset/hk-hkma-banksvf-register-ais-secstaff) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-2154` | [Register of AMBs](https://data.gov.hk/en-data/dataset/hk-hkma-banksvf-register-ambs) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-2158` | [List of CMU Instruments](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-cmu-instruments) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
+| `API-2154` | [Register of AMBs](https://data.gov.hk/en-data/dataset/hk-hkma-banksvf-register-ambs) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA rates, liquidity and financial registers](mcp/services/hkma-finance/service.yaml) |
+| `API-2158` | [List of CMU Instruments](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-cmu-instruments) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA rates, liquidity and financial registers](mcp/services/hkma-finance/service.yaml) |
 | `API-2159` | [List of CMU Members](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-cmu-members) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2160` | [List of Exchange Fund Bills and Notes](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-exchange-fund-bills-and-notes) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2161` | [List of Recognized Dealers](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-recognized-dealers) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |

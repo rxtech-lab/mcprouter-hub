@@ -1,0 +1,157 @@
+{
+  "checkedAt": "2026-10-21T05:03:29.726440+00:00",
+  "datasets": [
+    {
+      "dataset": "hk-cr-crdata-list-addr",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-cr-crdata-list-addr",
+      "resources": [
+        {
+          "url": "https://data.cr.gov.hk/cr/api/api/v1/api_builder/json/local/search?query[0][key1]=Brn&query[0][key2]=equal&query[0][key3]=C1572528",
+          "format": "API"
+        },
+        {
+          "url": "https://data.cr.gov.hk/cr/api/api/v1/api_builder/json/foreign/search?query[0][key1]=Brn&query[0][key2]=equal&query[0][key3]=75698252",
+          "format": "API"
+        }
+      ]
+    },
+    {
+      "dataset": "hk-cr-crtcspdata-list-tcsp-licensees",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-cr-crtcspdata-list-tcsp-licensees",
+      "resources": [
+        {
+          "url": "https://www.tcsp.cr.gov.hk/open-data/licensees.xlsx",
+          "format": "XLSX"
+        },
+        {
+          "url": "https://www.tcsp.cr.gov.hk/open-data/licensees.csv",
+          "format": "CSV"
+        },
+        {
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=cr_rcd_1668395265357_67292",
+          "format": "API"
+        }
+      ]
+    },
+    {
+      "dataset": "hk-customs-ced_stat-warehouse",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-customs-ced_stat-warehouse",
+      "resources": [
+        {
+          "url": "https://www.customs.gov.hk/filemanager/common/csv/en/list_of_warehouse_en.csv",
+          "format": "CSV"
+        },
+        {
+          "url": "https://www.customs.gov.hk/filemanager/common/csv/tc/list_of_warehouse_tc.csv",
+          "format": "CSV"
+        },
+        {
+          "url": "https://www.customs.gov.hk/filemanager/common/csv/sc/list_of_warehouse_sc.csv",
+          "format": "CSV"
+        },
+        {
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=customs_rcd_1635475097101_79953",
+          "format": "API"
+        }
+      ]
+    },
+    {
+      "dataset": "hk-hkma-t06-t060103er-eeri-daily",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-hkma-t06-t060103er-eeri-daily",
+      "resources": [
+        {
+          "url": "https://api.hkma.gov.hk/public/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily",
+          "format": "JSON"
+        }
+      ],
+      "schemaUrl": "https://apidocs.hkma.gov.hk/wp-content/uploads/swagger/T060103-swagger.json",
+      "schemaPaths": [
+        "/er-eeri-daily"
+      ]
+    },
+    {
+      "dataset": "hk-hkma-t06-t060303hk-interbank-ir-daily",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-hkma-t06-t060303hk-interbank-ir-daily",
+      "resources": [
+        {
+          "url": "https://api.hkma.gov.hk/public/market-data-and-statistics/monthly-statistical-bulletin/er-ir/hk-interbank-ir-daily?segment=hibor.fixing",
+          "format": "JSON"
+        }
+      ],
+      "schemaUrl": "https://apidocs.hkma.gov.hk/wp-content/uploads/swagger/T060303-swagger.json",
+      "schemaPaths": [
+        "/hk-interbank-ir-daily"
+      ]
+    },
+    {
+      "dataset": "hk-hkma-dms-daily-figures-interbank-liquidity",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-hkma-dms-daily-figures-interbank-liquidity",
+      "resources": [
+        {
+          "url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity",
+          "format": "JSON"
+        }
+      ],
+      "schemaUrl": "https://apidocs.hkma.gov.hk/wp-content/uploads/swagger/interbank-liquidity-swagger.json",
+      "schemaPaths": [
+        "/daily-figures-interbank-liquidity"
+      ]
+    },
+    {
+      "dataset": "hk-hkma-banksvf-register-ais-secstaff",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-hkma-banksvf-register-ais-secstaff",
+      "resources": [
+        {
+          "url": "https://api.hkma.gov.hk/public/bank-svf-info/register-ais-secstaff?lang=en",
+          "format": "JSON"
+        }
+      ],
+      "schemaUrl": "https://apidocs.hkma.gov.hk/wp-content/uploads/swagger/register-ais-secstaff-swagger.json",
+      "schemaPaths": [
+        "/register-ais-secstaff"
+      ]
+    },
+    {
+      "dataset": "hk-hkma-banksvf-register-ambs",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-hkma-banksvf-register-ambs",
+      "resources": [
+        {
+          "url": "https://api.hkma.gov.hk/public/bank-svf-info/register-ambs?lang=en&segment=en",
+          "format": "JSON"
+        }
+      ],
+      "schemaUrl": "https://apidocs.hkma.gov.hk/wp-content/uploads/swagger/register-ambs-swagger.json",
+      "schemaPaths": [
+        "/register-ambs"
+      ]
+    },
+    {
+      "dataset": "hk-hkma-debtsec-list-of-cmu-instruments",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-hkma-debtsec-list-of-cmu-instruments",
+      "resources": [
+        {
+          "url": "https://api.hkma.gov.hk/public/debt-securities-settlement-system/operational-information/list-of-cmu-instruments",
+          "format": "JSON"
+        }
+      ],
+      "schemaUrl": "https://apidocs.hkma.gov.hk/wp-content/uploads/swagger/cmu8026-swagger.json",
+      "schemaPaths": [
+        "/list-of-cmu-instruments"
+      ]
+    },
+    {
+      "dataset": "hk-hkma-debtsec-list-of-cmu-members",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-hkma-debtsec-list-of-cmu-members",
+      "resources": [
+        {
+          "url": "https://api.hkma.gov.hk/public/debt-securities-settlement-system/operational-information/list-of-cmu-members",
+          "format": "JSON"
+        }
+      ],
+      "schemaUrl": "https://apidocs.hkma.gov.hk/wp-content/uploads/swagger/cmu8030-swagger.json",
+      "schemaPaths": [
+        "/list-of-cmu-members"
+      ]
+    }
+  ]
+}

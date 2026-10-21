@@ -1,0 +1,17 @@
+{
+  "header": {
+    "success": true,
+    "err_code": "0000",
+    "err_msg": "No error found"
+  },
+  "result": {
+    "datasize": 1,
+    "records": [
+      {
+        "end_of_date": "2026-01-02",
+        "closing_balance": 50000,
+        "cu_weakside": null
+      }
+    ]
+  }
+}

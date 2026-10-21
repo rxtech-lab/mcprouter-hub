@@ -1,0 +1,65 @@
+{
+  "id": "cr-tcsp",
+  "title": "Trust or company service provider licensees",
+  "description": "Search the Companies Registry's official bilingual list of trust or company service provider licensees by licence, name or address.",
+  "baseUrl": "https://www.tcsp.cr.gov.hk",
+  "apis": [
+    "API-1332"
+  ],
+  "datasets": [
+    "hk-cr-crtcspdata-list-tcsp-licensees"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "cr_tcsp_licensees",
+      "title": "Trust or company service provider licensees",
+      "description": "Search the official bilingual CSV list of existing TCSP licensees by name, licence number or address. Includes original names, address and remarks; sc uses original Traditional Chinese text. Structured file access, not a new upstream API.",
+      "path": "/open-data/licensees.csv",
+      "transform": {
+        "response": "tcspResponse"
+      },
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "local",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "offset": {
+          "type": "integer",
+          "in": "local",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "search": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^[^\\x00-\\x1f]{1,120}$",
+          "description": "Case-insensitive substring search within the complete file."
+        },
+        "licence": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^TC\\d{6}$"
+        },
+        "lang": {
+          "type": "string",
+          "in": "local",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en",
+          "description": "Response language. Original bilingual values remain available; no machine translation."
+        }
+      },
+      "response": {
+        "format": "text"
+      }
+    }
+  ]
+}

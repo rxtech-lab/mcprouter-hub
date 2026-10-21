@@ -1,0 +1,364 @@
+{
+  "startedAt": "2026-10-21T05:02:48.427Z",
+  "finishedAt": "2026-10-21T05:03:09.216Z",
+  "passed": 8,
+  "failed": 9,
+  "skipped": 9,
+  "complete": false,
+  "evidence": [
+    {
+      "checkedAt": "2026-10-21T05:02:48.642Z",
+      "tool": "hkma_cmu_instruments",
+      "check": "initial",
+      "variant": {},
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.643Z",
+      "tool": "hkma_cmu_instruments",
+      "variant": {},
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.644Z",
+      "tool": "hkma_interbank_liquidity",
+      "check": "initial",
+      "variant": {},
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.644Z",
+      "tool": "hkma_interbank_liquidity",
+      "variant": {},
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.644Z",
+      "tool": "hkma_cmu_members",
+      "check": "initial",
+      "variant": {},
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.644Z",
+      "tool": "hkma_cmu_members",
+      "variant": {},
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.644Z",
+      "tool": "hkma_exchange_rates",
+      "check": "initial",
+      "variant": {},
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.645Z",
+      "tool": "hkma_exchange_rates",
+      "variant": {},
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.645Z",
+      "tool": "hkma_securities_staff",
+      "check": "initial",
+      "variant": {
+        "lang": "en",
+        "search": "CHAN"
+      },
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.645Z",
+      "tool": "hkma_securities_staff",
+      "variant": {
+        "lang": "en",
+        "search": "CHAN"
+      },
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.645Z",
+      "tool": "hkma_money_brokers",
+      "check": "initial",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.645Z",
+      "tool": "hkma_money_brokers",
+      "variant": {
+        "lang": "en"
+      },
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.645Z",
+      "tool": "hkma_hibor",
+      "check": "initial",
+      "variant": {},
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.645Z",
+      "tool": "hkma_hibor",
+      "variant": {},
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.658Z",
+      "tool": "hkma_securities_staff",
+      "check": "initial",
+      "variant": {
+        "lang": "tc",
+        "search": "CHAN"
+      },
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.658Z",
+      "tool": "hkma_securities_staff",
+      "variant": {
+        "lang": "tc",
+        "search": "CHAN"
+      },
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.658Z",
+      "tool": "hkma_money_brokers",
+      "check": "initial",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "failed",
+      "code": "upstream_http",
+      "httpStatus": 405,
+      "message": "Official upstream returned HTTP 405"
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.658Z",
+      "tool": "hkma_money_brokers",
+      "variant": {
+        "lang": "tc"
+      },
+      "check": "contract-followups",
+      "status": "skipped",
+      "reason": "Initial official request failed; no live row available to validate paging, date or search contracts."
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.822Z",
+      "tool": "customs_bonded_warehouses",
+      "check": "initial",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "source": "https://www.customs.gov.hk/filemanager/common/csv/en/list_of_warehouse_en.csv",
+      "returned": 3,
+      "total": 60,
+      "fields": [
+        "address",
+        "licence",
+        "name",
+        "region",
+        "telephone",
+        "type"
+      ]
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:48.855Z",
+      "tool": "cr_tcsp_licensees",
+      "check": "initial",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "source": "https://www.tcsp.cr.gov.hk/open-data/licensees.csv",
+      "returned": 3,
+      "total": 7509,
+      "fields": [
+        "address",
+        "licence",
+        "name",
+        "nameEn",
+        "nameTc",
+        "remarks",
+        "remarksEn",
+        "remarksTc"
+      ]
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:49.009Z",
+      "tool": "cr_tcsp_licensees",
+      "check": "initial",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "source": "https://www.tcsp.cr.gov.hk/open-data/licensees.csv",
+      "returned": 3,
+      "total": 7509,
+      "fields": [
+        "address",
+        "licence",
+        "name",
+        "nameEn",
+        "nameTc",
+        "remarks",
+        "remarksEn",
+        "remarksTc"
+      ]
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:49.128Z",
+      "tool": "customs_bonded_warehouses",
+      "check": "initial",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "source": "https://www.customs.gov.hk/filemanager/common/csv/tc/list_of_warehouse_tc.csv",
+      "returned": 3,
+      "total": 60,
+      "fields": [
+        "address",
+        "licence",
+        "name",
+        "region",
+        "telephone",
+        "type"
+      ]
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:49.246Z",
+      "tool": "cr_tcsp_licensees",
+      "check": "initial",
+      "variant": {
+        "lang": "sc"
+      },
+      "status": "passed",
+      "source": "https://www.tcsp.cr.gov.hk/open-data/licensees.csv",
+      "returned": 3,
+      "total": 7509,
+      "fields": [
+        "address",
+        "licence",
+        "name",
+        "nameEn",
+        "nameTc",
+        "remarks",
+        "remarksEn",
+        "remarksTc"
+      ]
+    },
+    {
+      "checkedAt": "2026-10-21T05:02:49.263Z",
+      "tool": "customs_bonded_warehouses",
+      "check": "initial",
+      "variant": {
+        "lang": "sc"
+      },
+      "status": "passed",
+      "source": "https://www.customs.gov.hk/filemanager/common/csv/sc/list_of_warehouse_sc.csv",
+      "returned": 3,
+      "total": 60,
+      "fields": [
+        "address",
+        "licence",
+        "name",
+        "region",
+        "telephone",
+        "type"
+      ]
+    },
+    {
+      "checkedAt": "2026-10-21T05:03:00.380Z",
+      "tool": "cr_company_addresses",
+      "check": "initial",
+      "variant": {
+        "register": "local",
+        "value": "C1572528"
+      },
+      "status": "passed",
+      "source": "https://data.cr.gov.hk/cr/api/api/v1/api_builder/json/local/search?query%5B0%5D%5Bkey1%5D=Brn&query%5B0%5D%5Bkey2%5D=equal&query%5B0%5D%5Bkey3%5D=C1572528",
+      "returned": 1,
+      "total": 1,
+      "fields": [
+        "Address_of_Registered_Office",
+        "Brn",
+        "Chinese_Company_Name",
+        "Company_Type",
+        "Date_of_Incorporation",
+        "English_Company_Name",
+        "Re-domiciliation_Date"
+      ]
+    },
+    {
+      "checkedAt": "2026-10-21T05:03:09.216Z",
+      "tool": "cr_company_addresses",
+      "check": "initial",
+      "variant": {
+        "register": "foreign",
+        "value": "75698252"
+      },
+      "status": "passed",
+      "source": "https://data.cr.gov.hk/cr/api/api/v1/api_builder/json/foreign/search?query%5B0%5D%5Bkey1%5D=Brn&query%5B0%5D%5Bkey2%5D=equal&query%5B0%5D%5Bkey3%5D=75698252",
+      "returned": 1,
+      "total": 1,
+      "fields": [
+        "Approved_name_for_carrying_on_business_in_H.K._Corporate",
+        "Approved_name_for_carrying_on_business_in_H.K._Other_Corporate",
+        "Brn",
+        "Company_Type",
+        "Corporate_Name",
+        "Date_of_Registration",
+        "Other_Corporate_Name_s",
+        "Place_of_Incorporation",
+        "Principal_Place_of_Business_in_H.K."
+      ]
+    }
+  ]
+}

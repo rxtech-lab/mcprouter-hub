@@ -1,4 +1,5 @@
 import { governmentCases } from "./finance034-cases";
+import { batch035, definition035, fixture035 } from "./finance035-cases";
 import { marketsCases } from "./finance033-cases";
 import { migrate } from "drizzle-orm/libsql/migrator";
 import { eq } from "drizzle-orm";
@@ -285,6 +286,30 @@ describe("Finance batch 033 MCP routes", () => {
     const failed = await callTool("currency_in_circulation", {});
     expect(failed.isError).toBe(true);
     expect(failed.content![0].text).toContain("official web table");
+  });
+});
+
+describe("Finance batch 035 MCP routes", () => {
+  it.each(batch035)("discovers and calls $tool on its scoped route", async (c) => {
+    const { service } = definition035(c.tool);
+    const route = createServiceRoute(() => [service]);
+    const options = { path: `/api/mcp/s/${service.id}/streamable`, scopes: service.id };
+    const listed = await rpc(route, "tools/list", {}, options);
+    expect(listed.result!.tools!.map((tool) => tool.name)).toContain(c.tool);
+    fetchMock.mockImplementation(async () => new Response(fixture035(c.fixture)));
+    const called = await rpc(route, "tools/call", { name: c.tool, arguments: c.input }, options);
+    expect(called.result!.isError).toBeFalsy();
+    expect(JSON.parse(called.result!.content![0].text).data).toMatchObject({ returned: expect.any(Number), results: expect.any(Array) });
+    const invalid = await rpc(route, "tools/call", { name: c.tool, arguments: { ...c.input, limit: 101 } }, options);
+    expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it.each(batch035)("returns upstream HTTP failures as MCP tool errors: $tool", async (c) => {
+    fetchMock.mockResolvedValueOnce(new Response("Maintenance", { status: 503 }));
+    const result = await callTool(c.tool, c.input);
+    expect(result.isError).toBe(true);
+    expect(result.content![0].text).toContain("503");
   });
 });
 

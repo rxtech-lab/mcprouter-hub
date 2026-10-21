@@ -1,0 +1,317 @@
+{
+  "id": "hkma-finance",
+  "title": "HKMA rates, liquidity and financial registers",
+  "description": "Access official HKMA rates, liquidity and financial registers. Current requests may return upstream HTTP 405; four unverified sources remain pending in the API tracker.",
+  "baseUrl": "https://api.hkma.gov.hk/public",
+  "apis": [
+    "API-0047",
+    "API-2154",
+    "API-2158"
+  ],
+  "datasets": [
+    "hk-hkma-t06-t060303hk-interbank-ir-daily",
+    "hk-hkma-banksvf-register-ambs",
+    "hk-hkma-debtsec-list-of-cmu-instruments"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "hkma_exchange_rates",
+      "title": "Daily HKD exchange rates and effective exchange rate indices",
+      "description": "Daily HKD exchange rates and effective exchange rate indices. Read-only official HKMA JSON with bounded upstream paging and original source fields. datasize is the size of this page, not the whole register. A full page may have a following page; continue with nextOffset until empty. Optional inclusive from/to date range; newest first. Values and nulls retain provider units and meaning; no inferred conversion. Live availability was blocked during batch 035 verification; this tracker entry remains pending.",
+      "path": "/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily",
+      "query": {},
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100,
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "from": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+          "description": "Inclusive ISO calendar date; both endpoints are optional."
+        },
+        "to": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+          "description": "Inclusive ISO calendar date; both endpoints are optional."
+        }
+      },
+      "transform": {
+        "request": "hkmaRequest",
+        "response": "hkmaResponse"
+      },
+      "response": {
+        "format": "json"
+      }
+    },
+    {
+      "name": "hkma_hibor",
+      "title": "Daily Hong Kong Interbank Offered Rates (HIBOR fixing)",
+      "description": "Daily Hong Kong Interbank Offered Rates (HIBOR fixing). Read-only official HKMA JSON with bounded upstream paging and original source fields. datasize is the size of this page, not the whole register. A full page may have a following page; continue with nextOffset until empty. Optional inclusive from/to date range; newest first. Values and nulls retain provider units and meaning; no inferred conversion.",
+      "path": "/market-data-and-statistics/monthly-statistical-bulletin/er-ir/hk-interbank-ir-daily",
+      "query": {
+        "segment": "hibor.fixing"
+      },
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100,
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "from": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+          "description": "Inclusive ISO calendar date; both endpoints are optional."
+        },
+        "to": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+          "description": "Inclusive ISO calendar date; both endpoints are optional."
+        }
+      },
+      "transform": {
+        "request": "hkmaRequest",
+        "response": "hkmaResponse"
+      },
+      "response": {
+        "format": "json"
+      }
+    },
+    {
+      "name": "hkma_interbank_liquidity",
+      "title": "Daily aggregate balances, interbank liquidity and convertibility undertakings",
+      "description": "Daily aggregate balances, interbank liquidity and convertibility undertakings. Read-only official HKMA JSON with bounded upstream paging and original source fields. datasize is the size of this page, not the whole register. A full page may have a following page; continue with nextOffset until empty. Optional inclusive from/to date range; newest first. Values and nulls retain provider units and meaning; no inferred conversion. Live availability was blocked during batch 035 verification; this tracker entry remains pending.",
+      "path": "/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity",
+      "query": {},
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100,
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "from": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+          "description": "Inclusive ISO calendar date; both endpoints are optional."
+        },
+        "to": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+          "description": "Inclusive ISO calendar date; both endpoints are optional."
+        }
+      },
+      "transform": {
+        "request": "hkmaRequest",
+        "response": "hkmaResponse"
+      },
+      "response": {
+        "format": "json"
+      }
+    },
+    {
+      "name": "hkma_securities_staff",
+      "title": "Register of securities staff of authorized institutions",
+      "description": "Register of securities staff of authorized institutions. Read-only official HKMA JSON with bounded upstream paging and original source fields. datasize is the size of this page, not the whole register. A full page may have a following page; continue with nextOffset until empty. Live availability was blocked during batch 035 verification; this tracker entry remains pending.",
+      "path": "/bank-svf-info/register-ais-secstaff",
+      "query": {},
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100,
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "searchType": {
+          "type": "string",
+          "in": "local",
+          "enum": [
+            "engName",
+            "chiName",
+            "regNo"
+          ],
+          "default": "engName"
+        },
+        "search": {
+          "type": "string",
+          "in": "local",
+          "required": true,
+          "pattern": "^[^\\x00-\\x1f]{1,80}$",
+          "description": "English surname, Chinese name, or registration number according to searchType."
+        },
+        "current": {
+          "type": "string",
+          "enum": [
+            "0",
+            "1"
+          ],
+          "default": "0",
+          "description": "Required by HKMA: 0 searches current relevant individuals; 1 includes former relevant individuals.",
+          "name": "is_curr_rel_indiv"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en"
+        }
+      },
+      "transform": {
+        "request": "hkmaRequest",
+        "response": "hkmaResponse"
+      },
+      "response": {
+        "format": "json"
+      }
+    },
+    {
+      "name": "hkma_money_brokers",
+      "title": "Register of approved money brokers",
+      "description": "Register of approved money brokers. Read-only official HKMA JSON with bounded upstream paging and original source fields. datasize is the size of this page, not the whole register. A full page may have a following page; continue with nextOffset until empty.",
+      "path": "/bank-svf-info/register-ambs",
+      "query": {},
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100,
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en"
+        }
+      },
+      "transform": {
+        "request": "hkmaRequest",
+        "response": "hkmaResponse"
+      },
+      "response": {
+        "format": "json"
+      }
+    },
+    {
+      "name": "hkma_cmu_instruments",
+      "title": "List of CMU instruments",
+      "description": "List of CMU instruments. Read-only official HKMA JSON with bounded upstream paging and original source fields. datasize is the size of this page, not the whole register. A full page may have a following page; continue with nextOffset until empty.",
+      "path": "/debt-securities-settlement-system/operational-information/list-of-cmu-instruments",
+      "query": {},
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100,
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      },
+      "transform": {
+        "request": "hkmaRequest",
+        "response": "hkmaResponse"
+      },
+      "response": {
+        "format": "json"
+      }
+    },
+    {
+      "name": "hkma_cmu_members",
+      "title": "List of CMU members",
+      "description": "List of CMU members. Read-only official HKMA JSON with bounded upstream paging and original source fields. datasize is the size of this page, not the whole register. A full page may have a following page; continue with nextOffset until empty. Live availability was blocked during batch 035 verification; this tracker entry remains pending.",
+      "path": "/debt-securities-settlement-system/operational-information/list-of-cmu-members",
+      "query": {},
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100,
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      },
+      "transform": {
+        "request": "hkmaRequest",
+        "response": "hkmaResponse"
+      },
+      "response": {
+        "format": "json"
+      }
+    }
+  ]
+}

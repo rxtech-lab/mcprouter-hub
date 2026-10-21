@@ -1,0 +1,21 @@
+{
+  "header": {
+    "success": true,
+    "err_code": "0000",
+    "err_msg": "No error found"
+  },
+  "result": {
+    "datasize": 3,
+    "records": [
+      {
+        "name": "﻿360 Trading Networks Inc."
+      },
+      {
+        "name": "iMarkets Limited"
+      },
+      {
+        "name": "Ueda Totan Forex, Ltd."
+      }
+    ]
+  }
+}

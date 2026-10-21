@@ -1,4 +1,5 @@
 import { governmentCases } from "./finance034-cases";
+import { batch035, fixture035, request035 } from "./finance035-cases";
 import { marketsCases } from "./finance033-cases";
 import { migrate } from "drizzle-orm/libsql/migrator";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
@@ -203,6 +204,9 @@ const cases: Case[] = [
   ...investmentCases,
   ...marketsCases,
   ...governmentCases,
+  ...batch035.map((c) => ({ tool: c.tool, input: { ...c.input, limit: 3 },
+    request: { url: request035(c.tool) }, reply: fixture035(c.fixture), ttl: 3600,
+    data: expect.objectContaining({ results: expect.any(Array), returned: expect.any(Number) }) })),
   // citybus
   {
     tool: "citybus_routes",
