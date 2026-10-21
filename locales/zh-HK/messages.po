@@ -6,6 +6,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Source-Language: en\n"
 
+#: app/(dashboard)/billing/actions.ts
+msgid "This plan change is unavailable. Refresh billing, or manage your subscription with its billing provider."
+msgstr "暫時無法更改此計劃。請重新整理帳單頁面，或透過付款服務供應商管理訂閱。"
+
 #: app/(dashboard)/billing/billing-buttons.tsx
 msgid "Current plan"
 msgstr "目前計劃"
@@ -41,6 +45,10 @@ msgstr "付款成功，你的計劃稍後會更新。"
 #: app/(dashboard)/billing/billing-buttons.tsx
 msgid "Checkout cancelled. Nothing was charged."
 msgstr "已取消結帳，未有收取任何費用。"
+
+#: app/(dashboard)/billing/billing-buttons.tsx
+msgid "Plan review complete. Billing will reflect confirmed changes once Stripe finishes processing."
+msgstr "計劃檢視已結束。Stripe 完成處理後，帳單會顯示已確認的變更。"
 
 #: app/(dashboard)/billing/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Billing"
@@ -103,6 +111,14 @@ msgstr "於 {date} 重設"
 msgid "Plans"
 msgstr "計劃"
 
+#: app/(dashboard)/billing/page.tsx app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Change plan"
+msgstr "更改計劃"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "Plan change unavailable"
+msgstr "無法更改計劃"
+
 #: app/(dashboard)/billing/page.tsx
 msgid "Included when you have no plan"
 msgstr "未有計劃時已包括"
@@ -114,6 +130,10 @@ msgstr "開始 {days} 日試用"
 #: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Choose plan"
 msgstr "選擇計劃"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "This subscription cannot be changed here. Manage it with its billing provider or contact support."
+msgstr "此訂閱無法在這裏更改。請透過付款服務供應商管理，或聯絡支援。"
 
 #: app/(dashboard)/billing/page.tsx
 msgid "No plans available"
@@ -138,6 +158,42 @@ msgstr "單位"
 #: app/(dashboard)/billing/page.tsx
 msgid "Buy"
 msgstr "購買"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx app/sources/apis/api-dialog.tsx components/m3/snackbar.tsx
+msgid "Dismiss"
+msgstr "關閉"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "From {plan}"
+msgstr "目前：{plan}"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "To {plan}"
+msgstr "更改為：{plan}"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Review prorated charges and confirm your change securely with Stripe. Opening the review does not change your plan. Access updates after Stripe confirms the change."
+msgstr "前往 Stripe 安全地檢視按比例計算的費用並確認變更。開啟檢視頁面不會更改計劃。Stripe 確認變更後，使用權限才會更新。"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
+msgid "Cancel"
+msgstr "取消"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Opening plan review…"
+msgstr "正在開啟計劃檢視頁面…"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Redirecting to plan review"
+msgstr "正在轉至計劃檢視頁面"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx lib/action-result.ts
+msgid "Something went wrong. Please try again."
+msgstr "發生錯誤，請再試一次。"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Review with Stripe"
+msgstr "前往 Stripe 檢視"
 
 #: app/(dashboard)/chat/[id]/page.tsx app/(dashboard)/chat/chat-view.tsx app/(dashboard)/chat/page.tsx app/(dashboard)/usage/clients/client-icon.tsx components/app-shell.tsx lib/intro-cards.ts
 msgid "Agent"
@@ -551,10 +607,6 @@ msgstr "建立 API 金鑰"
 #: app/(dashboard)/keys/keys-view.tsx
 msgid "The key is shown once, right after you create it."
 msgstr "金鑰只會在建立後顯示一次。"
-
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
-msgid "Cancel"
-msgstr "取消"
 
 #: app/(dashboard)/keys/keys-view.tsx
 msgid "Creating…"
@@ -1909,10 +1961,6 @@ msgstr "調整面板大小"
 msgid "Chat with this API"
 msgstr "與此 API 聊天"
 
-#: app/sources/apis/api-dialog.tsx components/m3/snackbar.tsx
-msgid "Dismiss"
-msgstr "關閉"
-
 #: app/sources/apis/api-dialog.tsx
 msgid "Ask about {title}. Only the tools listed in the details panel are available here."
 msgstr "詢問有關 {title} 的問題。此處只可使用詳情面板中列出的工具。"
@@ -2757,10 +2805,6 @@ msgstr "你沒有執行此操作的權限。"
 #: lib/action-result.ts
 msgid "That item no longer exists."
 msgstr "該項目已不存在。"
-
-#: lib/action-result.ts
-msgid "Something went wrong. Please try again."
-msgstr "發生錯誤，請再試一次。"
 
 #: lib/agent/dashboard-tools.ts
 msgid "Dashboard tour"

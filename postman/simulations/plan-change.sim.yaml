@@ -1,0 +1,7 @@
+simulation: plan-change
+routing: path
+mocks:
+  - routeKey: v1
+    path: ../mocks/plan-change/config.yaml
+  - routeKey: subscription
+    path: ../mocks/plan-change/subscription.yaml

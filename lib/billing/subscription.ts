@@ -309,3 +309,15 @@ export async function createBillingPortalSession(input: { user: AppUser; returnU
   });
   return body;
 }
+
+/** Creates a hosted review session; opening it does not change or charge a plan. */
+export async function createPlanChangeSession(input: {
+  user: AppUser; subscriptionId: string; planId: string; returnUrl: string;
+}) {
+  const { body } = await request<{ url: string }>("/plan-changes", {
+    method: "POST",
+    body: { rxlabUserId: input.user.id, subscriptionId: input.subscriptionId,
+      planId: input.planId, returnUrl: input.returnUrl },
+  });
+  return body;
+}
