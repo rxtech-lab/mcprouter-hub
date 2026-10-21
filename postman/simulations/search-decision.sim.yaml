@@ -1,0 +1,5 @@
+simulation: search-decision
+routing: path
+mocks:
+  - routeKey: gateway
+    path: ../mocks/search-decision/config.yaml

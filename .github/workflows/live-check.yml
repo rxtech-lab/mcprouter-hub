@@ -1,7 +1,7 @@
 name: Live check
 
 # Calls every MCP tool against its real upstream and renders each MCP App.
-# Hourly on main it checks every service: a check that fails 3 runs in a row is
+# Hourly on main it checks every service: a check that exhausts its attempts is
 # sent to Telegram, and again when it recovers.
 # On every push it checks only the services changed or added under
 # mcp/services/ (diffed against main) and just fails the run, with no alerts.
@@ -11,10 +11,14 @@ on:
     - cron: "17 * * * *" # hourly
   workflow_dispatch:
     inputs:
+      attempts:
+        description: Attempts per failing tool (1–10)
+        required: false
+        default: "3"
       threshold:
         description: Failed runs in a row before a Telegram alert
         required: false
-        default: "3"
+        default: "1"
 
 concurrency:
   group: live-check-${{ github.event_name == 'push' && github.ref || 'scheduled' }}
@@ -73,9 +77,10 @@ jobs:
 
       - name: Live check all services
         if: github.event_name != 'push'
-        run: bun run live-check --state live-check-state.json --threshold "$THRESHOLD"
+        run: bun run live-check --state live-check-state.json --threshold "$THRESHOLD" --attempts "$ATTEMPTS"
         env:
-          THRESHOLD: ${{ inputs.threshold || '3' }}
+          ATTEMPTS: ${{ inputs.attempts || '3' }}
+          THRESHOLD: ${{ inputs.threshold || '1' }}
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || vars.TELEGRAM_BOT_TOKEN }}

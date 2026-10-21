@@ -85,6 +85,7 @@ export const datasets = sqliteTable(
   (table) => [
     index("datasets_org_idx").on(table.organization),
     index("datasets_synced_idx").on(table.syncedAt),
+    index("datasets_live_org_idx").on(table.removedAt, table.organization),
   ],
 );
 

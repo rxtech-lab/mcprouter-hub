@@ -1,0 +1,1 @@
+CREATE INDEX `datasets_live_org_idx` ON `datasets` (`removed_at`,`organization`);

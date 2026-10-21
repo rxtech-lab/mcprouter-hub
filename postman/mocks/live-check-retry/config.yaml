@@ -1,0 +1,9 @@
+version: 1
+name: live-check-retry
+slug: live-check-retry
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

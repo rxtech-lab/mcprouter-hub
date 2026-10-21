@@ -12,7 +12,7 @@ export async function SourcesHeader() {
     <div className="mb-6">
       <h1 className="type-headline-large md:type-display-small">{t("Data sources")}</h1>
       <p className="mt-2 max-w-2xl type-body-large text-on-surface-variant">
-        {t("mcprouter turns DATA.GOV.HK datasets into MCP tools.")}
+        {t("McpRouter connects data and services to your MCP clients.")}
         {totals.datasets
           ? ` ${t("The catalogue has {datasets} datasets from {providers} government departments and organisations.", { datasets: formatNumber(totals.datasets, t.locale), providers: formatNumber(totals.providers, t.locale) })}`
           : ""}

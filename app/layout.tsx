@@ -16,10 +16,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
   return {
     // Shared layouts persist across navigation; page URLs belong to page metadata.
-    description: t("Open data as MCP tools, for everyone. Starting with Hong Kong."),
+    description: t("Connect to data and services through MCP tools, with one endpoint and one API key."),
     robots: { index: false, follow: true },
     metadataBase: new URL(seoOrigin()),
-    title: { default: `${t("Hong Kong Open Data MCP Server")} · MCPRouter`, template: "%s · MCPRouter" },
+    title: { default: `McpRouter · ${t("MCP tools for everyone")}`, template: "%s · McpRouter" },
     publisher: "RxLab",
     verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined },
     icons: { icon: [{ url: "/brand/icon-v2.webp", type: "image/webp", sizes: "512x512" }] },
@@ -34,7 +34,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
         <StructuredData data={{
           "@context": "https://schema.org", "@graph": [
             { "@type": "Organization", "@id": "https://rxlab.app/#organization", name: "RxLab", url: "https://rxlab.app" },
-            { "@type": "WebSite", "@id": `${seoOrigin()}/#website`, name: "MCPRouter", url: seoOrigin(), publisher: { "@id": "https://rxlab.app/#organization" } },
+            { "@type": "WebSite", "@id": `${seoOrigin()}/#website`, name: "McpRouter", url: seoOrigin(), publisher: { "@id": "https://rxlab.app/#organization" } },
           ],
         }} />
         <Suspense fallback={null}><Analytics /></Suspense>

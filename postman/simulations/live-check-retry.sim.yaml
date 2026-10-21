@@ -1,0 +1,5 @@
+simulation: live-check-retry
+routing: path
+mocks:
+  - routeKey: td
+    path: ../mocks/live-check-retry/config.yaml

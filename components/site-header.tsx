@@ -6,16 +6,11 @@ import { cn } from "@/components/m3/cn";
 import { LanguageMenu } from "@/components/language-menu";
 import { getCurrentUser } from "@/lib/auth";
 import { getT } from "@/lib/i18n/server";
-import { msg } from "@/lib/i18n/translate";
-
-const links = [
-  { href: "/sources", label: msg("Data sources"), key: "sources" },
-  { href: "/guides", label: msg("Setup guides"), key: "guides" },
-  { href: "/#pricing", label: msg("Pricing"), key: "pricing" },
-] as const;
+import { SiteSearch } from "@/components/site-search";
+import { searchNavigation } from "@/lib/site-search/catalogue";
 
 /** Top app bar for the public pages: landing, data sources and the free agent. */
-export async function SiteHeader({ active, className }: { active?: (typeof links)[number]["key"]; className?: string }) {
+export async function SiteHeader({ active, className }: { active?: "sources" | "guides" | "pricing"; className?: string }) {
   const t = await getT();
   return (
     <header className={cn("sticky top-0 z-20 bg-surface/90 backdrop-blur", className)}>
@@ -25,22 +20,9 @@ export async function SiteHeader({ active, className }: { active?: (typeof links
           <span className="type-title-large max-sm:hidden">mcprouter</span>
         </Link>
         <nav className="flex items-center gap-1">
-          {links.map((link) => (
-            <Link
-              key={link.key}
-              href={link.href}
-              data-analytics-event="navigation_click"
-              data-analytics-label={link.key}
-              aria-current={active === link.key ? "page" : undefined}
-              className={cn(
-                "state-layer inline-flex h-10 items-center rounded-full px-4 type-label-large",
-                link.key === "guides" ? "max-sm:hidden" : undefined,
-                active === link.key ? "bg-secondary-container text-on-secondary-container" : "text-on-surface-variant",
-              )}
-            >
-              {t(link.label)}
-            </Link>
-          ))}
+          <Suspense fallback={<span className="inline-flex h-10 items-center px-4 type-label-large">{t("Search")}</span>}>
+            <SiteSearch active={active} destinations={searchNavigation(t)} />
+          </Suspense>
           <LanguageMenu />
           <Suspense fallback={<AccountAction signedIn={false} label={t("Sign in")} />}>
             <SessionAction />

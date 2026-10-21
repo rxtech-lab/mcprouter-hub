@@ -14,7 +14,7 @@ export async function SiteFooter() {
           <Link href="/sources" className="hover:text-on-surface">{t("Data sources")}</Link>
           <Link href="/guides" className="hover:text-on-surface">{t("Setup guides")}</Link>
           <a href="mailto:support@rxlab.app" className="hover:text-on-surface">support@rxlab.app</a>
-          <span>{t("Data from DATA.GOV.HK and its providers.")}</span>
+          <Link href="/sources/providers" className="hover:text-on-surface">{t("Data providers")}</Link>
         </nav>
       </div>
     </footer>

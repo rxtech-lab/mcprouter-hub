@@ -37,15 +37,16 @@ export async function seoMetadata(title: string, description: string, pathOverri
   const suffix = canonicalQuery(path, query);
   const canonical = `${seoOrigin()}${localizedHref(path, locale)}${suffix}`;
   const languages = languageAlternates(`${path}${suffix}`);
+  const fullTitle = path === "/" ? `McpRouter · ${title}` : `${title} · McpRouter`;
   return {
-    title, description,
+    title: path === "/" ? { absolute: fullTitle } : title, description,
     alternates: publicPath(path) ? { canonical, languages } : undefined,
     robots: { index: publicPath(path) && indexableQuery(query), follow: true },
     openGraph: {
-      title: `${title} · MCPRouter`, description, url: canonical, siteName: "MCPRouter", type: "website",
+      title: fullTitle, description, url: canonical, siteName: "McpRouter", type: "website",
       locale: ({ en: "en_HK", "zh-CN": "zh_CN", "zh-HK": "zh_HK" } satisfies Record<Locale, string>)[locale],
-      images: [{ url: `${seoOrigin()}/opengraph-image.png`, alt: "MCPRouter by RxLab" }],
+      images: [{ url: `${seoOrigin()}/opengraph-image.png`, alt: "McpRouter by RxLab" }],
     },
-    twitter: { card: "summary_large_image", title: `${title} · MCPRouter`, description, images: [`${seoOrigin()}/opengraph-image.png`] },
+    twitter: { card: "summary_large_image", title: fullTitle, description, images: [`${seoOrigin()}/opengraph-image.png`] },
   };
 }
