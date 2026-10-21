@@ -1,0 +1,78 @@
+{
+  "id": "cr-company-addresses",
+  "title": "Companies Registry office addresses",
+  "description": "Search registered office addresses of live local companies and principal places of business of registered non-Hong Kong companies using official Companies Registry data.",
+  "baseUrl": "https://data.cr.gov.hk/cr/api/api/v1/api_builder/json",
+  "apis": [
+    "API-1313"
+  ],
+  "datasets": [
+    "hk-cr-crdata-list-addr"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "cr_company_addresses",
+      "timeoutMs": 60000,
+      "title": "Company registered office and non-Hong Kong business addresses",
+      "description": "Search live local company registered offices or registered non-Hong Kong principal places of business. Choose local or foreign, business registration number or company name, and exact/prefix match. Returns original bilingual company details; local pagination applies to the full upstream search result.",
+      "path": "/{register}/search",
+      "transform": {
+        "request": "addressRequest",
+        "response": "addressResponse"
+      },
+      "input": {
+        "register": {
+          "type": "string",
+          "enum": [
+            "local",
+            "foreign"
+          ],
+          "default": "local"
+        },
+        "field": {
+          "type": "string",
+          "in": "local",
+          "enum": [
+            "Brn",
+            "Comp_name"
+          ],
+          "default": "Brn"
+        },
+        "operator": {
+          "type": "string",
+          "in": "local",
+          "enum": [
+            "equal",
+            "begins_with"
+          ],
+          "default": "equal"
+        },
+        "value": {
+          "type": "string",
+          "in": "local",
+          "required": true,
+          "pattern": "^[^\\x00-\\x1f]{2,120}$",
+          "description": "Business registration number or company name; at least two characters."
+        },
+        "limit": {
+          "type": "integer",
+          "in": "local",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "offset": {
+          "type": "integer",
+          "in": "local",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      },
+      "response": {
+        "format": "json"
+      }
+    }
+  ]
+}

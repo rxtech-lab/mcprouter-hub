@@ -1,0 +1,5 @@
+simulation: finance035
+routing: path
+mocks:
+  - routeKey: finance
+    path: ../mocks/finance035/config.yaml

@@ -1,0 +1,63 @@
+{
+  "id": "customs-warehouses",
+  "title": "Customs bonded warehouses",
+  "description": "Search official English, Traditional Chinese and Simplified Chinese lists of general bonded, public bonded and Customs and Excise warehouses.",
+  "baseUrl": "https://www.customs.gov.hk",
+  "apis": [
+    "API-1428"
+  ],
+  "datasets": [
+    "hk-customs-ced_stat-warehouse"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "customs_bonded_warehouses",
+      "title": "General bonded, public bonded and C&E warehouses",
+      "description": "Search the official Customs warehouse CSV by company, licence, address, region or warehouse type. Language selects the published English, Traditional Chinese or Simplified Chinese file. Licence numbers remain strings. Structured file access.",
+      "path": "/filemanager/common/csv/{lang}/list_of_warehouse_{lang}.csv",
+      "transform": {
+        "response": "warehouseResponse"
+      },
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "local",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100
+        },
+        "offset": {
+          "type": "integer",
+          "in": "local",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "search": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^[^\\x00-\\x1f]{1,120}$",
+          "description": "Case-insensitive substring search within the complete file."
+        },
+        "licence": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{1,10}$"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en"
+        }
+      },
+      "response": {
+        "format": "text"
+      }
+    }
+  ]
+}

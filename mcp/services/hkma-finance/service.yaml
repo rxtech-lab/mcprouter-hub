@@ -1,0 +1,60 @@
+{
+  "id": "hkma-finance",
+  "title": "HKMA daily HIBOR",
+  "description": "Daily Hong Kong Interbank Offered Rates from the official HKMA API.",
+  "baseUrl": "https://api.hkma.gov.hk/public",
+  "apis": [
+    "API-0047"
+  ],
+  "datasets": [
+    "hk-hkma-t06-t060303hk-interbank-ir-daily"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "hkma_hibor",
+      "title": "Daily Hong Kong Interbank Offered Rates (HIBOR fixing)",
+      "description": "Daily Hong Kong Interbank Offered Rates (HIBOR fixing). Read-only official HKMA JSON with bounded upstream paging and original source fields. datasize is the size of this page, not the whole register. A full page may have a following page; continue with nextOffset until empty. Optional inclusive from/to date range; newest first. Values and nulls retain provider units and meaning; no inferred conversion.",
+      "path": "/market-data-and-statistics/monthly-statistical-bulletin/er-ir/hk-interbank-ir-daily",
+      "query": {
+        "segment": "hibor.fixing"
+      },
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 100,
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 1000000
+        },
+        "from": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+          "description": "Inclusive ISO calendar date; both endpoints are optional."
+        },
+        "to": {
+          "type": "string",
+          "in": "local",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+          "description": "Inclusive ISO calendar date; both endpoints are optional."
+        }
+      },
+      "transform": {
+        "request": "hkmaRequest",
+        "response": "hkmaResponse"
+      },
+      "response": {
+        "format": "json"
+      }
+    }
+  ]
+}

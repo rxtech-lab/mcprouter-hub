@@ -123,7 +123,7 @@ export async function serviceDatasets(ids: string[]) {
 }
 
 export function findService(id: string) {
-  return manifest.services.find((service) => service.id === id || service.aliases.includes(id)) ?? null;
+  return manifest.services.find((service) => service.id === id || service.aliases.some((alias) => alias === id)) ?? null;
 }
 
 export function datasetUrl(row: { id: string; url: string | null }) {

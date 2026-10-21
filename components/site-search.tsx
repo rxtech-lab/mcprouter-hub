@@ -118,7 +118,13 @@ export function SiteSearch({ destinations, active }: { destinations: SearchDesti
           <button type="button" aria-label={t("Close")} onClick={close} className="state-layer flex size-10 items-center justify-center rounded-full"><X size={20} /></button>
         </div> : <div className="m-3 flex shrink-0 items-center gap-3 rounded-lg bg-surface-container-high px-4">
           <Search size={22} className="shrink-0 text-on-surface-variant" aria-hidden="true" />
-          <input ref={input} value={query} maxLength={2000} placeholder={t("Search or ask a question…")} aria-label={t("Search or ask a question…")} role="combobox" aria-expanded="true" aria-controls={id} aria-autocomplete="list" aria-activedescendant={selected >= 0 && selected < commandCount ? `${id}-${selected}` : undefined} onChange={(event) => { decision.current?.abort(); setDeciding(false); setError(null); changeUrl(event.target.value); setSelected(-1); }} onKeyDown={(event) => {
+          <input ref={input} value={query} maxLength={2000} placeholder={t("Search or ask a question…")} aria-label={t("Search or ask a question…")} role="combobox" aria-expanded="true" aria-controls={id} aria-autocomplete="list" aria-activedescendant={selected >= 0 && selected < commandCount ? `${id}-${selected}` : undefined} onChange={(event) => {
+            decision.current?.abort(); setDeciding(false); setError(null);
+            // URL updates can render later; invalidate stale options before keyboard selection.
+            setFound((previous) => ({ ...previous, results: [], intent: "search" }));
+            setSelected(-1);
+            changeUrl(event.target.value);
+          }} onKeyDown={(event) => {
             if (event.key === "ArrowDown" || event.key === "ArrowUp") {
               event.preventDefault(); if (!commandCount) return;
               const next = selected < 0 ? (event.key === "ArrowDown" ? 0 : commandCount - 1) : (selected + (event.key === "ArrowDown" ? 1 : -1) + commandCount) % commandCount;

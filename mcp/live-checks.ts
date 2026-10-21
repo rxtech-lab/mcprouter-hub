@@ -52,6 +52,10 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  cr_company_addresses: { input: { value: "C1572528" }, check: nonEmptyPage },
+  cr_tcsp_licensees: { input: {}, check: nonEmptyPage },
+  customs_bonded_warehouses: { input: {}, check: nonEmptyPage },
+  hkma_hibor: { input: {}, check: nonEmptyPage },
   bus: { input: { action: "kmb_routes", route: "1A" }, check: nonEmpty },
   // Transport batch 003: object results contain a bounded results array.
   cad_paragliding_areas: { input: { limit: 2 }, check: nonEmptyPage },

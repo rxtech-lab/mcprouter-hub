@@ -1,0 +1,42 @@
+{
+  "header": {
+    "success": true,
+    "err_code": "0000",
+    "err_msg": "No error found"
+  },
+  "result": {
+    "datasize": 3,
+    "records": [
+      {
+        "end_of_day": "2026-09-30",
+        "ir_overnight": 4.0875,
+        "ir_1w": 3.27798,
+        "ir_1m": 3.00518,
+        "ir_3m": 3.24167,
+        "ir_6m": 3.53815,
+        "ir_9m": null,
+        "ir_12m": 4.01351
+      },
+      {
+        "end_of_day": "2026-09-29",
+        "ir_overnight": 2.84941,
+        "ir_1w": 3.27631,
+        "ir_1m": 3.01607,
+        "ir_3m": 3.24238,
+        "ir_6m": 3.52964,
+        "ir_9m": null,
+        "ir_12m": 3.99673
+      },
+      {
+        "end_of_day": "2026-09-28",
+        "ir_overnight": 2.7,
+        "ir_1w": 3.25548,
+        "ir_1m": 3.0175,
+        "ir_3m": 3.23435,
+        "ir_6m": 3.52964,
+        "ir_9m": null,
+        "ir_12m": 3.98595
+      }
+    ]
+  }
+}
