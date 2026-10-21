@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Link from "@/components/localized-link";
 import { Badge } from "@/components/m3/chip";
 import { cn } from "@/components/m3/cn";
-import { ButtonLink } from "@/components/m3/button";
+import { buttonClasses, ButtonLink } from "@/components/m3/button";
 import { EmptyState } from "@/components/m3/page-header";
 import { Pagination } from "@/components/m3/pagination";
 import { LinearProgress } from "@/components/m3/progress";
@@ -24,6 +24,7 @@ import {
   type ApiEntry,
 } from "@/lib/apis";
 import { getT } from "@/lib/i18n/server";
+import { localizedHref } from "@/lib/i18n/routing";
 import type { Translator } from "@/lib/i18n/translate";
 import { listHref } from "../params";
 import { SourcesHeader } from "../sources-header";
@@ -186,7 +187,8 @@ function ApiDetails({ api, closeHref, t }: { api: ApiEntry; closeHref: string; t
       closeHref={closeHref}
       actions={
         <div className="flex flex-wrap gap-3">
-          <ButtonLink href={`/sources/api/${api.id}`} variant="outlined">{t("API details")}</ButtonLink>
+          {/* Replace the document so unhydrated metadata from the dialog cannot survive. */}
+          <a href={localizedHref(`/sources/api/${api.id}`, t.locale)} className={buttonClasses("outlined")}>{t("API details")}</a>
           <ButtonLink href={api.docs} target="_blank" rel="noreferrer" variant="tonal" icon={<ExternalLink size={18} />}>
             {t("API docs")}
           </ButtonLink>

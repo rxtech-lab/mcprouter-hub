@@ -64,6 +64,8 @@ export function matchesInternalKey(candidate: string) {
   return a.length === b.length && crypto.timingSafeEqual(a, b);
 }
 
+/** Internal agent only: this message was already metered using the chat usage item. */
+export const INTERNAL_CHAT_METERED_HEADER = "x-mcprouter-chat-metered";
 export const INTERNAL_USER_HEADER = "x-mcprouter-user";
 /** Which agent surface an internal call is for: `web`, `telegram` or `whatsapp`. */
 export const INTERNAL_CHANNEL_HEADER = "x-mcprouter-channel";

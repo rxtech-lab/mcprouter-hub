@@ -1,7 +1,7 @@
 import type { AuthInfo } from "@modelcontextprotocol/server";
 import { createMcpHandler, withMcpAuth } from "mcp-handler";
 import { TOOL_MODES, type CallChannel } from "@/db/schema";
-import { findUsableApiKey, GUEST_USER_PREFIX, INTERNAL_CHANNEL_HEADER, INTERNAL_SCOPES_HEADER, INTERNAL_TOOLS_HEADER, INTERNAL_USER_HEADER, matchesInternalKey } from "@/lib/api-keys";
+import { findUsableApiKey, GUEST_USER_PREFIX, INTERNAL_CHANNEL_HEADER, INTERNAL_CHAT_METERED_HEADER, INTERNAL_SCOPES_HEADER, INTERNAL_TOOLS_HEADER, INTERNAL_USER_HEADER, matchesInternalKey } from "@/lib/api-keys";
 import { ACCESS_TOKEN_PREFIX, authenticateAccessToken, OAUTH_SCOPE, oauthOrigin } from "@/lib/mcp/oauth";
 import { MCP_APP_EXTENSION, MCP_APP_MIME_TYPE } from "@/lib/mcp/apps";
 import { exposedServices, getExposure } from "@/lib/mcp/exposure";
@@ -10,7 +10,7 @@ import { registerServices } from "@/lib/mcp/register";
 import type { CallerContext, ServiceDefinition } from "@/lib/mcp/types";
 
 /** `toolMode` is the connection's choice of how tools are listed; null leaves it to the endpoint. */
-type CallerExtra = { userId: string; apiKeyId: string | null; scopes: string[]; toolMode: ToolMode | null; guest?: boolean; channel: CallChannel; oauthClientId?: string | null };
+type CallerExtra = { userId: string; apiKeyId: string | null; scopes: string[]; toolMode: ToolMode | null; guest?: boolean; chatMetered?: boolean; channel: CallChannel; oauthClientId?: string | null };
 
 const AGENT_CHANNELS = new Set<CallChannel>(["web", "telegram", "whatsapp"]);
 
@@ -39,7 +39,7 @@ export async function verifyMcpToken(request: Request, bearerToken?: string): Pr
     const scopes = request.headers.get(INTERNAL_SCOPES_HEADER)?.split(",").map((id) => id.trim()).filter(Boolean) ?? [];
     const claimedMode = request.headers.get(INTERNAL_TOOLS_HEADER)?.trim();
     const toolMode = TOOL_MODES.find((mode) => mode === claimedMode) ?? null;
-    const extra: CallerExtra = { userId, apiKeyId: null, scopes, toolMode, guest, channel: agentChannel(request, guest) };
+    const extra: CallerExtra = { userId, apiKeyId: null, scopes, toolMode, guest, chatMetered: request.headers.get(INTERNAL_CHAT_METERED_HEADER) === "1", channel: agentChannel(request, guest) };
     return { token, clientId: "mcprouter-agent", scopes: [], extra };
   }
 
@@ -77,6 +77,7 @@ function callerFrom(request: Request): CallerContext | null {
     apiKeyId: extra.apiKeyId,
     scopes: extra.scopes ?? [],
     guest: extra.guest ?? false,
+    chatMetered: extra.chatMetered ?? false,
     channel: extra.channel,
     oauthClientId: extra.oauthClientId ?? null,
   };

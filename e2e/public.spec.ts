@@ -18,7 +18,7 @@ test("the landing page hero is a live chat with member usage", async ({ page }) 
   const chat = page.getByTestId("hero-chat");
   await expect(chat.getByRole("textbox", { name: "Message" })).toBeVisible();
   // The e2e server uses DEV_BYPASS_AUTH, so the visitor is a signed-in member.
-  await expect(chat.getByTestId("chat-allowance")).toContainText("Plan allowance");
+  await expect(chat.getByTestId("chat-allowance")).toContainText("Chat credits");
   await expect(chat.getByTestId("chat-allowance")).toContainText("Credits");
   await expect(chat.getByRole("textbox", { name: "Message" })).toBeEnabled();
 });

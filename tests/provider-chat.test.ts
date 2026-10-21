@@ -1,9 +1,11 @@
+import { UsageLimitError } from "@/lib/billing/errors";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { apiChatScope } from "@/lib/agent/api-scope";
 
 const mocks = vi.hoisted(() => ({
-  user: vi.fn(), stream: vi.fn(), quota: vi.fn(), cookies: vi.fn(), config: vi.fn(),
+  charge: vi.fn(), user: vi.fn(), stream: vi.fn(), quota: vi.fn(), cookies: vi.fn(), config: vi.fn(),
 }));
+vi.mock("@/lib/billing/chat", async (original) => ({ ...await original<typeof import("@/lib/billing/chat")>(), consumeChatMessage: mocks.charge }));
 vi.mock("@/lib/auth", () => ({ getCurrentUser: mocks.user }));
 vi.mock("@/lib/agent/run", () => ({ streamAgentReply: mocks.stream }));
 vi.mock("next/headers", () => ({ cookies: mocks.cookies }));
@@ -19,6 +21,7 @@ const message = { id: "question", role: "user", parts: [{ type: "text", text: "W
 
 beforeEach(() => {
   vi.clearAllMocks();
+  mocks.charge.mockResolvedValue(undefined);
   vi.stubEnv("MCPROUTER_INTERNAL_KEY", "test-internal-key");
   vi.stubEnv("AGENT_MCP_SERVERS", '[{"name":"unrelated","url":"https://external.test/mcp"}]');
   mocks.user.mockResolvedValue({ id: "member-1" });
@@ -97,4 +100,19 @@ describe("service-page chat contract", () => {
     expect((await request({ serviceId: "td-street-parking", apiId: "API-0014", messages: [message] })).status).toBe(400);
     expect(mocks.stream).not.toHaveBeenCalled();
   });
+});
+
+it("refuses chat before invoking the agent when rx-subscription denies or is unavailable", async () => {
+  mocks.charge.mockRejectedValueOnce(new UsageLimitError("chat", "limit_exceeded", 10, 10));
+  expect((await request({ apiId: "API-0014", messages: [message] })).status).toBe(402);
+  expect(mocks.stream).not.toHaveBeenCalled();
+  mocks.charge.mockRejectedValueOnce(new Error("offline"));
+  expect((await request({ apiId: "API-0014", messages: [message] })).status).toBe(503);
+  expect(mocks.stream).not.toHaveBeenCalled();
+});
+
+it("records the latest user message under the authenticated account", async () => {
+  expect((await request({ apiId: "API-0014", messages: [message] })).status).toBe(200);
+  expect(mocks.charge).toHaveBeenCalledExactlyOnceWith({ userId: "member-1", messageId: "question", channel: "web" });
+  expect(mocks.stream.mock.calls[0][0].servers[0].headers["x-mcprouter-chat-metered"]).toBe("1");
 });

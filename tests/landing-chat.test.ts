@@ -1,6 +1,8 @@
+import { UsageLimitError } from "@/lib/billing/errors";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-const mocks = vi.hoisted(() => ({ user: vi.fn(), stream: vi.fn(), quota: vi.fn(), cookies: vi.fn(), config: vi.fn() }));
+const mocks = vi.hoisted(() => ({ charge: vi.fn(), user: vi.fn(), stream: vi.fn(), quota: vi.fn(), cookies: vi.fn(), config: vi.fn() }));
+vi.mock("@/lib/billing/chat", async (original) => ({ ...await original<typeof import("@/lib/billing/chat")>(), consumeChatMessage: mocks.charge }));
 vi.mock("@/lib/auth", () => ({ getCurrentUser: mocks.user }));
 vi.mock("@/lib/agent/run", () => ({ streamAgentReply: mocks.stream }));
 vi.mock("next/headers", () => ({ cookies: mocks.cookies }));
@@ -14,6 +16,7 @@ const request = () => POST(new Request("https://catalogue.test/api/free-chat", {
 
 beforeEach(() => {
   vi.clearAllMocks();
+  mocks.charge.mockResolvedValue(undefined);
   vi.stubEnv("MCPROUTER_INTERNAL_KEY", "test-key");
   mocks.user.mockResolvedValue({ id: "member-1" });
   mocks.stream.mockResolvedValue(new Response("stream"));
@@ -46,4 +49,19 @@ describe("landing chat session contract", () => {
     mocks.user.mockResolvedValue(null);
     expect((await request()).status).toBe(404);
   });
+});
+
+it("refuses chat before invoking the agent when rx-subscription denies or is unavailable", async () => {
+  mocks.charge.mockRejectedValueOnce(new UsageLimitError("chat", "limit_exceeded", 10, 10));
+  expect((await request()).status).toBe(402);
+  expect(mocks.stream).not.toHaveBeenCalled();
+  mocks.charge.mockRejectedValueOnce(new Error("offline"));
+  expect((await request()).status).toBe(503);
+  expect(mocks.stream).not.toHaveBeenCalled();
+});
+
+it("records the latest user message under the authenticated account", async () => {
+  expect((await request()).status).toBe(200);
+  expect(mocks.charge).toHaveBeenCalledExactlyOnceWith({ userId: "member-1", messageId: "question", channel: "web" });
+  expect(mocks.stream.mock.calls[0][0].servers[0].headers["x-mcprouter-chat-metered"]).toBe("1");
 });

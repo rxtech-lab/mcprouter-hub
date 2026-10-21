@@ -91,11 +91,12 @@ export default async function ServicePage({ params, searchParams }: PageProps<"/
         <ul className="stagger grid gap-3 md:grid-cols-2">
           {apis.map((api) => (
             <li key={api.id}>
-              <Link href={`/sources/api/${api.id}`} className="state-layer flex h-full items-center gap-3 rounded-lg border border-outline-variant p-4 text-on-surface">
+              {/* A document navigation replaces SSR metadata even before its hydration finishes. */}
+              <a href={localizedHref(`/sources/api/${api.id}`, t.locale)} className="state-layer flex h-full items-center gap-3 rounded-lg border border-outline-variant p-4 text-on-surface">
                 <code className="shrink-0 rounded-xs bg-surface-container-high px-2 py-0.5 font-mono text-[13px] text-on-surface-variant">{api.id}</code>
                 <span className="min-w-0 flex-1 type-title-small">{api.title}</span>
                 <ChevronRight size={18} className="shrink-0 text-on-surface-variant" />
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

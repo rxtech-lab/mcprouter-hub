@@ -44,13 +44,11 @@ export function ChatAllowance({ status, onChange }: { status: string; onChange?:
         </>
       ) : (
         <>
-          <span className="inline-flex items-center gap-1.5" title={data.allowance?.resetsAt ? t("Resets {date}", { date: formatDateTime(data.allowance.resetsAt, t.locale) }) : undefined}>
-            <Gauge size={14} />{t("Plan allowance")}: {data.allowance ? data.allowance.limit === null ? t("Unlimited") : t("{remaining} of {limit} calls left", { remaining: number(data.allowance.remaining ?? 0), limit: number(data.allowance.limit) }) : t("Unavailable")}
-          </span>
+          <Link href="/billing" className="text-primary hover:underline">{t("Chat credits")}: {data.billing !== "ready" ? t("Unavailable") : number(data.chatCredits.reduce((sum, balance) => sum + balance.available, 0))}</Link>
           <Link href="/billing" target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 text-primary hover:underline">
             <Coins size={14} />{t("Credits")}: {data.billing !== "ready" ? t("Unavailable") : data.credits.length ? data.credits.map((balance) => `${number(balance.available)} ${balance.name}`).join(" · ") : number(0)}
           </Link>
-          {!data.metering ? <span>{t("Tool calls are free on this deployment.")}</span> : null}
+          {!data.metering ? <span>{t("Chat and tool calls are free on this deployment.")}</span> : null}
         </>
       )}
     </div>

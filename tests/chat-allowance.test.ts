@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 const mocks = vi.hoisted(() => ({
   user: vi.fn(), quota: vi.fn(), entitlements: vi.fn(), configured: true,
-  config: { enabled: true, creditUnit: "mcp-calls" as string | undefined, usageItem: "mcp_calls" },
+  config: { enabled: true, creditUnit: "mcp-calls" as string | undefined, usageItem: "mcp_calls", chatUsageItem: "chat", chatCreditUnit: "chat" },
 }));
 vi.mock("@/lib/auth", () => ({ getCurrentUser: mocks.user }));
 vi.mock("@/lib/free-chat", () => ({ currentFreeChatQuota: mocks.quota }));
@@ -16,8 +16,9 @@ beforeEach(() => {
   mocks.user.mockResolvedValue({ id: "member-1" });
   mocks.entitlements.mockResolvedValue({ balances: [
     { unit: "mcp-calls", name: "MCP credits", available: 123, amount: 150 },
+    { unit: "chat", name: "Chat credits", available: 8 },
     { unit: "other", name: "Other credits", available: 999 },
-  ], usage: [{ key: "mcp_calls", used: 4, limit: 15, remaining: 11, resetsAt: "2026-10-21T00:00:00Z" }] });
+  ], usage: [{ key: "chat", used: 2, limit: 10, remaining: 8, resetsAt: "2026-10-22T00:00:00Z" }, { key: "mcp_calls", used: 4, limit: 15, remaining: 11, resetsAt: "2026-10-21T00:00:00Z" }] });
 });
 
 describe("chat allowance", () => {
@@ -28,7 +29,7 @@ describe("chat allowance", () => {
     expect(mocks.entitlements).not.toHaveBeenCalled();
   });
   it("uses available credits for the configured billing unit and the signed-in identity", async () => {
-    expect(await currentChatAllowance()).toMatchObject({ kind: "member", billing: "ready", credits: [{ unit: "mcp-calls", name: "MCP credits", available: 123 }], allowance: { used: 4, remaining: 11, limit: 15 } });
+    expect(await currentChatAllowance()).toMatchObject({ kind: "member", billing: "ready", credits: [{ unit: "mcp-calls", name: "MCP credits", available: 123 }], chatCredits: [{ unit: "chat", name: "Chat credits", available: 8 }], chatAllowance: { used: 2, remaining: 8, limit: 10 }, allowance: { used: 4, remaining: 11, limit: 15 } });
     expect(mocks.entitlements).toHaveBeenCalledWith({ id: "member-1" });
     expect(mocks.quota).not.toHaveBeenCalled();
   });

@@ -9,7 +9,7 @@ import { apiKeys, mcpSettings, toolCalls } from "@/db/schema";
 import { services } from "@/generated/registry";
 import { displayPrefix, generateApiKey, hashApiKey, INTERNAL_CHANNEL_HEADER, INTERNAL_SCOPES_HEADER, INTERNAL_TOOLS_HEADER, INTERNAL_USER_HEADER } from "@/lib/api-keys";
 import { setCacheForTesting } from "@/lib/mcp/cache";
-import { createServiceRoute } from "@/lib/mcp/handler";
+import { createServiceRoute, verifyMcpToken } from "@/lib/mcp/handler";
 import { NO_SERVICES } from "@/lib/service-selection";
 import { transportCases } from "./transport003-cases";
 import { financeCases } from "./finance028-cases";
@@ -480,6 +480,17 @@ describe("MCP endpoint", () => {
     const { result, error } = await rpc(allServices, "tools/list", {}, { channel: "telegram", scopes: NO_SERVICES });
     expect(error).toBeUndefined();
     expect(result!.tools).toEqual([]);
+  });
+
+  it("only trusts the already-metered marker with the internal agent key", async () => {
+    const internal = rpcRequest("tools/list", {}, { channel: "telegram" });
+    internal.headers.set("x-mcprouter-chat-metered", "1");
+    expect((await verifyMcpToken(internal, INTERNAL_KEY))?.extra).toMatchObject({ chatMetered: true });
+    const key = generateApiKey();
+    await db.insert(apiKeys).values({ userId: "marker-user", name: "marker test", prefix: displayPrefix(key), hash: hashApiKey(key) });
+    const external = rpcRequest("tools/list", {}, { token: key, channel: "telegram" });
+    external.headers.set("x-mcprouter-chat-metered", "1");
+    expect((await verifyMcpToken(external, key))?.extra).not.toHaveProperty("chatMetered");
   });
 
   it("requires a token", async () => {

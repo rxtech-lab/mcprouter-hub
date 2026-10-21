@@ -83,8 +83,8 @@ export async function meterToolCall(
         .catch((error) => console.error("[meter] failed to log tool call", error)),
     );
 
-  // The free agent has its own daily message limit; its tool calls are not charged to anyone.
-  if (deps.billingEnabled && !caller.guest) {
+  // Agent messages consume one chat unit before execution; direct MCP callers pay per tool.
+  if (deps.billingEnabled && !caller.guest && !(caller.chatMetered && !caller.apiKeyId)) {
     const idempotencyKey = `mcp:${caller.userId}:${crypto.randomUUID()}`;
     const metadata = { service: call.service, tool: call.tool, apiKeyId: caller.apiKeyId, channel: caller.channel ?? null };
     const record = () => deps.record({ rxlabUserId: caller.userId, item: billingConfig.usageItem, idempotencyKey, metadata });

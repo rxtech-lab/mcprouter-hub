@@ -5,7 +5,8 @@ import type { ToolMode } from "@/db/schema";
 import { parseMcpServers, resolveServer } from "@/lib/agent/mcp-servers";
 import { generateAgentReply } from "@/lib/agent/run";
 import { SIGN_OUT_NOTE, signOutTool } from "@/lib/agent/sign-out-tool";
-import { isOverLimit } from "@/lib/billing/allowance";
+import { consumeChatMessage, DuplicateChatMessageError } from "@/lib/billing/chat";
+import { UsageLimitError } from "@/lib/billing/errors";
 import { cardsForVisuals } from "@/lib/cards";
 import { renderCardPng } from "@/lib/cards/render";
 import { deleteChat, ensureChat, loadChat, saveMessages } from "@/lib/chat-store";
@@ -44,7 +45,7 @@ export type BotDeps = {
   origin: string;
   findUser?: (from: string) => Promise<LinkedUser | null>;
   signOut?: (from: string) => Promise<boolean>;
-  overLimit?: (user: LinkedUser) => Promise<boolean>;
+  consumeChat?: typeof consumeChatMessage;
   reply?: (messages: UIMessage[], user: LinkedUser) => Promise<AgentAnswer>;
   send?: (chatId: number, text: string, button?: LinkButton) => Promise<void>;
   sendCard?: (chatId: number, card: Card) => Promise<void>;
@@ -58,9 +59,9 @@ async function linkedUser(from: string) {
 
 function defaultReply(deps: BotDeps) {
   return async (messages: UIMessage[], user: LinkedUser): Promise<AgentAnswer> => {
-    // The member's own agent, with the same servers and billing as the web chat.
+    // The message is metered once; included tool calls retain the member identity and scopes.
     const servers = parseMcpServers(process.env.AGENT_MCP_SERVERS).map((server) =>
-      resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "telegram", scopes: user.scopes, toolMode: user.toolMode }),
+      resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "telegram", chatMetered: true, scopes: user.scopes, toolMode: user.toolMode }),
     );
     const signOut = signOutTool();
     const { text, visuals } = await generateAgentReply({ servers, messages, model: deps.config.model, channelNote: TELEGRAM_CHANNEL_NOTE, channelTools: signOut.tools });
@@ -92,7 +93,7 @@ export const SIGNED_OUT_LEAD = "Signed out. This Telegram account is no longer l
 export function overLimitMessage(origin: string) {
   const url = `${origin}/login?next=${encodeURIComponent("/billing")}`;
   return {
-    text: `You've used up your mcprouter allowance, so I can't look anything up right now. Sign in to top up or change your plan:\n${url}`,
+    text: `You have no chat credits left. Sign in to top up or change your plan:\n${url}`,
     button: buttonFor("Open billing", url),
   };
 }
@@ -113,7 +114,7 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
   const reply = deps.reply ?? defaultReply(deps);
   const findUser = deps.findUser ?? linkedUser;
   const signOut = deps.signOut ?? ((from: string) => signOutAccount(telegramHash(from)));
-  const overLimit = deps.overLimit ?? isOverLimit;
+  const consumeChat = deps.consumeChat ?? consumeChatMessage;
   const to = message.chatId;
 
   try {
@@ -159,7 +160,14 @@ export async function handleIncomingMessage(message: IncomingMessage, deps: BotD
       return { status: "too-long" as const };
     }
 
-    if (await overLimit(user)) {
+    try {
+      await consumeChat({ userId: user.id, messageId: message.id, channel: "telegram" });
+    } catch (error) {
+      if (error instanceof DuplicateChatMessageError) return { status: "duplicate" as const };
+      if (!(error instanceof UsageLimitError)) {
+        await send(to, "Chat billing is temporarily unavailable. Please try again shortly.");
+        return { status: "failed" as const };
+      }
       const { text: limitText, button } = overLimitMessage(deps.origin);
       await send(to, limitText, button);
       return { status: "limited" as const };

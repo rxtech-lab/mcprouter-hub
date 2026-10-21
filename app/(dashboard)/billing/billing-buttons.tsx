@@ -48,6 +48,7 @@ export function CheckoutNotice({ status }: { status?: string }) {
     shown.current = true;
     if (status === "success") snackbar.show(t("Payment complete. Your plan will update in a moment."), { tone: "success" });
     if (status === "cancelled") snackbar.show(t("Checkout cancelled. Nothing was charged."));
+    if (status === "changed") snackbar.show(t("Plan review complete. Billing will reflect confirmed changes once Stripe finishes processing."));
   }, [status, snackbar, t]);
   return null;
 }

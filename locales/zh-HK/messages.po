@@ -6,6 +6,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Source-Language: en\n"
 
+#: app/(dashboard)/billing/actions.ts
+msgid "This plan change is unavailable. Refresh billing, or manage your subscription with its billing provider."
+msgstr "暫時無法更改此計劃。請重新整理帳單頁面，或透過付款服務供應商管理訂閱。"
+
 #: app/(dashboard)/billing/billing-buttons.tsx
 msgid "Current plan"
 msgstr "目前計劃"
@@ -42,6 +46,10 @@ msgstr "付款成功，你的計劃稍後會更新。"
 msgid "Checkout cancelled. Nothing was charged."
 msgstr "已取消結帳，未有收取任何費用。"
 
+#: app/(dashboard)/billing/billing-buttons.tsx
+msgid "Plan review complete. Billing will reflect confirmed changes once Stripe finishes processing."
+msgstr "計劃檢視已結束。Stripe 完成處理後，帳單會顯示已確認的變更。"
+
 #: app/(dashboard)/billing/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Billing"
 msgstr "帳單"
@@ -70,9 +78,9 @@ msgstr "未設定帳單"
 msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show plans and usage."
 msgstr "設定 RX_SUBSCRIPTION_URL 及 RX_SUBSCRIPTION_API_KEY 以顯示計劃及用量。"
 
-#: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
-msgid "Each MCP tool call counts as one call against your plan."
-msgstr "每次 MCP 工具調用均計為你計劃中的一次調用。"
+#: app/(dashboard)/billing/page.tsx
+msgid "Each user message uses one chat unit. Direct MCP tool calls use MCP call credits."
+msgstr "每則用戶訊息使用一個對話單位。直接調用 MCP 工具會使用 MCP 調用額度。"
 
 #: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Metering is switched off on this deployment, so tool calls are free for now."
@@ -103,6 +111,18 @@ msgstr "於 {date} 重設"
 msgid "Plans"
 msgstr "計劃"
 
+#: app/(dashboard)/billing/page.tsx app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Change plan"
+msgstr "更改計劃"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "Plan change scheduled"
+msgstr "已安排更改計劃"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "Plan change unavailable"
+msgstr "無法更改計劃"
+
 #: app/(dashboard)/billing/page.tsx
 msgid "Included when you have no plan"
 msgstr "未有計劃時已包括"
@@ -114,6 +134,14 @@ msgstr "開始 {days} 日試用"
 #: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Choose plan"
 msgstr "選擇計劃"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "{plan} starts on {date}"
+msgstr "{plan} 將於 {date} 開始"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "This subscription cannot be changed here. Manage it with its billing provider or contact support."
+msgstr "此訂閱無法在這裏更改。請透過付款服務供應商管理，或聯絡支援。"
 
 #: app/(dashboard)/billing/page.tsx
 msgid "No plans available"
@@ -138,6 +166,58 @@ msgstr "單位"
 #: app/(dashboard)/billing/page.tsx
 msgid "Buy"
 msgstr "購買"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx app/sources/apis/api-dialog.tsx components/m3/snackbar.tsx
+msgid "Dismiss"
+msgstr "關閉"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "From {plan}"
+msgstr "目前：{plan}"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "To {plan}"
+msgstr "更改為：{plan}"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "When should this change start?"
+msgstr "何時開始更改計劃？"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Immediately, with prorated billing"
+msgstr "立即更改，費用按比例計算"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "At the next billing period"
+msgstr "於下一個帳單週期開始"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Keep your current plan until renewal. Save a payment method with Stripe now; the new plan starts and is billed at the next period. Opening the review does not schedule a change."
+msgstr "目前計劃將維持至續期。現在透過 Stripe 儲存付款方式；新計劃將於下一個週期開始並收費。開啟檢視頁面不會安排變更。"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Review prorated charges and confirm your change securely with Stripe. Opening the review does not change your plan. Access updates after Stripe confirms the change."
+msgstr "前往 Stripe 安全地檢視按比例計算的費用並確認變更。開啟檢視頁面不會更改計劃。Stripe 確認變更後，使用權限才會更新。"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
+msgid "Cancel"
+msgstr "取消"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Opening plan review…"
+msgstr "正在開啟計劃檢視頁面…"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Redirecting to plan review"
+msgstr "正在轉至計劃檢視頁面"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx lib/action-result.ts
+msgid "Something went wrong. Please try again."
+msgstr "發生錯誤，請再試一次。"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Review with Stripe"
+msgstr "前往 Stripe 檢視"
 
 #: app/(dashboard)/chat/[id]/page.tsx app/(dashboard)/chat/chat-view.tsx app/(dashboard)/chat/page.tsx app/(dashboard)/usage/clients/client-icon.tsx components/app-shell.tsx lib/intro-cards.ts
 msgid "Agent"
@@ -551,10 +631,6 @@ msgstr "建立 API 金鑰"
 #: app/(dashboard)/keys/keys-view.tsx
 msgid "The key is shown once, right after you create it."
 msgstr "金鑰只會在建立後顯示一次。"
-
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
-msgid "Cancel"
-msgstr "取消"
 
 #: app/(dashboard)/keys/keys-view.tsx
 msgid "Creating…"
@@ -1483,7 +1559,7 @@ msgstr "用量檢視"
 msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show usage."
 msgstr "請設定 RX_SUBSCRIPTION_URL 和 RX_SUBSCRIPTION_API_KEY 以顯示用量。"
 
-#: app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
+#: app/(dashboard)/usage/page.tsx
 msgid "Plan allowance"
 msgstr "計劃配額"
 
@@ -1909,10 +1985,6 @@ msgstr "調整面板大小"
 msgid "Chat with this API"
 msgstr "與此 API 聊天"
 
-#: app/sources/apis/api-dialog.tsx components/m3/snackbar.tsx
-msgid "Dismiss"
-msgstr "關閉"
-
 #: app/sources/apis/api-dialog.tsx
 msgid "Ask about {title}. Only the tools listed in the details panel are available here."
 msgstr "詢問有關 {title} 的問題。此處只可使用詳情面板中列出的工具。"
@@ -2222,20 +2294,16 @@ msgid "Sign in to view credits"
 msgstr "登入以查看額度"
 
 #: components/agent/chat-allowance.tsx
-msgid "Unlimited"
-msgstr "無限制"
-
-#: components/agent/chat-allowance.tsx
-msgid "{remaining} of {limit} calls left"
-msgstr "剩餘 {remaining}/{limit} 次調用"
+msgid "Chat credits"
+msgstr "對話額度"
 
 #: components/agent/chat-allowance.tsx
 msgid "Unavailable"
 msgstr "暫時無法取得"
 
 #: components/agent/chat-allowance.tsx
-msgid "Tool calls are free on this deployment."
-msgstr "此部署的工具調用免費。"
+msgid "Chat and tool calls are free on this deployment."
+msgstr "此部署的對話及工具調用均免費。"
 
 #: components/agent/chat-panel.tsx
 msgid "What's the weather in Hong Kong right now? Any warnings?"
@@ -2555,6 +2623,10 @@ msgid "A plan for every assistant"
 msgstr "適合每位助手的方案"
 
 #: components/landing-pricing.tsx
+msgid "Each MCP tool call counts as one call against your plan."
+msgstr "每次 MCP 工具調用均計為你計劃中的一次調用。"
+
+#: components/landing-pricing.tsx
 msgid "One MCP endpoint for every client."
 msgstr "一個 MCP 端點，連接所有用戶端。"
 
@@ -2757,10 +2829,6 @@ msgstr "你沒有執行此操作的權限。"
 #: lib/action-result.ts
 msgid "That item no longer exists."
 msgstr "該項目已不存在。"
-
-#: lib/action-result.ts
-msgid "Something went wrong. Please try again."
-msgstr "發生錯誤，請再試一次。"
 
 #: lib/agent/dashboard-tools.ts
 msgid "Dashboard tour"

@@ -24,7 +24,7 @@ describe("AGENT_MCP_SERVERS", () => {
     expect(resolveServer({ name: "hk", url: "self", headers: {} }, { origin: "https://hk.test", userId: "u1", internalKey: "k".repeat(32) })).toEqual({
       name: "hk",
       url: "https://hk.test/api/mcp/streamable",
-      headers: { Authorization: `Bearer ${"k".repeat(32)}`, "x-mcprouter-user": "u1" },
+      headers: { Authorization: `Bearer ${"k".repeat(32)}`, "x-mcprouter-user": "u1", "x-mcprouter-chat-metered": "0" },
       self: true,
       toolMode: null,
     });

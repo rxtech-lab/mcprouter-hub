@@ -1,0 +1,9 @@
+version: 1
+name: chat-billing
+slug: chat-billing
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

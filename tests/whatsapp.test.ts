@@ -1,5 +1,6 @@
 import { migrate } from "drizzle-orm/libsql/migrator";
 import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
+import { UsageLimitError } from "@/lib/billing/errors";
 import { db } from "@/db";
 import { POST } from "@/app/api/whatsapp/route";
 import { loadChat } from "@/lib/chat-store";
@@ -190,7 +191,7 @@ describe("handleIncomingMessage", () => {
       config: whatsAppConfig(env),
       origin: "https://hub.test",
       findUser: async () => user,
-      overLimit: async () => false,
+      consumeChat: async () => undefined,
       reply,
       send: async (_to, text) => void sent.push(text),
       typing: async () => {},
@@ -223,10 +224,26 @@ describe("handleIncomingMessage", () => {
   });
 
   it("sends a sign-in link to billing when the plan is used up", async () => {
-    const { sent, reply, deps, message } = setup({ overLimit: async () => true });
+    const { sent, reply, deps, message } = setup({ consumeChat: async () => { throw new UsageLimitError("chat", "limit_exceeded", 15, 15); } });
     expect(await handleIncomingMessage(message("b0", "Weather?"), deps)).toEqual({ status: "limited" });
     expect(reply).not.toHaveBeenCalled();
     expect(sent[0]).toContain("https://hub.test/login?next=%2Fbilling");
+  });
+
+  it("meters one chat event per question, excluding duplicates and reset commands", async () => {
+    const consumeChat = vi.fn(async () => undefined);
+    const { deps, message, user } = setup({ consumeChat });
+    await handleIncomingMessage(message("meter-1", "Weather?"), deps);
+    await handleIncomingMessage(message("meter-1", "Weather?"), deps);
+    await handleIncomingMessage(message("meter-reset", "/new"), deps);
+    expect(consumeChat).toHaveBeenCalledExactlyOnceWith({ userId: user.id, messageId: "meter-1", channel: "whatsapp" });
+  });
+
+  it("fails closed and tells the user when chat billing is unavailable", async () => {
+    const { deps, message, reply, sent } = setup({ consumeChat: async () => { throw new Error("offline"); } });
+    expect(await handleIncomingMessage(message("offline", "Weather?"), deps)).toEqual({ status: "failed" });
+    expect(reply).not.toHaveBeenCalled();
+    expect(sent[0]).toContain("Chat billing is temporarily unavailable");
   });
 
   it("drops redelivered messages", async () => {

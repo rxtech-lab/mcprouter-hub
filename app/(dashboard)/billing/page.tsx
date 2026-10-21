@@ -9,6 +9,9 @@ import { price, interval } from "@/lib/billing/format";
 import { getT } from "@/lib/i18n/server";
 import { type Translator } from "@/lib/i18n/translate";
 import { CheckoutNotice, PortalButton, ProductButton } from "./billing-buttons";
+import { ButtonLink } from "@/components/m3/button";
+import { planPurchaseMode } from "@/lib/billing/plan-change";
+import { PlanChangeDialog } from "./plan-change-dialog";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
@@ -27,7 +30,8 @@ function topupBlocker(topup: CatalogTopup, plans: CatalogPlan[], t: Translator) 
 export default async function BillingPage({ searchParams }: PageProps<"/billing">) {
   const user = await requirePageUser();
   const t = await getT();
-  const { checkout } = await searchParams;
+  const params = await searchParams;
+  const { checkout, changePlan } = params;
 
   if (!subscriptionConfigured) {
     return (
@@ -44,14 +48,24 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
   ]);
   const usage = entitlements?.usage.find((item) => item.key === billingConfig.usageItem);
   const currentPlans = new Set(entitlements ? activePlans(entitlements).flatMap((plan) => [plan.planKey, plan.planId]) : []);
-  const balances = (entitlements?.balances ?? []).filter((balance) => !billingConfig.creditUnit || balance.unit === billingConfig.creditUnit);
+  const balances = (entitlements?.balances ?? []).filter((balance) => !billingConfig.creditUnit || balance.unit === billingConfig.creditUnit || balance.unit === billingConfig.chatCreditUnit);
+  const selected = catalog?.plans.find((plan) => plan.id === changePlan);
+  const selectedMode = selected && entitlements && planPurchaseMode(selected, entitlements);
+  const currentCatalogPlan = selectedMode?.kind === "change" && catalog?.plans.find((plan) => plan.id === selectedMode.current.planId);
+  const monthlyPrice = (plan: CatalogPlan) => plan.priceAmountCents / ((plan.billingInterval === "year" ? 12 : plan.billingInterval === "quarter" ? 3 : 1) * (plan.intervalCount ?? 1));
 
   return (
     <>
       <CheckoutNotice status={typeof checkout === "string" ? checkout : undefined} />
+      {selected && selectedMode?.kind === "change" ? <PlanChangeDialog key={selected.id}
+        productId={selected.id}
+        downgrade={!!currentCatalogPlan && monthlyPrice(selected) < monthlyPrice(currentCatalogPlan)}
+        periodEnd={selectedMode.current.currentPeriodEnd}
+        currentName={selectedMode.current.planName} targetName={selected.name}
+        targetPrice={`${price(selected.priceAmountCents, selected.currency, t.locale)} ${interval(selected, t)}`} /> : null}
       <PageHeader
         title={t("Billing")}
-        description={billingConfig.enabled ? t("Each MCP tool call counts as one call against your plan.") : t("Metering is switched off on this deployment, so tool calls are free for now.")}
+        description={billingConfig.enabled ? t("Each user message uses one chat unit. Direct MCP tool calls use MCP call credits.") : t("Metering is switched off on this deployment, so tool calls are free for now.")}
         actions={<PortalButton />}
       />
 
@@ -79,21 +93,32 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
       <h2 className="mt-8 mb-3 type-title-large">{t("Plans")}</h2>
       {catalog?.plans.length ? (
         <div className="stagger grid gap-4 md:grid-cols-3">
-          {catalog.plans.map((plan) => (
+          {catalog.plans.map((plan) => {
+            const mode = entitlements && planPurchaseMode(plan, entitlements);
+            const next = new URLSearchParams();
+            for (const [key, value] of Object.entries(params)) {
+              if (key === "checkout" || key === "changePlan" || key === "timing") continue;
+              if (typeof value === "string") next.set(key, value);
+              else value?.forEach((item) => next.append(key, item));
+            }
+            next.set("changePlan", plan.id);
+            return (
             <Card key={plan.id} className="flex flex-col gap-2">
               <h3 className="type-title-medium">{plan.name}</h3>
               <p className="type-headline-small">{price(plan.priceAmountCents, plan.currency, t.locale)} <span className="type-body-medium text-on-surface-variant">{interval(plan, t)}</span></p>
               {plan.description ? <p className="flex-1 type-body-medium text-on-surface-variant">{plan.description}</p> : <span className="flex-1" />}
-              <ProductButton
+              {mode?.kind === "change" ? <ButtonLink href={`/billing?${next}`} scroll={false}>{t("Change plan")}</ButtonLink> : <ProductButton
                 kind="plan"
                 productId={plan.id}
                 current={currentPlans.has(plan.key) || currentPlans.has(plan.id)}
                 // Free tiers are assigned by rx-subscription and can't go through checkout.
-                disabled={plan.autoSubscribe}
-                label={plan.autoSubscribe ? t("Included when you have no plan") : plan.trialDays ? t("Start {days}-day trial", { days: plan.trialDays }) : t("Choose plan")}
-              />
+                disabled={!entitlements || plan.autoSubscribe || (mode?.kind === "unsupported" || mode?.kind === "pending")}
+                label={mode?.kind === "pending" ? t("Plan change scheduled") : mode?.kind === "unsupported" ? t("Plan change unavailable") : plan.autoSubscribe ? t("Included when you have no plan") : plan.trialDays ? t("Start {days}-day trial", { days: plan.trialDays }) : t("Choose plan")}
+              />}
+              {mode?.kind === "pending" ? <p className="type-body-small text-on-surface-variant">{t("{plan} starts on {date}", { plan: mode.pending.planName, date: formatDateTime(mode.pending.effectiveAt, t.locale) })}</p> : null}
+              {mode?.kind === "unsupported" ? <p className="type-body-small text-on-surface-variant">{t("This subscription cannot be changed here. Manage it with its billing provider or contact support.")}</p> : null}
             </Card>
-          ))}
+          ); })}
         </div>
       ) : (
         <EmptyState title={t("No plans available")}>{catalog ? t("Plans will appear here once they're published.") : t("The plan catalogue couldn't be loaded.")}</EmptyState>

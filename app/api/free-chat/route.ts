@@ -1,3 +1,5 @@
+import { consumeChatMessage, chatBillingMessage, DuplicateChatMessageError } from "@/lib/billing/chat";
+import { UsageLimitError } from "@/lib/billing/errors";
 import { AGENT_TOOL_STEPS, GUEST_AGENT_TOOL_STEPS } from "@/lib/agent/stop";
 import { validateUIMessages, type UIMessage } from "ai";
 import { cookies } from "next/headers";
@@ -57,7 +59,7 @@ export async function POST(request: Request) {
   try {
     // Only this app's own tools: other configured servers may carry credentials meant for members.
     servers = DEFAULT_AGENT_SERVERS.map((server) =>
-      resolveServer(server, { origin: new URL(request.url).origin, userId, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "web" }),
+      resolveServer(server, { origin: new URL(request.url).origin, userId, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "web", chatMetered: true }),
     );
   } catch (error) {
     console.error("[free-chat]", error);
@@ -70,6 +72,12 @@ export async function POST(request: Request) {
     const { allowed, quota } = await consumeFreeMessage(subjects, config);
     if (!allowed) return plain(`You've used today's ${quota.limit} free messages. Sign in to keep chatting, or come back tomorrow.`, 429);
     headers.set("x-free-chat-remaining", String(quota.remaining));
+  }
+
+  try {
+    if (user) await consumeChatMessage({ userId, messageId: messages.at(-1)!.id, channel: "web" });
+  } catch (error) {
+    return plain(chatBillingMessage(error), error instanceof DuplicateChatMessageError ? 409 : error instanceof UsageLimitError ? 402 : 503);
   }
 
   return streamAgentReply({

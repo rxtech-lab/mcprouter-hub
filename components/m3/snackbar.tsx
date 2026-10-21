@@ -56,7 +56,7 @@ export function SnackbarProvider({ children }: { children: ReactNode }) {
   return (
     <SnackbarContext.Provider value={{ show, dismiss }}>
       {children}
-      <div aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-6 z-[60] flex justify-center px-4">
+      <div aria-live="polite" className="pointer-events-none fixed inset-x-0 top-6 z-[60] flex justify-end px-4">
         {snack ? (
           <div
             key={snack.id}
