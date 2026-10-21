@@ -1,5 +1,5 @@
 import { ArrowRight, Code, Globe, KeyRound, type LucideIcon, MessageCircle, MessageSquareText, MousePointer2, Plug, Send, Sparkle, Sparkles, Terminal, Wrench } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { Suspense } from "react";
 import { LandingPricing } from "@/components/landing-pricing";
 import manifest from "@/generated/manifest.json";
@@ -20,6 +20,12 @@ import { MCP_CLIENTS, mcpClientById } from "@/lib/mcp-clients";
 import { siteUrl } from "@/lib/site";
 import { telegramConfig } from "@/lib/telegram/api";
 import { whatsAppConfig } from "@/lib/whatsapp/wasender";
+import { seoMetadata } from "@/lib/seo";
+
+export async function generateMetadata() {
+  const t = await getT();
+  return seoMetadata(t("Hong Kong Open Data MCP Server"), t("Open data as MCP tools, for everyone. Starting with Hong Kong."), "/");
+}
 
 const clientIcons: Record<string, LucideIcon> = {
   "claude-code": Terminal,
@@ -307,6 +313,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           signInHref={`/login?${new URLSearchParams({ next: setupHref(preview.id) })}`}
         >
           <SetupSteps steps={preview.oauth(`${await siteUrl()}/api/mcp/streamable`)} />
+          <ButtonLink href={`/guides/${preview.id}`} variant="text" className="mt-4">{t("Setup guides")}</ButtonLink>
           {preview.note ? <p className="mt-4 rounded-sm bg-surface-container p-3 type-body-medium text-on-surface-variant">{t(preview.note)}</p> : null}
         </ClientSetupDialog>
       ) : null}

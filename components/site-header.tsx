@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { Suspense } from "react";
 import { Logo } from "@/components/logo";
 import { ButtonLink } from "@/components/m3/button";
@@ -10,6 +10,7 @@ import { msg } from "@/lib/i18n/translate";
 
 const links = [
   { href: "/sources", label: msg("Data sources"), key: "sources" },
+  { href: "/guides", label: msg("Setup guides"), key: "guides" },
   { href: "/#pricing", label: msg("Pricing"), key: "pricing" },
 ] as const;
 
@@ -33,6 +34,7 @@ export async function SiteHeader({ active, className }: { active?: (typeof links
               aria-current={active === link.key ? "page" : undefined}
               className={cn(
                 "state-layer inline-flex h-10 items-center rounded-full px-4 type-label-large",
+                link.key === "guides" ? "max-sm:hidden" : undefined,
                 active === link.key ? "bg-secondary-container text-on-secondary-container" : "text-on-surface-variant",
               )}
             >

@@ -6,38 +6,23 @@ import { I18nProvider } from "@/lib/i18n/client";
 import { getMessages } from "@/lib/i18n/messages";
 import { getLocale, getT } from "@/lib/i18n/server";
 import "./globals.css";
+import { seoOrigin } from "@/lib/seo";
+import { StructuredData } from "@/components/structured-data";
 
 const roboto = Roboto_Flex({ variable: "--font-roboto", subsets: ["latin"] });
 const robotoMono = Roboto_Mono({ variable: "--font-roboto-mono", subsets: ["latin"] });
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
-  const description = t("Open data as MCP tools, for everyone. Starting with Hong Kong.");
   return {
-    metadataBase: new URL(
-      process.env.NEXT_PUBLIC_SITE_URL ||
-        (process.env.VERCEL_PROJECT_PRODUCTION_URL
-          ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-          : "http://localhost:3000"),
-    ),
-    title: { default: "mcprouter", template: "%s · mcprouter" },
-    description,
-    icons: {
-      icon: [
-        { url: "/brand/icon-v2.webp", type: "image/webp", sizes: "512x512" },
-      ],
-    },
-    openGraph: {
-      title: "mcprouter",
-      description,
-      siteName: "mcprouter",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "mcprouter",
-      description,
-    },
+    // Shared layouts persist across navigation; page URLs belong to page metadata.
+    description: t("Open data as MCP tools, for everyone. Starting with Hong Kong."),
+    robots: { index: false, follow: true },
+    metadataBase: new URL(seoOrigin()),
+    title: { default: `${t("Hong Kong Open Data MCP Server")} · MCPRouter`, template: "%s · MCPRouter" },
+    publisher: "RxLab",
+    verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined },
+    icons: { icon: [{ url: "/brand/icon-v2.webp", type: "image/webp", sizes: "512x512" }] },
   };
 }
 
@@ -46,6 +31,12 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang={locale} className={`${roboto.variable} ${robotoMono.variable} h-full antialiased`}>
       <body className="min-h-full">
+        <StructuredData data={{
+          "@context": "https://schema.org", "@graph": [
+            { "@type": "Organization", "@id": "https://rxlab.app/#organization", name: "RxLab", url: "https://rxlab.app" },
+            { "@type": "WebSite", "@id": `${seoOrigin()}/#website`, name: "MCPRouter", url: seoOrigin(), publisher: { "@id": "https://rxlab.app/#organization" } },
+          ],
+        }} />
         <Suspense fallback={null}><Analytics /></Suspense>
         <I18nProvider locale={locale} messages={getMessages(locale)}>
           {children}

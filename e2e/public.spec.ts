@@ -5,8 +5,8 @@ test("data sources: services, a service's tools, and provider search", async ({ 
   await page.getByRole("link", { name: "Read more about the data sources" }).click();
   await expect(page.getByRole("heading", { name: "Data sources" })).toBeVisible();
 
-  await page.getByRole("link", { name: /Hong Kong Observatory Weather/ }).click();
-  await expect(page.getByRole("heading", { name: "Hong Kong Observatory Weather" })).toBeVisible();
+  await page.getByRole("link", { name: /Hong Kong Weather & Warnings MCP/ }).click();
+  await expect(page.getByRole("heading", { name: "Hong Kong Weather & Warnings MCP" })).toBeVisible();
   await expect(page.getByText("hko_current_weather")).toBeVisible();
 
   await page.goto("/sources/providers?q=zzzz-no-such-provider");

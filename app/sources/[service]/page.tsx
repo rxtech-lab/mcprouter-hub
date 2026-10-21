@@ -1,5 +1,10 @@
+import { seoMetadata } from "@/lib/seo";
+import { serviceContent } from "@/lib/service-content";
+import { localizedHref } from "@/lib/i18n/routing";
+import { getLocale } from "@/lib/i18n/server";
+import { SeoBreadcrumbs } from "@/components/seo-breadcrumbs";
 import { ArrowRight, ChevronRight, KeyRound, MessageSquareText } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ButtonLink } from "@/components/m3/button";
@@ -8,24 +13,26 @@ import manifest from "@/generated/manifest.json";
 import { serviceApis } from "@/lib/apis";
 import { getT } from "@/lib/i18n/server";
 import { findService, serviceDatasets } from "@/lib/sources";
-import { BackLink } from "../back-link";
 import { DatasetItem } from "../dataset-item";
 import { ApiDialog, ApiToolButton } from "../apis/api-dialog";
 
 export async function generateMetadata({ params }: PageProps<"/sources/[service]">): Promise<Metadata> {
   const service = findService((await params).service);
-  return service ? { title: service.title, description: service.description } : {};
+  const t = await getT();
+  return service ? seoMetadata(`${t(serviceContent[service.id]?.title ?? service.title)}${serviceContent[service.id] ? "" : " MCP"}`, t(service.description), `/sources/${service.id}`) : {};
 }
 
 export default async function ServicePage({ params, searchParams }: PageProps<"/sources/[service]">) {
   const id = (await params).service;
   const service = findService(id);
   if (!service) notFound();
-  if (service.id !== id) permanentRedirect(`/sources/${service.id}`);
+  if (service.id !== id) permanentRedirect(localizedHref(`/sources/${service.id}`, await getLocale()));
   const index = manifest.services.indexOf(service);
   const rows = await serviceDatasets(service.datasets);
   const apis = serviceApis(service.id);
   const t = await getT();
+  const editorial = serviceContent[service.id];
+  const title = t(editorial?.title ?? service.title);
   const query = await searchParams;
   const chatOpen = query.chat === "1";
   const closeQuery = new URLSearchParams();
@@ -39,17 +46,30 @@ export default async function ServicePage({ params, searchParams }: PageProps<"/
 
   return (
     <>
-      <BackLink href="/sources">{t("Data sources")}</BackLink>
+      <SeoBreadcrumbs items={[{ name: "MCPRouter", href: "/" }, { name: t("Data sources"), href: "/sources" }, { name: title, href: `/sources/${service.id}` }]} />
       <section className="flex flex-col gap-6 rounded-xl bg-surface-container-low p-6 md:flex-row md:items-center md:p-8">
         <ServiceIcon id={service.id} index={index} size="lg" />
         <div className="min-w-0 flex-1">
-          <h1 className="type-headline-large">{service.title}</h1>
-          <p className="mt-2 max-w-2xl type-body-large text-on-surface-variant">{service.description}</p>
+          <h1 className="type-headline-large">{title}</h1>
+          <p className="mt-2 max-w-2xl type-body-large text-on-surface-variant">{t(service.description)}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {service.tools.length ? <ButtonLink href={`/sources/${service.id}?${chatQuery}`} scroll={false} icon={<MessageSquareText size={18} />}>{t("Chat")}</ButtonLink> : null}
           <ButtonLink href="/keys" variant="outlined" icon={<KeyRound size={18} />}>{t("Get an API key")}</ButtonLink>
         </div>
+      </section>
+
+      <section className="mt-10 max-w-3xl">
+        <h2 className="type-title-large">{t("Use this MCP service")}</h2>
+        <p className="mt-2 type-body-large text-on-surface-variant">{t("Connect a supported AI client, then ask a question. Your assistant uses the tools below to request data from the source.")}</p>
+        <Link href="/guides" className="mt-3 inline-block type-label-large text-primary hover:underline">{t("Setup guides")}</Link>
+        {editorial ? <>
+          <h2 className="mt-6 type-title-large">{t("Example questions")}</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 type-body-large">{editorial.examples.map((example) => <li key={example}>{t(example)}</li>)}</ul>
+          <h2 className="mt-6 type-title-large">{t("Data freshness and limitations")}</h2>
+          <p className="mt-2 type-body-large text-on-surface-variant">{t(editorial.limitation)}</p>
+        </> : null}
+        <p className="mt-4 type-body-medium text-on-surface-variant">{t("Results come from upstream providers and may be cached. Check timestamps in the returned data. MCPRouter by RxLab is an independent service.")}</p>
       </section>
 
       <section className="mt-10">
@@ -71,7 +91,7 @@ export default async function ServicePage({ params, searchParams }: PageProps<"/
         <ul className="stagger grid gap-3 md:grid-cols-2">
           {apis.map((api) => (
             <li key={api.id}>
-              <Link href={`/sources/apis?api=${api.id}`} className="state-layer flex h-full items-center gap-3 rounded-lg border border-outline-variant p-4 text-on-surface">
+              <Link href={`/sources/api/${api.id}`} className="state-layer flex h-full items-center gap-3 rounded-lg border border-outline-variant p-4 text-on-surface">
                 <code className="shrink-0 rounded-xs bg-surface-container-high px-2 py-0.5 font-mono text-[13px] text-on-surface-variant">{api.id}</code>
                 <span className="min-w-0 flex-1 type-title-small">{api.title}</span>
                 <ChevronRight size={18} className="shrink-0 text-on-surface-variant" />

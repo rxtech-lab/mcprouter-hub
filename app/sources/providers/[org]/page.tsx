@@ -1,5 +1,6 @@
+import { seoMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { notFound } from "next/navigation";
 import { cn } from "@/components/m3/cn";
 import { EmptyState } from "@/components/m3/page-header";
@@ -8,14 +9,14 @@ import { SearchBar } from "@/components/m3/search-bar";
 import { formatNumber } from "@/lib/format";
 import { getT } from "@/lib/i18n/server";
 import { getProvider, listProviderDatasets, SOURCES_PAGE_SIZE } from "@/lib/sources";
-import { BackLink } from "../../back-link";
+import { SeoBreadcrumbs } from "@/components/seo-breadcrumbs";
 import { DatasetItem } from "../../dataset-item";
 import { listHref, parseListParams } from "../../params";
 
 export async function generateMetadata({ params }: PageProps<"/sources/providers/[org]">): Promise<Metadata> {
   const provider = await getProvider(decodeURIComponent((await params).org));
   const t = await getT();
-  return provider ? { title: provider.title, description: t("Datasets {provider} publishes on DATA.GOV.HK.", { provider: provider.title }) } : {};
+  return provider ? seoMetadata(provider.title, t("Datasets {provider} publishes on DATA.GOV.HK.", { provider: provider.title })) : {};
 }
 
 export default async function ProviderPage({ params, searchParams }: PageProps<"/sources/providers/[org]">) {
@@ -36,7 +37,7 @@ export default async function ProviderPage({ params, searchParams }: PageProps<"
 
   return (
     <>
-      <BackLink href="/sources/providers">{t("Providers")}</BackLink>
+      <SeoBreadcrumbs items={[{ name: "MCPRouter", href: "/" }, { name: t("Providers"), href: "/sources/providers" }, { name: provider.title, href: path }]} />
       <h1 className="type-headline-large">{provider.title}</h1>
       <dl className="mt-6 grid max-w-xl grid-cols-3 gap-3">
         {stats.map((stat) => (

@@ -1,6 +1,7 @@
+import { seoMetadata } from "@/lib/seo";
 import { ChevronRight } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { Badge } from "@/components/m3/chip";
 import { EmptyState } from "@/components/m3/page-header";
 import { Pagination } from "@/components/m3/pagination";
@@ -13,7 +14,7 @@ import { SourcesHeader } from "../sources-header";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
-  return { title: t("Data providers"), description: t("Search the government departments and organisations publishing on DATA.GOV.HK.") };
+  return seoMetadata(t("Data providers"), t("Search the government departments and organisations publishing on DATA.GOV.HK."));
 }
 
 export default async function ProvidersPage({ searchParams }: PageProps<"/sources/providers">) {
