@@ -1,5 +1,5 @@
 import { ExternalLink, Wrench } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { Badge } from "@/components/m3/chip";
 import manifest from "@/generated/manifest.json";
 import { datasetUrl } from "@/lib/sources";

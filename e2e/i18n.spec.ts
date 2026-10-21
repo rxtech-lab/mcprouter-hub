@@ -20,7 +20,10 @@ test("the language menu saves the choice across pages", async ({ page, context }
 
   // The dashboard rail has the same menu, and the choice carries over.
   // A fresh user gets the intro tour on the dashboard; close it if it covers the rail.
-  await page.addLocatorHandler(page.getByTestId("intro-card"), () => page.keyboard.press("Escape"));
+  await page.addLocatorHandler(page.getByTestId("intro-card"), async () => {
+    // A menu opened during an assertion can consume Escape before the tour does.
+    await page.getByRole("dialog").getByRole("button", { name: /^(跳过|完成)$/ }).click();
+  });
   await page.goto("/dashboard");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
   await page.getByRole("navigation").getByRole("button", { name: "语言" }).click();

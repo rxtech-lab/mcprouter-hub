@@ -11,8 +11,8 @@ for (const mobile of [false, true]) {
       await route.fulfill({ status: 200, contentType: "text/event-stream", headers: { "x-vercel-ai-ui-message-stream": "v1" }, body: 'data: {"type":"start","messageId":"answer"}\n\ndata: {"type":"finish"}\n\ndata: [DONE]\n\n' });
     });
     await page.goto("/sources/td-street-parking");
-    await page.locator('a[href="/sources/td-street-parking?chat=1"]').click();
-    await expect(page).toHaveURL("/sources/td-street-parking?chat=1");
+    await page.locator('a[href="/en/sources/td-street-parking?chat=1"]').click();
+    await expect(page).toHaveURL("/en/sources/td-street-parking?chat=1");
     const dialog = page.getByRole("dialog", { name: "On-street Parking" });
     await expect(dialog).toBeVisible();
     if (mobile) await dialog.getByRole("button", { name: "Details & tools" }).click();
@@ -34,7 +34,7 @@ for (const mobile of [false, true]) {
     await expect(dialog.getByTestId("tool-request-message").locator("code")).toHaveText("parking_meter_vacancy");
     await expect(dialog.getByText("Use this tool: parking_meter_vacancy", { exact: true })).toHaveCount(0);
     await dialog.getByRole("button", { name: "Close", exact: true }).click();
-    await expect(page).toHaveURL("/sources/td-street-parking");
+    await expect(page).toHaveURL("/en/sources/td-street-parking");
     await expect(dialog).not.toBeVisible();
   });
 }

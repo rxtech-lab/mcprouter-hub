@@ -1,6 +1,8 @@
+import { serviceContent } from "@/lib/service-content";
+import { seoMetadata } from "@/lib/seo";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ServiceIcon } from "@/components/service-icon";
 import manifest from "@/generated/manifest.json";
 import { getT } from "@/lib/i18n/server";
@@ -8,7 +10,7 @@ import { SourcesHeader } from "./sources-header";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
-  return { title: t("Data sources"), description: t("The open data services mcprouter serves as MCP tools.") };
+  return seoMetadata(t("Hong Kong Open Data MCP Services"), t("The open data services mcprouter serves as MCP tools."));
 }
 
 export default async function SourcesPage() {
@@ -25,8 +27,8 @@ export default async function SourcesPage() {
                 <ArrowRight size={20} className="text-on-surface-variant transition-transform group-hover:translate-x-0.5" />
               </div>
               <div className="flex flex-1 flex-col gap-1">
-                <h2 className="type-title-medium">{service.title}</h2>
-                <p className="type-body-medium text-on-surface-variant">{service.description}</p>
+                <h2 className="type-title-medium">{t(serviceContent[service.id]?.title ?? service.title)}</h2>
+                <p className="type-body-medium text-on-surface-variant">{t(service.description)}</p>
               </div>
               <span className="type-label-medium text-on-surface-variant">
                 {t.plural("{count} tool", "{count} tools", service.tools.length)} · {t.plural("{count} dataset", "{count} datasets", service.datasets.length)}

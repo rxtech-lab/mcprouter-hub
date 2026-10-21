@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { usePathname } from "next/navigation";
+import { splitLocalePath } from "@/lib/i18n/routing";
 import { cn } from "./cn";
 
 /** M3 primary tabs that navigate between pages; the active tab follows the URL. A `nested` tab stays active on its sub-pages. Tabs never wrap: on narrow screens the row scrolls sideways. */
 export function LinkTabs({ tabs, label }: { tabs: { href: string; label: string; count?: number; nested?: boolean }[]; label: string }) {
-  const pathname = usePathname();
+  const pathname = splitLocalePath(usePathname()).pathname;
   return (
     <nav aria-label={label} className="flex overflow-x-auto border-b border-outline-variant [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {tabs.map((tab) => {

@@ -55,7 +55,7 @@ test("API workspace resizes, minimizes and preserves the conversation", async ({
   await expect(dialog.getByRole("textbox", { name: "Message" })).toHaveValue("And the one after?");
   await expect(dialog.getByText("The next train is arriving soon.")).toBeVisible();
   await page.keyboard.press("Escape");
-  await expect(page).toHaveURL("/sources/apis?status=implemented");
+  await expect(page).toHaveURL("/en/sources/apis?status=implemented");
 });
 
 test("API workspace uses mobile navigation and fullscreen deep links", async ({ page }) => {
@@ -77,7 +77,7 @@ test("API workspace uses mobile navigation and fullscreen deep links", async ({ 
   await expect(dialog.getByRole("textbox", { name: "Message" })).toBeVisible();
   expect(await dialog.evaluate((element) => element.scrollWidth <= window.innerWidth)).toBe(true);
   await dialog.getByRole("button", { name: "Close", exact: true }).click();
-  await expect(page).toHaveURL("/sources/apis");
+  await expect(page).toHaveURL("/en/sources/apis");
 });
 
 test("unimplemented APIs keep their details without a chat composer", async ({ page }) => {

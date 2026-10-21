@@ -7,6 +7,8 @@ import { createTranslator } from "./translate";
 
 /** The saved choice from the language menu, else the browser's preferred language. */
 export const getLocale = cache(async (): Promise<Locale> => {
+  const routed = (await headers()).get("x-site-locale");
+  if (isLocale(routed)) return routed;
   const saved = (await cookies()).get(LOCALE_COOKIE)?.value;
   if (isLocale(saved)) return saved;
   return matchLocale((await headers()).get("accept-language"));

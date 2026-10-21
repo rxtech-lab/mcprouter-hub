@@ -1,5 +1,6 @@
+import { localizedHref } from "@/lib/i18n/routing";
 import { Search, X } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import type { ReactNode } from "react";
 import { getT } from "@/lib/i18n/server";
 
@@ -7,7 +8,7 @@ import { getT } from "@/lib/i18n/server";
 export async function SearchBar({ action, query, placeholder, label, children }: { action: string; query?: string; placeholder: string; label: string; children?: ReactNode }) {
   const t = await getT();
   return (
-    <form action={action} role="search" className="flex flex-wrap items-center gap-3">
+    <form action={localizedHref(action, t.locale)} role="search" className="flex flex-wrap items-center gap-3">
       <label className="flex h-14 min-w-0 flex-1 basis-72 items-center gap-3 rounded-full border-2 border-transparent bg-surface-container-high px-5 text-on-surface-variant transition-colors focus-within:border-primary">
         <Search size={20} className="shrink-0" />
         <input

@@ -440,11 +440,11 @@ msgstr "建立金鑰"
 msgid "Sign-in method"
 msgstr "登入方式"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/login/page.tsx components/site-header.tsx
+#: app/(dashboard)/keys/apps/apps-view.tsx app/guides/[client]/page.tsx app/login/page.tsx components/site-header.tsx
 msgid "Sign in"
 msgstr "登入"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/usage/clients/client-icon.tsx app/page.tsx
+#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/usage/clients/client-icon.tsx app/guides/[client]/page.tsx app/page.tsx
 msgid "API key"
 msgstr "API 金鑰"
 
@@ -1495,9 +1495,53 @@ msgstr "已用額度（最近 {days} 天）"
 msgid "Calls past the allowance"
 msgstr "超出計劃配額的調用"
 
-#: app/layout.tsx
+#: app/guides/[client]/page.tsx
+msgid "Connect {client} to MCPRouter"
+msgstr "將 {client} 連接至 MCPRouter"
+
+#: app/guides/[client]/page.tsx
+msgid "Set up MCPRouter with OAuth or an API key to access Hong Kong open data from your AI client."
+msgstr "透過 OAuth 或 API 金鑰設定 MCPRouter，在 AI 客戶端存取香港開放數據。"
+
+#: app/guides/[client]/page.tsx app/guides/page.tsx app/page.tsx app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx components/site-footer.tsx components/site-header.tsx
+msgid "Setup guides"
+msgstr "設定指南"
+
+#: app/guides/[client]/page.tsx
+msgid "Authentication"
+msgstr "身分驗證"
+
+#: app/guides/[client]/page.tsx app/page.tsx app/sources/[service]/page.tsx
+msgid "Get an API key"
+msgstr "取得 API 金鑰"
+
+#: app/guides/[client]/page.tsx app/sources/[service]/page.tsx app/sources/sources-header.tsx components/site-footer.tsx components/site-header.tsx
+msgid "Data sources"
+msgstr "數據來源"
+
+#: app/guides/page.tsx
+msgid "MCP Setup Guides & Hong Kong Data Use Cases"
+msgstr "MCP 設定指南與香港數據應用"
+
+#: app/guides/page.tsx
+msgid "Connect your AI client to MCPRouter and explore Hong Kong transport, weather, air quality and economic data."
+msgstr "將 AI 客戶端連接至 MCPRouter，探索香港交通、天氣、空氣質素及經濟數據。"
+
+#: app/guides/page.tsx
+msgid "Hong Kong data use cases"
+msgstr "香港數據應用"
+
+#: app/guides/page.tsx
+msgid "Start with a service below for example questions, available tools and source limitations."
+msgstr "選擇以下服務，查看問題範例、可用工具及數據來源限制。"
+
+#: app/layout.tsx app/page.tsx
 msgid "Open data as MCP tools, for everyone. Starting with Hong Kong."
 msgstr "人人可用的開放數據 MCP 工具，由香港開始。"
+
+#: app/layout.tsx app/page.tsx
+msgid "Hong Kong Open Data MCP Server"
+msgstr "香港開放數據 MCP 伺服器"
 
 #: app/login/page.tsx
 msgid "API keys for Claude, Cursor, VS Code and any MCP client"
@@ -1745,7 +1789,7 @@ msgstr "{name} 機械人"
 msgid "Online now"
 msgstr "已上線"
 
-#: app/page.tsx app/sources/apis/page.tsx lib/apis.ts
+#: app/page.tsx app/sources/api/[id]/page.tsx app/sources/apis/page.tsx lib/apis.ts
 msgid "Coming soon"
 msgstr "即將推出"
 
@@ -1769,10 +1813,6 @@ msgstr "隨時配合你的 AI 助手。"
 msgid "Free to start. Every tool call is metered on your dashboard."
 msgstr "免費開始使用。每次工具調用均會在控制台中計量。"
 
-#: app/page.tsx app/sources/[service]/page.tsx
-msgid "Get an API key"
-msgstr "取得 API 金鑰"
-
 #: app/page.tsx
 msgid "Is it going to rain? Any warnings?"
 msgstr "會下雨嗎？有沒有天氣警告？"
@@ -1781,19 +1821,35 @@ msgstr "會下雨嗎？有沒有天氣警告？"
 msgid "It's <strong>27°C</strong> at the Observatory with <strong>79% humidity</strong>. No rain in the past hour and <strong>no warnings are in force</strong>."
 msgstr "天文台錄得 <strong>27°C</strong>，<strong>相對濕度 79%</strong>。過去一小時沒有降雨，<strong>現時沒有生效的警告</strong>。"
 
-#: app/sources/[service]/page.tsx app/sources/page.tsx app/sources/sources-header.tsx components/site-footer.tsx components/site-header.tsx
-msgid "Data sources"
-msgstr "數據來源"
-
 #: app/sources/[service]/page.tsx app/sources/apis/api-dialog.tsx
 msgid "Chat"
 msgstr "聊天"
 
 #: app/sources/[service]/page.tsx
+msgid "Use this MCP service"
+msgstr "使用此 MCP 服務"
+
+#: app/sources/[service]/page.tsx
+msgid "Connect a supported AI client, then ask a question. Your assistant uses the tools below to request data from the source."
+msgstr "連接支援的 AI 客戶端後即可提問。助手會使用以下工具向數據來源請求數據。"
+
+#: app/sources/[service]/page.tsx
+msgid "Example questions"
+msgstr "問題範例"
+
+#: app/sources/[service]/page.tsx
+msgid "Data freshness and limitations"
+msgstr "數據時效與限制"
+
+#: app/sources/[service]/page.tsx
+msgid "Results come from upstream providers and may be cached. Check timestamps in the returned data. MCPRouter by RxLab is an independent service."
+msgstr "結果來自上游提供者，可能使用快取。請查看傳回數據中的時間戳。MCPRouter 是 RxLab 提供的獨立服務。"
+
+#: app/sources/[service]/page.tsx
 msgid "What your assistant can call through this service."
 msgstr "你的 AI 助手可透過此服務調用的工具。"
 
-#: app/sources/[service]/page.tsx app/sources/sources-header.tsx
+#: app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx app/sources/sources-header.tsx
 msgid "APIs"
 msgstr "API"
 
@@ -1801,7 +1857,7 @@ msgstr "API"
 msgid "Upstream APIs this service implements, by their tracker id."
 msgstr "此服務實現的上游 API，按追蹤器 ID 列出。"
 
-#: app/sources/[service]/page.tsx
+#: app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx
 msgid "Source datasets"
 msgstr "來源數據集"
 
@@ -1813,13 +1869,17 @@ msgstr "發布於 DATA.GOV.HK，調用工具時實時擷取。"
 msgid "Browse every DATA.GOV.HK provider"
 msgstr "瀏覽所有 DATA.GOV.HK 數據提供者"
 
-#: app/sources/[service]/page.tsx app/sources/apis/page.tsx
+#: app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx app/sources/apis/page.tsx
 msgid "Available tools"
 msgstr "可用工具"
 
 #: app/sources/[service]/page.tsx app/sources/apis/page.tsx
 msgid "Display tools"
 msgstr "顯示工具"
+
+#: app/sources/api/[id]/page.tsx app/sources/apis/page.tsx
+msgid "API docs"
+msgstr "API 文件"
 
 #: app/sources/apis/api-dialog.tsx
 msgid "Minimize"
@@ -1862,8 +1922,8 @@ msgid "Ask about {title}…"
 msgstr "詢問有關 {title} 的問題…"
 
 #: app/sources/apis/page.tsx
-msgid "API tracker"
-msgstr "API 追蹤器"
+msgid "Hong Kong Open Data APIs"
+msgstr "香港開放數據 API"
 
 #: app/sources/apis/page.tsx
 msgid "Every open data API mcprouter serves as MCP tools, and the ones coming soon."
@@ -1931,8 +1991,8 @@ msgid_plural "APIs"
 msgstr[0] "個 API"
 
 #: app/sources/apis/page.tsx
-msgid "API docs"
-msgstr "API 文件"
+msgid "API details"
+msgstr "API 詳情"
 
 #: app/sources/apis/page.tsx
 msgid "Show a custom view of the results."
@@ -1958,6 +2018,10 @@ msgstr "即將推出。如需實現，請在服務 YAML 的 {key} 下列出 {id}
 msgid "Dataset on DATA.GOV.HK"
 msgid_plural "Datasets on DATA.GOV.HK"
 msgstr[0] "DATA.GOV.HK 上的數據集"
+
+#: app/sources/page.tsx
+msgid "Hong Kong Open Data MCP Services"
+msgstr "香港開放數據 MCP 服務"
 
 #: app/sources/page.tsx
 msgid "The open data services mcprouter serves as MCP tools."
@@ -3061,6 +3125,86 @@ msgstr "將金鑰作為 Bearer 權杖發送。只支援 stdio 的客戶端可透
 #: lib/regions.ts
 msgid "Hong Kong"
 msgstr "香港"
+
+#: lib/service-content.ts
+msgid "Hong Kong Bus, Minibus & Tram Arrivals MCP"
+msgstr "香港巴士、小巴及電車到站 MCP"
+
+#: lib/service-content.ts
+msgid "Find the stops for KMB route 1A, then show arrivals at Star Ferry."
+msgstr "尋找九巴 1A 線的車站，並顯示尖沙咀碼頭站的到站時間。"
+
+#: lib/service-content.ts
+msgid "Find green minibus routes in Kowloon and show their stops."
+msgstr "尋找九龍的專線小巴路線並顯示車站。"
+
+#: lib/service-content.ts
+msgid "Choose the operator, direction and stop before requesting arrivals. Predictions depend on the operator's feed and can change."
+msgstr "查詢到站時間前，請選擇營辦商、行車方向及車站。預測取決於營辦商的數據，可能隨時改變。"
+
+#: lib/service-content.ts
+msgid "Hong Kong Weather & Warnings MCP"
+msgstr "香港天氣與警告 MCP"
+
+#: lib/service-content.ts
+msgid "What is the Hong Kong Observatory's forecast for today?"
+msgstr "香港天文台今天的天氣預報是甚麼？"
+
+#: lib/service-content.ts
+msgid "Show the nine-day forecast and any weather warnings currently in force."
+msgstr "顯示九天天氣預報及現正生效的天氣警告。"
+
+#: lib/service-content.ts
+msgid "Weather products have different publication times. Check the observation or issue time returned by the source; a forecast is not a current observation."
+msgstr "天氣產品的發佈時間不同。請查看來源傳回的觀測或發佈時間；預報並非目前實測數據。"
+
+#: lib/service-content.ts
+msgid "Hong Kong MTR & Light Rail Next Train MCP"
+msgstr "香港港鐵與輕鐵下一班車 MCP"
+
+#: lib/service-content.ts
+msgid "Show the next Island Line trains at Admiralty in both directions."
+msgstr "顯示金鐘站港島綫兩個方向的下一班列車。"
+
+#: lib/service-content.ts
+msgid "Find the next Light Rail trains at a stop, grouped by platform."
+msgstr "查詢輕鐵車站的下一班列車，按月台分組。"
+
+#: lib/service-content.ts
+msgid "Heavy rail requests need a supported line and station code. MTR Bus arrivals belong to the bus service. Train schedules can change."
+msgstr "鐵路查詢需要支援的路綫及車站代碼。港鐵巴士到站查詢屬於巴士服務。列車時間可能改變。"
+
+#: lib/service-content.ts
+msgid "Hong Kong Air Quality Health Index MCP"
+msgstr "香港空氣質素健康指數 MCP"
+
+#: lib/service-content.ts
+msgid "Show the current AQHI and health risk at Hong Kong monitoring stations."
+msgstr "顯示香港監測站的目前空氣質素健康指數及健康風險。"
+
+#: lib/service-content.ts
+msgid "Compare the past 24 hours of AQHI at Central with the current forecast."
+msgstr "比較中環過去 24 小時的空氣質素健康指數與目前預測。"
+
+#: lib/service-content.ts
+msgid "AQHI readings are station-specific and published hourly. Use the source's timestamp and health-risk wording when presenting results."
+msgstr "空氣質素健康指數按監測站每小時發佈。展示結果時，請保留來源的時間戳及健康風險用語。"
+
+#: lib/service-content.ts
+msgid "Hong Kong GDP & Consumption Statistics MCP"
+msgstr "香港本地生產總值與消費統計 MCP"
+
+#: lib/service-content.ts
+msgid "Show the latest available Hong Kong GDP and per capita GDP figures."
+msgstr "顯示最新可用的香港本地生產總值及人均本地生產總值。"
+
+#: lib/service-content.ts
+msgid "Compare real GDP growth with the contributions of major expenditure components."
+msgstr "比較本地生產總值的實質增長與主要開支組成部分的貢獻。"
+
+#: lib/service-content.ts
+msgid "Statistical releases can be revised. Preserve the period, units, price basis and provisional markers; use pagination to retrieve older observations."
+msgstr "統計發佈可能修訂。請保留時期、單位、價格基準及臨時數字標記；使用分頁取得歷史數據。"
 
 #: lib/service-scopes.ts
 msgid "Unknown service"

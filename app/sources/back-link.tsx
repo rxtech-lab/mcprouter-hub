@@ -1,5 +1,5 @@
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 
 export function BackLink({ href, children }: { href: string; children: string }) {
   return (

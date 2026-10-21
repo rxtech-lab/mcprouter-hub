@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
   skipProxyUrlNormalize: true,
   // The account menu sits at the bottom of the navigation rail.
   devIndicators: { position: "bottom-right" },
+  // Keep the optional Webpack build path styled as well. The Tailwind loader
+  // implements Webpack's loader interface (also consumed by Turbopack).
+  webpack(config) {
+    config.module.rules.push({
+      // Keep Next's CSS extraction rules; only preprocess their input.
+      oneOf: [{ test: /\.css$/, enforce: "pre", use: ["@tailwindcss/turbopack"] }],
+    });
+    return config;
+  },
   turbopack: {
     rules: {
       "*.css": {

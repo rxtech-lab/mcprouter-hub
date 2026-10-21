@@ -8,6 +8,7 @@ import { type ReactNode, type RefObject, createContext, useContext, useEffect, u
 import { ChatPanel } from "@/components/agent/chat-panel";
 import { ChatAllowance } from "@/components/agent/chat-allowance";
 import { Button, IconButton } from "@/components/m3/button";
+import { localizedHref } from "@/lib/i18n/routing";
 import { cn } from "@/components/m3/cn";
 import { useT } from "@/lib/i18n/client";
 
@@ -68,7 +69,7 @@ export function ApiDialog({ apiId, serviceId, title, description, closeHref, act
 
   function close() {
     dialog.current?.close();
-    startTransition(() => router.replace(closeHref, { scroll: false }));
+    startTransition(() => router.replace(localizedHref(closeHref, t.locale), { scroll: false }));
   }
 
   function resize(clientX: number) {

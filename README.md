@@ -8,6 +8,10 @@ Route integration checks use a local, synthetic contract-based mock (the owner's
 
 Bus, minibus and tram operations are exposed as one `bus` MCP tool. Select an `action` (for example `kmb_routes`, `citybus_eta` or `mtr_bus_schedule`) and pass its arguments at the top level. Tool discovery documents each action's required inputs and defaults. The former `kmb`, `citybus` and `dpo-bus-stop` service URLs resolve to `hk-bus`; clients calling the old standalone tool names must switch to `bus`. Previously hidden operator tools remain unavailable as actions.
 
+### Public SEO
+
+Public pages have language-specific URLs, canonical and sharing metadata, RxLab publisher markup, an hourly sitemap, and index controls for account/search/filter pages. Setup guides are public under `/guides`; API details have dedicated `/sources/api/API-…` pages. See [SEO deployment and Search Console setup](docs/seo.md).
+
 ### Web analytics and public pricing
 
 Firebase Analytics uses the `mcprouter` web app and GA4 stream `G-F4NMJNMGMF`. It loads only in the browser and records initial and client-side page views (including query-driven navigation), labelled navigation/pricing/client setup clicks, chat submissions and successful checkout starts. Custom events omit message text, query values, credentials and conversation IDs. Set `NEXT_PUBLIC_ANALYTICS_ENABLED=false` at build time to disable collection, for example in test deployments. Analytics failures do not block app interactions.

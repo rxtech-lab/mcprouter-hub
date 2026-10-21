@@ -7,7 +7,8 @@ import { useTransition } from "react";
 import { cn } from "@/components/m3/cn";
 import { setLocale } from "@/lib/i18n/actions";
 import { useT } from "@/lib/i18n/client";
-import { LOCALE_LABELS, LOCALES } from "@/lib/i18n/config";
+import { publicPath, splitLocalePath, localizedHref } from "@/lib/i18n/routing";
+import { isLocale, LOCALE_LABELS, LOCALES } from "@/lib/i18n/config";
 
 /**
  * Icon button that opens the language menu, in the navigation rail and the public top app bar.
@@ -22,7 +23,11 @@ export function LanguageMenu({ side = "bottom", className }: { side?: "bottom" |
     if (locale === t.locale) return;
     startTransition(async () => {
       await setLocale(locale);
-      router.refresh();
+      const current = splitLocalePath(window.location.pathname);
+      if (publicPath(current.pathname) && isLocale(locale)) {
+        // A locale change must remount the root layout's <html lang> and translation provider.
+        window.location.assign(localizedHref(`${current.pathname}${window.location.search}${window.location.hash}`, locale));
+      } else router.refresh();
     });
   };
 

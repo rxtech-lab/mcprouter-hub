@@ -1,6 +1,7 @@
+import { seoMetadata } from "@/lib/seo";
 import { CircleCheck, Clock, ExternalLink, GitPullRequest, Wrench } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { Badge } from "@/components/m3/chip";
 import { cn } from "@/components/m3/cn";
 import { ButtonLink } from "@/components/m3/button";
@@ -29,12 +30,14 @@ import { SourcesHeader } from "../sources-header";
 import { ApiDialog, ApiToolButton } from "./api-dialog";
 import { parseApiParams, type ApiParams } from "./params";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ searchParams }: PageProps<"/sources/apis">): Promise<Metadata> {
   const t = await getT();
-  return {
-    title: t("API tracker"),
-    description: t("Every open data API mcprouter serves as MCP tools, and the ones coming soon."),
-  };
+  const selected = findApi(parseApiParams(await searchParams).api);
+  if (selected) {
+    const metadata = await seoMetadata(selected.title, selected.description, `/sources/api/${selected.id}`);
+    return { ...metadata, ...(selected.status === "coming-soon" ? { robots: { index: false, follow: true } } : {}) };
+  }
+  return seoMetadata(t("Hong Kong Open Data APIs"), t("Every open data API mcprouter serves as MCP tools, and the ones coming soon."));
 }
 
 const PATH = "/sources/apis";
@@ -182,9 +185,12 @@ function ApiDetails({ api, closeHref, t }: { api: ApiEntry; closeHref: string; t
       description={api.description}
       closeHref={closeHref}
       actions={
-        <ButtonLink href={api.docs} target="_blank" rel="noreferrer" variant="tonal" icon={<ExternalLink size={18} />}>
-          {t("API docs")}
-        </ButtonLink>
+        <div className="flex flex-wrap gap-3">
+          <ButtonLink href={`/sources/api/${api.id}`} variant="outlined">{t("API details")}</ButtonLink>
+          <ButtonLink href={api.docs} target="_blank" rel="noreferrer" variant="tonal" icon={<ExternalLink size={18} />}>
+            {t("API docs")}
+          </ButtonLink>
+        </div>
       }
     >
       <div className="flex flex-col gap-5">
