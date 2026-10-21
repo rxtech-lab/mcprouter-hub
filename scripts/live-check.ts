@@ -2,10 +2,10 @@
  * Calls every MCP tool against its real upstream, then renders each result in
  * the service's MCP App in Chromium. Inputs live in mcp/live-checks.ts.
  *
- *   bun run live-check [--state <file>] [--threshold <n>] [--only <service|tool>[,...]] [--no-apps]
+ *   bun run live-check [--state <file>] [--threshold <n>] [--only <service|tool>[,...]] [--no-apps] [--attempts <n>]
  *
  * With --state, failures are counted across runs in that JSON file. A check
- * that fails --threshold runs in a row (default 3) is reported to Telegram
+ * that fails --threshold runs in a row (default 1) is reported to Telegram
  * once, and again when it recovers. Telegram needs TELEGRAM_BOT_TOKEN and
  * TELEGRAM_CHAT_ID; without them the report is only printed. Exits 1 when any
  * check failed in this run. CHROMIUM_PATH overrides the browser Playwright launches.
@@ -18,24 +18,27 @@ import { liveCases, type CallTool } from "@/mcp/live-checks";
 import { appHtml, appStructuredContent, hasApp } from "@/lib/mcp/apps";
 import { executeTool, type ToolResult } from "@/lib/mcp/runtime";
 import type { ServiceDefinition, ToolDefinition, ToolInput } from "@/lib/mcp/types";
+import { prepareNotifications, acknowledgeNotifications, type State, type Check } from "./live-check-notifications";
+import { retryCheck } from "./live-check-retry";
 import { callTelegram, splitMessage } from "@/lib/telegram/api";
 
 const { values: args } = parseArgs({
   options: {
     state: { type: "string" },
-    threshold: { type: "string", default: "3" },
+    threshold: { type: "string", default: "1" },
+    attempts: { type: "string", default: "3" },
     only: { type: "string", multiple: true },
     "no-apps": { type: "boolean", default: false },
   },
 });
-const threshold = Math.max(1, Number(args.threshold) || 3);
+const threshold = Number(args.threshold);
+if (!Number.isInteger(threshold) || threshold < 1) throw new Error("--threshold must be a positive integer");
 // --only may repeat or hold a comma-separated list.
 const only = new Set((args.only ?? []).flatMap((value) => value.split(",")).map((value) => value.trim()).filter(Boolean));
 
-const ATTEMPTS = 3;
+const ATTEMPTS = Number(args.attempts);
+if (!Number.isInteger(ATTEMPTS) || ATTEMPTS < 1 || ATTEMPTS > 10) throw new Error("--attempts must be an integer between 1 and 10");
 const TIMEOUT_MS = 45_000;
-
-type Check = { id: string; service: string; ok: boolean; error?: string; ms: number };
 
 const toolsByName = new Map(services.flatMap((service) => service.tools.flatMap((tool) => [tool, ...(tool.operations ?? [])]).map((tool) => [tool.name, { service, tool }] as const)));
 
@@ -66,17 +69,17 @@ async function attempt(tool: ToolDefinition): Promise<{ input: ToolInput; result
 
 async function runTool(service: ServiceDefinition, tool: ToolDefinition) {
   const started = Date.now();
-  let error = "";
-  for (let i = 1; i <= ATTEMPTS; i++) {
-    try {
-      const { input, result } = await attempt(tool);
-      return { check: { id: `tool:${tool.name}`, service: service.id, ok: true, ms: Date.now() - started } satisfies Check, input, result };
-    } catch (caught) {
-      error = message(caught);
-      if (i < ATTEMPTS) await new Promise((resolve) => setTimeout(resolve, 2_000 * i));
-    }
+  try {
+    const { value: { input, result }, attempts } = await retryCheck(() => attempt(tool), {
+      attempts: ATTEMPTS,
+      delayMs: 2_000,
+      onRetry: (attempt, error, delay) => console.warn(`RETRY tool:${tool.name}: attempt ${attempt}/${ATTEMPTS} failed — ${message(error)}; retrying in ${delay / 1000}s`),
+    });
+    if (attempts > 1) console.log(`RECOVERED tool:${tool.name} on attempt ${attempts}/${ATTEMPTS}`);
+    return { check: { id: `tool:${tool.name}`, service: service.id, ok: true, ms: Date.now() - started } satisfies Check, input, result };
+  } catch (error) {
+    return { check: { id: `tool:${tool.name}`, service: service.id, ok: false, error: `${message(error)} (after ${ATTEMPTS} attempts)`, ms: Date.now() - started } satisfies Check };
   }
-  return { check: { id: `tool:${tool.name}`, service: service.id, ok: false, error, ms: Date.now() - started } satisfies Check };
 }
 
 /** A minimal MCP Apps host: answers the handshake, then pushes the tool input and result. */
@@ -162,26 +165,13 @@ console.log(`\n${checks.length - failed.length}/${checks.length} checks passed.`
 
 // ---------------------------------------------------------------- state across runs
 
-type Entry = { failures: number; since: string; error: string; alerted: boolean };
 const statePath = args.state;
-const state: Record<string, Entry> = statePath && existsSync(statePath) ? JSON.parse(readFileSync(statePath, "utf8")) : {};
-const now = new Date().toISOString();
-const alerts: Array<Check & Entry> = [];
-const recovered: Array<Check & Entry> = [];
-
-for (const check of checks) {
-  const previous = state[check.id];
-  if (check.ok) {
-    if (previous?.alerted) recovered.push({ ...check, ...previous });
-    delete state[check.id];
-    continue;
-  }
-  const entry: Entry = { failures: (previous?.failures ?? 0) + 1, since: previous?.since ?? now, error: check.error ?? "", alerted: previous?.alerted ?? false };
-  if (entry.failures >= threshold && !entry.alerted) {
-    entry.alerted = true;
-    alerts.push({ ...check, ...entry });
-  }
-  state[check.id] = entry;
+const state: State = statePath && existsSync(statePath) ? JSON.parse(readFileSync(statePath, "utf8")) : {};
+const { alerts, recovered } = prepareNotifications(state, checks, threshold, new Date().toISOString());
+for (const check of failed) {
+  const entry = state[check.id];
+  if (entry.alerted) console.log(`Telegram suppressed: ${check.id} was already reported; waiting for recovery.`);
+  else if (entry.failures < threshold) console.log(`Telegram pending: ${check.id} has failed ${entry.failures}/${threshold} consecutive runs.`);
 }
 // A partial run (--only) leaves other checks' counts alone; a full run drops checks that no longer exist.
 if (only.size === 0) for (const id of Object.keys(state)) if (!checks.some((check) => check.id === id)) delete state[id];
@@ -206,6 +196,8 @@ function report() {
   return lines.join("\n");
 }
 
+const configured = Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
+console.log(`Telegram: ${configured ? "configured" : "missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID"}; threshold ${threshold} consecutive failed runs; ${alerts.length} new alerts, ${recovered.length} recoveries.`);
 let notified = true;
 if (alerts.length || recovered.length) {
   const text = report();
@@ -214,6 +206,7 @@ if (alerts.length || recovered.length) {
   const chatId = process.env.TELEGRAM_CHAT_ID;
   let sent = false;
   if (!botToken || !chatId) {
+    notified = false;
     console.warn("TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is not set; not notifying.");
   } else {
     try {
@@ -226,8 +219,11 @@ if (alerts.length || recovered.length) {
       console.error("Telegram notification failed:", error);
     }
   }
-  // Alert again next run.
-  if (!sent) for (const alert of alerts) state[alert.id].alerted = false;
+  // Without acknowledgement, both alerts and recoveries remain pending next run.
+  if (sent) {
+    acknowledgeNotifications(state, alerts, recovered);
+    console.log(`Telegram delivered: ${alerts.length} failures, ${recovered.length} recoveries.`);
+  }
 }
 
 if (statePath) writeFileSync(statePath, `${JSON.stringify(state, null, 2)}\n`);

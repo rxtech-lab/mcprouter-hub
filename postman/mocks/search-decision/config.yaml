@@ -1,0 +1,9 @@
+version: 1
+name: search-decision
+slug: search-decision
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

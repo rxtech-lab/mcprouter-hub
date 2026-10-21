@@ -1,6 +1,7 @@
 import "server-only";
 import { and, asc, count, desc, eq, inArray, isNull, like, max, or, sql, type SQL } from "drizzle-orm";
 import { connection } from "next/server";
+import { unstable_cache } from "next/cache";
 import { db } from "@/db";
 import { datasets } from "@/db/schema";
 import manifest from "@/generated/manifest.json";
@@ -24,14 +25,20 @@ const coveredCount = coveredIds.length
   ? sql<number>`sum(case when ${inArray(datasets.id, coveredIds)} then 1 else 0 end)`
   : sql<number>`0`;
 
-/** Catalogue counts change with the daily sync, so read them per request rather than at build time. */
-export async function catalogueTotals() {
-  await connection();
+// Cache Components are not enabled in this app, so use the Data Cache for these
+// public aggregates. A short TTL also picks up syncs run outside the web process.
+const cachedCatalogueTotals = unstable_cache(async () => {
   const [row] = await db
     .select({ datasets: count(), providers: sql<number>`count(distinct ${datasets.organization})` })
     .from(datasets)
     .where(live);
   return row ?? { datasets: 0, providers: 0 };
+}, ["catalogue-totals-v1", process.env.TURSO_DATABASE_URL ?? "file:local.db"], { revalidate: 300 });
+
+/** Keep pages request-rendered while sharing the expensive totals across requests. */
+export async function catalogueTotals() {
+  await connection();
+  return cachedCatalogueTotals();
 }
 
 export type ProviderRow = { id: string; title: string; total: number; apis: number; covered: number };
@@ -56,7 +63,9 @@ export async function listProviders({ query, page }: { query?: string; page: num
       .orderBy(desc(count()), asc(datasets.organization))
       .limit(SOURCES_PAGE_SIZE)
       .offset((page - 1) * SOURCES_PAGE_SIZE),
-    db.select({ total: sql<number>`count(distinct ${datasets.organization})` }).from(datasets).where(where),
+    query
+      ? db.select({ total: sql<number>`count(distinct ${datasets.organization})` }).from(datasets).where(where)
+      : catalogueTotals().then(({ providers }) => [{ total: providers }]),
   ]);
   return {
     rows: rows.map((row): ProviderRow => ({ ...row, title: row.title || row.id, apis: Number(row.apis ?? 0), covered: Number(row.covered ?? 0) })),

@@ -191,7 +191,7 @@ msgstr "對話已刪除"
 msgid "Chat history"
 msgstr "對話記錄"
 
-#: app/(dashboard)/chat/chat-history.tsx components/agent/hero-chat.tsx lib/agent/dashboard-tools.ts
+#: app/(dashboard)/chat/chat-history.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx lib/agent/dashboard-tools.ts
 msgid "New chat"
 msgstr "新對話"
 
@@ -276,7 +276,7 @@ msgstr "{services} 項服務及 {tools} 個工具已準備就緒。"
 msgid "API keys"
 msgstr "API 金鑰"
 
-#: app/(dashboard)/dashboard/page.tsx app/page.tsx components/agent/hero-chat.tsx
+#: app/(dashboard)/dashboard/page.tsx app/page.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx components/site-search.tsx
 msgid "Ask the agent"
 msgstr "詢問 AI 助理"
 
@@ -830,7 +830,7 @@ msgid "{count} tool"
 msgid_plural "{count} tools"
 msgstr[0] "{count} 個工具"
 
-#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/agent/map.tsx components/client-setup-dialog.tsx
+#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/agent/map.tsx components/client-setup-dialog.tsx components/site-search.tsx
 msgid "Close"
 msgstr "關閉"
 
@@ -1503,7 +1503,7 @@ msgstr "將 {client} 連接至 MCPRouter"
 msgid "Set up MCPRouter with OAuth or an API key to access Hong Kong open data from your AI client."
 msgstr "透過 OAuth 或 API 金鑰設定 MCPRouter，在 AI 客戶端存取香港開放數據。"
 
-#: app/guides/[client]/page.tsx app/guides/page.tsx app/page.tsx app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx components/site-footer.tsx components/site-header.tsx
+#: app/guides/[client]/page.tsx app/guides/page.tsx app/page.tsx app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx components/site-footer.tsx lib/site-search/catalogue.ts
 msgid "Setup guides"
 msgstr "設定指南"
 
@@ -1515,7 +1515,7 @@ msgstr "身分驗證"
 msgid "Get an API key"
 msgstr "取得 API 金鑰"
 
-#: app/guides/[client]/page.tsx app/sources/[service]/page.tsx app/sources/sources-header.tsx components/site-footer.tsx components/site-header.tsx
+#: app/guides/[client]/page.tsx app/sources/[service]/page.tsx app/sources/sources-header.tsx components/site-footer.tsx lib/site-search/catalogue.ts
 msgid "Data sources"
 msgstr "數據來源"
 
@@ -1536,12 +1536,12 @@ msgid "Start with a service below for example questions, available tools and sou
 msgstr "選擇以下服務，查看問題範例、可用工具及數據來源限制。"
 
 #: app/layout.tsx app/page.tsx
-msgid "Open data as MCP tools, for everyone. Starting with Hong Kong."
-msgstr "人人可用的開放數據 MCP 工具，由香港開始。"
+msgid "Connect to data and services through MCP tools, with one endpoint and one API key."
+msgstr "透過 MCP 工具連接數據與服務，只需一個端點和一把 API 金鑰。"
 
 #: app/layout.tsx app/page.tsx
-msgid "Hong Kong Open Data MCP Server"
-msgstr "香港開放數據 MCP 伺服器"
+msgid "MCP tools for everyone"
+msgstr "人人可用的 MCP 工具"
 
 #: app/login/page.tsx
 msgid "API keys for Claude, Cursor, VS Code and any MCP client"
@@ -1564,7 +1564,7 @@ msgid "{count} service"
 msgid_plural "{count} services"
 msgstr[0] "{count} 個服務"
 
-#: app/login/page.tsx
+#: app/login/page.tsx lib/site-search/catalogue.ts
 msgid "Home"
 msgstr "主頁"
 
@@ -1661,7 +1661,7 @@ msgstr "Telegram 和 WhatsApp"
 msgid "How it works"
 msgstr "運作方式"
 
-#: app/page.tsx components/landing-pricing.tsx components/site-header.tsx
+#: app/page.tsx components/landing-pricing.tsx lib/site-search/catalogue.ts
 msgid "Pricing"
 msgstr "收費"
 
@@ -1789,7 +1789,7 @@ msgstr "{name} 機械人"
 msgid "Online now"
 msgstr "已上線"
 
-#: app/page.tsx app/sources/api/[id]/page.tsx app/sources/apis/page.tsx lib/apis.ts
+#: app/page.tsx app/sources/api/[id]/page.tsx app/sources/apis/page.tsx lib/apis.ts lib/site-search/catalogue.ts
 msgid "Coming soon"
 msgstr "即將推出"
 
@@ -1821,7 +1821,7 @@ msgstr "會下雨嗎？有沒有天氣警告？"
 msgid "It's <strong>27°C</strong> at the Observatory with <strong>79% humidity</strong>. No rain in the past hour and <strong>no warnings are in force</strong>."
 msgstr "天文台錄得 <strong>27°C</strong>，<strong>相對濕度 79%</strong>。過去一小時沒有降雨，<strong>現時沒有生效的警告</strong>。"
 
-#: app/sources/[service]/page.tsx app/sources/apis/api-dialog.tsx
+#: app/sources/[service]/page.tsx app/sources/apis/api-dialog.tsx components/site-search-chat.tsx components/site-search.tsx
 msgid "Chat"
 msgstr "聊天"
 
@@ -1922,14 +1922,14 @@ msgid "Ask about {title}…"
 msgstr "詢問有關 {title} 的問題…"
 
 #: app/sources/apis/page.tsx
-msgid "Hong Kong Open Data APIs"
-msgstr "香港開放數據 API"
+msgid "MCP APIs"
+msgstr "MCP API"
 
 #: app/sources/apis/page.tsx
 msgid "Every open data API mcprouter serves as MCP tools, and the ones coming soon."
 msgstr "mcprouter 以 MCP 工具提供的所有開放數據 API，以及即將推出的 API。"
 
-#: app/sources/apis/page.tsx lib/apis.ts
+#: app/sources/apis/page.tsx lib/apis.ts lib/site-search/catalogue.ts
 msgid "Implemented"
 msgstr "已實現"
 
@@ -1945,7 +1945,7 @@ msgstr "{count} 個即將推出"
 msgid "Each API has a permanent id. Pull requests that add one carry its id, e.g. {id} for a new entry."
 msgstr "每個 API 都有一個永久 ID。新增 API 的 Pull Request 須附上其 ID，例如新項目的 {id}。"
 
-#: app/sources/apis/page.tsx
+#: app/sources/apis/page.tsx components/site-search.tsx
 msgid "Search APIs"
 msgstr "搜尋 API"
 
@@ -2020,8 +2020,8 @@ msgid_plural "Datasets on DATA.GOV.HK"
 msgstr[0] "DATA.GOV.HK 上的數據集"
 
 #: app/sources/page.tsx
-msgid "Hong Kong Open Data MCP Services"
-msgstr "香港開放數據 MCP 服務"
+msgid "MCP Services"
+msgstr "MCP 服務"
 
 #: app/sources/page.tsx
 msgid "The open data services mcprouter serves as MCP tools."
@@ -2060,13 +2060,17 @@ msgstr "沒有相符的數據集"
 msgid "Try another search, or show all datasets."
 msgstr "請嘗試其他搜尋字詞，或顯示所有數據集。"
 
-#: app/sources/providers/page.tsx
+#: app/sources/providers/page.tsx components/site-footer.tsx
 msgid "Data providers"
 msgstr "數據提供者"
 
 #: app/sources/providers/page.tsx
-msgid "Search the government departments and organisations publishing on DATA.GOV.HK."
-msgstr "搜尋在 DATA.GOV.HK 上發布數據的政府部門及機構。"
+msgid "Explore the organisations behind the data available through McpRouter."
+msgstr "認識 McpRouter 數據背後的提供機構。"
+
+#: app/sources/providers/page.tsx
+msgid "Data from DATA.GOV.HK and its providers."
+msgstr "數據來自 DATA.GOV.HK 及其數據提供者。"
 
 #: app/sources/providers/page.tsx
 msgid "Try a shorter name, or an abbreviation such as HKO or TD."
@@ -2090,8 +2094,8 @@ msgid "{count} in mcprouter"
 msgstr "{count} 個已接入 mcprouter"
 
 #: app/sources/sources-header.tsx
-msgid "mcprouter turns DATA.GOV.HK datasets into MCP tools."
-msgstr "mcprouter 將 DATA.GOV.HK 數據集轉換為 MCP 工具。"
+msgid "McpRouter connects data and services to your MCP clients."
+msgstr "McpRouter 將數據與服務連接至你的 MCP 客戶端。"
 
 #: app/sources/sources-header.tsx
 msgid "The catalogue has {datasets} datasets from {providers} government departments and organisations."
@@ -2354,7 +2358,7 @@ msgstr "AI 助理正在回覆"
 msgid "Ask about live data"
 msgstr "查詢即時數據"
 
-#: components/agent/chat-panel.tsx components/agent/hero-chat.tsx
+#: components/agent/chat-panel.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx
 msgid "Message"
 msgstr "訊息"
 
@@ -2362,11 +2366,11 @@ msgstr "訊息"
 msgid "Ask about weather, buses, MTR, hospitals…"
 msgstr "查詢天氣、巴士、港鐵、醫院…"
 
-#: components/agent/chat-panel.tsx components/agent/hero-chat.tsx
+#: components/agent/chat-panel.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx
 msgid "Stop"
 msgstr "停止"
 
-#: components/agent/chat-panel.tsx components/agent/hero-chat.tsx
+#: components/agent/chat-panel.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx
 msgid "Send"
 msgstr "發送"
 
@@ -2386,7 +2390,7 @@ msgstr "退出全螢幕"
 msgid "Hi! I check live government data for you: weather, buses, MTR, A&E waits and more. What do you want to know?"
 msgstr "你好！我可以為你查詢政府實時數據：天氣、巴士、港鐵、急症室輪候時間等。你想知道甚麼？"
 
-#: components/agent/hero-chat.tsx
+#: components/agent/hero-chat.tsx components/site-search-chat.tsx
 msgid "No free messages left today"
 msgstr "今日免費訊息已用完"
 
@@ -2622,7 +2626,7 @@ msgstr "上一頁"
 msgid "Clear search"
 msgstr "清除搜尋"
 
-#: components/m3/search-bar.tsx
+#: components/m3/search-bar.tsx components/site-header.tsx components/site-search.tsx
 msgid "Search"
 msgstr "搜尋"
 
@@ -2646,7 +2650,7 @@ msgstr "沒有服務，所以沒有可用的工具。請開啟「全部」或選
 msgid "Search services and tools"
 msgstr "搜尋服務和工具"
 
-#: components/service-combobox.tsx
+#: components/service-combobox.tsx components/site-search.tsx
 msgid "Searching…"
 msgstr "搜尋中…"
 
@@ -2654,13 +2658,53 @@ msgstr "搜尋中…"
 msgid "Showing {shown} of {total}. Type to narrow it down."
 msgstr "顯示 {total} 個中的 {shown} 個。輸入關鍵字以縮窄範圍。"
 
-#: components/site-footer.tsx
-msgid "Data from DATA.GOV.HK and its providers."
-msgstr "數據來自 DATA.GOV.HK 及其數據提供者。"
-
 #: components/site-header.tsx
 msgid "Dashboard"
 msgstr "控制台"
+
+#: components/site-search-chat.tsx
+msgid "Ask a question, then keep the conversation going."
+msgstr "提出問題，然後繼續對話。"
+
+#: components/site-search.tsx
+msgid "AI routing is unavailable. Showing text matches."
+msgstr "AI 判斷暫時無法使用，現顯示文字搜尋結果。"
+
+#: components/site-search.tsx
+msgid "Search is unavailable. Try again or open the catalogue."
+msgstr "暫時無法搜尋。請重試或開啟目錄。"
+
+#: components/site-search.tsx
+msgid "Back to search"
+msgstr "返回搜尋"
+
+#: components/site-search.tsx
+msgid "Search or ask a question…"
+msgstr "搜尋或提出問題…"
+
+#: components/site-search.tsx
+msgid "Search or ask"
+msgstr "搜尋或提問"
+
+#: components/site-search.tsx
+msgid "Search results"
+msgstr "搜尋結果"
+
+#: components/site-search.tsx
+msgid "Navigation"
+msgstr "導覽"
+
+#: components/site-search.tsx
+msgid "Chat with the agent about this"
+msgstr "與助理聊聊這個問題"
+
+#: components/site-search.tsx
+msgid "No text matches. Try asking the agent."
+msgstr "找不到文字搜尋結果。試試向助理提問。"
+
+#: components/site-search.tsx
+msgid "Understanding your search…"
+msgstr "正在理解你的搜尋…"
 
 #: components/tool-mode-dialog.tsx
 msgid "Endpoint default"

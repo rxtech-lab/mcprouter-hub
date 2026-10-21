@@ -10,7 +10,7 @@ import { SourcesHeader } from "./sources-header";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
-  return seoMetadata(t("Hong Kong Open Data MCP Services"), t("The open data services mcprouter serves as MCP tools."));
+  return seoMetadata(t("MCP Services"), t("The open data services mcprouter serves as MCP tools."));
 }
 
 export default async function SourcesPage() {

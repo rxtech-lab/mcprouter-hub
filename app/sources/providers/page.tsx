@@ -14,7 +14,7 @@ import { SourcesHeader } from "../sources-header";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
-  return seoMetadata(t("Data providers"), t("Search the government departments and organisations publishing on DATA.GOV.HK."));
+  return seoMetadata(t("Data providers"), t("Explore the organisations behind the data available through McpRouter."));
 }
 
 export default async function ProvidersPage({ searchParams }: PageProps<"/sources/providers">) {
@@ -26,6 +26,11 @@ export default async function ProvidersPage({ searchParams }: PageProps<"/source
   return (
     <>
       <SourcesHeader />
+      <section className="mb-6 max-w-2xl" aria-labelledby="data-providers-title">
+        <h2 id="data-providers-title" className="type-title-large">{t("Data providers")}</h2>
+        <p className="mt-2 type-body-medium text-on-surface-variant">{t("Data from DATA.GOV.HK and its providers.")}</p>
+        <a href="https://data.gov.hk" className="mt-2 inline-block type-label-large text-primary hover:underline">DATA.GOV.HK</a>
+      </section>
       <SearchBar action="/sources/providers" query={params.q} label={t("Search providers")} placeholder={t("Search departments and organisations")} />
       {rows.length === 0 ? (
         <div className="mt-6">

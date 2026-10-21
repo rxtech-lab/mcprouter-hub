@@ -52,6 +52,13 @@ describe("public SEO routing", () => {
     expect(indexableQuery(new URLSearchParams("page=2&chat=1"))).toBe(true);
   });
 
+  it("includes the homepage brand without relying on the root layout title template", async () => {
+    const metadata = await seoMetadata("MCP tools for everyone", "Connect to data and services", "/");
+    expect(metadata.title).toEqual({ absolute: "McpRouter · MCP tools for everyone" });
+    expect(metadata.openGraph?.title).toBe("McpRouter · MCP tools for everyone");
+    expect(metadata.twitter?.title).toBe("McpRouter · MCP tools for everyone");
+  });
+
   it("defaults to the public production origin and noindexes account pages", async () => {
     vi.stubEnv("NEXT_PUBLIC_SITE_URL", "");
     expect(seoOrigin()).toBe("https://mcprouter.app");

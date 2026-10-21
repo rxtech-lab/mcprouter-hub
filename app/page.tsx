@@ -24,7 +24,7 @@ import { seoMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
   const t = await getT();
-  return seoMetadata(t("Hong Kong Open Data MCP Server"), t("Open data as MCP tools, for everyone. Starting with Hong Kong."), "/");
+  return seoMetadata(t("MCP tools for everyone"), t("Connect to data and services through MCP tools, with one endpoint and one API key."), "/");
 }
 
 const clientIcons: Record<string, LucideIcon> = {

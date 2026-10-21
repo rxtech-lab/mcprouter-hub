@@ -37,7 +37,7 @@ export async function generateMetadata({ searchParams }: PageProps<"/sources/api
     const metadata = await seoMetadata(selected.title, selected.description, `/sources/api/${selected.id}`);
     return { ...metadata, ...(selected.status === "coming-soon" ? { robots: { index: false, follow: true } } : {}) };
   }
-  return seoMetadata(t("Hong Kong Open Data APIs"), t("Every open data API mcprouter serves as MCP tools, and the ones coming soon."));
+  return seoMetadata(t("MCP APIs"), t("Every open data API mcprouter serves as MCP tools, and the ones coming soon."));
 }
 
 const PATH = "/sources/apis";
