@@ -56,7 +56,12 @@ test("API detail pages have their own canonical and return 404 for unknown IDs",
   const href = await link.getAttribute("href");
   expect(href).toBeTruthy();
   await link.click();
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", `http://localhost:3199${href}`);
+  await expect(page).toHaveURL(`http://localhost:3199${href}`);
+  // Streamed metadata can briefly overlap with the previous route's metadata.
+  // Poll the complete set so persistent duplicates still fail the assertion.
+  await expect.poll(() => page.locator('link[rel="canonical"]').evaluateAll(
+    (links) => links.map((link) => link.getAttribute("href")),
+  )).toEqual([`http://localhost:3199${href}`]);
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   expect((await request.get("/en/sources/api/does-not-exist")).status()).toBe(404);
   expect((await request.get("/en/guides/does-not-exist")).status()).toBe(404);
