@@ -5,7 +5,7 @@ import { services } from "../generated/registry";
 import { executeTool } from "../lib/mcp/runtime";
 import { setCacheForTesting } from "../lib/mcp/cache";
 
-const names = ["cr_company_addresses", "cr_tcsp_licensees", "customs_bonded_warehouses", "hkma_exchange_rates", "hkma_hibor", "hkma_interbank_liquidity", "hkma_securities_staff", "hkma_money_brokers", "hkma_cmu_instruments", "hkma_cmu_members"];
+const names = ["cr_company_addresses", "cr_tcsp_licensees", "customs_bonded_warehouses", "hkma_hibor"];
 setCacheForTesting({ get: async () => null, set: async () => {}, delete: async () => {}, expireTag: async () => {} });
 let passed = 0;
 let failed = 0;
@@ -23,7 +23,7 @@ try {
     const service = services.find((s) => s.tools.some((t) => t.name === name))!;
     const tool = service.tools.find((t) => t.name === name)!;
     const variants = name === "cr_company_addresses" ? [{ register: "local", value: "C1572528" }, { register: "foreign", value: "75698252" }] :
-      tool.spec.input.lang ? (tool.spec.input.lang.enum as string[]).map((lang) => ({ lang, ...(name === "hkma_securities_staff" ? { search: "CHAN" } : {}) })) : [{}];
+      tool.spec.input.lang ? (tool.spec.input.lang.enum as string[]).map((lang) => ({ lang })) : [{}];
     for (const variant of variants) {
       let first: LivePage;
       try {
@@ -51,7 +51,7 @@ try {
       const checks: { name: string; input: Record<string, unknown>; validate: (page: LivePage) => void }[] = [];
       // Compare adjacent small pages with one larger page; a repeated first page must fail.
       if (first.nextOffset !== null) checks.push({ name: "pagination", input: { ...variant, limit: 3, offset: first.nextOffset }, validate: () => {} });
-      const dateField = name === "hkma_interbank_liquidity" ? "end_of_date" : ["hkma_exchange_rates", "hkma_hibor"].includes(name) ? "end_of_day" : null;
+      const dateField = "end_of_day";
       if (dateField) {
         const date = String(first.results[0][dateField]);
         checks.push({ name: "inclusive-date-range", input: { ...variant, limit: 3, from: date, to: date }, validate: (page) => {
@@ -59,12 +59,6 @@ try {
           assert.ok(page.results.every((row) => row[dateField] === date), "Rows must respect both inclusive date bounds");
         } });
       }
-      if (name === "hkma_securities_staff") checks.push({ name: "registration-number-search", input: {
-        ...variant, limit: 3, searchType: "regNo", search: first.results[0].reg_code,
-      }, validate: (page) => {
-        assert.ok(page.returned > 0, "A known live registration must be returned");
-        assert.ok(page.results.every((row) => row.reg_code === first.results[0].reg_code), "Registration search must filter correctly");
-      } });
       for (const check of checks) {
         try {
           const { data, meta } = await executeTool(service, tool, check.input);
@@ -89,7 +83,7 @@ try {
       }
     }
   }));
-  const summary = { startedAt, finishedAt: new Date().toISOString(), passed, failed, skipped, complete: failed === 0 && skipped === 0 };
+  const summary = { startedAt, finishedAt: new Date().toISOString(), passed, failed, skipped, retainedToolsPassed: failed === 0 && skipped === 0, complete: false, incompleteApis: ["API-0046", "API-0048", "API-2153", "API-2154", "API-2158", "API-2159"] };
   console.log(JSON.stringify(summary));
   if (process.env.FINANCE035_LIVE_REPORT) writeFileSync(process.env.FINANCE035_LIVE_REPORT, JSON.stringify({ ...summary, evidence }, null, 2) + "\n");
   if (!summary.complete) process.exitCode = 1;

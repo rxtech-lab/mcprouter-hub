@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **144 of 3819 implemented**, 3675 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **142 of 3819 implemented**, 3677 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -584,7 +584,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | ID | API | Type | Provider | Status | Service |
 |---|---|---|---|---|---|
 | `API-0046` | [Exchange rates](https://apidocs.hkma.gov.hk/) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-0047` | [HIBOR](https://apidocs.hkma.gov.hk/) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA rates, liquidity and financial registers](mcp/services/hkma-finance/service.yaml) |
+| `API-0047` | [HIBOR](https://apidocs.hkma.gov.hk/) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA daily HIBOR](mcp/services/hkma-finance/service.yaml) |
 | `API-0048` | [Interbank liquidity](https://apidocs.hkma.gov.hk/) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-0108` | [Spending data of Head 22 - Agriculture, Fisheries and Conservation Department](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-spending-data-head-22) | Files | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
 | `API-0124` | [Spending data of Head 25 - Architectural Services Department under General Revenue Account](https://data.gov.hk/en-data/dataset/hk-archsd-archsddata-aexph25) | Files | Architectural Services Department | 🕒 Coming soon | — |
@@ -725,8 +725,8 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1867` | [Spending data of Head 148–Government Secretariat: Financial Services and the Treasury Bureau (Financial Services Branch)](https://data.gov.hk/en-data/dataset/hk-fstb-tsyb-spending-data-fsb) | Files | Financial Services and the Treasury Bureau | 🕒 Coming soon | — |
 | `API-2009` | [Spending data of Head 060 - Highways Department](https://data.gov.hk/en-data/dataset/hk-hyd-gra-gra-summary-item-spending-data) | Files | Highways Department | 🕒 Coming soon | — |
 | `API-2153` | [Register of Securities Staff of AIs](https://data.gov.hk/en-data/dataset/hk-hkma-banksvf-register-ais-secstaff) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-2154` | [Register of AMBs](https://data.gov.hk/en-data/dataset/hk-hkma-banksvf-register-ambs) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA rates, liquidity and financial registers](mcp/services/hkma-finance/service.yaml) |
-| `API-2158` | [List of CMU Instruments](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-cmu-instruments) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA rates, liquidity and financial registers](mcp/services/hkma-finance/service.yaml) |
+| `API-2154` | [Register of AMBs](https://data.gov.hk/en-data/dataset/hk-hkma-banksvf-register-ambs) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
+| `API-2158` | [List of CMU Instruments](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-cmu-instruments) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2159` | [List of CMU Members](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-cmu-members) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2160` | [List of Exchange Fund Bills and Notes](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-exchange-fund-bills-and-notes) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2161` | [List of Recognized Dealers](https://data.gov.hk/en-data/dataset/hk-hkma-debtsec-list-of-recognized-dealers) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |

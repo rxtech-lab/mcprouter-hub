@@ -1,15 +1,10 @@
-// Local-only official fixture replay. Four HKMA fixture files are schema-derived
-// examples because their live resources were unavailable; see docs/finance-batch035.md.
+// Local-only replay of official fixtures for the four retained tools.
 /* eslint-disable @typescript-eslint/no-require-imports -- Postman loads CommonJS handlers. */
 const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
 /* eslint-enable @typescript-eslint/no-require-imports */
-const endpoints = {
-  "er-eeri-daily": "hkma_exchange_rates", "hk-interbank-ir-daily": "hkma_hibor",
-  "daily-figures-interbank-liquidity": "hkma_interbank_liquidity", "register-ais-secstaff": "hkma_securities_staff",
-  "register-ambs": "hkma_money_brokers", "list-of-cmu-instruments": "hkma_cmu_instruments", "list-of-cmu-members": "hkma_cmu_members",
-};
+const endpoints = { "hk-interbank-ir-daily": "hkma_hibor" };
 http.createServer((req, res) => {
   const url = new URL(req.url, "http://localhost");
   const endpoint = url.pathname.split("/").at(-1);
@@ -22,9 +17,6 @@ http.createServer((req, res) => {
   if (req.method !== "GET" || !file) { res.writeHead(501).end("Endpoint not defined by the official fixture contract"); return; }
   if (endpoint === "search" && (!url.searchParams.has("query[0][key3]") || !["Brn", "Comp_name"].includes(url.searchParams.get("query[0][key1]")))) { res.writeHead(501).end("Invalid registry search contract"); return; }
   if (endpoint === "hk-interbank-ir-daily" && url.searchParams.get("segment") !== "hibor.fixing") { res.writeHead(501).end("Invalid HIBOR segment"); return; }
-  if (endpoint === "register-ais-secstaff" && !["engName", "chiName", "regNo"].includes(url.searchParams.get("searchtype"))) { res.writeHead(501).end("Invalid staff search mode"); return; }
-  if (endpoint === "register-ais-secstaff" && !["0", "1"].includes(url.searchParams.get("is_curr_rel_indiv"))) { res.writeHead(501).end("Missing mandatory staff registration status"); return; }
-  if (endpoint === "register-ambs" && url.searchParams.get("segment") !== url.searchParams.get("lang")) { res.writeHead(501).end("Invalid broker language segment"); return; }
   const failure = req.headers["x-fixture-failure"];
   if (failure === "blocked") { res.writeHead(405, { "Content-Type": "text/html" }).end("<html><title>405</title>Request blocked</html>"); return; }
   if (failure === "http") { res.writeHead(503).end("Maintenance"); return; }

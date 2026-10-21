@@ -6,7 +6,7 @@ import { setCacheForTesting } from "../lib/mcp/cache";
 
 const root = process.env.FINANCE035_SIM_URL ?? "http://127.0.0.1:4905/finance";
 assert.match(root, /^http:\/\/(127\.0\.0\.1|localhost):\d+\/finance$/);
-const names = ["cr_company_addresses", "cr_tcsp_licensees", "customs_bonded_warehouses", "hkma_exchange_rates", "hkma_hibor", "hkma_interbank_liquidity", "hkma_securities_staff", "hkma_money_brokers", "hkma_cmu_instruments", "hkma_cmu_members"];
+const names = ["cr_company_addresses", "cr_tcsp_licensees", "customs_bonded_warehouses", "hkma_hibor"];
 setCacheForTesting({ get: async () => null, set: async () => {}, delete: async () => {}, expireTag: async () => {} });
 let calls = 0;
 let invalid = 0;
@@ -15,7 +15,7 @@ try {
     const definition = services.find((s) => s.tools.some((t) => t.name === name))!;
     const service = { ...definition, baseUrl: root + new URL(definition.baseUrl!).pathname.replace(/\/$/, "") };
     const tool = service.tools.find((t) => t.name === name)!;
-    const input = name === "cr_company_addresses" ? { value: "C1572528" } : name === "hkma_securities_staff" ? { search: "EXAMPLE" } : {};
+    const input = name === "cr_company_addresses" ? { value: "C1572528" } : {};
     const variants = name === "cr_company_addresses" ? [{ ...input }, { register: "foreign", value: "75698252" }] :
       tool.spec.input.lang ? (tool.spec.input.lang.enum as string[]).map((lang) => ({ ...input, lang })) : [input];
     for (const variant of variants) {
@@ -32,5 +32,5 @@ try {
     await assert.rejects(executeTool(service, tool, { ...input, limit: 101 }));
     invalid++;
   }
-  console.log(`Finance 035 simulation: ${calls} real HTTP requests passed (17 successes, 50 expected failures including ten HTTP 405 block pages); ${invalid} invalid inputs rejected before HTTP.`);
+  console.log(`Finance 035 simulation: ${calls} real HTTP requests passed (retained tools only; includes expected upstream failures); ${invalid} invalid inputs rejected before HTTP.`);
 } finally { setCacheForTesting(null); }

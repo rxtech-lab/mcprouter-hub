@@ -3,7 +3,7 @@ import { services } from "@/generated/registry";
 import { executeTool } from "@/lib/mcp/runtime";
 import { setCacheForTesting } from "@/lib/mcp/cache";
 import { rankTools } from "@/lib/agent/tool-search";
-import { batch035, blocked035, definition035, fixture035 } from "./finance035-cases";
+import { batch035, definition035, fixture035 } from "./finance035-cases";
 
 const fetchMock = vi.fn<typeof fetch>();
 async function call(name: string, input: Record<string, unknown> = {}) {
@@ -20,14 +20,14 @@ beforeEach(() => {
 afterEach(() => { vi.unstubAllGlobals(); setCacheForTesting(null); });
 
 describe("Finance batch 035", () => {
-  it("owns exactly the verified stable IDs and never falsely registers blocked sources", () => {
+  it("owns exactly the retained stable IDs", () => {
     const added = services.filter((s) => batch035.some((c) => c.service === s.id));
-    expect(added.flatMap((s) => s.apis).sort()).toEqual(batch035.filter((c) => !blocked035.includes(c.api)).map((c) => c.api).sort());
+    expect(added.flatMap((s) => s.apis).sort()).toEqual(batch035.map((c) => c.api).sort());
     for (const c of batch035) {
-      expect(services.filter((s) => s.apis.includes(c.api))).toHaveLength(blocked035.includes(c.api) ? 0 : 1);
+      expect(services.filter((s) => s.apis.includes(c.api))).toHaveLength(1);
       expect(definition035(c.tool).tool).toBeDefined();
     }
-    expect(added.flatMap((s) => s.datasets)).toHaveLength(6);
+    expect(added.flatMap((s) => s.datasets)).toHaveLength(4);
   });
 
   it.each(batch035)("validates inputs before network: $tool", async (c) => {
@@ -94,24 +94,6 @@ describe("Finance batch 035", () => {
     expect(Object.fromEntries(url.searchParams)).toMatchObject({ from: "2026-09-01", to: "2026-09-30", column: "end_of_day", segment: "hibor.fixing", sortorder: "desc" });
     expect((await call("hkma_hibor", { from: "2026-09-01", to: "2026-09-30" })).data).toMatchObject({ results: expect.arrayContaining([expect.objectContaining({ ir_9m: null })]) });
     expect(fetchMock).toHaveBeenCalledTimes(1);
-  });
-
-  it("uses documented staff search modes and broker language segments", async () => {
-    respond("hkma_securities_staff.json");
-    for (const [searchType, key] of [["engName", "surname"], ["chiName", "chinesename"], ["regNo", "reg_code"]]) {
-      await call("hkma_securities_staff", { searchType, search: "測試", lang: "tc" });
-      const url = new URL(String(fetchMock.mock.lastCall![0]));
-      expect(url.searchParams.get(key)).toBe("測試");
-      expect(url.searchParams.get("searchtype")).toBe(searchType);
-      expect(url.searchParams.get("is_curr_rel_indiv")).toBe("0");
-    }
-    await call("hkma_securities_staff", { searchType: "regNo", search: "AB0000", current: "1" });
-    expect(new URL(String(fetchMock.mock.lastCall![0])).searchParams.get("is_curr_rel_indiv")).toBe("1");
-    await expect(call("hkma_securities_staff", { search: "X", current: "2" })).rejects.toThrow();
-    await expect(call("hkma_securities_staff", { search: "X", lang: "sc" })).rejects.toThrow();
-    respond("hkma_money_brokers.json");
-    await call("hkma_money_brokers", { lang: "tc" });
-    expect(new URL(String(fetchMock.mock.lastCall![0])).searchParams.get("segment")).toBe("tc");
   });
 
   it("encodes Companies Registry searches without accepting arbitrary query syntax", async () => {
