@@ -51,12 +51,17 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
   const balances = (entitlements?.balances ?? []).filter((balance) => !billingConfig.creditUnit || balance.unit === billingConfig.creditUnit);
   const selected = catalog?.plans.find((plan) => plan.id === changePlan);
   const selectedMode = selected && entitlements && planPurchaseMode(selected, entitlements);
+  const currentCatalogPlan = selectedMode?.kind === "change" && catalog?.plans.find((plan) => plan.id === selectedMode.current.planId);
+  const monthlyPrice = (plan: CatalogPlan) => plan.priceAmountCents / ((plan.billingInterval === "year" ? 12 : plan.billingInterval === "quarter" ? 3 : 1) * (plan.intervalCount ?? 1));
 
   return (
     <>
       <CheckoutNotice status={typeof checkout === "string" ? checkout : undefined} />
       {selected && selectedMode?.kind === "change" ? <PlanChangeDialog key={selected.id}
-        productId={selected.id} currentName={selectedMode.current.planName} targetName={selected.name}
+        productId={selected.id}
+        downgrade={!!currentCatalogPlan && monthlyPrice(selected) < monthlyPrice(currentCatalogPlan)}
+        periodEnd={selectedMode.current.currentPeriodEnd}
+        currentName={selectedMode.current.planName} targetName={selected.name}
         targetPrice={`${price(selected.priceAmountCents, selected.currency, t.locale)} ${interval(selected, t)}`} /> : null}
       <PageHeader
         title={t("Billing")}
@@ -92,7 +97,7 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
             const mode = entitlements && planPurchaseMode(plan, entitlements);
             const next = new URLSearchParams();
             for (const [key, value] of Object.entries(params)) {
-              if (key === "checkout" || key === "changePlan") continue;
+              if (key === "checkout" || key === "changePlan" || key === "timing") continue;
               if (typeof value === "string") next.set(key, value);
               else value?.forEach((item) => next.append(key, item));
             }
@@ -107,9 +112,10 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
                 productId={plan.id}
                 current={currentPlans.has(plan.key) || currentPlans.has(plan.id)}
                 // Free tiers are assigned by rx-subscription and can't go through checkout.
-                disabled={!entitlements || plan.autoSubscribe || mode?.kind === "unsupported"}
-                label={mode?.kind === "unsupported" ? t("Plan change unavailable") : plan.autoSubscribe ? t("Included when you have no plan") : plan.trialDays ? t("Start {days}-day trial", { days: plan.trialDays }) : t("Choose plan")}
+                disabled={!entitlements || plan.autoSubscribe || (mode?.kind === "unsupported" || mode?.kind === "pending")}
+                label={mode?.kind === "pending" ? t("Plan change scheduled") : mode?.kind === "unsupported" ? t("Plan change unavailable") : plan.autoSubscribe ? t("Included when you have no plan") : plan.trialDays ? t("Start {days}-day trial", { days: plan.trialDays }) : t("Choose plan")}
               />}
+              {mode?.kind === "pending" ? <p className="type-body-small text-on-surface-variant">{t("{plan} starts on {date}", { plan: mode.pending.planName, date: formatDateTime(mode.pending.effectiveAt, t.locale) })}</p> : null}
               {mode?.kind === "unsupported" ? <p className="type-body-small text-on-surface-variant">{t("This subscription cannot be changed here. Manage it with its billing provider or contact support.")}</p> : null}
             </Card>
           ); })}

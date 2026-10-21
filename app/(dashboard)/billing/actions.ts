@@ -48,16 +48,16 @@ export async function startCheckout(input: { kind: "plan" | "topup"; productId: 
   });
 }
 
-export async function startPlanChange(input: { productId: string }) {
+export async function startPlanChange(input: { productId: string; timing: "immediate" | "next_period" }) {
   return runBillingAction(async () => {
     const user = await requireActionUser();
-    const data = z.object({ productId: z.string().min(1) }).parse(input);
+    const data = z.object({ productId: z.string().min(1), timing: z.enum(["immediate", "next_period"]) }).parse(input);
     const [catalog, entitlements] = await Promise.all([getCatalog(user), getEntitlements(user)]);
     const plan = catalog.plans.find((candidate) => candidate.id === data.productId);
     const mode = plan && planPurchaseMode(plan, entitlements);
     if (!plan || !mode || mode.kind !== "change") throw new Error("PLAN_CHANGE_UNAVAILABLE");
     return createPlanChangeSession({ user, subscriptionId: mode.current.subscriptionId!,
-      planId: plan.id, returnUrl: `${await siteUrl()}/billing?checkout=changed` });
+      planId: plan.id, timing: data.timing, returnUrl: `${await siteUrl()}/billing?checkout=changed` });
   });
 }
 

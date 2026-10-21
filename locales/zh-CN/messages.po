@@ -116,6 +116,10 @@ msgid "Change plan"
 msgstr "更改方案"
 
 #: app/(dashboard)/billing/page.tsx
+msgid "Plan change scheduled"
+msgstr "已安排更改方案"
+
+#: app/(dashboard)/billing/page.tsx
 msgid "Plan change unavailable"
 msgstr "无法更改方案"
 
@@ -130,6 +134,10 @@ msgstr "开始 {days} 天试用"
 #: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Choose plan"
 msgstr "选择套餐"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "{plan} starts on {date}"
+msgstr "{plan} 将于 {date} 开始"
 
 #: app/(dashboard)/billing/page.tsx
 msgid "This subscription cannot be changed here. Manage it with its billing provider or contact support."
@@ -170,6 +178,22 @@ msgstr "当前：{plan}"
 #: app/(dashboard)/billing/plan-change-dialog.tsx
 msgid "To {plan}"
 msgstr "更改为：{plan}"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "When should this change start?"
+msgstr "何时开始更改方案？"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Immediately, with prorated billing"
+msgstr "立即更改，费用按比例计算"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "At the next billing period"
+msgstr "于下一个账单周期开始"
+
+#: app/(dashboard)/billing/plan-change-dialog.tsx
+msgid "Keep your current plan until renewal. Save a payment method with Stripe now; the new plan starts and is billed at the next period. Opening the review does not schedule a change."
+msgstr "当前方案将保持至续期。现在通过 Stripe 保存付款方式；新方案将于下一个周期开始并收费。打开查看页面不会安排变更。"
 
 #: app/(dashboard)/billing/plan-change-dialog.tsx
 msgid "Review prorated charges and confirm your change securely with Stripe. Opening the review does not change your plan. Access updates after Stripe confirms the change."

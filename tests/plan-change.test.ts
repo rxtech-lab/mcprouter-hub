@@ -7,8 +7,8 @@ const owned = { subscriptionId: "sub-local", planId: "payg", planGroup: "default
 const entitlements = (overrides: Partial<Entitlements> = {}) => ({ plans: [], complimentaryPlans: [], defaultPlans: [], ...overrides }) as Entitlements;
 
 describe("plan purchase routing", () => {
-  it("replaces automatic defaults through normal checkout", () => {
-    expect(planPurchaseMode(target, entitlements({ defaultPlans: [{ ...owned, billingProvider: "internal" }] })).kind).toBe("checkout");
+  it("offers timing selection for automatic free defaults", () => {
+    expect(planPurchaseMode(target, entitlements({ defaultPlans: [{ ...owned, billingProvider: "internal" }] })).kind).toBe("change");
   });
   it("offers a change for a Stripe plan in the same group", () => {
     expect(planPurchaseMode(target, entitlements({ plans: [owned] }))).toEqual({ kind: "change", current: owned });

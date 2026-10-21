@@ -3,6 +3,12 @@ import { expect, test } from "@playwright/test";
 // Run with the local plan-change Postman simulation, never a live billing API.
 test.skip(process.env.PLAN_CHANGE_SIMULATION !== "true", "Requires plan-change simulation fixtures");
 
+test.beforeEach(async ({ page, request }) => {
+  await request.post("http://127.0.0.1:4922/subscription/test/ui", { data: { provider: "stripe", oldAmount: 1000, newAmount: 2000 } });
+  await page.route("https://billing.stripe.com/**", (route) => route.fulfill({ body: "Simulated Stripe review" }));
+  await page.route("https://checkout.stripe.com/**", (route) => route.fulfill({ body: "Simulated Stripe setup" }));
+});
+
 test("plan changes use a native URL-driven dialog and can be cancelled", async ({ page }) => {
   await page.goto("/billing");
   await page.getByRole("link", { name: "Change plan", exact: true }).click();
@@ -38,3 +44,33 @@ test("the plan change dialog fits a mobile viewport", async ({ page }) => {
   await dialog.getByRole("button", { name: "Cancel", exact: true }).click();
   await expect(page).not.toHaveURL(/changePlan=/);
 });
+
+
+for (const scenario of [
+  { name: "1 free upgrade now", provider: "internal", oldAmount: 0, newAmount: 2000, timing: "immediate" },
+  { name: "2 free upgrade next period", provider: "internal", oldAmount: 0, newAmount: 2000, timing: "next_period" },
+  { name: "3 $10 to $20 now", provider: "stripe", oldAmount: 1000, newAmount: 2000, timing: "immediate" },
+  { name: "4 $10 to $20 next period", provider: "stripe", oldAmount: 1000, newAmount: 2000, timing: "next_period" },
+  { name: "6 $20 to $10 next period", provider: "stripe", oldAmount: 2000, newAmount: 1000, timing: "next_period" },
+]) {
+  test(scenario.name, async ({ page, request }) => {
+    const mockURL = "http://127.0.0.1:4922/subscription/test/ui";
+    expect((await request.post(mockURL, { data: scenario })).ok()).toBe(true);
+    await page.goto("/billing?changePlan=new");
+    const dialog = page.getByRole("dialog", { name: "Change plan", exact: true });
+    await expect(dialog).toBeVisible();
+    if (scenario.oldAmount > scenario.newAmount) {
+      // Case 5: an immediate downgrade is not offered in the UI either.
+      await expect(dialog.getByRole("radio", { name: /Immediately/ })).toHaveCount(0);
+    }
+    if (scenario.timing === "next_period") {
+      await dialog.getByRole("radio", { name: /At the next billing period/ }).check();
+      if (scenario.oldAmount <= scenario.newAmount) await expect(page).toHaveURL(/timing=next_period/);
+    }
+    await page.route("https://billing.stripe.com/**", (route) => route.fulfill({ body: "Simulated review" }));
+    await page.route("https://checkout.stripe.com/**", (route) => route.fulfill({ body: "Simulated payment setup" }));
+    await dialog.getByRole("button", { name: "Review with Stripe" }).click();
+    await expect(page).toHaveURL(scenario.timing === "next_period" ? /checkout.stripe.com/ : /billing.stripe.com/);
+    expect((await (await request.get(mockURL)).json()).lastTiming).toBe(scenario.timing);
+  });
+}
