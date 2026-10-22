@@ -1,0 +1,40 @@
+[
+  {
+    "id": "API-0847",
+    "tool": "health_hiv_aids_by_sex",
+    "dataset": "hk-censtatd-tablechart-930-92090",
+    "table": "930-92090",
+    "kind": "statistics",
+    "title": "Number of HIV infection and AIDS by sex"
+  },
+  {
+    "id": "API-0848",
+    "tool": "health_school_immunisation",
+    "dataset": "hk-censtatd-tablechart-930-92092",
+    "table": "930-92092",
+    "kind": "statistics",
+    "title": "Coverage rates for Immunisation Programme (School Campaign)"
+  },
+  {
+    "id": "API-0849",
+    "tool": "health_accident_emergency",
+    "dataset": "hk-censtatd-tablechart-930-92093",
+    "table": "930-92093",
+    "kind": "statistics",
+    "title": "Hospital Authority accident and emergency services"
+  },
+  {
+    "id": "API-1292",
+    "tool": "health_chinese_medicine_clinics",
+    "dataset": "hk-csb-csb-spatial-chinese-medicine-clinics",
+    "kind": "clinics",
+    "title": "Civil Service Chinese Medicine Clinics"
+  },
+  {
+    "id": "API-0044",
+    "tool": "health_flu_express",
+    "dataset": "hk-dh-chpsebcddr-flu-express",
+    "kind": "flu",
+    "title": "Flu Express weekly influenza surveillance"
+  }
+]

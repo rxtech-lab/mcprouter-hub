@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **165 of 3819 implemented**, 3654 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **170 of 3819 implemented**, 3649 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -448,7 +448,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0002` | [A&E waiting times](https://data.gov.hk/en-data/dataset/hospital-hadata-ae-waiting-time) | API | Hospital Authority | ✅ Implemented | [Hospital Authority A&E Waiting Times](mcp/services/ha-aed/service.yaml) |
 | `API-0042` | [Specialist outpatient waiting times](https://data.gov.hk/en-data/dataset/hospital-hadata-sop-waiting-time) | API | Hospital Authority | 🕒 Coming soon | — |
 | `API-0043` | [Family medicine clinic quota](https://data.gov.hk/en-data/dataset/hospital-hadata-fmc-quota) | API | Hospital Authority | 🕒 Coming soon | — |
-| `API-0044` | [Flu Express](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcddr-flu-express) | API | Department of Health | 🕒 Coming soon | — |
+| `API-0044` | [Flu Express](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcddr-flu-express) | API | Department of Health | ✅ Implemented | [Hong Kong Health Statistics & Clinics](mcp/services/hk-health/service.yaml) |
 | `API-0045` | [Licensed pharmacies](https://data.gov.hk/en-data/dataset/hk-dh-dh_do-hk-dh-do-licensed-pharmacy) | API | Department of Health | 🕒 Coming soon | — |
 | `API-0072` | [Licensed Boarding Establishment](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-boardingest) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
 | `API-0102` | [Location of Pesticides Licensees](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-pesticideslicenseeloc) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
@@ -462,9 +462,9 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0844` | [Health - Table 930-92087 : Hospital Authority - inpatient services](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92087) | API | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-0845` | [Health - Table 930-92088 : Detection rate of overweight and obesity of 4-year-old children by sex](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92088) | API | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-0846` | [Health - Table 930-92089 : Detection rate of wasting of primary and secondary school students by sex](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92089) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0847` | [Health - Table 930-92090 : Number of HIV infection and AIDS by sex](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92090) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0848` | [Health - Table 930-92092 : Coverage rates for Immunisation Programme (School Campaign)](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92092) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0849` | [Health - Table 930-92093 : Hospital Authority - accident and emergency services](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92093) | API | Census and Statistics Department | 🕒 Coming soon | — |
+| `API-0847` | [Health - Table 930-92090 : Number of HIV infection and AIDS by sex](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92090) | API | Census and Statistics Department | ✅ Implemented | [Hong Kong Health Statistics & Clinics](mcp/services/hk-health/service.yaml) |
+| `API-0848` | [Health - Table 930-92092 : Coverage rates for Immunisation Programme (School Campaign)](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92092) | API | Census and Statistics Department | ✅ Implemented | [Hong Kong Health Statistics & Clinics](mcp/services/hk-health/service.yaml) |
+| `API-0849` | [Health - Table 930-92093 : Hospital Authority - accident and emergency services](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92093) | API | Census and Statistics Department | ✅ Implemented | [Hong Kong Health Statistics & Clinics](mcp/services/hk-health/service.yaml) |
 | `API-1026` | [Feature Articles on Health - Health Status and Long-Term Care Needs of the Older Persons](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-fa100039) | Files | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-1039` | [Feature Articles on Health - Notifiable Communicable Diseases](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-fa100056) | Files | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-1041` | [Feature Articles on Health - Pattern of Smoking](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-fa100058) | Files | Census and Statistics Department | 🕒 Coming soon | — |
@@ -472,7 +472,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1066` | [Feature Articles on Health - Statistics on Chinese Medicine in Hong Kong](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-fa100089) | Files | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-1104` | [Feature Articles on Health - Healthy Exercise for All Campaign - Physical Fitness Test for the Community](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-fa100265) | Files | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-1223` | [Location of Automated External Defibrillator (AED)](https://data.gov.hk/en-data/dataset/hk-cas-hq_section-cas-aed) | Files | Civil Aid Service | 🕒 Coming soon | — |
-| `API-1292` | [List of Civil Service Chinese Medicine Clinics](https://data.gov.hk/en-data/dataset/hk-csb-csb-spatial-chinese-medicine-clinics) | API | Civil Service Bureau | 🕒 Coming soon | — |
+| `API-1292` | [List of Civil Service Chinese Medicine Clinics](https://data.gov.hk/en-data/dataset/hk-csb-csb-spatial-chinese-medicine-clinics) | API | Civil Service Bureau | ✅ Implemented | [Hong Kong Health Statistics & Clinics](mcp/services/hk-health/service.yaml) |
 | `API-1429` | [Number of notifiable infectious diseases by month](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdd-number-of-notifications-for-notifiable-infectious-diseases) | Files | Department of Health | 🕒 Coming soon | — |
 | `API-1430` | [Accident & Emergency Departments Communicable Diseases Syndromic Surveillance](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdde-aed-cdis-syndromic) | Files | Department of Health | 🕒 Coming soon | — |
 | `API-1431` | [Sentinel surveillance infectious diseases data in Child Care Centres/Kindergarten (CCC/KG) weekly report](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdde-ccckg-cdis-sentinel) | Files | Department of Health | 🕒 Coming soon | — |

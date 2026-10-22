@@ -52,6 +52,13 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Health batch 025: verified subset
+  health_hiv_aids_by_sex: { input: { limit: 2 }, check: nonEmptyPage },
+  health_school_immunisation: { input: { limit: 2 }, check: nonEmptyPage },
+  health_accident_emergency: { input: { limit: 2 }, check: nonEmptyPage },
+  health_chinese_medicine_clinics: { input: { limit: 2 }, check: nonEmptyPage },
+  health_flu_express: { input: { limit: 2 }, check: nonEmptyPage },
+
   // Environment batch 023
   epd_recycling_stations: { input: { limit: 2 }, check: nonEmptyPage },
   fehd_exhibition_resource_centres: { input: { limit: 2 }, check: nonEmptyPage },

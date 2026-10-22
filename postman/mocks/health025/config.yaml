@@ -1,0 +1,9 @@
+version: 1
+name: health025
+slug: health025
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

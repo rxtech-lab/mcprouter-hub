@@ -1,0 +1,299 @@
+id: hk-health
+title: Hong Kong Health Statistics & Clinics
+description: Official C&SD HIV/AIDS, school immunisation and accident/emergency
+  tables, CSB Chinese medicine clinics and DH Flu Express surveillance.
+apis:
+  - API-0847
+  - API-0848
+  - API-0849
+  - API-1292
+  - API-0044
+datasets:
+  - hk-censtatd-tablechart-930-92090
+  - hk-censtatd-tablechart-930-92092
+  - hk-censtatd-tablechart-930-92093
+  - hk-csb-csb-spatial-chinese-medicine-clinics
+  - hk-dh-chpsebcddr-flu-express
+baseUrl: https://www.censtatd.gov.hk
+cacheTtl: 3600
+tools:
+  - name: health_hiv_aids_by_sex
+    title: Number of HIV infection and AIDS by sex
+    description: Number of HIV infection and AIDS by sex. Official C&SD table
+      930-92090. Newest first. Preserve source dimensions, units, missing
+      values, flags and notes; do not sum overlapping totals. Filter by period,
+      frequency, indicator or source text. School coverage years are academic
+      years starting in September.
+    path: /api/get.php
+    query:
+      id: 930-92090
+      full_series: 1
+    input:
+      limit:
+        type: integer
+        in: local
+        default: 20
+        minimum: 1
+        maximum: 100
+        description: Maximum records per page.
+      offset:
+        type: integer
+        in: local
+        default: 0
+        minimum: 0
+        maximum: 100000
+        description: Offset after filtering; continue with nextOffset.
+      search:
+        type: string
+        in: local
+        pattern: ^.{1,100}$
+        description: Case-insensitive substring across published source values.
+      lang:
+        type: string
+        in: query
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Official language for tables and clinic names/addresses. Flu
+          Express source columns remain English.
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(03|06|09|12)?$
+        description: Year prefix or exact quarter code (03/06/09/12); school coverage
+          years identify academic years.
+      freq:
+        type: string
+        in: local
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        enum:
+          - NOTIFI_DISEASES
+    transform:
+      response: statistics
+  - name: health_school_immunisation
+    title: Coverage rates for Immunisation Programme (School Campaign)
+    description: Coverage rates for Immunisation Programme (School Campaign).
+      Official C&SD table 930-92092. Newest first. Preserve source dimensions,
+      units, missing values, flags and notes; do not sum overlapping totals.
+      Filter by period, frequency, indicator or source text. School coverage
+      years are academic years starting in September.
+    path: /api/get.php
+    query:
+      id: 930-92092
+      full_series: 1
+    input:
+      limit:
+        type: integer
+        in: local
+        default: 20
+        minimum: 1
+        maximum: 100
+        description: Maximum records per page.
+      offset:
+        type: integer
+        in: local
+        default: 0
+        minimum: 0
+        maximum: 100000
+        description: Offset after filtering; continue with nextOffset.
+      search:
+        type: string
+        in: local
+        pattern: ^.{1,100}$
+        description: Case-insensitive substring across published source values.
+      lang:
+        type: string
+        in: query
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Official language for tables and clinic names/addresses. Flu
+          Express source columns remain English.
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(03|06|09|12)?$
+        description: Year prefix or exact quarter code (03/06/09/12); school coverage
+          years identify academic years.
+      freq:
+        type: string
+        in: local
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        enum:
+          - IMM_COV_RATE
+          - IMM_TG_POP
+    transform:
+      response: statistics
+  - name: health_accident_emergency
+    title: Hospital Authority accident and emergency services
+    description: Hospital Authority accident and emergency services. Official C&SD
+      table 930-92093. Newest first. Preserve source dimensions, units, missing
+      values, flags and notes; do not sum overlapping totals. Filter by period,
+      frequency, indicator or source text. School coverage years are academic
+      years starting in September.
+    path: /api/get.php
+    query:
+      id: 930-92093
+      full_series: 1
+    input:
+      limit:
+        type: integer
+        in: local
+        default: 20
+        minimum: 1
+        maximum: 100
+        description: Maximum records per page.
+      offset:
+        type: integer
+        in: local
+        default: 0
+        minimum: 0
+        maximum: 100000
+        description: Offset after filtering; continue with nextOffset.
+      search:
+        type: string
+        in: local
+        pattern: ^.{1,100}$
+        description: Case-insensitive substring across published source values.
+      lang:
+        type: string
+        in: query
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Official language for tables and clinic names/addresses. Flu
+          Express source columns remain English.
+      period:
+        type: string
+        in: local
+        pattern: ^\d{4}(03|06|09|12)?$
+        description: Year prefix or exact quarter code (03/06/09/12); school coverage
+          years identify academic years.
+      freq:
+        type: string
+        in: local
+        enum:
+          - Y
+          - Q
+      indicator:
+        type: string
+        in: local
+        enum:
+          - HA_ATT
+    transform:
+      response: statistics
+  - name: health_chinese_medicine_clinics
+    title: Civil Service Chinese Medicine Clinics
+    description: List of Civil Service Chinese Medicine Clinics, with official
+      addresses and WGS84 point coordinates. Search names and addresses; page
+      through the directory. Localizes name and address while retaining all
+      published languages.
+    baseUrl: https://portal.csdi.gov.hk
+    path: /server/rest/services/common/csb_rcd_1699849584071_18909/FeatureServer/0/query
+    query:
+      f: json
+      where: 1=1
+      outFields: "*"
+      outSR: 4326
+      returnGeometry: true
+      resultRecordCount: 100
+      orderByFields: OBJECTID ASC
+    input:
+      limit:
+        type: integer
+        in: local
+        default: 20
+        minimum: 1
+        maximum: 100
+        description: Maximum records per page.
+      offset:
+        type: integer
+        in: local
+        default: 0
+        minimum: 0
+        maximum: 100000
+        description: Offset after filtering; continue with nextOffset.
+      search:
+        type: string
+        in: local
+        pattern: ^.{1,100}$
+        description: Case-insensitive substring across published source values.
+      lang:
+        type: string
+        in: local
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Official language for tables and clinic names/addresses. Flu
+          Express source columns remain English.
+    transform:
+      response: clinics
+  - name: health_flu_express
+    title: Flu Express weekly surveillance
+    description: Flu Express weekly influenza surveillance figures from the
+      Department of Health CSV download. Newest weeks first; filter year/week or
+      source text. Source column names and values are preserved, including
+      blanks for missing data. Proportion columns are source fractions, not
+      percentages. No translated dataset is published.
+    baseUrl: http://www.chp.gov.hk
+    path: /files/misc/flux_data.csv
+    input:
+      limit:
+        type: integer
+        in: local
+        default: 20
+        minimum: 1
+        maximum: 100
+        description: Maximum records per page.
+      offset:
+        type: integer
+        in: local
+        default: 0
+        minimum: 0
+        maximum: 100000
+        description: Offset after filtering; continue with nextOffset.
+      search:
+        type: string
+        in: local
+        pattern: ^.{1,100}$
+        description: Case-insensitive substring across published source values.
+      lang:
+        type: string
+        in: local
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Official language for tables and clinic names/addresses. Flu
+          Express source columns remain English.
+      year:
+        type: integer
+        in: local
+        minimum: 2014
+        maximum: 2100
+      week:
+        type: integer
+        in: local
+        minimum: 1
+        maximum: 53
+    response:
+      format: text
+    transform:
+      response: flu

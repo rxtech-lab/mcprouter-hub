@@ -1,0 +1,295 @@
+{
+    "header": {
+        "status": {
+            "name": "Success",
+            "code": 0,
+            "description": "Query success",
+            "apiHelp": "https:\/\/www.censtatd.gov.hk\/en\/web_table.html?id=930-92093&api_popup=1"
+        },
+        "title": "Hospital Authority - accident and emergency services",
+        "tablenote": [
+            "In view of the emergence of the COVID-19 epidemic in Hong Kong since early 2020, Hospital Authority (HA) has adjusted its services in response to the epidemic.  This should be taken into account when comparing the throughput of services provided by HA across the years.  With the subsiding of local  COVID-19 epidemic situation and cessation of anti-epidemic measures in early 2023, the HA has been gradually resuming provision of all of its public healthcare services to tie in with the Government\u2019s normalcy measures.",
+            "Attendances figures include first and follow-up cases.",
+            "p Provisional figure"
+        ],
+        "source": "Hospital Authority  For further information, please visit the website of the Hospital Authority (www.ha.org.hk).  (Enquiry telephone no. : 2300 6555   Enquiry e-mail : enquiry@ha.org.hk)",
+        "count": {
+            "noOfRecords": 27,
+            "started": "2026-10-22T09:05:11+00:00",
+            "finished": "2026-10-22T09:05:11+00:00",
+            "durationSeconds": 0.005399
+        }
+    },
+    "dataSet": [
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 1869152,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 396517,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 483342,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 504378,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 484915,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 1659670,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 367394,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 382322,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 446226,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 463728,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 2067729,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 448815,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 552758,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 541384,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 524772,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 2049259,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 523916,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 532719,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 494342,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 498282,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 1950237,
+            "sd_value": "p"
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 498926,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 476243,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 478509,
+            "sd_value": ""
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 496559,
+            "sd_value": "p"
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202603",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 454671,
+            "sd_value": "p"
+        },
+        {
+            "TYPE_HA_SERVICES": "HA_ANE",
+            "TYPE_HA_SERVICESDesc": "Accident and emergency",
+            "freq": "Q",
+            "period": "202606",
+            "sv": "HA_ATT",
+            "svDesc": "Number",
+            "figure": 486911,
+            "sd_value": "p"
+        }
+    ]
+}
