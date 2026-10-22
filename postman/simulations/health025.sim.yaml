@@ -1,0 +1,5 @@
+simulation: health025
+routing: path
+mocks:
+  - routeKey: upstream
+    path: ../mocks/health025/config.yaml

@@ -1,3 +1,4 @@
+import { cases025, definition025 } from "./health025-cases";
 import { spatialCases023, fileCases023, definition023 } from "./environment023-cases";
 import { cases022, definition022 } from "./environment022-cases";
 import { definition021, environmentCases } from "./environment021-cases";
@@ -749,4 +750,30 @@ describe("Environment 023 file adapters MCP routes", () => {
     const result = await callTool(c.tool, c.input);
     expect(result.isError).toBe(true); expect(result.content![0].text).toContain("503");
   });
+});
+
+describe("Health 025 MCP routes", () => {
+  it.each(cases025)("discovers and calls $tool in $input.lang", async (c) => {
+    const { service } = definition025(c.tool);
+    const route = createServiceRoute(() => [service]);
+    const listed = await rpc(route, "tools/list", {});
+    expect(listed.result!.tools!.map((t) => t.name)).toContain(c.tool);
+    fetchMock.mockResolvedValueOnce(typeof c.reply === "string" ? new Response(c.reply) : Response.json(c.reply));
+    const result = await rpc(route, "tools/call", { name: c.tool, arguments: c.input });
+    expect(result.result!.isError).not.toBe(true);
+    expect(JSON.parse(result.result!.content![0].text).data).toMatchObject({ returned: 2 });
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+  it.each(cases025.filter((c) => c.input.lang === "en"))("reports invalid inputs and upstream errors for $tool", async (c) => {
+    const route = createServiceRoute(() => [definition025(c.tool).service]);
+    const invalid = await rpc(route, "tools/call", { name: c.tool, arguments: { limit: 101 } });
+    expect(Boolean(invalid.error) || invalid.result?.isError).toBe(true);
+    expect(fetchMock).not.toHaveBeenCalled();
+    fetchMock.mockResolvedValueOnce(new Response("<html>Maintenance</html>", { status: 503 }));
+    const failed = await rpc(route, "tools/call", { name: c.tool, arguments: c.input });
+    expect(failed.result!.isError).toBe(true);
+    expect(failed.result!.content![0].text).toContain("503");
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
 });

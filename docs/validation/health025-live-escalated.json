@@ -1,0 +1,222 @@
+{
+  "startedAt": "2026-10-22T09:11:25.219Z",
+  "finishedAt": "2026-10-22T09:11:27.006Z",
+  "mode": "live",
+  "realHttpRequests": 11,
+  "passed": 15,
+  "failed": 0,
+  "repairCycles": 2,
+  "independentRxCodeVerification": "pending",
+  "events": [
+    {
+      "id": "API-0847",
+      "tool": "health_hiv_aids_by_sex",
+      "lang": "en",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92090&full_series=1&lang=en",
+      "total": 246,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0847",
+      "tool": "health_hiv_aids_by_sex",
+      "lang": "tc",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92090&full_series=1&lang=tc",
+      "total": 246,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0847",
+      "tool": "health_hiv_aids_by_sex",
+      "lang": "sc",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92090&full_series=1&lang=sc",
+      "total": 246,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0848",
+      "tool": "health_school_immunisation",
+      "lang": "en",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92092&full_series=1&lang=en",
+      "total": 132,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0848",
+      "tool": "health_school_immunisation",
+      "lang": "tc",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92092&full_series=1&lang=tc",
+      "total": 132,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0848",
+      "tool": "health_school_immunisation",
+      "lang": "sc",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92092&full_series=1&lang=sc",
+      "total": 132,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0849",
+      "tool": "health_accident_emergency",
+      "lang": "en",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92093&full_series=1&lang=en",
+      "total": 27,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0849",
+      "tool": "health_accident_emergency",
+      "lang": "tc",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92093&full_series=1&lang=tc",
+      "total": 27,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0849",
+      "tool": "health_accident_emergency",
+      "lang": "sc",
+      "status": "passed",
+      "source": "https://www.censtatd.gov.hk/api/get.php?id=930-92093&full_series=1&lang=sc",
+      "total": 27,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-1292",
+      "tool": "health_chinese_medicine_clinics",
+      "lang": "en",
+      "status": "passed",
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/csb_rcd_1699849584071_18909/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=100&orderByFields=OBJECTID+ASC",
+      "total": 3,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-1292",
+      "tool": "health_chinese_medicine_clinics",
+      "lang": "tc",
+      "status": "passed",
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/csb_rcd_1699849584071_18909/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=100&orderByFields=OBJECTID+ASC",
+      "total": 3,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-1292",
+      "tool": "health_chinese_medicine_clinics",
+      "lang": "sc",
+      "status": "passed",
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/csb_rcd_1699849584071_18909/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=100&orderByFields=OBJECTID+ASC",
+      "total": 3,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0044",
+      "tool": "health_flu_express",
+      "lang": "en",
+      "status": "passed",
+      "source": "http://www.chp.gov.hk/files/misc/flux_data.csv",
+      "total": 668,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0044",
+      "tool": "health_flu_express",
+      "lang": "tc",
+      "status": "passed",
+      "source": "http://www.chp.gov.hk/files/misc/flux_data.csv",
+      "total": 668,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    },
+    {
+      "id": "API-0044",
+      "tool": "health_flu_express",
+      "lang": "sc",
+      "status": "passed",
+      "source": "http://www.chp.gov.hk/files/misc/flux_data.csv",
+      "total": 668,
+      "checks": [
+        "bounded-source-records",
+        "source-values-and-language",
+        "pagination-empty-filter-cache",
+        "invalid-input-before-http"
+      ]
+    }
+  ]
+}
