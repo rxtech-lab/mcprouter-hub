@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Inpatient Discharges and Deaths": 98112,
+    "Inpatient Patient Days": 527440,
+    "Inpatient Bed Occupancy Rate": 84.2,
+    "Inpatient Average Length of Stay": 5.6
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛西医院联网",
+    "Inpatient Discharges and Deaths": 93710,
+    "Inpatient Patient Days": 625550,
+    "Inpatient Bed Occupancy Rate": 71.1,
+    "Inpatient Average Length of Stay": 6.8
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "九龙中医院联网",
+    "Inpatient Discharges and Deaths": 122946,
+    "Inpatient Patient Days": 823400,
+    "Inpatient Bed Occupancy Rate": 83.8,
+    "Inpatient Average Length of Stay": 6.8
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界东医院联网",
+    "Inpatient Discharges and Deaths": 192628,
+    "Inpatient Patient Days": 1281679,
+    "Inpatient Bed Occupancy Rate": 93,
+    "Inpatient Average Length of Stay": 6.7
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西医院联网",
+    "Inpatient Discharges and Deaths": 155792,
+    "Inpatient Patient Days": 998938,
+    "Inpatient Bed Occupancy Rate": 97.9,
+    "Inpatient Average Length of Stay": 6.4
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Inpatient Discharges and Deaths": 1128072,
+    "Inpatient Patient Days": 7149251,
+    "Inpatient Bed Occupancy Rate": 90.1,
+    "Inpatient Average Length of Stay": 6.3
+  }
+]

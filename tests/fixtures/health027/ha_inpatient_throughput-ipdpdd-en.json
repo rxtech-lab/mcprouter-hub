@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Cheshire Home, Chung Hom Kok",
+    "IP Discharges and Deaths": 246,
+    "DP Discharges and Deaths": null,
+    "IP and DP Discharges and Deaths": 246
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Pamela Youde Nethersole Eastern Hospital",
+    "IP Discharges and Deaths": 73645,
+    "DP Discharges and Deaths": 32270,
+    "IP and DP Discharges and Deaths": 105915
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Ruttonjee & Tang Shiu Kin Hospitals",
+    "IP Discharges and Deaths": 20877,
+    "DP Discharges and Deaths": 1986,
+    "IP and DP Discharges and Deaths": 22863
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Hospital": "Tuen Mun Hospital",
+    "IP Discharges and Deaths": 101867,
+    "DP Discharges and Deaths": 68168,
+    "IP and DP Discharges and Deaths": 170035
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Hospital": "Overall (New Territories West Cluster)",
+    "IP Discharges and Deaths": 159721,
+    "DP Discharges and Deaths": 107922,
+    "IP and DP Discharges and Deaths": 267643
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "IP Discharges and Deaths": 1152078,
+    "DP Discharges and Deaths": 863855,
+    "IP and DP Discharges and Deaths": 2015933
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Female",
+    "AE Attendances": 141787
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Male",
+    "AE Attendances": 185587
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Overall",
+    "AE Attendances": 327374
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Female",
+    "AE Attendances": 1063317
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Male",
+    "AE Attendances": 960948
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Overall",
+    "AE Attendances": 2024269
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Pamela Youde Nethersole Eastern Hospital",
+    "Psychiatric Day Attendances": 26426
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Overall (Hong Kong East Cluster)",
+    "Psychiatric Day Attendances": 26426
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong West Cluster",
+    "Hospital": "David Trench Rehabilitation Centre",
+    "Psychiatric Day Attendances": 11347
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Hospital": "Tuen Mun Hospital",
+    "Psychiatric Day Attendances": 7333
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Hospital": "Overall (New Territories West Cluster)",
+    "Psychiatric Day Attendances": 20455
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "Psychiatric Day Attendances": 234197
+  }
+]

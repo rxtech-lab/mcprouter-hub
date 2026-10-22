@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18歲以下",
+    "Gender": "女性",
+    "GOP Attendances": 131505,
+    "FMSC Attendances": 490,
+    "Primary Care Attendances": 131995
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18歲以下",
+    "Gender": "男性",
+    "GOP Attendances": 149013,
+    "FMSC Attendances": 500,
+    "Primary Care Attendances": 149513
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18歲以下",
+    "Gender": "合計",
+    "GOP Attendances": 280519,
+    "FMSC Attendances": 990,
+    "Primary Care Attendances": 281509
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合計",
+    "Gender": "女性",
+    "GOP Attendances": 3475574,
+    "FMSC Attendances": 204147,
+    "Primary Care Attendances": 3679721
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合計",
+    "Gender": "男性",
+    "GOP Attendances": 2773515,
+    "FMSC Attendances": 171290,
+    "Primary Care Attendances": 2944805
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合計",
+    "Gender": "合計",
+    "GOP Attendances": 6249089,
+    "FMSC Attendances": 375437,
+    "Primary Care Attendances": 6624526
+  }
+]

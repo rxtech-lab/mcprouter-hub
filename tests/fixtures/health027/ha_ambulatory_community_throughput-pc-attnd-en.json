@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "Anne Black General Out-patient Clinic",
+    "GOP Attendances": 53726,
+    "FMSC Attendances": null,
+    "Primary Care Attendances": 53726
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "Chai Wan General Out-patient Clinic",
+    "GOP Attendances": 37558,
+    "FMSC Attendances": 24674,
+    "Primary Care Attendances": 62232
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "North Lamma General Out-patient Clinic",
+    "GOP Attendances": 9959,
+    "FMSC Attendances": null,
+    "Primary Care Attendances": 9959
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Clinic": "Yuen Long Jockey Club Health Centre",
+    "GOP Attendances": 152242,
+    "FMSC Attendances": null,
+    "Primary Care Attendances": 152242
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Clinic": "Overall (New Territories West Cluster)",
+    "GOP Attendances": 968844,
+    "FMSC Attendances": 67949,
+    "Primary Care Attendances": 1036793
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Clinic": "Overall",
+    "GOP Attendances": 6249089,
+    "FMSC Attendances": 375437,
+    "Primary Care Attendances": 6624526
+  }
+]

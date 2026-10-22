@@ -1,0 +1,80 @@
+[
+  {
+    "cluster_eng": "Hong Kong Island Cluster",
+    "institution_eng": "Aberdeen Jockey Club Family Medicine Clinic",
+    "address_eng": "10 Aberdeen Reservoir Road, Aberdeen",
+    "cluster_tc": "香港島醫院聯網",
+    "institution_tc": "香港仔賽馬會家庭醫學診所",
+    "address_tc": "香港仔水塘道10號",
+    "cluster_sc": "香港岛医院联网",
+    "institution_sc": "香港仔赛马会家庭医学诊所",
+    "address_sc": "香港仔水塘道10号",
+    "latitude": 22.249953,
+    "longitude": 114.15634
+  },
+  {
+    "cluster_eng": "Hong Kong Island Cluster",
+    "institution_eng": "Ap Lei Chau Family Medicine Clinic",
+    "address_eng": "161 Ap Lei Chau Main Street, Ap Lei Chau",
+    "cluster_tc": "香港島醫院聯網",
+    "institution_tc": "鴨脷洲家庭醫學診所",
+    "address_tc": "鴨脷洲大街161號",
+    "cluster_sc": "香港岛医院联网",
+    "institution_sc": "鸭脷洲家庭医学诊所",
+    "address_sc": "鸭脷洲大街161号",
+    "latitude": 22.243243,
+    "longitude": 114.15361
+  },
+  {
+    "cluster_eng": "Hong Kong Island Cluster",
+    "institution_eng": "Central District Family Medicine Clinic",
+    "address_eng": "1 Kau U Fong, Central",
+    "cluster_tc": "香港島醫院聯網",
+    "institution_tc": "中區家庭醫學診所",
+    "address_tc": "中環九如坊1號",
+    "cluster_sc": "香港岛医院联网",
+    "institution_sc": "中区家庭医学诊所",
+    "address_sc": "中环九如坊1号",
+    "latitude": 22.284513,
+    "longitude": 114.15265
+  },
+  {
+    "cluster_eng": "New Territories West Cluster",
+    "institution_eng": "Tuen Mun Yan Oi Family Medicine Clinic",
+    "address_eng": "G/F, 6 Tuen Lee Street, Tuen Mun",
+    "cluster_tc": "新界西醫院聯網",
+    "institution_tc": "屯門仁愛家庭醫學診所",
+    "address_tc": "屯門屯利街六號地下",
+    "cluster_sc": "新界西医院联网",
+    "institution_sc": "屯门仁爱家庭医学诊所",
+    "address_sc": "屯门屯利街六号地下",
+    "latitude": 22.391226,
+    "longitude": 113.97914
+  },
+  {
+    "cluster_eng": "New Territories West Cluster",
+    "institution_eng": "Yuen Long Jockey Club Family Medicine Clinic",
+    "address_eng": "269 Castle Peak Road (Yuen Long), Yuen Long",
+    "cluster_tc": "新界西醫院聯網",
+    "institution_tc": "元朗賽馬會家庭醫學診所",
+    "address_tc": "元朗青山公路（元朗段）269號",
+    "cluster_sc": "新界西医院联网",
+    "institution_sc": "元朗赛马会家庭医学诊所",
+    "address_sc": "元朗青山公路（元朗段）269号",
+    "latitude": 22.445601,
+    "longitude": 114.02317
+  },
+  {
+    "cluster_eng": "New Territories West Cluster",
+    "institution_eng": "Yuen Long Madam Yung Fung Shee Family Medicine Clinic",
+    "address_eng": "26 Sai Ching Street, Yuen Long",
+    "cluster_tc": "新界西醫院聯網",
+    "institution_tc": "元朗容鳳書家庭醫學診所",
+    "address_tc": "元朗西菁街26號",
+    "cluster_sc": "新界西医院联网",
+    "institution_sc": "元朗容凤书家庭医学诊所",
+    "address_sc": "元朗西菁街26号",
+    "latitude": 22.441017,
+    "longitude": 114.0271
+  }
+]

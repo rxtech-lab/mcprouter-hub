@@ -1,0 +1,32 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Community Nurse Attendances": 99111
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong West Cluster",
+    "Community Nurse Attendances": 49718
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Kowloon Central Cluster",
+    "Community Nurse Attendances": 61843
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories East Cluster",
+    "Community Nurse Attendances": 143153
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Community Nurse Attendances": 108167
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Community Nurse Attendances": 949199
+  }
+]

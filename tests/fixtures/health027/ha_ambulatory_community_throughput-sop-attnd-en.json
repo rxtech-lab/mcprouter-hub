@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "Chai Wan General Out-patient Clinic",
+    "Major Specialty": "Overall",
+    "SOP Clinical Attendances": 64
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "Pamela Youde Nethersole Eastern Hospital",
+    "Major Specialty": "Ear, Nose and Throat",
+    "SOP Clinical Attendances": 29393
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "Pamela Youde Nethersole Eastern Hospital",
+    "Major Specialty": "Gynaecology",
+    "SOP Clinical Attendances": 31488
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Clinic": "Overall",
+    "Major Specialty": "Psychiatry",
+    "SOP Clinical Attendances": 1024287
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Clinic": "Overall",
+    "Major Specialty": "Surgery",
+    "SOP Clinical Attendances": 1048733
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Clinic": "Overall",
+    "Major Specialty": "Overall",
+    "SOP Clinical Attendances": 8688753
+  }
+]

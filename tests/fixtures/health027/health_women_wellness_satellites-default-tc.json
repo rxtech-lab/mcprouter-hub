@@ -1,0 +1,212 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    },
+    {
+      "name": "DatasetEN",
+      "alias": "Dataset",
+      "type": "esriFieldTypeString",
+      "length": 255
+    },
+    {
+      "name": "DatasetTC",
+      "alias": "數據集",
+      "type": "esriFieldTypeString",
+      "length": 255
+    },
+    {
+      "name": "NameEN",
+      "alias": "Facility Name",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "AddressEN",
+      "alias": "Address",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "NameTC",
+      "alias": "設施名稱",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "AddressTC",
+      "alias": "地址",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "RegionEN",
+      "alias": "Region",
+      "type": "esriFieldTypeString",
+      "length": 1000
+    },
+    {
+      "name": "RegionTC",
+      "alias": "區域",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "TelephoneEN",
+      "alias": "Telephone",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "TelephoneTC",
+      "alias": "電話",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "FaxEN",
+      "alias": "Fax",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "FaxTC",
+      "alias": "傳真",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "WebsiteEN",
+      "alias": "Website",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "WebsiteTC",
+      "alias": "網站",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "Northing",
+      "alias": "Northing / 坐標北",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Easting",
+      "alias": "Easting / 坐標東",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Latitude",
+      "alias": "Latitude / 緯度",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Longitude",
+      "alias": "Longitude / 經度",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "LastUpdate",
+      "alias": "Last Updated Date / 最後更新日期",
+      "type": "esriFieldTypeDate",
+      "length": 8
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "DatasetEN": "List of Women Wellness Satellites (WWS)",
+        "DatasetTC": "樂妍站一覽表",
+        "NameEN": "Jockey Club Women Wellness Satellite (Kowloon)",
+        "AddressEN": "6/F, Lam Tin Polyclinic, 99 Kai Tin Road, Lam Tin",
+        "NameTC": "九龍賽馬會樂妍站",
+        "AddressTC": "藍田啟田道99號藍田分科診所6字樓",
+        "RegionEN": "KOWLOON",
+        "RegionTC": "九龍",
+        "TelephoneEN": "(852) 2855 1222",
+        "TelephoneTC": "(852) 2855 1222",
+        "FaxEN": "(852) 2855 1088",
+        "FaxTC": "(852) 2855 1088",
+        "WebsiteEN": "https://www.wws.org.hk/",
+        "WebsiteTC": "https://www.wws.org.hk/",
+        "Northing": 819059.48982418,
+        "Easting": 842086.08264815,
+        "Latitude": 22.31056707,
+        "Longitude": 114.23333042,
+        "LastUpdate": 1782292570000
+      },
+      "geometry": {
+        "x": 114.23334089954396,
+        "y": 22.31049953439003
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "DatasetEN": "List of Women Wellness Satellites (WWS)",
+        "DatasetTC": "樂妍站一覽表",
+        "NameEN": "Jockey Club Women Wellness Satellite (Hong Kong)",
+        "AddressEN": "2/F, Chai Wan Health Centre, 1 Hong Man Street, Chai Wan",
+        "NameTC": "港島賽馬會樂妍站",
+        "AddressTC": "柴灣康民街1號柴灣健康院2字樓",
+        "RegionEN": "HONG KONG",
+        "RegionTC": "港島",
+        "TelephoneEN": "(852) 2855 1333",
+        "TelephoneTC": "(852) 2855 1333",
+        "FaxEN": "(852) 2855 1811",
+        "FaxTC": "(852) 2855 1811",
+        "WebsiteEN": "https://www.wws.org.hk/",
+        "WebsiteTC": "https://www.wws.org.hk/",
+        "Northing": 814066.81067493,
+        "Easting": 842175.56880712,
+        "Latitude": 22.26529621,
+        "Longitude": 114.23426304,
+        "LastUpdate": 1781232776000
+      },
+      "geometry": {
+        "x": 114.23419099432472,
+        "y": 22.265412216765203
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3,
+        "DatasetEN": "List of Women Wellness Satellites (WWS)",
+        "DatasetTC": "樂妍站一覽表",
+        "NameEN": "Jockey Club Women Wellness Satellite (New Territories)",
+        "AddressEN": "1/F, 4 Tuen Lee Street, Tuen Mun",
+        "NameTC": "新界賽馬會樂妍站",
+        "AddressTC": "屯門屯利街4號1樓",
+        "RegionEN": "NEW TERRITORIES",
+        "RegionTC": "新界",
+        "TelephoneEN": "(852) 2851 1722",
+        "TelephoneTC": "(852) 2851 1722",
+        "FaxEN": "(852) 2851 1655",
+        "FaxTC": "(852) 2851 1655",
+        "WebsiteEN": "https://www.wws.org.hk/",
+        "WebsiteTC": "https://www.wws.org.hk/",
+        "Northing": 827967.9866051,
+        "Easting": 815883.70821773,
+        "Latitude": 22.39083688,
+        "Longitude": 113.97896614,
+        "LastUpdate": 1781232757000
+      },
+      "geometry": {
+        "x": 113.97892446979913,
+        "y": 22.390837003262025
+      }
+    }
+  ]
+}

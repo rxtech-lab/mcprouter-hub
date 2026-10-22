@@ -1,0 +1,4606 @@
+{
+  "health_dhc_express": {
+    "": {
+      "en": {
+        "url": "https://portal.csdi.gov.hk/server/rest/services/common/fhb_rcd_1636361141386_74692/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&orderByFields=OBJECTID%20ASC&resultRecordCount=100",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AddressEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "AddressTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "DatasetEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "DatasetTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "DistrictEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "DistrictTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "Easting": {
+              "types": [
+                "number"
+              ]
+            },
+            "FaxEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "FaxTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "LastUpdate": {
+              "types": [
+                "number"
+              ]
+            },
+            "Latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "Longitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "NameEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "NameTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "Northing": {
+              "types": [
+                "number"
+              ]
+            },
+            "OBJECTID": {
+              "types": [
+                "number"
+              ]
+            },
+            "TelephoneEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "TelephoneTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "WebsiteEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "WebsiteTC": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AddressEN",
+            "AddressTC",
+            "DatasetEN",
+            "DatasetTC",
+            "DistrictEN",
+            "DistrictTC",
+            "Easting",
+            "FaxEN",
+            "FaxTC",
+            "LastUpdate",
+            "Latitude",
+            "Longitude",
+            "NameEN",
+            "NameTC",
+            "Northing",
+            "OBJECTID",
+            "TelephoneEN",
+            "TelephoneTC",
+            "WebsiteEN",
+            "WebsiteTC"
+          ]
+        },
+        "kind": "dhce"
+      },
+      "tc": {
+        "url": "https://portal.csdi.gov.hk/server/rest/services/common/fhb_rcd_1636361141386_74692/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&orderByFields=OBJECTID%20ASC&resultRecordCount=100",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AddressEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "AddressTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "DatasetEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "DatasetTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "DistrictEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "DistrictTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "Easting": {
+              "types": [
+                "number"
+              ]
+            },
+            "FaxEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "FaxTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "LastUpdate": {
+              "types": [
+                "number"
+              ]
+            },
+            "Latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "Longitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "NameEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "NameTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "Northing": {
+              "types": [
+                "number"
+              ]
+            },
+            "OBJECTID": {
+              "types": [
+                "number"
+              ]
+            },
+            "TelephoneEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "TelephoneTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "WebsiteEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "WebsiteTC": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AddressEN",
+            "AddressTC",
+            "DatasetEN",
+            "DatasetTC",
+            "DistrictEN",
+            "DistrictTC",
+            "Easting",
+            "FaxEN",
+            "FaxTC",
+            "LastUpdate",
+            "Latitude",
+            "Longitude",
+            "NameEN",
+            "NameTC",
+            "Northing",
+            "OBJECTID",
+            "TelephoneEN",
+            "TelephoneTC",
+            "WebsiteEN",
+            "WebsiteTC"
+          ]
+        },
+        "kind": "dhce"
+      }
+    }
+  },
+  "health_women_wellness_satellites": {
+    "": {
+      "en": {
+        "url": "https://portal.csdi.gov.hk/server/rest/services/common/hhb_rcd_1764142914483_94025/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&orderByFields=OBJECTID%20ASC&resultRecordCount=100",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AddressEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "AddressTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "DatasetEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "DatasetTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "Easting": {
+              "types": [
+                "number"
+              ]
+            },
+            "FaxEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "FaxTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "LastUpdate": {
+              "types": [
+                "number"
+              ]
+            },
+            "Latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "Longitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "NameEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "NameTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "Northing": {
+              "types": [
+                "number"
+              ]
+            },
+            "OBJECTID": {
+              "types": [
+                "number"
+              ]
+            },
+            "RegionEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "RegionTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "TelephoneEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "TelephoneTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "WebsiteEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "WebsiteTC": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AddressEN",
+            "AddressTC",
+            "DatasetEN",
+            "DatasetTC",
+            "Easting",
+            "FaxEN",
+            "FaxTC",
+            "LastUpdate",
+            "Latitude",
+            "Longitude",
+            "NameEN",
+            "NameTC",
+            "Northing",
+            "OBJECTID",
+            "RegionEN",
+            "RegionTC",
+            "TelephoneEN",
+            "TelephoneTC",
+            "WebsiteEN",
+            "WebsiteTC"
+          ]
+        },
+        "kind": "wws"
+      },
+      "tc": {
+        "url": "https://portal.csdi.gov.hk/server/rest/services/common/hhb_rcd_1764142914483_94025/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&orderByFields=OBJECTID%20ASC&resultRecordCount=100",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AddressEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "AddressTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "DatasetEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "DatasetTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "Easting": {
+              "types": [
+                "number"
+              ]
+            },
+            "FaxEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "FaxTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "LastUpdate": {
+              "types": [
+                "number"
+              ]
+            },
+            "Latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "Longitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "NameEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "NameTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "Northing": {
+              "types": [
+                "number"
+              ]
+            },
+            "OBJECTID": {
+              "types": [
+                "number"
+              ]
+            },
+            "RegionEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "RegionTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "TelephoneEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "TelephoneTC": {
+              "types": [
+                "string"
+              ]
+            },
+            "WebsiteEN": {
+              "types": [
+                "string"
+              ]
+            },
+            "WebsiteTC": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AddressEN",
+            "AddressTC",
+            "DatasetEN",
+            "DatasetTC",
+            "Easting",
+            "FaxEN",
+            "FaxTC",
+            "LastUpdate",
+            "Latitude",
+            "Longitude",
+            "NameEN",
+            "NameTC",
+            "Northing",
+            "OBJECTID",
+            "RegionEN",
+            "RegionTC",
+            "TelephoneEN",
+            "TelephoneTC",
+            "WebsiteEN",
+            "WebsiteTC"
+          ]
+        },
+        "kind": "wws"
+      }
+    }
+  },
+  "ha_specialist_waiting_times": {
+    "": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/sop/sop-waiting-time-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Category": {
+              "types": [
+                "string"
+              ]
+            },
+            "Description": {
+              "types": [
+                "string"
+              ]
+            },
+            "Value": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "date_id_from": {
+              "types": [
+                "number"
+              ]
+            },
+            "date_id_to": {
+              "types": [
+                "number"
+              ]
+            },
+            "specialty": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Category",
+            "Description",
+            "Value",
+            "cluster",
+            "date_id_from",
+            "date_id_to",
+            "specialty"
+          ]
+        },
+        "kind": "waiting"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/sop/sop-waiting-time-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Category": {
+              "types": [
+                "string"
+              ]
+            },
+            "Description": {
+              "types": [
+                "string"
+              ]
+            },
+            "Value": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "date_id_from": {
+              "types": [
+                "number"
+              ]
+            },
+            "date_id_to": {
+              "types": [
+                "number"
+              ]
+            },
+            "specialty": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Category",
+            "Description",
+            "Value",
+            "cluster",
+            "date_id_from",
+            "date_id_to",
+            "specialty"
+          ]
+        },
+        "kind": "waiting"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/sop/sop-waiting-time-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Category": {
+              "types": [
+                "string"
+              ]
+            },
+            "Description": {
+              "types": [
+                "string"
+              ]
+            },
+            "Value": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "date_id_from": {
+              "types": [
+                "number"
+              ]
+            },
+            "date_id_to": {
+              "types": [
+                "number"
+              ]
+            },
+            "specialty": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Category",
+            "Description",
+            "Value",
+            "cluster",
+            "date_id_from",
+            "date_id_to",
+            "specialty"
+          ]
+        },
+        "kind": "waiting"
+      }
+    }
+  },
+  "ha_chinese_medicine_centres": {
+    "": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/cmctr/facility-cmctr.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "CMCTR_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "CMCTR_eng",
+            "CMCTR_sc",
+            "CMCTR_tc",
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "district_eng",
+            "district_sc",
+            "district_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "cmctr"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/cmctr/facility-cmctr.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "CMCTR_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "CMCTR_eng",
+            "CMCTR_sc",
+            "CMCTR_tc",
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "district_eng",
+            "district_sc",
+            "district_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "cmctr"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/cmctr/facility-cmctr.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "CMCTR_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "district_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "CMCTR_eng",
+            "CMCTR_sc",
+            "CMCTR_tc",
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "district_eng",
+            "district_sc",
+            "district_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "cmctr"
+      }
+    }
+  },
+  "ha_healthcare_facilities": {
+    "facility-hosp": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/facility-hosp.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "with_AE_service_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "with_AE_service_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "with_AE_service_tc": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude",
+            "with_AE_service_eng",
+            "with_AE_service_sc",
+            "with_AE_service_tc"
+          ]
+        },
+        "kind": "facilities"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/facility-hosp.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "with_AE_service_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "with_AE_service_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "with_AE_service_tc": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude",
+            "with_AE_service_eng",
+            "with_AE_service_sc",
+            "with_AE_service_tc"
+          ]
+        },
+        "kind": "facilities"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/facility-hosp.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "with_AE_service_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "with_AE_service_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "with_AE_service_tc": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude",
+            "with_AE_service_eng",
+            "with_AE_service_sc",
+            "with_AE_service_tc"
+          ]
+        },
+        "kind": "facilities"
+      }
+    },
+    "facility-sop": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/facility-sop.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "facilities"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/facility-sop.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "facilities"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/facility-sop.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "facilities"
+      }
+    },
+    "facility-fmc": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/facility-fmc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "facilities"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/facility-fmc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "facilities"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/facility-fmc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "address_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "address_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "cluster_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_eng": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_sc": {
+              "types": [
+                "string"
+              ]
+            },
+            "institution_tc": {
+              "types": [
+                "string"
+              ]
+            },
+            "latitude": {
+              "types": [
+                "number"
+              ]
+            },
+            "longitude": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "address_eng",
+            "address_sc",
+            "address_tc",
+            "cluster_eng",
+            "cluster_sc",
+            "cluster_tc",
+            "institution_eng",
+            "institution_sc",
+            "institution_tc",
+            "latitude",
+            "longitude"
+          ]
+        },
+        "kind": "facilities"
+      }
+    }
+  },
+  "ha_ambulatory_community_throughput": {
+    "ae-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ae-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AE Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AE Attendances",
+            "Cluster",
+            "Financial Year",
+            "Hospital"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ae-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AE Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AE Attendances",
+            "Cluster",
+            "Financial Year",
+            "Hospital"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ae-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AE Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AE Attendances",
+            "Cluster",
+            "Financial Year",
+            "Hospital"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "ae-attnd-gender-age": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ae-attnd-gender-age-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AE Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AE Attendances",
+            "Age Group",
+            "Financial Year",
+            "Gender"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ae-attnd-gender-age-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AE Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AE Attendances",
+            "Age Group",
+            "Financial Year",
+            "Gender"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ae-attnd-gender-age-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AE Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AE Attendances",
+            "Age Group",
+            "Financial Year",
+            "Gender"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "sop-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/sop-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Major Specialty": {
+              "types": [
+                "string"
+              ]
+            },
+            "SOP Clinical Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Clinic",
+            "Cluster",
+            "Financial Year",
+            "Major Specialty",
+            "SOP Clinical Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/sop-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Major Specialty": {
+              "types": [
+                "string"
+              ]
+            },
+            "SOP Clinical Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Clinic",
+            "Cluster",
+            "Financial Year",
+            "Major Specialty",
+            "SOP Clinical Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/sop-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Major Specialty": {
+              "types": [
+                "string"
+              ]
+            },
+            "SOP Clinical Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Clinic",
+            "Cluster",
+            "Financial Year",
+            "Major Specialty",
+            "SOP Clinical Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "sop-attnd-age-gender": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/sop-attnd-age-gender-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "SOP Clinical Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "Financial Year",
+            "Gender",
+            "SOP Clinical Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/sop-attnd-age-gender-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "SOP Clinical Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "Financial Year",
+            "Gender",
+            "SOP Clinical Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/sop-attnd-age-gender-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "SOP Clinical Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "Financial Year",
+            "Gender",
+            "SOP Clinical Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "pc-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/pc-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "FMSC Attendances": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "GOP Attendances": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "Primary Care Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Clinic",
+            "Cluster",
+            "FMSC Attendances",
+            "Financial Year",
+            "GOP Attendances",
+            "Primary Care Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/pc-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "FMSC Attendances": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "GOP Attendances": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "Primary Care Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Clinic",
+            "Cluster",
+            "FMSC Attendances",
+            "Financial Year",
+            "GOP Attendances",
+            "Primary Care Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/pc-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "FMSC Attendances": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "GOP Attendances": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "Primary Care Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Clinic",
+            "Cluster",
+            "FMSC Attendances",
+            "Financial Year",
+            "GOP Attendances",
+            "Primary Care Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "pc-attnd-age-gender": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/pc-attnd-age-gender-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "FMSC Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "GOP Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "Primary Care Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "FMSC Attendances",
+            "Financial Year",
+            "GOP Attendances",
+            "Gender",
+            "Primary Care Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/pc-attnd-age-gender-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "FMSC Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "GOP Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "Primary Care Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "FMSC Attendances",
+            "Financial Year",
+            "GOP Attendances",
+            "Gender",
+            "Primary Care Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/pc-attnd-age-gender-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "FMSC Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "GOP Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "Primary Care Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "FMSC Attendances",
+            "Financial Year",
+            "GOP Attendances",
+            "Gender",
+            "Primary Care Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "ahop-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ahop-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Department": {
+              "types": [
+                "string"
+              ]
+            },
+            "AH Outpatient Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Department",
+            "AH Outpatient Attendances",
+            "Clinic",
+            "Cluster",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ahop-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Department": {
+              "types": [
+                "string"
+              ]
+            },
+            "AH Outpatient Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Department",
+            "AH Outpatient Attendances",
+            "Clinic",
+            "Cluster",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ahop-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Department": {
+              "types": [
+                "string"
+              ]
+            },
+            "AH Outpatient Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Clinic": {
+              "types": [
+                "string"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Department",
+            "AH Outpatient Attendances",
+            "Clinic",
+            "Cluster",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "ahop-attnd-age-gender": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ahop-attnd-age-gender-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Outpatient Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Outpatient Attendances",
+            "Age Group",
+            "Financial Year",
+            "Gender"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ahop-attnd-age-gender-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Outpatient Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Outpatient Attendances",
+            "Age Group",
+            "Financial Year",
+            "Gender"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ahop-attnd-age-gender-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Outpatient Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Outpatient Attendances",
+            "Age Group",
+            "Financial Year",
+            "Gender"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "gdh-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/gdh-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Geriatric Day Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Geriatric Day Attendances",
+            "Hospital"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/gdh-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Geriatric Day Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Geriatric Day Attendances",
+            "Hospital"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/gdh-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Geriatric Day Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Geriatric Day Attendances",
+            "Hospital"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "pdh-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/pdh-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Psychiatric Day Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Psychiatric Day Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/pdh-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Psychiatric Day Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Psychiatric Day Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/pdh-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Psychiatric Day Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Psychiatric Day Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "cns-visit": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/cns-visit-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Community Nurse Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Community Nurse Attendances",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/cns-visit-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Community Nurse Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Community Nurse Attendances",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/cns-visit-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Community Nurse Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Community Nurse Attendances",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "ahc-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ahc-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Community Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Community Attendances",
+            "Cluster",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ahc-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Community Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Community Attendances",
+            "Cluster",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ahc-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Community Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Community Attendances",
+            "Cluster",
+            "Financial Year"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "psyoutreach-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/psyoutreach-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Psychiatric Outreach Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Psychiatric Outreach Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/psyoutreach-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Psychiatric Outreach Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Psychiatric Outreach Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/psyoutreach-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Psychiatric Outreach Attendances": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Psychiatric Outreach Attendances"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    },
+    "rehab-palliative-care-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/rehab-palliative-care-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Rehab & Palliative Care Day Attd": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Rehab & Palliative Care Day Attd"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/rehab-palliative-care-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Rehab & Palliative Care Day Attd": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Rehab & Palliative Care Day Attd"
+          ]
+        },
+        "kind": "ambulatory"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/rehab-palliative-care-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Rehab & Palliative Care Day Attd": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Rehab & Palliative Care Day Attd"
+          ]
+        },
+        "kind": "ambulatory"
+      }
+    }
+  },
+  "ha_chinese_medicine_throughput": {
+    "": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/cmctr/cmctr-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "CMCTR": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "CMCTR",
+            "CMCTR attendances",
+            "Financial Year"
+          ]
+        },
+        "kind": "cmctr-throughput"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/cmctr/cmctr-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "CMCTR": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "CMCTR",
+            "CMCTR attendances",
+            "Financial Year"
+          ]
+        },
+        "kind": "cmctr-throughput"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/cmctr/cmctr-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "CMCTR": {
+              "types": [
+                "string"
+              ]
+            },
+            "CMCTR attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "CMCTR",
+            "CMCTR attendances",
+            "Financial Year"
+          ]
+        },
+        "kind": "cmctr-throughput"
+      }
+    }
+  },
+  "ha_inpatient_throughput": {
+    "hosp-bed": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/hosp-bed-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital Beds": {
+              "types": [
+                "number"
+              ]
+            },
+            "Specialty": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Hospital Beds",
+            "Specialty"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/hosp-bed-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital Beds": {
+              "types": [
+                "number"
+              ]
+            },
+            "Specialty": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Hospital Beds",
+            "Specialty"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/hosp-bed-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital Beds": {
+              "types": [
+                "number"
+              ]
+            },
+            "Specialty": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Hospital",
+            "Hospital Beds",
+            "Specialty"
+          ]
+        },
+        "kind": "inpatient"
+      }
+    },
+    "ipdpdd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ipdpdd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Discharges and Deaths": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "IP and DP Discharges and Deaths": {
+              "types": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Hospital",
+            "IP Discharges and Deaths",
+            "IP and DP Discharges and Deaths"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ipdpdd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Discharges and Deaths": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "IP and DP Discharges and Deaths": {
+              "types": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Hospital",
+            "IP Discharges and Deaths",
+            "IP and DP Discharges and Deaths"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ipdpdd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Discharges and Deaths": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "IP and DP Discharges and Deaths": {
+              "types": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Hospital",
+            "IP Discharges and Deaths",
+            "IP and DP Discharges and Deaths"
+          ]
+        },
+        "kind": "inpatient"
+      }
+    },
+    "ipdpdd-age-gender": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ipdpdd-age-gender-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "IP and DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Gender",
+            "IP Discharges and Deaths",
+            "IP and DP Discharges and Deaths"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ipdpdd-age-gender-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "IP and DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Gender",
+            "IP Discharges and Deaths",
+            "IP and DP Discharges and Deaths"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ipdpdd-age-gender-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "IP and DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Gender",
+            "IP Discharges and Deaths",
+            "IP and DP Discharges and Deaths"
+          ]
+        },
+        "kind": "inpatient"
+      }
+    },
+    "patientday": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/patientday-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Patient Days": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "Patient Days": {
+              "types": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Hospital",
+            "IP Patient Days",
+            "Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/patientday-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Patient Days": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "Patient Days": {
+              "types": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Hospital",
+            "IP Patient Days",
+            "Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/patientday-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "null",
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Patient Days": {
+              "types": [
+                "number",
+                "null"
+              ]
+            },
+            "Patient Days": {
+              "types": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Hospital",
+            "IP Patient Days",
+            "Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      }
+    },
+    "patientday-age-gender": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/patientday-age-gender-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Patient Days": {
+              "types": [
+                "number"
+              ]
+            },
+            "Patient Days": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Gender",
+            "IP Patient Days",
+            "Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/patientday-age-gender-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Patient Days": {
+              "types": [
+                "number"
+              ]
+            },
+            "Patient Days": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Gender",
+            "IP Patient Days",
+            "Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/patientday-age-gender-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Age Group": {
+              "types": [
+                "string"
+              ]
+            },
+            "DP Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Gender": {
+              "types": [
+                "string"
+              ]
+            },
+            "IP Patient Days": {
+              "types": [
+                "number"
+              ]
+            },
+            "Patient Days": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Age Group",
+            "DP Discharges and Deaths",
+            "Financial Year",
+            "Gender",
+            "IP Patient Days",
+            "Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      }
+    },
+    "ip-genspec": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ip-genspec-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Inpatient Average Length of Stay": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Bed Occupancy Rate": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Patient Days": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Inpatient Average Length of Stay",
+            "Inpatient Bed Occupancy Rate",
+            "Inpatient Discharges and Deaths",
+            "Inpatient Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ip-genspec-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Inpatient Average Length of Stay": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Bed Occupancy Rate": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Patient Days": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Inpatient Average Length of Stay",
+            "Inpatient Bed Occupancy Rate",
+            "Inpatient Discharges and Deaths",
+            "Inpatient Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ip-genspec-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Inpatient Average Length of Stay": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Bed Occupancy Rate": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Discharges and Deaths": {
+              "types": [
+                "number"
+              ]
+            },
+            "Inpatient Patient Days": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "Inpatient Average Length of Stay",
+            "Inpatient Bed Occupancy Rate",
+            "Inpatient Discharges and Deaths",
+            "Inpatient Patient Days"
+          ]
+        },
+        "kind": "inpatient"
+      }
+    },
+    "ahip-attnd": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/ahip-attnd-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Department": {
+              "types": [
+                "string"
+              ]
+            },
+            "AH IP & DP Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Department",
+            "AH IP & DP Attendances",
+            "Cluster",
+            "Financial Year",
+            "Hospital"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/ahip-attnd-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Department": {
+              "types": [
+                "string"
+              ]
+            },
+            "AH IP & DP Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Department",
+            "AH IP & DP Attendances",
+            "Cluster",
+            "Financial Year",
+            "Hospital"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/ahip-attnd-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "AH Department": {
+              "types": [
+                "string"
+              ]
+            },
+            "AH IP & DP Attendances": {
+              "types": [
+                "number"
+              ]
+            },
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "Hospital": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "AH Department",
+            "AH IP & DP Attendances",
+            "Cluster",
+            "Financial Year",
+            "Hospital"
+          ]
+        },
+        "kind": "inpatient"
+      }
+    },
+    "operation-done-inside-OT": {
+      "en": {
+        "url": "https://www.ha.org.hk/opendata/operation-done-inside-OT-en.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "No. of Operations done inside OT": {
+              "types": [
+                "number"
+              ]
+            },
+            "Operation Magnitude": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "No. of Operations done inside OT",
+            "Operation Magnitude"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "tc": {
+        "url": "https://www.ha.org.hk/opendata/operation-done-inside-OT-tc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "No. of Operations done inside OT": {
+              "types": [
+                "number"
+              ]
+            },
+            "Operation Magnitude": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "No. of Operations done inside OT",
+            "Operation Magnitude"
+          ]
+        },
+        "kind": "inpatient"
+      },
+      "sc": {
+        "url": "https://www.ha.org.hk/opendata/operation-done-inside-OT-sc.json",
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "fields": {
+            "Cluster": {
+              "types": [
+                "string"
+              ]
+            },
+            "Financial Year": {
+              "types": [
+                "string"
+              ]
+            },
+            "No. of Operations done inside OT": {
+              "types": [
+                "number"
+              ]
+            },
+            "Operation Magnitude": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "Cluster",
+            "Financial Year",
+            "No. of Operations done inside OT",
+            "Operation Magnitude"
+          ]
+        },
+        "kind": "inpatient"
+      }
+    }
+  }
+}

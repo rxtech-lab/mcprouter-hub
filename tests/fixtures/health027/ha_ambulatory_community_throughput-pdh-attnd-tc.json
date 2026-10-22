@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Hospital": "東區尤德夫人那打素醫院",
+    "Psychiatric Day Attendances": 26426
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Hospital": "小計(港島東醫院聯網)",
+    "Psychiatric Day Attendances": 26426
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島西醫院聯網",
+    "Hospital": "戴麟趾康復中心",
+    "Psychiatric Day Attendances": 11347
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Hospital": "屯門醫院",
+    "Psychiatric Day Attendances": 7333
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Hospital": "小計(新界西醫院聯網)",
+    "Psychiatric Day Attendances": 20455
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Hospital": "合計",
+    "Psychiatric Day Attendances": 234197
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Cheshire Home, Chung Hom Kok",
+    "AH Department": "Dietetics",
+    "AH IP & DP Attendances": 266
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Cheshire Home, Chung Hom Kok",
+    "AH Department": "Medical Social Work",
+    "AH IP & DP Attendances": 2553
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Cheshire Home, Chung Hom Kok",
+    "AH Department": "Occupational Therapy",
+    "AH IP & DP Attendances": 17664
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "AH Department": "Prosthetics & Orthotics",
+    "AH IP & DP Attendances": 106868
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "AH Department": "Speech Therapy",
+    "AH IP & DP Attendances": 329681
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "AH Department": "Overall",
+    "AH IP & DP Attendances": 7737094
+  }
+]

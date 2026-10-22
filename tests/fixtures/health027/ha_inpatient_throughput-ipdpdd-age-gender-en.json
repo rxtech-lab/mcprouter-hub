@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Female",
+    "IP Discharges and Deaths": 59437,
+    "DP Discharges and Deaths": 16230,
+    "IP and DP Discharges and Deaths": 75667
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Male",
+    "IP Discharges and Deaths": 75154,
+    "DP Discharges and Deaths": 24679,
+    "IP and DP Discharges and Deaths": 99833
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Overall",
+    "IP Discharges and Deaths": 134591,
+    "DP Discharges and Deaths": 40909,
+    "IP and DP Discharges and Deaths": 175500
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Female",
+    "IP Discharges and Deaths": 587794,
+    "DP Discharges and Deaths": 439620,
+    "IP and DP Discharges and Deaths": 1027414
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Male",
+    "IP Discharges and Deaths": 564284,
+    "DP Discharges and Deaths": 424235,
+    "IP and DP Discharges and Deaths": 988519
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Overall",
+    "IP Discharges and Deaths": 1152078,
+    "DP Discharges and Deaths": 863855,
+    "IP and DP Discharges and Deaths": 2015933
+  }
+]

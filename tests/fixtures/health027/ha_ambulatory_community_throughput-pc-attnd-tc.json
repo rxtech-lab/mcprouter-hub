@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "柏立基夫人普通科門診診所",
+    "GOP Attendances": 53726,
+    "FMSC Attendances": null,
+    "Primary Care Attendances": 53726
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "柴灣普通科門診診所",
+    "GOP Attendances": 37558,
+    "FMSC Attendances": 24674,
+    "Primary Care Attendances": 62232
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "北南丫普通科門診診所",
+    "GOP Attendances": 9959,
+    "FMSC Attendances": null,
+    "Primary Care Attendances": 9959
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Clinic": "元朗賽馬會健康院",
+    "GOP Attendances": 152242,
+    "FMSC Attendances": null,
+    "Primary Care Attendances": 152242
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Clinic": "小計(新界西醫院聯網)",
+    "GOP Attendances": 968844,
+    "FMSC Attendances": 67949,
+    "Primary Care Attendances": 1036793
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Clinic": "合計",
+    "GOP Attendances": 6249089,
+    "FMSC Attendances": 375437,
+    "Primary Care Attendances": 6624526
+  }
+]

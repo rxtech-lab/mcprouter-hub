@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Female",
+    "AH Outpatient Attendances": 97013
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Male",
+    "AH Outpatient Attendances": 145490
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Overall",
+    "AH Outpatient Attendances": 242504
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Female",
+    "AH Outpatient Attendances": 2191274
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Male",
+    "AH Outpatient Attendances": 1420004
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Overall",
+    "AH Outpatient Attendances": 3611278
+  }
+]

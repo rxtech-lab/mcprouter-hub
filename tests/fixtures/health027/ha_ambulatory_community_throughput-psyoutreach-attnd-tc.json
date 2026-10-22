@@ -1,0 +1,32 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Psychiatric Outreach Attendances": 12672
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島西醫院聯網",
+    "Psychiatric Outreach Attendances": 5085
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "九龍中醫院聯網",
+    "Psychiatric Outreach Attendances": 7338
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界東醫院聯網",
+    "Psychiatric Outreach Attendances": 53607
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Psychiatric Outreach Attendances": 74017
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Psychiatric Outreach Attendances": 365149
+  }
+]

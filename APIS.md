@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **170 of 3819 implemented**, 3649 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **178 of 3819 implemented**, 3641 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -446,7 +446,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | ID | API | Type | Provider | Status | Service |
 |---|---|---|---|---|---|
 | `API-0002` | [A&E waiting times](https://data.gov.hk/en-data/dataset/hospital-hadata-ae-waiting-time) | API | Hospital Authority | ✅ Implemented | [Hospital Authority A&E Waiting Times](mcp/services/ha-aed/service.yaml) |
-| `API-0042` | [Specialist outpatient waiting times](https://data.gov.hk/en-data/dataset/hospital-hadata-sop-waiting-time) | API | Hospital Authority | 🕒 Coming soon | — |
+| `API-0042` | [Specialist outpatient waiting times](https://data.gov.hk/en-data/dataset/hospital-hadata-sop-waiting-time) | API | Hospital Authority | ✅ Implemented | [Health Bureau and Hospital Authority directories and statistics](mcp/services/ha-health/service.yaml) |
 | `API-0043` | [Family medicine clinic quota](https://data.gov.hk/en-data/dataset/hospital-hadata-fmc-quota) | API | Hospital Authority | 🕒 Coming soon | — |
 | `API-0044` | [Flu Express](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcddr-flu-express) | API | Department of Health | ✅ Implemented | [Hong Kong Health Statistics & Clinics](mcp/services/hk-health/service.yaml) |
 | `API-0045` | [Licensed pharmacies](https://data.gov.hk/en-data/dataset/hk-dh-dh_do-hk-dh-do-licensed-pharmacy) | API | Department of Health | 🕒 Coming soon | — |
@@ -560,23 +560,23 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1972` | [Daily count of vaccination by age groups](https://data.gov.hk/en-data/dataset/hk-hhb-hhbcovid19-vaccination-rates-over-time-by-age) | Files | Health Bureau | 🕒 Coming soon | — |
 | `API-1973` | [List of Registered Healthcare Providers of the Electronic Health System (eHealth)](https://data.gov.hk/en-data/dataset/hk-hhb-hhbehealth-hcp-list) | Files | Health Bureau | 🕒 Coming soon | — |
 | `API-1974` | [List of Core Centres and Satellite Centres for the District Health Centre (DHC)](https://data.gov.hk/en-data/dataset/hk-hhb-hhbphcc-list-of-dhc) | API | Health Bureau | 🕒 Coming soon | — |
-| `API-1975` | [List of Core Centres for the "DHC Express"](https://data.gov.hk/en-data/dataset/hk-hhb-hhbphcc-list-of-dhce) | API | Health Bureau | 🕒 Coming soon | — |
-| `API-1976` | [List of Women Wellness Satellites (WWS)](https://data.gov.hk/en-data/dataset/hk-hhb-hhbphcc-list-of-wws) | API | Health Bureau | 🕒 Coming soon | — |
+| `API-1975` | [List of Core Centres for the "DHC Express"](https://data.gov.hk/en-data/dataset/hk-hhb-hhbphcc-list-of-dhce) | API | Health Bureau | ✅ Implemented | [Health Bureau and Hospital Authority directories and statistics](mcp/services/ha-health/service.yaml) |
+| `API-1976` | [List of Women Wellness Satellites (WWS)](https://data.gov.hk/en-data/dataset/hk-hhb-hhbphcc-list-of-wws) | API | Health Bureau | ✅ Implemented | [Health Bureau and Hospital Authority directories and statistics](mcp/services/ha-health/service.yaml) |
 | `API-1977` | [Major Health Related Statistics of Hong Kong](https://data.gov.hk/en-data/dataset/hk-hhb-hhbro-healthstat) | Files | Health Bureau | 🕒 Coming soon | — |
 | `API-1978` | [Hong Kong's Domestic Health Accounts (HKDHA)](https://data.gov.hk/en-data/dataset/hk-hhb-hhbro-hkdha) | Files | Health Bureau | 🕒 Coming soon | — |
 | `API-1979` | [List of Voluntary Health Insurance Scheme Certified Plans](https://data.gov.hk/en-data/dataset/hk-hhb-hhbvhis-vhis-certified-plan) | Files | Health Bureau | 🕒 Coming soon | — |
 | `API-1980` | [List of Voluntary Health Insurance Scheme Providers](https://data.gov.hk/en-data/dataset/hk-hhb-hhbvhis-vhis-provider) | API | Health Bureau | 🕒 Coming soon | — |
 | `API-1981` | [Standard Premiums of the Voluntary Health Insurance Scheme Certified Plans](https://data.gov.hk/en-data/dataset/hk-hhb-hhbvhis-vhis-standard-premium) | Files | Health Bureau | 🕒 Coming soon | — |
-| `API-2439` | [List of Chinese Medicine Clinics cum Training and Research Centres](https://data.gov.hk/en-data/dataset/hospital-hadata-cmctr-facilities) | API | Hospital Authority | 🕒 Coming soon | — |
+| `API-2439` | [List of Chinese Medicine Clinics cum Training and Research Centres](https://data.gov.hk/en-data/dataset/hospital-hadata-cmctr-facilities) | API | Hospital Authority | ✅ Implemented | [Health Bureau and Hospital Authority directories and statistics](mcp/services/ha-health/service.yaml) |
 | `API-2440` | [Elective Surgery Services Statistics](https://data.gov.hk/en-data/dataset/hospital-hadata-elective-surgery) | Files | Hospital Authority | 🕒 Coming soon | — |
-| `API-2441` | [List of Hospital Authority Hospitals/Institutions/Specialist Outpatient Clinics/Family Medicine Clinics](https://data.gov.hk/en-data/dataset/hospital-hadata-health-care-facilities) | API | Hospital Authority | 🕒 Coming soon | — |
+| `API-2441` | [List of Hospital Authority Hospitals/Institutions/Specialist Outpatient Clinics/Family Medicine Clinics](https://data.gov.hk/en-data/dataset/hospital-hadata-health-care-facilities) | API | Hospital Authority | ✅ Implemented | [Health Bureau and Hospital Authority directories and statistics](mcp/services/ha-health/service.yaml) |
 | `API-2442` | [Key Financial Information of Hospital Authority](https://data.gov.hk/en-data/dataset/hospital-hadata-key-financial-info) | Files | Hospital Authority | 🕒 Coming soon | — |
 | `API-2443` | [Key Statistics during Service Demand Surge](https://data.gov.hk/en-data/dataset/hospital-hadata-key-statistics-during-surge) | Files | Hospital Authority | 🕒 Coming soon | — |
 | `API-2444` | [Manpower Position - Number of Full-time Equivalent (FTE) Staff](https://data.gov.hk/en-data/dataset/hospital-hadata-manpower) | Files | Hospital Authority | 🕒 Coming soon | — |
-| `API-2445` | [Ambulatory and Community Services Throughput](https://data.gov.hk/en-data/dataset/hospital-hadata-service-ambulatory-community) | API | Hospital Authority | 🕒 Coming soon | — |
-| `API-2446` | [Chinese Medicine Clinics cum Training and Research Centres Service Throughput](https://data.gov.hk/en-data/dataset/hospital-hadata-service-cmctr) | API | Hospital Authority | 🕒 Coming soon | — |
+| `API-2445` | [Ambulatory and Community Services Throughput](https://data.gov.hk/en-data/dataset/hospital-hadata-service-ambulatory-community) | API | Hospital Authority | ✅ Implemented | [Health Bureau and Hospital Authority directories and statistics](mcp/services/ha-health/service.yaml) |
+| `API-2446` | [Chinese Medicine Clinics cum Training and Research Centres Service Throughput](https://data.gov.hk/en-data/dataset/hospital-hadata-service-cmctr) | API | Hospital Authority | ✅ Implemented | [Health Bureau and Hospital Authority directories and statistics](mcp/services/ha-health/service.yaml) |
 | `API-2447` | [Statistics on Selected Endoscopic Procedures](https://data.gov.hk/en-data/dataset/hospital-hadata-service-endo) | Files | Hospital Authority | 🕒 Coming soon | — |
-| `API-2448` | [Inpatient and Day Inpatient Services Throughput](https://data.gov.hk/en-data/dataset/hospital-hadata-service-ipdp) | API | Hospital Authority | 🕒 Coming soon | — |
+| `API-2448` | [Inpatient and Day Inpatient Services Throughput](https://data.gov.hk/en-data/dataset/hospital-hadata-service-ipdp) | API | Hospital Authority | ✅ Implemented | [Health Bureau and Hospital Authority directories and statistics](mcp/services/ha-health/service.yaml) |
 | `API-2449` | [Statistics on Cancer](https://data.gov.hk/en-data/dataset/hospital-hkcardata-cancer-stat) | Files | Hospital Authority | 🕒 Coming soon | — |
 
 ## Finance

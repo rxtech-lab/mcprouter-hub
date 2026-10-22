@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Female",
+    "SOP Clinical Attendances": 212465
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Male",
+    "SOP Clinical Attendances": 312036
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Overall",
+    "SOP Clinical Attendances": 524501
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Female",
+    "SOP Clinical Attendances": 4908408
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Male",
+    "SOP Clinical Attendances": 3780345
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Overall",
+    "SOP Clinical Attendances": 8688753
+  }
+]

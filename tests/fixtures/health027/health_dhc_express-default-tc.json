@@ -1,0 +1,352 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    },
+    {
+      "name": "DatasetEN",
+      "alias": "Dataset",
+      "type": "esriFieldTypeString",
+      "length": 255
+    },
+    {
+      "name": "DatasetTC",
+      "alias": "數據集",
+      "type": "esriFieldTypeString",
+      "length": 255
+    },
+    {
+      "name": "NameEN",
+      "alias": "Facility Name",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "AddressEN",
+      "alias": "Address",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "NameTC",
+      "alias": "設施名稱",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "AddressTC",
+      "alias": "地址",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "DistrictEN",
+      "alias": "District",
+      "type": "esriFieldTypeString",
+      "length": 1000
+    },
+    {
+      "name": "DistrictTC",
+      "alias": "地區",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "TelephoneEN",
+      "alias": "Telephone",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "TelephoneTC",
+      "alias": "電話",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "FaxEN",
+      "alias": "Fax",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "FaxTC",
+      "alias": "傳真",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "WebsiteEN",
+      "alias": "Website",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "WebsiteTC",
+      "alias": "網站",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "Northing",
+      "alias": "Northing / 坐標北",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Easting",
+      "alias": "Easting / 坐標東",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Latitude",
+      "alias": "Latitude / 緯度",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Longitude",
+      "alias": "Longitude / 經度",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "LastUpdate",
+      "alias": "Last Updated Date / 最後更新日期",
+      "type": "esriFieldTypeDate",
+      "length": 8
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "DatasetEN": "List of Core Centres for the \"DHC Express\"",
+        "DatasetTC": "「地區康健站」的主中心一覽表",
+        "NameEN": "North DHC Express",
+        "AddressEN": "Unit 901, 9/F, Spot, 48 Lung Sum Avenue, Sheung Shui, New Territories",
+        "NameTC": "北區地區康健站",
+        "AddressTC": "新界上水龍琛路48號上水匯901室",
+        "DistrictEN": "NORTH",
+        "DistrictTC": "北區",
+        "TelephoneEN": "(852) 2511 6000",
+        "TelephoneTC": "(852) 2511 6000",
+        "FaxEN": "(852) 2511 6900",
+        "FaxTC": "(852) 2511 6900",
+        "WebsiteEN": "https://www.northdhc.org.hk/express/",
+        "WebsiteTC": "https://www.northdhc.org.hk/express/",
+        "Northing": 840402.73847994,
+        "Easting": 831250.53672446,
+        "Latitude": 22.50324186,
+        "Longitude": 114.12811095,
+        "LastUpdate": 1770705529000
+      },
+      "geometry": {
+        "x": 114.12811095301261,
+        "y": 22.503242155981226
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "DatasetEN": "List of Core Centres for the \"DHC Express\"",
+        "DatasetTC": "「地區康健站」的主中心一覽表",
+        "NameEN": "Islands DHC Express",
+        "AddressEN": "Block B, Lot 2536, Ha Ling Pei, Tung Chung, Lantau, New Territories",
+        "NameTC": "離島地區康健站",
+        "AddressTC": "大嶼山東涌下嶺皮2536號B座",
+        "DistrictEN": "ISLANDS",
+        "DistrictTC": "離島",
+        "TelephoneEN": "(852) 2556 5338",
+        "TelephoneTC": "(852) 2556 5338",
+        "FaxEN": "(852) 2566 4382",
+        "FaxTC": "(852) 2566 4382",
+        "WebsiteEN": "https://www.islanddhc.org.hk/express/",
+        "WebsiteTC": "https://www.islanddhc.org.hk/express/",
+        "Northing": 815522.18719098,
+        "Easting": 811369.74339893,
+        "Latitude": 22.27838539,
+        "Longitude": 113.93528369,
+        "LastUpdate": 1665548228000
+      },
+      "geometry": {
+        "x": 113.93528369869577,
+        "y": 22.278385683776534
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3,
+        "DatasetEN": "List of Core Centres for the \"DHC Express\"",
+        "DatasetTC": "「地區康健站」的主中心一覽表",
+        "NameEN": "Wan Chai DHC Express",
+        "AddressEN": "16/F, Congregation House, 119 Leighton Road, Causeway Bay, Hong Kong",
+        "NameTC": "灣仔地區康健站",
+        "AddressTC": "香港銅鑼灣禮頓道119號公理堂大樓16樓",
+        "DistrictEN": "WAN CHAI",
+        "DistrictTC": "灣仔",
+        "TelephoneEN": "(852) 3751 5768",
+        "TelephoneTC": "(852) 3751 5768",
+        "FaxEN": "(852) 3751 5766",
+        "FaxTC": "(852) 3751 5766",
+        "WebsiteEN": "https://www.wcdhc.org.hk/express/",
+        "WebsiteTC": "https://www.wcdhc.org.hk/express/",
+        "Northing": 815481.87860187,
+        "Easting": 837230.53985919,
+        "Latitude": 22.27820076,
+        "Longitude": 114.18621398,
+        "LastUpdate": 1665548214000
+      },
+      "geometry": {
+        "x": 114.18621398929633,
+        "y": 22.278201052565976
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4,
+        "DatasetEN": "List of Core Centres for the \"DHC Express\"",
+        "DatasetTC": "「地區康健站」的主中心一覽表",
+        "NameEN": "Sai Kung DHC Express",
+        "AddressEN": "Unit 311-312 & 325-326, Po Ning House, Po Lam Estate, Tseung Kwan O, New Territories",
+        "NameTC": "西貢地區康健站",
+        "AddressTC": "新界將軍澳寶林邨寶寧樓311-312及325-326室",
+        "DistrictEN": "SAI KUNG",
+        "DistrictTC": "西貢",
+        "TelephoneEN": "(852) 2701 3407",
+        "TelephoneTC": "(852) 2701 3407",
+        "FaxEN": "(852) 2703 4777",
+        "FaxTC": "(852) 2703 4777",
+        "WebsiteEN": "https://www.skdhc.org.hk/express/",
+        "WebsiteTC": "https://www.skdhc.org.hk/express/",
+        "Northing": 820741.10444646,
+        "Easting": 844260.95496858,
+        "Latitude": 22.32567648,
+        "Longitude": 114.25445718,
+        "LastUpdate": 1665548195000
+      },
+      "geometry": {
+        "x": 114.25445718805211,
+        "y": 22.325676775031162
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 5,
+        "DatasetEN": "List of Core Centres for the \"DHC Express\"",
+        "DatasetTC": "「地區康健站」的主中心一覽表",
+        "NameEN": "Kowloon City DHC Express",
+        "AddressEN": "G/F, Bayview, 9 Yuk Yat Street, To Kwa Wan, Kowloon",
+        "NameTC": "九龍城地區康健站",
+        "AddressTC": "九龍土瓜灣旭日街9號港圖灣地下",
+        "DistrictEN": "KOWLOON CITY",
+        "DistrictTC": "九龍城",
+        "TelephoneEN": "(852) 2338 3211",
+        "TelephoneTC": "(852) 2338 3211",
+        "FaxEN": "(852) 2338 3694",
+        "FaxTC": "(852) 2338 3694",
+        "WebsiteEN": "https://www.kcdhc.org.hk/express/",
+        "WebsiteTC": "https://www.kcdhc.org.hk/express/",
+        "Northing": 819666.80590049,
+        "Easting": 837760.82174292,
+        "Latitude": 22.31599286,
+        "Longitude": 114.19136328,
+        "LastUpdate": 1657092660000
+      },
+      "geometry": {
+        "x": 114.19136328752153,
+        "y": 22.31599315742582
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 6,
+        "DatasetEN": "List of Core Centres for the \"DHC Express\"",
+        "DatasetTC": "「地區康健站」的主中心一覽表",
+        "NameEN": "Tai Po DHC Express",
+        "AddressEN": "Shop Nos. F115-116, First Floor, Fu Shin Shopping Centre, 12 On Po Road, Tai Po, New Territories",
+        "NameTC": "大埔地區康健站",
+        "AddressTC": "新界大埔安埔路12號富善商場一樓F115-116號舖",
+        "DistrictEN": "TAI PO",
+        "DistrictTC": "大埔",
+        "TelephoneEN": "(852) 2468 2268",
+        "TelephoneTC": "(852) 2468 2268",
+        "FaxEN": "(852) 2728 4561",
+        "FaxTC": "(852) 2728 4561",
+        "WebsiteEN": "https://www.tpdhc.org.hk/express/",
+        "WebsiteTC": "https://www.tpdhc.org.hk/express/",
+        "Northing": 834960.78036462,
+        "Easting": 836041.58577079,
+        "Latitude": 22.45410606,
+        "Longitude": 114.17467471,
+        "LastUpdate": 1648024168000
+      },
+      "geometry": {
+        "x": 114.17467471125627,
+        "y": 22.45410635971467
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 7,
+        "DatasetEN": "List of Core Centres for the \"DHC Express\"",
+        "DatasetTC": "「地區康健站」的主中心一覽表",
+        "NameEN": "Kwun Tong DHC Express",
+        "AddressEN": "4/F, Block J, United Christian Hospital, No. 130 Hip Wo Street, Kwun Tong, Kowloon",
+        "NameTC": "觀塘地區康健站",
+        "AddressTC": "九龍觀塘協和街130號基督教聯合醫院J座4樓",
+        "DistrictEN": "KWUN TONG",
+        "DistrictTC": "觀塘",
+        "TelephoneEN": "(852) 3188 0301",
+        "TelephoneTC": "(852) 3188 0301",
+        "FaxEN": "(852) 3188 9123",
+        "FaxTC": "(852) 3188 9123",
+        "WebsiteEN": "https://www.ktdhc.org.hk/express/",
+        "WebsiteTC": "https://www.ktdhc.org.hk/express/",
+        "Northing": 820476.56066888,
+        "Easting": 841522.95672883,
+        "Latitude": 22.32329804,
+        "Longitude": 114.22788022,
+        "LastUpdate": 1648024143000
+      },
+      "geometry": {
+        "x": 114.22788021928663,
+        "y": 22.323298338247
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 8,
+        "DatasetEN": "List of Core Centres for the \"DHC Express\"",
+        "DatasetTC": "「地區康健站」的主中心一覽表",
+        "NameEN": "Sha Tin DHC Express",
+        "AddressEN": "Unit 1520, Level 15, Tower II, Grand Central Plaza, 138 Sha Tin Rural Committee Road, Shatin, New Territories",
+        "NameTC": "沙田地區康健站",
+        "AddressTC": "新界沙田鄉事會路138號新城市中央廣場2座15樓1520室",
+        "DistrictEN": "SHA TIN",
+        "DistrictTC": "沙田",
+        "TelephoneEN": "(852) 2634 0760",
+        "TelephoneTC": "(852) 2634 0760",
+        "FaxEN": "(852) 2651 2340",
+        "FaxTC": "(852) 2651 2340",
+        "WebsiteEN": "https://www.stdhc.org.hk/express/",
+        "WebsiteTC": "https://www.stdhc.org.hk/express/",
+        "Northing": 827344.54709315,
+        "Easting": 837367.8876444,
+        "Latitude": 22.38532746,
+        "Longitude": 114.18755487,
+        "LastUpdate": 1638500346000
+      },
+      "geometry": {
+        "x": 114.18755487750012,
+        "y": 22.385327754105
+      }
+    }
+  ]
+}

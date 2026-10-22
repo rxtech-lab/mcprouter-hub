@@ -1,0 +1,416 @@
+id: ha-health
+title: Health Bureau and Hospital Authority directories and statistics
+description: DHC Express, women wellness satellites, public clinic directories,
+  specialist waiting times and service throughput.
+apis:
+  - API-1975
+  - API-1976
+  - API-0042
+  - API-2439
+  - API-2441
+  - API-2445
+  - API-2446
+  - API-2448
+datasets:
+  - hk-hhb-hhbphcc-list-of-dhce
+  - hk-hhb-hhbphcc-list-of-wws
+  - hospital-hadata-sop-waiting-time
+  - hospital-hadata-cmctr-facilities
+  - hospital-hadata-health-care-facilities
+  - hospital-hadata-service-ambulatory-community
+  - hospital-hadata-service-cmctr
+  - hospital-hadata-service-ipdp
+baseUrl: https://www.ha.org.hk
+cacheTtl: 3600
+tools:
+  - name: health_dhc_express
+    title: DHC Express core centres
+    description: DHC Express core centres. Official structured JSON download with
+      source fields preserved; paginated, searchable and cached for one hour.
+      Contact and location information; verify service availability with the
+      provider.
+    path: /
+    input:
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+        default: en
+        in: local
+        description: Published response language. DHC Express and WWS publish English
+          and Traditional Chinese only.
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        in: local
+        description: Case-insensitive text across source fields and localized contact
+          details.
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        in: local
+        description: Maximum rows; output also bounded to 80 KB.
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 100000
+        default: 0
+        in: local
+        description: Continue with nextOffset using the same filters.
+    transform:
+      request: request
+      response: response
+  - name: health_women_wellness_satellites
+    title: Women Wellness Satellites
+    description: Women Wellness Satellites. Official structured JSON download with
+      source fields preserved; paginated, searchable and cached for one hour.
+      Contact and location information; verify service availability with the
+      provider.
+    path: /
+    input:
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+        default: en
+        in: local
+        description: Published response language. DHC Express and WWS publish English
+          and Traditional Chinese only.
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        in: local
+        description: Case-insensitive text across source fields and localized contact
+          details.
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        in: local
+        description: Maximum rows; output also bounded to 80 KB.
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 100000
+        default: 0
+        in: local
+        description: Continue with nextOffset using the same filters.
+    transform:
+      request: request
+      response: response
+  - name: ha_specialist_waiting_times
+    title: Specialist outpatient new case waiting times
+    description: Specialist outpatient new case waiting times. Official structured
+      JSON download with source fields preserved; paginated, searchable and
+      cached for one hour. Historical reporting interval, triage category,
+      specialty, median/percentile and textual units are preserved. Not a live
+      appointment estimate.
+    path: /
+    input:
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        in: local
+        description: Response language
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        in: local
+        description: Case-insensitive text across source fields and localized contact
+          details.
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        in: local
+        description: Maximum rows; output also bounded to 80 KB.
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 100000
+        default: 0
+        in: local
+        description: Continue with nextOffset using the same filters.
+    transform:
+      request: request
+      response: response
+  - name: ha_chinese_medicine_centres
+    title: Chinese medicine clinics training and research centres
+    description: Chinese medicine clinics training and research centres. Official
+      structured JSON download with source fields preserved; paginated,
+      searchable and cached for one hour. Contact and location information;
+      verify service availability with the provider.
+    path: /
+    input:
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        in: local
+        description: Response language
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        in: local
+        description: Case-insensitive text across source fields and localized contact
+          details.
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        in: local
+        description: Maximum rows; output also bounded to 80 KB.
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 100000
+        default: 0
+        in: local
+        description: Continue with nextOffset using the same filters.
+    transform:
+      request: request
+      response: response
+  - name: ha_healthcare_facilities
+    title: Hospital Authority hospitals and outpatient clinics
+    description: Hospital Authority hospitals and outpatient clinics. Official
+      structured JSON download with source fields preserved; paginated,
+      searchable and cached for one hour. Contact and location information;
+      verify service availability with the provider.
+    path: /
+    input:
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        in: local
+        description: Response language
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        in: local
+        description: Case-insensitive text across source fields and localized contact
+          details.
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        in: local
+        description: Maximum rows; output also bounded to 80 KB.
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 100000
+        default: 0
+        in: local
+        description: Continue with nextOffset using the same filters.
+      table:
+        type: string
+        enum:
+          - facility-hosp
+          - facility-sop
+          - facility-fmc
+        default: facility-hosp
+        in: local
+        description: "Published table: source filename without language or extension.
+          hosp=hospitals, sop=specialist outpatient, fmc=family medicine."
+    transform:
+      request: request
+      response: response
+  - name: ha_ambulatory_community_throughput
+    title: Ambulatory and community services throughput
+    description: Ambulatory and community services throughput. Official structured
+      JSON download with source fields preserved; paginated, searchable and
+      cached for one hour. Select a source table and financial year. Preserve
+      units and nulls; totals overlap detailed rows and must not be added
+      together.
+    path: /
+    input:
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        in: local
+        description: Response language
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        in: local
+        description: Case-insensitive text across source fields and localized contact
+          details.
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        in: local
+        description: Maximum rows; output also bounded to 80 KB.
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 100000
+        default: 0
+        in: local
+        description: Continue with nextOffset using the same filters.
+      table:
+        type: string
+        enum:
+          - ae-attnd
+          - ae-attnd-gender-age
+          - sop-attnd
+          - sop-attnd-age-gender
+          - pc-attnd
+          - pc-attnd-age-gender
+          - ahop-attnd
+          - ahop-attnd-age-gender
+          - gdh-attnd
+          - pdh-attnd
+          - cns-visit
+          - ahc-attnd
+          - psyoutreach-attnd
+          - rehab-palliative-care-attnd
+        default: ae-attnd
+        in: local
+        description: "Published table: source filename without language or extension.
+          attnd=attendances; age/gender=demographic breakdown; ip=inpatient;
+          dp=day inpatient; OT=operating theatre; AH=allied health. Totals and
+          breakdowns overlap; do not sum them."
+      year:
+        type: string
+        pattern: ^20[0-9]{2}-[0-9]{2}$
+        in: local
+        description: Exact published financial year, e.g. 2024-25. Source units, nulls,
+          categories and totals preserved.
+    transform:
+      request: request
+      response: response
+  - name: ha_chinese_medicine_throughput
+    title: Chinese medicine clinic attendances
+    description: Chinese medicine clinic attendances. Official structured JSON
+      download with source fields preserved; paginated, searchable and cached
+      for one hour. Select a source table and financial year. Preserve units and
+      nulls; totals overlap detailed rows and must not be added together.
+    path: /
+    input:
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        in: local
+        description: Response language
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        in: local
+        description: Case-insensitive text across source fields and localized contact
+          details.
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        in: local
+        description: Maximum rows; output also bounded to 80 KB.
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 100000
+        default: 0
+        in: local
+        description: Continue with nextOffset using the same filters.
+      year:
+        type: string
+        pattern: ^20[0-9]{2}-[0-9]{2}$
+        in: local
+        description: Exact published financial year, e.g. 2024-25. Source units, nulls,
+          categories and totals preserved.
+    transform:
+      request: request
+      response: response
+  - name: ha_inpatient_throughput
+    title: Inpatient and day inpatient services throughput
+    description: Inpatient and day inpatient services throughput. Official
+      structured JSON download with source fields preserved; paginated,
+      searchable and cached for one hour. Select a source table and financial
+      year. Preserve units and nulls; totals overlap detailed rows and must not
+      be added together.
+    path: /
+    input:
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        in: local
+        description: Response language
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        in: local
+        description: Case-insensitive text across source fields and localized contact
+          details.
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        in: local
+        description: Maximum rows; output also bounded to 80 KB.
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 100000
+        default: 0
+        in: local
+        description: Continue with nextOffset using the same filters.
+      table:
+        type: string
+        enum:
+          - hosp-bed
+          - ipdpdd
+          - ipdpdd-age-gender
+          - patientday
+          - patientday-age-gender
+          - ip-genspec
+          - ahip-attnd
+          - operation-done-inside-OT
+        default: hosp-bed
+        in: local
+        description: "Published table: source filename without language or extension.
+          attnd=attendances; age/gender=demographic breakdown; ip=inpatient;
+          dp=day inpatient; OT=operating theatre; AH=allied health. Totals and
+          breakdowns overlap; do not sum them."
+      year:
+        type: string
+        pattern: ^20[0-9]{2}-[0-9]{2}$
+        in: local
+        description: Exact published financial year, e.g. 2024-25. Source units, nulls,
+          categories and totals preserved.
+    transform:
+      request: request
+      response: response

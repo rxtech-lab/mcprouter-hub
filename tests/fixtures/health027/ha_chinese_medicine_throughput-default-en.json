@@ -1,0 +1,32 @@
+[
+  {
+    "Financial Year": "2022-23",
+    "CMCTR": "Tung Wah Group of Hospitals - The University of Hong Kong Chinese Medicine Clinic cum Training and Research Centre (Central & Western District)",
+    "CMCTR attendances": 101111
+  },
+  {
+    "Financial Year": "2022-23",
+    "CMCTR": "Tung Wah Group of Hospitals - The University of Hong Kong Chinese Medicine Clinic cum Training and Research Centre (Eastern District)",
+    "CMCTR attendances": 115531
+  },
+  {
+    "Financial Year": "2022-23",
+    "CMCTR": "Yan Oi Tong - The University of Hong Kong Chinese Medicine Clinic cum Training and Research Centre (Islands District)",
+    "CMCTR attendances": 94994
+  },
+  {
+    "Financial Year": "2024-25",
+    "CMCTR": "Pok Oi Hospital - Hong Kong Baptist University Chinese Medicine Clinic cum Training and Research Centre (Yau Tsim Mong District)",
+    "CMCTR attendances": 82502
+  },
+  {
+    "Financial Year": "2024-25",
+    "CMCTR": "Pok Oi Hospital - The Chinese University of Hong Kong Chinese Medicine Clinic cum Training and Research Centre (Yuen Long District)",
+    "CMCTR attendances": 95760
+  },
+  {
+    "Financial Year": "2024-25",
+    "CMCTR": "Overall",
+    "CMCTR attendances": 1590593
+  }
+]

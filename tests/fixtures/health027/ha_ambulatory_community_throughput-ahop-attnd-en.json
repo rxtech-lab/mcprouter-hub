@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "Cheshire Home, Chung Hom Kok",
+    "AH Department": "Medical Social Work",
+    "AH Outpatient Attendances": 129
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "Cheshire Home, Chung Hom Kok",
+    "AH Department": "Overall",
+    "AH Outpatient Attendances": 129
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Clinic": "Pamela Youde Nethersole Eastern Hospital",
+    "AH Department": "Audiology",
+    "AH Outpatient Attendances": 6702
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Clinic": "Overall",
+    "AH Department": "Prosthetics & Orthotics",
+    "AH Outpatient Attendances": 153040
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Clinic": "Overall",
+    "AH Department": "Speech Therapy",
+    "AH Outpatient Attendances": 69240
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Clinic": "Overall",
+    "AH Department": "Overall",
+    "AH Outpatient Attendances": 3611278
+  }
+]

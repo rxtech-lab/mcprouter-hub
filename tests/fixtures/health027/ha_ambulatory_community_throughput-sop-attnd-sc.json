@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Clinic": "柴湾普通科门诊诊所",
+    "Major Specialty": "合计",
+    "SOP Clinical Attendances": 64
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Clinic": "东区尤德夫人那打素医院",
+    "Major Specialty": "耳鼻喉科",
+    "SOP Clinical Attendances": 29393
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Clinic": "东区尤德夫人那打素医院",
+    "Major Specialty": "妇科",
+    "SOP Clinical Attendances": 31488
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Clinic": "合计",
+    "Major Specialty": "精神科",
+    "SOP Clinical Attendances": 1024287
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Clinic": "合计",
+    "Major Specialty": "外科",
+    "SOP Clinical Attendances": 1048733
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Clinic": "合计",
+    "Major Specialty": "合计",
+    "SOP Clinical Attendances": 8688753
+  }
+]
