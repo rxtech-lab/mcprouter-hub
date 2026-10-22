@@ -43,6 +43,8 @@ bun run dev
 Step-by-step setup for Claude Code, Claude (web, Desktop, mobile), ChatGPT, Gemini (web), Codex, Gemini CLI and Cursor opens as a dialog on `/keys/apps` (`?client=<id>&auth=key` picks the client and API-key flow, `&tools=all` the endpoint that lists every tool). Clients that support OAuth sign in on their own; for the rest, create a key at `/keys`, then point any MCP client at `http://localhost:3000/api/mcp/streamable` with `Authorization: Bearer mcpr_…`.
 To inspect it: `bunx @modelcontextprotocol/inspector` with that URL and header.
 
+An agent skill is available at [skills/mcprouter/SKILL.md](skills/mcprouter/SKILL.md). Copy the `skills/mcprouter` folder into your client's supported skills directory to make it discoverable; it supplements a configured MCP connection and does not install one. The skill covers tool discovery, language/time handling and using returned MCP Apps without rebuilding duplicate result UI. The built-in agent receives the same display guidance through its system instructions.
+
 ## Endpoints
 
 | Path | What |
