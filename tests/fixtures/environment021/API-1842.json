@@ -1,0 +1,227 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPolygon",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    },
+    {
+      "name": "DatasetEN",
+      "alias": "Dataset",
+      "type": "esriFieldTypeString",
+      "length": 255
+    },
+    {
+      "name": "DatasetTC",
+      "alias": "數據集",
+      "type": "esriFieldTypeString",
+      "length": 255
+    },
+    {
+      "name": "DistrictEN",
+      "alias": "Name of District Council District",
+      "type": "esriFieldTypeString",
+      "length": 1000
+    },
+    {
+      "name": "DistrictTC",
+      "alias": "區議會分區名稱",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "YearEN",
+      "alias": "Year",
+      "type": "esriFieldTypeString",
+      "length": 1000
+    },
+    {
+      "name": "YearTC",
+      "alias": "年度",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "TotalEN",
+      "alias": "Total",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "TotalTC",
+      "alias": "總數",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "PercentageEN",
+      "alias": "Percentage(%)",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "PercentageTC",
+      "alias": "百分比(%)",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "AirEN",
+      "alias": "Air",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "AirTC",
+      "alias": "空氣",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "NoiseEN",
+      "alias": "Noise",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "NoiseTC",
+      "alias": "噪音",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "WaterEN",
+      "alias": "Water",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "WaterTC",
+      "alias": "水質",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "WasteEN",
+      "alias": "Waste",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "WasteTC",
+      "alias": "廢物",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "MiscEN",
+      "alias": "Misc.",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "MiscTC",
+      "alias": "雜項",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "WebsiteEN",
+      "alias": "Website",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "WebsiteTC",
+      "alias": "網頁",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "LastUpdate",
+      "alias": "Last Updated Date / 最後更新日期",
+      "type": "esriFieldTypeDate",
+      "length": 8
+    },
+    {
+      "name": "Shape__Length",
+      "alias": "shape_Length",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Shape__Area",
+      "alias": "shape_Area",
+      "type": "esriFieldTypeDouble"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "DatasetEN": "Pollution Complaint Statistics",
+        "DatasetTC": "污染投訴統計數字",
+        "DistrictEN": "ISLANDS",
+        "DistrictTC": "離島",
+        "YearEN": "2022",
+        "YearTC": "2022",
+        "TotalEN": "562",
+        "TotalTC": "562",
+        "PercentageEN": "2.7",
+        "PercentageTC": "2.7",
+        "AirEN": "91",
+        "AirTC": "91",
+        "NoiseEN": "144",
+        "NoiseTC": "144",
+        "WaterEN": "202",
+        "WaterTC": "202",
+        "WasteEN": "114",
+        "WasteTC": "114",
+        "MiscEN": "11",
+        "MiscTC": "11",
+        "WebsiteEN": "https://www.epd.gov.hk/epd/english/laws_regulations/enforcement/pollution_complaints_statistics_2022.html",
+        "WebsiteTC": "https://www.epd.gov.hk/epd/tc_chi/laws_regulations/enforcement/pollution_complaints_statistics_2022.html",
+        "LastUpdate": 1694583396000,
+        "Shape__Length": 128854.80070790798,
+        "Shape__Area": 664708741.4675598
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "DatasetEN": "Pollution Complaint Statistics",
+        "DatasetTC": "污染投訴統計數字",
+        "DistrictEN": "KWAI TSING",
+        "DistrictTC": "葵青",
+        "YearEN": "2022",
+        "YearTC": "2022",
+        "TotalEN": "470",
+        "TotalTC": "470",
+        "PercentageEN": "2.3",
+        "PercentageTC": "2.3",
+        "AirEN": "112",
+        "AirTC": "112",
+        "NoiseEN": "168",
+        "NoiseTC": "168",
+        "WaterEN": "78",
+        "WaterTC": "78",
+        "WasteEN": "86",
+        "WasteTC": "86",
+        "MiscEN": "26",
+        "MiscTC": "26",
+        "WebsiteEN": "https://www.epd.gov.hk/epd/english/laws_regulations/enforcement/pollution_complaints_statistics_2022.html",
+        "WebsiteTC": "https://www.epd.gov.hk/epd/tc_chi/laws_regulations/enforcement/pollution_complaints_statistics_2022.html",
+        "LastUpdate": 1694583386000,
+        "Shape__Length": 43192.84943945625,
+        "Shape__Area": 49317297.74045274
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

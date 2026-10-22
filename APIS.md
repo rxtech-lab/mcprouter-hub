@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **142 of 3819 implemented**, 3677 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **152 of 3819 implemented**, 3667 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -388,16 +388,16 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1830` | [Historical Marine Water Quality Data (English Version)](https://data.gov.hk/en-data/dataset/hk-epd-marineteam-marine-water-quality-historical-data-en) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1831` | [Historical Marine Water Quality Data (Simplified Chinese Version)](https://data.gov.hk/en-data/dataset/hk-epd-marineteam-marine-water-quality-historical-data-sc) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1832` | [Historical Marine Water Quality Data (Traditional Chinese Version)](https://data.gov.hk/en-data/dataset/hk-epd-marineteam-marine-water-quality-historical-data-tc) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1833` | [Recent Marine Water Quality Data](https://data.gov.hk/en-data/dataset/hk-epd-marineteam-marine-water-quality-recent-data) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1834` | [Recyclable Collection Points Data](https://data.gov.hk/en-data/dataset/hk-epd-recycteam-waste-less-recyclable-collection-points-data) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1835` | [Historical River Water Quality Data (English Version)](https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-historical-data-en) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1836` | [Historical River Water Quality Data (Simplified Chinese Version)](https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-historical-data-sc) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1837` | [Historical River Water Quality Data (Traditional Chinese Version)](https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-historical-data-tc) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1838` | [Recent River Water Quality Data](https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-recent-data) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1839` | [List of Licensed Chemical Waste Collectors](https://data.gov.hk/en-data/dataset/hk-epd-rngteam-chemical-waste-collectors-list) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1840` | [List of Clinical Waste Collectors](https://data.gov.hk/en-data/dataset/hk-epd-rngteam-clinical-waste-collectors-list) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1841` | [Issued Construction Noise Permit](https://data.gov.hk/en-data/dataset/hk-epd-rngteam-issued-construction-noise-permit) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1842` | [Pollution Complaint Statistics](https://data.gov.hk/en-data/dataset/hk-epd-ronteam-pollution-complaint-statistics) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-1833` | [Recent Marine Water Quality Data](https://data.gov.hk/en-data/dataset/hk-epd-marineteam-marine-water-quality-recent-data) | API | Environmental Protection Department | ✅ Implemented | [Marine and River Water Quality](mcp/services/epd-water-quality/service.yaml) |
+| `API-1834` | [Recyclable Collection Points Data](https://data.gov.hk/en-data/dataset/hk-epd-recycteam-waste-less-recyclable-collection-points-data) | API | Environmental Protection Department | ✅ Implemented | [Recyclable Collection Points](mcp/services/epd-recycling/service.yaml) |
+| `API-1835` | [Historical River Water Quality Data (English Version)](https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-historical-data-en) | API | Environmental Protection Department | ✅ Implemented | [Marine and River Water Quality](mcp/services/epd-water-quality/service.yaml) |
+| `API-1836` | [Historical River Water Quality Data (Simplified Chinese Version)](https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-historical-data-sc) | API | Environmental Protection Department | ✅ Implemented | [Marine and River Water Quality](mcp/services/epd-water-quality/service.yaml) |
+| `API-1837` | [Historical River Water Quality Data (Traditional Chinese Version)](https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-historical-data-tc) | API | Environmental Protection Department | ✅ Implemented | [Marine and River Water Quality](mcp/services/epd-water-quality/service.yaml) |
+| `API-1838` | [Recent River Water Quality Data](https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-recent-data) | API | Environmental Protection Department | ✅ Implemented | [Marine and River Water Quality](mcp/services/epd-water-quality/service.yaml) |
+| `API-1839` | [List of Licensed Chemical Waste Collectors](https://data.gov.hk/en-data/dataset/hk-epd-rngteam-chemical-waste-collectors-list) | API | Environmental Protection Department | ✅ Implemented | [Licensed Waste Collectors](mcp/services/epd-waste-collectors/service.yaml) |
+| `API-1840` | [List of Clinical Waste Collectors](https://data.gov.hk/en-data/dataset/hk-epd-rngteam-clinical-waste-collectors-list) | API | Environmental Protection Department | ✅ Implemented | [Licensed Waste Collectors](mcp/services/epd-waste-collectors/service.yaml) |
+| `API-1841` | [Issued Construction Noise Permit](https://data.gov.hk/en-data/dataset/hk-epd-rngteam-issued-construction-noise-permit) | API | Environmental Protection Department | ✅ Implemented | [Issued Construction Noise Permits](mcp/services/epd-noise-permits/service.yaml) |
+| `API-1842` | [Pollution Complaint Statistics](https://data.gov.hk/en-data/dataset/hk-epd-ronteam-pollution-complaint-statistics) | API | Environmental Protection Department | ✅ Implemented | [Pollution Complaint Statistics](mcp/services/epd-complaints/service.yaml) |
 | `API-1843` | [Hong Kong Collector / Recycler Directory](https://data.gov.hk/en-data/dataset/hk-epd-rrgteam-hong-kong-collector-recycler-directory) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1844` | [Specified Process Licence](https://data.gov.hk/en-data/dataset/hk-epd-rsteam-specified-process-licence) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1845` | [Reverse Vending Machine Pilot Scheme](https://data.gov.hk/en-data/dataset/hk-epd-rvmpsteam-reverse-vending-machine-pilot-scheme) | API | Environmental Protection Department | 🕒 Coming soon | — |

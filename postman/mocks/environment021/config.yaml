@@ -1,0 +1,9 @@
+version: 1
+name: environment021
+slug: environment021
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

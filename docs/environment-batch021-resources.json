@@ -1,0 +1,902 @@
+{
+  "checkedAt": "2026-10-22",
+  "scope": "API-1833–API-1842 only",
+  "entries": [
+    {
+      "api": "API-1833",
+      "dataset": "hk-epd-marineteam-marine-water-quality-recent-data",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-marineteam-marine-water-quality-recent-data",
+      "metadataCheckedAt": "2026-10-22T03:28:55.951153+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "API",
+        "CSV"
+      ],
+      "resources": [
+        {
+          "name": "Recent Marine Water Quality Data (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/marinepsi/en/marinerecent/marine-recent-en.csv"
+        },
+        {
+          "name": "Recent Marine Water Quality Data (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/marinepsi/tc/marinerecent/marine-recent-tc.csv"
+        },
+        {
+          "name": "Recent Marine Water Quality Data (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/marinepsi/sc/marinerecent/marine-recent-sc.csv"
+        },
+        {
+          "name": "Recent Marine Water Quality Data - Spatial Data (English Version)",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1630908628415_41776"
+        },
+        {
+          "name": "Recent Marine Water Quality Data - Spatial Data (Traditional Chinese Version)",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1630908628415_41776"
+        },
+        {
+          "name": "Recent Marine Water Quality Data - Spatial Data (Simplified Chinese Version)",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1630908628415_41776"
+        }
+      ]
+    },
+    {
+      "api": "API-1834",
+      "dataset": "hk-epd-recycteam-waste-less-recyclable-collection-points-data",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-recycteam-waste-less-recyclable-collection-points-data",
+      "metadataCheckedAt": "2026-10-22T03:28:55.859117+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "API",
+        "CSV"
+      ],
+      "resources": [
+        {
+          "name": "Recyclable Collection Points Data",
+          "format": "CSV",
+          "url": "https://www.wastereduction.gov.hk/zh-hk/resources-centre/recyclable-collection-points-dataset"
+        },
+        {
+          "name": "Recyclable Collection Points Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1630899452408_9505"
+        }
+      ],
+      "arcgis": {
+        "layer": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1630899452408_9505/FeatureServer/0?f=pjson",
+        "fields": 21,
+        "query": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1630899452408_9505/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+        "layerHttpStatus": "200",
+        "queryHttpStatus": "200"
+      }
+    },
+    {
+      "api": "API-1835",
+      "dataset": "hk-epd-riverteam-river-water-quality-historical-data-en",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-riverteam-river-water-quality-historical-data-en",
+      "metadataCheckedAt": "2026-10-22T03:28:55.945179+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "API",
+        "CSV"
+      ],
+      "resources": [
+        {
+          "name": "River Water Quality 1986 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1986-en.csv"
+        },
+        {
+          "name": "River Water Quality 1987 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1987-en.csv"
+        },
+        {
+          "name": "River Water Quality 1988 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1988-en.csv"
+        },
+        {
+          "name": "River Water Quality 1989 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1989-en.csv"
+        },
+        {
+          "name": "River Water Quality 1990 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1990-en.csv"
+        },
+        {
+          "name": "River Water Quality 1991 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1991-en.csv"
+        },
+        {
+          "name": "River Water Quality 1992 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1992-en.csv"
+        },
+        {
+          "name": "River Water Quality 1993 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1993-en.csv"
+        },
+        {
+          "name": "River Water Quality 1994 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1994-en.csv"
+        },
+        {
+          "name": "River Water Quality 1995 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1995-en.csv"
+        },
+        {
+          "name": "River Water Quality 1996 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1996-en.csv"
+        },
+        {
+          "name": "River Water Quality 1997 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1997-en.csv"
+        },
+        {
+          "name": "River Water Quality 1998 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1998-en.csv"
+        },
+        {
+          "name": "River Water Quality 1999 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1999-en.csv"
+        },
+        {
+          "name": "River Water Quality 2000 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2000-en.csv"
+        },
+        {
+          "name": "River Water Quality 2001 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2001-en.csv"
+        },
+        {
+          "name": "River Water Quality 2002 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2002-en.csv"
+        },
+        {
+          "name": "River Water Quality 2003 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2003-en.csv"
+        },
+        {
+          "name": "River Water Quality 2004 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2004-en.csv"
+        },
+        {
+          "name": "River Water Quality 2005 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2005-en.csv"
+        },
+        {
+          "name": "River Water Quality 2006 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2006-en.csv"
+        },
+        {
+          "name": "River Water Quality 2007 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2007-en.csv"
+        },
+        {
+          "name": "River Water Quality 2008 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2008-en.csv"
+        },
+        {
+          "name": "River Water Quality 2009 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2009-en.csv"
+        },
+        {
+          "name": "River Water Quality 2010 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2010-en.csv"
+        },
+        {
+          "name": "River Water Quality 2011 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2011-en.csv"
+        },
+        {
+          "name": "River Water Quality 2012 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2012-en.csv"
+        },
+        {
+          "name": "River Water Quality 2013 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2013-en.csv"
+        },
+        {
+          "name": "River Water Quality 2014 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2014-en.csv"
+        },
+        {
+          "name": "River Water Quality 2015 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2015-en.csv"
+        },
+        {
+          "name": "River Water Quality 2016 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2016-en.csv"
+        },
+        {
+          "name": "River Water Quality 2017 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2017-en.csv"
+        },
+        {
+          "name": "River Water Quality 2018 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2018-en.csv"
+        },
+        {
+          "name": "River Water Quality 2019 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2019-en.csv"
+        },
+        {
+          "name": "River Water Quality 2020 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2020-en.csv"
+        },
+        {
+          "name": "River Water Quality 2021 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2021-en.csv"
+        },
+        {
+          "name": "River Water Quality 2022 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2022-en.csv"
+        },
+        {
+          "name": "River Water Quality 2023 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2023-en.csv"
+        },
+        {
+          "name": "River Water Quality 2024 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2024-en.csv"
+        },
+        {
+          "name": "River Water Quality 2025 (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2025-en.csv"
+        },
+        {
+          "name": "Historical River Water Quality Data (English Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        },
+        {
+          "name": "Historical River Water Quality Data (Traditional Chinese Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        },
+        {
+          "name": "Historical River Water Quality Data (Simplified Chinese Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        }
+      ]
+    },
+    {
+      "api": "API-1836",
+      "dataset": "hk-epd-riverteam-river-water-quality-historical-data-sc",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-riverteam-river-water-quality-historical-data-sc",
+      "metadataCheckedAt": "2026-10-22T03:28:55.863505+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "API",
+        "CSV"
+      ],
+      "resources": [
+        {
+          "name": "River Water Quality 1986 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1986-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1987 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1987-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1988 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1988-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1989 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1989-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1990 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1990-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1991 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1991-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1992 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1992-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1993 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1993-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1994 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1994-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1995 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1995-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1996 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1996-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1997 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1997-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1998 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1998-sc.csv"
+        },
+        {
+          "name": "River Water Quality 1999 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1999-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2000 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2000-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2001 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2001-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2002 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2002-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2003 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2003-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2004 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2004-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2005 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2005-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2006 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2006-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2007 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2007-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2008 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2008-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2009 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2009-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2010 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2010-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2011 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2011-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2012 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2012-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2013 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2013-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2014 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2014-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2015 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2015-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2016 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2016-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2017 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2017-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2018 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2018-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2019 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2019-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2020 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2020-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2021 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2021-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2022 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2022-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2023 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2023-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2024 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2024-sc.csv"
+        },
+        {
+          "name": "River Water Quality 2025 (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2025-sc.csv"
+        },
+        {
+          "name": "Historical River Water Quality Data (English Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        },
+        {
+          "name": "Historical River Water Quality Data (Traditional Chinese Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        },
+        {
+          "name": "Historical River Water Quality Data (Simplified Chinese Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        }
+      ]
+    },
+    {
+      "api": "API-1837",
+      "dataset": "hk-epd-riverteam-river-water-quality-historical-data-tc",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-riverteam-river-water-quality-historical-data-tc",
+      "metadataCheckedAt": "2026-10-22T03:28:55.845055+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "API",
+        "CSV"
+      ],
+      "resources": [
+        {
+          "name": "River Water Quality 1986 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1986-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1987 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1987-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1988 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1988-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1989 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1989-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1990 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1990-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1991 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1991-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1992 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1992-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1993 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1993-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1994 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1994-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1995 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1995-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1996 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1996-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1997 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1997-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1998 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1998-tc.csv"
+        },
+        {
+          "name": "River Water Quality 1999 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1999-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2000 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2000-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2001 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2001-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2002 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2002-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2003 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2003-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2004 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2004-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2005 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2005-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2006 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2006-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2007 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2007-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2008 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2008-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2009 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2009-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2010 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2010-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2011 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2011-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2012 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2012-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2013 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2013-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2014 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2014-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2015 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2015-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2016 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2016-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2017 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2017-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2018 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2018-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2019 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2019-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2020 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2020-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2021 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2021-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2022 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2022-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2023 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2023-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2024 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2024-tc.csv"
+        },
+        {
+          "name": "River Water Quality 2025 (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2025-tc.csv"
+        },
+        {
+          "name": "Historical River Water Quality Data (English Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        },
+        {
+          "name": "Historical River Water Quality Data (Traditional Chinese Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        },
+        {
+          "name": "Historical River Water Quality Data (Simplified Chinese Version) - Spatial Data",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1631502266341_65533"
+        }
+      ]
+    },
+    {
+      "api": "API-1838",
+      "dataset": "hk-epd-riverteam-river-water-quality-recent-data",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-riverteam-river-water-quality-recent-data",
+      "metadataCheckedAt": "2026-10-22T03:28:56.297939+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "API",
+        "CSV"
+      ],
+      "resources": [
+        {
+          "name": "Recent River Water Quality Data (English Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/en/riverrecent/river-recent-en.csv"
+        },
+        {
+          "name": "Recent River Water Quality Data (Traditional Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverrecent/river-recent-tc.csv"
+        },
+        {
+          "name": "Recent River Water Quality Data (Simplified Chinese Version)",
+          "format": "CSV",
+          "url": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverrecent/river-recent-sc.csv"
+        },
+        {
+          "name": "Recent River Water Quality Data - Spatial Data (English Version)",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1630908367921_10608"
+        },
+        {
+          "name": "Recent River Water Quality Data - Spatial Data (Traditional Chinese Version)",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1630908367921_10608"
+        },
+        {
+          "name": "Recent River Water Quality Data - Spatial Data (Simplified Chinese Version)",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1630908367921_10608"
+        }
+      ]
+    },
+    {
+      "api": "API-1839",
+      "dataset": "hk-epd-rngteam-chemical-waste-collectors-list",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-rngteam-chemical-waste-collectors-list",
+      "metadataCheckedAt": "2026-10-22T03:28:56.298026+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "GML"
+      ],
+      "resources": [
+        {
+          "name": "List of Licensed Chemical Waste Collectors",
+          "format": "GML",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1666161129768_2527"
+        }
+      ],
+      "arcgis": {
+        "layer": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1666161129768_2527/FeatureServer/0?f=pjson",
+        "fields": 13,
+        "query": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1666161129768_2527/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+        "layerHttpStatus": "200",
+        "queryHttpStatus": "200"
+      }
+    },
+    {
+      "api": "API-1840",
+      "dataset": "hk-epd-rngteam-clinical-waste-collectors-list",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-rngteam-clinical-waste-collectors-list",
+      "metadataCheckedAt": "2026-10-22T03:28:56.297736+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "GML"
+      ],
+      "resources": [
+        {
+          "name": "List of Clinical Waste Collectors",
+          "format": "GML",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1666160952535_97414"
+        }
+      ],
+      "arcgis": {
+        "layer": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1666160952535_97414/FeatureServer/0?f=pjson",
+        "fields": 12,
+        "query": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1666160952535_97414/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+        "layerHttpStatus": "200",
+        "queryHttpStatus": "200"
+      }
+    },
+    {
+      "api": "API-1841",
+      "dataset": "hk-epd-rngteam-issued-construction-noise-permit",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-rngteam-issued-construction-noise-permit",
+      "metadataCheckedAt": "2026-10-22T03:28:56.413392+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "GML"
+      ],
+      "resources": [
+        {
+          "name": "Issued Construction Noise Permit",
+          "format": "GML",
+          "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1664940858993_72368"
+        }
+      ],
+      "arcgis": {
+        "layer": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1664940858993_72368/FeatureServer/0?f=pjson",
+        "fields": 15,
+        "query": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1664940858993_72368/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+        "layerHttpStatus": "200",
+        "queryHttpStatus": "200"
+      }
+    },
+    {
+      "api": "API-1842",
+      "dataset": "hk-epd-ronteam-pollution-complaint-statistics",
+      "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-epd-ronteam-pollution-complaint-statistics",
+      "metadataCheckedAt": "2026-10-22T03:28:56.451284+00:00",
+      "httpStatus": "200",
+      "catalogueFormats": [
+        "API"
+      ],
+      "resources": [
+        {
+          "name": "Pollution Complaint Statistics",
+          "format": "API",
+          "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1629267205235_67879"
+        }
+      ],
+      "arcgis": {
+        "layer": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1629267205235_67879/FeatureServer/0?f=pjson",
+        "fields": 26,
+        "query": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1629267205235_67879/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+        "layerHttpStatus": "200",
+        "queryHttpStatus": "200"
+      }
+    }
+  ]
+}

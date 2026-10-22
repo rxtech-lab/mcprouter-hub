@@ -1,3 +1,4 @@
+import { environmentCases } from "./environment021-cases";
 import { governmentCases } from "./finance034-cases";
 import { batch035, fixture035, request035 } from "./finance035-cases";
 import { marketsCases } from "./finance033-cases";
@@ -196,6 +197,7 @@ const sensorOccupancy = [
 ].join("\n");
 
 const cases: Case[] = [
+  ...environmentCases,
   ...transportCases,
   ...financeCases,
   ...expenditureCases,

@@ -19,13 +19,16 @@ test("the language menu saves the choice across pages", async ({ page, context }
   expect((await context.cookies()).find((cookie) => cookie.name === "locale")?.value).toBe("zh-CN");
 
   // The dashboard rail has the same menu, and the choice carries over.
-  // A fresh user gets the intro tour on the dashboard; close it if it covers the rail.
-  await page.addLocatorHandler(page.getByTestId("intro-card"), async () => {
-    // A menu opened during an assertion can consume Escape before the tour does.
-    await page.getByRole("dialog").getByRole("button", { name: /^(跳过|完成)$/ }).click();
-  });
-  await page.goto("/dashboard");
+  // Open the tour deterministically and dismiss it before opening another overlay.
+  // A locator handler can run after the language menu opens, which hides the tour
+  // from accessible locators and blocks the handler's own dismiss action.
+  await page.goto("/dashboard?intro=all");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
+  const intro = page.getByRole("dialog").filter({ has: page.getByTestId("intro-card") });
+  await expect(intro).toBeVisible();
+  await intro.getByRole("button", { name: "跳过", exact: true }).click();
+  await expect(page.getByTestId("intro-card")).toBeHidden();
+  await expect(page).toHaveURL(/\/dashboard$/);
   await page.getByRole("navigation").getByRole("button", { name: "语言" }).click();
   await expect(page.getByRole("menuitemradio", { name: "简体中文" })).toHaveAttribute("aria-checked", "true");
   await page.getByRole("menuitemradio", { name: "English" }).click();

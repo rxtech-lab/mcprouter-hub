@@ -27,6 +27,7 @@ coverage
 .playwright-mcp
 vitest.config.ts
 playwright.config.ts
+scripts/check-environment021-simulation.ts
 
 # Repo and design sources
 .git
