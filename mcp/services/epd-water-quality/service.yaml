@@ -1,0 +1,93 @@
+id: epd-water-quality
+title: Marine and River Water Quality
+description: Marine and River Water Quality from the Environmental Protection Department, with bounded structured
+  access to the official source.
+apis:
+- API-1833
+- API-1835
+- API-1836
+- API-1837
+- API-1838
+datasets:
+- hk-epd-marineteam-marine-water-quality-recent-data
+- hk-epd-riverteam-river-water-quality-historical-data-en
+- hk-epd-riverteam-river-water-quality-historical-data-sc
+- hk-epd-riverteam-river-water-quality-historical-data-tc
+- hk-epd-riverteam-river-water-quality-recent-data
+cacheTtl: 3600
+tools:
+- name: epd_recent_marine_water_quality
+  title: Recent marine water quality
+  description: Recent marine water quality from EPD published CSV files. Recent monthly dissolved oxygen (DO) and
+    five-day biochemical oxygen demand (BOD5). Filter by station or zone/river, page with nextOffset. Original measurement
+    strings preserve detection bounds (<, >), units and missing values; dates have month precision. No real-time
+    readings.
+  handler: recentMarine
+  input:
+    search: &id001
+      type: string
+      pattern: ^.{1,100}$
+      description: Substring in zone, river or station; use the source language
+    station: &id002
+      type: string
+      pattern: ^[A-Za-z0-9-]{1,20}$
+      description: Exact monitoring station code, case insensitive
+    limit: &id003
+      type: integer
+      minimum: 1
+      maximum: 100
+      default: 20
+      description: Maximum records; output also bounded to 100 KB
+    offset: &id004
+      type: integer
+      minimum: 0
+      maximum: 1000000
+      default: 0
+      description: Continue with nextOffset using identical filters
+    lang: &id005
+      type: string
+      enum:
+      - en
+      - tc
+      - sc
+      default: en
+      description: Source language; measurement keys retain original labels and units
+    month:
+      type: string
+      pattern: ^(0[1-9]|1[0-2])/[0-9]{4}$
+      description: Exact source sampling month MM/YYYY; availability varies by station
+- name: epd_recent_river_water_quality
+  title: Recent river water quality
+  description: Recent river water quality from EPD published CSV files. Recent monthly dissolved oxygen (DO) and
+    five-day biochemical oxygen demand (BOD5). Filter by station or zone/river, page with nextOffset. Original measurement
+    strings preserve detection bounds (<, >), units and missing values; dates have month precision. No real-time
+    readings.
+  handler: recentRiver
+  input:
+    search: *id001
+    station: *id002
+    limit: *id003
+    offset: *id004
+    lang: *id005
+    month:
+      type: string
+      pattern: ^(0[1-9]|1[0-2])/[0-9]{4}$
+      description: Exact source sampling month MM/YYYY; availability varies by station
+- name: epd_historical_river_water_quality
+  title: Historical river water quality
+  description: Historical river water quality from EPD published CSV files. Annual observations in English, Traditional
+    or Simplified Chinese, 1986–2025. Filter by station or zone/river, page with nextOffset. Original measurement
+    strings preserve detection bounds (<, >), units and missing values; dates have day precision. No real-time readings.
+  handler: historicalRiver
+  input:
+    search: *id001
+    station: *id002
+    limit: *id003
+    offset: *id004
+    lang: *id005
+    year:
+      type: integer
+      required: true
+      minimum: 1986
+      maximum: 2025
+      description: Published annual CSV (1986–2025)

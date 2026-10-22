@@ -1,0 +1,716 @@
+{
+  "startedAt": "2026-10-22T03:40:13.816Z",
+  "finishedAt": "2026-10-22T03:40:46.919Z",
+  "variants": 23,
+  "passed": 23,
+  "failed": 0,
+  "realHttpRequests": 126,
+  "localLiveVerified": true,
+  "independentRxCodeVerification": "pending",
+  "evidence": [
+    {
+      "tool": "epd_recent_marine_water_quality",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1833"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/marinepsi/en/marinerecent/marine-recent-en.csv",
+      "total": 240,
+      "fields": [
+        "date",
+        "measurements",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_construction_noise_permits",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1841"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1664940858993_72368/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "DISTRICT_CHIN",
+        "DISTRICT_ENG",
+        "ISSUE_ON",
+        "LAT",
+        "LONG",
+        "OBJECTID",
+        "PERMITTEE_NAME_CHIN",
+        "PERMITTEE_NAME_ENG",
+        "PERMIT_NO",
+        "PERMIT_TYPE_CHIN",
+        "PERMIT_TYPE_ENG",
+        "SITE_ADDRESS_CHIN",
+        "SITE_ADDRESS_ENG",
+        "URL",
+        "VALIDITY",
+        "name"
+      ]
+    },
+    {
+      "tool": "epd_pollution_complaint_statistics",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1842"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1629267205235_67879/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "AirEN",
+        "AirTC",
+        "DatasetEN",
+        "DatasetTC",
+        "DistrictEN",
+        "DistrictTC",
+        "LastUpdate",
+        "MiscEN",
+        "MiscTC",
+        "NoiseEN",
+        "NoiseTC",
+        "OBJECTID",
+        "PercentageEN",
+        "PercentageTC",
+        "Shape__Area",
+        "Shape__Length",
+        "TotalEN",
+        "TotalTC",
+        "WasteEN",
+        "WasteTC",
+        "WaterEN",
+        "WaterTC",
+        "WebsiteEN",
+        "WebsiteTC",
+        "YearEN",
+        "YearTC",
+        "name"
+      ]
+    },
+    {
+      "tool": "epd_recyclable_collection_points",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1834"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1630899452408_9505/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "OBJECTID",
+        "accessibilty_notes",
+        "address_en",
+        "address_sc",
+        "address_tc",
+        "cp_id",
+        "cp_state",
+        "district_id",
+        "lat",
+        "legend",
+        "lgt",
+        "name",
+        "waste_type"
+      ]
+    },
+    {
+      "tool": "epd_construction_noise_permits",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1841"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1664940858993_72368/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "DISTRICT_CHIN",
+        "DISTRICT_ENG",
+        "ISSUE_ON",
+        "LAT",
+        "LONG",
+        "OBJECTID",
+        "PERMITTEE_NAME_CHIN",
+        "PERMITTEE_NAME_ENG",
+        "PERMIT_NO",
+        "PERMIT_TYPE_CHIN",
+        "PERMIT_TYPE_ENG",
+        "SITE_ADDRESS_CHIN",
+        "SITE_ADDRESS_ENG",
+        "URL",
+        "VALIDITY",
+        "name"
+      ]
+    },
+    {
+      "tool": "epd_pollution_complaint_statistics",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1842"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1629267205235_67879/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "AirEN",
+        "AirTC",
+        "DatasetEN",
+        "DatasetTC",
+        "DistrictEN",
+        "DistrictTC",
+        "LastUpdate",
+        "MiscEN",
+        "MiscTC",
+        "NoiseEN",
+        "NoiseTC",
+        "OBJECTID",
+        "PercentageEN",
+        "PercentageTC",
+        "Shape__Area",
+        "Shape__Length",
+        "TotalEN",
+        "TotalTC",
+        "WasteEN",
+        "WasteTC",
+        "WaterEN",
+        "WaterTC",
+        "WebsiteEN",
+        "WebsiteTC",
+        "YearEN",
+        "YearTC",
+        "name"
+      ]
+    },
+    {
+      "tool": "epd_recyclable_collection_points",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1834"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1630899452408_9505/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "OBJECTID",
+        "accessibilty_notes",
+        "address_en",
+        "address_sc",
+        "address_tc",
+        "cp_id",
+        "cp_state",
+        "district_id",
+        "lat",
+        "legend",
+        "lgt",
+        "name",
+        "waste_type"
+      ]
+    },
+    {
+      "tool": "epd_chemical_waste_collectors",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1839"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1666161129768_2527/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "Address_Chin",
+        "Address_Eng",
+        "Collector_Name_Chin",
+        "Collector_Name_Eng",
+        "Email",
+        "Lat",
+        "Long",
+        "OBJECTID",
+        "Tel_No",
+        "URL",
+        "Waste_Type_Chin",
+        "Waste_Type_Eng",
+        "name"
+      ]
+    },
+    {
+      "tool": "epd_recyclable_collection_points",
+      "variant": {
+        "lang": "sc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1834"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1630899452408_9505/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "OBJECTID",
+        "accessibilty_notes",
+        "address_en",
+        "address_sc",
+        "address_tc",
+        "cp_id",
+        "cp_state",
+        "district_id",
+        "lat",
+        "legend",
+        "lgt",
+        "name",
+        "waste_type"
+      ]
+    },
+    {
+      "tool": "epd_recent_marine_water_quality",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1833"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/marinepsi/tc/marinerecent/marine-recent-tc.csv",
+      "total": 240,
+      "fields": [
+        "date",
+        "measurements",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_chemical_waste_collectors",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1839"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1666161129768_2527/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "Address_Chin",
+        "Address_Eng",
+        "Collector_Name_Chin",
+        "Collector_Name_Eng",
+        "Email",
+        "Lat",
+        "Long",
+        "OBJECTID",
+        "Tel_No",
+        "URL",
+        "Waste_Type_Chin",
+        "Waste_Type_Eng",
+        "name"
+      ]
+    },
+    {
+      "tool": "epd_recent_marine_water_quality",
+      "variant": {
+        "lang": "sc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1833"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/marinepsi/sc/marinerecent/marine-recent-sc.csv",
+      "total": 240,
+      "fields": [
+        "date",
+        "measurements",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_clinical_waste_collectors",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1840"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1666160952535_97414/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "Address_Chin",
+        "Address_Eng",
+        "Collector_Name_Chin",
+        "Collector_Name_Eng",
+        "Email",
+        "Fax_No",
+        "Lat",
+        "Long",
+        "OBJECTID",
+        "Tel_No",
+        "URL",
+        "name"
+      ]
+    },
+    {
+      "tool": "epd_recent_river_water_quality",
+      "variant": {
+        "lang": "en"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1838"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/en/riverrecent/river-recent-en.csv",
+      "total": 312,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_clinical_waste_collectors",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter",
+        "bbox-and-geometry"
+      ],
+      "apis": [
+        "API-1840"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1666160952535_97414/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "Address_Chin",
+        "Address_Eng",
+        "Collector_Name_Chin",
+        "Collector_Name_Eng",
+        "Email",
+        "Fax_No",
+        "Lat",
+        "Long",
+        "OBJECTID",
+        "Tel_No",
+        "URL",
+        "name"
+      ]
+    },
+    {
+      "tool": "epd_recent_river_water_quality",
+      "variant": {
+        "lang": "tc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1838"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverrecent/river-recent-tc.csv",
+      "total": 312,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_recent_river_water_quality",
+      "variant": {
+        "lang": "sc"
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1838"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverrecent/river-recent-sc.csv",
+      "total": 312,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_historical_river_water_quality",
+      "variant": {
+        "lang": "en",
+        "year": 1986
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1835"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-1986-en.csv",
+      "total": 522,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "sampleNumber",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_historical_river_water_quality",
+      "variant": {
+        "lang": "en",
+        "year": 2025
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1835"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/en/riverhistorical/river-historical-2025-en.csv",
+      "total": 984,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "sampleNumber",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_historical_river_water_quality",
+      "variant": {
+        "lang": "tc",
+        "year": 1986
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1837"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-1986-tc.csv",
+      "total": 522,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "sampleNumber",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_historical_river_water_quality",
+      "variant": {
+        "lang": "tc",
+        "year": 2025
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1837"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/tc/riverhistorical/river-historical-2025-tc.csv",
+      "total": 984,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "sampleNumber",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_historical_river_water_quality",
+      "variant": {
+        "lang": "sc",
+        "year": 1986
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1836"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-1986-sc.csv",
+      "total": 522,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "sampleNumber",
+        "station",
+        "waterControlZone"
+      ]
+    },
+    {
+      "tool": "epd_historical_river_water_quality",
+      "variant": {
+        "lang": "sc",
+        "year": 2025
+      },
+      "status": "passed",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-filter"
+      ],
+      "apis": [
+        "API-1836"
+      ],
+      "source": "https://cd.epic.epd.gov.hk/riverpsi/sc/riverhistorical/river-historical-2025-sc.csv",
+      "total": 984,
+      "fields": [
+        "date",
+        "measurements",
+        "river",
+        "sampleNumber",
+        "station",
+        "waterControlZone"
+      ]
+    }
+  ]
+}

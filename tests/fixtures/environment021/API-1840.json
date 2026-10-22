@@ -1,0 +1,117 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "Collector_Name_Eng",
+      "alias": "Collector_Name_Eng",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Collector_Name_Chin",
+      "alias": "Collector_Name_Chin",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Address_Eng",
+      "alias": "Address_Eng",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Address_Chin",
+      "alias": "Address_Chin",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Tel_No",
+      "alias": "Tel_No",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Fax_No",
+      "alias": "Fax_No",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Email",
+      "alias": "Email",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Company_Website",
+      "alias": "Company_Website",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "URL",
+      "alias": "URL",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Lat",
+      "alias": "Lat",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Long",
+      "alias": "Long",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "Collector_Name_Eng": "Hygiene First Company Limited",
+        "Collector_Name_Chin": "首衛有限公司",
+        "Address_Eng": "Rm 1217, One Vista Summit, 3 San Hop Lane, Tuen Mun",
+        "Address_Chin": "新界屯門新合里3號匯賢一號‧雋峰12樓17室",
+        "Tel_No": "28278884",
+        "Fax_No": "30201710",
+        "Email": "cw@hygienefirstgroup.com ",
+        "Company_Website": null,
+        "URL": "https://cd.epic.epd.gov.hk/EPICDI/clinicalwaste/list/",
+        "Lat": "22.3935",
+        "Long": "113.9715",
+        "OBJECTID": 1
+      }
+    },
+    {
+      "attributes": {
+        "Collector_Name_Eng": "KLN Distribution Services (Hong Kong) Limited",
+        "Collector_Name_Chin": "KLN Distribution Services (Hong Kong) Limited",
+        "Address_Eng": "16/F, Kerry Cargo Centre, 55 Wing Kei Road, Kwai Chung, Hong Kong",
+        "Address_Chin": "香港葵涌永基路55號嘉里貨運中心16樓",
+        "Tel_No": "22119893, 66505380",
+        "Fax_No": "21495635",
+        "Email": "Raymond.so.tai@kln.com",
+        "Company_Website": " www.kln.com",
+        "URL": "https://cd.epic.epd.gov.hk/EPICDI/clinicalwaste/list/",
+        "Lat": "22.3633",
+        "Long": "114.1208",
+        "OBJECTID": 2
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

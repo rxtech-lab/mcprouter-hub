@@ -1,0 +1,189 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "cp_id",
+      "alias": "cp_id",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "cp_state",
+      "alias": "cp_state",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "district_id",
+      "alias": "district_id",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "address_en",
+      "alias": "address_en",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "address2_en",
+      "alias": "address2_en",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "address_tc",
+      "alias": "address_tc",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "address2_tc",
+      "alias": "address2_tc",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "address_sc",
+      "alias": "address_sc",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "address2_sc",
+      "alias": "address2_sc",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "lat",
+      "alias": "lat",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "lgt",
+      "alias": "lgt",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "waste_type",
+      "alias": "waste_type",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "legend",
+      "alias": "legend",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "accessibilty_notes",
+      "alias": "accessibilty_notes",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "contact_en",
+      "alias": "contact_en",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "contact_tc",
+      "alias": "contact_tc",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "contact_sc",
+      "alias": "contact_sc",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "openhour_en",
+      "alias": "openhour_en",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "openhour_tc",
+      "alias": "openhour_tc",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "openhour_sc",
+      "alias": "openhour_sc",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "cp_id": "288",
+        "cp_state": "Accepted",
+        "district_id": "Kwai_Tsing",
+        "address_en": "Tai Wong Ha Resite Village RCP",
+        "address2_en": null,
+        "address_tc": "大王下村垃圾收集站",
+        "address2_tc": null,
+        "address_sc": "大王下村垃圾收集站",
+        "address2_sc": null,
+        "lat": "22.352730",
+        "lgt": "114.101100",
+        "waste_type": "Metals,Paper,Plastics",
+        "legend": "Recycling Bins at Public Place",
+        "accessibilty_notes": "Note: For public use",
+        "contact_en": null,
+        "contact_tc": null,
+        "contact_sc": null,
+        "openhour_en": null,
+        "openhour_tc": null,
+        "openhour_sc": null,
+        "OBJECTID": 1
+      }
+    },
+    {
+      "attributes": {
+        "cp_id": "309",
+        "cp_state": "Accepted",
+        "district_id": "Kwai_Tsing",
+        "address_en": "Kau Wah Keng Sun Chuen Refuse Collection Point at Kau Wa Keng San Tsuen, Lai King Hill Road, Kwai Chung, N.T.",
+        "address2_en": null,
+        "address_tc": "九華徑新村垃圾收集站 ，葵涌荔景山路九華徑新村",
+        "address2_tc": null,
+        "address_sc": "九华径新村垃圾收集站 ，葵涌荔景山路九华径新村",
+        "address2_sc": null,
+        "lat": "22.344277",
+        "lgt": "114.135619",
+        "waste_type": "Metals,Paper,Plastic Bottle",
+        "legend": "Recycling Bins at Public Place",
+        "accessibilty_notes": "Note: For public use",
+        "contact_en": null,
+        "contact_tc": null,
+        "contact_sc": null,
+        "openhour_en": null,
+        "openhour_tc": null,
+        "openhour_sc": null,
+        "OBJECTID": 2
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

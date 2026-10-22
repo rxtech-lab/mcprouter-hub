@@ -1,0 +1,141 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "PERMIT_TYPE_ENG",
+      "alias": "PERMIT_TYPE_ENG",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "PERMIT_TYPE_CHIN",
+      "alias": "PERMIT_TYPE_CHIN",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "PERMIT_NO",
+      "alias": "PERMIT_NO",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "ISSUE_ON",
+      "alias": "ISSUE_ON",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "VALIDITY",
+      "alias": "VALIDITY",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "PERMITTEE_NAME_ENG",
+      "alias": "PERMITTEE_NAME_ENG",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "PERMITTEE_NAME_CHIN",
+      "alias": "PERMITTEE_NAME_CHIN",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "SITE_ADDRESS_ENG",
+      "alias": "SITE_ADDRESS_ENG",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "SITE_ADDRESS_CHIN",
+      "alias": "SITE_ADDRESS_CHIN",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "DISTRICT_ENG",
+      "alias": "DISTRICT_ENG",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "DISTRICT_CHIN",
+      "alias": "DISTRICT_CHIN",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "URL",
+      "alias": "URL",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "LAT",
+      "alias": "LAT",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "LONG",
+      "alias": "LONG",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "PERMIT_TYPE_ENG": "General Construction Works",
+        "PERMIT_TYPE_CHIN": "一般建築工程",
+        "PERMIT_NO": "GW-NM0013-26",
+        "ISSUE_ON": "2026-03-27",
+        "VALIDITY": "2026-04-23 - 2026-10-22",
+        "PERMITTEE_NAME_ENG": "MTR Corporation Limited",
+        "PERMITTEE_NAME_CHIN": "香港鐵路有限公司",
+        "SITE_ADDRESS_ENG": "MTR stations of East Rail Line (Hung Hom Station to Sha Tin Station, Tai Wo Station, Lo Wu Station & Lok Ma Chau Station)",
+        "SITE_ADDRESS_CHIN": "香港鐵路東鐵綫【紅磡站至沙田站、太和站、羅湖站及落馬洲站】",
+        "DISTRICT_ENG": "District Territory-wide issues",
+        "DISTRICT_CHIN": "跨區域",
+        "URL": "https://epic.epd.gov.hk/EFORMUPD/main/epic/apps-construct?execution=e8s1",
+        "LAT": "22.3671353",
+        "LONG": "114.188059",
+        "OBJECTID": 1
+      }
+    },
+    {
+      "attributes": {
+        "PERMIT_TYPE_ENG": "General Construction Works",
+        "PERMIT_TYPE_CHIN": "一般建築工程",
+        "PERMIT_NO": "GW-NM0016-26",
+        "ISSUE_ON": "2026-05-12",
+        "VALIDITY": "2026-05-13 - 2026-10-26",
+        "PERMITTEE_NAME_ENG": "SFK - ASL Joint Venture",
+        "PERMITTEE_NAME_CHIN": null,
+        "SITE_ADDRESS_ENG": "Eastern Harbour Crossing (Routine Maintenance Works)",
+        "SITE_ADDRESS_CHIN": null,
+        "DISTRICT_ENG": "District Territory-wide issues",
+        "DISTRICT_CHIN": "跨區域",
+        "URL": "https://epic.epd.gov.hk/EFORMUPD/main/epic/apps-construct?execution=e8s1",
+        "LAT": "22.285758",
+        "LONG": "114.243054",
+        "OBJECTID": 2
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

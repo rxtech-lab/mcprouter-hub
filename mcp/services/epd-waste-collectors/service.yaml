@@ -1,0 +1,108 @@
+id: epd-waste-collectors
+title: Licensed Waste Collectors
+description: Licensed Waste Collectors from the Environmental Protection Department, with bounded structured access
+  to the official source.
+apis:
+- API-1839
+- API-1840
+datasets:
+- hk-epd-rngteam-chemical-waste-collectors-list
+- hk-epd-rngteam-clinical-waste-collectors-list
+cacheTtl: 3600
+tools:
+- name: epd_chemical_waste_collectors
+  title: Chemical waste collectors
+  description: Licensed chemical waste collectors with accepted waste types, addresses and contact details. Consult
+    the source register for current licensing conditions. Uses the official CSDI ArcGIS query API. Results bounded
+    to 100 records and 100 KB; continue with nextOffset. Text search uses one selectable published field per request.
+  handler: chemicalWasteCollectors
+  input:
+    search:
+      type: string
+      pattern: ^.{1,100}$
+      description: 'Text in searchField (default: localized name/address); SQL LIKE wildcards % and _ supported'
+    objectId:
+      type: integer
+      minimum: 1
+      description: Exact source OBJECTID
+    bbox:
+      type: string
+      pattern: ^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$
+      description: WGS84 west,south,east,north; spatial intersection
+    geometry:
+      type: boolean
+      default: false
+      description: Include WGS84 geometry; large geometries explicitly omitted
+    limit: &id001
+      type: integer
+      minimum: 1
+      maximum: 100
+      default: 20
+      description: Maximum records; output also bounded to 100 KB
+    offset: &id002
+      type: integer
+      minimum: 0
+      maximum: 1000000
+      default: 0
+      description: Continue with nextOffset using identical filters
+    lang:
+      type: string
+      enum:
+      - en
+      - tc
+      default: en
+      description: Language of name; source multilingual fields retained. Only published languages supported.
+    searchField:
+      type: string
+      enum:
+      - Collector_Name_Eng
+      - Collector_Name_Chin
+      - Address_Eng
+      - Address_Chin
+      - Waste_Type_Eng
+      - Waste_Type_Chin
+      description: One published field to search; defaults to the name/address in lang. Query fields separately;
+        CSDI rejects cross-field OR searches.
+  timeoutMs: 30000
+- name: epd_clinical_waste_collectors
+  title: Clinical waste collectors
+  description: Licensed clinical waste collectors with addresses and contact details. Consult the source register
+    for current licensing conditions. Uses the official CSDI ArcGIS query API. Results bounded to 100 records and
+    100 KB; continue with nextOffset. Text search uses one selectable published field per request.
+  handler: clinicalWasteCollectors
+  input:
+    search:
+      type: string
+      pattern: ^.{1,100}$
+      description: 'Text in searchField (default: localized name/address); SQL LIKE wildcards % and _ supported'
+    objectId:
+      type: integer
+      minimum: 1
+      description: Exact source OBJECTID
+    bbox:
+      type: string
+      pattern: ^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$
+      description: WGS84 west,south,east,north; spatial intersection
+    geometry:
+      type: boolean
+      default: false
+      description: Include WGS84 geometry; large geometries explicitly omitted
+    limit: *id001
+    offset: *id002
+    lang:
+      type: string
+      enum:
+      - en
+      - tc
+      default: en
+      description: Language of name; source multilingual fields retained. Only published languages supported.
+    searchField:
+      type: string
+      enum:
+      - Collector_Name_Eng
+      - Collector_Name_Chin
+      - Address_Eng
+      - Address_Chin
+      description: One published field to search; defaults to the name/address in lang. Query fields separately;
+        CSDI rejects cross-field OR searches.
+  timeoutMs: 30000

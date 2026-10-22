@@ -1,0 +1,125 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "Collector_Name_Eng",
+      "alias": "Collector_Name_Eng",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Collector_Name_Chin",
+      "alias": "Collector_Name_Chin",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Address_Eng",
+      "alias": "Address_Eng",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Address_Chin",
+      "alias": "Address_Chin",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Tel_No",
+      "alias": "Tel_No",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Email",
+      "alias": "Email",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Company_Website",
+      "alias": "Company_Website",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Waste_Type_Eng",
+      "alias": "Waste_Type_Eng",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Waste_Type_Chin",
+      "alias": "Waste_Type_Chin",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "URL",
+      "alias": "URL",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Lat",
+      "alias": "Lat",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "Long",
+      "alias": "Long",
+      "type": "esriFieldTypeString",
+      "length": 5000
+    },
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "Collector_Name_Eng": "1 Gor Limited",
+        "Collector_Name_Chin": "一哥有限公司",
+        "Address_Eng": "Shop 116A, Podium C, Level 2, Riviera Gardens, Tsuen Wan, New Territories",
+        "Address_Chin": "香港新界荃灣海濱花園平台C二樓116A舖",
+        "Tel_No": "65358001",
+        "Email": "info@1gor.com.hk",
+        "Company_Website": null,
+        "Waste_Type_Eng": "(1) Asbestos Waste (including Vehicle Brake/Clutch Linings)",
+        "Waste_Type_Chin": "(1) 石棉廢物（包括車輛制動器或離合器襯片）",
+        "URL": "https://cd.epic.epd.gov.hk/EPICDI/chemicalwaste/download/search/",
+        "Lat": "22.3611",
+        "Long": "114.1129",
+        "OBJECTID": 1
+      }
+    },
+    {
+      "attributes": {
+        "Collector_Name_Eng": "AAA Services Limited",
+        "Collector_Name_Chin": null,
+        "Address_Eng": "16/F., Bulkin Centre , 332-334 Portland Street , Mongkok, Kowloon ",
+        "Address_Chin": "九龍旺角砵蘭街332-334號龐堅中心16樓",
+        "Tel_No": "23806862",
+        "Email": "aesl@netvigator.com",
+        "Company_Website": null,
+        "Waste_Type_Eng": "(1) Asbestos Waste (including Vehicle Brake/Clutch Linings)",
+        "Waste_Type_Chin": "(1) 石棉廢物（包括車輛制動器或離合器襯片）",
+        "URL": "https://cd.epic.epd.gov.hk/EPICDI/chemicalwaste/download/search/",
+        "Lat": "22.3211",
+        "Long": "114.1685",
+        "OBJECTID": 2
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}
