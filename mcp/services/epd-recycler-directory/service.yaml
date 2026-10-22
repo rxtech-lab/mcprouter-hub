@@ -1,0 +1,69 @@
+id: epd-recycler-directory
+title: Hong Kong Collector / Recycler Directory
+description: Hong Kong Collector / Recycler Directory with structured access to
+  the official EPD/CSDI source.
+apis:
+  - API-1843
+datasets:
+  - hk-epd-rrgteam-hong-kong-collector-recycler-directory
+cacheTtl: 3600
+tools:
+  - name: epd_collector_recycler_directory
+    title: Hong Kong Collector / Recycler Directory
+    description: Hong Kong collector / recycler company directory with published
+      multilingual addresses. EPD does not warrant accuracy or completeness;
+      this directory is not an endorsement. Uses the verified official CSDI
+      FeatureServer JSON query interface. Results bounded to 100 records and 100
+      KB; continue with nextOffset. Text searches use one field per request.
+    handler: query1843
+    timeoutMs: 30000
+    input:
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        description: Text in one searchField; SQL LIKE wildcards % and _ are supported
+      searchField:
+        type: string
+        enum:
+          - comp_name
+          - comp_name_chn
+          - comp_name_sc
+          - open_addr1_en
+          - open_addr2_en
+          - open_addr1_chn
+          - open_addr1_sc
+        description: One published field; defaults to the name in lang
+      objectId:
+        type: integer
+        minimum: 1
+        description: Exact unique object ID (OBJECTID_1 for habitat layers 0 and 6;
+          otherwise OBJECTID)
+      bbox:
+        type: string
+        pattern: ^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$
+        description: WGS84 west,south,east,north; spatial intersection
+      geometry:
+        type: boolean
+        default: false
+        description: Include WGS84 geometry; oversized geometry explicitly omitted
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        description: Maximum records; output also bounded to 100 KB
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 1000000
+        default: 0
+        description: Continue with nextOffset using identical filters
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of name; original multilingual attributes retained. Only
+          published languages are supported

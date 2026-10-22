@@ -1,0 +1,5 @@
+simulation: environment022
+routing: path
+mocks:
+  - routeKey: upstream
+    path: ../mocks/environment022/config.yaml

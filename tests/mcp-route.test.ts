@@ -1,3 +1,4 @@
+import { cases022, definition022 } from "./environment022-cases";
 import { definition021, environmentCases } from "./environment021-cases";
 import { governmentCases } from "./finance034-cases";
 import { batch035, definition035, fixture035 } from "./finance035-cases";
@@ -664,6 +665,34 @@ describe("Environment batch 021 MCP routes", () => {
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
   it.each(environmentCases)("surfaces upstream failure as MCP error: $tool $file", async (c) => {
+    fetchMock.mockResolvedValueOnce(new Response("maintenance", { status: 503 }));
+    const result = await callTool(c.tool, c.input);
+    expect(result.isError).toBe(true);
+    expect(result.content![0].text).toContain("503");
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+});
+
+
+describe("Environment batch 022 MCP routes", () => {
+  it.each(cases022)("discovers and calls $tool $file on its dedicated route", async (c) => {
+    const { service } = definition022(c.tool);
+    const route = createServiceRoute(() => [service]);
+    const options = { path: `/api/mcp/s/${service.id}/streamable`, scopes: service.id };
+    const listed = await rpc(route, "tools/list", {}, options);
+    expect(listed.result!.tools!.map((t) => t.name)).toContain(c.tool);
+    fetchMock.mockImplementation(async (url) => {
+      expect(url).toBe(c.request.url);
+      return new Response(typeof c.reply === "string" ? c.reply : JSON.stringify(c.reply));
+    });
+    const called = await rpc(route, "tools/call", { name: c.tool, arguments: c.input }, options);
+    expect(called.result!.isError).toBeFalsy();
+    expect(JSON.parse(called.result!.content![0].text).data).toEqual(c.data);
+    const invalid = await rpc(route, "tools/call", { name: c.tool, arguments: { ...c.input, limit: 101 } }, options);
+    expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+  it.each(cases022)("surfaces upstream failure as MCP error: $tool $file", async (c) => {
     fetchMock.mockResolvedValueOnce(new Response("maintenance", { status: 503 }));
     const result = await callTool(c.tool, c.input);
     expect(result.isError).toBe(true);

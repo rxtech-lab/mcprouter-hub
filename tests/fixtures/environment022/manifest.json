@@ -1,0 +1,535 @@
+[
+  {
+    "id": "API-1843",
+    "dataset": "hk-epd-rrgteam-hong-kong-collector-recycler-directory",
+    "service": "epd-recycler-directory",
+    "title": "Hong Kong Collector / Recycler Directory",
+    "tool": "epd_collector_recycler_directory",
+    "names": {
+      "en": "comp_name",
+      "tc": "comp_name_chn",
+      "sc": "comp_name_sc"
+    },
+    "fields": [
+      "comp_name",
+      "comp_name_chn",
+      "comp_name_sc",
+      "open_addr1_en",
+      "open_addr2_en",
+      "open_addr1_chn",
+      "open_addr1_sc"
+    ],
+    "layer": "epd_rcd_1726709250759_21580",
+    "format": "CSV",
+    "resource": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1726709250759_21580",
+    "sublayers": [
+      {
+        "id": 0,
+        "name": "recycler_import_records",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPoint"
+      }
+    ]
+  },
+  {
+    "id": "API-1852",
+    "dataset": "hk-epd-tnteameiao-dir",
+    "service": "epd-eiao-projects",
+    "title": "EIAO Project Applications",
+    "tool": "epd_direct_environmental_permit_applications",
+    "names": {
+      "en": "Title_of_t",
+      "tc": "Chinese_Ti"
+    },
+    "fields": [
+      "Title_of_t",
+      "Chinese_Ti",
+      "Applicatio",
+      "Name_of_th",
+      "Dir_Applic",
+      "EP_status"
+    ],
+    "layer": "epd_rcd_1694592755253_45012",
+    "format": "SHP",
+    "resource": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1694592755253_45012",
+    "sublayers": [
+      {
+        "id": 0,
+        "name": "DIR_202606",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryMultipoint"
+      }
+    ]
+  },
+  {
+    "id": "API-1853",
+    "dataset": "hk-epd-tnteameiao-eia",
+    "service": "epd-eiao-projects",
+    "title": "EIAO Project Applications",
+    "tool": "epd_eia_report_applications",
+    "names": {
+      "en": "Title_of_t",
+      "tc": "Chinese_Ti"
+    },
+    "fields": [
+      "Title_of_t",
+      "Chinese_Ti",
+      "Applicatio",
+      "Name_of_th",
+      "Register_N",
+      "EIA_Applic"
+    ],
+    "layer": "epd_rcd_1694592602848_49157",
+    "format": "SHP",
+    "resource": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1694592602848_49157",
+    "sublayers": [
+      {
+        "id": 0,
+        "name": "EIA_202606",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryMultipoint"
+      }
+    ]
+  },
+  {
+    "id": "API-1854",
+    "dataset": "hk-epd-tnteamhfer-habitat-from-eia-reports",
+    "service": "epd-eia-habitats",
+    "title": "Habitat Maps from EIA Reports",
+    "tool": "epd_eia_habitat_maps",
+    "names": {
+      "en": "Project"
+    },
+    "fields": [
+      "Project",
+      "ReportName",
+      "District",
+      "LayerName",
+      "LayerCateg"
+    ],
+    "layer": "epd_rcd_1696985725838_7798",
+    "format": "FGDB",
+    "resource": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1696985725838_7798",
+    "sublayers": [
+      {
+        "id": 0,
+        "name": "SeasonalWatercourse",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolyline"
+      },
+      {
+        "id": 1,
+        "name": "woodland",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 2,
+        "name": "Wetland",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 3,
+        "name": "Watercourse",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 4,
+        "name": "Wasteland",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 5,
+        "name": "VillageArea",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 6,
+        "name": "UplandGrassland",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 7,
+        "name": "SSSI",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 8,
+        "name": "Shrubland",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 9,
+        "name": "Pond",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 10,
+        "name": "Plantation",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 11,
+        "name": "Marsh",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 12,
+        "name": "GrasslandShrubland",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 13,
+        "name": "Grassland",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 14,
+        "name": "DevelopedArea",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      },
+      {
+        "id": 15,
+        "name": "AgriculturalLand",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      }
+    ],
+    "habitats": [
+      {
+        "id": 0,
+        "name": "SeasonalWatercourse",
+        "objectIdField": "OBJECTID_1",
+        "fields": {
+          "report": "ReportName",
+          "district": "District",
+          "habitat": "LayerName"
+        }
+      },
+      {
+        "id": 1,
+        "name": "woodland",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "reportname",
+          "district": "district",
+          "habitat": "layername"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Wetland",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "reportname",
+          "district": "district",
+          "habitat": "layername"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Watercourse",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "reportname",
+          "district": "district",
+          "habitat": "layername"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Wasteland",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "ReportName",
+          "district": "District",
+          "habitat": "LayerName"
+        }
+      },
+      {
+        "id": 5,
+        "name": "VillageArea",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "ReportName",
+          "district": "District",
+          "habitat": "LayerName"
+        }
+      },
+      {
+        "id": 6,
+        "name": "UplandGrassland",
+        "objectIdField": "OBJECTID_1",
+        "fields": {
+          "report": "ReportName",
+          "district": "District",
+          "habitat": "LayerName"
+        }
+      },
+      {
+        "id": 7,
+        "name": "SSSI",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "reportname",
+          "district": "district",
+          "habitat": "layername"
+        }
+      },
+      {
+        "id": 8,
+        "name": "Shrubland",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "ReportName",
+          "district": "District",
+          "habitat": "LayerName"
+        }
+      },
+      {
+        "id": 9,
+        "name": "Pond",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "reportname",
+          "district": "district",
+          "habitat": "layername"
+        }
+      },
+      {
+        "id": 10,
+        "name": "Plantation",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "reportname",
+          "district": "district",
+          "habitat": "layername"
+        }
+      },
+      {
+        "id": 11,
+        "name": "Marsh",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "ReportName",
+          "district": "District",
+          "habitat": "LayerName"
+        }
+      },
+      {
+        "id": 12,
+        "name": "GrasslandShrubland",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "reportname",
+          "district": "district",
+          "habitat": "layername"
+        }
+      },
+      {
+        "id": 13,
+        "name": "Grassland",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "EIA_No",
+          "district": "District",
+          "habitat": "Name"
+        }
+      },
+      {
+        "id": 14,
+        "name": "DevelopedArea",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "reportname",
+          "district": "district",
+          "habitat": "layername"
+        }
+      },
+      {
+        "id": 15,
+        "name": "AgriculturalLand",
+        "objectIdField": "OBJECTID",
+        "fields": {
+          "report": "EIA_No",
+          "district": "district",
+          "habitat": "layername"
+        }
+      }
+    ]
+  },
+  {
+    "id": "API-1856",
+    "dataset": "hk-epd-wccgteam-on-site-food-waste-pre-treatment-and-treatment-systems-suppliers",
+    "service": "epd-food-waste-suppliers",
+    "title": "On-site Food Waste Treatment Suppliers",
+    "tool": "epd_food_waste_treatment_suppliers",
+    "names": {
+      "en": "Company_Name_Eng",
+      "tc": "Company_Name_Chin"
+    },
+    "fields": [
+      "Company_Name_Eng",
+      "Company_Name_Chin",
+      "Address_Eng",
+      "Address_Chin",
+      "Types_of_recycling_facilities_provided_Eng",
+      "Types_of_recycling_facilities_provided_Chin"
+    ],
+    "layer": "epd_rcd_1726710187543_56551",
+    "format": "GML",
+    "resource": "https://portal.csdi.gov.hk/geoportal/?datasetId=epd_rcd_1726710187543_56551",
+    "sublayers": [
+      {
+        "id": 0,
+        "name": "geotagging",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPoint"
+      }
+    ]
+  },
+  {
+    "id": "API-1858",
+    "dataset": "hk-epd-wqmteam-pli",
+    "service": "epd-pollution-load",
+    "title": "Pollution Load Inventory for Water Quality Modelling",
+    "tool": "epd_water_pollution_load_inventory",
+    "names": {
+      "en": "load"
+    },
+    "fields": [
+      "load",
+      "pollution_load_type",
+      "wqp"
+    ],
+    "layer": "epd_rcd_1685517560422_72556",
+    "format": "API",
+    "resource": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=epd_rcd_1685517560422_72556",
+    "sublayers": [
+      {
+        "id": 0,
+        "name": "pli",
+        "parentLayerId": -1,
+        "defaultVisibility": true,
+        "subLayerIds": null,
+        "minScale": 0,
+        "maxScale": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPoint"
+      }
+    ]
+  }
+]

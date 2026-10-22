@@ -52,6 +52,13 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Environment batch 022: verified subset only
+  epd_collector_recycler_directory: { input: { limit: 2 }, check: nonEmptyPage },
+  epd_direct_environmental_permit_applications: { input: { limit: 2 }, check: nonEmptyPage },
+  epd_eia_report_applications: { input: { limit: 2 }, check: nonEmptyPage },
+  epd_eia_habitat_maps: { input: { limit: 2 }, check: nonEmptyPage },
+  epd_food_waste_treatment_suppliers: { input: { limit: 2 }, check: nonEmptyPage },
+  epd_water_pollution_load_inventory: { input: { limit: 2 }, check: nonEmptyPage },
   // Environment batch 021
   epd_recent_marine_water_quality: { input: { limit: 2 }, check: nonEmptyPage },
   epd_recent_river_water_quality: { input: { limit: 2 }, check: nonEmptyPage },
