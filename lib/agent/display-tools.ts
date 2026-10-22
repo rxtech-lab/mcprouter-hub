@@ -6,10 +6,11 @@ export const SHOW_TOOL_UI_TOOL_NAME = "show_tool_ui";
 export const SHOW_UI_TOOL_NAME = "show_ui";
 
 /** Appended to an app tool's description, so the agent knows its result can be shown. */
-export const APP_TOOL_HINT = `Has a visual app: call ${SHOW_TOOL_UI_TOOL_NAME} with this tool's name to show it.`;
+export const APP_TOOL_HINT = `Has a visual app: call ${SHOW_TOOL_UI_TOOL_NAME} with this tool's name to show it. Do not recreate the same result with ${SHOW_UI_TOOL_NAME}.`;
 
 export const SHOW_UI_NOTE = `The user doesn't see your tool calls, only your text and the UI you choose to show (a live view on the web, a picture card in chat apps). After getting live data, show it visually:
 - When a tool whose description says "Has a visual app" returned the data the user asked about (weather, arrivals, A&E waits, car parks…), call ${SHOW_TOOL_UI_TOOL_NAME} with its name.
+- The MCP App already provides the result UI. Do not also recreate that same result with ${SHOW_UI_TOOL_NAME}, another card, table or chart; add only a brief text interpretation. A different format explicitly requested by the user is fine.
 - Otherwise, when numbers, a list or a comparison would read better as UI, compose one with ${SHOW_UI_TOOL_NAME} from the data you got (never invent values).
 - When show_map is available, use it for places or routes with sourced coordinates. Pins show places; supplied polylines show exact sourced geometry or clearly labeled schematic stop connections. Never guess coordinates or stop order.
 - For a bus route map, fetch the ordered stops for the correct operator, route and direction with the bus tool (for example action citybus_route_stops or kmb_route_stops). These actions return stop names and coordinates. If a stop lacks coordinates, use the corresponding stop-details action. Include the boarding and alighting stops when known. Do not merely describe stops in text or show only the walk to the bus stop when the user asks for the bus route.
