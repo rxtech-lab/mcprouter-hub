@@ -1,0 +1,80 @@
+[
+  {
+    "district_eng": "Central & Western District",
+    "CMCTR_eng": "Central & Western District Chinese Medicine Clinic cum Training and Research Centre",
+    "address_eng": "1/F, Hawkins Wing and Yeo Wing, Tung Wah Hospital, 12 Po Yan Street, Sheung Wan, Hong Kong",
+    "district_tc": "中西區",
+    "CMCTR_tc": "中西區中醫診所暨教研中心",
+    "address_tc": "香港上環普仁街12號東華醫院鶴堅士樓及楊國璋樓1樓",
+    "district_sc": "中西区",
+    "CMCTR_sc": "中西区中医诊所暨教研中心",
+    "address_sc": "香港上环普仁街12号东华医院鹤坚士楼及杨国璋楼1楼",
+    "latitude": 22.28526157,
+    "longitude": 114.1466282
+  },
+  {
+    "district_eng": "Eastern District",
+    "CMCTR_eng": "Eastern District Chinese Medicine Clinic cum Training and Research Centre",
+    "address_eng": "Lower 4th Floor, West Wing, Specialist Out-patient Block, Pamela Youde Nethersole Eastern Hospital, 3 Lok Man Road, Chai Wan, Hong Kong",
+    "district_tc": "東區",
+    "CMCTR_tc": "東區中醫診所暨教研中心",
+    "address_tc": "香港柴灣樂民道3號東區尤德夫人那打素醫院專科門診大樓地庫4樓西翼",
+    "district_sc": "东区",
+    "CMCTR_sc": "东区中医诊所暨教研中心",
+    "address_sc": "香港柴湾乐民道3号东区尤德夫人那打素医院专科门诊大楼地库4楼西翼",
+    "latitude": 22.26906114,
+    "longitude": 114.23741789
+  },
+  {
+    "district_eng": "Islands District",
+    "CMCTR_eng": "Islands District Chinese Medicine Clinic cum Training and Research Centre",
+    "address_eng": "1/F, Block 2, Tung Chung Health Centre, 6 Fu Tung Street, Tung Chung, Lantau Island, New Territories",
+    "district_tc": "離島區",
+    "CMCTR_tc": "離島區中醫診所暨教研中心",
+    "address_tc": "新界大嶼山東涌富東街6號東涌健康中心第2座1樓",
+    "district_sc": "离岛区",
+    "CMCTR_sc": "离岛区中医诊所暨教研中心",
+    "address_sc": "新界大屿山东涌富东街6号东涌健康中心第2座1楼",
+    "latitude": 22.28885346,
+    "longitude": 113.94352614
+  },
+  {
+    "district_eng": "Wong Tai Sin District",
+    "CMCTR_eng": "Wong Tai Sin District Chinese Medicine Clinic cum Training and Research Centre",
+    "address_eng": "G/F & M/F, Block C, Hong Kong Buddhist Hospital, 10 Heng Lam Street, Lok Fu, Kowloon",
+    "district_tc": "黃大仙區",
+    "CMCTR_tc": "黃大仙區中醫診所暨教研中心",
+    "address_tc": "九龍樂富杏林街10號香港佛教醫院C座地下及閣樓",
+    "district_sc": "黄大仙区",
+    "CMCTR_sc": "黄大仙区中医诊所暨教研中心",
+    "address_sc": "九龙乐富杏林街10号香港佛教医院C座地下及阁楼",
+    "latitude": 22.33507673,
+    "longitude": 114.18907613
+  },
+  {
+    "district_eng": "Yau Tsim Mong District",
+    "CMCTR_eng": "Yau Tsim Mong District Chinese Medicine Clinic cum Training and Research Centre",
+    "address_eng": "9/F, Block R, Queen Elizabeth Hospital, 30 Gascoigne Road, Jordan, Kowloon",
+    "district_tc": "油尖旺區",
+    "CMCTR_tc": "油尖旺區中醫診所暨教研中心",
+    "address_tc": "九龍佐敦加士居道30號伊利沙伯醫院R座9樓",
+    "district_sc": "油尖旺区",
+    "CMCTR_sc": "油尖旺区中医诊所暨教研中心",
+    "address_sc": "九龙佐敦加士居道30号伊利沙伯医院R座9楼",
+    "latitude": 22.30881623,
+    "longitude": 114.17599118
+  },
+  {
+    "district_eng": "Yuen Long District",
+    "CMCTR_eng": "Yuen Long District Chinese Medicine Clinic cum Training and Research Centre",
+    "address_eng": "3/F, Madam Yung Fung Shee Health Centre, 26 Sai Ching Street, Yuen Long, New Territories",
+    "district_tc": "元朗區",
+    "CMCTR_tc": "元朗區中醫診所暨教研中心",
+    "address_tc": "新界元朗西菁街26號容鳳書健康中心3樓",
+    "district_sc": "元朗区",
+    "CMCTR_sc": "元朗区中医诊所暨教研中心",
+    "address_sc": "新界元朗西菁街26号容凤书健康中心3楼",
+    "latitude": 22.44101701,
+    "longitude": 114.02709778
+  }
+]

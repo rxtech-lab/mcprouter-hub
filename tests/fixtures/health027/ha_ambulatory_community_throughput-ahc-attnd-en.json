@@ -1,0 +1,32 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "AH Community Attendances": 2335
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong West Cluster",
+    "AH Community Attendances": 2187
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Kowloon Central Cluster",
+    "AH Community Attendances": 2788
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories East Cluster",
+    "AH Community Attendances": 13038
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "AH Community Attendances": 7888
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "AH Community Attendances": 37255
+  }
+]

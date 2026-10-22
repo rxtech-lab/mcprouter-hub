@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "舂磡角慈氏護養院",
+    "AH Department": "醫務社會工作",
+    "AH Outpatient Attendances": 129
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "舂磡角慈氏護養院",
+    "AH Department": "合計",
+    "AH Outpatient Attendances": 129
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "東區尤德夫人那打素醫院",
+    "AH Department": "聽力學",
+    "AH Outpatient Attendances": 6702
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Clinic": "合計",
+    "AH Department": "義肢矯形",
+    "AH Outpatient Attendances": 153040
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Clinic": "合計",
+    "AH Department": "言語治療",
+    "AH Outpatient Attendances": 69240
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Clinic": "合計",
+    "AH Department": "合計",
+    "AH Outpatient Attendances": 3611278
+  }
+]

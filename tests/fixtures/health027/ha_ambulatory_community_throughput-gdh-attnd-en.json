@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Pamela Youde Nethersole Eastern Hospital",
+    "Geriatric Day Attendances": 9787
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Ruttonjee & Tang Shiu Kin Hospitals",
+    "Geriatric Day Attendances": 14106
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Wong Chuk Hang Hospital",
+    "Geriatric Day Attendances": 2098
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Hospital": "Tuen Mun Hospital",
+    "Geriatric Day Attendances": 19007
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Hospital": "Overall (New Territories West Cluster)",
+    "Geriatric Day Attendances": 27719
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "Geriatric Day Attendances": 228270
+  }
+]

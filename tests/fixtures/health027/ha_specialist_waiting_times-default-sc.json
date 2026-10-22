@@ -1,0 +1,56 @@
+[
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "港岛东医院联网",
+    "specialty": "耳鼻喉科",
+    "Category": "紧急新症 - 中位数",
+    "Description": "专科门诊新症中位数轮候时间",
+    "Value": "少于 1 星期"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "港岛西医院联网",
+    "specialty": "耳鼻喉科",
+    "Category": "紧急新症 - 中位数",
+    "Description": "专科门诊新症中位数轮候时间",
+    "Value": "少于 1 星期"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "九龙东医院联网",
+    "specialty": "耳鼻喉科",
+    "Category": "紧急新症 - 中位数",
+    "Description": "专科门诊新症中位数轮候时间",
+    "Value": "少于 1 星期"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "医管局合计",
+    "specialty": "外科",
+    "Category": "稳定新症",
+    "Description": "预约新症百份比",
+    "Value": "75%"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "医管局合计",
+    "specialty": "外科",
+    "Category": "总数",
+    "Description": "预约新症数目",
+    "Value": "186,075"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "医管局合计",
+    "specialty": "外科",
+    "Category": "下次更新日期",
+    "Description": "下次更新日期",
+    "Value": "2026年10月30日"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18岁以下",
+    "Gender": "女性",
+    "AE Attendances": 141787
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18岁以下",
+    "Gender": "男性",
+    "AE Attendances": 185587
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18岁以下",
+    "Gender": "合计",
+    "AE Attendances": 327374
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合计",
+    "Gender": "女性",
+    "AE Attendances": 1063317
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合计",
+    "Gender": "男性",
+    "AE Attendances": 960948
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合计",
+    "Gender": "合计",
+    "AE Attendances": 2024269
+  }
+]

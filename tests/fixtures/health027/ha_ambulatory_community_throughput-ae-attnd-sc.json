@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "东区尤德夫人那打素医院",
+    "AE Attendances": 151895
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "律敦治医院",
+    "AE Attendances": 84759
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "长洲医院",
+    "AE Attendances": 9703
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西医院联网",
+    "Hospital": "屯门医院",
+    "AE Attendances": 165504
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西医院联网",
+    "Hospital": "小计(新界西医院联网)",
+    "AE Attendances": 370386
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Hospital": "合计",
+    "AE Attendances": 2024269
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "舂磡角慈氏护养院",
+    "Specialty": "疗养科",
+    "Hospital Beds": 240
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "舂磡角慈氏护养院",
+    "Specialty": "合计",
+    "Hospital Beds": 240
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "东区尤德夫人那打素医院",
+    "Specialty": "普通科(急症及康复)",
+    "Hospital Beds": 1131
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Hospital": "合计",
+    "Specialty": "智障科",
+    "Hospital Beds": 675
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Hospital": "合计",
+    "Specialty": "疗养科",
+    "Hospital Beds": 1961
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Hospital": "合计",
+    "Specialty": "合计",
+    "Hospital Beds": 30824
+  }
+]

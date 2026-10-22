@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Pamela Youde Nethersole Eastern Hospital",
+    "Rehab & Palliative Care Day Attd": 1506
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Ruttonjee & Tang Shiu Kin Hospitals",
+    "Rehab & Palliative Care Day Attd": 3168
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Tang Shiu Kin Hospital Community Ambulatory Care Centre",
+    "Rehab & Palliative Care Day Attd": 3760
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Hospital": "Tuen Mun Hospital",
+    "Rehab & Palliative Care Day Attd": 4585
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Hospital": "Overall (New Territories West Cluster)",
+    "Rehab & Palliative Care Day Attd": 5878
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "Rehab & Palliative Care Day Attd": 110418
+  }
+]

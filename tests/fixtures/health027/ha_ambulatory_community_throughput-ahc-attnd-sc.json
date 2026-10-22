@@ -1,0 +1,32 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "AH Community Attendances": 2335
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛西医院联网",
+    "AH Community Attendances": 2187
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "九龙中医院联网",
+    "AH Community Attendances": 2788
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界东医院联网",
+    "AH Community Attendances": 13038
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西医院联网",
+    "AH Community Attendances": 7888
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "AH Community Attendances": 37255
+  }
+]

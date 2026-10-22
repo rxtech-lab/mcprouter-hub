@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Cheshire Home, Chung Hom Kok",
+    "Specialty": "Infirmary",
+    "Hospital Beds": 240
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Cheshire Home, Chung Hom Kok",
+    "Specialty": "Overall",
+    "Hospital Beds": 240
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Hospital": "Pamela Youde Nethersole Eastern Hospital",
+    "Specialty": "General (Acute and Convalescent)",
+    "Hospital Beds": 1131
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "Specialty": "Mentally Handicapped",
+    "Hospital Beds": 675
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "Specialty": "Infirmary",
+    "Hospital Beds": 1961
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Hospital": "Overall",
+    "Specialty": "Overall",
+    "Hospital Beds": 30824
+  }
+]

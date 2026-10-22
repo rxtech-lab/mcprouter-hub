@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Female",
+    "IP Patient Days": 248391,
+    "DP Discharges and Deaths": 16230,
+    "Patient Days": 264621
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Male",
+    "IP Patient Days": 310497,
+    "DP Discharges and Deaths": 24679,
+    "Patient Days": 335176
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "Aged below 18",
+    "Gender": "Overall",
+    "IP Patient Days": 558888,
+    "DP Discharges and Deaths": 40909,
+    "Patient Days": 599797
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Female",
+    "IP Patient Days": 4295013,
+    "DP Discharges and Deaths": 439620,
+    "Patient Days": 4734633
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Male",
+    "IP Patient Days": 4478102,
+    "DP Discharges and Deaths": 424235,
+    "Patient Days": 4902337
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "Overall",
+    "Gender": "Overall",
+    "IP Patient Days": 8773115,
+    "DP Discharges and Deaths": 863855,
+    "Patient Days": 9636970
+  }
+]

@@ -1,0 +1,706 @@
+[
+  {
+    "file": "health_dhc_express-default-en.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/fhb_rcd_1636361141386_74692/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&orderByFields=OBJECTID%20ASC&resultRecordCount=100",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "6e6e62a5ce8af4a137d2af32f5fd0fc9d1aa04bc3b757143622c39a3ec04f81e",
+    "upstreamRows": 8,
+    "fixtureRows": 8
+  },
+  {
+    "file": "health_dhc_express-default-tc.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/fhb_rcd_1636361141386_74692/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&orderByFields=OBJECTID%20ASC&resultRecordCount=100",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "6e6e62a5ce8af4a137d2af32f5fd0fc9d1aa04bc3b757143622c39a3ec04f81e",
+    "upstreamRows": 8,
+    "fixtureRows": 8
+  },
+  {
+    "file": "health_women_wellness_satellites-default-en.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/hhb_rcd_1764142914483_94025/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&orderByFields=OBJECTID%20ASC&resultRecordCount=100",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "5b6a7958af2b135ec15a5a48bb729b340ae62d15467ec804dbbbfacd834ab056",
+    "upstreamRows": 3,
+    "fixtureRows": 3
+  },
+  {
+    "file": "health_women_wellness_satellites-default-tc.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/hhb_rcd_1764142914483_94025/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&orderByFields=OBJECTID%20ASC&resultRecordCount=100",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "5b6a7958af2b135ec15a5a48bb729b340ae62d15467ec804dbbbfacd834ab056",
+    "upstreamRows": 3,
+    "fixtureRows": 3
+  },
+  {
+    "file": "ha_specialist_waiting_times-default-en.json",
+    "url": "https://www.ha.org.hk/opendata/sop/sop-waiting-time-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "3158ac9eb94fa63fed04b917fd3eaf258a3bdf5e9618976f99e0c9e7ba1cf485",
+    "upstreamRows": 288,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_specialist_waiting_times-default-tc.json",
+    "url": "https://www.ha.org.hk/opendata/sop/sop-waiting-time-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "1ea81de4074c85ed2fd40c7272bc032d962160e0e6f4576f2ebeec510cb036d6",
+    "upstreamRows": 288,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_specialist_waiting_times-default-sc.json",
+    "url": "https://www.ha.org.hk/opendata/sop/sop-waiting-time-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "fd5acc579162220200fe205b1d919d58338e467b743957bf049c6528e5b2c5d5",
+    "upstreamRows": 288,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_chinese_medicine_centres-default-en.json",
+    "url": "https://www.ha.org.hk/opendata/cmctr/facility-cmctr.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "9a0c1c4dc2ed0a2a715952715d6073eb4bf9278cf00caf4fe918eadb9c6ecff4",
+    "upstreamRows": 18,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_chinese_medicine_centres-default-tc.json",
+    "url": "https://www.ha.org.hk/opendata/cmctr/facility-cmctr.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "9a0c1c4dc2ed0a2a715952715d6073eb4bf9278cf00caf4fe918eadb9c6ecff4",
+    "upstreamRows": 18,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_chinese_medicine_centres-default-sc.json",
+    "url": "https://www.ha.org.hk/opendata/cmctr/facility-cmctr.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "9a0c1c4dc2ed0a2a715952715d6073eb4bf9278cf00caf4fe918eadb9c6ecff4",
+    "upstreamRows": 18,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-hosp-en.json",
+    "url": "https://www.ha.org.hk/opendata/facility-hosp.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "02a01027c1879f1bb8df27c940e1d1fc5b87d36caa3aaa69ef2e2faa2f4c5918",
+    "upstreamRows": 44,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-hosp-tc.json",
+    "url": "https://www.ha.org.hk/opendata/facility-hosp.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "02a01027c1879f1bb8df27c940e1d1fc5b87d36caa3aaa69ef2e2faa2f4c5918",
+    "upstreamRows": 44,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-hosp-sc.json",
+    "url": "https://www.ha.org.hk/opendata/facility-hosp.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "02a01027c1879f1bb8df27c940e1d1fc5b87d36caa3aaa69ef2e2faa2f4c5918",
+    "upstreamRows": 44,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-sop-en.json",
+    "url": "https://www.ha.org.hk/opendata/facility-sop.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "4e7674834ca971683b87a1b44f7ff712d3a3854d64796a4089100057122f32cf",
+    "upstreamRows": 49,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-sop-tc.json",
+    "url": "https://www.ha.org.hk/opendata/facility-sop.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "4e7674834ca971683b87a1b44f7ff712d3a3854d64796a4089100057122f32cf",
+    "upstreamRows": 49,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-sop-sc.json",
+    "url": "https://www.ha.org.hk/opendata/facility-sop.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "4e7674834ca971683b87a1b44f7ff712d3a3854d64796a4089100057122f32cf",
+    "upstreamRows": 49,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-fmc-en.json",
+    "url": "https://www.ha.org.hk/opendata/facility-fmc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "67c37be0a80da3f85b16edb7caba6ae963260991d631f37f56ebeabd667d827e",
+    "upstreamRows": 76,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-fmc-tc.json",
+    "url": "https://www.ha.org.hk/opendata/facility-fmc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "67c37be0a80da3f85b16edb7caba6ae963260991d631f37f56ebeabd667d827e",
+    "upstreamRows": 76,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_healthcare_facilities-facility-fmc-sc.json",
+    "url": "https://www.ha.org.hk/opendata/facility-fmc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "67c37be0a80da3f85b16edb7caba6ae963260991d631f37f56ebeabd667d827e",
+    "upstreamRows": 76,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ae-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/ae-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "5faa9c7c588f880271df60ae062f6833d2d048241627d578ceb356895a0b6f1d",
+    "upstreamRows": 429,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ae-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ae-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "01cc708286775480ceb4266958b41f86811f6d859c3c1e297b4af09930a3ff8c",
+    "upstreamRows": 429,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ae-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ae-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "e7cd100429ae646fc75431bed214abc3b4385d2fe9984e9a9eec52b6563715b0",
+    "upstreamRows": 429,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ae-attnd-gender-age-en.json",
+    "url": "https://www.ha.org.hk/opendata/ae-attnd-gender-age-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "03b73f0f2f610c120c0531a62a4701607195560868ece3b8e08431560a050c47",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ae-attnd-gender-age-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ae-attnd-gender-age-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "f4611428d17cce96ca8e62f412bb88b6635a5780ccffe3de31906f04135877e4",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ae-attnd-gender-age-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ae-attnd-gender-age-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "045de3595512202a014e3a42e02679bd04304f46672782de0ce040adbb24e82d",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-sop-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/sop-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "fa56bd99649ea7a76364df916e444e9c488863b3309d2b04fc773130efc569cb",
+    "upstreamRows": 4782,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-sop-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/sop-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "a93de819a5c9450a55ce51a2040b73cbfe2fea420716239f146223c1a1a9c775",
+    "upstreamRows": 4782,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-sop-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/sop-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "f7b076ee09fe739c1452de334c5a0678de41c57e1d34c38ef600d2876e2e0364",
+    "upstreamRows": 4782,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-sop-attnd-age-gender-en.json",
+    "url": "https://www.ha.org.hk/opendata/sop-attnd-age-gender-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "496b84a6043c8c95bdec9a79582d89ad95605bfa059d7a144ee6996bf50b8f03",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-sop-attnd-age-gender-tc.json",
+    "url": "https://www.ha.org.hk/opendata/sop-attnd-age-gender-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "d3a190ff4cffc88dd542f3e7d0b4f1f4e29e6941beb8b06c9c31da924f3c0826",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-sop-attnd-age-gender-sc.json",
+    "url": "https://www.ha.org.hk/opendata/sop-attnd-age-gender-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "a11e4a0d27ea7a1b6849fd44091112133bf75c5eab6162a0f25473fa45b5ab4a",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pc-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/pc-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "bd8b3914ea6e7fb0523ff88a57d32f28fc7e3ec977fb1cc465752b965be4f4bf",
+    "upstreamRows": 1580,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pc-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/pc-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "202e6dce554ed7ad1a65ce0fa8caee6887e59ed3f5f440bf92718cd4b3cd13c9",
+    "upstreamRows": 1580,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pc-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/pc-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "8ff7ed5fa932d9d5a63ae2722c538ff24502ef9c2a81f8cfbc12f106769b214b",
+    "upstreamRows": 1580,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pc-attnd-age-gender-en.json",
+    "url": "https://www.ha.org.hk/opendata/pc-attnd-age-gender-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "e2182ba5354ea2f7b2c90dc276609d59d2ef01a41626d8abf263f0e735555ed9",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pc-attnd-age-gender-tc.json",
+    "url": "https://www.ha.org.hk/opendata/pc-attnd-age-gender-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "5119ee078cec199d4a6a6a648950e397d2a5b0a71e938da48d2cfa1350a15287",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pc-attnd-age-gender-sc.json",
+    "url": "https://www.ha.org.hk/opendata/pc-attnd-age-gender-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "05b2db74b1f359cc3277c671db79f3e7c2e5a22e8fb9a8a89ecea302173676f7",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahop-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/ahop-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "72093d52c1643422d29757d8fdcf956b66138367d94a366cebb436113b52d4ee",
+    "upstreamRows": 7098,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahop-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ahop-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "d63dd38d3c771911df08285e07fde259c4ef8e82f13a3f05844c2856825bdd40",
+    "upstreamRows": 7098,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahop-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ahop-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "71adf6a408111a1698c7a3b518ac4e507c7c6c6187cb142cbc35df0127d3df47",
+    "upstreamRows": 7098,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahop-attnd-age-gender-en.json",
+    "url": "https://www.ha.org.hk/opendata/ahop-attnd-age-gender-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "3ba0de3d1dea3a2a785f377f9918ab5411121175fe402ff856491f0fddce39a5",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahop-attnd-age-gender-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ahop-attnd-age-gender-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "fb7c6002c9e334ee08a459cff7cf472406f32d5f716799d5f0be36d402113c98",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahop-attnd-age-gender-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ahop-attnd-age-gender-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "45f0b5b7e280d293ae5f0e845d7ff7066e80e49fd24316fec1a71b6307cfdcc4",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-gdh-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/gdh-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "40a845661941aa537d3be8a833df3908fae9074896f420668ec8fc047954c6d8",
+    "upstreamRows": 454,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-gdh-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/gdh-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "158b92f50fcdec5bcee8b1ee580331152e06258f8e877197c2dc5d6cfc24b2e0",
+    "upstreamRows": 454,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-gdh-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/gdh-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "93667c3ab6a9d92a2b276656aeb0a979424328218a8f5fcba82cb0d8647e22c5",
+    "upstreamRows": 454,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pdh-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/pdh-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "c4bc553715c51370dd3a61ff9e7c2d99124c128f3fe99cc2f662663788cc1928",
+    "upstreamRows": 411,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pdh-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/pdh-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "03db96f960a1941c17347058e7b5f7fbbe936c9a8d81bef746f4702f5ba01588",
+    "upstreamRows": 411,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-pdh-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/pdh-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "dd33646a276df5e79341c60c94aa840a0cb48686a840b7c5372e4792ea762f5d",
+    "upstreamRows": 411,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-cns-visit-en.json",
+    "url": "https://www.ha.org.hk/opendata/cns-visit-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "0539829f013a2e4c97c0b937e9c8b50881584bc7e8da951a8afcc9a6a7165583",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-cns-visit-tc.json",
+    "url": "https://www.ha.org.hk/opendata/cns-visit-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "2a9dba12aa6988972a0e932e66838fa5eed9e17769d9190457c8762055ce0393",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-cns-visit-sc.json",
+    "url": "https://www.ha.org.hk/opendata/cns-visit-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "5c8f86328d2766c83ff76073d96bf8b440496b428d8332223f8f1d0a4ccf639f",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahc-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/ahc-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "be106b998afdf0c8bea8019c4dbba80d576ac2155a27077f3f1bf29d32b858e0",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahc-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ahc-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "6d0ef318c7acc3a71df93c134406b16a1be4188e151caabc3b24f2a2c1058ec9",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-ahc-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ahc-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "0ee1a4f9ce2297d88e37031d2ae98493cf95b3b9f14b536b4da4f1b16645b2dc",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-psyoutreach-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/psyoutreach-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "7d27256a73d4fb979451d5530e707b1dc0cd67a657ff999971d1d4ac8480c9cf",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-psyoutreach-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/psyoutreach-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "93440760248823b3edcd1ec40c7a1423409788a8443d522f3a8a6677c756a86f",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-psyoutreach-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/psyoutreach-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "36b22b1d58630e3401f21021de7dbd8f7f7a1c981f91fe14a56bc2e167ab6eea",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-rehab-palliative-care-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/rehab-palliative-care-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "8267a895da474bcc170035438c976f122a85a499b4803b4476971aac59025a8e",
+    "upstreamRows": 476,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-rehab-palliative-care-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/rehab-palliative-care-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "80b8f651c900567d9b0b65771b36b0ff10d926fe4bd7cb25b7d3285b9280c01f",
+    "upstreamRows": 476,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_ambulatory_community_throughput-rehab-palliative-care-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/rehab-palliative-care-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "8a8e4f9f21cb3f528b3492019aa779332c90645b185181c0a3164ddbad2871f4",
+    "upstreamRows": 476,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_chinese_medicine_throughput-default-en.json",
+    "url": "https://www.ha.org.hk/opendata/cmctr/cmctr-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "20212fafd7093063b71c033151d6c870500e8e8d3a4cec7786e8a6f21228bd48",
+    "upstreamRows": 57,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_chinese_medicine_throughput-default-tc.json",
+    "url": "https://www.ha.org.hk/opendata/cmctr/cmctr-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "0c48ead05b21415f0ac0400844c90f5986dc047cf97d2d4cb5027bff6f36143c",
+    "upstreamRows": 57,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_chinese_medicine_throughput-default-sc.json",
+    "url": "https://www.ha.org.hk/opendata/cmctr/cmctr-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "eefdd51e8ab411b3c651f5bed726d5a525f045afc340ab0d1abc9feca128d897",
+    "upstreamRows": 57,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-hosp-bed-en.json",
+    "url": "https://www.ha.org.hk/opendata/hosp-bed-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "42dd2d061c793a6077c0a4b6fe69a17baac650aaf0acaf038f5dee32f3c5f485",
+    "upstreamRows": 2366,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-hosp-bed-tc.json",
+    "url": "https://www.ha.org.hk/opendata/hosp-bed-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "7ec24e77abbdecf5ccdc8407b998f1ca4cc07ee2613b5ac6e305bdfccb384bc5",
+    "upstreamRows": 2366,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-hosp-bed-sc.json",
+    "url": "https://www.ha.org.hk/opendata/hosp-bed-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "49cc43681e34e1251a6d158cf6e6132e5be139599a88358c5c8faea5690fd7f9",
+    "upstreamRows": 2366,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ipdpdd-en.json",
+    "url": "https://www.ha.org.hk/opendata/ipdpdd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "5db037295c3d6e30cb65d3a60c8c8031e5fbba4b83a4a0f1774ae9393732c510",
+    "upstreamRows": 809,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ipdpdd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ipdpdd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "d32b00285e97814512d667ef1b21f5bc922abe9ff68beb26421de13bacef5663",
+    "upstreamRows": 809,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ipdpdd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ipdpdd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "0d794b8a8d84e64d4321b971370c94e2c5566302b7526d81e6273808df41c1df",
+    "upstreamRows": 809,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ipdpdd-age-gender-en.json",
+    "url": "https://www.ha.org.hk/opendata/ipdpdd-age-gender-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "21661a057687c34f2fdf0f324babab7c3cb34289830781b5b56d8a166edefe9c",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ipdpdd-age-gender-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ipdpdd-age-gender-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "2f84eab089ae9a9e80a8c4134f3fbbf79c40a0deb56f12b0ebc33f08249778c6",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ipdpdd-age-gender-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ipdpdd-age-gender-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "6049bfd38c1aa45ebccc589480d23a2a74a5824c576e7b610b908ea5e7f08edc",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-patientday-en.json",
+    "url": "https://www.ha.org.hk/opendata/patientday-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "9176e4bd57d3e5b0328a73645a26491b47f66dc53ae6a8f6d90681b554c050b6",
+    "upstreamRows": 809,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-patientday-tc.json",
+    "url": "https://www.ha.org.hk/opendata/patientday-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "7d3641da3c9ba54b91d1a3e66f26173053b558e81aa8875f1df46cfce030aeda",
+    "upstreamRows": 809,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-patientday-sc.json",
+    "url": "https://www.ha.org.hk/opendata/patientday-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "fa44ee6dd18e5c5fcf0f91b3f9444786175edb5779147fb147c3a8aba68ac40c",
+    "upstreamRows": 809,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-patientday-age-gender-en.json",
+    "url": "https://www.ha.org.hk/opendata/patientday-age-gender-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "9b6b9de5ce1fc15680cd4e2cb781354e834f1e9f23774a6525b2991091d1125e",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-patientday-age-gender-tc.json",
+    "url": "https://www.ha.org.hk/opendata/patientday-age-gender-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "0203801f838f21f552fb90208be27cf9dd979413a63eaf8e89bcbb02eaf3d5d7",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-patientday-age-gender-sc.json",
+    "url": "https://www.ha.org.hk/opendata/patientday-age-gender-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "aed8c2a5271b4b361596a5c98684f3fa18e4a52e686b8738bc9f21ebb1064b91",
+    "upstreamRows": 150,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ip-genspec-en.json",
+    "url": "https://www.ha.org.hk/opendata/ip-genspec-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "b5e67d02b6e1181b2523019bf136017937c11c6a352b0c8aea0c726af3780afe",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ip-genspec-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ip-genspec-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "bd305c730d0763b14179db0c1d2132857602192f313045c03d57268bd9bd416c",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ip-genspec-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ip-genspec-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "47034ccdd3db63457a9c3bfb2d5e3fe0d8b697bd5585eddc1d9bc3b784e1089d",
+    "upstreamRows": 136,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ahip-attnd-en.json",
+    "url": "https://www.ha.org.hk/opendata/ahip-attnd-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "6e50fcbaa915337af2db41f20ef7330eac9c21316d1b5950e2879de4c50cdbeb",
+    "upstreamRows": 7356,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ahip-attnd-tc.json",
+    "url": "https://www.ha.org.hk/opendata/ahip-attnd-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "640d112776255d3b7db66ca9aae27d49b7d485593c36a9d0ed5e440402d08ac7",
+    "upstreamRows": 7356,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-ahip-attnd-sc.json",
+    "url": "https://www.ha.org.hk/opendata/ahip-attnd-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "7ebb93be0a82286a6f21769dfd04567d1678e3604f3ad4d9a2027bc6488f92a9",
+    "upstreamRows": 7356,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-operation-done-inside-OT-en.json",
+    "url": "https://www.ha.org.hk/opendata/operation-done-inside-OT-en.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "859fe77a49c65fa9b5f4ecde36c9c031ff3816aeefa84c649964da648b1ad456",
+    "upstreamRows": 528,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-operation-done-inside-OT-tc.json",
+    "url": "https://www.ha.org.hk/opendata/operation-done-inside-OT-tc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "32f1bca80540cd76ccfe70ed6718f859f9ef6c543e3e681406fef10bc421b8e1",
+    "upstreamRows": 528,
+    "fixtureRows": 6
+  },
+  {
+    "file": "ha_inpatient_throughput-operation-done-inside-OT-sc.json",
+    "url": "https://www.ha.org.hk/opendata/operation-done-inside-OT-sc.json",
+    "capturedAt": "2026-10-22",
+    "upstreamSha256": "21608c65be8d04a32d7e70f80652681a02b1ea49eb359d901061f6bbf8abc3de",
+    "upstreamRows": 528,
+    "fixtureRows": 6
+  }
+]

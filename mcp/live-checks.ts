@@ -52,6 +52,16 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Health batch 027: published directories and structured downloads
+  health_dhc_express: { input: { limit: 2 }, check: nonEmptyPage },
+  health_women_wellness_satellites: { input: { limit: 2 }, check: nonEmptyPage },
+  ha_specialist_waiting_times: { input: { limit: 2 }, check: nonEmptyPage },
+  ha_chinese_medicine_centres: { input: { limit: 2 }, check: nonEmptyPage },
+  ha_healthcare_facilities: { input: { limit: 2 }, check: nonEmptyPage },
+  ha_ambulatory_community_throughput: { input: { limit: 2 }, check: nonEmptyPage },
+  ha_chinese_medicine_throughput: { input: { limit: 2 }, check: nonEmptyPage },
+  ha_inpatient_throughput: { input: { limit: 2 }, check: nonEmptyPage },
+
   // Health batch 025: verified subset
   health_hiv_aids_by_sex: { input: { limit: 2 }, check: nonEmptyPage },
   health_school_immunisation: { input: { limit: 2 }, check: nonEmptyPage },

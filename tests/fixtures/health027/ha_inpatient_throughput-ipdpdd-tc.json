@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Hospital": "舂磡角慈氏護養院",
+    "IP Discharges and Deaths": 246,
+    "DP Discharges and Deaths": null,
+    "IP and DP Discharges and Deaths": 246
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Hospital": "東區尤德夫人那打素醫院",
+    "IP Discharges and Deaths": 73645,
+    "DP Discharges and Deaths": 32270,
+    "IP and DP Discharges and Deaths": 105915
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Hospital": "律敦治及鄧肇堅醫院",
+    "IP Discharges and Deaths": 20877,
+    "DP Discharges and Deaths": 1986,
+    "IP and DP Discharges and Deaths": 22863
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Hospital": "屯門醫院",
+    "IP Discharges and Deaths": 101867,
+    "DP Discharges and Deaths": 68168,
+    "IP and DP Discharges and Deaths": 170035
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Hospital": "小計(新界西醫院聯網)",
+    "IP Discharges and Deaths": 159721,
+    "DP Discharges and Deaths": 107922,
+    "IP and DP Discharges and Deaths": 267643
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Hospital": "合計",
+    "IP Discharges and Deaths": 1152078,
+    "DP Discharges and Deaths": 863855,
+    "IP and DP Discharges and Deaths": 2015933
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "柴灣普通科門診診所",
+    "Major Specialty": "合計",
+    "SOP Clinical Attendances": 64
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "東區尤德夫人那打素醫院",
+    "Major Specialty": "耳鼻喉科",
+    "SOP Clinical Attendances": 29393
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Clinic": "東區尤德夫人那打素醫院",
+    "Major Specialty": "婦科",
+    "SOP Clinical Attendances": 31488
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Clinic": "合計",
+    "Major Specialty": "精神科",
+    "SOP Clinical Attendances": 1024287
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Clinic": "合計",
+    "Major Specialty": "外科",
+    "SOP Clinical Attendances": 1048733
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Clinic": "合計",
+    "Major Specialty": "合計",
+    "SOP Clinical Attendances": 8688753
+  }
+]

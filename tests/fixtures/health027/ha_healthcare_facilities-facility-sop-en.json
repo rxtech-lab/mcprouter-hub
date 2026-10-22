@@ -1,0 +1,80 @@
+[
+  {
+    "cluster_eng": "Hong Kong Island Cluster",
+    "institution_eng": "Cheshire Home, Chung Hom Kok",
+    "address_eng": "128 Chung Hom Kok Road, HK",
+    "cluster_tc": "香港島醫院聯網",
+    "institution_tc": "舂磡角慈氏護養院",
+    "address_tc": "香港舂磡角道128號",
+    "cluster_sc": "香港岛医院联网",
+    "institution_sc": "舂磡角慈氏护养院",
+    "address_sc": "香港舂磡角道128号",
+    "latitude": 22.212024,
+    "longitude": 114.1973
+  },
+  {
+    "cluster_eng": "Hong Kong Island Cluster",
+    "institution_eng": "David Trench Rehabilitation Centre",
+    "address_eng": "No. 1F, High Street, Hong Kong",
+    "cluster_tc": "香港島醫院聯網",
+    "institution_tc": "戴麟趾康復中心",
+    "address_tc": "香港高街一號F",
+    "cluster_sc": "香港岛医院联网",
+    "institution_sc": "戴麟趾康复中心",
+    "address_sc": "香港高街一号F",
+    "latitude": 22.285424,
+    "longitude": 114.14532
+  },
+  {
+    "cluster_eng": "Hong Kong Island Cluster",
+    "institution_eng": "Grantham Hospital",
+    "address_eng": "125 Wong Chuk Hang Road, Aberdeen, HK",
+    "cluster_tc": "香港島醫院聯網",
+    "institution_tc": "葛量洪醫院",
+    "address_tc": "香港仔黃竹坑道125號",
+    "cluster_sc": "香港岛医院联网",
+    "institution_sc": "葛量洪医院",
+    "address_sc": "香港仔黄竹坑道125号",
+    "latitude": 22.251156,
+    "longitude": 114.17316
+  },
+  {
+    "cluster_eng": "New Territories West Cluster",
+    "institution_eng": "Tin Shui Wai Hospital",
+    "address_eng": "11 Tin Tan Street, Tin Shui Wai, NT",
+    "cluster_tc": "新界西醫院聯網",
+    "institution_tc": "天水圍醫院",
+    "address_tc": "新界天水圍天壇街11號",
+    "cluster_sc": "新界西医院联网",
+    "institution_sc": "天水围医院",
+    "address_sc": "新界天水围天坛街11号",
+    "latitude": 22.458704,
+    "longitude": 113.99585
+  },
+  {
+    "cluster_eng": "New Territories West Cluster",
+    "institution_eng": "Tuen Mun Eye Centre",
+    "address_eng": "4 Tuen Lee Street, Tuen Mun, NT",
+    "cluster_tc": "新界西醫院聯網",
+    "institution_tc": "屯門眼科中心",
+    "address_tc": "新界屯門屯利街4號",
+    "cluster_sc": "新界西医院联网",
+    "institution_sc": "屯门眼科中心",
+    "address_sc": "新界屯门屯利街4号",
+    "latitude": 22.390855,
+    "longitude": 113.97899
+  },
+  {
+    "cluster_eng": "New Territories West Cluster",
+    "institution_eng": "Tuen Mun Hospital",
+    "address_eng": "23 Tsing Chung Koon Road, Tuen Mun, NT",
+    "cluster_tc": "新界西醫院聯網",
+    "institution_tc": "屯門醫院",
+    "address_tc": "新界屯門青松觀路23號",
+    "cluster_sc": "新界西医院联网",
+    "institution_sc": "屯门医院",
+    "address_sc": "新界屯门青松观路23号",
+    "latitude": 22.40708,
+    "longitude": 113.97621
+  }
+]

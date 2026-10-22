@@ -1,0 +1,56 @@
+[
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "Hong Kong East Cluster",
+    "specialty": "Ear, Nose, Throat",
+    "Category": "Urgent Case - Median",
+    "Description": "Median Waiting Time for New Case Booking for Specialist Out-patient Services",
+    "Value": "Less than 1 week"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "Hong Kong West Cluster",
+    "specialty": "Ear, Nose, Throat",
+    "Category": "Urgent Case - Median",
+    "Description": "Median Waiting Time for New Case Booking for Specialist Out-patient Services",
+    "Value": "Less than 1 week"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "Kowloon East Cluster",
+    "specialty": "Ear, Nose, Throat",
+    "Category": "Urgent Case - Median",
+    "Description": "Median Waiting Time for New Case Booking for Specialist Out-patient Services",
+    "Value": "Less than 1 week"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "Overall (HA)",
+    "specialty": "Surgery",
+    "Category": "Stable Case",
+    "Description": "Percentage of SOP New Booking Case",
+    "Value": "75%"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "Overall (HA)",
+    "specialty": "Surgery",
+    "Category": "Overall",
+    "Description": "Number of SOP New Booking Case",
+    "Value": "186,075"
+  },
+  {
+    "date_id_from": 20250701,
+    "date_id_to": 20260630,
+    "cluster": "Overall (HA)",
+    "specialty": "Surgery",
+    "Category": "Next Update Date",
+    "Description": "Next Update Date",
+    "Value": "30 October 2026"
+  }
+]

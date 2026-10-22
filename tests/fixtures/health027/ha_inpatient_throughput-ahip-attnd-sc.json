@@ -1,0 +1,44 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "舂磡角慈氏护养院",
+    "AH Department": "营养膳食",
+    "AH IP & DP Attendances": 266
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "舂磡角慈氏护养院",
+    "AH Department": "医务社会工作",
+    "AH IP & DP Attendances": 2553
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "舂磡角慈氏护养院",
+    "AH Department": "职业治疗",
+    "AH IP & DP Attendances": 17664
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Hospital": "合计",
+    "AH Department": "义肢矫形",
+    "AH IP & DP Attendances": 106868
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Hospital": "合计",
+    "AH Department": "言语治疗",
+    "AH IP & DP Attendances": 329681
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Hospital": "合计",
+    "AH Department": "合计",
+    "AH IP & DP Attendances": 7737094
+  }
+]

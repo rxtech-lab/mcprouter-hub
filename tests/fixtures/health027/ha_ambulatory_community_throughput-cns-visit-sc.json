@@ -1,0 +1,32 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Community Nurse Attendances": 99111
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛西医院联网",
+    "Community Nurse Attendances": 49718
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "九龙中医院联网",
+    "Community Nurse Attendances": 61843
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界东医院联网",
+    "Community Nurse Attendances": 143153
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西医院联网",
+    "Community Nurse Attendances": 108167
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Community Nurse Attendances": 949199
+  }
+]

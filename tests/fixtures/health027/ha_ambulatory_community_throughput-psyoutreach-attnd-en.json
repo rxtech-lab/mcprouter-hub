@@ -1,0 +1,32 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong East Cluster",
+    "Psychiatric Outreach Attendances": 12672
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Hong Kong West Cluster",
+    "Psychiatric Outreach Attendances": 5085
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "Kowloon Central Cluster",
+    "Psychiatric Outreach Attendances": 7338
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories East Cluster",
+    "Psychiatric Outreach Attendances": 53607
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "New Territories West Cluster",
+    "Psychiatric Outreach Attendances": 74017
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "Overall",
+    "Psychiatric Outreach Attendances": 365149
+  }
+]

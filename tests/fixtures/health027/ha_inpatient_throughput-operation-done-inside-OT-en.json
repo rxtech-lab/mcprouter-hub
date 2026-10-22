@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Cluster": "Hong Kong East Cluster",
+    "Operation Magnitude": "Ultra-major",
+    "No. of Operations done inside OT": 2065
+  },
+  {
+    "Financial Year": "2015-16",
+    "Cluster": "Hong Kong East Cluster",
+    "Operation Magnitude": "Major",
+    "No. of Operations done inside OT": 9449
+  },
+  {
+    "Financial Year": "2015-16",
+    "Cluster": "Hong Kong East Cluster",
+    "Operation Magnitude": "Intermediate",
+    "No. of Operations done inside OT": 3546
+  },
+  {
+    "Financial Year": "2025-26",
+    "Cluster": "Overall",
+    "Operation Magnitude": "Minor",
+    "No. of Operations done inside OT": 50595
+  },
+  {
+    "Financial Year": "2025-26",
+    "Cluster": "Overall",
+    "Operation Magnitude": "Unclassified",
+    "No. of Operations done inside OT": 1639
+  },
+  {
+    "Financial Year": "2025-26",
+    "Cluster": "Overall",
+    "Operation Magnitude": "Overall",
+    "No. of Operations done inside OT": 204473
+  }
+]

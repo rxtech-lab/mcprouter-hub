@@ -1,0 +1,32 @@
+[
+  {
+    "Financial Year": "2022-23",
+    "CMCTR": "東華三院 - 香港大學中醫診所暨教研中心(中西區)",
+    "CMCTR attendances": 101111
+  },
+  {
+    "Financial Year": "2022-23",
+    "CMCTR": "東華三院 - 香港大學中醫診所暨教研中心(東區)",
+    "CMCTR attendances": 115531
+  },
+  {
+    "Financial Year": "2022-23",
+    "CMCTR": "仁愛堂 - 香港大學中醫診所暨教研中心(離島區)",
+    "CMCTR attendances": 94994
+  },
+  {
+    "Financial Year": "2024-25",
+    "CMCTR": "博愛醫院 - 香港浸會大學中醫診所暨教研中心(油尖旺區)",
+    "CMCTR attendances": 82502
+  },
+  {
+    "Financial Year": "2024-25",
+    "CMCTR": "博愛醫院 - 香港中文大學中醫診所暨教研中心(元朗區)",
+    "CMCTR attendances": 95760
+  },
+  {
+    "Financial Year": "2024-25",
+    "CMCTR": "合計",
+    "CMCTR attendances": 1590593
+  }
+]

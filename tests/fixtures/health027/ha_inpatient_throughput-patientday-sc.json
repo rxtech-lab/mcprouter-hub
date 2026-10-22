@@ -1,0 +1,50 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "舂磡角慈氏护养院",
+    "IP Patient Days": 77763,
+    "DP Discharges and Deaths": null,
+    "Patient Days": 77763
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "东区尤德夫人那打素医院",
+    "IP Patient Days": 422245,
+    "DP Discharges and Deaths": 32270,
+    "Patient Days": 454515
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港岛东医院联网",
+    "Hospital": "律敦治及邓肇坚医院",
+    "IP Patient Days": 173225,
+    "DP Discharges and Deaths": 1986,
+    "Patient Days": 175211
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西医院联网",
+    "Hospital": "屯门医院",
+    "IP Patient Days": 699328,
+    "DP Discharges and Deaths": 68168,
+    "Patient Days": 767496
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西医院联网",
+    "Hospital": "小计(新界西医院联网)",
+    "IP Patient Days": 1440316,
+    "DP Discharges and Deaths": 107922,
+    "Patient Days": 1548238
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合计",
+    "Hospital": "合计",
+    "IP Patient Days": 8773115,
+    "DP Discharges and Deaths": 863855,
+    "Patient Days": 9636970
+  }
+]

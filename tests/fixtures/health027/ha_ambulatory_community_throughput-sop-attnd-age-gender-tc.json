@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18歲以下",
+    "Gender": "女性",
+    "SOP Clinical Attendances": 212465
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18歲以下",
+    "Gender": "男性",
+    "SOP Clinical Attendances": 312036
+  },
+  {
+    "Financial Year": "2015-16",
+    "Age Group": "18歲以下",
+    "Gender": "合計",
+    "SOP Clinical Attendances": 524501
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合計",
+    "Gender": "女性",
+    "SOP Clinical Attendances": 4908408
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合計",
+    "Gender": "男性",
+    "SOP Clinical Attendances": 3780345
+  },
+  {
+    "Financial Year": "2024-25",
+    "Age Group": "合計",
+    "Gender": "合計",
+    "SOP Clinical Attendances": 8688753
+  }
+]

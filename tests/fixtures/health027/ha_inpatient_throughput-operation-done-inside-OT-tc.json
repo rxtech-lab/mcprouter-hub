@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2015-16",
+    "Cluster": "港島東醫院聯網",
+    "Operation Magnitude": "超大型",
+    "No. of Operations done inside OT": 2065
+  },
+  {
+    "Financial Year": "2015-16",
+    "Cluster": "港島東醫院聯網",
+    "Operation Magnitude": "大型",
+    "No. of Operations done inside OT": 9449
+  },
+  {
+    "Financial Year": "2015-16",
+    "Cluster": "港島東醫院聯網",
+    "Operation Magnitude": "中型",
+    "No. of Operations done inside OT": 3546
+  },
+  {
+    "Financial Year": "2025-26",
+    "Cluster": "合計",
+    "Operation Magnitude": "小型",
+    "No. of Operations done inside OT": 50595
+  },
+  {
+    "Financial Year": "2025-26",
+    "Cluster": "合計",
+    "Operation Magnitude": "未分類",
+    "No. of Operations done inside OT": 1639
+  },
+  {
+    "Financial Year": "2025-26",
+    "Cluster": "合計",
+    "Operation Magnitude": "合計",
+    "No. of Operations done inside OT": 204473
+  }
+]

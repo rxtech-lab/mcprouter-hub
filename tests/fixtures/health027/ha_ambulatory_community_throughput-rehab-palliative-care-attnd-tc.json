@@ -1,0 +1,38 @@
+[
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Hospital": "東區尤德夫人那打素醫院",
+    "Rehab & Palliative Care Day Attd": 1506
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Hospital": "律敦治及鄧肇堅醫院",
+    "Rehab & Palliative Care Day Attd": 3168
+  },
+  {
+    "Financial Year": "2008-09",
+    "Cluster": "港島東醫院聯網",
+    "Hospital": "鄧肇堅醫院社區日間醫療中心",
+    "Rehab & Palliative Care Day Attd": 3760
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Hospital": "屯門醫院",
+    "Rehab & Palliative Care Day Attd": 4585
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "新界西醫院聯網",
+    "Hospital": "小計(新界西醫院聯網)",
+    "Rehab & Palliative Care Day Attd": 5878
+  },
+  {
+    "Financial Year": "2024-25",
+    "Cluster": "合計",
+    "Hospital": "合計",
+    "Rehab & Palliative Care Day Attd": 110418
+  }
+]
