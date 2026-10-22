@@ -1818,8 +1818,12 @@ msgid "Everything Hongkongers check on their phone"
 msgstr "香港人每日在手機上查看的一切"
 
 #: app/page.tsx
-msgid "Read more about the data sources"
-msgstr "進一步了解數據來源"
+msgid "Showing {shown} of {total} services. Visit the services page to browse the full catalogue."
+msgstr "顯示 {total} 項服務中的 {shown} 項。前往服務頁面瀏覽完整目錄。"
+
+#: app/page.tsx
+msgid "View all services"
+msgstr "查看所有服務"
 
 #: app/page.tsx
 msgid "Search all providers"

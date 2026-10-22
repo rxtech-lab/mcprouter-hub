@@ -1,8 +1,12 @@
 import { expect, test } from "@playwright/test";
+import manifest from "../generated/manifest.json";
 
 test("data sources: services, a service's tools, and provider search", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("link", { name: "Read more about the data sources" }).click();
+  const services = page.locator("#services");
+  await expect(services.locator("li")).toHaveCount(Math.min(30, manifest.services.length));
+  await expect(services).toContainText(`Showing ${Math.min(30, manifest.services.length)} of ${manifest.services.length} services`);
+  await page.getByRole("link", { name: "View all services" }).click();
   await expect(page.getByRole("heading", { name: "Data sources" })).toBeVisible();
 
   await page.getByRole("link", { name: /Hong Kong Weather & Warnings MCP/ }).click();
