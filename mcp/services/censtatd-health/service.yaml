@@ -1,0 +1,406 @@
+id: censtatd-health
+title: Hong Kong Health Statistics
+description: C&SD notifiable disease cases and deaths, healthcare professionals, hospital
+  institutions and beds, and health expenditure.
+apis:
+- API-0837
+- API-0838
+- API-0839
+- API-0840
+- API-0841
+datasets:
+- hk-censtatd-tablechart-930-92081
+- hk-censtatd-tablechart-930-92081a
+- hk-censtatd-tablechart-930-92082
+- hk-censtatd-tablechart-930-92083
+- hk-censtatd-tablechart-930-92084
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+- name: health_notifiable_diseases
+  title: Number of notifiable infectious diseases
+  description: Number of notifiable infectious diseases. Official C&SD Table 930-92081.
+    Newest observations first. Preserve original figure, units, flags and notes. Totals
+    overlap children; hospital-bed series A/B have different definitions. Expenditure
+    excludes specified capital projects; consult notes and preserve financial-year
+    codes.
+  path: /get.php
+  query:
+    id: 930-92081
+    full_series: 1
+  transform:
+    response: normalize
+  input:
+    freq:
+      type: string
+      enum:
+      - Y
+      in: local
+      description: Y annual; Q calendar quarter, where available
+    period:
+      type: string
+      pattern: ^\d{4}$
+      in: local
+      description: Provider year or quarter code; a year matches all quarters. Expenditure
+        uses provider financial-year start code.
+    indicator:
+      type: string
+      enum:
+      - NOTIFI_DISEASES
+      in: local
+      description: Separate statistical series; do not combine totals, children, counts
+        and ratios
+    ICD10:
+      type: string
+      enum:
+      - TOTAL
+      - A00
+      - A01.0
+      - A01.1-01.4
+      - A03
+      - A05.1
+      - A06.0
+      - A15-19_B90
+      - A20
+      - A22
+      - A24.1
+      - A27
+      - A30
+      - A32
+      - A35
+      - A36
+      - A37.0
+      - A38
+      - A39
+      - A40.3_B95.3_G00.1_J13_M00.1
+      - A48.1
+      - A68
+      - A70
+      - A75_77_79.1_79.8_79.9
+      - A78
+      - A80
+      - A81.0
+      - A82
+      - A83.0
+      - A90-91
+      - A92.0
+      - A92.3
+      - A92.4_93.0-93.2_96_98-99
+      - A92.5
+      - A95
+      - A98.5_B33.4
+      - B01
+      - B03
+      - B04
+      - B05
+      - B06_P35.0
+      - B15-17_19
+      - 'B26 '
+      - B50-54
+      - B96.2
+      - DH_CS
+      - DH_EV
+      - DH_FP
+      - DH_IA
+      - DH_NC
+      - DH_SS
+      - G00.0_A41.3
+      - U04
+      - U07.1-07.2
+      in: local
+      description: Exact provider ICD10 code; TOTAL maps to the empty source code.
+        Source labels retained.
+    limit: &id001
+      type: integer
+      minimum: 1
+      maximum: 100
+      default: 20
+      in: local
+      description: Maximum records per page; also bounded to 100 KB
+    offset: &id002
+      type: integer
+      minimum: 0
+      maximum: 1000000
+      default: 0
+      in: local
+      description: Continue with nextOffset and identical filters
+    lang:
+      type: string
+      enum:
+      - en
+      - tc
+      - sc
+      default: en
+      in: local
+      description: Only published languages; original source fields retained
+- name: health_notifiable_disease_deaths
+  title: Number of deaths of notifiable infectious diseases
+  description: Number of deaths of notifiable infectious diseases. Official C&SD Table
+    930-92081A. Newest observations first. Preserve original figure, units, flags
+    and notes. Totals overlap children; hospital-bed series A/B have different definitions.
+    Expenditure excludes specified capital projects; consult notes and preserve financial-year
+    codes.
+  path: /get.php
+  query:
+    id: 930-92081A
+    full_series: 1
+  transform:
+    response: normalize
+  input:
+    freq:
+      type: string
+      enum:
+      - Q
+      - Y
+      in: local
+      description: Y annual; Q calendar quarter, where available
+    period:
+      type: string
+      pattern: ^\d{4}(03|06|09|12)?$
+      in: local
+      description: Provider year or quarter code; a year matches all quarters. Expenditure
+        uses provider financial-year start code.
+    indicator:
+      type: string
+      enum:
+      - DEATH
+      in: local
+      description: Separate statistical series; do not combine totals, children, counts
+        and ratios
+    ICD10:
+      type: string
+      enum:
+      - A05.1
+      - A15-19_B90
+      - A24.1
+      - A32
+      - A37.0
+      - A39
+      - A40.3_B95.3_G00.1_J13_M00.1
+      - A48.1
+      - A70
+      - A75_77_79.1_79.8_79.9
+      - A81.0
+      - A90-91
+      - A92.0
+      - B01
+      - B15-17_19
+      - B50-54
+      - DEATH_NOTIFI_DISEASES
+      - DH_CS
+      - DH_SS
+      - U07.1-07.2
+      in: local
+      description: Exact provider ICD10 code; TOTAL maps to the empty source code.
+        Source labels retained.
+    limit: *id001
+    offset: *id002
+    lang:
+      type: string
+      enum:
+      - en
+      - tc
+      - sc
+      default: en
+      in: local
+      description: Only published languages; original source fields retained
+- name: health_registered_professionals
+  title: Number of registered healthcare professionals
+  description: Number of registered healthcare professionals. Official C&SD Table
+    930-92082. Newest observations first. Preserve original figure, units, flags and
+    notes. Totals overlap children; hospital-bed series A/B have different definitions.
+    Expenditure excludes specified capital projects; consult notes and preserve financial-year
+    codes.
+  path: /get.php
+  query:
+    id: 930-92082
+    full_series: 1
+  transform:
+    response: normalize
+  input:
+    freq:
+      type: string
+      enum:
+      - Y
+      in: local
+      description: Y annual; Q calendar quarter, where available
+    period:
+      type: string
+      pattern: ^\d{4}$
+      in: local
+      description: Provider year or quarter code; a year matches all quarters. Expenditure
+        uses provider financial-year start code.
+    indicator:
+      type: string
+      enum:
+      - REG_H_PRO
+      in: local
+      description: Separate statistical series; do not combine totals, children, counts
+        and ratios
+    OCC:
+      type: string
+      enum:
+      - CHIROP
+      - CMP_LIMITE
+      - CMP_LIST
+      - CMP_REG
+      - DENTAL_HY
+      - DENTIST
+      - DOCTORS
+      - ENROL_NURSE
+      - EN_GENERAL
+      - EN_PSYCHI
+      - MED_LAB_TECH
+      - MIDWIVES
+      - OCCUP_THER
+      - OPTOMET
+      - PHARMACIST
+      - PHYSIO
+      - RAD_DIA_THER
+      - REG_NURSE
+      - RN_GENERAL
+      - RN_MENTAL_SUBNOR
+      - RN_PSYCHI
+      - RN_SICK_CHILD
+      in: local
+      description: Exact provider OCC code; TOTAL maps to the empty source code. Source
+        labels retained.
+    limit: *id001
+    offset: *id002
+    lang:
+      type: string
+      enum:
+      - en
+      - tc
+      - sc
+      default: en
+      in: local
+      description: Only published languages; original source fields retained
+- name: health_hospital_institutions_beds
+  title: Medical institutions with hospital beds by area and type of institution
+  description: Medical institutions with hospital beds by area and type of institution.
+    Official C&SD Table 930-92083. Newest observations first. Preserve original figure,
+    units, flags and notes. Totals overlap children; hospital-bed series A/B have
+    different definitions. Expenditure excludes specified capital projects; consult
+    notes and preserve financial-year codes.
+  path: /get.php
+  query:
+    id: 930-92083
+    full_series: 1
+  transform:
+    response: normalize
+  input:
+    freq:
+      type: string
+      enum:
+      - Y
+      in: local
+      description: Y annual; Q calendar quarter, where available
+    period:
+      type: string
+      pattern: ^\d{4}$
+      in: local
+      description: Provider year or quarter code; a year matches all quarters. Expenditure
+        uses provider financial-year start code.
+    indicator:
+      type: string
+      enum:
+      - BED_PTP_A
+      - BED_PTP_B
+      - HOSP_BED
+      - MED_HOSP_BED
+      in: local
+      description: Separate statistical series; do not combine totals, children, counts
+        and ratios
+    DC:
+      type: string
+      enum:
+      - TOTAL
+      - HK
+      - KLN
+      - NT
+      in: local
+      description: Exact provider DC code; TOTAL maps to the empty source code. Source
+        labels retained.
+    TYPE_INS:
+      type: string
+      enum:
+      - TOTAL
+      - HA_HOSP
+      - HOSP_CORR_INS
+      - NUR_HOME
+      - PRIVATE_HOSP
+      in: local
+      description: Exact provider TYPE_INS code; TOTAL maps to the empty source code.
+        Source labels retained.
+    limit: *id001
+    offset: *id002
+    lang:
+      type: string
+      enum:
+      - en
+      - tc
+      - sc
+      default: en
+      in: local
+      description: Only published languages; original source fields retained
+- name: health_public_expenditure
+  title: Expenditure of Department of Health and Hospital Authority
+  description: Expenditure of Department of Health and Hospital Authority. Official
+    C&SD Table 930-92084. Newest observations first. Preserve original figure, units,
+    flags and notes. Totals overlap children; hospital-bed series A/B have different
+    definitions. Expenditure excludes specified capital projects; consult notes and
+    preserve financial-year codes.
+  path: /get.php
+  query:
+    id: 930-92084
+    full_series: 1
+  transform:
+    response: normalize
+  input:
+    freq:
+      type: string
+      enum:
+      - Y
+      in: local
+      description: Y annual; Q calendar quarter, where available
+    period:
+      type: string
+      pattern: ^\d{4}$
+      in: local
+      description: Provider year or quarter code; a year matches all quarters. Expenditure
+        uses provider financial-year start code.
+    indicator:
+      type: string
+      enum:
+      - EXP
+      in: local
+      description: Separate statistical series; do not combine totals, children, counts
+        and ratios
+    TYPE_INS:
+      type: string
+      enum:
+      - TOTAL
+      - DH
+      - HA
+      - MED_SUB_DH
+      in: local
+      description: Exact provider TYPE_INS code; TOTAL maps to the empty source code.
+        Source labels retained.
+    limit: *id001
+    offset: *id002
+    lang:
+      type: string
+      enum:
+      - en
+      - tc
+      - sc
+      default: en
+      in: local
+      description: Only published languages; original source fields retained

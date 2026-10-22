@@ -1,0 +1,136 @@
+[
+  {
+    "id": "API-3368",
+    "service": "pland-site-wind",
+    "tool": "pland_site_wind_grids",
+    "title": "Site Wind Availability Data",
+    "dataset": "hk-pland-pland1-site-wind-availability-data",
+    "kind": "spatial",
+    "layer": "pland_rcd_1634281652589_43389",
+    "fields": [],
+    "names": {},
+    "languages": []
+  },
+  {
+    "id": "API-0072",
+    "service": "afcd-boarding",
+    "tool": "afcd_boarding_establishments",
+    "title": "Licensed Boarding Establishment",
+    "dataset": "hk-afcd-afcdlist-boardingest",
+    "kind": "spatial",
+    "layer": "afcd_rcd_1759905192669_52213",
+    "fields": [
+      "Shop_Name"
+    ],
+    "names": {
+      "en": "Shop_Name",
+      "tc": "Shop_Name"
+    },
+    "languages": [
+      "en",
+      "tc"
+    ]
+  },
+  {
+    "id": "API-0102",
+    "service": "afcd-pesticides",
+    "tool": "afcd_pesticide_licensees",
+    "title": "Location of Pesticides Licensees",
+    "dataset": "hk-afcd-afcdlist-pesticideslicenseeloc",
+    "kind": "spatial",
+    "layer": "afcd_rcd_1635134709276_98320",
+    "fields": [
+      "CompanyName",
+      "CompanyNameChi"
+    ],
+    "names": {
+      "en": "CompanyName",
+      "tc": "CompanyNameChi"
+    },
+    "languages": [
+      "en",
+      "tc"
+    ]
+  },
+  {
+    "id": "API-0837",
+    "service": "censtatd-health",
+    "tool": "health_notifiable_diseases",
+    "title": "Number of notifiable infectious diseases",
+    "dataset": "hk-censtatd-tablechart-930-92081",
+    "kind": "census",
+    "table": "930-92081",
+    "languages": [
+      "en",
+      "tc",
+      "sc"
+    ]
+  },
+  {
+    "id": "API-0838",
+    "service": "censtatd-health",
+    "tool": "health_notifiable_disease_deaths",
+    "title": "Number of deaths of notifiable infectious diseases",
+    "dataset": "hk-censtatd-tablechart-930-92081a",
+    "kind": "census",
+    "table": "930-92081A",
+    "languages": [
+      "en",
+      "tc",
+      "sc"
+    ]
+  },
+  {
+    "id": "API-0839",
+    "service": "censtatd-health",
+    "tool": "health_registered_professionals",
+    "title": "Number of registered healthcare professionals",
+    "dataset": "hk-censtatd-tablechart-930-92082",
+    "kind": "census",
+    "table": "930-92082",
+    "languages": [
+      "en",
+      "tc",
+      "sc"
+    ]
+  },
+  {
+    "id": "API-0840",
+    "service": "censtatd-health",
+    "tool": "health_hospital_institutions_beds",
+    "title": "Medical institutions with hospital beds by area and type of institution",
+    "dataset": "hk-censtatd-tablechart-930-92083",
+    "kind": "census",
+    "table": "930-92083",
+    "languages": [
+      "en",
+      "tc",
+      "sc"
+    ]
+  },
+  {
+    "id": "API-0841",
+    "service": "censtatd-health",
+    "tool": "health_public_expenditure",
+    "title": "Expenditure of Department of Health and Hospital Authority",
+    "dataset": "hk-censtatd-tablechart-930-92084",
+    "kind": "census",
+    "table": "930-92084",
+    "languages": [
+      "en",
+      "tc",
+      "sc"
+    ]
+  },
+  {
+    "id": "API-3602",
+    "service": "towngas-environment",
+    "tool": "towngas_environment_performance",
+    "title": "Towngas Environmental Performance Data",
+    "dataset": "towngas-towngas-environment",
+    "kind": "towngas",
+    "languages": [
+      "en"
+    ]
+  }
+]

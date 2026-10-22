@@ -1,0 +1,61 @@
+id: afcd-boarding
+title: Licensed Boarding Establishment
+description: Licensed Boarding Establishment from the official CSDI dataset.
+apis:
+- API-0072
+datasets:
+- hk-afcd-afcdlist-boardingest
+cacheTtl: 3600
+tools:
+- name: afcd_boarding_establishments
+  title: Licensed Boarding Establishment
+  description: Licensed Boarding Establishment. Bounded grid/directory records by
+    objectId or WGS84 bbox. Original source attributes retained; paginate with nextOffset.
+    Name follows lang; boarding shop names are published once, addresses are bilingual.
+  handler: query
+  timeoutMs: 30000
+  input:
+    objectId:
+      type: integer
+      minimum: 1
+      maximum: 2147483647
+      description: Exact source OBJECTID
+    bbox:
+      type: string
+      pattern: ^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$
+      description: WGS84 west,south,east,north; spatial intersection
+    geometry:
+      type: boolean
+      default: false
+      description: Include WGS84 geometry; oversized geometry explicitly omitted
+    limit:
+      type: integer
+      minimum: 1
+      maximum: 100
+      default: 20
+      in: local
+      description: Maximum records per page; also bounded to 100 KB
+    offset:
+      type: integer
+      minimum: 0
+      maximum: 1000000
+      default: 0
+      in: local
+      description: Continue with nextOffset and identical filters
+    search:
+      type: string
+      pattern: ^.{1,100}$
+      description: Text in one searchField; SQL LIKE wildcards % and _ supported
+    searchField:
+      type: string
+      enum:
+      - Shop_Name
+      description: One allowlisted field; defaults to the name in lang
+    lang:
+      type: string
+      enum:
+      - en
+      - tc
+      default: en
+      in: local
+      description: Only published languages; original source fields retained

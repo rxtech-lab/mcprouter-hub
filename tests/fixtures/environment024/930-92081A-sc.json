@@ -1,0 +1,5025 @@
+{
+    "header": {
+        "status": {
+            "name": "Success",
+            "code": 0,
+            "description": "Query success",
+            "apiHelp": "https:\/\/www.censtatd.gov.hk\/sc\/web_table.html?id=930-92081A&api_popup=1"
+        },
+        "title": "\u987b\u5448\u62a5\u7684\u4f20\u67d3\u75c5\u7684\u6b7b\u4ea1\u4eba\u6570",
+        "tablenote": [
+            "\u6b7b\u4ea1\u6570\u5b57\u4ee3\u8868\u671f\u5185\u5728\u5165\u5883\u4e8b\u52a1\u5904\u767b\u8bb0\u7684\u6b7b\u4ea1\u4eba\u6570\uff0c\u800c\u4e0d\u4f9d\u636e\u4e2a\u6848\u5448\u62a5\u536b\u751f\u7f72\u7684\u65e5\u671f\u3002  \u6570\u636e\u4e3a\u6682\u5b9a\u6570\u5b57\uff0c\u4f1a\u6839\u636e\u6700\u65b0\u8d44\u6599\u800c\u4f5c\u51fa\u4fee\u8ba2\u3002",
+            "\u75312022\u5e7411\u670811\u65e5\u8d77\uff0c\u300c\u7c7b\u9f3b\u75bd\u300d\u5217\u4e3a\u987b\u5448\u62a5\u7684\u4f20\u67d3\u75c5\u30022022\u5e741\u67081\u65e5\u81f311\u670810\u65e5\u671f\u95f4\u7684\u300c\u7c7b\u9f3b\u75bd\u300d\u4e2a\u6848\u6570\u5b57\u662f\u6839\u636e\u533b\u9662\u7ba1\u7406\u5c40\u5448\u62a5\u7684\u5b9e\u9a8c\u5ba4\u786e\u8bca\u6708\u4efd\u7edf\u8ba1\u3002",
+            "- \u4e0d\u9002\u7528"
+        ],
+        "source": "\u536b\u751f\u7f72\u536b\u751f\u9632\u62a4\u4e2d\u5fc3  (\u67e5\u8be2\u7535\u8bdd\uff1a 2125 2270   \u67e5\u8be2\u7535\u90ae\uff1a enquiry_chpweb@dh.gov.hk)",
+        "count": {
+            "noOfRecords": 500,
+            "started": "2026-10-22T08:04:08+00:00",
+            "finished": "2026-10-22T08:04:08+00:00",
+            "durationSeconds": 0.030249
+        }
+    },
+    "dataSet": [
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 169,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 8,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 9,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 269,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 70,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 36,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 104,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 62,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 44,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 56,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 34,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 45,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 55,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 64,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 183,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 13,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 11,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 9511,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 9291,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 52,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4794,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4732,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 38,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3487,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3445,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 47,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 405,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 347,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 46,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 825,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 767,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 173,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 15,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 14,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 10,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2822,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2594,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 44,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1347,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1290,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 41,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 838,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 783,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 45,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 442,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 383,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 43,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 195,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 138,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 171,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 11,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 8,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 924,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 720,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 35,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 364,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 320,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 39,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 266,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 221,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 46,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 210,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 155,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 51,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 84,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 24,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 162,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 23,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 10,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 483,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 267,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 50,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 12,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 96,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 27,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 30,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 237,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 195,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 42,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 92,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 38,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "\u8089\u6bd2\u4e2d\u6bd2",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "\u7ed3\u6838\u75c5",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 40,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "\u7c7b\u9f3b\u75bd",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "\u674e\u65af\u7279\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "\u767e\u65e5\u54b3",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "\u8111\u819c\u708e\u53cc\u7403\u83cc\u611f\u67d3\uff08\u4fb5\u5165\u6027\uff09",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "\u4fb5\u5165\u6027\u80ba\u708e\u7403\u83cc\u75c5",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "\u9000\u4f0d\u519b\u4eba\u75c5",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "\u9e66\u9e49\u70ed",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "\u6591\u75b9\u4f24\u5bd2\u53ca\u5176\u4ed6\u7acb\u514b\u6b21\u4f53\u75c5",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "\u514b\u96c5\u4e8c\u6c0f\u75c7",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "\u767b\u9769\u70ed",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "\u57fa\u5b54\u80af\u96c5\u70ed",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "\u6c34\u75d8",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "\u75c5\u6bd2\u6027\u809d\u708e",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "\u759f\u75be",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "\u4f20\u67d3\u75c5\u6b7b\u4ea1\u6570\u5b57",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 58,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "\u793e\u533a\u578b\u8010\u7532\u6c27\u897f\u6797\u91d1\u9ec4\u8461\u8404\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "\u732a\u94fe\u7403\u83cc\u611f\u67d3",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "2019\u51a0\u72b6\u75c5\u6bd2\u75c5",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "\u6570\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        }
+    ]
+}

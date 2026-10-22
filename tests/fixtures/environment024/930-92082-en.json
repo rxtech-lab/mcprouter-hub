@@ -1,0 +1,3111 @@
+{
+    "header": {
+        "status": {
+            "name": "Success",
+            "code": 0,
+            "description": "Query success",
+            "apiHelp": "https:\/\/www.censtatd.gov.hk\/en\/web_table.html?id=930-92082&api_popup=1"
+        },
+        "title": "Number of registered healthcare professionals",
+        "tablenote": [
+            "Figures are as at end of the year.  Annual renewal of practising certificate is required only for doctors, dentists, pharmacists, medical laboratory technologists, occupational therapists, optometrists, physiotherapists, radiographers and chiropractors. Registered Chinese medicine practitioners, registered nurses, enrolled nurses and midwives are required to renew the practising certificates every 3 years.",
+            "CMPs with limited registration are allowed to perform clinical teaching and research in Chinese medicine in specified educational and scientific research institutions. Their registration period should not exceed one year and they cannot engage in private practice with patients.",
+            "Listed CMPs can practise lawfully in Hong Kong under the transitional arrangements for the registration of CMPs until a date to be announced by the Secretary for Health in the Government Gazette. Listed CMPs may become registered CMPs through direct registration, registration assessment or the licensing examination during the transitional arrangements.",
+            "After full implementation of the Chinese Medicine Ordinance, all Chinese medicine practitioners (CMPs) should be registered before they can practise Chinese medicine in Hong Kong. Any person who wishes to be a registered CMP should have satisfactorily completed an approved undergraduate degree course of training in Chinese medicine practice, and taken and passed the licensing examination.",
+            "Figures refer to doctors with full registration on Resident and Non-resident List, or dentists with full registration on Practising and Non-practising List.",
+            "Figures do not include doctors registered under limited registration who are under an employment or a type of employment promulgated by the Medical Council, e.g. employment for the research or teaching by universities and employment of practising medicine at exempted clinics.",
+            "Figures refer to registered nurses and enrolled nurses with full registration\/enrolment.",
+            "Figures also include those registered nurses in the general stream possessing a post-basic qualification in midwifery.",
+            "Figures do not include radiographers\/diagnostic radiographers\/radiation therapists under limited registration."
+        ],
+        "source": "Department of Health  (Enquiry telephone no. : 3586 3804   Enquiry e-mail : enquiries@dh.gov.hk)",
+        "count": {
+            "noOfRecords": 308,
+            "started": "2026-10-22T08:03:24+00:00",
+            "finished": "2026-10-22T08:03:24+00:00",
+            "durationSeconds": 0.017875
+        }
+    },
+    "dataSet": [
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 172,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 74,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2733,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 6565,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 344,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2258,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 13006,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 9782,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1085,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 10867,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3088,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4504,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1517,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2072,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2127,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2428,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1891,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 32831,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 30670,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2151,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 180,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 61,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2715,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 6743,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 367,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2310,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 13203,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 10060,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1189,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 11249,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3123,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4597,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1580,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2111,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2285,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2523,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1984,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 34597,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 32302,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2283,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 192,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 64,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2693,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 6898,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 387,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2343,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 13417,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 10932,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1294,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 12226,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3228,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4669,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1677,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2140,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2390,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2624,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2042,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 35821,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 33442,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2369,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 202,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 55,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2661,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7071,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 402,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2382,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 13726,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 11371,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1420,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 12791,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3297,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4462,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1783,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2165,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2504,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2762,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2121,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 37670,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 35160,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2499,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 209,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 47,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2647,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7262,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 424,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2441,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 14013,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 11719,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1492,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 13211,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3443,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4540,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1911,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2180,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2659,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2956,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2209,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 39178,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 36555,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2612,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 218,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 38,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2623,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7425,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 443,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2500,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 14290,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 12162,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1564,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 13726,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3567,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4611,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2070,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2198,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2753,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3091,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2293,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 40505,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 37774,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2720,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 234,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 35,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2610,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7409,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 472,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2553,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 14651,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 12625,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1613,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 14238,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3767,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4445,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2224,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2220,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2890,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3250,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2393,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 42485,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 39576,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2898,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 262,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 32,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2559,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7582,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 495,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2611,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15004,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 12875,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1606,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 14481,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3862,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4483,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2403,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2250,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3001,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3510,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2479,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 44601,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 41479,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3111,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 282,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 27,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2503,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7919,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 497,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2651,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15298,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 13490,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1637,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15127,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3983,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4561,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2571,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2266,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3097,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3685,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2554,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 46168,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 42892,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3266,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 287,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 27,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2455,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 8080,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 531,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2706,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15546,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 13936,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1675,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15611,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4224,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4450,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2783,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2273,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3181,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3954,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2673,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 48415,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 44930,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3474,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 304,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 27,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2436,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 8296,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 558,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2786,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15815,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 14141,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1701,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15842,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4326,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4538,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2966,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2283,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3259,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4170,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2790,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 50650,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 46935,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3704,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 338,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 32,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2137,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 8423,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 612,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2876,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 16180,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 14671,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1754,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 16425,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4658,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4618,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3205,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2306,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3317,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4589,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2907,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 52327,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 48440,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3876,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 338,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 37,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2079,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 8575,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 647,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2942,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 16533,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15325,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1797,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 17122,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4733,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4368,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3429,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2283,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3386,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4977,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2972,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 54759,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 50661,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4087,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "Chiropractors",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 351,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "Chinese medicine practitioners with limited registration",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 29,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "Listed Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2018,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "Registered Chinese medicine practitioners",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 8797,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "Dental hygienists",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 682,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "Dentists",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2926,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "Doctors",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 16905,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 15562,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 1742,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "Enrolled nurses",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 17304,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "Medical laboratory technologists",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4924,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "Midwives",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4428,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "Occupational therapists",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3677,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "Optometrists",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 2255,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "Pharmacists",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3461,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "Physiotherapists",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 5450,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "Radiographers\/Diagnostic Radiographers\/Radiation Therapists",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 3067,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "Registered nurses",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 57463,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "General",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 53144,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "Mental subnormal",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "Psychiatric",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 4308,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "Sick children",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        }
+    ]
+}

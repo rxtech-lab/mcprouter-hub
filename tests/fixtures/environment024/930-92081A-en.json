@@ -1,0 +1,5025 @@
+{
+    "header": {
+        "status": {
+            "name": "Success",
+            "code": 0,
+            "description": "Query success",
+            "apiHelp": "https:\/\/www.censtatd.gov.hk\/en\/web_table.html?id=930-92081A&api_popup=1"
+        },
+        "title": "Number of deaths of notifiable infectious diseases",
+        "tablenote": [
+            "Number of deaths refers to deaths registered at the Immigration Department in the period, irrespective of the date of notification to the Department of Health.  The figures are provisional and would be revised based on updated information.",
+            "'Melioidosis' has been listed as a notifiable infectious disease since 11 November 2022. The figures of 'Melioidosis' from 1 January to 10 November 2022 were based on the notifications from Hospital Authority according to the month of laboratory confirmation.",
+            "- Not applicable"
+        ],
+        "source": "Centre for Health Protection, Department of Health  (Enquiry telephone no. : 2125 2270   Enquiry e-mail : enquiry_chpweb@dh.gov.hk)",
+        "count": {
+            "noOfRecords": 500,
+            "started": "2026-10-22T08:03:24+00:00",
+            "finished": "2026-10-22T08:03:24+00:00",
+            "durationSeconds": 0.022911
+        }
+    },
+    "dataSet": [
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 169,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 8,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 9,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 269,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 70,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 36,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 104,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202103",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 62,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 44,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 56,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202106",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 34,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 45,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202109",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 55,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 64,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202112",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 183,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 13,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 11,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 9511,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 9291,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 52,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4794,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202203",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4732,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 38,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3487,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202206",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3445,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 47,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": "",
+            "sd_value": "-"
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 405,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202209",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 347,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 46,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 825,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202212",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 767,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 173,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 15,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 14,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 10,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2822,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2594,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 44,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1347,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202303",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1290,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 41,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 838,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202306",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 783,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 45,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 442,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202309",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 383,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 43,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 195,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202312",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 138,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 171,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 11,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 8,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 924,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 720,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 35,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 364,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202403",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 320,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 39,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 266,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202406",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 221,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 46,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 210,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202409",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 155,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 51,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 84,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202412",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 24,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 162,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 23,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 10,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 483,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 267,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 50,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 12,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 96,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202503",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 27,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 30,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 237,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202506",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 195,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 42,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 92,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202509",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 38,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A05.1",
+            "ICD10Desc": "Botulism",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A15-19_B90",
+            "ICD10Desc": "Tuberculosis",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 40,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A24.1",
+            "ICD10Desc": "Melioidosis",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A32",
+            "ICD10Desc": "Listeriosis",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A37.0",
+            "ICD10Desc": "Whooping cough",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A39",
+            "ICD10Desc": "Meningococcal infection (invasive)",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A40.3_B95.3_G00.1_J13_M00.1",
+            "ICD10Desc": "Invasive pneumococcal disease",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A48.1",
+            "ICD10Desc": "Legionnaires' disease",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 2,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A70",
+            "ICD10Desc": "Psittacosis",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A75_77_79.1_79.8_79.9",
+            "ICD10Desc": "Typhus and other rickettsial diseases",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A81.0",
+            "ICD10Desc": "Creutzfeldt-Jakob disease",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A90-91",
+            "ICD10Desc": "Dengue fever",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "A92.0",
+            "ICD10Desc": "Chikungunya fever",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 1,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B01",
+            "ICD10Desc": "Chickenpox",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B15-17_19",
+            "ICD10Desc": "Viral hepatitis",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "B50-54",
+            "ICD10Desc": "Malaria",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DEATH_NOTIFI_DISEASES",
+            "ICD10Desc": "Infectious diseases death",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 58,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_CS",
+            "ICD10Desc": "Community-associated methicillin-resistant <i>Staphylococcus aureus<\/i> infection",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "DH_SS",
+            "ICD10Desc": "<i>Streptococcus suis<\/i> infection",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 0,
+            "sd_value": ""
+        },
+        {
+            "ICD10": "U07.1-07.2",
+            "ICD10Desc": "COVID-19",
+            "freq": "Q",
+            "period": "202512",
+            "sv": "DEATH",
+            "svDesc": "Number",
+            "figure": 7,
+            "sd_value": ""
+        }
+    ]
+}

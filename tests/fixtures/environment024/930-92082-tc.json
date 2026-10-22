@@ -1,0 +1,3111 @@
+{
+    "header": {
+        "status": {
+            "name": "Success",
+            "code": 0,
+            "description": "Query success",
+            "apiHelp": "https:\/\/www.censtatd.gov.hk\/tc\/web_table.html?id=930-92082&api_popup=1"
+        },
+        "title": "\u8a3b\u518a\u91ab\u8b77\u5c08\u696d\u4eba\u54e1\u6578\u76ee",
+        "tablenote": [
+            "\u6578\u5b57\u662f\u6307\u8a72\u5e74\u5e74\u5e95\u7684\u6578\u5b57\u3002  \u91ab\u751f\u3001\u7259\u91ab\u3001\u85e5\u5291\u5e2b\u3001\u91ab\u52d9\u5316\u9a57\u5e2b\u3001\u8077\u696d\u6cbb\u7642\u5e2b\u3001\u8996\u5149\u5e2b\u3001\u7269\u7406\u6cbb\u7642\u5e2b\u3001\u653e\u5c04\u6280\u5e2b\u53ca\u810a\u91ab\u9808\u6bcf\u5e74\u91cd\u65b0\u7533\u8acb\u57f7\u696d\u8b49\u660e\u66f8\uff0c\u800c\u8a3b\u518a\u4e2d\u91ab\u3001\u8a3b\u518a\u8b77\u58eb\u3001\u767b\u8a18\u8b77\u58eb\u53ca\u52a9\u7522\u58eb\u5247\u9808\u6bcf3\u5e74\u91cd\u65b0\u7533\u8acb\u57f7\u696d\u8b49\u660e\u66f8\u3002",
+            "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab\u53ef\u5728\u6307\u5b9a\u7684\u6559\u80b2\u6216\u79d1\u7814\u6a5f\u69cb\u9032\u884c\u4e2d\u91ab\u85e5\u5b78\u65b9\u9762\u7684\u81e8\u5e8a\u6559\u5b78\u548c\u7814\u7a76\u5de5\u4f5c\uff0c\u4f46\u4e0d\u5f97\u4f5c\u79c1\u4eba\u57f7\u696d\uff0c\u5176\u8a3b\u518a\u6709\u6548\u671f\u4e0d\u8d85\u904e\u4e00\u5e74\u3002",
+            "\u8868\u5217\u4e2d\u91ab\u53ef\u5728\u4e2d\u91ab\u8a3b\u518a\u904e\u6e21\u6027\u5b89\u6392\u4e0b\u5728\u9999\u6e2f\u5408\u6cd5\u57f7\u696d\uff0c\u76f4\u81f3\u91ab\u52d9\u885e\u751f\u5c40\u5c40\u9577\u65e5\u5f8c\u5728\u653f\u5e9c\u61b2\u5831\u516c\u5e03\u7684\u65e5\u671f\u70ba\u6b62\u3002\u8868\u5217\u4e2d\u91ab\u5728\u904e\u6e21\u6027\u5b89\u6392\u671f\u9593\uff0c\u53ef\u5206\u5225\u5faa\u76f4\u63a5\u8a3b\u518a\u3001\u901a\u904e\u8a3b\u518a\u5be9\u6838\u6216\u901a\u904e\u57f7\u696d\u8cc7\u683c\u8a66\u6210\u70ba\u8a3b\u518a\u4e2d\u91ab\u3002",
+            "\u300a\u4e2d\u91ab\u85e5\u689d\u4f8b\u300b\u5168\u9762\u5be6\u65bd\u5f8c\uff0c\u6240\u6709\u5728\u9999\u6e2f\u57f7\u696d\u7684\u4e2d\u91ab\u90fd\u5fc5\u9808\u5728\u57f7\u696d\u524d\u8a3b\u518a\u3002\u4efb\u4f55\u4eba\u58eb\u5982\u8981\u6210\u70ba\u8a3b\u518a\u4e2d\u91ab\uff0c\u90fd\u5fc5\u9808\u5df2\u5713\u6eff\u5b8c\u6210\u8a8d\u53ef\u7684\u4e2d\u91ab\u57f7\u696d\u672c\u79d1\u8a13\u7df4\u5b78\u4f4d\u8ab2\u7a0b\uff0c\u4e26\u53c3\u52a0\u4e2d\u91ab\u57f7\u696d\u8cc7\u683c\u8a66\uff0c\u53d6\u5f97\u53ca\u683c\u5f8c\uff0c\u624d\u53ef\u7533\u8acb\u8a3b\u518a\u3002",
+            "\u6578\u5b57\u5305\u62ec\u672c\u5730\u540d\u55ae\u53ca\u975e\u672c\u5730\u540d\u55ae\u7684\u6b63\u5f0f\u8a3b\u518a\u91ab\u751f\uff0c\u6216\u57f7\u696d\u540d\u55ae\u53ca\u975e\u57f7\u696d\u540d\u55ae\u7684\u6b63\u5f0f\u8a3b\u518a\u7259\u91ab\u3002",
+            "\u6578\u5b57\u4e0d\u5305\u62ec\u7372\u6709\u9650\u5ea6\u8a3b\u518a\u7684\u91ab\u751f\uff0c\u9019\u4e9b\u91ab\u751f\u53d7\u50f1\u5de5\u4f5c\u5fc5\u9808\u70ba\u91ab\u52d9\u59d4\u54e1\u6703\u6240\u6c7a\u5b9a\u7684\uff0c\u4f8b\u5982\u5728\u5927\u5b78\u4e2d\u5f9e\u4e8b\u7814\u7a76\u6216\u6559\u5b78\u548c\u5728\u8c41\u514d\u8a3a\u6240\u5167\u884c\u91ab\u3002",
+            "\u6578\u5b57\u5305\u62ec\u6b63\u5f0f\u8a3b\u518a\uff0f\u767b\u8a18\u7684\u8a3b\u518a\u8b77\u58eb\u53ca\u767b\u8a18\u8b77\u58eb\u3002",
+            "\u6578\u5b57\u4ea6\u5305\u62ec\u64c1\u6709\u52a9\u7522\u5b78\u6df1\u9020\u8a13\u7df4\u8cc7\u683c\u7684\u666e\u901a\u79d1\u8a3b\u518a\u8b77\u58eb\u3002",
+            "\u6578\u5b57\u4e0d\u5305\u62ec\u7372\u6709\u9650\u5ea6\u8a3b\u518a\u7684\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b\u3002"
+        ],
+        "source": "\u885e\u751f\u7f72  (\u67e5\u8a62\u96fb\u8a71\uff1a3586 3804   \u67e5\u8a62\u96fb\u90f5\uff1aenquiries@dh.gov.hk)",
+        "count": {
+            "noOfRecords": 308,
+            "started": "2026-10-22T08:04:08+00:00",
+            "finished": "2026-10-22T08:04:08+00:00",
+            "durationSeconds": 0.016073
+        }
+    },
+    "dataSet": [
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 172,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 74,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2733,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 6565,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 344,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2258,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 13006,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 9782,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1085,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 10867,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3088,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4504,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1517,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2072,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2127,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2428,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1891,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 32831,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 30670,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2151,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 180,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 61,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2715,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 6743,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 367,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2310,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 13203,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 10060,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1189,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 11249,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3123,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4597,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1580,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2111,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2285,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2523,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1984,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 34597,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 32302,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2283,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 192,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 64,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2693,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 6898,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 387,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2343,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 13417,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 10932,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1294,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 12226,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3228,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4669,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1677,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2140,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2390,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2624,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2042,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 35821,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 33442,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2369,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 202,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 55,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2661,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7071,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 402,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2382,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 13726,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 11371,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1420,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 12791,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3297,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4462,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1783,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2165,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2504,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2762,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2121,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 37670,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 35160,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2499,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 209,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 47,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2647,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7262,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 424,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2441,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 14013,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 11719,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1492,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 13211,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3443,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4540,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1911,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2180,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2659,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2956,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2209,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 39178,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 36555,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 5,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2612,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 218,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 38,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2623,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7425,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 443,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2500,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 14290,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 12162,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1564,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 13726,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3567,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4611,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2070,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2198,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2753,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3091,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2293,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 40505,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 37774,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2720,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 234,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 35,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2610,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7409,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 472,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2553,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 14651,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 12625,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1613,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 14238,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3767,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4445,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2224,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2220,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2890,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3250,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2393,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 42485,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 39576,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2898,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 262,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 32,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2559,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7582,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 495,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2611,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15004,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 12875,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1606,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 14481,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3862,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4483,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2403,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2250,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3001,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3510,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2479,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 44601,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 41479,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3111,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 282,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 27,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2503,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7919,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 497,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2651,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15298,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 13490,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1637,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15127,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3983,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4561,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2571,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2266,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3097,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3685,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2554,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 46168,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 42892,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3266,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 6,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 287,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 27,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2455,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 8080,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 531,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2706,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15546,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 13936,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1675,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15611,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4224,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4450,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2783,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2273,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3181,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3954,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2673,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 48415,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 44930,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3474,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 304,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 27,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2436,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 8296,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 558,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2786,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15815,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 14141,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1701,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15842,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4326,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4538,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2966,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2283,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3259,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4170,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2790,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 50650,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 46935,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3704,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 338,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 32,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2137,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 8423,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 612,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2876,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 16180,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 14671,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1754,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 16425,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4658,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4618,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3205,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2306,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3317,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4589,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2907,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 52327,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 48440,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3876,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 338,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 37,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2079,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 8575,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 647,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2942,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 16533,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15325,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1797,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 17122,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4733,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4368,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3429,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2283,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3386,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4977,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2972,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 54759,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 50661,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4087,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2024",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CHIROP",
+            "OCCDesc": "\u810a\u91ab",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 351,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIMITE",
+            "OCCDesc": "\u6709\u9650\u5236\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 29,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_LIST",
+            "OCCDesc": "\u8868\u5217\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2018,
+            "sd_value": ""
+        },
+        {
+            "OCC": "CMP_REG",
+            "OCCDesc": "\u8a3b\u518a\u4e2d\u91ab",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 8797,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTAL_HY",
+            "OCCDesc": "\u7259\u9f52\u885e\u751f\u54e1",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 682,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DENTIST",
+            "OCCDesc": "\u7259\u91ab",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2926,
+            "sd_value": ""
+        },
+        {
+            "OCC": "DOCTORS",
+            "OCCDesc": "\u91ab\u751f",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 16905,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 15562,
+            "sd_value": ""
+        },
+        {
+            "OCC": "EN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 1742,
+            "sd_value": ""
+        },
+        {
+            "OCC": "ENROL_NURSE",
+            "OCCDesc": "\u767b\u8a18\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 17304,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MED_LAB_TECH",
+            "OCCDesc": "\u91ab\u52d9\u5316\u9a57\u5e2b",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4924,
+            "sd_value": ""
+        },
+        {
+            "OCC": "MIDWIVES",
+            "OCCDesc": "\u52a9\u7522\u58eb",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4428,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OCCUP_THER",
+            "OCCDesc": "\u8077\u696d\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3677,
+            "sd_value": ""
+        },
+        {
+            "OCC": "OPTOMET",
+            "OCCDesc": "\u8996\u5149\u5e2b",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 2255,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHARMACIST",
+            "OCCDesc": "\u85e5\u5291\u5e2b",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3461,
+            "sd_value": ""
+        },
+        {
+            "OCC": "PHYSIO",
+            "OCCDesc": "\u7269\u7406\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 5450,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RAD_DIA_THER",
+            "OCCDesc": "\u653e\u5c04\u6280\u5e2b\uff0f\u653e\u5c04\u5e2b\uff0f\u653e\u5c04\u6cbb\u7642\u5e2b",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 3067,
+            "sd_value": ""
+        },
+        {
+            "OCC": "REG_NURSE",
+            "OCCDesc": "\u8a3b\u518a\u8b77\u58eb",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 57463,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_GENERAL",
+            "OCCDesc": "\u666e\u901a\u79d1",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 53144,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_MENTAL_SUBNOR",
+            "OCCDesc": "\u5f31\u667a\u79d1",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_PSYCHI",
+            "OCCDesc": "\u7cbe\u795e\u79d1",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 4308,
+            "sd_value": ""
+        },
+        {
+            "OCC": "RN_SICK_CHILD",
+            "OCCDesc": "\u75c5\u7ae5\u79d1",
+            "freq": "Y",
+            "period": "2025",
+            "sv": "REG_H_PRO",
+            "svDesc": "\u6578\u76ee",
+            "figure": 7,
+            "sd_value": ""
+        }
+    ]
+}

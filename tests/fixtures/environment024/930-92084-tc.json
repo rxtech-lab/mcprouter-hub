@@ -1,0 +1,544 @@
+{
+    "header": {
+        "status": {
+            "name": "Success",
+            "code": 0,
+            "description": "Query success",
+            "apiHelp": "https:\/\/www.censtatd.gov.hk\/tc\/web_table.html?id=930-92084&api_popup=1"
+        },
+        "title": "\u885e\u751f\u7f72\u548c\u91ab\u9662\u7ba1\u7406\u5c40\u7684\u958b\u652f",
+        "tablenote": [
+            "\u6240\u6709\u6578\u5b57\u4e0d\u5305\u62ec\u5de5\u52d9\u65b9\u9762\u975e\u7d93\u5e38\u6027\u91ab\u7642\u8a08\u5283\u7684\u8cc7\u672c\u652f\u51fa\u3002",
+            "\u6578\u5b57\u6839\u64da\u76f8\u95dc\u5e74\u4efd\u7e3d\u76ee37 \u2013 \u885e\u751f\u7f72\u7ba1\u5236\u4eba\u54e1\u5831\u544a\u7684\u6578\u64da\u7de8\u88fd\uff0c\u4e26\u5305\u62ec\u653f\u5e9c\u4e00\u822c\u6536\u5165\u5e33\u76ee\u4e0b\u7684\u7d93\u71df\u5e33\u76ee\u53ca\u975e\u7d93\u71df\u5e33\u76ee\u3002"
+        ],
+        "source": "\u885e\u751f\u7f72  (\u67e5\u8a62\u96fb\u8a71\uff1a3586 2996   \u67e5\u8a62\u96fb\u90f5\uff1a enquiries@dh.gov.hk)  \u91ab\u9662\u7ba1\u7406\u5c40  (\u67e5\u8a62\u96fb\u8a71\uff1a2300 6555   \u67e5\u8a62\u96fb\u90f5\uff1aenquiry@ha.org.hk)",
+        "count": {
+            "noOfRecords": 52,
+            "started": "2026-10-22T08:04:08+00:00",
+            "finished": "2026-10-22T08:04:08+00:00",
+            "durationSeconds": 0.014385
+        }
+    },
+    "dataSet": [
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2011",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 44118,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2011",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 4197,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2011",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 39724,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2011",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 197,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 48864,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 4767,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 43872,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 225,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 52531,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 5362,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 46925,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 244,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 56805,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 5705,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 50825,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 275,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 61246,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 6315,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 54627,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 304,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 65738,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 6985,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 58433,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 320,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 69781,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 8007,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 61457,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 317,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 76904,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 9916,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 66675,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 313,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 86148,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 11659,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 74142,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 347,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 94958,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 13142,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 81479,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 337,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 104580,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 20064,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 84171,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 345,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 111065,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 20243,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 90459,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 363,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 106545,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 12756,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "\u91ab\u9662\u7ba1\u7406\u5c40",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 93411,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "\u885e\u751f\u7f72\u8f44\u4e0b\u7684\u91ab\u7642\u88dc\u52a9",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "EXP",
+            "svDesc": "\u767e\u842c\u6e2f\u5143",
+            "figure": 378,
+            "sd_value": ""
+        }
+    ]
+}
