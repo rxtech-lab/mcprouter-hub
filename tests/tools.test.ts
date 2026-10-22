@@ -1,3 +1,4 @@
+import { cases022 } from "./environment022-cases";
 import { environmentCases } from "./environment021-cases";
 import { governmentCases } from "./finance034-cases";
 import { batch035, fixture035, request035 } from "./finance035-cases";
@@ -197,6 +198,7 @@ const sensorOccupancy = [
 ].join("\n");
 
 const cases: Case[] = [
+  ...cases022.map((c) => ({ ...c, name: c.file, ttl: 3600 })),
   ...environmentCases,
   ...transportCases,
   ...financeCases,

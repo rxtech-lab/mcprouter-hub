@@ -28,13 +28,14 @@ export function page(rows: unknown[], offset: number, limit: number, upstreamHas
 }
 
 /** Read-only ArcGIS queries: no caller-supplied URL, layer, SQL or field names. */
-export function spatialQuery(dataset: string, searchFields: readonly string[], nameFields?: Record<string, string>): ToolHandler {
+export function spatialQuery(dataset: string, searchFields: readonly string[], nameFields?: Record<string, string>, options: { layer?: number; objectIdField?: string } = {}): ToolHandler {
   return async (input, context) => {
-    const url = new URL(`https://portal.csdi.gov.hk/server/rest/services/common/${dataset}/FeatureServer/0/query`);
+    const url = new URL(`https://portal.csdi.gov.hk/server/rest/services/common/${dataset}/FeatureServer/${options.layer ?? 0}/query`);
     const limit = Number(input.limit ?? 20);
     const offset = Number(input.offset ?? 0);
+    const objectIdField = options.objectIdField ?? "OBJECTID";
     const where = ["1=1"];
-    if (input.objectId !== undefined) where.push(`OBJECTID=${Number(input.objectId)}`);
+    if (input.objectId !== undefined) where.push(`${objectIdField}=${Number(input.objectId)}`);
     if (typeof input.search === "string" && input.search.trim()) {
       const term = input.search.trim().replaceAll("'", "''").toUpperCase();
       where.push(`(${searchFields.map((field) => `UPPER(${field}) LIKE '%${term}%'`).join(" OR ")})`);
@@ -42,7 +43,7 @@ export function spatialQuery(dataset: string, searchFields: readonly string[], n
     const params: Record<string, string> = {
       f: "json", where: where.join(" AND "), outFields: "*", outSR: "4326",
       returnGeometry: String(input.geometry ?? true), resultRecordCount: String(limit),
-      resultOffset: String(offset), orderByFields: "OBJECTID ASC", geometryPrecision: "6",
+      resultOffset: String(offset), orderByFields: `${objectIdField} ASC`, geometryPrecision: "6",
     };
     if (input.bbox !== undefined) {
       const bounds = String(input.bbox).split(",").map(Number);

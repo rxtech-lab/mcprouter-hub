@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **152 of 3819 implemented**, 3667 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **158 of 3819 implemented**, 3661 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -398,7 +398,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1840` | [List of Clinical Waste Collectors](https://data.gov.hk/en-data/dataset/hk-epd-rngteam-clinical-waste-collectors-list) | API | Environmental Protection Department | ✅ Implemented | [Licensed Waste Collectors](mcp/services/epd-waste-collectors/service.yaml) |
 | `API-1841` | [Issued Construction Noise Permit](https://data.gov.hk/en-data/dataset/hk-epd-rngteam-issued-construction-noise-permit) | API | Environmental Protection Department | ✅ Implemented | [Issued Construction Noise Permits](mcp/services/epd-noise-permits/service.yaml) |
 | `API-1842` | [Pollution Complaint Statistics](https://data.gov.hk/en-data/dataset/hk-epd-ronteam-pollution-complaint-statistics) | API | Environmental Protection Department | ✅ Implemented | [Pollution Complaint Statistics](mcp/services/epd-complaints/service.yaml) |
-| `API-1843` | [Hong Kong Collector / Recycler Directory](https://data.gov.hk/en-data/dataset/hk-epd-rrgteam-hong-kong-collector-recycler-directory) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-1843` | [Hong Kong Collector / Recycler Directory](https://data.gov.hk/en-data/dataset/hk-epd-rrgteam-hong-kong-collector-recycler-directory) | API | Environmental Protection Department | ✅ Implemented | [Hong Kong Collector / Recycler Directory](mcp/services/epd-recycler-directory/service.yaml) |
 | `API-1844` | [Specified Process Licence](https://data.gov.hk/en-data/dataset/hk-epd-rsteam-specified-process-licence) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1845` | [Reverse Vending Machine Pilot Scheme](https://data.gov.hk/en-data/dataset/hk-epd-rvmpsteam-reverse-vending-machine-pilot-scheme) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1846` | [Total solid waste disposal quantity](https://data.gov.hk/en-data/dataset/hk-epd-statteam-solid-waste-disposal-quantity) | Files | Environmental Protection Department | 🕒 Coming soon | — |
@@ -407,13 +407,13 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1849` | [Municipal solid waste generation quantity](https://data.gov.hk/en-data/dataset/hk-epd-statteam-solid-waste-generation-quantity) | Files | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1850` | [Municipal solid waste recovery quantity](https://data.gov.hk/en-data/dataset/hk-epd-statteam-solid-waste-recovery-quantity) | Files | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1851` | [Schools participating in the "Waste Separation and Recycling Scheme in Schools"](https://data.gov.hk/en-data/dataset/hk-epd-swsrsteam-school-waste-separation-recycling-scheme) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1852` | [EIAO Projects with Application for Permission to Apply Directly for Environmental Permit](https://data.gov.hk/en-data/dataset/hk-epd-tnteameiao-dir) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1853` | [EIAO Projects with Application for Approval of Environmental Impact Assessment Report](https://data.gov.hk/en-data/dataset/hk-epd-tnteameiao-eia) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1854` | [Habitat Maps from EIA Reports](https://data.gov.hk/en-data/dataset/hk-epd-tnteamhfer-habitat-from-eia-reports) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-1852` | [EIAO Projects with Application for Permission to Apply Directly for Environmental Permit](https://data.gov.hk/en-data/dataset/hk-epd-tnteameiao-dir) | API | Environmental Protection Department | ✅ Implemented | [EIAO Project Applications](mcp/services/epd-eiao-projects/service.yaml) |
+| `API-1853` | [EIAO Projects with Application for Approval of Environmental Impact Assessment Report](https://data.gov.hk/en-data/dataset/hk-epd-tnteameiao-eia) | API | Environmental Protection Department | ✅ Implemented | [EIAO Project Applications](mcp/services/epd-eiao-projects/service.yaml) |
+| `API-1854` | [Habitat Maps from EIA Reports](https://data.gov.hk/en-data/dataset/hk-epd-tnteamhfer-habitat-from-eia-reports) | API | Environmental Protection Department | ✅ Implemented | [Habitat Maps from EIA Reports](mcp/services/epd-eia-habitats/service.yaml) |
 | `API-1855` | [Water Dispensers in Public Venues of Environmental Protection Department](https://data.gov.hk/en-data/dataset/hk-epd-waterdisp-water-dispenser-epd-by-venue) | Files | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1856` | [On-site Food Waste Pre-Treatment and Treatment Systems Supplier List](https://data.gov.hk/en-data/dataset/hk-epd-wccgteam-on-site-food-waste-pre-treatment-and-treatment-systems-suppliers) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-1856` | [On-site Food Waste Pre-Treatment and Treatment Systems Supplier List](https://data.gov.hk/en-data/dataset/hk-epd-wccgteam-on-site-food-waste-pre-treatment-and-treatment-systems-suppliers) | API | Environmental Protection Department | ✅ Implemented | [On-site Food Waste Treatment Suppliers](mcp/services/epd-food-waste-suppliers/service.yaml) |
 | `API-1857` | [Water Dispensers in Government Venues for Public Use](https://data.gov.hk/en-data/dataset/hk-epd-wfsteam-wfs-gov-pub) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1858` | [Pollution Load Inventory for Water Quality Modelling](https://data.gov.hk/en-data/dataset/hk-epd-wqmteam-pli) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-1858` | [Pollution Load Inventory for Water Quality Modelling](https://data.gov.hk/en-data/dataset/hk-epd-wqmteam-pli) | API | Environmental Protection Department | ✅ Implemented | [Pollution Load Inventory for Water Quality Modelling](mcp/services/epd-pollution-load/service.yaml) |
 | `API-1859` | [Bin Supplier List](https://data.gov.hk/en-data/dataset/hk-epd-wrrgteam-bin-supplier-list) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1860` | [Open Space Database of Recycling Station](https://data.gov.hk/en-data/dataset/hk-epd-wrrteam-recycling-station) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1897` | [Total Outsourced Contract Value by Type of Service](https://data.gov.hk/en-data/dataset/hk-fehd-fehdcms-service-contract-total-services) | Files | Food and Environmental Hygiene Department | 🕒 Coming soon | — |

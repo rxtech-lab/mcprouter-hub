@@ -1,0 +1,65 @@
+id: epd-pollution-load
+title: Pollution Load Inventory for Water Quality Modelling
+description: Pollution Load Inventory for Water Quality Modelling with
+  structured access to the official EPD/CSDI source.
+apis:
+  - API-1858
+datasets:
+  - hk-epd-wqmteam-pli
+cacheTtl: 3600
+tools:
+  - name: epd_water_pollution_load_inventory
+    title: Pollution Load Inventory for Water Quality Modelling
+    description: Pollution Load Inventory for water quality modelling, 2021 and
+      2041. Retains original load identifiers, pollution_load_type, wqp codes
+      and both scenario values wqpv_2021/wqpv_2041. These are model inventory
+      values, not live water quality measurements; units are not supplied by the
+      query layer. Uses the verified official CSDI FeatureServer JSON query
+      interface. Results bounded to 100 records and 100 KB; continue with
+      nextOffset. Text searches use one field per request.
+    handler: query1858
+    timeoutMs: 30000
+    input:
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        description: Text in one searchField; SQL LIKE wildcards % and _ are supported
+      searchField:
+        type: string
+        enum:
+          - load
+          - pollution_load_type
+          - wqp
+        description: One published field; defaults to the name in lang
+      objectId:
+        type: integer
+        minimum: 1
+        description: Exact unique object ID (OBJECTID_1 for habitat layers 0 and 6;
+          otherwise OBJECTID)
+      bbox:
+        type: string
+        pattern: ^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$
+        description: WGS84 west,south,east,north; spatial intersection
+      geometry:
+        type: boolean
+        default: false
+        description: Include WGS84 geometry; oversized geometry explicitly omitted
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        description: Maximum records; output also bounded to 100 KB
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 1000000
+        default: 0
+        description: Continue with nextOffset using identical filters
+      lang:
+        type: string
+        enum:
+          - en
+        default: en
+        description: Language of name; original multilingual attributes retained. Only
+          published languages are supported

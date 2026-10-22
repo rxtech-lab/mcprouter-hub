@@ -1,0 +1,68 @@
+id: epd-food-waste-suppliers
+title: On-site Food Waste Treatment Suppliers
+description: On-site Food Waste Treatment Suppliers with structured access to
+  the official EPD/CSDI source.
+apis:
+  - API-1856
+datasets:
+  - hk-epd-wccgteam-on-site-food-waste-pre-treatment-and-treatment-systems-suppliers
+cacheTtl: 3600
+tools:
+  - name: epd_food_waste_treatment_suppliers
+    title: On-site Food Waste Treatment Suppliers
+    description: Non-exhaustive list of local suppliers of on-site food waste
+      pre-treatment and treatment systems. Returns published contacts, addresses
+      and equipment types; inclusion is not endorsement. Uses the verified
+      official CSDI FeatureServer JSON query interface. Results bounded to 100
+      records and 100 KB; continue with nextOffset. Text searches use one field
+      per request.
+    handler: query1856
+    timeoutMs: 30000
+    input:
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        description: Text in one searchField; SQL LIKE wildcards % and _ are supported
+      searchField:
+        type: string
+        enum:
+          - Company_Name_Eng
+          - Company_Name_Chin
+          - Address_Eng
+          - Address_Chin
+          - Types_of_recycling_facilities_provided_Eng
+          - Types_of_recycling_facilities_provided_Chin
+        description: One published field; defaults to the name in lang
+      objectId:
+        type: integer
+        minimum: 1
+        description: Exact unique object ID (OBJECTID_1 for habitat layers 0 and 6;
+          otherwise OBJECTID)
+      bbox:
+        type: string
+        pattern: ^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$
+        description: WGS84 west,south,east,north; spatial intersection
+      geometry:
+        type: boolean
+        default: false
+        description: Include WGS84 geometry; oversized geometry explicitly omitted
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+        description: Maximum records; output also bounded to 100 KB
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 1000000
+        default: 0
+        description: Continue with nextOffset using identical filters
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+        default: en
+        description: Language of name; original multilingual attributes retained. Only
+          published languages are supported
