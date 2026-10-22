@@ -1,0 +1,18 @@
+{
+  "databaseUrl": "file:/private/tmp/mcprouter-batch023-build-80e7108b19e14e91891a01a0c89c772a.sqlite",
+  "authToken": "empty",
+  "worktree": "/private/tmp/mcprouter-batch023",
+  "repairCycle": 2,
+  "migrationExitCode": 0,
+  "buildExitCode": 0,
+  "staticPagesGenerated": 44,
+  "datasetsTablePresent": true,
+  "datasetRows": 0,
+  "simulatedVariants": 13,
+  "simulationHttpRequests": 78,
+  "simulationInvalidInputsRejected": 13,
+  "testsPassed": 2018,
+  "testsSkipped": 5,
+  "testFilesPassed": 64,
+  "independentRxCodeVerification": "pending for final seven-ID cleanup"
+}

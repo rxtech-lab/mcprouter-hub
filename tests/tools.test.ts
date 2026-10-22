@@ -1,3 +1,4 @@
+import { spatialCases023, fileCases023 } from "./environment023-cases";
 import { cases022 } from "./environment022-cases";
 import { environmentCases } from "./environment021-cases";
 import { governmentCases } from "./finance034-cases";
@@ -198,6 +199,9 @@ const sensorOccupancy = [
 ].join("\n");
 
 const cases: Case[] = [
+  ...spatialCases023.map((c) => ({ ...c, name: c.file, ttl: 3600 })),
+  ...fileCases023.map((c) => ({ ...c, name: c.file + c.lang, ttl: c.kind === "clothes" ? 3600 : 300,
+    data: expect.objectContaining({ returned: 2, source: c.request.url, hasMore: true, nextOffset: 2 }) })),
   ...cases022.map((c) => ({ ...c, name: c.file, ttl: 3600 })),
   ...environmentCases,
   ...transportCases,

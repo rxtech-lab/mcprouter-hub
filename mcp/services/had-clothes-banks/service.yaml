@@ -1,0 +1,40 @@
+id: had-clothes-banks
+title: Community Used Clothes Recycling Banks
+description: Community Used Clothes Recycling Banks
+apis:
+  - API-2023
+datasets:
+  - hk-had-json1-community-used-clothes-recycling-banks
+cacheTtl: 3600
+tools:
+  - name: had_clothes_recycling_banks
+    title: Community Used Clothes Recycling Banks
+    description: Community Used Clothes Recycling Banks. Structured adapter for the
+      official multilingual CSV download, including bank address, district,
+      scheme manager, telephone, fax and manager address. Search published text;
+      bounded to 100 records and 100 KB. Continue with nextOffset using the same
+      filters.
+    handler: clothes
+    timeoutMs: 30000
+    input:
+      search:
+        type: string
+        pattern: ^.{1,100}$
+        description: Case-insensitive substring in published text
+      limit:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+      offset:
+        type: integer
+        minimum: 0
+        maximum: 1000000
+        default: 0
+      lang:
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en

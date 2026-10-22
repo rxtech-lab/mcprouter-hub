@@ -1,0 +1,104 @@
+[
+  {
+    "id": "API-1860",
+    "dataset": "hk-epd-wrrteam-recycling-station",
+    "tool": "epd_recycling_stations",
+    "title": "Open Space Database of Recycling Station",
+    "service": "epd-recycling-stations",
+    "layer": "epd_rcd_1669597014943_12158",
+    "names": {
+      "en": "BLDG_ENGNM",
+      "tc": "BLDG_CHTNM"
+    },
+    "fields": [
+      "BLDG_ENGNM",
+      "BLDG_CHTNM",
+      "ADDRESS"
+    ],
+    "kind": "spatial"
+  },
+  {
+    "id": "API-1899",
+    "dataset": "hk-fehd-fehderc-fehd-centres",
+    "tool": "fehd_exhibition_resource_centres",
+    "title": "FEHD Exhibition and Resource Centres",
+    "service": "fehd-centres",
+    "layer": "fehd_rcd_1629953200619_10363",
+    "names": {
+      "en": "NameEN",
+      "tc": "NameTC"
+    },
+    "fields": [
+      "NameEN",
+      "NameTC",
+      "AddressEN",
+      "AddressTC"
+    ],
+    "kind": "spatial"
+  },
+  {
+    "id": "API-1903",
+    "dataset": "hk-fehd-fehdipcam-fehd-ipcamera",
+    "tool": "fehd_refuse_camera_blackspots",
+    "title": "Illegal Refuse Deposit Blackspots Installed with Internet Protocol Cameras",
+    "service": "fehd-refuse-cameras",
+    "layer": "fehd_rcd_1665718209201_92678",
+    "names": {
+      "en": "ADDRESS_EN",
+      "tc": "ADDRESS_TC"
+    },
+    "fields": [
+      "ADDRESS_EN",
+      "ADDRESS_TC",
+      "SEARCH01_EN",
+      "SEARCH01_TC"
+    ],
+    "kind": "spatial"
+  },
+  {
+    "id": "API-1919",
+    "dataset": "hk-fehd-fehdwd-fehd-waterdispensers",
+    "tool": "fehd_water_dispensers",
+    "title": "Water Dispensers in FEHD Venues",
+    "service": "fehd-water-dispensers",
+    "layer": "fehd_rcd_1629969846020_11292",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "fields": [
+      "NAME_EN",
+      "NAME_TC",
+      "ADDRESS_EN",
+      "ADDRESS_TC"
+    ],
+    "kind": "spatial"
+  },
+  {
+    "id": "API-2023",
+    "dataset": "hk-had-json1-community-used-clothes-recycling-banks",
+    "tool": "had_clothes_recycling_banks",
+    "title": "Community Used Clothes Recycling Banks",
+    "service": "had-clothes-banks",
+    "kind": "clothes",
+    "url": "https://www.had.gov.hk/psi/community-used-clothes-recycling-banks/community_used_clothes_recycling_banks.csv"
+  },
+  {
+    "id": "API-0039",
+    "dataset": "hk-hko-rss-weather-and-radiation-level-report",
+    "tool": "hko_daily_weather_radiation",
+    "title": "Weather and radiation level report",
+    "service": "hko-radiation",
+    "kind": "daily",
+    "url": "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=RYES&lang=en&date=20261021"
+  },
+  {
+    "id": "API-2359",
+    "dataset": "hk-hko-rss-hourly-ambient-gamma-radiation-level-in-hong-kong",
+    "tool": "hko_hourly_gamma_radiation",
+    "title": "Hourly ambient gamma radiation level",
+    "service": "hko-radiation",
+    "kind": "hourly",
+    "url": "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_hourly_rmn.csv"
+  }
+]

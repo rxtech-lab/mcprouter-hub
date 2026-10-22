@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **158 of 3819 implemented**, 3661 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **165 of 3819 implemented**, 3654 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -275,7 +275,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | ID | API | Type | Provider | Status | Service |
 |---|---|---|---|---|---|
 | `API-0031` | [Air Quality Health Index](https://data.gov.hk/en-data/dataset/hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations) | API | Environmental Protection Department | ✅ Implemented | [Air Quality Health Index](mcp/services/epd-aqhi/service.yaml) |
-| `API-0039` | [Weather and radiation level report](https://data.gov.hk/en-data/dataset/hk-hko-rss-weather-and-radiation-level-report) | API | Hong Kong Observatory | 🕒 Coming soon | — |
+| `API-0039` | [Weather and radiation level report](https://data.gov.hk/en-data/dataset/hk-hko-rss-weather-and-radiation-level-report) | API | Hong Kong Observatory | ✅ Implemented | [HKO Weather and Radiation](mcp/services/hko-radiation/service.yaml) |
 | `API-0040` | [Beach water quality](https://data.gov.hk/en-data/dataset/hk-epd-beachteam-beach-water-quality-grading) | API | Environmental Protection Department | ✅ Implemented | [Beach Water Quality](mcp/services/epd-beach/service.yaml) |
 | `API-0041` | [Red tide](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-red-tide-location) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
 | `API-0067` | [Animal Management Centres and Dog Inoculation Centres](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-amcanddiccsdi) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
@@ -415,17 +415,17 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1857` | [Water Dispensers in Government Venues for Public Use](https://data.gov.hk/en-data/dataset/hk-epd-wfsteam-wfs-gov-pub) | API | Environmental Protection Department | 🕒 Coming soon | — |
 | `API-1858` | [Pollution Load Inventory for Water Quality Modelling](https://data.gov.hk/en-data/dataset/hk-epd-wqmteam-pli) | API | Environmental Protection Department | ✅ Implemented | [Pollution Load Inventory for Water Quality Modelling](mcp/services/epd-pollution-load/service.yaml) |
 | `API-1859` | [Bin Supplier List](https://data.gov.hk/en-data/dataset/hk-epd-wrrgteam-bin-supplier-list) | API | Environmental Protection Department | 🕒 Coming soon | — |
-| `API-1860` | [Open Space Database of Recycling Station](https://data.gov.hk/en-data/dataset/hk-epd-wrrteam-recycling-station) | API | Environmental Protection Department | 🕒 Coming soon | — |
+| `API-1860` | [Open Space Database of Recycling Station](https://data.gov.hk/en-data/dataset/hk-epd-wrrteam-recycling-station) | API | Environmental Protection Department | ✅ Implemented | [Open Space Database of Recycling Station](mcp/services/epd-recycling-stations/service.yaml) |
 | `API-1897` | [Total Outsourced Contract Value by Type of Service](https://data.gov.hk/en-data/dataset/hk-fehd-fehdcms-service-contract-total-services) | Files | Food and Environmental Hygiene Department | 🕒 Coming soon | — |
-| `API-1899` | [FEHD Exhibition and Resource Centres](https://data.gov.hk/en-data/dataset/hk-fehd-fehderc-fehd-centres) | API | Food and Environmental Hygiene Department | 🕒 Coming soon | — |
-| `API-1903` | [Illegal Refuse Deposit Blackspots Installed with Internet Protocol Cameras](https://data.gov.hk/en-data/dataset/hk-fehd-fehdipcam-fehd-ipcamera) | API | Food and Environmental Hygiene Department | 🕒 Coming soon | — |
+| `API-1899` | [FEHD Exhibition and Resource Centres](https://data.gov.hk/en-data/dataset/hk-fehd-fehderc-fehd-centres) | API | Food and Environmental Hygiene Department | ✅ Implemented | [FEHD Exhibition and Resource Centres](mcp/services/fehd-centres/service.yaml) |
+| `API-1903` | [Illegal Refuse Deposit Blackspots Installed with Internet Protocol Cameras](https://data.gov.hk/en-data/dataset/hk-fehd-fehdipcam-fehd-ipcamera) | API | Food and Environmental Hygiene Department | ✅ Implemented | [Illegal Refuse Deposit Blackspots Installed with Internet Protocol Cameras](mcp/services/fehd-refuse-cameras/service.yaml) |
 | `API-1917` | [Food Safety and Public Health Statistics](https://data.gov.hk/en-data/dataset/hk-fehd-fehdstat-foodsafty-publichealth) | Files | Food and Environmental Hygiene Department | 🕒 Coming soon | — |
 | `API-1918` | [Pleasant Environment Statistics](https://data.gov.hk/en-data/dataset/hk-fehd-fehdstat-pleasant-environment) | Files | Food and Environmental Hygiene Department | 🕒 Coming soon | — |
-| `API-1919` | [Water Dispensers in FEHD Venues](https://data.gov.hk/en-data/dataset/hk-fehd-fehdwd-fehd-waterdispensers) | API | Food and Environmental Hygiene Department | 🕒 Coming soon | — |
+| `API-1919` | [Water Dispensers in FEHD Venues](https://data.gov.hk/en-data/dataset/hk-fehd-fehdwd-fehd-waterdispensers) | API | Food and Environmental Hygiene Department | ✅ Implemented | [Water Dispensers in FEHD Venues](mcp/services/fehd-water-dispensers/service.yaml) |
 | `API-2004` | [Tree (HyD)](https://data.gov.hk/en-data/dataset/hk-hyd-csdi-tree-hyd) | API | Highways Department | 🕒 Coming soon | — |
 | `API-2007` | [Vegetation](https://data.gov.hk/en-data/dataset/hk-hyd-csdi-vegetation) | API | Highways Department | 🕒 Coming soon | — |
-| `API-2023` | [List of Community Used Clothes Recycling Banks locations](https://data.gov.hk/en-data/dataset/hk-had-json1-community-used-clothes-recycling-banks) | API | Home Affairs Department | 🕒 Coming soon | — |
-| `API-2359` | [Hourly ambient gamma radiation level in Hong Kong](https://data.gov.hk/en-data/dataset/hk-hko-rss-hourly-ambient-gamma-radiation-level-in-hong-kong) | API | Hong Kong Observatory | 🕒 Coming soon | — |
+| `API-2023` | [List of Community Used Clothes Recycling Banks locations](https://data.gov.hk/en-data/dataset/hk-had-json1-community-used-clothes-recycling-banks) | API | Home Affairs Department | ✅ Implemented | [Community Used Clothes Recycling Banks](mcp/services/had-clothes-banks/service.yaml) |
+| `API-2359` | [Hourly ambient gamma radiation level in Hong Kong](https://data.gov.hk/en-data/dataset/hk-hko-rss-hourly-ambient-gamma-radiation-level-in-hong-kong) | API | Hong Kong Observatory | ✅ Implemented | [HKO Weather and Radiation](mcp/services/hko-radiation/service.yaml) |
 | `API-3365` | [Landscape Character Map of Hong Kong (completed in 2005)](https://data.gov.hk/en-data/dataset/hk-pland-pland1-landscape-character-map-of-hong-kong-completed-in-2005) | API | Planning Department | 🕒 Coming soon | — |
 | `API-3368` | [Site Wind Availability Data](https://data.gov.hk/en-data/dataset/hk-pland-pland1-site-wind-availability-data) | API | Planning Department | 🕒 Coming soon | — |
 | `API-3602` | [Towngas Environmental Performance Data](https://data.gov.hk/en-data/dataset/towngas-towngas-environment) | API | The Hong Kong and China Gas Company Limited | 🕒 Coming soon | — |
