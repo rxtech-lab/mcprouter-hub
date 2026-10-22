@@ -52,6 +52,15 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Environment batch 023
+  epd_recycling_stations: { input: { limit: 2 }, check: nonEmptyPage },
+  fehd_exhibition_resource_centres: { input: { limit: 2 }, check: nonEmptyPage },
+  fehd_refuse_camera_blackspots: { input: { limit: 2 }, check: nonEmptyPage },
+  fehd_water_dispensers: { input: { limit: 2 }, check: nonEmptyPage },
+  had_clothes_recycling_banks: { input: { limit: 2 }, check: nonEmptyPage },
+  hko_daily_weather_radiation: { input: { limit: 2 }, check: nonEmptyPage },
+  hko_hourly_gamma_radiation: { input: { limit: 2 }, check: nonEmptyPage },
+
   // Environment batch 022: verified subset only
   epd_collector_recycler_directory: { input: { limit: 2 }, check: nonEmptyPage },
   epd_direct_environmental_permit_applications: { input: { limit: 2 }, check: nonEmptyPage },

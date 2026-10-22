@@ -1,3 +1,4 @@
+import { spatialCases023, fileCases023, definition023 } from "./environment023-cases";
 import { cases022, definition022 } from "./environment022-cases";
 import { definition021, environmentCases } from "./environment021-cases";
 import { governmentCases } from "./finance034-cases";
@@ -698,5 +699,54 @@ describe("Environment batch 022 MCP routes", () => {
     expect(result.isError).toBe(true);
     expect(result.content![0].text).toContain("503");
     expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("Environment batch 023 MCP routes", () => {
+  it.each(spatialCases023)("discovers and calls $tool $file on its dedicated route", async (c) => {
+    const { service } = definition023(c.tool);
+    const route = createServiceRoute(() => [service]);
+    const options = { path: `/api/mcp/s/${service.id}/streamable`, scopes: service.id };
+    const listed = await rpc(route, "tools/list", {}, options);
+    expect(listed.result!.tools!.map((t) => t.name)).toContain(c.tool);
+    fetchMock.mockImplementation(async (url) => {
+      expect(url).toBe(c.request.url);
+      return new Response(typeof c.reply === "string" ? c.reply : JSON.stringify(c.reply));
+    });
+    const called = await rpc(route, "tools/call", { name: c.tool, arguments: c.input }, options);
+    expect(called.result!.isError).toBeFalsy();
+    expect(JSON.parse(called.result!.content![0].text).data).toEqual(c.data);
+    const invalid = await rpc(route, "tools/call", { name: c.tool, arguments: { ...c.input, limit: 101 } }, options);
+    expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+  it.each(spatialCases023)("surfaces upstream failure as MCP error: $tool $file", async (c) => {
+    fetchMock.mockResolvedValueOnce(new Response("maintenance", { status: 503 }));
+    const result = await callTool(c.tool, c.input);
+    expect(result.isError).toBe(true);
+    expect(result.content![0].text).toContain("503");
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+});
+
+
+describe("Environment 023 file adapters MCP routes", () => {
+  it.each(fileCases023)("discovers and calls $tool $lang through MCP", async (c) => {
+    const { service } = definition023(c.tool);
+    const route = createServiceRoute(() => [service]);
+    const listed = await rpc(route, "tools/list", {});
+    expect(listed.result!.tools!.map((t) => t.name)).toContain(c.tool);
+    fetchMock.mockImplementation(async (url) => { expect(url).toBe(c.request.url); return new Response(c.reply); });
+    const result = await rpc(route, "tools/call", { name: c.tool, arguments: c.input });
+    expect(result.result!.isError).toBeFalsy();
+    expect(JSON.parse(result.result!.content![0].text).data).toMatchObject({ returned: 2, source: c.request.url });
+    const invalid = await rpc(route, "tools/call", { name: c.tool, arguments: { ...c.input, lang: "fr" } });
+    expect(invalid.result?.isError === true || invalid.error !== undefined).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+  it.each(fileCases023)("surfaces download failure: $tool $lang", async (c) => {
+    fetchMock.mockResolvedValueOnce(new Response("maintenance", { status: 503 }));
+    const result = await callTool(c.tool, c.input);
+    expect(result.isError).toBe(true); expect(result.content![0].text).toContain("503");
   });
 });

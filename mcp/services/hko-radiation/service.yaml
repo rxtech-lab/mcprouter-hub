@@ -1,0 +1,60 @@
+id: hko-radiation
+title: HKO Weather and Radiation
+description: Weather and radiation level report; Hourly ambient gamma radiation level
+apis:
+  - API-0039
+  - API-2359
+datasets:
+  - hk-hko-rss-weather-and-radiation-level-report
+  - hk-hko-rss-hourly-ambient-gamma-radiation-level-in-hong-kong
+cacheTtl: 300
+tools:
+  - name: hko_daily_weather_radiation
+    title: Weather and radiation level report
+    description: Weather and radiation level report. Daily report for date YYYYMMDD
+      (default yesterday in Hong Kong), retaining published weather fields and
+      radiation readings. Search published text; bounded to 100 records and 100
+      KB. Continue with nextOffset using the same filters.
+    handler: daily
+    timeoutMs: 30000
+    input:
+      search: &a1
+        type: string
+        pattern: ^.{1,100}$
+        description: Case-insensitive substring in published text
+      limit: &a2
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+      offset: &a3
+        type: integer
+        minimum: 0
+        maximum: 1000000
+        default: 0
+      lang: &a4
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      date:
+        type: string
+        pattern: ^\d{8}$
+        description: Report date YYYYMMDD, default yesterday (Hong Kong time); must be a
+          real calendar date
+  - name: hko_hourly_gamma_radiation
+    title: Hourly ambient gamma radiation level
+    description: Hourly ambient gamma radiation level. Structured adapter for the
+      official hourly CSV download. Readings are provisional; unit is
+      microsievert per hour, times are Hong Kong time. Search published text;
+      bounded to 100 records and 100 KB. Continue with nextOffset using the same
+      filters.
+    handler: hourly
+    timeoutMs: 30000
+    input:
+      search: *a1
+      limit: *a2
+      offset: *a3
+      lang: *a4

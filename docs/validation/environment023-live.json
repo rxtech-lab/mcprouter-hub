@@ -1,0 +1,258 @@
+{
+  "startedAt": "2026-10-22T07:09:11.857Z",
+  "finishedAt": "2026-10-22T07:09:19.468Z",
+  "passed": 7,
+  "realHttpRequests": 76,
+  "repairCycles": 2,
+  "independentRxCodeVerification": "pending",
+  "evidence": [
+    {
+      "id": "API-2359",
+      "tool": "hko_hourly_gamma_radiation",
+      "status": "passed",
+      "source": "https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_hourly_rmn.csv",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-search",
+        "languages"
+      ],
+      "fields": [
+        "time",
+        "station",
+        "microsievertsPerHour",
+        "sourceValue"
+      ]
+    },
+    {
+      "id": "API-0039",
+      "tool": "hko_daily_weather_radiation",
+      "status": "passed",
+      "source": "https://data.weather.gov.hk/weatherAPI/opendata/opendata.php?dataType=RYES&lang=en&date=20261021",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-search",
+        "languages"
+      ],
+      "fields": [
+        "station",
+        "fields"
+      ]
+    },
+    {
+      "id": "API-2023",
+      "tool": "had_clothes_recycling_banks",
+      "status": "passed",
+      "source": "https://www.had.gov.hk/psi/community-used-clothes-recycling-banks/community_used_clothes_recycling_banks.csv",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-search",
+        "languages"
+      ],
+      "fields": [
+        "district",
+        "region",
+        "address",
+        "schemeManager",
+        "telephone",
+        "fax",
+        "managerAddress"
+      ]
+    },
+    {
+      "id": "API-1860",
+      "tool": "epd_recycling_stations",
+      "status": "passed",
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/epd_rcd_1669597014943_12158/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-search",
+        "geometry-and-bbox",
+        "languages"
+      ],
+      "fields": [
+        "OBJECTID",
+        "ADDRESS",
+        "BLDG_ENGNM",
+        "BLDG_CHTNM",
+        "OS_TYPE",
+        "OS_STATUS",
+        "BEACH",
+        "AMENITY_AREA",
+        "INDOOR_FACILITIES",
+        "LAST_UPDATE",
+        "Shape__Length",
+        "Shape__Area",
+        "name"
+      ]
+    },
+    {
+      "id": "API-1899",
+      "tool": "fehd_exhibition_resource_centres",
+      "status": "passed",
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/fehd_rcd_1629953200619_10363/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-search",
+        "geometry-and-bbox",
+        "languages"
+      ],
+      "fields": [
+        "OBJECTID",
+        "DatasetEN",
+        "DatasetTC",
+        "NameEN",
+        "AddressEN",
+        "NameTC",
+        "AddressTC",
+        "OpeningHoursEN",
+        "OpeningHoursTC",
+        "TelephoneEN",
+        "TelephoneTC",
+        "WebsiteEN",
+        "WebsiteTC",
+        "Northing",
+        "Easting",
+        "Latitude",
+        "Longitude",
+        "LastUpdate",
+        "name"
+      ]
+    },
+    {
+      "id": "API-1919",
+      "tool": "fehd_water_dispensers",
+      "status": "passed",
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/fehd_rcd_1629969846020_11292/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-search",
+        "geometry-and-bbox",
+        "languages"
+      ],
+      "fields": [
+        "OBJECTID",
+        "DATASET_EN",
+        "DATASET_TC",
+        "NAME_EN",
+        "ADDRESS_EN",
+        "NAME_TC",
+        "ADDRESS_TC",
+        "SEARCH01_EN",
+        "SEARCH01_TC",
+        "SEARCH02_EN",
+        "SEARCH02_TC",
+        "SEARCH03_EN",
+        "SEARCH03_TC",
+        "SEARCH04_EN",
+        "SEARCH04_TC",
+        "NSEARCH01_EN",
+        "NSEARCH01_TC",
+        "NSEARCH02_EN",
+        "NSEARCH02_TC",
+        "NSEARCH03_EN",
+        "NSEARCH03_TC",
+        "NSEARCH04_EN",
+        "NSEARCH04_TC",
+        "NSEARCH05_EN",
+        "NSEARCH05_TC",
+        "NSEARCH06_EN",
+        "NSEARCH06_TC",
+        "NSEARCH07_EN",
+        "NSEARCH07_TC",
+        "NORTHING",
+        "EASTING",
+        "LATITUDE",
+        "LONGITUDE",
+        "LASTUPDATE",
+        "name"
+      ]
+    },
+    {
+      "id": "API-1903",
+      "tool": "fehd_refuse_camera_blackspots",
+      "status": "passed",
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/fehd_rcd_1665718209201_92678/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "known-record-search",
+        "geometry-and-bbox",
+        "languages"
+      ],
+      "fields": [
+        "OBJECTID",
+        "DATASET_EN",
+        "DATASET_TC",
+        "NAME_EN",
+        "ADDRESS_EN",
+        "NAME_TC",
+        "ADDRESS_TC",
+        "SEARCH01_EN",
+        "SEARCH01_TC",
+        "NORTHING",
+        "EASTING",
+        "LATITUDE",
+        "LONGITUDE",
+        "LASTUPDATE",
+        "name"
+      ]
+    }
+  ],
+  "retainedIds": [
+    "API-2359",
+    "API-0039",
+    "API-2023",
+    "API-1860",
+    "API-1899",
+    "API-1919",
+    "API-1903"
+  ],
+  "excludedIds": [
+    "API-1859",
+    "API-2004",
+    "API-2007"
+  ],
+  "excluded": 3,
+  "evidenceScope": "Retained IDs from original 2026-10-22 live run; total 76 requests includes excluded historical probes. No further upstream requests during rule6b cleanup / rule5a build-harness repair.",
+  "independentReviewerThread": "01a16276-5d72-7c61-93b7-d49c230bf02b",
+  "independentReviewerPriorResult": "Seven retained IDs independently passed; API-1859 and API-2004 search returned genuine HTTP 403. Final cleaned subset awaits fresh independent verification.",
+  "exclusions": [
+    {
+      "id": "API-1859",
+      "status": "excluded",
+      "reason": "Genuine upstream search HTTP 403",
+      "source": "independent reviewer thread 01a16276-5d72-7c61-93b7-d49c230bf02b",
+      "furtherProbes": 0,
+      "codeRetained": false
+    },
+    {
+      "id": "API-2004",
+      "status": "excluded",
+      "reason": "Genuine upstream search HTTP 403",
+      "source": "independent reviewer thread 01a16276-5d72-7c61-93b7-d49c230bf02b",
+      "furtherProbes": 0,
+      "codeRetained": false
+    },
+    {
+      "id": "API-2007",
+      "status": "excluded",
+      "reason": "Genuine upstream search HTTP 403",
+      "source": "original live implementation validation",
+      "furtherProbes": 0,
+      "codeRetained": false
+    }
+  ]
+}
