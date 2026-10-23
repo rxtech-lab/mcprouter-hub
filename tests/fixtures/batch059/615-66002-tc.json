@@ -1,0 +1,107 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=615-66002&api_popup=1"
+    },
+    "title": "經季節性調整的主要承建商所完成的建造工程總值",
+    "tablenote": [
+      "經季節性調整的建造工程總值是採用「X-12 自迴歸－求和－移動平均 (X-12 ARIMA)」方法編製。X-12 ARIMA及其相關版本是編製經季節性調整數列的常用標準方法。該方法可用作檢測原有數列是否有離群值，以估算季節性因素。",
+      "透過適當的物價指數去平減相應的建造工程完成量名義總值至2000年基期的價格水平計算而成。",
+      "r 修訂數字",
+      "p 臨時數字",
+      "[φ3] 數字代表增減少於 0.05%。"
+    ],
+    "source": "政府統計處建造及雜項服務統計組 (查詢電話：3903 6965  查詢電郵：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 10,
+      "started": "2026-10-23T21:02:41+00:00",
+      "finished": "2026-10-23T21:02:41+00:00",
+      "durationSeconds": 0.01223
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Q",
+      "period": "200006",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "按季變動百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200009",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "按季變動百分率",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202603",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "按季變動百分率",
+      "figure": 6.7,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "按季變動百分率",
+      "figure": 0,
+      "sd_value": "p,[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "百萬港元",
+      "figure": 30966,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "百萬港元",
+      "figure": 74967,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Q",
+      "period": "200006",
+      "sv": "GVCW_REAL_SA",
+      "svDesc": "按季變動百分率",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201503",
+      "sv": "GVCW_REAL_SA",
+      "svDesc": "按季變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL_SA",
+      "svDesc": "百萬港元",
+      "figure": 29231,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_REAL_SA",
+      "svDesc": "百萬港元",
+      "figure": 38106,
+      "sd_value": "p"
+    }
+  ]
+}

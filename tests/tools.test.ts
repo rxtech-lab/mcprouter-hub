@@ -1,3 +1,4 @@
+import { cases059 } from "./batch059-cases";
 import { cases058 } from "./batch058-cases";
 import { cases053 } from "./batch053-cases";
 import { cases051 } from "./batch051-cases";
@@ -204,6 +205,7 @@ const cases: Case[] = [
   ...governmentCases,
   ...cases051,
   ...cases058,
+  ...cases059,
   ...batch035.map((c) => ({ tool: c.tool, input: { ...c.input, limit: 3 },
     request: { url: request035(c.tool) }, reply: fixture035(c.fixture), ttl: 3600,
     data: expect.objectContaining({ results: expect.any(Array), returned: expect.any(Number) }) })),

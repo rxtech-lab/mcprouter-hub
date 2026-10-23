@@ -1,0 +1,134 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=615-73001&api_popup=1"
+    },
+    "title": "行業主類為建造業的所有公司的選定統計數字",
+    "tablenote": [
+      "以上的統計數字是按「香港標準行業分類2.0版」編製。用戶可下載按「香港標準行業分類1.1版」編製的以往統計數字以作參考。",
+      "2020年至2022年的數字包括與防疫抗疫措施有關的資助金額。"
+    ],
+    "source": "經濟活動按年統計調查 政府統計處建造及雜項服務統計組 (查詢電話：3903 6964  查詢電郵：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 11,
+      "started": "2026-10-23T21:02:41+00:00",
+      "finished": "2026-10-23T21:02:41+00:00",
+      "durationSeconds": 0.007973
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "FEE_SUB",
+      "svDesc": "百萬港元",
+      "figure": 61034,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 6918,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GVCW",
+      "svDesc": "百萬港元",
+      "figure": 137820,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 17985,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 12384,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "PE_D_ASEA",
+      "svDesc": "數目",
+      "figure": 122870,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 39310,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 4949,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP_LAB",
+      "svDesc": "百萬港元",
+      "figure": 32366,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 30067,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 79504,
+      "sd_value": ""
+    }
+  ]
+}

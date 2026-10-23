@@ -1,0 +1,205 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-66022&api_popup=1"
+    },
+    "title": "Gross value of construction works in real terms performed by main contractors at construction sites analysed by broad end-use group",
+    "tablenote": [
+      "Derived by deflating the nominal value with an appropriate price index to the price level in the base period of 2000.",
+      "r Revised figure",
+      "p Provisional figure"
+    ],
+    "source": "Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6965  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 15,
+      "started": "2026-10-23T21:02:21+00:00",
+      "finished": "2026-10-23T21:02:21+00:00",
+      "durationSeconds": 0.028109
+    }
+  },
+  "dataSet": [
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": "",
+      "USE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_REAL",
+      "svDesc": "HK$ million",
+      "figure": 82526,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 20,
+      "USE_GRPDesc": "Buildings",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_REAL",
+      "svDesc": "HK$ million",
+      "figure": 61098,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 30,
+      "USE_GRPDesc": "Structures & facilities",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_REAL",
+      "svDesc": "HK$ million",
+      "figure": 21427,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": "",
+      "USE_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL",
+      "svDesc": "HK$ million",
+      "figure": 20921,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 20,
+      "USE_GRPDesc": "Buildings",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL",
+      "svDesc": "HK$ million",
+      "figure": 15861,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 30,
+      "USE_GRPDesc": "Structures & facilities",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL",
+      "svDesc": "HK$ million",
+      "figure": 5060,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": "",
+      "USE_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "202603",
+      "sv": "GVCW_REAL",
+      "svDesc": "HK$ million",
+      "figure": 26948,
+      "sd_value": "r"
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": "",
+      "USE_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_REAL",
+      "svDesc": "HK$ million",
+      "figure": 26194,
+      "sd_value": "p"
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": "",
+      "USE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_REAL",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.9,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 20,
+      "USE_GRPDesc": "Buildings",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_REAL",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.5,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 30,
+      "USE_GRPDesc": "Structures & facilities",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_REAL",
+      "svDesc": "Year-on-year % change",
+      "figure": 16.8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": "",
+      "USE_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 20,
+      "USE_GRPDesc": "Buildings",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL",
+      "svDesc": "Year-on-year % change",
+      "figure": -10.5,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 30,
+      "USE_GRPDesc": "Structures & facilities",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.7,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "USE_GRP": 30,
+      "USE_GRPDesc": "Structures & facilities",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_REAL",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": "p"
+    }
+  ]
+}
