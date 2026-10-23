@@ -1,0 +1,134 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=615-73002&api_popup=1"
+    },
+    "title": "行業中類為建築、測量及工程服務業的所有公司的選定統計數字",
+    "tablenote": [
+      "以上的統計數字是按「香港標準行業分類2.0版」編製。用戶可下載按「香港標準行業分類1.1版」編製的以往統計數字以作參考。",
+      "2020年至2022年的數字包括與防疫抗疫措施有關的資助金額。"
+    ],
+    "source": "經濟活動按年統計調查 政府統計處建造及雜項服務統計組 (查詢電話：3903 6964  查詢電郵：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 11,
+      "started": "2026-10-23T22:02:04+00:00",
+      "finished": "2026-10-23T22:02:04+00:00",
+      "durationSeconds": 0.0078
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "ASE_FEE",
+      "svDesc": "百萬港元",
+      "figure": 1713,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 149,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 5246,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1014,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 1306,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 1397,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 17805,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "SERV_INC",
+      "svDesc": "百萬港元",
+      "figure": 9443,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 6250,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 222,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 307,
+      "sd_value": ""
+    }
+  ]
+}

@@ -1,0 +1,1826 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-73031&api_popup=1"
+    },
+    "title": "Principal statistics for all companies in the real estate activities industry by industry group/class",
+    "tablenote": [
+      "Figures in the table may not add up to the total due to rounding.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures.",
+      "- Not applicable",
+      "[§3] Increase or decrease of less than 0.05%"
+    ],
+    "source": "Annual Survey of Economic Activities Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6964  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 180,
+      "started": "2026-10-23T22:02:11+00:00",
+      "finished": "2026-10-23T22:02:11+00:00",
+      "durationSeconds": 0.042294
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "HK$ million",
+      "figure": 55031,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "HK$ million",
+      "figure": 55031,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GROSS_MAR",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GROSS_MAR",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 98487,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 3929,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2471,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1458,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 102416,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 20.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 33.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -12.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -45,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 3587,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 2957,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 2395,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 561,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 6544,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 13746,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 14430,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 6309,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 8120,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 28175,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 24.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 37.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 14.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": -11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": -33,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 13965,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 99177,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 28240,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 70937,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 113142,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -5.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -18.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "HK$ million",
+      "figure": 56084,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "HK$ million",
+      "figure": 43019,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "HK$ million",
+      "figure": 14784,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "HK$ million",
+      "figure": 28235,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "HK$ million",
+      "figure": 99103,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": 17.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": 17.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": 17.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "SERV_RENT",
+      "svDesc": "Year-on-year % change",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 97356,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 20996,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 9739,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 11257,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 118353,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 15.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 24.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 11741,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 3689,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 3341,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 348,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 15430,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -5.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 30.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -68,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 3874,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 18792,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 8894,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 9898,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 22666,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 14.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 3904,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 9558,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 451,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 9107,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 13462,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "Real estate brokerage and agency, and other real estate services not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -32.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "Real estate activities on a fee or contract basis",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "Real estate development and/or leasing",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "Real estate maintenance management",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.3,
+      "sd_value": ""
+    }
+  ]
+}

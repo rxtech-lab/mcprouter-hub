@@ -1,0 +1,123 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=615-73003&api_popup=1"
+    },
+    "title": "行业主类为地产活动业的所有公司的选定统计数字",
+    "tablenote": [
+      "以上的统计数字是按「香港标准行业分类2.0版」编制。用户可下载按「香港标准行业分类1.1版」编制的以往统计数字以作参考。"
+    ],
+    "source": "经济活动按年统计调查 政府统计处建造及杂项服务统计组 (查询电话：3903 6964  查询电邮：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 10,
+      "started": "2026-10-23T22:02:05+00:00",
+      "finished": "2026-10-23T22:02:05+00:00",
+      "durationSeconds": 0.006301
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GROSS_MAR",
+      "svDesc": "百万港元",
+      "figure": 27091,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 39820,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 4938,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "MIS_EXP",
+      "svDesc": "百万港元",
+      "figure": 19834,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 93086,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "SERV_RENT",
+      "svDesc": "百万港元",
+      "figure": 56911,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 60660,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 13568,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "CONSUM",
+      "svDesc": "百万港元",
+      "figure": 10282,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地产活动业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "百万港元",
+      "figure": 9897,
+      "sd_value": ""
+    }
+  ]
+}

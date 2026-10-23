@@ -1,0 +1,2316 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-73011&api_popup=1"
+    },
+    "title": "Principal statistics for all companies in the construction sector by industry division/group",
+    "tablenote": [
+      "Figures in the table may not add up to the total due to rounding.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures.",
+      "- Not applicable",
+      "[§3] Increase or decrease of less than 0.05%"
+    ],
+    "source": "Annual Survey of Economic Activities Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6964  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 229,
+      "started": "2026-10-23T22:02:06+00:00",
+      "finished": "2026-10-23T22:02:06+00:00",
+      "durationSeconds": 0.048772
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "HK$ million",
+      "figure": 39897,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "HK$ million",
+      "figure": 18995,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "HK$ million",
+      "figure": 2946,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "HK$ million",
+      "figure": 9667,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "HK$ million",
+      "figure": 19579,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "HK$ million",
+      "figure": 91083,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": 61.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": 31,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": -22,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "FEE_SUB",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2084,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 938,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 861,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 7772,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 5058,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 16714,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 17.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -16.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -19.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -43,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -20.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 54.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 51,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -27,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "HK$ million",
+      "figure": 66207,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "HK$ million",
+      "figure": 37017,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "HK$ million",
+      "figure": 9479,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "HK$ million",
+      "figure": 53917,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "HK$ million",
+      "figure": 48358,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "HK$ million",
+      "figure": 214977,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": 34.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": 48.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": -12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GVCW",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 628,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1165,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 776,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 8096,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 12752,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 23417,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -19.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -19.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -10.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 3654,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 3630,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 1189,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 4257,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 4810,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 17541,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 71.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 62.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 18.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": -41,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "MIS_EXP",
+      "svDesc": "Year-on-year % change",
+      "figure": 43,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 18.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -24,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 34.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 14.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Number",
+      "figure": 20307,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Number",
+      "figure": 27293,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Number",
+      "figure": 6887,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Number",
+      "figure": 72434,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Number",
+      "figure": 43423,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Number",
+      "figure": 170345,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 12819,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 8320,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 2853,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 25170,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 16244,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 65406,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 18.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 54,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 28.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 27.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 38.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 1070,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 807,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 158,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 1724,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 1627,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 5386,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -25.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 574.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 184.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 207.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -31.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 143.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": 67,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "BR_OTH",
+      "svDesc": "Year-on-year % change",
+      "figure": -59,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "HK$ million",
+      "figure": 11401,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "HK$ million",
+      "figure": 7440,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "HK$ million",
+      "figure": 2041,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "HK$ million",
+      "figure": 18524,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "HK$ million",
+      "figure": 11219,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "HK$ million",
+      "figure": 50625,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 15.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 67.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 63.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 24.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP_LAB",
+      "svDesc": "Year-on-year % change",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 10240,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 6821,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 2600,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 15419,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 9319,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 44400,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 21.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 43.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 63.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 20.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "Demolition and site preparation",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "Building services installation and maintenance activities",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 34,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "Civil engineering",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -19,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "Building finishing and other specialised construction activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "Construction of buildings",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 22,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.6,
+      "sd_value": ""
+    }
+  ]
+}

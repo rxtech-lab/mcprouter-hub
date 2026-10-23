@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-building-business
+slug: censtatd-building-business
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

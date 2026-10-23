@@ -1,0 +1,26 @@
+[
+  {
+    "resource": "https://www.censtatd.gov.hk/data/en/table_615-73052_lang.json",
+    "capture": "615-73052-lang.json",
+    "sha256": "bd579405c7c3d10d9ed48462afafcb0d8287a5c20c7e2b7fb4b25a54a82f7cdb",
+    "usedFor": "English indicator definitions and original classification units"
+  },
+  {
+    "resource": "https://www.censtatd.gov.hk/data/en/table_615-73012_lang.json",
+    "capture": "615-73012-lang.json",
+    "sha256": "28decd75fc5cd3e164b105f371791939a0c6db1de9207d3837f5dee901e873dd",
+    "usedFor": "English indicator definitions and original classification units"
+  },
+  {
+    "resource": "https://www.censtatd.gov.hk/data/en/table_615-73032_lang.json",
+    "capture": "615-73032-lang.json",
+    "sha256": "2b63b2b156ab032baa21694bba3b2f026580a9b14c35ef535864e0c20423c375",
+    "usedFor": "English indicator definitions and original classification units"
+  },
+  {
+    "resource": "https://www.censtatd.gov.hk/data/en/table_615-73013_lang.json",
+    "capture": "615-73013-lang.json",
+    "sha256": "bc99b7e29fbb7a70312862df34ddd35f99f680e8f40550c9c01736d5738a1396",
+    "usedFor": "English indicator definitions and original classification units"
+  }
+]

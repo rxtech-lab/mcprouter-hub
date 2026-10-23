@@ -1,0 +1,134 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-73002&api_popup=1"
+    },
+    "title": "Selected statistics for all companies in the industry group of architectural, surveying and engineering services",
+    "tablenote": [
+      "The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0.  Users may also download past statistics based on HSIC Version 1.1 for reference.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures."
+    ],
+    "source": "Annual Survey of Economic Activities Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6964  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 11,
+      "started": "2026-10-23T22:02:04+00:00",
+      "finished": "2026-10-23T22:02:04+00:00",
+      "durationSeconds": 0.018784
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "ASE_FEE",
+      "svDesc": "HK$ million",
+      "figure": 1713,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 149,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5246,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1014,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1306,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 1397,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 17805,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "SERV_INC",
+      "svDesc": "HK$ million",
+      "figure": 9443,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 6250,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 222,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "Architectural, Surveying and Engineering Services Industry",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 307,
+      "sd_value": ""
+    }
+  ]
+}
