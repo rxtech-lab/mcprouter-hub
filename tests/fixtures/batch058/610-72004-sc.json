@@ -1,0 +1,216 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=610-72004&api_popup=1"
+    },
+    "title": "按总收益划分的所有制造业公司主要统计数字",
+    "tablenote": [
+      "由于统计表内数字经四舍五入，分项总和未必与总数相等。",
+      "2020年至2022年的数字包括与防疫抗疫措施有关的资助金额。"
+    ],
+    "source": "经济活动按年统计调查 政府统计处 工业生产统计组 电话﹕(852) 3903 7246 电邮﹕manufacturing@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 16,
+      "started": "2026-10-23T20:02:30+00:00",
+      "finished": "2026-10-23T20:02:30+00:00",
+      "durationSeconds": 0.038262
+    }
+  },
+  "dataSet": [
+    {
+      "TR_GRP": "",
+      "TR_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 21843,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "<500",
+      "TR_GRPDesc": "< 500",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 243,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "1000-1999",
+      "TR_GRPDesc": "1,000 - 1,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 462,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "10000-19999",
+      "TR_GRPDesc": "10,000 - 19,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 1797,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "100000_and_over",
+      "TR_GRPDesc": "≥100,000",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 13165,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "2000-9999",
+      "TR_GRPDesc": "2,000 - 9,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 2189,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "20000-49999",
+      "TR_GRPDesc": "20,000 - 49,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 1276,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "500-999",
+      "TR_GRPDesc": "500 - 999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 798,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "50000-99999",
+      "TR_GRPDesc": "50,000 - 99,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 1914,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "",
+      "TR_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 17835,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "",
+      "TR_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 12643,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "",
+      "TR_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 135264,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "",
+      "TR_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 145247,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "",
+      "TR_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 40422,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "",
+      "TR_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 174942,
+      "sd_value": ""
+    },
+    {
+      "TR_GRP": "50000-99999",
+      "TR_GRPDesc": "50,000 - 99,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 11071,
+      "sd_value": ""
+    }
+  ]
+}

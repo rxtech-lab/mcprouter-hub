@@ -1,0 +1,63 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-21001A&api_popup=1"
+    },
+    "title": "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2003 = 100 ) - Costs of Labour Index",
+    "tablenote": [
+      "(1) The index numbers of the costs of labour are compiled based on data contained in GF527 (Rev. 1/2003) returns provided to the Census and Statistics Department (C&amp;SD) by the Architectural Services Department, Civil Engineering and Development Department, Drainage Services Department, Electrical and Mechanical Services Department, Environmental Protection Department, Highways Department, Housing Department and Water Supplies Department, and administrative information of the Development Bureau (DEVB), in accordance with the project coverage and occupations specified by DEVB. GF527 is an administrative return for reporting site labour deployment and wage rates for construction works by main contractors of public sector construction projects. According to the instructions issued by DEVB, contractors should be responsible for the accuracy of the data entered while site supervisory staff of the works departments concerned should check and sign the returns submitted by contractors before delivering the returns to C&amp;SD via their project offices. C&amp;SD’s role in the exercise is to consolidate the data received to compute and disseminate statistics on average daily wages for selected occupations and based on which, the index numbers of the costs of labour used in public sector construction projects.     Users may obtain detailed information about the GF527 (Rev. 1/2003) form and guidelines for filling in the form from the website of DEVB.     (2) The index numbers of the costs of labour are compiled for working out the increase/decrease of payment to the main contractors of public sector construction projects to adjust for the change in costs. The costs of labour indices therefore only cover public sector construction projects and reflect the changes in labour costs borne by main contractors of public sector construction projects.     (3) C&amp;SD currently releases two sets of index numbers each month using April 2021 and April 2003 as the base period respectively. For the 2021-based index numbers, please refer to \"Table 615-21001 : Index numbers of the costs of labour and materials used in public sector construction projects (April 2021 = 100) - Costs of Labour Index\"."
+    ],
+    "source": "Price Research and Analytics Section (2),  Census and Statistics Department  (Enquiry telephone no. : 3903 7384   Enquiry e-mail : construction-cost@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 4,
+      "started": "2026-10-23T20:02:31+00:00",
+      "finished": "2026-10-23T20:02:31+00:00",
+      "durationSeconds": 0.034002
+    }
+  },
+  "dataSet": [
+    {
+      "WAGE": "WAGE_BC",
+      "WAGEDesc": "Composite labour wages for building contracts",
+      "freq": "M",
+      "period": "200310",
+      "sv": "L_INDEX2003",
+      "svDesc": "Index",
+      "figure": 97.5,
+      "sd_value": ""
+    },
+    {
+      "WAGE": "WAGE_CE",
+      "WAGEDesc": "Composite labour wages for civil engineering contracts",
+      "freq": "M",
+      "period": "200310",
+      "sv": "L_INDEX2003",
+      "svDesc": "Index",
+      "figure": 98.1,
+      "sd_value": ""
+    },
+    {
+      "WAGE": "WAGE_BC",
+      "WAGEDesc": "Composite labour wages for building contracts",
+      "freq": "M",
+      "period": "200304",
+      "sv": "L_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "WAGE": "WAGE_CE",
+      "WAGEDesc": "Composite labour wages for civil engineering contracts",
+      "freq": "M",
+      "period": "202607",
+      "sv": "L_INDEX2003",
+      "svDesc": "Index",
+      "figure": 182.5,
+      "sd_value": ""
+    }
+  ]
+}

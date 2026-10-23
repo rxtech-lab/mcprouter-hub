@@ -1,0 +1,95 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=610-72013&api_popup=1"
+    },
+    "title": "Selected principal statistics for manufacturing companies and import and export companies with manufacturing-related activities",
+    "tablenote": [
+      "Besides manufacturing-related activities, services industries in Hong Kong have all along been providing various professional services and other support services for commerce and industry. For more information, please refer to Table 655-82101.",
+      "Sub-contract processing arrangement is defined as a contractual agreement between a party in Hong Kong and a party in Chinese Mainland (the Mainland) and other regions, whereby the Hong Kong party places an order with the party in the Mainland and these regions to carry out production processing.",
+      "Sales revenue includes revenue from selling goods produced in-house and those purchased from external parties. Also, it covers goods produced locally and those produced through sub-contract processing arrangement."
+    ],
+    "source": "Annual Survey of Economic Activities Industrial Production Statistics Section, Census and Statistics Department Tel.: (852) 3903 7246 Email: manufacturing@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 7,
+      "started": "2026-10-23T20:02:30+00:00",
+      "finished": "2026-10-23T20:02:30+00:00",
+      "durationSeconds": 0.008463
+    }
+  },
+  "dataSet": [
+    {
+      "FIRM": 1,
+      "FIRMDesc": "(I) Manufacturing companies",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 7251,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 2,
+      "FIRMDesc": "(II) Import and export companies engaged in sub-contract processing arrangement and providing manufacturing-related technical support services",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 12936,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 3,
+      "FIRMDesc": "(I) + (II)",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 20187,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 1,
+      "FIRMDesc": "(I) Manufacturing companies",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 88000,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 1,
+      "FIRMDesc": "(I) Manufacturing companies",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 35000,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 1,
+      "FIRMDesc": "(I) Manufacturing companies",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "SALE_REV",
+      "svDesc": "HK$ million",
+      "figure": 187800,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 3,
+      "FIRMDesc": "(I) + (II)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "SALE_REV",
+      "svDesc": "HK$ million",
+      "figure": 645900,
+      "sd_value": ""
+    }
+  ]
+}

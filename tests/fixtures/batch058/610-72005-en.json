@@ -1,0 +1,253 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=610-72005&api_popup=1"
+    },
+    "title": "Principal statistics for all companies in the manufacturing sector by industry grouping and number of persons engaged",
+    "tablenote": [
+      "Figures in the table may not add up to the total due to rounding.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures.",
+      "* Figure is not released in order to safeguard confidentiality of information of individual companies or individuals."
+    ],
+    "source": "Annual Survey of Economic Activities Industrial Production Statistics Section, Census and Statistics Department Tel.: (852) 3903 7246 Email: manufacturing@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 19,
+      "started": "2026-10-23T20:02:30+00:00",
+      "finished": "2026-10-23T20:02:30+00:00",
+      "durationSeconds": 0.042545
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 7703,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "1-9",
+      "PE_GRPDesc": "1 - 9",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 428,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "10-99",
+      "PE_GRPDesc": "10 - 99",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1993,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "100_and_over",
+      "PE_GRPDesc": "≥100",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5282,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_13_14",
+      "INDDesc": "Textiles and wearing apparel",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_13_14",
+      "INDDesc": "Textiles and wearing apparel",
+      "PE_GRP": "1-9",
+      "PE_GRPDesc": "1 - 9",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "*"
+    },
+    {
+      "IND": "ind_ASIP_15_16_31_32",
+      "INDDesc": "Other manufacturing industries",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1265,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_17_18",
+      "INDDesc": "Paper products, printing and reproduction of recorded media",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2628,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_19_20_21_22_23",
+      "INDDesc": "Chemicals, rubber, plastics and non-metallic mineral products",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2982,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_24_25_28_29_30_33",
+      "INDDesc": "Metal products, machinery and equipment",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 6214,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_26_27",
+      "INDDesc": "Electrical, electronic and optical products",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 898,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 22617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 6352,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1118,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 31681,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 34053,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 11957,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "Food, beverages and tobacco",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 45736,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "PE_GRP": "100_and_over",
+      "PE_GRPDesc": "≥100",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 195160,
+      "sd_value": ""
+    }
+  ]
+}

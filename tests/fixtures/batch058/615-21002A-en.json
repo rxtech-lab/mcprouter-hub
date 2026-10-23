@@ -1,0 +1,257 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-21002A&api_popup=1"
+    },
+    "title": "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2003 = 100 ) - Costs of Materials Index",
+    "tablenote": [
+      "The Cost of Materials Indices are compiled for working out the increase/decrease of payment to the main contractors of public sector construction projects to adjust for the change in costs.     C&amp;SD currently releases two sets of index numbers each month using April 2021 and April 2003 as the base period respectively. For the 2021-based index numbers, please refer to \"Table 615-21002 : Index numbers of the costs of labour and materials used in public sector construction projects (April 2021 = 100) - Costs of Materials Index\".",
+      "The copper pipes cost index is a new index series with data collection commenced since 2008. The index adopts September 2008 as the base period (i.e. September 2008 = 100) and its index level is not directly comparable with those of other series.",
+      "Figure does not include marine sand and manufactured sand.",
+      "- Not applicable",
+      "[#6] The uPVC lined GMS pipes cost index has been discontinued after the release applicable to the month of December 2011."
+    ],
+    "source": "Price Research and Analytics Section (2),  Census and Statistics Department  (Enquiry telephone no. : 3903 7384   Enquiry e-mail : construction-cost@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 23,
+      "started": "2026-10-23T20:02:32+00:00",
+      "finished": "2026-10-23T20:02:32+00:00",
+      "durationSeconds": 0.265983
+    }
+  },
+  "dataSet": [
+    {
+      "ITEM_P": "AGG",
+      "ITEM_PDesc": "Aggregates",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 99.1,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "BIT",
+      "ITEM_PDesc": "Bitumen",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 93.6,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "CEMENT",
+      "ITEM_PDesc": "Portland cement (ordinary)",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 99.5,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "CONCRETE",
+      "ITEM_PDesc": "Concrete blocks",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 99.8,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "COPPER",
+      "ITEM_PDesc": "Copper pipes (September 2008 = 100)",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "ITEM_P": "DIESEL",
+      "ITEM_PDesc": "Diesel fuel",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 96.9,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "GLASS",
+      "ITEM_PDesc": "Glass",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 97.2,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "GMS",
+      "ITEM_PDesc": "Galvanised mild steel",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 104.9,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "GMSPIPE",
+      "ITEM_PDesc": "GMS pipes",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "HARDW",
+      "ITEM_PDesc": "Hardwood",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100.1,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "HOMOF",
+      "ITEM_PDesc": "Homogeneous floor tiles",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 102.5,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "MF",
+      "ITEM_PDesc": "Metal formwork",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100.9,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "MOSAIC",
+      "ITEM_PDesc": "Mosaic tiles",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "PAINT",
+      "ITEM_PDesc": "Paint",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100.6,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "SAND",
+      "ITEM_PDesc": "Sand",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "SR",
+      "ITEM_PDesc": "Steel reinforcement",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 95,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "TEAK",
+      "ITEM_PDesc": "Teak",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "TF",
+      "ITEM_PDesc": "Timber formwork",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100.3,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "UPVC",
+      "ITEM_PDesc": "uPVC pipes",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "UPVCL",
+      "ITEM_PDesc": "uPVC lined GMS pipes",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "WALL",
+      "ITEM_PDesc": "Glazed ceramic wall tiles",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 100.4,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "UPVCL",
+      "ITEM_PDesc": "uPVC lined GMS pipes",
+      "freq": "M",
+      "period": "201201",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "[#6]"
+    },
+    {
+      "ITEM_P": "WALL",
+      "ITEM_PDesc": "Glazed ceramic wall tiles",
+      "freq": "M",
+      "period": "202607",
+      "sv": "M_INDEX2003",
+      "svDesc": "Index",
+      "figure": 233.3,
+      "sd_value": ""
+    }
+  ]
+}

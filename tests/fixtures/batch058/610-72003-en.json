@@ -1,0 +1,228 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=610-72003&api_popup=1"
+    },
+    "title": "Principal statistics for all companies in the manufacturing sector by industry value added",
+    "tablenote": [
+      "Figures in the table may not add up to the total due to rounding.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures."
+    ],
+    "source": "Annual Survey of Economic Activities Industrial Production Statistics Section, Census and Statistics Department Tel.: (852) 3903 7246 Email: manufacturing@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 17,
+      "started": "2026-10-23T20:02:08+00:00",
+      "finished": "2026-10-23T20:02:08+00:00",
+      "durationSeconds": 0.040542
+    }
+  },
+  "dataSet": [
+    {
+      "IVA_GRP": "",
+      "IVA_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 21843,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "<50",
+      "IVA_GRPDesc": "< 50",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 701,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "1000-2499",
+      "IVA_GRPDesc": "1,000 - 2,499",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 971,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "10000-24999",
+      "IVA_GRPDesc": "10,000 - 24,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1704,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "250-499",
+      "IVA_GRPDesc": "250 - 499",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 166,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "2500-4999",
+      "IVA_GRPDesc": "2,500 - 4,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2191,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "25000_and_over",
+      "IVA_GRPDesc": "≥ 25,000",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 14181,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "50-249",
+      "IVA_GRPDesc": "50 - 249",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 293,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "500-999",
+      "IVA_GRPDesc": "500 - 999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1028,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "5000-9999",
+      "IVA_GRPDesc": "5,000 - 9,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 608,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "",
+      "IVA_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 17835,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "",
+      "IVA_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 12643,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "",
+      "IVA_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 135264,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "",
+      "IVA_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 145247,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "",
+      "IVA_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 40422,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "",
+      "IVA_GRPDesc": "Total",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 174942,
+      "sd_value": ""
+    },
+    {
+      "IVA_GRP": "5000-9999",
+      "IVA_GRPDesc": "5,000 - 9,999",
+      "IND": "ind_ASIP_C",
+      "INDDesc": "Manufacturing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 7368,
+      "sd_value": ""
+    }
+  ]
+}

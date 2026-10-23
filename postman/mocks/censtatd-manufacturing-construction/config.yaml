@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-manufacturing-construction
+slug: censtatd-manufacturing-construction
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

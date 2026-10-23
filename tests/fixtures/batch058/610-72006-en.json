@@ -1,0 +1,214 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=610-72006&api_popup=1"
+    },
+    "title": "Principal statistics for all companies in the manufacturing sector by detailed industry grouping",
+    "tablenote": [
+      "Figures in the table may not add up to the total due to rounding.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures."
+    ],
+    "source": "Annual Survey of Economic Activities Industrial Production Statistics Section, Census and Statistics Department Tel.: (852) 3903 7246 Email: manufacturing@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 19,
+      "started": "2026-10-23T20:02:30+00:00",
+      "finished": "2026-10-23T20:02:30+00:00",
+      "durationSeconds": 0.019853
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "Food products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 6440,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_11_12",
+      "INDDesc": "Beverage and tobacco products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1263,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_13_14",
+      "INDDesc": "Textiles and wearing apparel",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_17_18",
+      "INDDesc": "Paper products, printing and reproduction of recorded media",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2628,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_20_21",
+      "INDDesc": "Chemical products and pharmaceuticals",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1805,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_22_23",
+      "INDDesc": "Rubber, plastics and non-metallic mineral products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1177,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_24_25",
+      "INDDesc": "Basic metals and fabricated metal products (except machinery and equipment)",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 740,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_26_27",
+      "INDDesc": "Electrical, electronic and optical products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 898,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_28",
+      "INDDesc": "Machinery and equipment not elsewhere classified",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 366,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_32",
+      "INDDesc": "Other miscellaneous manufacturing industries",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1265,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_33",
+      "INDDesc": "Repair and installation of machinery and equipment",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5108,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_C",
+      "INDDesc": "All manufacturing industries",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 22617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "Food products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 3928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "Food products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1086,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "Food products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 26597,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "Food products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 30628,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "Food products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 8543,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "Food products",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 36964,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_C",
+      "INDDesc": "All manufacturing industries",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 300038,
+      "sd_value": ""
+    }
+  ]
+}
