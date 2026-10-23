@@ -1,0 +1,5 @@
+simulation: batch059
+routing: path
+mocks:
+  - routeKey: censtatd
+    path: ../mocks/censtatd-construction-output/config.yaml

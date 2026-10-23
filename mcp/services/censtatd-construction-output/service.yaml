@@ -1,0 +1,436 @@
+id: censtatd-construction-output
+title: Hong Kong Construction Output and Industry Statistics
+description: Official C&SD gross construction output in nominal, real and seasonally adjusted terms, with trade, end-use, activity and annual construction industry statistics.
+apis:
+  - API-0677
+  - API-0678
+  - API-0679
+  - API-0680
+  - API-0681
+  - API-0682
+  - API-0683
+  - API-0684
+  - API-0685
+  - API-0686
+datasets:
+  - hk-censtatd-tablechart-615-66001
+  - hk-censtatd-tablechart-615-66002
+  - hk-censtatd-tablechart-615-66011
+  - hk-censtatd-tablechart-615-66012
+  - hk-censtatd-tablechart-615-66021
+  - hk-censtatd-tablechart-615-66022
+  - hk-censtatd-tablechart-615-66023
+  - hk-censtatd-tablechart-615-66024
+  - hk-censtatd-tablechart-615-66031
+  - hk-censtatd-tablechart-615-73001
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map: { en: en, tc: tc, sc: sc }
+cacheTtl: 3600
+tools:
+  - name: construction_output
+    title: "Gross value of construction works performed by main contractors (615-66001)"
+    description: "Gross value of construction works performed by main contractors. Official C&SD Table 615-66001. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups."
+    path: /get.php
+    query: { id: "615-66001", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_NOM", "GVCW_REAL"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "yoy_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_output_seasonally_adjusted
+    title: "Seasonally adjusted gross value of construction works performed by main contractors (615-66002)"
+    description: "Seasonally adjusted gross value of construction works performed by main contractors. Official C&SD Table 615-66002. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups. X-12 ARIMA seasonally adjusted quarterly output; qoq_percent is quarter-to-quarter change."
+    path: /get.php
+    query: { id: "615-66002", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_NOM_SA", "GVCW_REAL_SA"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "qoq_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_nominal_by_trade
+    title: "Gross value of construction works in nominal terms performed by contractors analysed by broad trade group (615-66011)"
+    description: "Gross value of construction works in nominal terms performed by contractors analysed by broad trade group. Official C&SD Table 615-66011. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups. GVCW_NOM_SC is sub-contractor output and is subject to double-counting; it is not additive to main-contractor output."
+    path: /get.php
+    query: { id: "615-66011", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_NOM", "GVCW_NOM_SC"]
+      trade_group:
+        type: string
+        in: local
+        description: "BTG_GRP: TOTAL = Total; 10 = Construction works at construction sites; 11 = Private sector construction sites; 12 = Public sector construction sites; 20 = Construction works at locations other than sites; 21 = General trades; 22 = Special trades"
+        enum: ["TOTAL", "10", "11", "12", "20", "21", "22"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "yoy_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_real_by_trade
+    title: "Gross value of construction works in real terms performed by main contractors analysed by broad trade group (615-66012)"
+    description: "Gross value of construction works in real terms performed by main contractors analysed by broad trade group. Official C&SD Table 615-66012. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups."
+    path: /get.php
+    query: { id: "615-66012", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_REAL"]
+      trade_group:
+        type: string
+        in: local
+        description: "BTG_GRP: TOTAL = Total; 10 = Construction works at construction sites; 11 = Private sector construction sites; 12 = Public sector construction sites; 20 = Construction works at locations other than sites; 21 = General trades; 22 = Special trades"
+        enum: ["TOTAL", "10", "11", "12", "20", "21", "22"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "yoy_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_nominal_broad_end_use
+    title: "Gross value of construction works in nominal terms performed by main contractors at construction sites analysed by broad end-use group (615-66021)"
+    description: "Gross value of construction works in nominal terms performed by main contractors at construction sites analysed by broad end-use group. Official C&SD Table 615-66021. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups."
+    path: /get.php
+    query: { id: "615-66021", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_NOM"]
+      trade_group:
+        type: string
+        in: local
+        description: "BTG_GRP: 10 = Construction works at construction sites"
+        enum: ["10"]
+      end_use:
+        type: string
+        in: local
+        description: "USE_GRP: TOTAL = Total; 20 = Buildings; 30 = Structures & facilities"
+        enum: ["TOTAL", "20", "30"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "yoy_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_real_broad_end_use
+    title: "Gross value of construction works in real terms performed by main contractors at construction sites analysed by broad end-use group (615-66022)"
+    description: "Gross value of construction works in real terms performed by main contractors at construction sites analysed by broad end-use group. Official C&SD Table 615-66022. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups."
+    path: /get.php
+    query: { id: "615-66022", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_REAL"]
+      trade_group:
+        type: string
+        in: local
+        description: "BTG_GRP: 10 = Construction works at construction sites"
+        enum: ["10"]
+      end_use:
+        type: string
+        in: local
+        description: "USE_GRP: TOTAL = Total; 20 = Buildings; 30 = Structures & facilities"
+        enum: ["TOTAL", "20", "30"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "yoy_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_nominal_detailed_end_use
+    title: "Gross value of construction works in nominal terms performed by main contractors at construction sites analysed by detailed end-use group (615-66023)"
+    description: "Gross value of construction works in nominal terms performed by main contractors at construction sites analysed by detailed end-use group. Official C&SD Table 615-66023. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups."
+    path: /get.php
+    query: { id: "615-66023", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_NOM"]
+      trade_group:
+        type: string
+        in: local
+        description: "BTG_GRP: 10 = Construction works at construction sites"
+        enum: ["10"]
+      end_use:
+        type: string
+        in: local
+        description: "USE_GRP: TOTAL = Total; 20 = Buildings; 21 = Residential buildings; 22 = Commercial buildings; 23 = Industrial & storage buildings; 24 = Service buildings; 30 = Structures & facilities; 31 = Transport; 32 = Other utilities & plant; 33 = Environment; 34 = Sports & recreation"
+        enum: ["TOTAL", "20", "21", "22", "23", "24", "30", "31", "32", "33", "34"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "yoy_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_real_detailed_end_use
+    title: "Gross value of construction works in real terms performed by main contractors at construction sites analysed by detailed end-use group (615-66024)"
+    description: "Gross value of construction works in real terms performed by main contractors at construction sites analysed by detailed end-use group. Official C&SD Table 615-66024. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups."
+    path: /get.php
+    query: { id: "615-66024", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_REAL"]
+      trade_group:
+        type: string
+        in: local
+        description: "BTG_GRP: 10 = Construction works at construction sites"
+        enum: ["10"]
+      end_use:
+        type: string
+        in: local
+        description: "USE_GRP: TOTAL = Total; 20 = Buildings; 21 = Residential buildings; 22 = Commercial buildings; 23 = Industrial & storage buildings; 24 = Service buildings; 30 = Structures & facilities; 31 = Transport; 32 = Other utilities & plant; 33 = Environment; 34 = Sports & recreation"
+        enum: ["TOTAL", "20", "21", "22", "23", "24", "30", "31", "32", "33", "34"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "yoy_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_nominal_by_activity
+    title: "Gross value of construction works in nominal terms performed by main contractors at construction sites analysed by nature of construction activity (615-66031)"
+    description: "Gross value of construction works in nominal terms performed by main contractors at construction sites analysed by nature of construction activity. Official C&SD Table 615-66031. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Nominal and real levels, growth rates and annual/quarterly observations must remain separate. Real levels use 2000 prices. Do not sum overlapping totals and groups."
+    path: /get.php
+    query: { id: "615-66031", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}(03|06|09|12)?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Q", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["GVCW_NOM"]
+      trade_group:
+        type: string
+        in: local
+        description: "BTG_GRP: 10 = Construction works at construction sites"
+        enum: ["10"]
+      activity:
+        type: string
+        in: local
+        description: "ACT_GRP: TOTAL = Total; 1 = Site formation & clearance; 2 = Piling & related foundation works; 3 = Erection of architectural superstructure; 4 = Civil engineering construction"
+        enum: ["TOTAL", "1", "2", "3", "4"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "yoy_percent"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_industry_statistics
+    title: "Selected statistics for all companies in the industry section of construction (615-73001)"
+    description: "Selected statistics for all companies in the industry section of construction. Official C&SD Table 615-73001. Newest observations first; paginate with nextOffset and the same filters. Source figures, units, flags, missing values and localized notes are preserved. Annual construction industry statistics using HSIC 2.0. HC counts companies; PE_D_ASEA counts directly engaged persons. Monetary values are HK$ million. 2020–2022 include anti-epidemic subsidies."
+    path: /get.php
+    query: { id: "615-73001", full_series: 1 }
+    transform: { response: normalizeConstructionOutput }
+    input:
+      period:
+        type: string
+        in: local
+        description: Provider year YYYY or quarter YYYY03/06/09/12; a year selects all its observations. Combine with freq to distinguish annual and quarterly values.
+        pattern: "^\\d{4}$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; Q quarterly."
+        enum: ["Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original variable code: NOM is nominal, REAL is at 2000 prices, SA is seasonally adjusted, SC is sub-contractor output. Annual industry codes retain their official meaning."
+        enum: ["BR_OTH", "COMP_LAB", "CONSUM", "FEE_SUB", "GS", "GVCW", "HC", "IVA", "MIS_EXP", "PE_D_ASEA"]
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_F = Construction"
+        enum: ["ind_ASBCRE_F"]
+      measure:
+        type: string
+        in: local
+        description: "Source measure: hkd_million = HK$ million; yoy_percent = year-on-year percentage change; qoq_percent = quarter-to-quarter percentage change; number = count. No conversion or aggregation."
+        enum: ["hkd_million", "number"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en

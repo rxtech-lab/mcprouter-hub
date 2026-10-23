@@ -1,0 +1,107 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-66002&api_popup=1"
+    },
+    "title": "Seasonally adjusted gross value of construction works performed by main contractors",
+    "tablenote": [
+      "The seasonally adjusted gross value of construction works is compiled by the X-12 ARIMA method. The X-12 ARIMA method and its related versions are the standard method commonly employed in compiling seasonally adjusted data series. The method can be used to detect whether outlier(s) is present in the original series for estimation of seasonal factors.",
+      "Derived by deflating the nominal value with an appropriate price index to the price level in the base period of 2000.",
+      "r Revised figure",
+      "p Provisional figure",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6965  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 10,
+      "started": "2026-10-23T21:02:20+00:00",
+      "finished": "2026-10-23T21:02:20+00:00",
+      "durationSeconds": 0.011538
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Q",
+      "period": "200006",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200009",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202603",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 6.7,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 0,
+      "sd_value": "p,[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "HK$ million",
+      "figure": 30966,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM_SA",
+      "svDesc": "HK$ million",
+      "figure": 74967,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Q",
+      "period": "200006",
+      "sv": "GVCW_REAL_SA",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201503",
+      "sv": "GVCW_REAL_SA",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL_SA",
+      "svDesc": "HK$ million",
+      "figure": 29231,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_REAL_SA",
+      "svDesc": "HK$ million",
+      "figure": 38106,
+      "sd_value": "p"
+    }
+  ]
+}

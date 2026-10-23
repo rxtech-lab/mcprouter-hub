@@ -1,0 +1,491 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=615-66011&api_popup=1"
+    },
+    "title": "按行業大組別劃分的承建商所完成的建造工程名義總值",
+    "tablenote": [
+      "包括由私人發展商批出的工程。「私人機構參建居屋計劃」的工程亦包括在內。",
+      "包括由香港特別行政區政府、香港鐵路有限公司及機場管理局批出的工程。由房屋委員會批出的「居者有其屋計劃」工程亦包括在內。",
+      "包括裝飾、修葺及保養工程、及小規模工程，例如地盤勘探、建築物清拆、建築物結構更改及加建工程等。",
+      "包括木工，電器設備、通風、燃氣及水務設備系統安裝及保養等。",
+      "有關分判承建商所完成的建造工程總值的統計數字，由於分判承建商可能會將建造工程再分判予他人承造，所以，此再分判部分會在統計數字內重複計算。因此，這些數字只可以作為建造業內分判工程程度的概括指標，在分析有關數字時必須留意。",
+      "r 修訂數字",
+      "p 臨時數字",
+      "[φ3] 數字代表增減少於 0.05%。",
+      "- 不適用"
+    ],
+    "source": "政府統計處建造及雜項服務統計組 (查詢電話：3903 6965  查詢電郵：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 46,
+      "started": "2026-10-23T21:02:41+00:00",
+      "finished": "2026-10-23T21:02:41+00:00",
+      "durationSeconds": 0.064827
+    }
+  },
+  "dataSet": [
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 122071,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "建築地盤建造工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 89910,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "私人建築地盤",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 39094,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "公營建築地盤",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 50817,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "非地盤建造工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 32161,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "一般工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 20714,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "專門行業工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 11447,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 31099,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "建築地盤建造工程",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 22976,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "私人建築地盤",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 9704,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "公營建築地盤",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 13272,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "非地盤建造工程",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 8122,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "一般工程",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 5186,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "專門行業工程",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 2937,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "202603",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 72783,
+      "sd_value": "r"
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM",
+      "svDesc": "百萬港元",
+      "figure": 72361,
+      "sd_value": "p"
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -3.5,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "建築地盤建造工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -3.9,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "私人建築地盤",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -11.9,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "公營建築地盤",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "非地盤建造工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -2.2,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "一般工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": 3.7,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "專門行業工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -11.3,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -4.1,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "建築地盤建造工程",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -3.8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "私人建築地盤",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -20.3,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "公營建築地盤",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": 13.4,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "非地盤建造工程",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "一般工程",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": 4.7,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "專門行業工程",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": -8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "建築地盤建造工程",
+      "freq": "Q",
+      "period": "201312",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "百萬港元",
+      "figure": 73526,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "建築地盤建造工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "百萬港元",
+      "figure": 20961,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "私人建築地盤",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "公營建築地盤",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "非地盤建造工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "百萬港元",
+      "figure": 52565,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "一般工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "百萬港元",
+      "figure": 13366,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "專門行業工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "百萬港元",
+      "figure": 39199,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "按年變動百分率",
+      "figure": 0.5,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "建築地盤建造工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "按年變動百分率",
+      "figure": -1.8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "私人建築地盤",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "公營建築地盤",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "非地盤建造工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "按年變動百分率",
+      "figure": 1.4,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "一般工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "按年變動百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "專門行業工程",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "按年變動百分率",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "專門行業工程",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "按年變動百分率",
+      "figure": -27.9,
+      "sd_value": ""
+    }
+  ]
+}

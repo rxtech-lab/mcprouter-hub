@@ -1,0 +1,313 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-66031&api_popup=1"
+    },
+    "title": "Gross value of construction works in nominal terms performed by main contractors at construction sites analysed by nature of construction activity",
+    "tablenote": [
+      "r Revised figure",
+      "p Provisional figure",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6965  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 24,
+      "started": "2026-10-23T21:02:21+00:00",
+      "finished": "2026-10-23T21:02:21+00:00",
+      "durationSeconds": 0.04949
+    }
+  },
+  "dataSet": [
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": "",
+      "ACT_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 89910,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 1,
+      "ACT_GRPDesc": "Site formation & clearance",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 724,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 2,
+      "ACT_GRPDesc": "Piling & related foundation works",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 5715,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 3,
+      "ACT_GRPDesc": "Erection of architectural superstructure",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 63313,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 4,
+      "ACT_GRPDesc": "Civil engineering construction",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 20158,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": "",
+      "ACT_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 22976,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 1,
+      "ACT_GRPDesc": "Site formation & clearance",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 195,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 2,
+      "ACT_GRPDesc": "Piling & related foundation works",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 1180,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 3,
+      "ACT_GRPDesc": "Erection of architectural superstructure",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 16934,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 4,
+      "ACT_GRPDesc": "Civil engineering construction",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 4667,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": "",
+      "ACT_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "202603",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 52379,
+      "sd_value": "r"
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": "",
+      "ACT_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 51172,
+      "sd_value": "p"
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": "",
+      "ACT_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.9,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": "",
+      "ACT_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 1,
+      "ACT_GRPDesc": "Site formation & clearance",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -7.1,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 2,
+      "ACT_GRPDesc": "Piling & related foundation works",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.1,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 3,
+      "ACT_GRPDesc": "Erection of architectural superstructure",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -18.8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 4,
+      "ACT_GRPDesc": "Civil engineering construction",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 20.6,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 1,
+      "ACT_GRPDesc": "Site formation & clearance",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 2,
+      "ACT_GRPDesc": "Piling & related foundation works",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 26.6,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 3,
+      "ACT_GRPDesc": "Erection of architectural superstructure",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -22.4,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 4,
+      "ACT_GRPDesc": "Civil engineering construction",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 22.4,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": "",
+      "ACT_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "201312",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "ACT_GRP": 4,
+      "ACT_GRPDesc": "Civil engineering construction",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.5,
+      "sd_value": "p"
+    }
+  ]
+}

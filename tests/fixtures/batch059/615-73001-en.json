@@ -1,0 +1,134 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-73001&api_popup=1"
+    },
+    "title": "Selected statistics for all companies in the industry section of construction",
+    "tablenote": [
+      "The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0.  Users may also download past statistics based on HSIC Version 1.1 for reference.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures."
+    ],
+    "source": "Annual Survey of Economic Activities Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6964  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 11,
+      "started": "2026-10-23T21:02:21+00:00",
+      "finished": "2026-10-23T21:02:21+00:00",
+      "durationSeconds": 0.0158
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "FEE_SUB",
+      "svDesc": "HK$ million",
+      "figure": 61034,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 6918,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GVCW",
+      "svDesc": "HK$ million",
+      "figure": 137820,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 17985,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 12384,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "PE_D_ASEA",
+      "svDesc": "Number",
+      "figure": 122870,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 39310,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "BR_OTH",
+      "svDesc": "HK$ million",
+      "figure": 4949,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP_LAB",
+      "svDesc": "HK$ million",
+      "figure": 32366,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 30067,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "Construction",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 79504,
+      "sd_value": ""
+    }
+  ]
+}

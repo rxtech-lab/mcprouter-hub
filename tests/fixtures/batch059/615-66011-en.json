@@ -1,0 +1,491 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-66011&api_popup=1"
+    },
+    "title": "Gross value of construction works in nominal terms performed by contractors analysed by broad trade group",
+    "tablenote": [
+      "Include projects commissioned by private developers. Projects under the Private Sector Participation Scheme are also included.",
+      "Include projects commissioned by the Government of the Hong Kong Special Administrative Region, MTR Corporation Limited and Airport Authority. Projects under the Home Ownership Scheme, which are commissioned by the Housing Authority, are also included.",
+      "Include decoration, repair and maintenance, and construction works at minor work locations such as site investigation, demolition, and structural alteration and addition works.",
+      "Include carpentry, the installation and maintenance of electrical equipment, ventilation, gas and water fitting, etc.",
+      "Statistics on the gross value of construction works performed by sub-contractors are subject to the effect of double-counting as sub-contractors may further sub-contract their construction works. Thus such figures only serve to provide a broad indication of the extent of sub-contracting in the construction industry and should be interpreted with care.",
+      "r Revised figure",
+      "p Provisional figure",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%.",
+      "- Not applicable"
+    ],
+    "source": "Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6965  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 46,
+      "started": "2026-10-23T21:02:20+00:00",
+      "finished": "2026-10-23T21:02:20+00:00",
+      "durationSeconds": 0.06121
+    }
+  },
+  "dataSet": [
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 122071,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 89910,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "Private sector construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 39094,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "Public sector construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 50817,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "Construction works at locations other than sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 32161,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "General trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 20714,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "Special trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 11447,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 31099,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 22976,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "Private sector construction sites",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 9704,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "Public sector construction sites",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 13272,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "Construction works at locations other than sites",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 8122,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "General trades",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 5186,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "Special trades",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 2937,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "202603",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 72783,
+      "sd_value": "r"
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM",
+      "svDesc": "HK$ million",
+      "figure": 72361,
+      "sd_value": "p"
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.5,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.9,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "Private sector construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -11.9,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "Public sector construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "Construction works at locations other than sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.2,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "General trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.7,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "Special trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -11.3,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.1,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "Private sector construction sites",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -20.3,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "Public sector construction sites",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.4,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "Construction works at locations other than sites",
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "General trades",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.7,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "Special trades",
+      "freq": "Q",
+      "period": "200103",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": -8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "freq": "Q",
+      "period": "201312",
+      "sv": "GVCW_NOM",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "HK$ million",
+      "figure": 73526,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "HK$ million",
+      "figure": 20961,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "Private sector construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "Public sector construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "Construction works at locations other than sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "HK$ million",
+      "figure": 52565,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "General trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "HK$ million",
+      "figure": 13366,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "Special trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "HK$ million",
+      "figure": 39199,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": "",
+      "BTG_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.5,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 10,
+      "BTG_GRPDesc": "Construction works at construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.8,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 11,
+      "BTG_GRPDesc": "Private sector construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "BTG_GRP": 12,
+      "BTG_GRPDesc": "Public sector construction sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "BTG_GRP": 20,
+      "BTG_GRPDesc": "Construction works at locations other than sites",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.4,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 21,
+      "BTG_GRPDesc": "General trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "Special trades",
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "BTG_GRP": 22,
+      "BTG_GRPDesc": "Special trades",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "GVCW_NOM_SC",
+      "svDesc": "Year-on-year % change",
+      "figure": -27.9,
+      "sd_value": ""
+    }
+  ]
+}

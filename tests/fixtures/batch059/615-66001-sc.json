@@ -1,0 +1,122 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=615-66001&api_popup=1"
+    },
+    "title": "主要承建商所完成的建造工程总值",
+    "tablenote": [
+      "透过适当的物价指数去平减相应的建造工程完成量名义总值至2000年基期的价格水平计算而成。",
+      "r 修订数字",
+      "p 临时数字",
+      "[φ3] 数字代表增减少于 0.05%。"
+    ],
+    "source": "政府统计处建造及杂项服务统计组 (查询电话：3903 6965  查询电邮：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 12,
+      "started": "2026-10-23T21:02:41+00:00",
+      "finished": "2026-10-23T21:02:41+00:00",
+      "durationSeconds": 0.013744
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "百万港元",
+      "figure": 122071,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "百万港元",
+      "figure": 31099,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202603",
+      "sv": "GVCW_NOM",
+      "svDesc": "百万港元",
+      "figure": 72783,
+      "sd_value": "r"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_NOM",
+      "svDesc": "百万港元",
+      "figure": 72361,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年变动百分率",
+      "figure": -3.5,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_NOM",
+      "svDesc": "按年变动百分率",
+      "figure": -4.1,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_REAL",
+      "svDesc": "百万港元",
+      "figure": 114691,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL",
+      "svDesc": "百万港元",
+      "figure": 29102,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2000",
+      "sv": "GVCW_REAL",
+      "svDesc": "按年变动百分率",
+      "figure": -4.5,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200003",
+      "sv": "GVCW_REAL",
+      "svDesc": "按年变动百分率",
+      "figure": -7.1,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200706",
+      "sv": "GVCW_REAL",
+      "svDesc": "按年变动百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "GVCW_REAL",
+      "svDesc": "按年变动百分率",
+      "figure": 2.2,
+      "sd_value": "p"
+    }
+  ]
+}

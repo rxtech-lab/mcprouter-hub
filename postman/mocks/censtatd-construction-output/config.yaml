@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-construction-output
+slug: censtatd-construction-output
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true
