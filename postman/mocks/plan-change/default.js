@@ -51,21 +51,27 @@ http.createServer(async (req, res) => {
     provider.effectiveAt = Number(data.get("phases[0][end_date]"));
     return json(200, { id: "sched_good", object: "subscription_schedule" });
   }
-  if (req.method === "GET" && req.url === "/subscriptions/sub_good") return json(200, {
-    id: "sub_good", object: "subscription", customer: "cus_good", status: "active", collection_method: "charge_automatically",
-    metadata: { applicationId: "app", appUserId: "user", planId: provider.sourceId },
-    items: { data: [{ id: "si_good", quantity: 1, current_period_start: provider.planId === "new" ? boundary : boundary - 30 * 86400, current_period_end: provider.planId === "new" ? boundary + 30 * 86400 : boundary, price: { id: provider.planId === "new" ? "price_new" : "price_old", unit_amount: provider.planId === "new" ? provider.newAmount : provider.oldAmount, metadata: { applicationId: "app", planId: provider.planId } } }] },
-  });
+  if (req.method === "GET" && req.url === "/subscriptions/sub_good") {
+    return json(200, {
+      id: "sub_good", object: "subscription", customer: "cus_good", status: "active", collection_method: "charge_automatically",
+      metadata: { applicationId: "app", appUserId: "user", planId: provider.sourceId },
+      items: { data: [{ id: "si_good", quantity: 1, current_period_start: provider.planId === "new" ? boundary : boundary - 30 * 86400, current_period_end: provider.planId === "new" ? boundary + 30 * 86400 : boundary, price: { id: provider.planId === "new" ? "price_new" : "price_old", unit_amount: provider.planId === "new" ? provider.newAmount : provider.oldAmount, metadata: { applicationId: "app", planId: provider.planId } } }] },
+    });
+  }
   if (req.method === "GET" && req.url === "/prices/price_new") return json(200, { id: "price_new", product: "prod_new", object: "price" });
-  if (req.method === "GET" && req.url.startsWith("/api/v1/catalog")) return json(200, {
-    plans: [{ id: "old", key: "payg", name: "Pay as you go", planGroup: "default", billingInterval: "month", intervalCount: 1, priceAmountCents: provider.uiMode ? provider.oldAmount : 0, currency: "usd", trialDays: 0, autoSubscribe: provider.uiMode === "internal" },
-      { id: "new", key: "pro", name: "Pro", planGroup: "default", billingInterval: "month", intervalCount: 1, priceAmountCents: provider.uiMode ? provider.newAmount : 1500, currency: "usd", trialDays: 0, autoSubscribe: provider.targetAutomatic }], topups: [{ id: "pack", name: "Extra credits", priceAmountCents: 499, currency: "usd", amount: 10000, eligible: provider.topupEligible, blockedBy: provider.topupEligible ? [] : [{ ruleType: "requires_active_plan", planId: "new", roleId: null }] }],
-  });
-  if (req.method === "GET" && req.url.startsWith("/api/v1/entitlements")) return json(200, {
-    user: { id: "local", rxlabUserId: "local-development-user" },
-    plans: provider.uiMode === "internal" ? [] : [{ subscriptionId: "local", planId: "old", planKey: "payg", planName: "Pay as you go", planGroup: "default", status: "active", billingProvider: "stripe", currentPeriodEnd: new Date(boundary * 1000).toISOString(), cancelAtPeriodEnd: false }],
-    defaultPlans: provider.uiMode === "internal" ? [{ subscriptionId: "local", planId: "old", planKey: "payg", planName: "Pay as you go", planGroup: "default", status: "active", billingProvider: "internal", currentPeriodEnd: new Date(boundary * 1000).toISOString(), cancelAtPeriodEnd: false }] : [], complimentaryPlans: [], balances: [], usage: [], roles: [], permissions: [],
-  });
+  if (req.method === "GET" && req.url.startsWith("/api/v1/catalog")) {
+    return json(200, {
+      plans: [{ id: "old", key: "payg", name: "Pay as you go", planGroup: "default", billingInterval: "month", intervalCount: 1, priceAmountCents: provider.uiMode ? provider.oldAmount : 0, currency: "usd", trialDays: 0, autoSubscribe: provider.uiMode === "internal" },
+        { id: "new", key: "pro", name: "Pro", planGroup: "default", billingInterval: "month", intervalCount: 1, priceAmountCents: provider.uiMode ? provider.newAmount : 1500, currency: "usd", trialDays: 0, autoSubscribe: provider.targetAutomatic }], topups: [{ id: "pack", name: "Extra credits", priceAmountCents: 499, currency: "usd", amount: 10000, eligible: provider.topupEligible, blockedBy: provider.topupEligible ? [] : [{ ruleType: "requires_active_plan", planId: "new", roleId: null }] }],
+    });
+  }
+  if (req.method === "GET" && req.url.startsWith("/api/v1/entitlements")) {
+    return json(200, {
+      user: { id: "local", rxlabUserId: "local-development-user" },
+      plans: provider.uiMode === "internal" ? [] : [{ subscriptionId: "local", planId: "old", planKey: "payg", planName: "Pay as you go", planGroup: "default", status: "active", billingProvider: "stripe", currentPeriodEnd: new Date(boundary * 1000).toISOString(), cancelAtPeriodEnd: false }],
+      defaultPlans: provider.uiMode === "internal" ? [{ subscriptionId: "local", planId: "old", planKey: "payg", planName: "Pay as you go", planGroup: "default", status: "active", billingProvider: "internal", currentPeriodEnd: new Date(boundary * 1000).toISOString(), cancelAtPeriodEnd: false }] : [], complimentaryPlans: [], balances: [], usage: [], roles: [], permissions: [],
+    });
+  }
   if (req.method === "POST" && req.url === "/billing_portal/configurations") {
     if (data.get("features[subscription_update][products][0][prices][0]") !== "price_new" || data.get("features[subscription_update][proration_behavior]") !== "always_invoice") return json(400, { error: { type: "invalid_request_error", message: "Invalid plan review configuration" } });
     return json(200, { id: "bpc_good", object: "billing_portal.configuration" });
