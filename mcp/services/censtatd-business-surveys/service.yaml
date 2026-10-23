@@ -1,0 +1,418 @@
+id: censtatd-business-surveys
+title: Hong Kong SME & Business Tendency Surveys
+description: Official Census and Statistics Department monthly SME diffusion indices and credit
+  needs, quarterly business expectations, orders and stocks, profit, finance and credit conditions.
+  Source observations and survey notes are preserved; these opinion surveys do not measure the
+  magnitude of actual output changes.
+apis:
+  - API-0586
+  - API-0587
+  - API-0588
+  - API-0589
+  - API-0590
+  - API-0591
+  - API-0592
+  - API-0593
+  - API-0594
+  - API-0595
+datasets:
+  - hk-censtatd-tablechart-330-40001
+  - hk-censtatd-tablechart-330-40002
+  - hk-censtatd-tablechart-330-41001
+  - hk-censtatd-tablechart-330-41002
+  - hk-censtatd-tablechart-330-41003
+  - hk-censtatd-tablechart-330-41004
+  - hk-censtatd-tablechart-330-41011
+  - hk-censtatd-tablechart-330-41021
+  - hk-censtatd-tablechart-330-41022
+  - hk-censtatd-tablechart-330-41023
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: sme_diffusion_indices
+    title: Diffusion indices on business receipts, new orders and employment for SMEs (330-40001)
+    description: Diffusion indices on business receipts, new orders and employment for SMEs. Official
+      C&SD Table 330-40001. Monthly observations, newest first. Preserve source figures, units and
+      notes. Paginate with nextOffset. Current compares with preceding month; outlook compares next
+      month with current. Index above/below 50 indicates generally favourable/unfavourable
+      conditions; magnitude of change cannot be inferred.
+    path: /get.php
+    query:
+      id: 330-40001
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: &a1
+        type: string
+        in: local
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+        description: "Provider period: YYYY matches all periods in the year; YYYYMM selects an exact period.
+          Monthly observations."
+      indicator:
+        type: string
+        in: local
+        enum:
+          - DI_BR
+          - DI_EM
+          - DI_NO
+        description: "Original survey series: DI_BR = business receipts; DI_NO = new orders (import/export
+          only); DI_EM = employment"
+      industry:
+        type: string
+        in: local
+        enum:
+          - TOTAL
+          - ind_SMES_4391_6821_711
+          - ind_SMES_45
+          - ind_SMES_46
+          - ind_SMES_47
+          - ind_SMES_4927_4928_522202_522204
+          - ind_SMES_56
+          - ind_SMES_620_6311_69_702_741_78
+        description: TOTAL = Total; ind_SMES_4391_6821_711 = Real estate; ind_SMES_45 = Import and export
+          trades; ind_SMES_46 = Wholesale trade; ind_SMES_47 = Retail trade ;
+          ind_SMES_4927_4928_522202_522204 = Logistics; ind_SMES_56 = Restaurants;
+          ind_SMES_620_6311_69_702_741_78 = Business services. TOTAL is the published total, not a
+          sum of sectors.
+      horizon:
+        type: string
+        in: local
+        enum:
+          - CUR
+          - OUT
+        description: CUR = Current; OUT = Outlook
+      limit: &a2
+        type: integer
+        in: local
+        default: 50
+        minimum: 1
+        maximum: 100
+        description: Maximum observations per page (1–100).
+      offset: &a3
+        type: integer
+        in: local
+        default: 0
+        minimum: 0
+        maximum: 100000
+        description: Continue with nextOffset and the same filters and language.
+      lang: &a4
+        type: string
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+        description: Language of official title, notes, source, units and dimension labels.
+  - name: sme_credit_needs
+    title: Percentage of SMEs reporting current credit need and access to credit situation (330-40002)
+    description: Percentage of SMEs reporting current credit need and access to credit situation.
+      Official C&SD Table 330-40002. Monthly observations, newest first. Preserve source figures,
+      units and notes. Paginate with nextOffset. Categories and net balances are distinct
+      observations; do not sum them. TOTAL is the percentage with a current credit need; other
+      categories describe credit access among those with credit need.
+    path: /get.php
+    query:
+      id: 330-40002
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: *a1
+      indicator:
+        type: string
+        in: local
+        enum:
+          - SME_PERCENT
+        description: "Original survey series: percentage of establishments/SMEs reporting the selected
+          category."
+      category:
+        type: string
+        in: local
+        enum:
+          - TOTAL
+          - "1.1"
+          - "1.2"
+          - "1.3"
+          - "1.4"
+        description: TOTAL = Total; 1.1 = Easy; 1.2 = Fair; 1.3 = Tight; 1.4 = Had not applied for credit.
+          TOTAL is the published total, not a sum of sectors.
+      limit: *a2
+      offset: *a3
+      lang: *a4
+  - name: business_expected_situation
+    title: Views on expected changes in business situation (330-41001)
+    description: Views on expected changes in business situation. Official C&SD Table 330-41001.
+      Quarterly observations, newest first. Preserve source figures, units and notes. Paginate with
+      nextOffset. Categories and net balances are distinct observations; do not sum them. Read
+      source notes for survey reference periods and coverage.
+    path: /get.php
+    query:
+      id: 330-41001
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: &a5
+        type: string
+        in: local
+        pattern: ^\d{4}(03|06|09|12)?$
+        description: "Provider period: YYYY matches all periods in the year; YYYYMM selects an exact period.
+          Quarterly codes end 03/06/09/12; expectations may refer to the next quarter."
+      indicator: &a6
+        type: string
+        in: local
+        enum:
+          - HC_PERCENT
+        description: "Original survey series: percentage of establishments/SMEs reporting the selected
+          category."
+      industry:
+        type: string
+        in: local
+        enum:
+          - TOTAL
+          - ind_QBTS_45_46
+          - ind_QBTS_47
+          - ind_QBTS_C
+          - ind_QBTS_F
+          - ind_QBTS_H
+          - ind_QBTS_I
+          - ind_QBTS_J
+          - ind_QBTS_K
+          - ind_QBTS_L
+          - ind_QBTS_M_N
+        description: TOTAL = Total; ind_QBTS_45_46 = Import/export trade and wholesale; ind_QBTS_47 =
+          Retail; ind_QBTS_C = Manufacturing; ind_QBTS_F = Construction; ind_QBTS_H =
+          Transportation, storage and courier services; ind_QBTS_I = Accommodation and food
+          services; ind_QBTS_J = Information and communications; ind_QBTS_K = Financing and
+          insurance; ind_QBTS_L = Real estate; ind_QBTS_M_N = Professional and business services.
+          TOTAL is the published total, not a sum of sectors.
+      category:
+        type: string
+        in: local
+        enum:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+        description: 1 = Better; 2 = Same; 3 = Worse; 4 = Net balance = Better - Worse
+      limit: *a2
+      offset: *a3
+      lang: *a4
+  - name: business_expected_output
+    title: Views on expected changes in volume of business/output (330-41002)
+    description: Views on expected changes in volume of business/output. Official C&SD Table 330-41002.
+      Quarterly observations, newest first. Preserve source figures, units and notes. Paginate with
+      nextOffset. Categories and net balances are distinct observations; do not sum them. Read
+      source notes for survey reference periods and coverage.
+    path: /get.php
+    query:
+      id: 330-41002
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: *a5
+      indicator: *a6
+      industry: &a7
+        type: string
+        in: local
+        enum:
+          - ind_QBTS_45_46
+          - ind_QBTS_47
+          - ind_QBTS_C
+          - ind_QBTS_F
+          - ind_QBTS_H
+          - ind_QBTS_I
+          - ind_QBTS_J
+          - ind_QBTS_K
+          - ind_QBTS_L
+          - ind_QBTS_M_N
+        description: ind_QBTS_45_46 = Import/export trade and wholesale; ind_QBTS_47 = Retail; ind_QBTS_C =
+          Manufacturing; ind_QBTS_F = Construction; ind_QBTS_H = Transportation, storage and courier
+          services; ind_QBTS_I = Accommodation and food services; ind_QBTS_J = Information and
+          communications; ind_QBTS_K = Financing and insurance; ind_QBTS_L = Real estate;
+          ind_QBTS_M_N = Professional and business services
+      category: &a8
+        type: string
+        in: local
+        enum:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+        description: 1 = Up; 2 = Same; 3 = Down; 4 = Net balance = Up - Down
+      limit: *a2
+      offset: *a3
+      lang: *a4
+  - name: business_expected_employment
+    title: Views on expected changes in number of persons engaged (330-41003)
+    description: Views on expected changes in number of persons engaged. Official C&SD Table 330-41003.
+      Quarterly observations, newest first. Preserve source figures, units and notes. Paginate with
+      nextOffset. Categories and net balances are distinct observations; do not sum them. Read
+      source notes for survey reference periods and coverage.
+    path: /get.php
+    query:
+      id: 330-41003
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: *a5
+      indicator: *a6
+      industry: *a7
+      category: *a8
+      limit: *a2
+      offset: *a3
+      lang: *a4
+  - name: business_expected_prices
+    title: Views on expected changes in selling price/service charge (330-41004)
+    description: Views on expected changes in selling price/service charge. Official C&SD Table
+      330-41004. Quarterly observations, newest first. Preserve source figures, units and notes.
+      Paginate with nextOffset. Categories and net balances are distinct observations; do not sum
+      them. Read source notes for survey reference periods and coverage.
+    path: /get.php
+    query:
+      id: 330-41004
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: *a5
+      indicator: *a6
+      industry: *a7
+      category: *a8
+      limit: *a2
+      offset: *a3
+      lang: *a4
+  - name: business_orders_stocks_levels
+    title: Level of orders-on-hand, outstanding contract work and stocks of goods in volume terms
+      (330-41011)
+    description: Level of orders-on-hand, outstanding contract work and stocks of goods in volume terms.
+      Official C&SD Table 330-41011. Monthly observations, newest first. Preserve source figures,
+      units and notes. Paginate with nextOffset. Categories and net balances are distinct
+      observations; do not sum them. Read source notes for survey reference periods and coverage.
+    path: /get.php
+    query:
+      id: 330-41011
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: *a1
+      indicator: *a6
+      industry:
+        type: string
+        in: local
+        enum:
+          - ind_QBTS_45_46
+          - ind_QBTS_47
+          - ind_QBTS_C
+          - ind_QBTS_F
+        description: ind_QBTS_45_46 = Import/export trade and wholesale; ind_QBTS_47 = Retail; ind_QBTS_C =
+          Manufacturing; ind_QBTS_F = Construction
+      variable:
+        type: string
+        in: local
+        enum:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+        description: 1 = Orders-on-hand; 2 = Stocks of finished goods; 3 = Outstanding contract work; 4 =
+          Stocks of goods for sale
+      category:
+        type: string
+        in: local
+        enum:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+        description: 1 = Above normal; 2 = Normal; 3 = Below normal; 4 = Net Balance = Above normal - Below
+          normal
+      limit: *a2
+      offset: *a3
+      lang: *a4
+  - name: business_profit_situation
+    title: Profit situation (330-41021)
+    description: Profit situation. Official C&SD Table 330-41021. Quarterly observations, newest first.
+      Preserve source figures, units and notes. Paginate with nextOffset. Categories and net
+      balances are distinct observations; do not sum them. Read source notes for survey reference
+      periods and coverage.
+    path: /get.php
+    query:
+      id: 330-41021
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: *a5
+      indicator: *a6
+      industry: *a7
+      category: &a9
+        type: string
+        in: local
+        enum:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+        description: 1 = Good; 2 = Fair; 3 = Poor; 4 = Net Balance = Good - Poor
+      limit: *a2
+      offset: *a3
+      lang: *a4
+  - name: business_financial_situation
+    title: Financial situation (330-41022)
+    description: Financial situation. Official C&SD Table 330-41022. Quarterly observations, newest
+      first. Preserve source figures, units and notes. Paginate with nextOffset. Categories and net
+      balances are distinct observations; do not sum them. Read source notes for survey reference
+      periods and coverage.
+    path: /get.php
+    query:
+      id: 330-41022
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: *a5
+      indicator: *a6
+      industry: *a7
+      category: *a9
+      limit: *a2
+      offset: *a3
+      lang: *a4
+  - name: business_credit_access
+    title: Access to credit situation (330-41023)
+    description: Access to credit situation. Official C&SD Table 330-41023. Quarterly observations,
+      newest first. Preserve source figures, units and notes. Paginate with nextOffset. Categories
+      and net balances are distinct observations; do not sum them. Read source notes for survey
+      reference periods and coverage.
+    path: /get.php
+    query:
+      id: 330-41023
+      full_series: 1
+    transform:
+      response: normalizeBusinessTable
+    input:
+      period: *a5
+      indicator: *a6
+      industry: *a7
+      category:
+        type: string
+        in: local
+        enum:
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+        description: 1 = Easy; 2 = Fair; 3 = Tight; 4 = Net Balance = Easy - Tight
+      limit: *a2
+      offset: *a3
+      lang: *a4

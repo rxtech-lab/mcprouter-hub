@@ -52,6 +52,17 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  sme_diffusion_indices: { input: { limit: 2 }, check: nonEmptyPage },
+  sme_credit_needs: { input: { limit: 2 }, check: nonEmptyPage },
+  business_expected_situation: { input: { limit: 2 }, check: nonEmptyPage },
+  business_expected_output: { input: { limit: 2 }, check: nonEmptyPage },
+  business_expected_employment: { input: { limit: 2 }, check: nonEmptyPage },
+  business_expected_prices: { input: { limit: 2 }, check: nonEmptyPage },
+  business_orders_stocks_levels: { input: { limit: 2 }, check: nonEmptyPage },
+  business_profit_situation: { input: { limit: 2 }, check: nonEmptyPage },
+  business_financial_situation: { input: { limit: 2 }, check: nonEmptyPage },
+  business_credit_access: { input: { limit: 2 }, check: nonEmptyPage },
+
   hktr_interest_rate_positions: { input: { limit: 2 }, check: nonEmptyPage },
   hktr_members_lei: { input: { limit: 2 }, check: nonEmptyPage },
   ird_offices: { input: { limit: 2 }, check: nonEmptyPage },

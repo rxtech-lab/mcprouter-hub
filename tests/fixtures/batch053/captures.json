@@ -1,0 +1,512 @@
+[
+  {
+    "api": "API-0586",
+    "table": "330-40001",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-40001&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "5335a3fe3689fbe0d845d09611c1f6e84950cf8aa5e0ddfdfba7ae361e80bd59",
+    "time": "2026-10-23T15:03:06.186801+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-40001&api_popup=1"
+    },
+    "rows": 4784
+  },
+  {
+    "api": "API-0586",
+    "table": "330-40001",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-40001&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "38b1c2460e635244a8195d5cbacdc91131e21478a1bf84da515d021134b9902f",
+    "time": "2026-10-23T15:03:06.297348+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-40001&api_popup=1"
+    },
+    "rows": 4784
+  },
+  {
+    "api": "API-0586",
+    "table": "330-40001",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-40001&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "2f7031c021dfece420c6c9f01d49cffaa32ec3b5af8cc7f16417b9979f81e670",
+    "time": "2026-10-23T15:03:06.297384+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-40001&api_popup=1"
+    },
+    "rows": 4784
+  },
+  {
+    "api": "API-0587",
+    "table": "330-40002",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-40002&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "127e648c1b3f5542e20ebbd18eecd18e525529f92337cd6c8189e32a94b50659",
+    "time": "2026-10-23T15:03:06.200919+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-40002&api_popup=1"
+    },
+    "rows": 620
+  },
+  {
+    "api": "API-0587",
+    "table": "330-40002",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-40002&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "9ccf9c7b458a72cc8f5513c45d1804e32d3ad3b48b93b4037a45aff06ad5e9cc",
+    "time": "2026-10-23T15:03:06.326639+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-40002&api_popup=1"
+    },
+    "rows": 620
+  },
+  {
+    "api": "API-0587",
+    "table": "330-40002",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-40002&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "49958adfad7e0a6ce88f67d50e25c7e7c4dab8953f8ac235f3faf3ff9e3f5cdd",
+    "time": "2026-10-23T15:03:06.330154+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-40002&api_popup=1"
+    },
+    "rows": 620
+  },
+  {
+    "api": "API-0588",
+    "table": "330-41001",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41001&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "0a2ece2a986d4942b27756e72a9a7bd6fcb8066248a4acb6c259dc1a469bbfd7",
+    "time": "2026-10-23T15:03:06.785561+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-41001&api_popup=1"
+    },
+    "rows": 2640
+  },
+  {
+    "api": "API-0588",
+    "table": "330-41001",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41001&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "a8b2acc2eba8201bd80a48d694bf32416445b29c2a8a316d0c554a24ed50e832",
+    "time": "2026-10-23T15:03:06.814082+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-41001&api_popup=1"
+    },
+    "rows": 2640
+  },
+  {
+    "api": "API-0588",
+    "table": "330-41001",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41001&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "3474acd5b80084681bc7469c832923222ec7472106cfd1c07ffdeb128a42943b",
+    "time": "2026-10-23T15:03:06.762534+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-41001&api_popup=1"
+    },
+    "rows": 2640
+  },
+  {
+    "api": "API-0589",
+    "table": "330-41002",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41002&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "2537939d59599c54033e1fc52cba751407c8b6ccb59a6c845fd5cde88f0f762c",
+    "time": "2026-10-23T15:03:06.758040+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-41002&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0589",
+    "table": "330-41002",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41002&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "2552f0999f0944753c1518d8dfeb188f3dfe45c1425dcb53d43c68eac9dde495",
+    "time": "2026-10-23T15:03:06.994346+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-41002&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0589",
+    "table": "330-41002",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41002&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "76d9e7bc2d40b4c4e666324c17940bb6122ff01c6aeaf3a3e9b2a2e9f215670f",
+    "time": "2026-10-23T15:03:07.236362+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-41002&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0590",
+    "table": "330-41003",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41003&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "3056c0f366715c4df1e5a3230548b90b6721d83d36c10332896333e070093322",
+    "time": "2026-10-23T15:03:07.283091+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-41003&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0590",
+    "table": "330-41003",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41003&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "8fd49c2ed0de61b954741938692619fff801b56176bc1ff66558afbb5502728f",
+    "time": "2026-10-23T15:03:07.265508+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-41003&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0590",
+    "table": "330-41003",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41003&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "a009d97ae78164eaf41633249ee2e0aba00b031a6e5dcb1b0619f4a8b3a51cb9",
+    "time": "2026-10-23T15:03:07.432093+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-41003&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0591",
+    "table": "330-41004",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41004&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "c091d1bcb2f64526214c1c6195724faacb506678cfb8bbeb4f461ecf79a82872",
+    "time": "2026-10-23T15:03:07.520586+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-41004&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0591",
+    "table": "330-41004",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41004&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "904d42943e623c8d4bf22df6f5b277adaac07ee505791ade3424a81a93aa951d",
+    "time": "2026-10-23T15:03:07.518051+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-41004&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0591",
+    "table": "330-41004",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41004&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "9d79345a5c8d4a1375d76957dae4234fd927496ea222d637d11af22c6d143fed",
+    "time": "2026-10-23T15:03:07.587104+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-41004&api_popup=1"
+    },
+    "rows": 2400
+  },
+  {
+    "api": "API-0592",
+    "table": "330-41011",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41011&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "cfe9572b55151da05c163768969f5da56512d89235344af185295a48d6e72185",
+    "time": "2026-10-23T15:03:07.791605+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-41011&api_popup=1"
+    },
+    "rows": 1180
+  },
+  {
+    "api": "API-0592",
+    "table": "330-41011",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41011&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "f91ff81011dbe08f28a67bf02e28afb5f9e043ac9069f1970558c09990e9e12c",
+    "time": "2026-10-23T15:03:07.797094+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-41011&api_popup=1"
+    },
+    "rows": 1180
+  },
+  {
+    "api": "API-0592",
+    "table": "330-41011",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41011&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "d9f79c835de2d7f4b96a2b3b1539a51f467349c99c31dc9f3fc71450a4454321",
+    "time": "2026-10-23T15:03:07.802739+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-41011&api_popup=1"
+    },
+    "rows": 1180
+  },
+  {
+    "api": "API-0593",
+    "table": "330-41021",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41021&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "5b842220ad744da57a198fc5fbbc7b0ad48bf8bb60d17699e4d1adbb1304de87",
+    "time": "2026-10-23T15:03:07.996668+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-41021&api_popup=1"
+    },
+    "rows": 2360
+  },
+  {
+    "api": "API-0593",
+    "table": "330-41021",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41021&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "0efa6d485f08e9dfc15c4f7261801d077345daba1737a1860d6509052df50bc9",
+    "time": "2026-10-23T15:03:08.091024+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-41021&api_popup=1"
+    },
+    "rows": 2360
+  },
+  {
+    "api": "API-0593",
+    "table": "330-41021",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41021&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "e70ffb0dfb2805dac4f942d95a0bcab244c124981a981b35988009a0187d71b4",
+    "time": "2026-10-23T15:03:08.090820+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-41021&api_popup=1"
+    },
+    "rows": 2360
+  },
+  {
+    "api": "API-0594",
+    "table": "330-41022",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41022&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "d23bdcec6fd60fb7c6047ded7e2e7a8813aa3e90ea0fcd3f381ec9af62fda5e6",
+    "time": "2026-10-23T15:03:08.294515+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-41022&api_popup=1"
+    },
+    "rows": 2360
+  },
+  {
+    "api": "API-0594",
+    "table": "330-41022",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41022&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "2a72546d0b361952f8746580cf57e0de10f35834d52454569822e4309790e849",
+    "time": "2026-10-23T15:03:08.353764+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-41022&api_popup=1"
+    },
+    "rows": 2360
+  },
+  {
+    "api": "API-0594",
+    "table": "330-41022",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41022&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "6d898a33d62d2b5b45e84c8dccb539cbb6016252a38ca55df8562494368a45d9",
+    "time": "2026-10-23T15:03:08.511606+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-41022&api_popup=1"
+    },
+    "rows": 2360
+  },
+  {
+    "api": "API-0595",
+    "table": "330-41023",
+    "lang": "en",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41023&lang=en&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "2f277429e5f4baaae74064e45ff2c192c7e98b8897773cda5d89de3b541db442",
+    "time": "2026-10-23T15:03:08.514824+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-41023&api_popup=1"
+    },
+    "rows": 2360
+  },
+  {
+    "api": "API-0595",
+    "table": "330-41023",
+    "lang": "tc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41023&lang=tc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "fb903c0e8066ddfb5d9bddb4104c13266a491ed5cef307f6f9f0b9c8c69ff386",
+    "time": "2026-10-23T15:03:08.564210+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-41023&api_popup=1"
+    },
+    "rows": 2360
+  },
+  {
+    "api": "API-0595",
+    "table": "330-41023",
+    "lang": "sc",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=330-41023&lang=sc&full_series=1",
+    "http": "200",
+    "error": "",
+    "sha256": "c7579396f81b15c50a1fafee25241f16a4f34fb1b1fd244481b1624875f2b15b",
+    "time": "2026-10-23T15:03:08.620463+00:00",
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=330-41023&api_popup=1"
+    },
+    "rows": 2360
+  }
+]
