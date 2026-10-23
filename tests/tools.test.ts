@@ -1,3 +1,4 @@
+import { cases053 } from "./batch053-cases";
 import { cases051 } from "./batch051-cases";
 import type { Case } from "./tool-case";
 import { cases027 } from "./health027-cases";
@@ -184,6 +185,7 @@ const sensorOccupancy = [
 ].join("\n");
 
 const cases: Case[] = [
+  ...cases053,
   ...cases027.map((c) => ({ ...c, name: c.file, ttl: 3600, data: expect.objectContaining({ returned: 2, hasMore: true, nextOffset: 2 }) })),
   ...cases025.map((c) => ({ ...c, name: c.file + c.input.lang, ttl: 3600, data: expect.objectContaining({ returned: 2, hasMore: true, nextOffset: 2 }) })),
   ...spatialCases023.map((c) => ({ ...c, name: c.file, ttl: 3600 })),

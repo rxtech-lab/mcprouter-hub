@@ -1,0 +1,124 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=330-40002&api_popup=1"
+    },
+    "title": "Percentage of SMEs reporting current credit need and access to credit situation",
+    "tablenote": [
+      "As the majority of small and medium-sized enterprises (SMEs) in various sectors reported \"no credit need\", the assessment of credit access situation (easy/fair/tight) among SMEs with credit need might display great fluctuations from month to month given the small number of SMEs involved and the voluntary nature of the survey, and thus should be interpreted with great caution.  SMEs in the sectors covered refer to companies with fewer than 50 persons engaged.",
+      "Weighted average using total number of SMEs in individual sectors as weights."
+    ],
+    "source": "Monthly Survey on the Business Situation of Small and Medium-sized Enterprises Industrial Production Statistics Section, Census and Statistics Department Tel.: (852) 3903 7246 Email: sme-survey@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 620,
+      "started": "2026-10-23T15:03:05+00:00",
+      "finished": "2026-10-23T15:03:06+00:00",
+      "durationSeconds": 0.023499
+    }
+  },
+  "dataSet": [
+    {
+      "ACS": "",
+      "ACSDesc": "Total",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.1",
+      "ACSDesc": "Easy",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 3.6,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.2",
+      "ACSDesc": "Fair",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 5.2,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.3",
+      "ACSDesc": "Tight",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.4",
+      "ACSDesc": "Had not applied for credit",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "ACS": "",
+      "ACSDesc": "Total",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.1",
+      "ACSDesc": "Easy",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 0.5,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.2",
+      "ACSDesc": "Fair",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 0.8,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.3",
+      "ACSDesc": "Tight",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.4",
+      "ACSDesc": "Had not applied for credit",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 1.1,
+      "sd_value": ""
+    }
+  ]
+}

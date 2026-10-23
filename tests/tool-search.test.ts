@@ -55,8 +55,9 @@ describe("agent tool search", () => {
   });
 
   it("finds tools by meaning when no keyword matches", async () => {
-    expect(rankTools("will I need an umbrella", catalogue)).toEqual([]);
-    const names = await searchTools("will I need an umbrella", catalogue, embeddingModel("semantic"));
+    // "need" now legitimately matches SME credit needs; umbrella alone has no lexical match.
+    expect(rankTools("umbrella", catalogue)).toEqual([]);
+    const names = await searchTools("umbrella", catalogue, embeddingModel("semantic"));
     expect(names).toEqual(expect.arrayContaining(["hko_local_forecast", "hko_nine_day_forecast"]));
     expect(names.some((name) => name.startsWith("kmb_") || name.startsWith("carpark_"))).toBe(false);
   });

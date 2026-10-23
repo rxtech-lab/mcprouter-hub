@@ -1,0 +1,124 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=330-40002&api_popup=1"
+    },
+    "title": "中小企報稱有關現時信貸需求及獲取信貸情況的百分比",
+    "tablenote": [
+      "由於絕大部分中小企報稱「沒有信貸需求」，有關獲取信貸情況的評估（容易／尚可／緊絀）亦因所涉及的中小企數目不大及統計調查的自願性質而可能有較大的按月波動，所以在闡釋結果時務須謹慎。涵蓋行業內的中小企是指從業人數少於 50 人的公司。",
+      "採用個別行業的中小企總數作為權數的加權平均數。"
+    ],
+    "source": "中小型企業業務狀況按月統計調查 政府統計處 工業生產統計組 電話﹕(852) 3903 7246 電郵﹕sme-survey@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 620,
+      "started": "2026-10-23T15:03:06+00:00",
+      "finished": "2026-10-23T15:03:06+00:00",
+      "durationSeconds": 0.024065
+    }
+  },
+  "dataSet": [
+    {
+      "ACS": "",
+      "ACSDesc": "Total",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.1",
+      "ACSDesc": "容易",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 3.6,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.2",
+      "ACSDesc": "尚可",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 5.2,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.3",
+      "ACSDesc": "緊絀",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.4",
+      "ACSDesc": "沒有申請信貸",
+      "freq": "M",
+      "period": "201606",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "ACS": "",
+      "ACSDesc": "Total",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.1",
+      "ACSDesc": "容易",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 0.5,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.2",
+      "ACSDesc": "尚可",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 0.8,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.3",
+      "ACSDesc": "緊絀",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "ACS": "1.4",
+      "ACSDesc": "沒有申請信貸",
+      "freq": "M",
+      "period": "202609",
+      "sv": "SME_PERCENT",
+      "svDesc": "(%)",
+      "figure": 1.1,
+      "sd_value": ""
+    }
+  ]
+}
