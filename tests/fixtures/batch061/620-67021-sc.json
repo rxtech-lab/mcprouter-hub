@@ -1,0 +1,146 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=620-67021&api_popup=1"
+    },
+    "title": "经季节性调整的零售业销货额数列（2019年10月至2020年9月期内的平均每月指数 = 100）",
+    "tablenote": [
+      "经季节性调整的数列是采用「X-12自回归–求和–移动平均 (X-12 ARIMA)」方法编制。X-12 ARIMA及其相关版本是编制经季节性调整数列的常用标准方法。   经季节性调整的数列可在取得更多数据后作出修订。就零售业总销货价值及数量指数而言，当每年1月份的数字发表时，会一并修订对上3年的经季节性调整数列。",
+      "N.A. 没有数字",
+      "p 临时数字",
+      "[φ3] 数字代表增减少于 0.05%。"
+    ],
+    "source": "政府统计处经销服务统计组 (查询电话：3903 7400  查询电邮：mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 15,
+      "started": "2026-10-23T23:02:19+00:00",
+      "finished": "2026-10-23T23:02:19+00:00",
+      "durationSeconds": 0.033973
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200510",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": 0.8,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200505",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": -4.6,
+      "sd_value": "p"
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 58.8,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200507",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 61,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 120.8,
+      "sd_value": "p"
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200510",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200505",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202104",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "截至有关月份的三个月与先前三个月比较的变动百分率",
+      "figure": -3.4,
+      "sd_value": "p"
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 74.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200502",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 75,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 107.7,
+      "sd_value": "p"
+    }
+  ]
+}

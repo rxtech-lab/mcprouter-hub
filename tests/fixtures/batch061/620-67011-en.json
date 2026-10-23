@@ -1,0 +1,265 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=620-67011&api_popup=1"
+    },
+    "title": "Value of retail sales in supermarkets by broad product category",
+    "tablenote": [
+      "Figures may not add up to the total due to rounding.",
+      "N.A. Not available",
+      "p Provisional figure"
+    ],
+    "source": "Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 7400  Enquiry e-mail : mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 20,
+      "started": "2026-10-23T23:02:12+00:00",
+      "finished": "2026-10-23T23:02:13+00:00",
+      "durationSeconds": 0.0831
+    }
+  },
+  "dataSet": [
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "",
+      "BROAD_PROD_CATDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S1",
+      "BROAD_PROD_CATDesc": "Fresh/chilled meat, fish, seafood, fruit and vegetables and frozen food",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S2",
+      "BROAD_PROD_CATDesc": "Dairy products and eggs, non-alcoholic drinks, rice and noodles and other foods",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S3",
+      "BROAD_PROD_CATDesc": "Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S4",
+      "BROAD_PROD_CATDesc": "Personal care products, household goods and other goods",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "",
+      "BROAD_PROD_CATDesc": "Total",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2233,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S1",
+      "BROAD_PROD_CATDesc": "Fresh/chilled meat, fish, seafood, fruit and vegetables and frozen food",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 409,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S2",
+      "BROAD_PROD_CATDesc": "Dairy products and eggs, non-alcoholic drinks, rice and noodles and other foods",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1078,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S3",
+      "BROAD_PROD_CATDesc": "Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 345,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S4",
+      "BROAD_PROD_CATDesc": "Personal care products, household goods and other goods",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 403,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "",
+      "BROAD_PROD_CATDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 27729,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S1",
+      "BROAD_PROD_CATDesc": "Fresh/chilled meat, fish, seafood, fruit and vegetables and frozen food",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 5298,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S2",
+      "BROAD_PROD_CATDesc": "Dairy products and eggs, non-alcoholic drinks, rice and noodles and other foods",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 13248,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S3",
+      "BROAD_PROD_CATDesc": "Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 4161,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S4",
+      "BROAD_PROD_CATDesc": "Personal care products, household goods and other goods",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 5022,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "",
+      "BROAD_PROD_CATDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 4441,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S1",
+      "BROAD_PROD_CATDesc": "Fresh/chilled meat, fish, seafood, fruit and vegetables and frozen food",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1021,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S2",
+      "BROAD_PROD_CATDesc": "Dairy products and eggs, non-alcoholic drinks, rice and noodles and other foods",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1998,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S3",
+      "BROAD_PROD_CATDesc": "Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 797,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "BROAD_PROD_CAT": "S4",
+      "BROAD_PROD_CATDesc": "Personal care products, household goods and other goods",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 624,
+      "sd_value": "p"
+    }
+  ]
+}

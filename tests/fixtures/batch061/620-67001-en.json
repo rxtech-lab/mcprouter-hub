@@ -1,0 +1,265 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=620-67001&api_popup=1"
+    },
+    "title": "Total retail sales",
+    "tablenote": [
+      "Average index from October 2019 – September 2020 = 100   The value index measures the changes in value terms in a particular period as compared with a reference period, while the volume index is derived from the value index of retail sales by adjusting for price changes.   In conjunction with the rebasing of the Composite Consumer Price Index, the series of value and volume indices of retail sales have been re-referenced, taking October 2019 to September 2020 as the new reference period and adopting the relevant components of the 2019/20-based Composite Consumer Price Index as deflators for compiling the volume index of retail sales. The volume index of retail sales is compiled based on the chain-linking approach as stipulated in the International Recommendations for Distributive Trade Statistics 2008 published by the United Nations Statistics Division.   The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0. Users may also download past statistics based on HSIC Version 1.1 for reference.   Figures may not add up to the total due to rounding.",
+      "N.A. Not available",
+      "p Provisional figure"
+    ],
+    "source": "Monthly Survey of Retail Sales Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 7400  Enquiry e-mail : mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 30,
+      "started": "2026-10-23T23:02:05+00:00",
+      "finished": "2026-10-23T23:02:05+00:00",
+      "durationSeconds": 0.050136
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 15831,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 204372,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 32059,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 71,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200411",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 67.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 76.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 81,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 102.1,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.9,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 56.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 61,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 65.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200911",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 82,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 114.8,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.8,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200607",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2013",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.6,
+      "sd_value": "p"
+    }
+  ]
+}

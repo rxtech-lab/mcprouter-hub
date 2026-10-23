@@ -1,0 +1,265 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=620-67011&api_popup=1"
+    },
+    "title": "按主要货品种类划分的超级市场的零售业销货价值",
+    "tablenote": [
+      "由于数字经四舍五入，分项总和未必与总数相等。",
+      "N.A. 没有数字",
+      "p 临时数字"
+    ],
+    "source": "政府统计处经销服务统计组 (查询电话：3903 7400  查询电邮：mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 20,
+      "started": "2026-10-23T23:02:13+00:00",
+      "finished": "2026-10-23T23:02:13+00:00",
+      "durationSeconds": 0.083147
+    }
+  },
+  "dataSet": [
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "",
+      "BROAD_PROD_CATDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S1",
+      "BROAD_PROD_CATDesc": "新鲜或冷藏肉类、鱼类、海产类食品、水果及蔬菜及雪藏食品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S2",
+      "BROAD_PROD_CATDesc": "乳类制品及蛋类、不含酒精饮品、米及粉面及其他食品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S3",
+      "BROAD_PROD_CATDesc": "酒类饮品及烟草",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S4",
+      "BROAD_PROD_CATDesc": "个人护理用品、家庭用品及其他物品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "",
+      "BROAD_PROD_CATDesc": "Total",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 2233,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S1",
+      "BROAD_PROD_CATDesc": "新鲜或冷藏肉类、鱼类、海产类食品、水果及蔬菜及雪藏食品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 409,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S2",
+      "BROAD_PROD_CATDesc": "乳类制品及蛋类、不含酒精饮品、米及粉面及其他食品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 1078,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S3",
+      "BROAD_PROD_CATDesc": "酒类饮品及烟草",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 345,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S4",
+      "BROAD_PROD_CATDesc": "个人护理用品、家庭用品及其他物品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 403,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "",
+      "BROAD_PROD_CATDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 27729,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S1",
+      "BROAD_PROD_CATDesc": "新鲜或冷藏肉类、鱼类、海产类食品、水果及蔬菜及雪藏食品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 5298,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S2",
+      "BROAD_PROD_CATDesc": "乳类制品及蛋类、不含酒精饮品、米及粉面及其他食品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 13248,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S3",
+      "BROAD_PROD_CATDesc": "酒类饮品及烟草",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 4161,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S4",
+      "BROAD_PROD_CATDesc": "个人护理用品、家庭用品及其他物品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 5022,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "",
+      "BROAD_PROD_CATDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 4441,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S1",
+      "BROAD_PROD_CATDesc": "新鲜或冷藏肉类、鱼类、海产类食品、水果及蔬菜及雪藏食品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 1021,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S2",
+      "BROAD_PROD_CATDesc": "乳类制品及蛋类、不含酒精饮品、米及粉面及其他食品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 1998,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S3",
+      "BROAD_PROD_CATDesc": "酒类饮品及烟草",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 797,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超级市场",
+      "BROAD_PROD_CAT": "S4",
+      "BROAD_PROD_CATDesc": "个人护理用品、家庭用品及其他物品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 624,
+      "sd_value": "p"
+    }
+  ]
+}

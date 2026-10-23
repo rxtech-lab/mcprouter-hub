@@ -1,0 +1,5 @@
+simulation: batch061
+routing: path
+mocks:
+  - routeKey: censtatd
+    path: ../mocks/censtatd-retail-restaurants/config.yaml

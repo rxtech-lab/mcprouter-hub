@@ -1,0 +1,146 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=620-67021&api_popup=1"
+    },
+    "title": "Seasonally adjusted series of retail sales (average index from October 2019 – September 2020 = 100)",
+    "tablenote": [
+      "The seasonally adjusted series is compiled by the X-12 ARIMA method.  The X-12 ARIMA method and its related versions are the standard method commonly employed in compiling seasonally adjusted statistical data series.   Seasonally adjusted series may be revised as more data become available.  For the value and volume indices of total retail sales, the seasonally adjusted series for the preceding 3 years are revised each year when the figures for January are published.",
+      "N.A. Not available",
+      "p Provisional figure",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 7400  Enquiry e-mail : mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 15,
+      "started": "2026-10-23T23:02:18+00:00",
+      "finished": "2026-10-23T23:02:18+00:00",
+      "durationSeconds": 0.029356
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200510",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": 0.8,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200505",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": -4.6,
+      "sd_value": "p"
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 58.8,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200507",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 61,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "SA_VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 120.8,
+      "sd_value": "p"
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200510",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200505",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202104",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "Rate of change % of 3 months period ending the month compared with the preceding three-month period",
+      "figure": -3.4,
+      "sd_value": "p"
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 74.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200502",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 75,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "SA_VOL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 107.7,
+      "sd_value": "p"
+    }
+  ]
+}

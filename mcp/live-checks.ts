@@ -399,4 +399,16 @@ export const liveCases: Record<string, LiveCase> = {
   traffic_news: { input: {} },
   traffic_journey_times: { input: {}, check: nonEmpty },
   traffic_cameras: { input: {}, check: nonEmpty },
+  // Batch061: verified retail sales, business performance and restaurant tables.
+  retail_sales_total: { input: { limit: 1 }, check: nonEmptyPage },
+  retail_sales_value_by_outlet: { input: { limit: 1 }, check: nonEmptyPage },
+  retail_sales_volume_by_outlet: { input: { limit: 1 }, check: nonEmptyPage },
+  supermarket_sales_by_product: { input: { limit: 1 }, check: nonEmptyPage },
+  department_store_sales_by_product: { input: { limit: 1 }, check: nonEmptyPage },
+  retail_sales_seasonally_adjusted: { input: { limit: 1 }, check: nonEmptyPage },
+  online_retail_sales: { input: { limit: 1 }, check: nonEmptyPage },
+  supermarket_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  department_store_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  restaurant_receipts_purchases: { input: { limit: 1 }, check: nonEmptyPage },
+
 };
