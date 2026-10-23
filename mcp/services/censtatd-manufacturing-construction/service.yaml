@@ -1,0 +1,436 @@
+id: censtatd-manufacturing-construction
+title: Hong Kong Manufacturing and Construction Costs
+description: Official C&SD manufacturing principal statistics, mining and quarry production, and construction labour and materials cost indices.
+apis:
+  - API-0667
+  - API-0668
+  - API-0669
+  - API-0670
+  - API-0671
+  - API-0672
+  - API-0673
+  - API-0674
+  - API-0675
+  - API-0676
+datasets:
+  - hk-censtatd-tablechart-610-72003
+  - hk-censtatd-tablechart-610-72004
+  - hk-censtatd-tablechart-610-72005
+  - hk-censtatd-tablechart-610-72006
+  - hk-censtatd-tablechart-610-72013
+  - hk-censtatd-tablechart-610-92091
+  - hk-censtatd-tablechart-615-21001
+  - hk-censtatd-tablechart-615-21001a
+  - hk-censtatd-tablechart-615-21002
+  - hk-censtatd-tablechart-615-21002a
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map: { en: en, tc: tc, sc: sc }
+cacheTtl: 3600
+tools:
+  - name: manufacturing_by_value_added
+    title: "Principal statistics for all companies in the manufacturing sector by industry value added (610-72003)"
+    description: "Principal statistics for all companies in the manufacturing sector by industry value added. Official C&SD Table 610-72003. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "610-72003", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["COMP", "GS", "HC", "IVA", "OE", "PE_ASEA", "TR"]
+      value_added_group:
+        type: string
+        in: local
+        description: "IVA_GRP: TOTAL = Total; 1000-2499 = 1,000 - 2,499; 10000-24999 = 10,000 - 24,999; 250-499 = 250 - 499; 2500-4999 = 2,500 - 4,999; 25000_and_over = ≥ 25,000; 50-249 = 50 - 249; 500-999 = 500 - 999; 5000-9999 = 5,000 - 9,999; <50 = < 50"
+        enum: ["TOTAL", "1000-2499", "10000-24999", "250-499", "2500-4999", "25000_and_over", "50-249", "500-999", "5000-9999", "<50"]
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASIP_C = Manufacturing"
+        enum: ["ind_ASIP_C"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["hkd_million", "number"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: manufacturing_by_receipts
+    title: "Principal statistics for all companies in the manufacturing sector by total receipts (610-72004)"
+    description: "Principal statistics for all companies in the manufacturing sector by total receipts. Official C&SD Table 610-72004. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "610-72004", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["COMP", "GS", "HC", "IVA", "OE", "PE_ASEA", "TR"]
+      receipts_group:
+        type: string
+        in: local
+        description: "TR_GRP: TOTAL = Total; 1000-1999 = 1,000 - 1,999; 10000-19999 = 10,000 - 19,999; 100000_and_over = ≥100,000; 2000-9999 = 2,000 - 9,999; 20000-49999 = 20,000 - 49,999; 500-999 = 500 - 999; 50000-99999 = 50,000 - 99,999; <500 = < 500"
+        enum: ["TOTAL", "1000-1999", "10000-19999", "100000_and_over", "2000-9999", "20000-49999", "500-999", "50000-99999", "<500"]
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASIP_C = Manufacturing"
+        enum: ["ind_ASIP_C"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["hkd_million", "number"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: manufacturing_by_employment
+    title: "Principal statistics for all companies in the manufacturing sector by industry grouping and number of persons engaged (610-72005)"
+    description: "Principal statistics for all companies in the manufacturing sector by industry grouping and number of persons engaged. Official C&SD Table 610-72005. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "610-72005", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["COMP", "GS", "HC", "IVA", "OE", "PE_ASEA", "TR"]
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASIP_10_11_12 = Food, beverages and tobacco; ind_ASIP_13_14 = Textiles and wearing apparel; ind_ASIP_15_16_31_32 = Other manufacturing industries; ind_ASIP_17_18 = Paper products, printing and reproduction of recorded media; ind_ASIP_19_20_21_22_23 = Chemicals, rubber, plastics and non-metallic mineral products; ind_ASIP_24_25_28_29_30_33 = Metal products, machinery and equipment; ind_ASIP_26_27 = Electrical, electronic and optical products; ind_ASIP_C = Manufacturing"
+        enum: ["ind_ASIP_10_11_12", "ind_ASIP_13_14", "ind_ASIP_15_16_31_32", "ind_ASIP_17_18", "ind_ASIP_19_20_21_22_23", "ind_ASIP_24_25_28_29_30_33", "ind_ASIP_26_27", "ind_ASIP_C"]
+      employment_group:
+        type: string
+        in: local
+        description: "PE_GRP: TOTAL = Total; 1-9 = 1 - 9; 10-99 = 10 - 99; 100_and_over = ≥100"
+        enum: ["TOTAL", "1-9", "10-99", "100_and_over"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["hkd_million", "number"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: manufacturing_detailed_industry
+    title: "Principal statistics for all companies in the manufacturing sector by detailed industry grouping (610-72006)"
+    description: "Principal statistics for all companies in the manufacturing sector by detailed industry grouping. Official C&SD Table 610-72006. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "610-72006", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["COMP", "GS", "HC", "IVA", "OE", "PE_ASEA", "TR"]
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASIP_10 = Food products; ind_ASIP_11_12 = Beverage and tobacco products; ind_ASIP_13_14 = Textiles and wearing apparel; ind_ASIP_17_18 = Paper products, printing and reproduction of recorded media; ind_ASIP_20_21 = Chemical products and pharmaceuticals; ind_ASIP_22_23 = Rubber, plastics and non-metallic mineral products; ind_ASIP_24_25 = Basic metals and fabricated metal products (except machinery and equipment); ind_ASIP_26_27 = Electrical, electronic and optical products; ind_ASIP_28 = Machinery and equipment not elsewhere classified; ind_ASIP_32 = Other miscellaneous manufacturing industries; ind_ASIP_33 = Repair and installation of machinery and equipment; ind_ASIP_C = All manufacturing industries"
+        enum: ["ind_ASIP_10", "ind_ASIP_11_12", "ind_ASIP_13_14", "ind_ASIP_17_18", "ind_ASIP_20_21", "ind_ASIP_22_23", "ind_ASIP_24_25", "ind_ASIP_26_27", "ind_ASIP_28", "ind_ASIP_32", "ind_ASIP_33", "ind_ASIP_C"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["hkd_million", "number"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: manufacturing_related_companies
+    title: "Selected principal statistics for manufacturing companies and import and export companies with manufacturing-related activities (610-72013)"
+    description: "Selected principal statistics for manufacturing companies and import and export companies with manufacturing-related activities. Official C&SD Table 610-72013. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "610-72013", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["HC", "IVA", "PE_ASEA", "SALE_REV"]
+      company_type:
+        type: string
+        in: local
+        description: "FIRM: 1 = (I) Manufacturing companies; 2 = (II) Import and export companies engaged in sub-contract processing arrangement and providing manufacturing-related technical support services; 3 = (I) + (II)"
+        enum: ["1", "2", "3"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["hkd_million", "number"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: mining_quarry_production
+    title: "Mining and quarry production (610-92091)"
+    description: "Mining and quarry production. Official C&SD Table 610-92091. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "610-92091", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}(0[1-9]|1[0-2])?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["M", "Y"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["MINING_PD", "QUARRY_PD"]
+      commodity:
+        type: string
+        in: local
+        description: "COMMD: TOTAL = Total; MINE_feldspar = Feldspar; MINE_kaolin_fesand = Kaolin/feldspar sand; MINE_quartz = Quartz"
+        enum: ["TOTAL", "MINE_feldspar", "MINE_kaolin_fesand", "MINE_quartz"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["tonnes"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_labour_2021
+    title: "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2021 = 100 ) - Costs of Labour Index (615-21001)"
+    description: "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2021 = 100 ) - Costs of Labour Index. Official C&SD Table 615-21001. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "615-21001", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}(0[1-9]|1[0-2])?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["M"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["L_INDEX2021"]
+      labour_type:
+        type: string
+        in: local
+        description: "WAGE: WAGE_BC = Composite labour wages for building contracts; WAGE_CE = Composite labour wages for civil engineering contracts"
+        enum: ["WAGE_BC", "WAGE_CE"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["index"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_labour_2003
+    title: "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2003 = 100 ) - Costs of Labour Index (615-21001A)"
+    description: "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2003 = 100 ) - Costs of Labour Index. Official C&SD Table 615-21001A. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "615-21001A", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}(0[1-9]|1[0-2])?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["M"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["L_INDEX2003"]
+      labour_type:
+        type: string
+        in: local
+        description: "WAGE: WAGE_BC = Composite labour wages for building contracts; WAGE_CE = Composite labour wages for civil engineering contracts"
+        enum: ["WAGE_BC", "WAGE_CE"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["index"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_materials_2021
+    title: "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2021 = 100 ) - Costs of Materials Index (615-21002)"
+    description: "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2021 = 100 ) - Costs of Materials Index. Official C&SD Table 615-21002. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "615-21002", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}(0[1-9]|1[0-2])?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["M"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["M_INDEX2021"]
+      material:
+        type: string
+        in: local
+        description: "ITEM_P: AGG = Aggregates; BIT = Bitumen; CEMENT = Portland cement (ordinary); CONCRETE = Concrete blocks; COPPERP = Copper pipes; DIESEL = Diesel fuel; EPOXY = Epoxy coated cast iron pipes; GLASS = Glass; GMS = Galvanised mild steel; GMSPIPE = GMS pipes; HOMOF = Homogeneous floor tiles; MF = Metal formwork; MOSAIC = Mosaic tiles; PAINT = Paint; RMC = Ready-mixed concrete (April 2025 = 100); SAND = Sand; SR = Steel reinforcement; TF = Timber formwork; UPVC = uPVC pipes; WALL = Glazed ceramic wall tiles; WOODW = Woodwork"
+        enum: ["AGG", "BIT", "CEMENT", "CONCRETE", "COPPERP", "DIESEL", "EPOXY", "GLASS", "GMS", "GMSPIPE", "HOMOF", "MF", "MOSAIC", "PAINT", "RMC", "SAND", "SR", "TF", "UPVC", "WALL", "WOODW"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["index"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en
+  - name: construction_materials_2003
+    title: "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2003 = 100 ) - Costs of Materials Index (615-21002A)"
+    description: "Index numbers of the costs of labour and materials used in public sector construction projects ( April 2003 = 100 ) - Costs of Materials Index. Official C&SD Table 615-21002A. Newest observations first; use nextOffset with the same filters. Figures, units, missing values and flags are preserved. Do not add overlapping groups or compare indices with different base periods. HC counts companies; PE_ASEA counts persons engaged where present."
+    path: /get.php
+    query: { id: "615-21002A", full_series: 1 }
+    transform: { response: normalizeManufacturingConstruction }
+    input:
+      period:
+        type: string
+        in: local
+        description: "Provider year YYYY or exact month YYYYMM where supported; a year selects all its observations."
+        pattern: "^\\d{4}(0[1-9]|1[0-2])?$"
+      freq:
+        type: string
+        in: local
+        description: "Provider frequency: Y annual; M monthly. Do not combine annual and monthly values."
+        enum: ["M"]
+      indicator:
+        type: string
+        in: local
+        description: "Original statistical variable code. Source units are preserved without conversion."
+        enum: ["M_INDEX2003"]
+      material:
+        type: string
+        in: local
+        description: "ITEM_P: AGG = Aggregates; BIT = Bitumen; CEMENT = Portland cement (ordinary); CONCRETE = Concrete blocks; COPPER = Copper pipes (September 2008 = 100); DIESEL = Diesel fuel; GLASS = Glass; GMS = Galvanised mild steel; GMSPIPE = GMS pipes; HARDW = Hardwood; HOMOF = Homogeneous floor tiles; MF = Metal formwork; MOSAIC = Mosaic tiles; PAINT = Paint; SAND = Sand; SR = Steel reinforcement; TEAK = Teak; TF = Timber formwork; UPVC = uPVC pipes; UPVCL = uPVC lined GMS pipes; WALL = Glazed ceramic wall tiles"
+        enum: ["AGG", "BIT", "CEMENT", "CONCRETE", "COPPER", "DIESEL", "GLASS", "GMS", "GMSPIPE", "HARDW", "HOMOF", "MF", "MOSAIC", "PAINT", "SAND", "SR", "TEAK", "TF", "UPVC", "UPVCL", "WALL"]
+      measure:
+        type: string
+        in: local
+        description: "Source unit category; monetary values are HK$ million, counts retain their indicator meaning."
+        enum: ["index"]
+      limit: { type: integer, in: local, description: Maximum observations returned per page., default: 50, minimum: 1, maximum: 100 }
+      offset: { type: integer, in: local, description: Offset after filtering; continue with nextOffset., default: 0, minimum: 0, maximum: 100000 }
+      lang:
+        type: string
+        description: Language of official title, notes, source and dimension labels.
+        enum: [en, tc, sc]
+        default: en

@@ -1,0 +1,94 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=610-92091&api_popup=1"
+    },
+    "title": "Mining and quarry production",
+    "tablenote": [
+      "Quarry production includes production of contract quarries, rock crushing sites and site crushers. Figures do not include the production on the land which disposed to private sector since 2023.",
+      "- Not applicable"
+    ],
+    "source": "Civil Engineering and Development Department  (Enquiries on the mining and quarry production statistics can be directed to   telephone no. : 3863 2532   e-mail : gen-enquiry@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 7,
+      "started": "2026-10-23T20:02:30+00:00",
+      "finished": "2026-10-23T20:02:31+00:00",
+      "durationSeconds": 0.026405
+    }
+  },
+  "dataSet": [
+    {
+      "COMMD": "MINE_feldspar",
+      "COMMDDesc": "Feldspar",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "Tonnes",
+      "figure": 23101,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_kaolin_fesand",
+      "COMMDDesc": "Kaolin/feldspar sand",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "Tonnes",
+      "figure": 92363,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_quartz",
+      "COMMDDesc": "Quartz",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "Tonnes",
+      "figure": 34,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_quartz",
+      "COMMDDesc": "Quartz",
+      "freq": "Y",
+      "period": "1987",
+      "sv": "MINING_PD",
+      "svDesc": "Tonnes",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "QUARRY_PD",
+      "svDesc": "Tonnes",
+      "figure": 11447968,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "M",
+      "period": "202301",
+      "sv": "QUARRY_PD",
+      "svDesc": "Tonnes",
+      "figure": 125686,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "QUARRY_PD",
+      "svDesc": "Tonnes",
+      "figure": 165415,
+      "sd_value": ""
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=610-92091&api_popup=1"
+    },
+    "title": "採礦及石礦生產",
+    "tablenote": [
+      "石礦產量包括批租石礦場，碎石場及地盤碎石機產量 。自2023年起，數字不包括向私人批出的土地上的產量。",
+      "- 不適用"
+    ],
+    "source": "土木工程拓展署  (有關採礦及石礦生產的統計數字，請聯絡：   電話：3863 2532   電郵：gen-enquiry@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 7,
+      "started": "2026-10-23T20:02:31+00:00",
+      "finished": "2026-10-23T20:02:31+00:00",
+      "durationSeconds": 0.028781
+    }
+  },
+  "dataSet": [
+    {
+      "COMMD": "MINE_feldspar",
+      "COMMDDesc": "長石",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "公噸",
+      "figure": 23101,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_kaolin_fesand",
+      "COMMDDesc": "高嶺土／砂石",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "公噸",
+      "figure": 92363,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_quartz",
+      "COMMDDesc": "石英",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "公噸",
+      "figure": 34,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_quartz",
+      "COMMDDesc": "石英",
+      "freq": "Y",
+      "period": "1987",
+      "sv": "MINING_PD",
+      "svDesc": "公噸",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "QUARRY_PD",
+      "svDesc": "公噸",
+      "figure": 11447968,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "M",
+      "period": "202301",
+      "sv": "QUARRY_PD",
+      "svDesc": "公噸",
+      "figure": 125686,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "QUARRY_PD",
+      "svDesc": "公噸",
+      "figure": 165415,
+      "sd_value": ""
+    }
+  ]
+}

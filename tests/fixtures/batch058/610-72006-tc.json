@@ -1,0 +1,214 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=610-72006&api_popup=1"
+    },
+    "title": "按詳細行業組別劃分的所有製造業公司主要統計數字",
+    "tablenote": [
+      "由於統計表內數字經四捨五入，分項總和未必與總數相等。",
+      "2020年至2022年的數字包括與防疫抗疫措施有關的資助金額。"
+    ],
+    "source": "經濟活動按年統計調查 政府統計處 工業生產統計組 電話﹕(852) 3903 7246 電郵﹕manufacturing@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 19,
+      "started": "2026-10-23T20:02:30+00:00",
+      "finished": "2026-10-23T20:02:30+00:00",
+      "durationSeconds": 0.018959
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "食品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 6440,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_11_12",
+      "INDDesc": "飲品及煙草製品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 1263,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_13_14",
+      "INDDesc": "紡織製品及成衣",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_17_18",
+      "INDDesc": "紙製品、印刷及已儲錄資料媒體的複製",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 2628,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_20_21",
+      "INDDesc": "化學產品及藥品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 1805,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_22_23",
+      "INDDesc": "橡膠、塑膠及非金屬礦產製品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 1177,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_24_25",
+      "INDDesc": "基本金屬及金屬製品（機械及設備除外）",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 740,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_26_27",
+      "INDDesc": "電器、電子及光學製品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 898,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_28",
+      "INDDesc": "其他機械設備",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 366,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_32",
+      "INDDesc": "其他雜項製造行業",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 1265,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_33",
+      "INDDesc": "機械及設備的維修及安裝",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 5108,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_C",
+      "INDDesc": "所有製造行業",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 22617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "食品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 3928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "食品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 1086,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "食品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 26597,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "食品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 30628,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "食品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 8543,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10",
+      "INDDesc": "食品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 36964,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_C",
+      "INDDesc": "所有製造行業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 300038,
+      "sd_value": ""
+    }
+  ]
+}

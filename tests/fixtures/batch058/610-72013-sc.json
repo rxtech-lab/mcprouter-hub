@@ -1,0 +1,95 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=610-72013&api_popup=1"
+    },
+    "title": "制造业公司及从事制造业相关活动的进出口贸易公司的选定主要统计数字",
+    "tablenote": [
+      "除了制造业相关活动，香港的服务行业一直提供各种专业服务及其他工商业支援服务。 有关更多资料，请参阅表655-82101。",
+      "「分判制造工序」是指一项香港公司与中国内地（内地）及其他地区的公司的合约安排，香港公司根据合约将生产工序由香港分判予内地及这些地区进行。",
+      "销货收益包括销售自行生产的货物和转售从外购买的货物所得的收益。而有关货物包括本地生产货品及透过分判制造工序生产的货品。"
+    ],
+    "source": "经济活动按年统计调查 政府统计处 工业生产统计组 电话﹕(852) 3903 7246 电邮﹕manufacturing@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 7,
+      "started": "2026-10-23T20:02:30+00:00",
+      "finished": "2026-10-23T20:02:30+00:00",
+      "durationSeconds": 0.008614
+    }
+  },
+  "dataSet": [
+    {
+      "FIRM": 1,
+      "FIRMDesc": "(I)  制造业公司",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 7251,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 2,
+      "FIRMDesc": "(II) 从事分判制造工序及提供与制造业相关的技术支援服务的进出口贸易公司",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 12936,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 3,
+      "FIRMDesc": "(I) + (II)",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 20187,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 1,
+      "FIRMDesc": "(I)  制造业公司",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 88000,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 1,
+      "FIRMDesc": "(I)  制造业公司",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 35000,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 1,
+      "FIRMDesc": "(I)  制造业公司",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "SALE_REV",
+      "svDesc": "百万港元",
+      "figure": 187800,
+      "sd_value": ""
+    },
+    {
+      "FIRM": 3,
+      "FIRMDesc": "(I) + (II)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "SALE_REV",
+      "svDesc": "百万港元",
+      "figure": 645900,
+      "sd_value": ""
+    }
+  ]
+}

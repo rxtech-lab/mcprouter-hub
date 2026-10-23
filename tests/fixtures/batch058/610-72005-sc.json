@@ -1,0 +1,253 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=610-72005&api_popup=1"
+    },
+    "title": "按行业组别及从业人数划分的所有制造业公司主要统计数字",
+    "tablenote": [
+      "由于统计表内数字经四舍五入，分项总和未必与总数相等。",
+      "2020年至2022年的数字包括与防疫抗疫措施有关的资助金额。",
+      "* 为使个别公司或人士的资料得以保密，数字不予公布。"
+    ],
+    "source": "经济活动按年统计调查 政府统计处 工业生产统计组 电话﹕(852) 3903 7246 电邮﹕manufacturing@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 19,
+      "started": "2026-10-23T20:02:30+00:00",
+      "finished": "2026-10-23T20:02:30+00:00",
+      "durationSeconds": 0.040623
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 7703,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "1-9",
+      "PE_GRPDesc": "1 - 9",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 428,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "10-99",
+      "PE_GRPDesc": "10 - 99",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 1993,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "100_and_over",
+      "PE_GRPDesc": "≥100",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 5282,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_13_14",
+      "INDDesc": "纺织制品及成衣",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_13_14",
+      "INDDesc": "纺织制品及成衣",
+      "PE_GRP": "1-9",
+      "PE_GRPDesc": "1 - 9",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "*"
+    },
+    {
+      "IND": "ind_ASIP_15_16_31_32",
+      "INDDesc": "其他制造行业",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 1265,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_17_18",
+      "INDDesc": "纸制品、印刷及已储录资料媒体的复制",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 2628,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_19_20_21_22_23",
+      "INDDesc": "化学、橡胶、塑胶及非金属矿产制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 2982,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_24_25_28_29_30_33",
+      "INDDesc": "金属制品、机械及设备",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 6214,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_26_27",
+      "INDDesc": "电器、电子及光学制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 898,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 22617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 6352,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 1118,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 31681,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 34053,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 11957,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_10_11_12",
+      "INDDesc": "食品、饮品及烟草制品",
+      "PE_GRP": "",
+      "PE_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 45736,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASIP_C",
+      "INDDesc": "制造",
+      "PE_GRP": "100_and_over",
+      "PE_GRPDesc": "≥100",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 195160,
+      "sd_value": ""
+    }
+  ]
+}

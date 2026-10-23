@@ -1,0 +1,257 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=615-21002A&api_popup=1"
+    },
+    "title": "公營建築工程的工資及材料成本指數 ( 2003年4月 = 100 ) - 材料成本指數",
+    "tablenote": [
+      "材料成本指數是用於計算公營建築工程因應成本變動而調整主要承建商所收款項的增減額。     政府統計處現時每月公布兩套分別以2021年4月及2003年4月為基期的指數。有關以2021年4月為基期的指數，請參閱「表615-21002 : 公營建築工程的工資及材料成本指數 ( 2021年4月 = 100 ) - 材料成本指數」。",
+      "銅喉成本指數為一新數列，有關數據自2008年開始搜集。這項指數是以2008年9月為基期(即2008年9月=100)，而指數的數值並不能與其他數列的數值直接比較。",
+      "數字不包括海砂及機製砂。",
+      "- 不適用",
+      "[#6] 內搪膠鍍鋅鋼管成本指數，已於2011年12月份的指數公布後停止。"
+    ],
+    "source": "政府統計處物價研究分析組（二）  (查詢電話：3903 7384   查詢電郵：construction-cost@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 23,
+      "started": "2026-10-23T20:02:32+00:00",
+      "finished": "2026-10-23T20:02:32+00:00",
+      "durationSeconds": 0.354292
+    }
+  },
+  "dataSet": [
+    {
+      "ITEM_P": "AGG",
+      "ITEM_PDesc": "碎石",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 99.1,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "BIT",
+      "ITEM_PDesc": "瀝青",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 93.6,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "CEMENT",
+      "ITEM_PDesc": "波特蘭水泥 (普通)",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 99.5,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "CONCRETE",
+      "ITEM_PDesc": "混凝土磚",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 99.8,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "COPPER",
+      "ITEM_PDesc": "銅喉 (2008年9月=100)",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "ITEM_P": "DIESEL",
+      "ITEM_PDesc": "柴油",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 96.9,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "GLASS",
+      "ITEM_PDesc": "玻璃",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 97.2,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "GMS",
+      "ITEM_PDesc": "鍍鋅軟鋼",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 104.9,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "GMSPIPE",
+      "ITEM_PDesc": "鉛水喉管",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "HARDW",
+      "ITEM_PDesc": "硬木",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100.1,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "HOMOF",
+      "ITEM_PDesc": "均質地磚",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 102.5,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "MF",
+      "ITEM_PDesc": "金屬模板",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100.9,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "MOSAIC",
+      "ITEM_PDesc": "紙皮石",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "PAINT",
+      "ITEM_PDesc": "油漆",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100.6,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "SAND",
+      "ITEM_PDesc": "砂",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "SR",
+      "ITEM_PDesc": "鋼筋",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 95,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "TEAK",
+      "ITEM_PDesc": "柚木",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "TF",
+      "ITEM_PDesc": "木模板",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100.3,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "UPVC",
+      "ITEM_PDesc": "硬膠喉管",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "UPVCL",
+      "ITEM_PDesc": "內搪膠鍍鋅鋼管",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "WALL",
+      "ITEM_PDesc": "釉面牆壁瓷磚",
+      "freq": "M",
+      "period": "200310",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 100.4,
+      "sd_value": ""
+    },
+    {
+      "ITEM_P": "UPVCL",
+      "ITEM_PDesc": "內搪膠鍍鋅鋼管",
+      "freq": "M",
+      "period": "201201",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "[#6]"
+    },
+    {
+      "ITEM_P": "WALL",
+      "ITEM_PDesc": "釉面牆壁瓷磚",
+      "freq": "M",
+      "period": "202607",
+      "sv": "M_INDEX2003",
+      "svDesc": "指數",
+      "figure": 233.3,
+      "sd_value": ""
+    }
+  ]
+}

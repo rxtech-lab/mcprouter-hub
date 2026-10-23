@@ -360,6 +360,18 @@ export const liveCases: Record<string, LiveCase> = {
   parking_meter_nearby: { input: { latitude: 22.2784, longitude: 114.1694, radius: 200 } },
   parking_sensor_vacancy: { input: {}, check: nonEmpty },
 
+  // Batch058: verified manufacturing, mining and construction indices.
+  manufacturing_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
+  manufacturing_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  manufacturing_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
+  manufacturing_detailed_industry: { input: { limit: 1 }, check: nonEmptyPage },
+  manufacturing_related_companies: { input: { limit: 1 }, check: nonEmptyPage },
+  mining_quarry_production: { input: { limit: 1 }, check: nonEmptyPage },
+  construction_labour_2021: { input: { limit: 1 }, check: nonEmptyPage },
+  construction_labour_2003: { input: { limit: 1 }, check: nonEmptyPage },
+  construction_materials_2021: { input: { limit: 1 }, check: nonEmptyPage },
+  construction_materials_2003: { input: { limit: 1 }, check: nonEmptyPage },
+
   // td-traffic
   traffic_news: { input: {} },
   traffic_journey_times: { input: {}, check: nonEmpty },

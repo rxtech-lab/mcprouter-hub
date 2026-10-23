@@ -1,0 +1,94 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=610-92091&api_popup=1"
+    },
+    "title": "采矿及石矿生产",
+    "tablenote": [
+      "石矿产量包括批租石矿场，碎石场及地盘碎石机产量 。自2023年起，数字不包括向私人批出的土地上的产量。",
+      "- 不适用"
+    ],
+    "source": "土木工程拓展署  (有关采矿及石矿生产的统计数字，请联络：   电话：3863 2532   电邮：gen-enquiry@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 7,
+      "started": "2026-10-23T20:02:31+00:00",
+      "finished": "2026-10-23T20:02:31+00:00",
+      "durationSeconds": 0.02432
+    }
+  },
+  "dataSet": [
+    {
+      "COMMD": "MINE_feldspar",
+      "COMMDDesc": "长石",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "公吨",
+      "figure": 23101,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_kaolin_fesand",
+      "COMMDDesc": "高岭土／砂石",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "公吨",
+      "figure": 92363,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_quartz",
+      "COMMDDesc": "石英",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "MINING_PD",
+      "svDesc": "公吨",
+      "figure": 34,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "MINE_quartz",
+      "COMMDDesc": "石英",
+      "freq": "Y",
+      "period": "1987",
+      "sv": "MINING_PD",
+      "svDesc": "公吨",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "QUARRY_PD",
+      "svDesc": "公吨",
+      "figure": 11447968,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "M",
+      "period": "202301",
+      "sv": "QUARRY_PD",
+      "svDesc": "公吨",
+      "figure": 125686,
+      "sd_value": ""
+    },
+    {
+      "COMMD": "",
+      "COMMDDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "QUARRY_PD",
+      "svDesc": "公吨",
+      "figure": 165415,
+      "sd_value": ""
+    }
+  ]
+}
