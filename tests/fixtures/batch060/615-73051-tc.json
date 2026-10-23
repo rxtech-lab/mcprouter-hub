@@ -1,0 +1,424 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=615-73051&api_popup=1"
+    },
+    "title": "建築、測量及工程服務業的所有公司主要統計數字",
+    "tablenote": [
+      "2020年至2022年的數字包括與防疫抗疫措施有關的資助金額。",
+      "- 不適用"
+    ],
+    "source": "經濟活動按年統計調查 政府統計處建造及雜項服務統計組 (查詢電話：3903 6964  查詢電郵：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 40,
+      "started": "2026-10-23T22:02:14+00:00",
+      "finished": "2026-10-23T22:02:14+00:00",
+      "durationSeconds": 0.022951
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "ASE_FEE",
+      "svDesc": "百萬港元",
+      "figure": 2870,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "ASE_FEE",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "ASE_FEE",
+      "svDesc": "按年變動百分率",
+      "figure": -10.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "ASE_FEE",
+      "svDesc": "按年變動百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 378,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 131,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -42.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 9836,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 6.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1951,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 49,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 7.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 1745,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 2971,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 31,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": -13.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 26574,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_INC",
+      "svDesc": "百萬港元",
+      "figure": 17599,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_INC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_INC",
+      "svDesc": "按年變動百分率",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "SERV_INC",
+      "svDesc": "按年變動百分率",
+      "figure": 4.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 11774,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 349,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 8.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_711",
+      "INDDesc": "建築、測量及工程服務業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 10.9,
+      "sd_value": ""
+    }
+  ]
+}

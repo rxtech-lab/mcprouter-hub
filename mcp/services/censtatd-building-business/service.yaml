@@ -1,0 +1,811 @@
+id: censtatd-building-business
+title: Hong Kong Construction, Real Estate and Architectural Business Statistics
+description: Official C&SD annual company, employment, receipts, expenses and value added statistics for construction, real estate, architectural, surveying and engineering services.
+apis:
+  - API-0687
+  - API-0688
+  - API-0689
+  - API-0690
+  - API-0691
+  - API-0692
+  - API-0693
+  - API-0694
+  - API-0695
+  - API-0696
+datasets:
+  - hk-censtatd-tablechart-615-73002
+  - hk-censtatd-tablechart-615-73003
+  - hk-censtatd-tablechart-615-73011
+  - hk-censtatd-tablechart-615-73012
+  - hk-censtatd-tablechart-615-73013
+  - hk-censtatd-tablechart-615-73021
+  - hk-censtatd-tablechart-615-73031
+  - hk-censtatd-tablechart-615-73032
+  - hk-censtatd-tablechart-615-73051
+  - hk-censtatd-tablechart-615-73052
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: architecture_selected_statistics
+    title: Selected statistics for all companies in the industry group of architectural, surveying and engineering services (615-73002)
+    description: Selected statistics for all companies in the industry group of architectural, surveying and engineering services. Official C&SD Table 615-73002. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73002
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: ASE_FEE = Architectural, surveying and engineering design and consultancy fees; BR_OTH = Other business receipts; COMP = Compensation of employees; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; GS = Gross surplus; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_ASEA = Number of persons engaged; SERV_INC = Service income. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - ASE_FEE
+          - BR_OTH
+          - COMP
+          - CONSUM
+          - GS
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_ASEA
+          - SERV_INC
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_711 = Architectural, Surveying and Engineering Services Industry"
+        enum:
+          - ind_ASBCRE_711
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: real_estate_selected_statistics
+    title: Selected statistics for all companies in the industry section of real estate activities (615-73003)
+    description: Selected statistics for all companies in the industry section of real estate activities. Official C&SD Table 615-73003. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73003
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: COMP = Compensation of employees; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; GROSS_MAR = Gross margin of real estate development projects; GS = Gross surplus; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_ASEA = Number of persons engaged; SERV_RENT = Service and rental income. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - COMP
+          - CONSUM
+          - GROSS_MAR
+          - GS
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_ASEA
+          - SERV_RENT
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_L = Real Estate Activities Industry"
+        enum:
+          - ind_ASBCRE_L
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: construction_business_by_industry
+    title: Principal statistics for all companies in the construction sector by industry division/group (615-73011)
+    description: Principal statistics for all companies in the construction sector by industry division/group. Official C&SD Table 615-73011. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73011
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: BR_OTH = Other business receipts; COMP_LAB = Compensation of employees and payments to labour-only sub-contractors; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; FEE_SUB = Payment for sub-contract works rendered by fee sub-contractors; GS = Gross surplus; GVCW = Gross value of construction works performed; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_D_ASEA = Number of persons directly engaged. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - BR_OTH
+          - COMP_LAB
+          - CONSUM
+          - FEE_SUB
+          - GS
+          - GVCW
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_D_ASEA
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_41 = Construction of buildings; ind_ASBCRE_42 = Civil engineering; ind_ASBCRE_431 = Demolition and site preparation; ind_ASBCRE_432 = Building services installation and maintenance activities; ind_ASBCRE_439 = Building finishing and other specialised construction activities; ind_ASBCRE_F = Construction"
+        enum:
+          - ind_ASBCRE_41
+          - ind_ASBCRE_42
+          - ind_ASBCRE_431
+          - ind_ASBCRE_432
+          - ind_ASBCRE_439
+          - ind_ASBCRE_F
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: construction_business_by_output
+    title: Principal statistics for all companies in the construction sector by gross value of construction works performed (615-73012)
+    description: Principal statistics for all companies in the construction sector by gross value of construction works performed. Official C&SD Table 615-73012. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73012
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: BR_OTH = Other business receipts; COMP_LAB = Compensation of employees and payments to labour-only sub-contractors; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; FEE_SUB = Payment for sub-contract works rendered by fee sub-contractors; GS = Gross surplus; GVCW = Gross value of construction works performed; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_D_ASEA = Number of persons directly engaged. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - BR_OTH
+          - COMP_LAB
+          - CONSUM
+          - FEE_SUB
+          - GS
+          - GVCW
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_D_ASEA
+      output_group:
+        type: string
+        in: local
+        description: "GVCW_GRP: TOTAL = Total; <5000 = < 5,000; 10000-19999 = 10,000 - 19,999; 100000_and_over = ≥ 100,000; 20000-49999 = 20,000 - 49,999; 5000-9999 = 5,000 - 9,999; 50000-99999 = 50,000 - 99,999; class thresholds are HK$ thousand, while monetary observations are HK$ million. Do not convert class codes to observation units."
+        enum:
+          - TOTAL
+          - 10000-19999
+          - 100000_and_over
+          - 20000-49999
+          - 5000-9999
+          - 50000-99999
+          - <5000
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_F = Construction"
+        enum:
+          - ind_ASBCRE_F
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: construction_business_by_value_added
+    title: Principal statistics for all companies in the construction sector by industry value added (615-73013)
+    description: Principal statistics for all companies in the construction sector by industry value added. Official C&SD Table 615-73013. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73013
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: BR_OTH = Other business receipts; COMP_LAB = Compensation of employees and payments to labour-only sub-contractors; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; FEE_SUB = Payment for sub-contract works rendered by fee sub-contractors; GS = Gross surplus; GVCW = Gross value of construction works performed; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_D_ASEA = Number of persons directly engaged. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - BR_OTH
+          - COMP_LAB
+          - CONSUM
+          - FEE_SUB
+          - GS
+          - GVCW
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_D_ASEA
+      value_added_group:
+        type: string
+        in: local
+        description: "IVA_GRP: TOTAL = Total; <5000 = < 5,000; 10000-24999 = 10,000 - 24,999; 25000-49999 = 25,000 - 49,999; 5000-9999 = 5,000 - 9,999; 50000_and_over = ≥ 50,000; class thresholds are HK$ thousand, while monetary observations are HK$ million. Do not convert class codes to observation units."
+        enum:
+          - TOTAL
+          - 10000-24999
+          - 25000-49999
+          - 5000-9999
+          - 50000_and_over
+          - <5000
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_F = Construction"
+        enum:
+          - ind_ASBCRE_F
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: main_contractors_business_statistics
+    title: Principal statistics for main contractors at construction sites by industry division/class (615-73021)
+    description: Principal statistics for main contractors at construction sites by industry division/class. Official C&SD Table 615-73021. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73021
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: BR_OTH = Other business receipts; COMP_LAB = Compensation of employees and payments to labour-only sub-contractors; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; FEE_SUB = Payment for sub-contract works rendered by fee sub-contractors; GS = Gross surplus; GVCW = Gross value of construction works performed; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_D_ASEA = Number of persons directly engaged. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - BR_OTH
+          - COMP_LAB
+          - CONSUM
+          - FEE_SUB
+          - GS
+          - GVCW
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_D_ASEA
+      industry:
+        type: string
+        in: local
+        description: "IND: TOTAL = Total; ind_ASBCRE_411_412 = Construction of buildings; ind_ASBCRE_421 = Civil engineering; ind_ASBCRE_4312_01_02_99 = Site preparation"
+        enum:
+          - TOTAL
+          - ind_ASBCRE_411_412
+          - ind_ASBCRE_421
+          - ind_ASBCRE_4312_01_02_99
+      contractor_group:
+        type: string
+        in: local
+        description: "CON_GRP: 1 = Main Contractors"
+        enum:
+          - "1"
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: real_estate_business_by_industry
+    title: Principal statistics for all companies in the real estate activities industry by industry group/class (615-73031)
+    description: Principal statistics for all companies in the real estate activities industry by industry group/class. Official C&SD Table 615-73031. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73031
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: BR_OTH = Other business receipts; COMP = Compensation of employees; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; GROSS_MAR = Gross margin of real estate development projects; GS = Gross surplus; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_ASEA = Number of persons engaged; SERV_RENT = Service and rental income. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - BR_OTH
+          - COMP
+          - CONSUM
+          - GROSS_MAR
+          - GS
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_ASEA
+          - SERV_RENT
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_681 = Real estate development and/or leasing; ind_ASBCRE_682 = Real estate activities on a fee or contract basis; ind_ASBCRE_6821_6829 = Real estate brokerage and agency, and other real estate services not elsewhere classified; ind_ASBCRE_6822 = Real estate maintenance management; ind_ASBCRE_L = Real Estate Activities Industry"
+        enum:
+          - ind_ASBCRE_681
+          - ind_ASBCRE_682
+          - ind_ASBCRE_6821_6829
+          - ind_ASBCRE_6822
+          - ind_ASBCRE_L
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: real_estate_business_by_receipts
+    title: Principal statistics for all companies in the real estate activities industry by total receipts (615-73032)
+    description: Principal statistics for all companies in the real estate activities industry by total receipts. Official C&SD Table 615-73032. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73032
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: BR_OTH = Other business receipts; COMP = Compensation of employees; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; GROSS_MAR = Gross margin of real estate development projects; GS = Gross surplus; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_ASEA = Number of persons engaged; SERV_RENT = Service and rental income. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - BR_OTH
+          - COMP
+          - CONSUM
+          - GROSS_MAR
+          - GS
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_ASEA
+          - SERV_RENT
+      receipts_group:
+        type: string
+        in: local
+        description: "TR_GRP: TOTAL = Total; <2000 = < 2,000; 10000-19999 = 10,000 - 19,999; 2000-4999 = 2,000 - 4,999; 20000-49999 = 20,000 - 49,999; 5000-9999 = 5,000 - 9,999; 50000_and_over = ≥ 50,000; class thresholds are HK$ thousand, while monetary observations are HK$ million. Do not convert class codes to observation units."
+        enum:
+          - TOTAL
+          - 10000-19999
+          - 2000-4999
+          - 20000-49999
+          - 5000-9999
+          - 50000_and_over
+          - <2000
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_L = Real Estate Activities Industry"
+        enum:
+          - ind_ASBCRE_L
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: architecture_principal_statistics
+    title: Principal statistics for all companies in the architectural, surveying and engineering services industry (615-73051)
+    description: Principal statistics for all companies in the architectural, surveying and engineering services industry. Official C&SD Table 615-73051. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73051
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: ASE_FEE = Architectural, surveying and engineering design and consultancy fees; BR_OTH = Other business receipts; COMP = Compensation of employees; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; GS = Gross surplus; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_ASEA = Number of persons engaged; SERV_INC = Service income. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - ASE_FEE
+          - BR_OTH
+          - COMP
+          - CONSUM
+          - GS
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_ASEA
+          - SERV_INC
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_711 = Architectural, Surveying and Engineering Services Industry"
+        enum:
+          - ind_ASBCRE_711
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: architecture_business_by_receipts
+    title: Principal statistics for all companies in the architectural, surveying and engineering services industry by total receipts (615-73052)
+    description: Principal statistics for all companies in the architectural, surveying and engineering services industry by total receipts. Official C&SD Table 615-73052. Annual business performance statistics. Newest years first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Do not sum overlapping industry groups and totals. Figures may not add up due to rounding. Subsidy qualifications are retained in source notes. Levels and year-on-year changes remain separate.
+    path: /get.php
+    query:
+      id: 615-73052
+      full_series: 1
+    transform:
+      response: normalizeBuildingBusiness
+    input:
+      period:
+        type: string
+        in: local
+        description: Official annual period YYYY. Newest years appear first.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Annual observations.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: ASE_FEE = Architectural, surveying and engineering design and consultancy fees; BR_OTH = Other business receipts; COMP = Compensation of employees; CONSUM = Consumption of materials and supplies; fuels, electricity and water; and maintenance services; GS = Gross surplus; HC = Number of companies; IVA = Industry value added; MIS_EXP = Miscellaneous operating expenses; PE_ASEA = Number of persons engaged; SERV_INC = Service income. Growth rates use the same indicator with measure=yoy_percent where available."
+        enum:
+          - ASE_FEE
+          - BR_OTH
+          - COMP
+          - CONSUM
+          - GS
+          - HC
+          - IVA
+          - MIS_EXP
+          - PE_ASEA
+          - SERV_INC
+      receipts_group:
+        type: string
+        in: local
+        description: "TR_GRP: TOTAL = Total; <2000 = < 2,000; 10000-19999 = 10,000 - 19,999; 2000-4999 = 2,000 - 4,999; 20000-49999 = 20,000 - 49,999; 5000-9999 = 5,000 - 9,999; 50000_and_over = ≥ 50,000; class thresholds are HK$ thousand, while monetary observations are HK$ million. Do not convert class codes to observation units."
+        enum:
+          - TOTAL
+          - 10000-19999
+          - 2000-4999
+          - 20000-49999
+          - 5000-9999
+          - 50000_and_over
+          - <2000
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASBCRE_711 = Architectural, Surveying and Engineering Services Industry"
+        enum:
+          - ind_ASBCRE_711
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; yoy_percent = year-on-year percentage change. Preserve separate measures; no aggregation or conversion.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page, also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en

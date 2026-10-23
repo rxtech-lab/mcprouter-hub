@@ -52,6 +52,18 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Batch060: construction, real estate and architectural business statistics.
+  architecture_selected_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  real_estate_selected_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  construction_business_by_industry: { input: { limit: 1 }, check: nonEmptyPage },
+  construction_business_by_output: { input: { limit: 1 }, check: nonEmptyPage },
+  construction_business_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
+  main_contractors_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  real_estate_business_by_industry: { input: { limit: 1 }, check: nonEmptyPage },
+  real_estate_business_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  architecture_principal_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  architecture_business_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+
   sme_diffusion_indices: { input: { limit: 2 }, check: nonEmptyPage },
   sme_credit_needs: { input: { limit: 2 }, check: nonEmptyPage },
   business_expected_situation: { input: { limit: 2 }, check: nonEmptyPage },

@@ -1,0 +1,123 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=615-73003&api_popup=1"
+    },
+    "title": "Selected statistics for all companies in the industry section of real estate activities",
+    "tablenote": [
+      "The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0.  Users may also download past statistics based on HSIC Version 1.1 for reference."
+    ],
+    "source": "Annual Survey of Economic Activities Construction &amp; Miscellaneous Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 6964  Enquiry e-mail : building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 10,
+      "started": "2026-10-23T22:02:05+00:00",
+      "finished": "2026-10-23T22:02:05+00:00",
+      "durationSeconds": 0.011769
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GROSS_MAR",
+      "svDesc": "HK$ million",
+      "figure": 27091,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 39820,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 4938,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "MIS_EXP",
+      "svDesc": "HK$ million",
+      "figure": 19834,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 93086,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "SERV_RENT",
+      "svDesc": "HK$ million",
+      "figure": 56911,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 60660,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 13568,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 10282,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "Real Estate Activities Industry",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "HK$ million",
+      "figure": 9897,
+      "sd_value": ""
+    }
+  ]
+}

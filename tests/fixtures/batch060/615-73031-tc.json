@@ -1,0 +1,1826 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=615-73031&api_popup=1"
+    },
+    "title": "按行業中類／小類劃分的地產活動業的所有公司主要統計數字",
+    "tablenote": [
+      "由於統計表內數字經四捨五入，分項總和未必與總數相等。",
+      "2020年至2022年的數字包括與防疫抗疫措施有關的資助金額。",
+      "- 不適用",
+      "[§3] 增減少於 0.05%"
+    ],
+    "source": "經濟活動按年統計調查 政府統計處建造及雜項服務統計組 (查詢電話：3903 6964  查詢電郵：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 180,
+      "started": "2026-10-23T22:02:11+00:00",
+      "finished": "2026-10-23T22:02:12+00:00",
+      "durationSeconds": 0.044505
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "百萬港元",
+      "figure": 55031,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "百萬港元",
+      "figure": 55031,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GROSS_MAR",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GROSS_MAR",
+      "svDesc": "按年變動百分率",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GROSS_MAR",
+      "svDesc": "按年變動百分率",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 98487,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 3929,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 2471,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1458,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 102416,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 20.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 33.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -2.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -12.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -45,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 3587,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 2957,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 2395,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 561,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 6544,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 5.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 12.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 2.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 7.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 13746,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 14430,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 6309,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 8120,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 28175,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 4.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 24.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 37.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 14.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": -11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": -33,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 13965,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 99177,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 28240,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 70937,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 113142,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -5.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 5.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 4.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 4.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -18.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "百萬港元",
+      "figure": 56084,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "百萬港元",
+      "figure": 43019,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "百萬港元",
+      "figure": 14784,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "百萬港元",
+      "figure": 28235,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "百萬港元",
+      "figure": 99103,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": 17.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": 17.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": 17.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": 12.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "SERV_RENT",
+      "svDesc": "按年變動百分率",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 97356,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 20996,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 9739,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 11257,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 118353,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 11.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 15.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 24.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 7.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 12.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 11741,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 3689,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 3341,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 348,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 15430,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -5.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 30.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -0.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -68,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 3874,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 18792,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 8894,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 9898,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 22666,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 6.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 12.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 14.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 11.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 3904,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 9558,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 451,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 9107,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 13462,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -4.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6821_6829",
+      "INDDesc": "地產經紀及代理以及其他地產服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -32.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_682",
+      "INDDesc": "按收費或以合約形式進行的地產活動",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_681",
+      "INDDesc": "地產發展兼╱或租賃",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_6822",
+      "INDDesc": "地產保養管理服務",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_L",
+      "INDDesc": "地產活動業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 4.3,
+      "sd_value": ""
+    }
+  ]
+}

@@ -1,0 +1,2316 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=615-73011&api_popup=1"
+    },
+    "title": "按行業大類／中類劃分的建造業的所有公司主要統計數字",
+    "tablenote": [
+      "由於統計表內數字經四捨五入，分項總和未必與總數相等。",
+      "2020年至2022年的數字包括與防疫抗疫措施有關的資助金額。",
+      "- 不適用",
+      "[§3] 增減少於 0.05%"
+    ],
+    "source": "經濟活動按年統計調查 政府統計處建造及雜項服務統計組 (查詢電話：3903 6964  查詢電郵：building@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 229,
+      "started": "2026-10-23T22:02:06+00:00",
+      "finished": "2026-10-23T22:02:06+00:00",
+      "durationSeconds": 0.049902
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "百萬港元",
+      "figure": 39897,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "百萬港元",
+      "figure": 18995,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "百萬港元",
+      "figure": 2946,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "百萬港元",
+      "figure": 9667,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "百萬港元",
+      "figure": 19579,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "百萬港元",
+      "figure": 91083,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": -8.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": -3.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": 8.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": 7.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": 61.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": 9.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": 31,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": -22,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "FEE_SUB",
+      "svDesc": "按年變動百分率",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 2084,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 938,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 861,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 7772,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 5058,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 16714,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 17.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -16.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 10.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -19.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -43,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -20.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 54.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 51,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -27,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "百萬港元",
+      "figure": 66207,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "百萬港元",
+      "figure": 37017,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "百萬港元",
+      "figure": 9479,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "百萬港元",
+      "figure": 53917,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "百萬港元",
+      "figure": 48358,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "百萬港元",
+      "figure": 214977,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": -0.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": -2.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": 34.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": -6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": 48.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": 10.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": -12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GVCW",
+      "svDesc": "按年變動百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 628,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 1165,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 776,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 8096,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 12752,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 23417,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 10.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -19.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -19.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -10.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 0.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -4.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 3654,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 3630,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 1189,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 4257,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 4810,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "百萬港元",
+      "figure": 17541,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": -3.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 71.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 62.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": -13.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": -0.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 18.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": -41,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "MIS_EXP",
+      "svDesc": "按年變動百分率",
+      "figure": 43,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 18.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -24,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 11.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 1.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 34.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 8.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 14.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "PE_D_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "數目",
+      "figure": 20307,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "數目",
+      "figure": 27293,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "數目",
+      "figure": 6887,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "數目",
+      "figure": 72434,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "數目",
+      "figure": 43423,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_D_ASEA",
+      "svDesc": "數目",
+      "figure": 170345,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 12819,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 8320,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 2853,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 25170,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 16244,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 65406,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 18.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 54,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": -0.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 28.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 27.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 13.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 38.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 1070,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 807,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 158,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 1724,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 1627,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "百萬港元",
+      "figure": 5386,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -25.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 574.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 184.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 207.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -31.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 143.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": 67,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "BR_OTH",
+      "svDesc": "按年變動百分率",
+      "figure": -59,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "百萬港元",
+      "figure": 11401,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "百萬港元",
+      "figure": 7440,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "百萬港元",
+      "figure": 2041,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "百萬港元",
+      "figure": 18524,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "百萬港元",
+      "figure": 11219,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "百萬港元",
+      "figure": 50625,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 15.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 67.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 63.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 24.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP_LAB",
+      "svDesc": "按年變動百分率",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 10240,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 6821,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 2600,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 15419,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 9319,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "百萬港元",
+      "figure": 44400,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 5.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 21.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 43.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 63.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 20.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_431",
+      "INDDesc": "建築物清拆及地盤預備工程",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_432",
+      "INDDesc": "建築物設備安裝及保養活動",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 34,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_42",
+      "INDDesc": "土木工程 ",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -19,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_439",
+      "INDDesc": "樓房竣工前的修整及其他專門建造活動",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_41",
+      "INDDesc": "樓房的建造",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 22,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASBCRE_F",
+      "INDDesc": "建造業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "CONSUM",
+      "svDesc": "按年變動百分率",
+      "figure": 4.6,
+      "sd_value": ""
+    }
+  ]
+}
