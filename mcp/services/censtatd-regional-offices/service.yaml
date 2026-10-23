@@ -1,0 +1,236 @@
+{
+  "id": "censtatd-regional-offices",
+  "title": "Companies with Parent Companies outside Hong Kong",
+  "description": "C&SD regional headquarters, regional offices and local offices: counts, employment and parent locations.",
+  "apis": [
+    "API-0573",
+    "API-0574",
+    "API-0575"
+  ],
+  "datasets": [
+    "hk-censtatd-tablechart-325-43001",
+    "hk-censtatd-tablechart-325-43002",
+    "hk-censtatd-tablechart-325-43011"
+  ],
+  "baseUrl": "https://www.censtatd.gov.hk/api",
+  "lang": {
+    "param": "lang",
+    "map": {
+      "en": "en",
+      "tc": "tc",
+      "sc": "sc"
+    }
+  },
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "regional_office_counts",
+      "title": "Number of regional headquarters, regional offices and local offices",
+      "description": "Number of regional headquarters, regional offices and local offices. Official C&SD Table 325-43001. Latest years first, bounded local pagination via nextOffset. Source dimensions, units, rounding notes, flags and missing values are preserved. Overlapping categories and parent locations are not additive.",
+      "path": "/get.php",
+      "query": {
+        "id": "325-43001",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Exact four-digit year."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "LO",
+            "RHQ",
+            "RO",
+            "RRL"
+          ],
+          "in": "local",
+          "description": "LO local offices; RHQ regional headquarters; RO regional offices; RRL combined total. Totals overlap components; do not sum."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "count"
+          ],
+          "in": "local",
+          "description": "Source count or percentage; never sum ratios with counts."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 50,
+          "in": "local"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000,
+          "default": 0,
+          "in": "local"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en"
+        }
+      }
+    },
+    {
+      "name": "regional_office_employment",
+      "title": "Number of persons engaged in regional headquarters, regional offices and local offices",
+      "description": "Number of persons engaged in regional headquarters, regional offices and local offices. Official C&SD Table 325-43002. Latest years first, bounded local pagination via nextOffset. Source dimensions, units, rounding notes, flags and missing values are preserved. Overlapping categories and parent locations are not additive.",
+      "path": "/get.php",
+      "query": {
+        "id": "325-43002",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Exact four-digit year."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "LO",
+            "RHQ",
+            "RO",
+            "RRL"
+          ],
+          "in": "local",
+          "description": "LO local offices; RHQ regional headquarters; RO regional offices; RRL combined total. Totals overlap components; do not sum."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "count"
+          ],
+          "in": "local",
+          "description": "Source count or percentage; never sum ratios with counts."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 50,
+          "in": "local"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000,
+          "default": 0,
+          "in": "local"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en"
+        }
+      }
+    },
+    {
+      "name": "regional_offices_parent_location",
+      "title": "Number of regional headquarters/regional offices/local offices by selected location of parent company",
+      "description": "Number of regional headquarters/regional offices/local offices by selected location of parent company. Official C&SD Table 325-43011. Latest years first, bounded local pagination via nextOffset. Source dimensions, units, rounding notes, flags and missing values are preserved. Overlapping categories and parent locations are not additive.",
+      "path": "/get.php",
+      "query": {
+        "id": "325-43011",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Exact four-digit year."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "RRL"
+          ],
+          "in": "local",
+          "description": "LO local offices; RHQ regional headquarters; RO regional offices; RRL combined total. Totals overlap components; do not sum."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "count",
+            "percent"
+          ],
+          "in": "local",
+          "description": "Source count or percentage; never sum ratios with counts."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 50,
+          "in": "local"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000,
+          "default": 0,
+          "in": "local"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en"
+        },
+        "country": {
+          "type": "string",
+          "enum": [
+            "111",
+            "191",
+            "215",
+            "221",
+            "222",
+            "224",
+            "225",
+            "294",
+            "612",
+            "617",
+            "621",
+            "631",
+            "694",
+            "697",
+            "891"
+          ],
+          "in": "local",
+          "description": "Parent location source code: 111 United States of America; 191 Canada; 215 Switzerland; 221 Germany; 222 Netherlands; 224 France; 225 Italy; 294 United Kingdom; 612 Taiwan; 617 Korea; 621 Japan; 631 Chinese Mainland; 694 Malaysia; 697 Singapore; 891 Australia. Multiple parent locations can apply; do not sum across locations."
+        }
+      }
+    }
+  ]
+}

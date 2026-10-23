@@ -1,0 +1,62 @@
+{
+  "id": "hk-press",
+  "title": "Hong Kong Government Press Releases",
+  "description": "Hong Kong Government Press Releases",
+  "apis": [
+    "API-0052"
+  ],
+  "datasets": [
+    "hk-isd-gnmis-gnmis"
+  ],
+  "cacheTtl": 300,
+  "tools": [
+    {
+      "name": "hk_government_press_releases",
+      "title": "Latest Hong Kong Government press releases from the official RSS feed in English, Traditional Chinese or Simplified Chinese. Summaries are plain text capped at 2000 characters with explicit truncation; follow source links for full articles. Local search and pagination cover the current feed only. Source order is retained. Outputs are capped at 100 KB.",
+      "description": "Latest Hong Kong Government press releases from the official RSS feed in English, Traditional Chinese or Simplified Chinese. Summaries are plain text capped at 2000 characters with explicit truncation; follow source links for full articles. Local search and pagination cover the current feed only. Source order is retained. Outputs are capped at 100 KB.",
+      "path": "/gia/rss/general_en.xml",
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "local",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 20,
+          "description": "Maximum records per page."
+        },
+        "offset": {
+          "type": "integer",
+          "in": "local",
+          "minimum": 0,
+          "maximum": 100000,
+          "default": 0,
+          "description": "Continue with nextOffset using the same filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Case-insensitive title or summary text in the selected language."
+        }
+      },
+      "transform": {
+        "request": "request",
+        "response": "normalize"
+      },
+      "response": {
+        "format": "xml"
+      }
+    }
+  ],
+  "baseUrl": "https://www.info.gov.hk"
+}

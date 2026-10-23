@@ -1,0 +1,82 @@
+{
+  "id": "hkma-tr",
+  "title": "HKMA Trade Repository",
+  "description": "HKMA Trade Repository",
+  "apis": [
+    "API-2336",
+    "API-2337"
+  ],
+  "datasets": [
+    "hk-hkma-tr-hktr-data-disclose-ir",
+    "hk-hkma-tr-list-of-tr-member-with-lei"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "hktr_interest_rate_positions",
+      "title": "HKTR interest rate derivatives positions. Original numeric fields and nulls are preserved; on_ fields are outstanding notional amounts and not_ fields are transaction counts. Do not add overlapping breakdowns. English source only. A full upstream page may have a continuation; datasize is this page size, not the register total. Outputs are capped at 100 KB.",
+      "description": "HKTR interest rate derivatives positions. Original numeric fields and nulls are preserved; on_ fields are outstanding notional amounts and not_ fields are transaction counts. Do not add overlapping breakdowns. English source only. A full upstream page may have a continuation; datasize is this page size, not the register total. Outputs are capped at 100 KB. The API does not return a unit label; consult the official HKTR disclosure notes before interpreting notional amounts. No currency conversion is inferred.",
+      "path": "/hktr-data-disclose-ir",
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "minimum": 1,
+          "maximum": 20,
+          "default": 10,
+          "description": "Maximum records per page.",
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "minimum": 0,
+          "maximum": 100000,
+          "default": 0,
+          "description": "Continue with nextOffset using the same filters."
+        }
+      },
+      "query": {
+        "segment": "positions",
+        "sortby": "end_of_date",
+        "sortorder": "desc"
+      },
+      "transform": {
+        "response": "normalize"
+      }
+    },
+    {
+      "name": "hktr_members_lei",
+      "title": "HKTR member list with Legal Entity Identifier (LEI), TR code, name and subscribed service. Null LEIs remain null. English source only. Page with nextOffset until empty; datasize is this page size, not the register total. Outputs are capped at 100 KB.",
+      "description": "HKTR member list with Legal Entity Identifier (LEI), TR code, name and subscribed service. Null LEIs remain null. English source only. Page with nextOffset until empty; datasize is this page size, not the register total. Outputs are capped at 100 KB.",
+      "path": "/list-of-tr-member-with-lei",
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "query",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "description": "Maximum records per page.",
+          "name": "pagesize"
+        },
+        "offset": {
+          "type": "integer",
+          "in": "query",
+          "minimum": 0,
+          "maximum": 100000,
+          "default": 0,
+          "description": "Continue with nextOffset using the same filters."
+        }
+      },
+      "query": {
+        "sortby": "tr_code",
+        "sortorder": "asc"
+      },
+      "transform": {
+        "response": "normalize"
+      }
+    }
+  ],
+  "baseUrl": "https://api.hkma.gov.hk/public/financial-market-infra/trade-repository"
+}

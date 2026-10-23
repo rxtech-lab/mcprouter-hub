@@ -1,0 +1,30 @@
+{
+  "header": {
+    "success": true,
+    "err_code": "0000",
+    "err_msg": "No error found"
+  },
+  "result": {
+    "datasize": 3,
+    "records": [
+      {
+        "tr_code": "ADENFGLD304T",
+        "tr_name": "ADEN FINANCIAL GROUP LIMITED",
+        "subscribed_service": "RPT",
+        "global_lei": "3003003ZBHDS8IGVBZ87"
+      },
+      {
+        "tr_code": "ABOCBANK008T",
+        "tr_name": "AGRICULTURAL BANK OF CHINA LIMITED",
+        "subscribed_service": "RPT",
+        "global_lei": "549300E7TSGLCOVSY746"
+      },
+      {
+        "tr_code": "CHUGOKUB135T",
+        "tr_name": "CHUGOKU BANK, LTD. (THE)",
+        "subscribed_service": "RPT",
+        "global_lei": null
+      }
+    ]
+  }
+}

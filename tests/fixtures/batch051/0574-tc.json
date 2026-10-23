@@ -1,0 +1,97 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=325-43002&api_popup=1"
+    },
+    "title": "地區總部、地區辦事處及當地辦事處的從業人數",
+    "tablenote": [
+      "數字進位至最接近的千位數。由於數字經四拾五入，分項總和未必與總數相等。"
+    ],
+    "source": "業務展望統計組 政府統計處 (查詢電話：3903 7263  查詢電郵：regional-offices@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "STATUS": "LO",
+      "STATUSDesc": "當地辦事處",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_SCOP",
+      "svDesc": "數目",
+      "figure": 145000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RHQ",
+      "STATUSDesc": "地區總部",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_SCOP",
+      "svDesc": "數目",
+      "figure": 145000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RO",
+      "STATUSDesc": "地區辦事處",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_SCOP",
+      "svDesc": "數目",
+      "figure": 98000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RRL",
+      "STATUSDesc": "地區總部／地區辦事處／當地辦事處",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_SCOP",
+      "svDesc": "數目",
+      "figure": 388000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "LO",
+      "STATUSDesc": "當地辦事處",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_SCOP",
+      "svDesc": "數目",
+      "figure": 146000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RHQ",
+      "STATUSDesc": "地區總部",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_SCOP",
+      "svDesc": "數目",
+      "figure": 148000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RO",
+      "STATUSDesc": "地區辦事處",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_SCOP",
+      "svDesc": "數目",
+      "figure": 91000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RRL",
+      "STATUSDesc": "地區總部／地區辦事處／當地辦事處",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_SCOP",
+      "svDesc": "數目",
+      "figure": 385000,
+      "sd_value": ""
+    }
+  ]
+}
