@@ -32,6 +32,9 @@ Chat submissions include typed messages, starter questions, MCP App follow-ups a
 
 ## Quick start
 
+Code quality: run `bun run lint` (or `bun run lint:fix` for automatic fixes).
+See [lint rules and file-size limits](docs/linting.md) for naming and style conventions.
+
 ```sh
 bun install
 cp .env.example .env.local      # set DEV_BYPASS_AUTH=true and AUTH_SECRET for local work
