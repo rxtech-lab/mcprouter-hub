@@ -1,0 +1,118 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "ADDRESS_EN",
+      "alias": "ADDRESS_EN",
+      "type": "esriFieldTypeString",
+      "length": 52
+    },
+    {
+      "name": "ADDRESS_TC",
+      "alias": "ADDRESS_TC",
+      "type": "esriFieldTypeString",
+      "length": 37
+    },
+    {
+      "name": "DATASET_EN",
+      "alias": "DATASET_EN",
+      "type": "esriFieldTypeString",
+      "length": 36
+    },
+    {
+      "name": "DATASET_TC",
+      "alias": "DATASET_TC",
+      "type": "esriFieldTypeString",
+      "length": 21
+    },
+    {
+      "name": "NAME_EN",
+      "alias": "NAME_EN",
+      "type": "esriFieldTypeString",
+      "length": 30
+    },
+    {
+      "name": "NAME_TC",
+      "alias": "NAME_TC",
+      "type": "esriFieldTypeString",
+      "length": 15
+    },
+    {
+      "name": "NSEARCH01_EN",
+      "alias": "NSEARCH01_EN",
+      "type": "esriFieldTypeString",
+      "length": 101
+    },
+    {
+      "name": "NSEARCH01_TC",
+      "alias": "NSEARCH01_TC",
+      "type": "esriFieldTypeString",
+      "length": 136
+    },
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "ADDRESS_EN": "G/F, Inland Revenue Centre, 5 Concorde Road, Kai Tak",
+        "ADDRESS_TC": "啟德協調道5號税務中心地下",
+        "DATASET_EN": "Offices of Inland Revenue Department",
+        "DATASET_TC": "税務局各辦事處",
+        "NAME_EN": "Central Enquiry Counter",
+        "NAME_TC": "中央詢問組",
+        "NSEARCH01_EN": "8:15am - 12:30pm and 1:30pm - 5:30 pm (Mon - Fri); \nClosed on Saturdays, Sundays and public holidays\n",
+        "NSEARCH01_TC": "上午8時15分至下午12時30分及下午1時30分至5時30分（星期一至星期五）；星期六、星期日及公眾假期休息",
+        "OBJECTID": 1
+      },
+      "geometry": {
+        "x": 114.198171,
+        "y": 22.333236
+      }
+    },
+    {
+      "attributes": {
+        "ADDRESS_EN": "1/F, Inland Revenue Centre, 5 Concorde Road, Kai Tak",
+        "ADDRESS_TC": "啟德協調道5號税務中心1樓",
+        "DATASET_EN": "Offices of Inland Revenue Department",
+        "DATASET_TC": "税務局各辦事處",
+        "NAME_EN": "Stamp Office",
+        "NAME_TC": "印花税署",
+        "NSEARCH01_EN": "8:45am - 12:30pm and 1:30pm - 5:00 pm (Mon - Fri); \nClosed on Saturdays, Sundays and public holidays\n",
+        "NSEARCH01_TC": "上午8時45分至下午12時30分及下午1時30分至5時（星期一至星期五）；星期六、星期日及公眾假期休息",
+        "OBJECTID": 2
+      },
+      "geometry": {
+        "x": 114.1983,
+        "y": 22.332983
+      }
+    },
+    {
+      "attributes": {
+        "ADDRESS_EN": "2/F, Inland Revenue Centre, 5 Concorde Road, Kai Tak",
+        "ADDRESS_TC": "啟德協調道5號税務中心2樓",
+        "DATASET_EN": "Offices of Inland Revenue Department",
+        "DATASET_TC": "税務局各辦事處",
+        "NAME_EN": "Business Registration Office",
+        "NAME_TC": "商業登記署",
+        "NSEARCH01_EN": "8:15am - 12:30pm and 1:30pm - 5:30 pm (Mon - Fri); \nClosed on Saturdays, Sundays and public holidays\n",
+        "NSEARCH01_TC": "上午8時15分至下午12時30分及下午1時30分至5時30分（星期一至星期五）；星期六、星期日及公眾假期休息",
+        "OBJECTID": 3
+      },
+      "geometry": {
+        "x": 114.198375,
+        "y": 22.333256
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}

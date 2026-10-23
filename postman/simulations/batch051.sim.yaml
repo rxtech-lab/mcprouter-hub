@@ -1,0 +1,5 @@
+simulation: batch051
+routing: path
+mocks:
+  - routeKey: upstream
+    path: ../mocks/batch051/config.yaml

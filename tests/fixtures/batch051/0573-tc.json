@@ -1,0 +1,97 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=325-43001&api_popup=1"
+    },
+    "title": "地區總部、地區辦事處及當地辦事處數目",
+    "tablenote": [
+      "自2024年起的數字進位至最接近的十位數。由於數字經四捨五入，分項總和未必與總數相等。"
+    ],
+    "source": "業務展望統計組 政府統計處 (查詢電話：3903 7263  查詢電郵：regional-offices@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "STATUS": "LO",
+      "STATUSDesc": "當地辦事處",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "NO",
+      "svDesc": "數目",
+      "figure": 3367,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RHQ",
+      "STATUSDesc": "地區總部",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "NO",
+      "svDesc": "數目",
+      "figure": 1367,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RO",
+      "STATUSDesc": "地區辦事處",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "NO",
+      "svDesc": "數目",
+      "figure": 2516,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RRL",
+      "STATUSDesc": "地區總部／地區辦事處／當地辦事處",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "NO",
+      "svDesc": "數目",
+      "figure": 7250,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "LO",
+      "STATUSDesc": "當地辦事處",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "NO",
+      "svDesc": "數目",
+      "figure": 3614,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RHQ",
+      "STATUSDesc": "地區總部",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "NO",
+      "svDesc": "數目",
+      "figure": 1379,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RO",
+      "STATUSDesc": "地區辦事處",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "NO",
+      "svDesc": "數目",
+      "figure": 2456,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RRL",
+      "STATUSDesc": "地區總部／地區辦事處／當地辦事處",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "NO",
+      "svDesc": "數目",
+      "figure": 7449,
+      "sd_value": ""
+    }
+  ]
+}

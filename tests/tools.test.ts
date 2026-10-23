@@ -1,3 +1,5 @@
+import { cases051 } from "./batch051-cases";
+import type { Case } from "./tool-case";
 import { cases027 } from "./health027-cases";
 import { cases025 } from "./health025-cases";
 import { spatialCases023, fileCases023 } from "./environment023-cases";
@@ -13,7 +15,7 @@ import { datasets } from "@/db/schema";
 import { services } from "@/generated/registry";
 import { setCacheForTesting } from "@/lib/mcp/cache";
 import { executeTool } from "@/lib/mcp/runtime";
-import type { ServiceDefinition, ToolDefinition, ToolInput } from "@/lib/mcp/types";
+import type { ServiceDefinition, ToolDefinition } from "@/lib/mcp/types";
 import { transportCases } from "./transport003-cases";
 import { financeCases } from "./finance028-cases";
 import { expenditureCases } from "./finance029-cases";
@@ -27,26 +29,7 @@ import { externalCases } from "./finance031-cases";
  * the case didn't expect fails the test, so nothing reaches the network.
  */
 
-type Case = {
-  /** Test name; defaults to the tool name. */
-  name?: string;
-  tool: string;
-  input: ToolInput;
-  /** Expected upstream request. Omit for tools that never call out. */
-  request?: { url: string; method?: "GET" | "POST"; body?: unknown };
-  /** Upstream reply: objects are sent as JSON, strings as-is. */
-  reply?: unknown;
-  /** Replies to follow-up requests a transformer makes, by URL. */
-  lookups?: Record<string, unknown>;
-  /** Expected `data` of the tool result. */
-  data?: unknown;
-  /** Expected `meta` of the tool result (`source` is checked separately). */
-  meta?: Record<string, unknown>;
-  /** Expected cache TTL in seconds for the upstream body. */
-  ttl?: number;
-  /** Expected error instead of a result. */
-  error?: RegExp;
-};
+
 
 const BOM = "﻿";
 
@@ -216,6 +199,7 @@ const cases: Case[] = [
   ...investmentCases,
   ...marketsCases,
   ...governmentCases,
+  ...cases051,
   ...batch035.map((c) => ({ tool: c.tool, input: { ...c.input, limit: 3 },
     request: { url: request035(c.tool) }, reply: fixture035(c.fixture), ttl: 3600,
     data: expect.objectContaining({ results: expect.any(Array), returned: expect.any(Number) }) })),

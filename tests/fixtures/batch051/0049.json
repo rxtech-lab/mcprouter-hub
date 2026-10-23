@@ -1,0 +1,47 @@
+{
+  "RequestAddress": {
+    "AddressLine": [
+      "central government offices"
+    ]
+  },
+  "SuggestedAddress": [
+    {
+      "Address": {
+        "PremisesAddress": {
+          "EngPremisesAddress": {
+            "BuildingName": "CENTRAL GOVERNMENT OFFICES",
+            "EngStreet": {
+              "StreetName": "TIM MEI AVENUE",
+              "BuildingNoFrom": "2"
+            },
+            "EngDistrict": {
+              "DcDistrict": "CENTRAL & WESTERN DISTRICT"
+            },
+            "Region": "HK"
+          },
+          "ChiPremisesAddress": {
+            "Region": "香港",
+            "ChiDistrict": {
+              "DcDistrict": "中西區"
+            },
+            "ChiStreet": {
+              "StreetName": "添美道",
+              "BuildingNoFrom": "2"
+            },
+            "BuildingName": "政府總部"
+          },
+          "GeoAddress": "3508215732T20110704",
+          "GeospatialInformation": {
+            "Northing": "815732",
+            "Easting": "835082",
+            "Latitude": "22.28046",
+            "Longitude": "114.16537"
+          }
+        }
+      },
+      "ValidationInformation": {
+        "Score": 70.0
+      }
+    }
+  ]
+}

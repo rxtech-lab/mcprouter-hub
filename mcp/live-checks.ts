@@ -52,6 +52,15 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  hktr_interest_rate_positions: { input: { limit: 2 }, check: nonEmptyPage },
+  hktr_members_lei: { input: { limit: 2 }, check: nonEmptyPage },
+  ird_offices: { input: { limit: 2 }, check: nonEmptyPage },
+  hk_address_lookup: { input: { limit: 2, q: "central government offices" }, check: nonEmptyPage },
+  lcsd_swimming_pools: { input: { limit: 2 }, check: nonEmptyPage },
+  hk_government_press_releases: { input: { limit: 2 }, check: nonEmptyPage },
+  regional_office_counts: { input: { limit: 2 }, check: nonEmptyPage },
+  regional_office_employment: { input: { limit: 2 }, check: nonEmptyPage },
+  regional_offices_parent_location: { input: { limit: 2 }, check: nonEmptyPage },
   // Health batch 027: published directories and structured downloads
   health_dhc_express: { input: { limit: 2 }, check: nonEmptyPage },
   health_women_wellness_satellites: { input: { limit: 2 }, check: nonEmptyPage },

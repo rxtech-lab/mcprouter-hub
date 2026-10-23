@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **178 of 3819 implemented**, 3641 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **187 of 3819 implemented**, 3632 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -878,8 +878,8 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-2333` | [List of outstanding Government Bonds under the Infrastructure Bond Programme and Government Sustainable Bond Programme](https://data.gov.hk/en-data/dataset/hk-hkma-t10-t1006list-outstanding-govbonds-ibpgsbp) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2334` | [Tender Invitation and Notice of Award of Contracts](https://data.gov.hk/en-data/dataset/hk-hkma-tenderinvi-tender-invitations) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2335` | [HKTR Data Disclosure – Foreign Exchange Derivatives](https://data.gov.hk/en-data/dataset/hk-hkma-tr-hktr-data-disclose-fx) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-2336` | [HKTR Data Disclosure – Interest Rate Derivatives](https://data.gov.hk/en-data/dataset/hk-hkma-tr-hktr-data-disclose-ir) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-2337` | [TR Member List associated with LEI code](https://data.gov.hk/en-data/dataset/hk-hkma-tr-list-of-tr-member-with-lei) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
+| `API-2336` | [HKTR Data Disclosure – Interest Rate Derivatives](https://data.gov.hk/en-data/dataset/hk-hkma-tr-hktr-data-disclose-ir) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA Trade Repository](mcp/services/hkma-tr/service.yaml) |
+| `API-2337` | [TR Member List associated with LEI code](https://data.gov.hk/en-data/dataset/hk-hkma-tr-list-of-tr-member-with-lei) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA Trade Repository](mcp/services/hkma-tr/service.yaml) |
 | `API-2573` | [Businesses assessed under two-tiered profits tax rates and tax forgone](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-2t) | Files | Inland Revenue Department | 🕒 Coming soon | — |
 | `API-2574` | [Analysis of Tax Deductions Allowed for Qualifying Annuity Premiums by Income Group](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-annuities) | Files | Inland Revenue Department | 🕒 Coming soon | — |
 | `API-2575` | [Earnings and Profits Tax － Tax Assessed and Collections](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-ar-sch01) | Files | Inland Revenue Department | 🕒 Coming soon | — |
@@ -905,7 +905,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-2595` | [Analysis of Property Tax Assessments of jointly owned properties by Final Tax Range](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-jpt-final-tax-range) | Files | Inland Revenue Department | 🕒 Coming soon | — |
 | `API-2596` | [Analysis of Property Tax Assessments of jointly owned properties by Gross Assessable Value Range](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-jpt-gross-ass) | Files | Inland Revenue Department | 🕒 Coming soon | — |
 | `API-2597` | [Analysis of Tax Deductions Allowed for Tax Deductible MPF Voluntary Contributions by Income Group](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-mpftvc) | Files | Inland Revenue Department | 🕒 Coming soon | — |
-| `API-2598` | [Offices of Inland Revenue Department](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-office-ird) | API | Inland Revenue Department | 🕒 Coming soon | — |
+| `API-2598` | [Offices of Inland Revenue Department](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-office-ird) | API | Inland Revenue Department | ✅ Implemented | [Offices of Inland Revenue Department](mcp/services/ird-offices/service.yaml) |
 | `API-2599` | [Analysis of Number of Employers by Payroll and Employee Range](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-payroll-er) | Files | Inland Revenue Department | 🕒 Coming soon | — |
 | `API-2600` | [Analysis of Number of Employers by Payroll Range](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-payroll-range) | Files | Inland Revenue Department | 🕒 Coming soon | — |
 | `API-2601` | [Analysis of self or separately elected Personal Assessments by Final Tax Range](https://data.gov.hk/en-data/dataset/hk-ird-ird_json-spa-final-tax-range) | Files | Inland Revenue Department | 🕒 Coming soon | — |
@@ -1209,9 +1209,9 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 
 | ID | API | Type | Provider | Status | Service |
 |---|---|---|---|---|---|
-| `API-0049` | [Address lookup](https://data.gov.hk/en-data/dataset/hk-dpo-als_01-als) | API | Digital Policy Office | 🕒 Coming soon | — |
+| `API-0049` | [Address lookup](https://data.gov.hk/en-data/dataset/hk-dpo-als_01-als) | API | Digital Policy Office | ✅ Implemented | [Hong Kong Address Lookup](mcp/services/hk-address/service.yaml) |
 | `API-0050` | [Post offices](https://data.gov.hk/en-data/dataset/hk-hkpo-hkpo_ds01-hkpo-post-office) | API | Hongkong Post | 🕒 Coming soon | — |
-| `API-0051` | [Swimming pools](https://data.gov.hk/en-data/dataset/hk-lcsd-csdi-swimming-pools) | API | Leisure and Cultural Services Department | 🕒 Coming soon | — |
+| `API-0051` | [Swimming pools](https://data.gov.hk/en-data/dataset/hk-lcsd-csdi-swimming-pools) | API | Leisure and Cultural Services Department | ✅ Implemented | [Public swimming pools, facilities and opening hours](mcp/services/lcsd-pools/service.yaml) |
 
 ## Government
 
@@ -1219,15 +1219,15 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 |---|---|---|---|---|---|
 | `API-0001` | [DATA.GOV.HK catalogue](https://data.gov.hk/en/help/api-spec) | API | Digital Policy Office | ✅ Implemented | [DATA.GOV.HK Catalogue](mcp/services/datagovhk-catalog/service.yaml) |
 | `API-0006` | [Public holidays](https://data.gov.hk/en-data/dataset/hk-dpo-statistic-cal) | API | Digital Policy Office | ✅ Implemented | [Hong Kong Public Holidays](mcp/services/hk-holidays/service.yaml) |
-| `API-0052` | [Government press releases](https://data.gov.hk/en-data/dataset/hk-isd-gnmis-gnmis) | API | Information Services Department | 🕒 Coming soon | — |
+| `API-0052` | [Government press releases](https://data.gov.hk/en-data/dataset/hk-isd-gnmis-gnmis) | API | Information Services Department | ✅ Implemented | [Hong Kong Government Press Releases](mcp/services/hk-press/service.yaml) |
 
 ## Commerce & industry
 
 | ID | API | Type | Provider | Status | Service |
 |---|---|---|---|---|---|
-| `API-0573` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43001 : Number of regional headquarters, regional offices and local offices](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43001) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0574` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43002 : Number of persons engaged in regional headquarters, regional offices and local offices](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43002) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0575` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43011 : Number of regional headquarters/regional offices/local offices by selected location of parent company](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43011) | API | Census and Statistics Department | 🕒 Coming soon | — |
+| `API-0573` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43001 : Number of regional headquarters, regional offices and local offices](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43001) | API | Census and Statistics Department | ✅ Implemented | [Companies with Parent Companies outside Hong Kong](mcp/services/censtatd-regional-offices/service.yaml) |
+| `API-0574` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43002 : Number of persons engaged in regional headquarters, regional offices and local offices](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43002) | API | Census and Statistics Department | ✅ Implemented | [Companies with Parent Companies outside Hong Kong](mcp/services/censtatd-regional-offices/service.yaml) |
+| `API-0575` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43011 : Number of regional headquarters/regional offices/local offices by selected location of parent company](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43011) | API | Census and Statistics Department | ✅ Implemented | [Companies with Parent Companies outside Hong Kong](mcp/services/censtatd-regional-offices/service.yaml) |
 | `API-0576` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43011A : Number of regional headquarters by selected location of parent company](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43011a) | API | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-0577` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43011B : Number of regional offices by selected location of parent company](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43011b) | API | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-0578` | [Companies in Hong Kong with Parent Companies Located outside Hong Kong - Table 325-43011C : Number of local offices by selected location of parent company](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-325-43011c) | API | Census and Statistics Department | 🕒 Coming soon | — |

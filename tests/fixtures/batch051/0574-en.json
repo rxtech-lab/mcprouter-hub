@@ -1,0 +1,97 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=325-43002&api_popup=1"
+    },
+    "title": "Number of persons engaged in regional headquarters, regional offices and local offices",
+    "tablenote": [
+      "Figures are rounded to the nearest thousand and may not add up to the total due to rounding."
+    ],
+    "source": "Business Expectation Statistics Section Census and Statistics Department (Enquiry telephone no. : 3903 7263  Enquiry e-mail : regional-offices@censtatd.gov.hk)"
+  },
+  "dataSet": [
+    {
+      "STATUS": "LO",
+      "STATUSDesc": "Local offices",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_SCOP",
+      "svDesc": "No.",
+      "figure": 145000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RHQ",
+      "STATUSDesc": "Regional headquarters",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_SCOP",
+      "svDesc": "No.",
+      "figure": 145000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RO",
+      "STATUSDesc": "Regional offices",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_SCOP",
+      "svDesc": "No.",
+      "figure": 98000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RRL",
+      "STATUSDesc": "Regional headquarters/regional offices/local offices",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_SCOP",
+      "svDesc": "No.",
+      "figure": 388000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "LO",
+      "STATUSDesc": "Local offices",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_SCOP",
+      "svDesc": "No.",
+      "figure": 146000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RHQ",
+      "STATUSDesc": "Regional headquarters",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_SCOP",
+      "svDesc": "No.",
+      "figure": 148000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RO",
+      "STATUSDesc": "Regional offices",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_SCOP",
+      "svDesc": "No.",
+      "figure": 91000,
+      "sd_value": ""
+    },
+    {
+      "STATUS": "RRL",
+      "STATUSDesc": "Regional headquarters/regional offices/local offices",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_SCOP",
+      "svDesc": "No.",
+      "figure": 385000,
+      "sd_value": ""
+    }
+  ]
+}

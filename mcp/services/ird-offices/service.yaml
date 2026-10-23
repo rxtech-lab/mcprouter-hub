@@ -1,0 +1,65 @@
+{
+  "id": "ird-offices",
+  "title": "Offices of Inland Revenue Department",
+  "description": "Offices of Inland Revenue Department",
+  "apis": [
+    "API-2598"
+  ],
+  "datasets": [
+    "hk-ird-ird_json-office-ird"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "ird_offices",
+      "title": "Offices of Inland Revenue Department",
+      "description": "Offices of Inland Revenue Department. Official CSDI features with WGS84 longitude/latitude, original bilingual attributes and source contact/opening information. HTML in source descriptions is data, not rendered content. Maximum 100 records and 100 KB; continue with nextOffset.",
+      "handler": "query",
+      "input": {
+        "limit": {
+          "type": "integer",
+          "in": "local",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "description": "Maximum records per page."
+        },
+        "offset": {
+          "type": "integer",
+          "in": "local",
+          "minimum": 0,
+          "maximum": 100000,
+          "default": 0,
+          "description": "Continue with nextOffset using the same filters."
+        },
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Published name, address or district text; SQL LIKE wildcards % and _ are supported."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "description": "Preferred name; original bilingual attributes are retained."
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north."
+        }
+      }
+    }
+  ]
+}
