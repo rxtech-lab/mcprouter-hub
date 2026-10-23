@@ -1,0 +1,4357 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=620-67002&api_popup=1"
+    },
+    "title": "Value and value index of retail sales by type of retail outlet",
+    "tablenote": [
+      "Average index from October 2019 – September 2020 = 100   The value index measures the changes in value terms in a particular period as compared with a reference period, while the volume index is derived from the value index of retail sales by adjusting for price changes.   The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0. Users may also download past statistics based on HSIC Version 1.1 for reference.   Figures may not add up to the total due to rounding.",
+      "The figures for ‘Supermarkets’ above do not include retail sales in supermarket sections of department stores. Supplementary statistics that include such sales are presented above for reference.",
+      "N.A. Not available",
+      "p Provisional figure",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 7400  Enquiry e-mail : mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 433,
+      "started": "2026-10-23T23:02:06+00:00",
+      "finished": "2026-10-23T23:02:07+00:00",
+      "durationSeconds": 0.760084
+    }
+  },
+  "dataSet": [
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 15831,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2166,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1903,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 264,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2673,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 760,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1889,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 363,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 513,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1637,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1915,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2858,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 421,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 219,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 105,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1002,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 181,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1112,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2413,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 460,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1550,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 559,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 176,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2233,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 459,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 204372,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 27378,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 23519,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 3859,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 33554,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 8589,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 21505,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 4928,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 6383,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 21072,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 26285,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 40632,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 5668,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2968,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1579,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 14998,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 1988,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 15419,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 30279,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 4930,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 20038,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 5939,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2264,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 27729,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 6217,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 32059,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 3208,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2664,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 544,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 4338,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 709,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2957,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 444,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 633,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 2389,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 5142,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 8941,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 677,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 365,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 224,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 3043,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 328,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 4632,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 5003,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 546,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 3185,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 925,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 526,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 4441,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "HK$ million",
+      "figure": 642,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 56.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 77,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 80.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 57.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 57.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 65,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 59,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 60.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 47.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 53.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 67.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 50.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 100.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 61.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 61.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 48.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 67.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 41.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 44.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 56,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 53.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 68.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 85.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 46.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 53.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 71.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 60.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 54.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 56,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 46,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "200412",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 88,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "200412",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 51.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 61,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 81.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 83.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 70.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 60.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 61.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 56,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 68.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 49,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 57.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 76.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 59.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 113,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 69.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 76.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 60.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 61.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 48.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 46.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 57.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 60.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 92.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 48,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 60.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "200501",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 76,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "200501",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 47,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 45,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 97,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 69,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "200502",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 73,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "200502",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 42,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "200506",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 68,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "200506",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 45,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "200506",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "200509",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 70,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 65.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 75,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 51.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 79,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 53.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "200610",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 55,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "200611",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 95,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "200607",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 58,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "200607",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 68,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "200608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 67,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 64.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 79,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 124.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 52.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 77,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 131,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 90,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 70,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200911",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 82,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "200904",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 57,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 128,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 89,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 78,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 173,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 98,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 118,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 95,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 114.8,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 114.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 113,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 119.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 93.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 60.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 92.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 74.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 58.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 78,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 180.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 157.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 162.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 102.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 130.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 148.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 121.7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 173.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 92.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 66.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 110.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 112.8,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 256.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 92.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Index",
+      "figure": 75,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -12.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -10.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 14,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 16.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 15.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "200601",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "200610",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "200611",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "200612",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "200612",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "200602",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "200602",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 14,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "200602",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "200603",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "200604",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "200605",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "200605",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "200606",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200607",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "200608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 20,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "200711",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 21,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "200712",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "200702",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 26,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "200704",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "200810",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "200811",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "200911",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "200903",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "200909",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "201207",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "201303",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "201305",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "201412",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "201405",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "201511",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -14,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -25,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "201610",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "201712",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "201707",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -12,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -13,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "Clothing, footwear and allied products",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    Wearing apparel",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    Footwear, allied products and other clothing accessories",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "Consumer durable goods",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 14,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    Motor vehicles and parts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -22,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "Food, alcoholic drinks and tobacco (other than supermarkets)",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    Furniture and fixtures",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    Fish, livestock and poultry, fresh or frozen",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "Department stores",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "Jewellery, watches and clocks, and valuable gifts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "Other consumer goods",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    Books, newspapers, stationery and gifts",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    Chinese drugs and herbs",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    Optical shops",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    Medicines and cosmetics",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    Fruits and vegetables, fresh",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -10.8,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    Other consumer goods not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">Supermarkets and supermarket sections of department stores</font></i></strong>",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    Bread, pastry, confectionery and biscuits",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    Electrical goods and other consumer durable goods not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 29.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    Other food not elsewhere classified",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    Alcoholic drinks and tobacco",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "Supermarkets",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "Fuels",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -11.7,
+      "sd_value": "p"
+    }
+  ]
+}

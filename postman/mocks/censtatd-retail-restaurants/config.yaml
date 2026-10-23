@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-retail-restaurants
+slug: censtatd-retail-restaurants
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

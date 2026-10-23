@@ -1,0 +1,455 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=620-67031&api_popup=1"
+    },
+    "title": "按選定零售商類別劃分的零售業網上銷售價值",
+    "tablenote": [
+      "零售業網上銷售是指透過本地零售業公司專門為獲取或提交訂單而採用的電腦網絡向顧客銷售的貨品。有關貨品是透過上述方法訂購，但付款及最後貨品的遞送可以不是在網上進行。   另一方面，網上銷售並不包括以人手輸入的電子郵件、電話或傳真的訂單。如某零售業公司提供一個網上平台供其他公司使用作貨品銷售，網上銷售價值是指所收取的佣金及服務費。   由於數字經四捨五入，分項總和未必與總數相等。",
+      "p 臨時數字",
+      "N.A. 沒有數字"
+    ],
+    "source": "政府統計處經銷服務統計組 (查詢電話：3903 7400  查詢電郵：mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 43,
+      "started": "2026-10-23T23:02:20+00:00",
+      "finished": "2026-10-23T23:02:20+00:00",
+      "durationSeconds": 0.021902
+    }
+  },
+  "dataSet": [
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 20586,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 9488,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 11098,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 1234,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 647,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 587,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 2798,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 1720,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "百萬港元",
+      "figure": 1079,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 6.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 3.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 1.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202010",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202004",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202204",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 8.7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 5.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "佔零售業總銷貨價值的百分比",
+      "figure": 3.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 39.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 29.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 47,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202101",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 91.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202101",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 54.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202101",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 132.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202103",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 44,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202106",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 45,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202109",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 30,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": -13.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 9.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "無店面零售",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 18.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "其他零售商",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": -1.9,
+      "sd_value": "p"
+    }
+  ]
+}

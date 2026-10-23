@@ -1,0 +1,265 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=620-67001&api_popup=1"
+    },
+    "title": "零售业总销货额",
+    "tablenote": [
+      "2019年10月至2020年9月期内的平均每月指数 = 100   价值指数 (Value index) 量度在某一期间内与参照期相比的价值变动。数量指数 (Volume index) 则是将价值指数内的物价变动因素扣除后所得。   因应综合消费物价指数重订基期，政府统计处已重订零售业销货价值指数及零售业销货数量指数数列的参照期，新参照期为2019年10月至2020年9月，而用以编制零售业销货数量指数的平减物价指数，亦从以2019/20年为基期的综合消费物价指数数列中相关的项目选取。零售业销货数量指数以联合国统计司出版的《2008年经销行业统计国际建议》所定的环比连接法编制。   以上的统计数字是按「香港标准行业分类2.0版」编制。用户可下载 按「香港标准行业分类1.1版」编制的以往统计数字以作参考。   由于数字经四舍五入，分项总和未必与总数相等。",
+      "N.A. 没有数字",
+      "p 临时数字"
+    ],
+    "source": "零售业销货额按月统计调查 政府统计处经销服务统计组 (查询电话：3903 7400  查询电邮：mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 30,
+      "started": "2026-10-23T23:02:06+00:00",
+      "finished": "2026-10-23T23:02:06+00:00",
+      "durationSeconds": 0.037254
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 15831,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 204372,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_RS",
+      "svDesc": "百万港元",
+      "figure": 32059,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 71,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200411",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 67.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 76.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 81,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 102.1,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 4.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 2.9,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 56.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 61,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 65.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200911",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 82,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "指数",
+      "figure": 114.8,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200410",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "M",
+      "period": "200510",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 4.8,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "200607",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2013",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_IDX_RS",
+      "svDesc": "按年变动百分率",
+      "figure": 5.6,
+      "sd_value": "p"
+    }
+  ]
+}

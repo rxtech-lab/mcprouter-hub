@@ -1,0 +1,214 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=620-76011&api_popup=1"
+    },
+    "title": "Principal statistics for all supermarkets",
+    "tablenote": [
+      "Figures do not include sales in supermarket sections of department stores.     Percentage changes are derived from unrounded figures.",
+      "Figures for 2021 to 2022 include the amount of subsidy related to anti-epidemic measures."
+    ],
+    "source": "Annual Survey of Economic Activities Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 7399  Enquiry e-mail : asw@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 19,
+      "started": "2026-10-23T23:02:21+00:00",
+      "finished": "2026-10-23T23:02:21+00:00",
+      "durationSeconds": 0.018813
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 4221,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COST_SOLD",
+      "svDesc": "HK$ million",
+      "figure": 35893,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2351,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -29.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -56,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 75,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 6633,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -7.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 8824,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 29222,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 51289,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "Supermarket",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 51146,
+      "sd_value": ""
+    }
+  ]
+}

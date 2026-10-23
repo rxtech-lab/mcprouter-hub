@@ -1,0 +1,3397 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=620-67003&api_popup=1"
+    },
+    "title": "按零售商類別劃分的零售業銷貨數量指數",
+    "tablenote": [
+      "2019年10月至2020年9月期內的平均每月指數 = 100   因應綜合消費物價指數重訂基期，政府統計處已重訂零售業銷貨價值指數及零售業銷貨數量指數數列的參照期，新參照期為2019年10月至2020年9月，而用以編製零售業銷貨數量指數的平減物價指數，亦從以2019/20年為基期的綜合消費物價指數數列中相關的項目選取。零售業銷貨數量指數以聯合國統計司出版的《2008年經銷行業統計國際建議》所定的環比連接法編製。",
+      "以上「超級市場」的數字不包括百貨公司內的超級市場部門的零售銷售。上表列出兩者合計的補充數字，以供參考。",
+      "N.A. 沒有數字",
+      "p 臨時數字",
+      "[φ3] 數字代表增減少於 0.05%。"
+    ],
+    "source": "政府統計處經銷服務統計組 (查詢電話：3903 7400  查詢電郵：mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 337,
+      "started": "2026-10-23T23:02:11+00:00",
+      "finished": "2026-10-23T23:02:11+00:00",
+      "durationSeconds": 0.534101
+    }
+  },
+  "dataSet": [
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 71,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 88.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 95.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 55.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 32.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 74.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 124.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 86,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 147.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 63.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 122,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 67.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 152.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 94.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 80.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 69.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 166.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 49,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 74.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 95.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 20.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 124.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 138.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 77.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 72.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 67.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 93.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 72,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "M",
+      "period": "200411",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 41.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "M",
+      "period": "200412",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 148.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 76.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 94,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 99.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 67.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 35.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 67.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 116.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 99.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 148.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 68.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 138,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 77.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 172.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 107.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 96.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 81.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 140.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 56.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 78.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 85.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 23.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 107.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 146.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 81.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 78.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "M",
+      "period": "200501",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 191,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "M",
+      "period": "200501",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 122,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "M",
+      "period": "200501",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 86,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 126,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 82,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 138,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 65,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 86,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 35,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 83,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 25,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "M",
+      "period": "200502",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 104,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "M",
+      "period": "200502",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 72,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "M",
+      "period": "200502",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 153,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "M",
+      "period": "200505",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 72,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "M",
+      "period": "200505",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 82,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 81,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 97.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 73,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 139.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "M",
+      "period": "200611",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 78,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "M",
+      "period": "200609",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 91,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 95,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "M",
+      "period": "200706",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 127,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 121,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 94,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 115,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 168,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 114,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "M",
+      "period": "200906",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 139,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 115,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 265,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 135,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 150,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 146,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 103,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 114,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 101,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 98,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 89,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 148,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 102.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 105.7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 101.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 131.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 96.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 57.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 81.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 72.7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 56.7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 71.7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 132.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 145.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 136.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 94.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 121.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 148,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 114.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 154.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 77.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 54.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 120.8,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 102.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 175.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 77.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "指數",
+      "figure": 48.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "M",
+      "period": "200410",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -5.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -14.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 1.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -8.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -1.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 5.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -10.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 13.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 10.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 12.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 12.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "M",
+      "period": "200510",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "M",
+      "period": "200511",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 8.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "M",
+      "period": "200512",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 8.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 9.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 14.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 8.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 5.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -5.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 10.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 9.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 9.5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 17.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "M",
+      "period": "200610",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "M",
+      "period": "200610",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "M",
+      "period": "200611",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "M",
+      "period": "200611",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "M",
+      "period": "200611",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "M",
+      "period": "200602",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "M",
+      "period": "200603",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "M",
+      "period": "200604",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "M",
+      "period": "200604",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "M",
+      "period": "200604",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "M",
+      "period": "200606",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "M",
+      "period": "200606",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "M",
+      "period": "200607",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "M",
+      "period": "200609",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 15.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 21,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "M",
+      "period": "200710",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 16,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "M",
+      "period": "200710",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "M",
+      "period": "200711",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "M",
+      "period": "200702",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 27,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "M",
+      "period": "200705",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -10,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "M",
+      "period": "200807",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "M",
+      "period": "200902",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "M",
+      "period": "201010",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 33,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "M",
+      "period": "201005",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "M",
+      "period": "201112",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -10,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "M",
+      "period": "201211",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -19,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "M",
+      "period": "201503",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "M",
+      "period": "201506",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "M",
+      "period": "201612",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "M",
+      "period": "201705",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "M",
+      "period": "201706",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "M",
+      "period": "201709",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "M",
+      "period": "201811",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "M",
+      "period": "201808",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -10,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "M",
+      "period": "202010",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -11,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "M",
+      "period": "202411",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -12,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 12,
+      "OUTLET_TYPEDesc": "衣物、鞋類及有關製品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 13,
+      "OUTLET_TYPEDesc": "    服裝",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 14,
+      "OUTLET_TYPEDesc": "    鞋類、有關製品及其他衣物配件",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 7.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 18,
+      "OUTLET_TYPEDesc": "耐用消費品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 13.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 19,
+      "OUTLET_TYPEDesc": "    汽車及汽車零件",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -22.1,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 2,
+      "OUTLET_TYPEDesc": "食品、酒類飲品及煙草 (超級市場除外)",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 1.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 23,
+      "OUTLET_TYPEDesc": "    傢具及固定裝置",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 3,
+      "OUTLET_TYPEDesc": "    新鮮或急凍魚類及禽畜肉類",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -0.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 30,
+      "OUTLET_TYPEDesc": "百貨公司",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -2.8,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 32,
+      "OUTLET_TYPEDesc": "珠寶首飾、鐘錶及名貴禮物",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -1.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 35,
+      "OUTLET_TYPEDesc": "其他消費品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6.2,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 36,
+      "OUTLET_TYPEDesc": "    書報、文具及禮品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 10.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 37,
+      "OUTLET_TYPEDesc": "    中藥",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -5.8,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 38,
+      "OUTLET_TYPEDesc": "    眼鏡店",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 3.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 39,
+      "OUTLET_TYPEDesc": "    藥物及化妝品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 4,
+      "OUTLET_TYPEDesc": "    新鮮蔬果",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -10.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 40,
+      "OUTLET_TYPEDesc": "    其他未分類消費品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 49,
+      "OUTLET_TYPEDesc": "<strong><i><font color=\"blue\">超級市場及百貨公司內的超級市場部門</font></i></strong>",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 2.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 5,
+      "OUTLET_TYPEDesc": "    麵包、糕餅、糖果及餅乾",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 9.3,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 51,
+      "OUTLET_TYPEDesc": "    電器及其他未分類耐用消費品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 28.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 6,
+      "OUTLET_TYPEDesc": "    其他未分類食品",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 0.7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 7,
+      "OUTLET_TYPEDesc": "    酒類飲品及煙草",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 7.6,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 8,
+      "OUTLET_TYPEDesc": "超級市場",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": 1.5,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 9,
+      "OUTLET_TYPEDesc": "燃料",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VOL_IDX_RS",
+      "svDesc": "按年變動百分率",
+      "figure": -24.2,
+      "sd_value": "p"
+    }
+  ]
+}

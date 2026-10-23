@@ -1,0 +1,749 @@
+id: censtatd-retail-restaurants
+title: Hong Kong Retail Sales and Restaurant Statistics
+description: Official C&SD retail sales value and volume, online sales, supermarket and department store business performance, and restaurant receipts and purchases.
+apis:
+  - API-0697
+  - API-0698
+  - API-0699
+  - API-0700
+  - API-0701
+  - API-0702
+  - API-0703
+  - API-0704
+  - API-0705
+  - API-0706
+datasets:
+  - hk-censtatd-tablechart-620-67001
+  - hk-censtatd-tablechart-620-67002
+  - hk-censtatd-tablechart-620-67003
+  - hk-censtatd-tablechart-620-67011
+  - hk-censtatd-tablechart-620-67012
+  - hk-censtatd-tablechart-620-67021
+  - hk-censtatd-tablechart-620-67031
+  - hk-censtatd-tablechart-620-76011
+  - hk-censtatd-tablechart-620-76012
+  - hk-censtatd-tablechart-625-68001
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: retail_sales_total
+    title: Total retail sales (620-67001)
+    description: "Total retail sales. Official C&SD Table 620-67001. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups. Index reference: October 2019–September 2020 = 100."
+    path: /get.php
+    query:
+      id: 620-67001
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: VAL_IDX_RS = Value index of retail sales; VAL_RS = Value of retail sales; VOL_IDX_RS = Volume index of retail sales. Select measure to distinguish levels and changes."
+        enum:
+          - VAL_IDX_RS
+          - VAL_RS
+          - VOL_IDX_RS
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - hkd_million
+          - index
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: retail_sales_value_by_outlet
+    title: Value and value index of retail sales by type of retail outlet (620-67002)
+    description: "Value and value index of retail sales by type of retail outlet. Official C&SD Table 620-67002. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups. Index reference: October 2019–September 2020 = 100. Supermarkets exclude supermarket sections of department stores; any supplementary combined group remains distinct."
+    path: /get.php
+    query:
+      id: 620-67002
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: VAL_IDX_RS = Value index of retail sales; VAL_RS = Value of retail sales. Select measure to distinguish levels and changes."
+        enum:
+          - VAL_IDX_RS
+          - VAL_RS
+      outlet:
+        type: string
+        in: local
+        description: "OUTLET_TYPE: TOTAL = Total; 12 = Clothing, footwear and allied products; 13 = Wearing apparel; 14 = Footwear, allied products and other clothing accessories; 18 = Consumer durable goods; 19 = Motor vehicles and parts; 2 = Food, alcoholic drinks and tobacco (other than supermarkets); 23 = Furniture and fixtures; 3 = Fish, livestock and poultry, fresh or frozen; 30 = Department stores; 32 = Jewellery, watches and clocks, and valuable gifts; 35 = Other consumer goods; 36 = Books, newspapers, stationery and gifts; 37 = Chinese drugs and herbs; 38 = Optical shops; 39 = Medicines and cosmetics; 4 = Fruits and vegetables, fresh; 40 = Other consumer goods not elsewhere classified; 49 = Supermarkets and supermarket sections of department stores; 5 = Bread, pastry, confectionery and biscuits; 51 = Electrical goods and other consumer durable goods not elsewhere classified; 6 = Other food not elsewhere classified; 7 = Alcoholic drinks and tobacco; 8 = Supermarkets; 9 = Fuels. Groups may overlap; do not sum them."
+        enum:
+          - TOTAL
+          - "12"
+          - "13"
+          - "14"
+          - "18"
+          - "19"
+          - "2"
+          - "23"
+          - "3"
+          - "30"
+          - "32"
+          - "35"
+          - "36"
+          - "37"
+          - "38"
+          - "39"
+          - "4"
+          - "40"
+          - "49"
+          - "5"
+          - "51"
+          - "6"
+          - "7"
+          - "8"
+          - "9"
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - hkd_million
+          - index
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: retail_sales_volume_by_outlet
+    title: Volume index of retail sales by type of retail outlet (620-67003)
+    description: "Volume index of retail sales by type of retail outlet. Official C&SD Table 620-67003. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups. Index reference: October 2019–September 2020 = 100. Supermarkets exclude supermarket sections of department stores; any supplementary combined group remains distinct."
+    path: /get.php
+    query:
+      id: 620-67003
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: VOL_IDX_RS = Volume index of retail sales. Select measure to distinguish levels and changes."
+        enum:
+          - VOL_IDX_RS
+      outlet:
+        type: string
+        in: local
+        description: "OUTLET_TYPE: TOTAL = Total; 12 = Clothing, footwear and allied products; 13 = Wearing apparel; 14 = Footwear, allied products and other clothing accessories; 18 = Consumer durable goods; 19 = Motor vehicles and parts; 2 = Food, alcoholic drinks and tobacco (other than supermarkets); 23 = Furniture and fixtures; 3 = Fish, livestock and poultry, fresh or frozen; 30 = Department stores; 32 = Jewellery, watches and clocks, and valuable gifts; 35 = Other consumer goods; 36 = Books, newspapers, stationery and gifts; 37 = Chinese drugs and herbs; 38 = Optical shops; 39 = Medicines and cosmetics; 4 = Fruits and vegetables, fresh; 40 = Other consumer goods not elsewhere classified; 49 = Supermarkets and supermarket sections of department stores; 5 = Bread, pastry, confectionery and biscuits; 51 = Electrical goods and other consumer durable goods not elsewhere classified; 6 = Other food not elsewhere classified; 7 = Alcoholic drinks and tobacco; 8 = Supermarkets; 9 = Fuels. Groups may overlap; do not sum them."
+        enum:
+          - TOTAL
+          - "12"
+          - "13"
+          - "14"
+          - "18"
+          - "19"
+          - "2"
+          - "23"
+          - "3"
+          - "30"
+          - "32"
+          - "35"
+          - "36"
+          - "37"
+          - "38"
+          - "39"
+          - "4"
+          - "40"
+          - "49"
+          - "5"
+          - "51"
+          - "6"
+          - "7"
+          - "8"
+          - "9"
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - index
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: supermarket_sales_by_product
+    title: Value of retail sales in supermarkets by broad product category (620-67011)
+    description: Value of retail sales in supermarkets by broad product category. Official C&SD Table 620-67011. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups.
+    path: /get.php
+    query:
+      id: 620-67011
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: VAL_RS = Value of retail sales. Select measure to distinguish levels and changes."
+        enum:
+          - VAL_RS
+      outlet:
+        type: string
+        in: local
+        description: "OUTLET_TYPE: 8 = Supermarkets. Groups may overlap; do not sum them."
+        enum:
+          - "8"
+      product:
+        type: string
+        in: local
+        description: "BROAD_PROD_CAT: TOTAL = Total; S1 = Fresh/chilled meat, fish, seafood, fruit and vegetables and frozen food; S2 = Dairy products and eggs, non-alcoholic drinks, rice and noodles and other foods; S3 = Alcoholic drinks and tobacco; S4 = Personal care products, household goods and other goods. Groups may overlap; do not sum them."
+        enum:
+          - TOTAL
+          - S1
+          - S2
+          - S3
+          - S4
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - hkd_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: department_store_sales_by_product
+    title: Value of retail sales in department stores by broad product category (620-67012)
+    description: Value of retail sales in department stores by broad product category. Official C&SD Table 620-67012. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups.
+    path: /get.php
+    query:
+      id: 620-67012
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: VAL_RS = Value of retail sales. Select measure to distinguish levels and changes."
+        enum:
+          - VAL_RS
+      outlet:
+        type: string
+        in: local
+        description: "OUTLET_TYPE: 30 = Department stores. Groups may overlap; do not sum them."
+        enum:
+          - "30"
+      product:
+        type: string
+        in: local
+        description: "BROAD_PROD_CAT: TOTAL = Total; D1 = Food, alcoholic drinks and tobacco; D1_D6 = Non-supermarket sections; D2 = Clothing and footwear; D3 = Electrical appliances, furniture and fixtures and other durable goods; D4 = Proprietary medicines and supplies, cosmetics and toilet requisites; D5 = Jewellery, watches and clocks, and valuable gifts; D6 = Travel and sports goods, household goods and other goods; D7 = Supermarket sections. Groups may overlap; do not sum them."
+        enum:
+          - TOTAL
+          - D1
+          - D1_D6
+          - D2
+          - D3
+          - D4
+          - D5
+          - D6
+          - D7
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - hkd_million
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: retail_sales_seasonally_adjusted
+    title: Seasonally adjusted series of retail sales (average index from October 2019 – September 2020 = 100) (620-67021)
+    description: "Seasonally adjusted series of retail sales (average index from October 2019 – September 2020 = 100). Official C&SD Table 620-67021. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups. Index reference: October 2019–September 2020 = 100. X-12 ARIMA seasonally adjusted; change is latest three months versus preceding three months, not year-on-year. Series may be revised."
+    path: /get.php
+    query:
+      id: 620-67021
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: SA_VAL_IDX_RS = Seasonally adjusted value index of retail sales; SA_VOL_IDX_RS = Seasonally adjusted volume index of retail sales. Select measure to distinguish levels and changes."
+        enum:
+          - SA_VAL_IDX_RS
+          - SA_VOL_IDX_RS
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - index
+          - three_month_change_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: online_retail_sales
+    title: Value of online retail sales by selected type of retail outlet (620-67031)
+    description: Value of online retail sales by selected type of retail outlet. Official C&SD Table 620-67031. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups. Online marketplace figures may represent commissions and service charges rather than goods value; retain source definition.
+    path: /get.php
+    query:
+      id: 620-67031
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: VAL_ONLINE_RS = Value of online retail sales. Select measure to distinguish levels and changes."
+        enum:
+          - VAL_ONLINE_RS
+      outlet:
+        type: string
+        in: local
+        description: "OUTLET_TYPE: TOTAL = Total; 101 = Non-store retailing; 102 = Other retail outlets. Groups may overlap; do not sum them."
+        enum:
+          - TOTAL
+          - "101"
+          - "102"
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - hkd_million
+          - share_percent
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: supermarket_business_statistics
+    title: Principal statistics for all supermarkets (620-76011)
+    description: Principal statistics for all supermarkets. Official C&SD Table 620-76011. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups. Supermarkets exclude supermarket sections of department stores; any supplementary combined group remains distinct.
+    path: /get.php
+    query:
+      id: 620-76011
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: COMP = Compensation of employees; COST_SOLD = Cost of goods sold; GS = Gross surplus; HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA = Number of persons engaged; TR = Total receipts. Select measure to distinguish levels and changes."
+        enum:
+          - COMP
+          - COST_SOLD
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASW_471101_471102 = Supermarket. Groups may overlap; do not sum them."
+        enum:
+          - ind_ASW_471101_471102
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: department_store_business_statistics
+    title: Principal statistics for all department stores by whether with supermarket section inside (620-76012)
+    description: Principal statistics for all department stores by whether with supermarket section inside. Official C&SD Table 620-76012. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups.
+    path: /get.php
+    query:
+      id: 620-76012
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: COMP = Compensation of employees; COST_SOLD = Cost of goods sold; GS = Gross surplus; HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA = Number of persons engaged; TR = Total receipts. Select measure to distinguish levels and changes."
+        enum:
+          - COMP
+          - COST_SOLD
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      supermarket_section:
+        type: string
+        in: local
+        description: "DEPSTORE_GRP: TOTAL = Total; 1 = With supermarket section inside; 2 = Without supermarket section inside. Groups may overlap; do not sum them."
+        enum:
+          - TOTAL
+          - "1"
+          - "2"
+      industry:
+        type: string
+        in: local
+        description: "IND: ind_ASW_471901 = Department store. Groups may overlap; do not sum them."
+        enum:
+          - ind_ASW_471901
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: restaurant_receipts_purchases
+    title: Total restaurant receipts and restaurant purchases (625-68001)
+    description: "Total restaurant receipts and restaurant purchases. Official C&SD Table 625-68001. Newest periods first; paginate with nextOffset. Original figures, missing values, flags, units and localized notes are preserved. Annual and subannual observations, values, volume indices, growth rates and shares remain separate. Do not sum overlapping groups. Index reference: October 2019–September 2020 = 100."
+    path: /get.php
+    query:
+      id: 625-68001
+      full_series: 1
+    transform:
+      response: normalizeRetailRestaurants
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(03|06|09|12)?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Q
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variable codes: VAL_IDX_RR = Value index of restaurant receipts; VAL_RP = Restaurant purchases; VAL_RR = Restaurant receipts; VOL_IDX_RR = Volume index of restaurant receipts. Select measure to distinguish levels and changes."
+        enum:
+          - VAL_IDX_RR
+          - VAL_RP
+          - VAL_RR
+          - VOL_IDX_RR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent = year-on-year change; three_month_change_percent = latest three months versus preceding three months; share_percent = share of total retail sales. No conversion or aggregation.
+        enum:
+          - hkd_million
+          - index
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en

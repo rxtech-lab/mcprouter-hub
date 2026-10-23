@@ -1,0 +1,455 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=620-67031&api_popup=1"
+    },
+    "title": "Value of online retail sales by selected type of retail outlet",
+    "tablenote": [
+      "Online retail sales refer to the sales of goods to customers through computer networks specially adopted by local retail companies for the purpose of receiving or placing of orders. The goods are ordered by those methods, but the payment and the ultimate delivery of goods do not have to be conducted online.   On the other hand, orders made by manually typed e-mails, telephone calls or facsimiles are not regarded as online sales. In the case where a retail company provides an online platform for use by other businesses in selling goods, the value of online sales refers to the commissions and service charges.   Figures may not add up to the total due to rounding.",
+      "p Provisional figure",
+      "N.A. Not available"
+    ],
+    "source": "Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 7400  Enquiry e-mail : mrs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 43,
+      "started": "2026-10-23T23:02:20+00:00",
+      "finished": "2026-10-23T23:02:20+00:00",
+      "durationSeconds": 0.021246
+    }
+  },
+  "dataSet": [
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 20586,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 9488,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 11098,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 1234,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 647,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 587,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 2798,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 1720,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "HK$ million",
+      "figure": 1079,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 6.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 2.9,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 3.4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 1.6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202010",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202004",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202204",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 8.7,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 5.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "% share of total retail sales",
+      "figure": 3.4,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202001",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 39.1,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 29.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 47,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202101",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 91.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202101",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 54.2,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202101",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 132.3,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202103",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 44,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202106",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 45,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202109",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 30,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.8,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "OUTLET_TYPE": "",
+      "OUTLET_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 101,
+      "OUTLET_TYPEDesc": "Non-store retailing",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": 18.9,
+      "sd_value": "p"
+    },
+    {
+      "OUTLET_TYPE": 102,
+      "OUTLET_TYPEDesc": "Other retail outlets",
+      "freq": "M",
+      "period": "202608",
+      "sv": "VAL_ONLINE_RS",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.9,
+      "sd_value": "p"
+    }
+  ]
+}

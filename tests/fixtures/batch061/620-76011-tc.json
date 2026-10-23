@@ -1,0 +1,214 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=620-76011&api_popup=1"
+    },
+    "title": "所有超級市場主要統計數字",
+    "tablenote": [
+      "數據不包括百貨公司內的超級市場部門。     變動百分率是以未經進位數字計算。",
+      "2021年至2022年的數字包括與防疫抗疫措施有關的資助金額。"
+    ],
+    "source": "經濟活動按年統計調查 政府統計處經銷服務統計組 (查詢電話：3903 7399  查詢電郵：asw@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 19,
+      "started": "2026-10-23T23:02:21+00:00",
+      "finished": "2026-10-23T23:02:21+00:00",
+      "durationSeconds": 0.01974
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 4221,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 4.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COST_SOLD",
+      "svDesc": "百萬港元",
+      "figure": 35893,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "COST_SOLD",
+      "svDesc": "按年變動百分率",
+      "figure": 1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 2351,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -29.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -56,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 75,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 6633,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": -7.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "OE",
+      "svDesc": "按年變動百分率",
+      "figure": 3.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 8824,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 29222,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -2.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "TR",
+      "svDesc": "按年變動百分率",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 51289,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_471101_471102",
+      "INDDesc": "超級市場",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 51146,
+      "sd_value": ""
+    }
+  ]
+}
