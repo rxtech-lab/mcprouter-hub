@@ -1,0 +1,355 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=640-75101&api_popup=1"
+    },
+    "title": "Principal statistics for all companies in the information and communications sector",
+    "tablenote": [
+      "The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0. Users may also download past statistics based on HSIC Version 1.1 for reference.     Percentage changes are derived from unrounded figures.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures.",
+      "[§3] Increase or decrease of less than 0.05%"
+    ],
+    "source": "Business Services Statistics Section Census and Statistics Department Tel. : (852) 3903 7268 E-mail : business-services@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 33,
+      "started": "2026-10-24T01:02:08+00:00",
+      "finished": "2026-10-24T01:02:08+00:00",
+      "durationSeconds": 0.010231
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 50257,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 58825,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 11510,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 101953,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 103964,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COST_SOLD",
+      "svDesc": "HK$ million",
+      "figure": 20656,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": -16.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": 18.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 259145,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "Information and communications",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 129407,
+      "sd_value": ""
+    }
+  ]
+}

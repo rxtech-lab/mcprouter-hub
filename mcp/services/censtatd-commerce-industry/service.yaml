@@ -1,0 +1,1062 @@
+id: censtatd-commerce-industry
+title: Hong Kong Commerce & Industry Business Statistics
+description: Official C&SD annual company performance tables for import/export, wholesale, retail,
+  transportation, storage, courier, logistics, information and communications.
+apis:
+  - API-0717
+  - API-0718
+  - API-0719
+  - API-0720
+  - API-0721
+  - API-0722
+  - API-0723
+  - API-0724
+  - API-0728
+  - API-0729
+datasets:
+  - hk-censtatd-tablechart-630-76003
+  - hk-censtatd-tablechart-630-76004
+  - hk-censtatd-tablechart-635-74002
+  - hk-censtatd-tablechart-635-74003
+  - hk-censtatd-tablechart-635-74004
+  - hk-censtatd-tablechart-635-74005
+  - hk-censtatd-tablechart-635-74008
+  - hk-censtatd-tablechart-635-74009
+  - hk-censtatd-tablechart-640-75101
+  - hk-censtatd-tablechart-640-75102
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: trades_statistics_by_receipts
+    title: Principal statistics for all companies by industry grouping and total receipts
+      (import/export, wholesale and retail trades sector) (630-76003)
+    description: Principal statistics for all companies by industry grouping and total receipts
+      (import/export, wholesale and retail trades sector). Official C&SD table 630-76003. Newest
+      years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Size groups differ between sectors.
+    path: /get.php
+    query:
+      id: 630-76003
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold;
+          HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASW_1_45_others = Other
+          import/export trade; ind_ASW_1_46_others = Other wholesale trade; ind_ASW_1_47_others =
+          Other retail trade; ind_ASW_45 = Import/export trade; ind_ASW_451201_4513_452201_4523 =
+          Food, alcoholic drinks and tobacco; ind_ASW_451401-451405_452401-452405 = Clothing,
+          footwear and allied products; ind_ASW_46 = Wholesale trade; ind_ASW_460201_4603 = Food,
+          alcoholic drinks and tobacco; ind_ASW_460401-460405 = Clothing, footwear and allied
+          products; ind_ASW_47 = Retail trade; ind_ASW_4711_4721-4723 = Food, alcoholic drinks and
+          tobacco; ind_ASW_4731-4733 = Fuel; ind_ASW_475101-475104_475199_477101_477102_477199 =
+          Clothing, footwear and allied products; ind_ASW_4773 = Transport equipment."
+        enum:
+          - ind_ASW_1_45_others
+          - ind_ASW_1_46_others
+          - ind_ASW_1_47_others
+          - ind_ASW_45
+          - ind_ASW_451201_4513_452201_4523
+          - ind_ASW_451401-451405_452401-452405
+          - ind_ASW_46
+          - ind_ASW_460201_4603
+          - ind_ASW_460401-460405
+          - ind_ASW_47
+          - ind_ASW_4711_4721-4723
+          - ind_ASW_4731-4733
+          - ind_ASW_475101-475104_475199_477101_477102_477199
+          - ind_ASW_4773
+      receipts_group:
+        type: string
+        in: local
+        description: "Total Receipts (HK$ thousand). Official TR_GRP codes and labels: TOTAL = Total;
+          1000-4999 = 1,000 - 4,999; 10000-19999 = 10,000 - 19,999; 20000-49999 = 20,000 - 49,999;
+          5000-9999 = 5,000 - 9,999; 50000_and_over = ≥ 50,000; <1000 = < 1,000."
+        enum:
+          - TOTAL
+          - 1000-4999
+          - 10000-19999
+          - 20000-49999
+          - 5000-9999
+          - 50000_and_over
+          - <1000
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: trades_statistics_by_value_added
+    title: Principal statistics for all companies by industry grouping and industry value added
+      (import/export, wholesale and retail trades sector) (630-76004)
+    description: Principal statistics for all companies by industry grouping and industry value added
+      (import/export, wholesale and retail trades sector). Official C&SD table 630-76004. Newest
+      years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Size groups differ between sectors.
+    path: /get.php
+    query:
+      id: 630-76004
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold;
+          HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASW_1_45_others = Other
+          import/export trade; ind_ASW_1_46_others = Other wholesale trade; ind_ASW_1_47_others =
+          Other retail trade; ind_ASW_45 = Import/export trade; ind_ASW_451201_4513_452201_4523 =
+          Food, alcoholic drinks and tobacco; ind_ASW_451401-451405_452401-452405 = Clothing,
+          footwear and allied products; ind_ASW_46 = Wholesale trade; ind_ASW_460201_4603 = Food,
+          alcoholic drinks and tobacco; ind_ASW_460401-460405 = Clothing, footwear and allied
+          products; ind_ASW_47 = Retail trade; ind_ASW_4711_4721-4723 = Food, alcoholic drinks and
+          tobacco; ind_ASW_4731-4733 = Fuel; ind_ASW_475101-475104_475199_477101_477102_477199 =
+          Clothing, footwear and allied products; ind_ASW_4773 = Transport equipment."
+        enum:
+          - ind_ASW_1_45_others
+          - ind_ASW_1_46_others
+          - ind_ASW_1_47_others
+          - ind_ASW_45
+          - ind_ASW_451201_4513_452201_4523
+          - ind_ASW_451401-451405_452401-452405
+          - ind_ASW_46
+          - ind_ASW_460201_4603
+          - ind_ASW_460401-460405
+          - ind_ASW_47
+          - ind_ASW_4711_4721-4723
+          - ind_ASW_4731-4733
+          - ind_ASW_475101-475104_475199_477101_477102_477199
+          - ind_ASW_4773
+      value_added_group:
+        type: string
+        in: local
+        description: "Industry Value Added (HK$ thousand). Official IVA_GRP codes and labels: TOTAL = Total;
+          10000-24999 = 10,000 - 24,999; 250-499 = 250 - 499; 2500-4999 = 2,500 - 4,999;
+          25000_and_over = ≥ 25,000; 500-2499 = 500 - 2,499; 5000-9999 = 5,000 - 9,999; <250 = <
+          250."
+        enum:
+          - TOTAL
+          - 10000-24999
+          - 250-499
+          - 2500-4999
+          - 25000_and_over
+          - 500-2499
+          - 5000-9999
+          - <250
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: transport_business_statistics
+    title: Principal statistics for all companies by industry grouping (transportation, storage and
+      courier services sector) (635-74002)
+    description: Principal statistics for all companies by industry grouping (transportation, storage
+      and courier services sector). Official C&SD table 635-74002. Newest years first; paginate with
+      nextOffset. Preserve source units, rounding, subsidy notes, suppression and revision flags.
+      Totals and subgroups overlap; do not sum. Empty figures are not zero. Size groups differ
+      between sectors.
+    path: /get.php
+    query:
+      id: 635-74002
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; GS = Gross surplus; HC = Number
+          of companies; OE = Operating expenses; PE_ASEA = Number of persons engaged; IVA = Industry
+          value added; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels:
+          ind_AST_491_4921_4922_4923_4924_4925_4926 = Land passenger transport; ind_AST_4927_4928 =
+          Land freight transport; ind_AST_501 = Cross-border water transport; ind_AST_502 = Inland
+          water transport; ind_AST_51_5223 = Air transport and service activities incidental to air
+          transportation; ind_AST_521 = Warehousing and storage; ind_AST_5221_499 = Service
+          activities incidental to land transportation and other land transport services;
+          ind_AST_5222 = Service activities incidental to water transportation; ind_AST_5229 = Other
+          transportation support activities; ind_AST_532 = Courier activities; ind_AST_H =
+          Transportation, storage and courier services sector."
+        enum:
+          - ind_AST_491_4921_4922_4923_4924_4925_4926
+          - ind_AST_4927_4928
+          - ind_AST_501
+          - ind_AST_502
+          - ind_AST_51_5223
+          - ind_AST_521
+          - ind_AST_5221_499
+          - ind_AST_5222
+          - ind_AST_5229
+          - ind_AST_532
+          - ind_AST_H
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: transport_statistics_by_employment
+    title: Principal statistics for all companies by industry grouping and number of persons engaged
+      (transportation, storage and courier services sector) (635-74003)
+    description: Principal statistics for all companies by industry grouping and number of persons
+      engaged (transportation, storage and courier services sector). Official C&SD table 635-74003.
+      Newest years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Size groups differ between sectors.
+    path: /get.php
+    query:
+      id: 635-74003
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; GS = Gross surplus; HC = Number
+          of companies; OE = Operating expenses; PE_ASEA = Number of persons engaged; IVA = Industry
+          value added; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels:
+          ind_AST_491_4921_4922_4923_4924_4925_4926 = Land passenger transport; ind_AST_4927_4928 =
+          Land freight transport; ind_AST_501 = Cross-border water transport; ind_AST_502 = Inland
+          water transport; ind_AST_51_5223 = Air transport and service activities incidental to air
+          transportation; ind_AST_521 = Warehousing and storage; ind_AST_5221_499 = Service
+          activities incidental to land transportation and other land transport services;
+          ind_AST_5222 = Service activities incidental to water transportation; ind_AST_5229 = Other
+          transportation support activities; ind_AST_532 = Courier activities; ind_AST_H =
+          Transportation, storage and courier services sector."
+        enum:
+          - ind_AST_491_4921_4922_4923_4924_4925_4926
+          - ind_AST_4927_4928
+          - ind_AST_501
+          - ind_AST_502
+          - ind_AST_51_5223
+          - ind_AST_521
+          - ind_AST_5221_499
+          - ind_AST_5222
+          - ind_AST_5229
+          - ind_AST_532
+          - ind_AST_H
+      employment_group:
+        type: string
+        in: local
+        description: "Number of persons engaged. Official PE_GRP codes and labels: TOTAL = Total; 10-49 = 10
+          - 49; 100-499 = 100 - 499; 50-99 = 50 - 99; 500_and_over = ≥ 500; <10 = < 10."
+        enum:
+          - TOTAL
+          - 10-49
+          - 100-499
+          - 50-99
+          - 500_and_over
+          - <10
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: transport_statistics_by_receipts
+    title: Principal statistics for all companies by industry grouping and total receipts
+      (transportation, storage and courier services sector) (635-74004)
+    description: Principal statistics for all companies by industry grouping and total receipts
+      (transportation, storage and courier services sector). Official C&SD table 635-74004. Newest
+      years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Size groups differ between sectors.
+    path: /get.php
+    query:
+      id: 635-74004
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; GS = Gross surplus; HC = Number
+          of companies; OE = Operating expenses; PE_ASEA = Number of persons engaged; IVA = Industry
+          value added; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels:
+          ind_AST_491_4921_4922_4923_4924_4925_4926 = Land passenger transport; ind_AST_4927_4928 =
+          Land freight transport; ind_AST_501 = Cross-border water transport; ind_AST_502 = Inland
+          water transport; ind_AST_51_5223 = Air transport and service activities incidental to air
+          transportation; ind_AST_521 = Warehousing and storage; ind_AST_5221_499 = Service
+          activities incidental to land transportation and other land transport services;
+          ind_AST_5222 = Service activities incidental to water transportation; ind_AST_5229 = Other
+          transportation support activities; ind_AST_532 = Courier activities; ind_AST_H =
+          Transportation, storage and courier services sector."
+        enum:
+          - ind_AST_491_4921_4922_4923_4924_4925_4926
+          - ind_AST_4927_4928
+          - ind_AST_501
+          - ind_AST_502
+          - ind_AST_51_5223
+          - ind_AST_521
+          - ind_AST_5221_499
+          - ind_AST_5222
+          - ind_AST_5229
+          - ind_AST_532
+          - ind_AST_H
+      receipts_group:
+        type: string
+        in: local
+        description: "Total Receipts (HK$ thousand). Official TR_GRP codes and labels: TOTAL = Total;
+          1000-4999 = 1,000 - 4,999; 10000-19999 = 10,000 - 19,999; 20000-49999 = 20,000 - 49,999;
+          5000-9999 = 5,000 - 9,999; 50000_and_over = ≥ 50,000; <1000 = < 1,000."
+        enum:
+          - TOTAL
+          - 1000-4999
+          - 10000-19999
+          - 20000-49999
+          - 5000-9999
+          - 50000_and_over
+          - <1000
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: transport_statistics_by_value_added
+    title: Principal statistics for all companies by industry grouping and industry value added
+      (transportation, storage and courier services sector) (635-74005)
+    description: Principal statistics for all companies by industry grouping and industry value added
+      (transportation, storage and courier services sector). Official C&SD table 635-74005. Newest
+      years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Size groups differ between sectors.
+    path: /get.php
+    query:
+      id: 635-74005
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; GS = Gross surplus; HC = Number
+          of companies; OE = Operating expenses; PE_ASEA = Number of persons engaged; IVA = Industry
+          value added; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels:
+          ind_AST_491_4921_4922_4923_4924_4925_4926 = Land passenger transport; ind_AST_4927_4928 =
+          Land freight transport; ind_AST_501 = Cross-border water transport; ind_AST_502 = Inland
+          water transport; ind_AST_51_5223 = Air transport and service activities incidental to air
+          transportation; ind_AST_521 = Warehousing and storage; ind_AST_5221_499 = Service
+          activities incidental to land transportation and other land transport services;
+          ind_AST_5222 = Service activities incidental to water transportation; ind_AST_5229 = Other
+          transportation support activities; ind_AST_532 = Courier activities; ind_AST_H =
+          Transportation, storage and courier services sector."
+        enum:
+          - ind_AST_491_4921_4922_4923_4924_4925_4926
+          - ind_AST_4927_4928
+          - ind_AST_501
+          - ind_AST_502
+          - ind_AST_51_5223
+          - ind_AST_521
+          - ind_AST_5221_499
+          - ind_AST_5222
+          - ind_AST_5229
+          - ind_AST_532
+          - ind_AST_H
+      value_added_group:
+        type: string
+        in: local
+        description: "Industry value added (HK$ thousand). Official IVA_GRP codes and labels: TOTAL = Total;
+          10000-24999 = 10,000 - 24,999; 2500-4999 = 2,500 - 4,999; 25000_and_over = ≥ 25,000;
+          500-2499 = 500 - 2,499; 5000-9999 = 5,000 - 9,999; <500 = < 500."
+        enum:
+          - TOTAL
+          - 10000-24999
+          - 2500-4999
+          - 25000_and_over
+          - 500-2499
+          - 5000-9999
+          - <500
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: transport_detailed_industry_statistics
+    title: Principal statistics for all companies in selected detailed industry groupings
+      (transportation, storage and courier services sector) (635-74008)
+    description: Principal statistics for all companies in selected detailed industry groupings
+      (transportation, storage and courier services sector). Official C&SD table 635-74008. Newest
+      years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Size groups differ between sectors.
+    path: /get.php
+    query:
+      id: 635-74008
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; GS = Gross surplus; HC = Number
+          of companies; OE = Operating expenses; PE_ASEA = Number of persons engaged; IVA = Industry
+          value added; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Detailed industry grouping. Official IND codes and labels: ind_AST_491_4921 = Railway
+          and cable transport, and public bus services; ind_AST_4922_4923_4924 = Taxis,
+          non-scheduled and scheduled public bus services; ind_AST_4925_4926 = School bus services
+          and rental of passenger vehicles with drivers; ind_AST_4927 = Freight transport by road
+          (excl. tractors); ind_AST_4928 = Transport by tractors; ind_AST_5011_5012 = Ship agents
+          and managers, and local representative offices of overseas shipping companies;
+          ind_AST_5013_5014 = Ship owners and operators of sea-going vessels; ind_AST_5015 = Ship
+          owners and operators of vessels moving between Hong Kong and the ports in Pearl River
+          Delta; ind_AST_5021 = Licensed and franchised ferry services, kaito and non-scheduled
+          inland water passenger transport; ind_AST_5022 = Inland freight water transport;
+          ind_AST_5101 = Hong Kong-based airline and helicopter companies; ind_AST_5102 = Local
+          representative offices of overseas airline companies; ind_AST_5212 = General cargo
+          warehouses; ind_AST_522101 = Car park operation; ind_AST_522102 = Vehicular tunnel, bridge
+          and highway operators; ind_AST_522201 = Container terminal and marine cargo terminal
+          operators; ind_AST_522202_522204 = Mid-stream operation and container back-up activities;
+          ind_AST_5223 = Service activities incidental to air transportation; ind_AST_522901_522902
+          = Air and sea cargo forwarding services; ind_AST_5321 = International courier activities."
+        enum:
+          - ind_AST_491_4921
+          - ind_AST_4922_4923_4924
+          - ind_AST_4925_4926
+          - ind_AST_4927
+          - ind_AST_4928
+          - ind_AST_5011_5012
+          - ind_AST_5013_5014
+          - ind_AST_5015
+          - ind_AST_5021
+          - ind_AST_5022
+          - ind_AST_5101
+          - ind_AST_5102
+          - ind_AST_5212
+          - ind_AST_522101
+          - ind_AST_522102
+          - ind_AST_522201
+          - ind_AST_522202_522204
+          - ind_AST_5223
+          - ind_AST_522901_522902
+          - ind_AST_5321
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: logistics_business_statistics
+    title: Principal statistics for the logistics sector by industry grouping (635-74009)
+    description: Principal statistics for the logistics sector by industry grouping. Official C&SD table
+      635-74009. Newest years first; paginate with nextOffset. Preserve source units, rounding,
+      subsidy notes, suppression and revision flags. Totals and subgroups overlap; do not sum. Empty
+      figures are not zero. Size groups differ between sectors.
+    path: /get.php
+    query:
+      id: 635-74009
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; GS = Gross surplus; HC = Number
+          of companies; OE = Operating expenses; PE_ASEA = Number of persons engaged; IVA = Industry
+          value added; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_AST = Logistics Sector;
+          ind_AST_4927 = Freight transport by road (excl. tractors); ind_AST_4928 = Transport by
+          tractors; ind_AST_5011_5012 = Ship agents and managers, and local representative offices
+          of overseas shipping companies; ind_AST_501302_501402_501502 = Ship owners and operators
+          of sea-going freight vessels and freight vessels moving between Hong Kong and the ports in
+          Pearl River Delta; ind_AST_5022 = Inland freight water transport; ind_AST_5101_510202_5109
+          = Hong Kong-based airline and helicopter companies, local representative offices of
+          overseas airline companies (freight), and air transport services not elsewhere classified;
+          ind_AST_521 = Warehousing and storage; ind_AST_522103_522299_522903_522999 = Other
+          logistics services; ind_AST_522201 = Container terminal and marine cargo terminal
+          operators; ind_AST_522202_522204 = Mid-stream operation and container back-up activities;
+          ind_AST_5223 = Service activities incidental to air transportation; ind_AST_522901_522902
+          = Air and sea cargo forwarding services; ind_AST_522904_522905_522906 = Packing and
+          crating services, cargo inspection, sampling and weighing services, and shipbrokers;
+          ind_AST_532 = Courier activities."
+        enum:
+          - ind_AST
+          - ind_AST_4927
+          - ind_AST_4928
+          - ind_AST_5011_5012
+          - ind_AST_501302_501402_501502
+          - ind_AST_5022
+          - ind_AST_5101_510202_5109
+          - ind_AST_521
+          - ind_AST_522103_522299_522903_522999
+          - ind_AST_522201
+          - ind_AST_522202_522204
+          - ind_AST_5223
+          - ind_AST_522901_522902
+          - ind_AST_522904_522905_522906
+          - ind_AST_532
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: information_communications_business_statistics
+    title: Principal statistics for all companies in the information and communications sector (640-75101)
+    description: Principal statistics for all companies in the information and communications sector.
+      Official C&SD table 640-75101. Newest years first; paginate with nextOffset. Preserve source
+      units, rounding, subsidy notes, suppression and revision flags. Totals and subgroups overlap;
+      do not sum. Empty figures are not zero. Size groups differ between sectors.
+    path: /get.php
+    query:
+      id: 640-75101
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; GS = Gross surplus; HC = Number
+          of companies; PE_ASEA = Number of persons engaged; IVA = Industry value added; COST_SOLD =
+          Cost of goods sold; TR = Total receipts; OE = Operating expenses. Preserve original units
+          and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_J = Information and
+          communications."
+        enum:
+          - ind_ASSB_J
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: information_communications_by_employment
+    title: Principal statistics for all companies in the information and communications sector by
+      industry grouping and number of persons engaged (640-75102)
+    description: Principal statistics for all companies in the information and communications sector by
+      industry grouping and number of persons engaged. Official C&SD table 640-75102. Newest years
+      first; paginate with nextOffset. Preserve source units, rounding, subsidy notes, suppression
+      and revision flags. Totals and subgroups overlap; do not sum. Empty figures are not zero. Size
+      groups differ between sectors.
+    path: /get.php
+    query:
+      id: 640-75102
+      full_series: 1
+    transform:
+      response: normalizeCommerceIndustry
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; HC = Number of companies;
+          PE_ASEA = Number of persons engaged; IVA = Industry value added; COST_SOLD = Cost of goods
+          sold; OE = Operating expenses; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_58_59_60 = Publishing
+          activities; motion picture, video and television programme production, sound recording and
+          music publishing activities; and programming and broadcasting activities; ind_ASSB_61 =
+          Telecommunications; ind_ASSB_62_63 = Information technology service activities and
+          information service activities; ind_ASSB_J = Information and communications."
+        enum:
+          - ind_ASSB_58_59_60
+          - ind_ASSB_61
+          - ind_ASSB_62_63
+          - ind_ASSB_J
+      employment_group:
+        type: string
+        in: local
+        description: "Number of persons engaged. Official PE_GRP codes and labels: TOTAL = Total; 10-49 = 10
+          - 49; 100-199 = 100 - 199; 200_and_over = ≥ 200; 50-99 = 50 - 99; <10 = < 10."
+        enum:
+          - TOTAL
+          - 10-49
+          - 100-199
+          - 200_and_over
+          - 50-99
+          - <10
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
