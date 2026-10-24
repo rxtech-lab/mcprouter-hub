@@ -27,7 +27,8 @@ coverage
 .playwright-mcp
 vitest.config.ts
 playwright.config.ts
-scripts/check-environment021-simulation.ts
+# Validation harnesses import test fixtures excluded above.
+scripts/check-*
 
 # Repo and design sources
 .git
