@@ -1,0 +1,988 @@
+id: censtatd-business-performance
+title: Hong Kong Information, Finance & Business Performance
+description: Official C&SD annual business statistics for information and communications, financing,
+  professional and business services, banking and insurance, with industry, employment, receipts and
+  value-added groups.
+apis:
+  - API-0730
+  - API-0731
+  - API-0733
+  - API-0734
+  - API-0735
+  - API-0736
+  - API-0737
+  - API-0738
+  - API-0739
+  - API-0740
+datasets:
+  - hk-censtatd-tablechart-640-75103
+  - hk-censtatd-tablechart-640-75104
+  - hk-censtatd-tablechart-645-75001
+  - hk-censtatd-tablechart-645-75002
+  - hk-censtatd-tablechart-645-75003
+  - hk-censtatd-tablechart-645-75004
+  - hk-censtatd-tablechart-645-75011
+  - hk-censtatd-tablechart-645-75012
+  - hk-censtatd-tablechart-645-75013
+  - hk-censtatd-tablechart-645-75020
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: information_communications_by_receipts
+    title: Principal statistics for all companies in the information and communications sector by
+      industry grouping and total receipts (640-75103)
+    description: Principal statistics for all companies in the information and communications sector by
+      industry grouping and total receipts. Official C&SD table 640-75103. Newest years first;
+      paginate with nextOffset. Preserve source units, rounding, subsidy notes, suppression and
+      revision flags. Totals and subgroups overlap; do not sum. Empty figures are not zero. Group
+      units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 640-75103
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold;
+          HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_58_59_60 = Publishing
+          activities; motion picture, video and television programme production, sound recording and
+          music publishing activities; and programming and broadcasting activities; ind_ASSB_61 =
+          Telecommunications; ind_ASSB_62_63 = Information technology service activities and
+          information service activities; ind_ASSB_J = Information and communications."
+        enum:
+          - ind_ASSB_58_59_60
+          - ind_ASSB_61
+          - ind_ASSB_62_63
+          - ind_ASSB_J
+      receipts_group:
+        type: string
+        in: local
+        description: "Total Receipts (HK$ thousand). Official TR_GRP codes and labels: TOTAL = Total;
+          1000-4999 = 1,000 - 4,999; 10000-19999 = 10,000 - 19,999; 20000-49999 = 20,000 - 49,999;
+          5000-9999 = 5,000 - 9,999; 50000_and_over = ≥ 50,000; <1000 = < 1,000."
+        enum:
+          - TOTAL
+          - 1000-4999
+          - 10000-19999
+          - 20000-49999
+          - 5000-9999
+          - 50000_and_over
+          - <1000
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: information_communications_by_value_added
+    title: Principal statistics for all companies in the information and communications sector by
+      industry grouping and industry value added (640-75104)
+    description: Principal statistics for all companies in the information and communications sector by
+      industry grouping and industry value added. Official C&SD table 640-75104. Newest years first;
+      paginate with nextOffset. Preserve source units, rounding, subsidy notes, suppression and
+      revision flags. Totals and subgroups overlap; do not sum. Empty figures are not zero. Group
+      units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 640-75104
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold;
+          HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_58_59_60 = Publishing
+          activities; motion picture, video and television programme production, sound recording and
+          music publishing activities; and programming and broadcasting activities; ind_ASSB_61 =
+          Telecommunications; ind_ASSB_62_63 = Information technology service activities and
+          information service activities; ind_ASSB_J = Information and communications."
+        enum:
+          - ind_ASSB_58_59_60
+          - ind_ASSB_61
+          - ind_ASSB_62_63
+          - ind_ASSB_J
+      value_added_group:
+        type: string
+        in: local
+        description: "Industry Value Added (HK$ thousand). Official IVA_GRP codes and labels: TOTAL = Total;
+          10000_and_over = ≥ 10,000; 2500-9999 = 2,500 - 9,999; 50-499 = 50 - 499; 500-2499 = 500 -
+          2,499; <50 = < 50."
+        enum:
+          - TOTAL
+          - 10000_and_over
+          - 2500-9999
+          - 50-499
+          - 500-2499
+          - <50
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: financial_professional_business_statistics
+    title: Principal statistics for all companies in the financing and insurance, professional and
+      business services sectors by industry grouping (645-75001)
+    description: Principal statistics for all companies in the financing and insurance, professional and
+      business services sectors by industry grouping. Official C&SD table 645-75001. Newest years
+      first; paginate with nextOffset. Preserve source units, rounding, subsidy notes, suppression
+      and revision flags. Totals and subgroups overlap; do not sum. Empty figures are not zero.
+      Group units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 645-75001
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold;
+          GS = Gross surplus; HC = Number of companies; IVA = Industry value added; OE = Operating
+          expenses; PE_ASEA = Number of persons engaged; TR = Total receipts. Preserve original
+          units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_6412_6413 = Banking;
+          ind_ASSB_65_662 = Insurance; ind_ASSB_K10 = Financing (except banking); ind_ASSB_M =
+          Professional, scientific and technical activities; ind_ASSB_N = Administrative and support
+          service activities."
+        enum:
+          - ind_ASSB_6412_6413
+          - ind_ASSB_65_662
+          - ind_ASSB_K10
+          - ind_ASSB_M
+          - ind_ASSB_N
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: professional_business_by_employment
+    title: Principal statistics for all companies in the financing (except banking); professional,
+      scientific and technical activities; and administrative and support service activities
+      industries by industry grouping and number of persons engaged (645-75002)
+    description: Principal statistics for all companies in the financing (except banking); professional,
+      scientific and technical activities; and administrative and support service activities
+      industries by industry grouping and number of persons engaged. Official C&SD table 645-75002.
+      Newest years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Group units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 645-75002
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold;
+          HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_642 = Investment and
+          holding companies; ind_ASSB_644_649 = Trusts, funds and similar financial entities, and
+          other financial service activities; ind_ASSB_661_663 = Activities auxiliary to financial
+          service activities (except insurance and pension funding) and fund management;
+          ind_ASSB_691 = Legal activities; ind_ASSB_692 = Accounting, bookkeeping and auditing
+          activities, tax consultancy; ind_ASSB_74 = Advertising and market research;
+          ind_ASSB_77_80_81_82 = Other administrative and support service activities; ind_ASSB_78 =
+          Employment activities; ind_ASSB_79 = Travel agency, reservation service and related
+          activities; ind_ASSB_K10 = Financing (except banking); ind_ASSB_M = Professional,
+          scientific and technical activities; ind_ASSB_M04 = Other professional, scientific and
+          technical activities; ind_ASSB_N = Administrative and support service activities."
+        enum:
+          - ind_ASSB_642
+          - ind_ASSB_644_649
+          - ind_ASSB_661_663
+          - ind_ASSB_691
+          - ind_ASSB_692
+          - ind_ASSB_74
+          - ind_ASSB_77_80_81_82
+          - ind_ASSB_78
+          - ind_ASSB_79
+          - ind_ASSB_K10
+          - ind_ASSB_M
+          - ind_ASSB_M04
+          - ind_ASSB_N
+      employment_group:
+        type: string
+        in: local
+        description: "Number of persons engaged. Official PE_GRP codes and labels: TOTAL = Total; 10-49 = 10
+          - 49; 100-199 = 100 - 199; 200_and_over = ≥ 200; 50-99 = 50 - 99; <10 = < 10."
+        enum:
+          - TOTAL
+          - 10-49
+          - 100-199
+          - 200_and_over
+          - 50-99
+          - <10
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: professional_business_by_receipts
+    title: Principal statistics for all companies in the financing (except banking); professional,
+      scientific and technical activities; and administrative and support service activities
+      industries by industry grouping and total receipts (645-75003)
+    description: Principal statistics for all companies in the financing (except banking); professional,
+      scientific and technical activities; and administrative and support service activities
+      industries by industry grouping and total receipts. Official C&SD table 645-75003. Newest
+      years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Group units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 645-75003
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold;
+          HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_642 = Investment and
+          holding companies; ind_ASSB_644_649 = Trusts, funds and similar financial entities, and
+          other financial service activities; ind_ASSB_661_663 = Activities auxiliary to financial
+          service activities (except insurance and pension funding) and fund management;
+          ind_ASSB_691 = Legal activities; ind_ASSB_692 = Accounting, bookkeeping and auditing
+          activities, tax consultancy; ind_ASSB_74 = Advertising and market research;
+          ind_ASSB_77_80_81_82 = Other administrative and support service activities; ind_ASSB_78 =
+          Employment activities; ind_ASSB_79 = Travel agency, reservation service and related
+          activities; ind_ASSB_K10 = Financing (except banking); ind_ASSB_M = Professional,
+          scientific and technical activities; ind_ASSB_M04 = Other professional, scientific and
+          technical activities; ind_ASSB_N = Administrative and support service activities."
+        enum:
+          - ind_ASSB_642
+          - ind_ASSB_644_649
+          - ind_ASSB_661_663
+          - ind_ASSB_691
+          - ind_ASSB_692
+          - ind_ASSB_74
+          - ind_ASSB_77_80_81_82
+          - ind_ASSB_78
+          - ind_ASSB_79
+          - ind_ASSB_K10
+          - ind_ASSB_M
+          - ind_ASSB_M04
+          - ind_ASSB_N
+      receipts_group:
+        type: string
+        in: local
+        description: "Total Receipts (HK$ thousand). Official TR_GRP codes and labels: TOTAL = Total;
+          1000-4999 = 1,000 - 4,999; 10000-19999 = 10,000 - 19,999; 20000-49999 = 20,000 - 49,999;
+          5000-9999 = 5,000 - 9,999; 50000_and_over = ≥ 50,000; <1000 = < 1,000."
+        enum:
+          - TOTAL
+          - 1000-4999
+          - 10000-19999
+          - 20000-49999
+          - 5000-9999
+          - 50000_and_over
+          - <1000
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: professional_business_by_value_added
+    title: Principal statistics for all companies in the financing (except banking); professional,
+      scientific and technical activities; and administrative and support service activities
+      industries by industry grouping and industry value added (645-75004)
+    description: Principal statistics for all companies in the financing (except banking); professional,
+      scientific and technical activities; and administrative and support service activities
+      industries by industry grouping and industry value added. Official C&SD table 645-75004.
+      Newest years first; paginate with nextOffset. Preserve source units, rounding, subsidy notes,
+      suppression and revision flags. Totals and subgroups overlap; do not sum. Empty figures are
+      not zero. Group units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 645-75004
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold;
+          HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_644_649 = Trusts, funds and
+          similar financial entities, and other financial service activities;
+          ind_ASSB_644_649_661_663 = Financing (except banking); ind_ASSB_661_663 = Activities
+          auxiliary to financial service activities (except insurance and pension funding) and fund
+          management; ind_ASSB_691 = Legal activities; ind_ASSB_692 = Accounting, bookkeeping and
+          auditing activities, tax consultancy; ind_ASSB_74 = Advertising and market research;
+          ind_ASSB_77_80_81_82 = Other administrative and support service activities; ind_ASSB_78 =
+          Employment activities; ind_ASSB_79 = Travel agency, reservation service and related
+          activities; ind_ASSB_M = Professional, scientific and technical activities; ind_ASSB_M04 =
+          Other professional, scientific and technical activities; ind_ASSB_N = Administrative and
+          support service activities."
+        enum:
+          - ind_ASSB_644_649
+          - ind_ASSB_644_649_661_663
+          - ind_ASSB_661_663
+          - ind_ASSB_691
+          - ind_ASSB_692
+          - ind_ASSB_74
+          - ind_ASSB_77_80_81_82
+          - ind_ASSB_78
+          - ind_ASSB_79
+          - ind_ASSB_M
+          - ind_ASSB_M04
+          - ind_ASSB_N
+      value_added_group:
+        type: string
+        in: local
+        description: "Industry Value Added (HK$ thousand). Official IVA_GRP codes and labels: TOTAL = Total;
+          10000_and_over = ≥ 10,000; 2500-9999 = 2,500 - 9,999; 50-499 = 50 - 499; 500-2499 = 500 -
+          2,499; <50 = < 50."
+        enum:
+          - TOTAL
+          - 10000_and_over
+          - 2500-9999
+          - 50-499
+          - 500-2499
+          - <50
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: banking_statistics_by_employment
+    title: Principal statistics for all companies in the banking industry by industry grouping and
+      number of persons engaged (645-75011)
+    description: Principal statistics for all companies in the banking industry by industry grouping and
+      number of persons engaged. Official C&SD table 645-75011. Newest years first; paginate with
+      nextOffset. Preserve source units, rounding, subsidy notes, suppression and revision flags.
+      Totals and subgroups overlap; do not sum. Empty figures are not zero. Group units and
+      boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 645-75011
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; HC = Number of companies; OE =
+          Operating expenses; PE_ASEA = Number of persons engaged; TR = Total receipts. Preserve
+          original units and flags."
+        enum:
+          - COMP
+          - HC
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Industry Grouping. Official IND codes and labels: ind_ASSB_6412 = Domestic banking
+          units; ind_ASSB_6412_6413 = Banking; ind_ASSB_6413 = Local representative offices of
+          foreign banks."
+        enum:
+          - ind_ASSB_6412
+          - ind_ASSB_6412_6413
+          - ind_ASSB_6413
+      employment_group:
+        type: string
+        in: local
+        description: "Number of persons engaged. Official PE_GRP codes and labels: TOTAL = Total; 100-199 =
+          100 - 199; 200-499 = 200 - 499; 5-49 = 5 - 49; 50-99 = 50 - 99; 500_and_over = ≥ 500; <5 =
+          < 5."
+        enum:
+          - TOTAL
+          - 100-199
+          - 200-499
+          - 5-49
+          - 50-99
+          - 500_and_over
+          - <5
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: domestic_banking_by_receipts
+    title: Principal statistics for all domestic banking units by total receipts (645-75012)
+    description: Principal statistics for all domestic banking units by total receipts. Official C&SD
+      table 645-75012. Newest years first; paginate with nextOffset. Preserve source units,
+      rounding, subsidy notes, suppression and revision flags. Totals and subgroups overlap; do not
+      sum. Empty figures are not zero. Group units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 645-75012
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; HC = Number of companies; OE =
+          Operating expenses; PE_ASEA = Number of persons engaged; TR = Total receipts. Preserve
+          original units and flags."
+        enum:
+          - COMP
+          - HC
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Detailed Industry. Official IND codes and labels: ind_ASSB_6412 = Domestic banking units."
+        enum:
+          - ind_ASSB_6412
+      receipts_group:
+        type: string
+        in: local
+        description: "Total Receipts (HK$ million). Official TR_M_GRP codes and labels: TOTAL = Total;
+          50_and_over = ≥ 50; <50 = < 50."
+        enum:
+          - TOTAL
+          - 50_and_over
+          - <50
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: domestic_banking_detailed_statistics
+    title: Principal statistics for all domestic banking units by detailed industry (645-75013)
+    description: Principal statistics for all domestic banking units by detailed industry. Official C&SD
+      table 645-75013. Newest years first; paginate with nextOffset. Preserve source units,
+      rounding, subsidy notes, suppression and revision flags. Totals and subgroups overlap; do not
+      sum. Empty figures are not zero. Group units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 645-75013
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; HC = Number of companies; OE =
+          Operating expenses; TR = Total receipts. Preserve original units and flags."
+        enum:
+          - COMP
+          - HC
+          - OE
+          - TR
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Detailed Industry. Official IND codes and labels: ind_ASSB_6412 = Domestic banking
+          units; ind_ASSB_641201 = Licensed banks; ind_ASSB_641202 = Restricted licence banks;
+          ind_ASSB_641203 = Deposit-taking companies."
+        enum:
+          - ind_ASSB_6412
+          - ind_ASSB_641201
+          - ind_ASSB_641202
+          - ind_ASSB_641203
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: insurance_detailed_statistics
+    title: Principal statistics for all companies in the insurance industry by detailed industry
+      (645-75020)
+    description: Principal statistics for all companies in the insurance industry by detailed industry.
+      Official C&SD table 645-75020. Newest years first; paginate with nextOffset. Preserve source
+      units, rounding, subsidy notes, suppression and revision flags. Totals and subgroups overlap;
+      do not sum. Empty figures are not zero. Group units and boundaries differ between tables.
+    path: /get.php
+    query:
+      id: 645-75020
+      full_series: 1
+    transform:
+      response: normalizeBusinessPerformance
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Exact four-digit official year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official variables: COMP = Compensation of employees; FUND_RES = Funds and reserves
+          (at the end of reporting period); HC = Number of companies; OE = Operating expenses;
+          PE_ASEA = Number of persons engaged; TR = Total receipts; T_NETCLAIM = Net claims;
+          T_NETPREM = Net premiums. Preserve original units and flags."
+        enum:
+          - COMP
+          - FUND_RES
+          - HC
+          - OE
+          - PE_ASEA
+          - TR
+          - T_NETCLAIM
+          - T_NETPREM
+      measure:
+        type: string
+        in: local
+        description: "Original units: HK$ million, number or year-on-year percent change. No conversion or
+          aggregation."
+        enum:
+          - hkd_million
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Detailed Industry. Official IND codes and labels: ind_ASSB_651 = Insurance
+          underwriting; ind_ASSB_6511 = Life insurance underwriting; ind_ASSB_6512 = Non-life
+          insurance underwriting; ind_ASSB_65_662 = Insurance; ind_ASSB_662 = Activities auxiliary
+          to insurance and pension funding; ind_ASSB_K23 = Insurance brokers; ind_ASSB_K24 = Other
+          activities auxiliary to insurance and pension funding."
+        enum:
+          - ind_ASSB_651
+          - ind_ASSB_6511
+          - ind_ASSB_6512
+          - ind_ASSB_65_662
+          - ind_ASSB_662
+          - ind_ASSB_K23
+          - ind_ASSB_K24
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue with nextOffset and the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, labels, units and notes language.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
