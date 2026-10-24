@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **296 of 3819 implemented**, 3523 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **301 of 3819 implemented**, 3518 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -1572,12 +1572,12 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-2152` | [Register of AIs and LROs](https://data.gov.hk/en-data/dataset/hk-hkma-banksvf-register-ais-lros) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2155` | [Register of SVF Licensees](https://data.gov.hk/en-data/dataset/hk-hkma-banksvf-register-svf-licensees) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
 | `API-2156` | [Coin Cart Schedule](https://data.gov.hk/en-data/dataset/hk-hkma-coincart-coin-cart-schedule) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-2190` | [Address of the Hong Kong Monetary Authority Information Centre](https://data.gov.hk/en-data/dataset/hk-hkma-hkmaic-hkmaic) | API | Hong Kong Monetary Authority | 🕒 Coming soon | — |
-| `API-2414` | [HKSTPC Company Directory](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-company-directory) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
+| `API-2190` | [Address of the Hong Kong Monetary Authority Information Centre](https://data.gov.hk/en-data/dataset/hk-hkma-hkmaic-hkmaic) | API | Hong Kong Monetary Authority | ✅ Implemented | [HKMA Information Centre](mcp/services/hkma-information-centre/service.yaml) |
+| `API-2414` | [HKSTPC Company Directory](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-company-directory) | API | Hong Kong Science and Technology Parks Corporation | ✅ Implemented | [HKSTP companies, recruitment and space](mcp/services/hkstp-commerce/service.yaml) |
 | `API-2417` | [Direct Investment raised by Park companies since FY17/18](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-direct-investment-raised) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
-| `API-2418` | [Talent Pool and Recruitment](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-hksp-job-post) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
+| `API-2418` | [Talent Pool and Recruitment](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-hksp-job-post) | API | Hong Kong Science and Technology Parks Corporation | ✅ Implemented | [HKSTP companies, recruitment and space](mcp/services/hkstp-commerce/service.yaml) |
 | `API-2419` | [Number of Incubation Graduates](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-incubation-graduates) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
-| `API-2420` | [Lab & Office Space](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-lab-office-space) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
+| `API-2420` | [Lab & Office Space](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-lab-office-space) | API | Hong Kong Science and Technology Parks Corporation | ✅ Implemented | [HKSTP companies, recruitment and space](mcp/services/hkstp-commerce/service.yaml) |
 | `API-2423` | [Number of R&D Practitioners](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-rd-practitioners) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
 | `API-2424` | [Number of Technology Companies](https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-technology-companies) | API | Hong Kong Science and Technology Parks Corporation | 🕒 Coming soon | — |
 | `API-2425` | [Countries signed the Cooperation Documents on the Belt and Road Initiative with China's GDP and Population](https://data.gov.hk/en-data/dataset/hktdc-tdc_bnrcp-bnr-country-profile) | Files | Hong Kong Trade Development Council | 🕒 Coming soon | — |
@@ -1585,7 +1585,7 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-2427` | [HKTDC Research](https://data.gov.hk/en-data/dataset/hktdc-tdc_rmip-rmip-article) | Files | Hong Kong Trade Development Council | 🕒 Coming soon | — |
 | `API-2428` | [Auto Post Information](https://data.gov.hk/en-data/dataset/hk-hkpo-hkpo_ds01-hkpo-auto-post) | Files | Hongkong Post | 🕒 Coming soon | — |
 | `API-2429` | [Counter Service](https://data.gov.hk/en-data/dataset/hk-hkpo-hkpo_ds01-hkpo-counter-service) | Files | Hongkong Post | 🕒 Coming soon | — |
-| `API-2430` | [iPostal Kiosk Information](https://data.gov.hk/en-data/dataset/hk-hkpo-hkpo_ds01-hkpo-ipostal-kiosk) | API | Hongkong Post | 🕒 Coming soon | — |
+| `API-2430` | [iPostal Kiosk Information](https://data.gov.hk/en-data/dataset/hk-hkpo-hkpo_ds01-hkpo-ipostal-kiosk) | API | Hongkong Post | ✅ Implemented | [Hongkong Post iPostal kiosks](mcp/services/hkpost-kiosks/service.yaml) |
 | `API-2431` | [iPostal Station Information](https://data.gov.hk/en-data/dataset/hk-hkpo-hkpo_ds01-hkpo-ipostal-station) | API | Hongkong Post | 🕒 Coming soon | — |
 | `API-2432` | [Mobile Post Office Information](https://data.gov.hk/en-data/dataset/hk-hkpo-hkpo_ds01-hkpo-mobile-office) | API | Hongkong Post | 🕒 Coming soon | — |
 | `API-2433` | [Post Office Box Information](https://data.gov.hk/en-data/dataset/hk-hkpo-hkpo_ds01-hkpo-po-box) | Files | Hongkong Post | 🕒 Coming soon | — |

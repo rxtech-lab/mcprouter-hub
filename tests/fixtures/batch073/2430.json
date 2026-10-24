@@ -1,0 +1,401 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    },
+    {
+      "name": "DatasetEN",
+      "alias": "Dataset",
+      "type": "esriFieldTypeString",
+      "length": 255
+    },
+    {
+      "name": "DatasetTC",
+      "alias": "數據集",
+      "type": "esriFieldTypeString",
+      "length": 255
+    },
+    {
+      "name": "NameEN",
+      "alias": "Facility Name",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "AddressEN",
+      "alias": "Address",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "NameTC",
+      "alias": "設施名稱",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "AddressTC",
+      "alias": "地址",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "RegionEN",
+      "alias": "Region",
+      "type": "esriFieldTypeString",
+      "length": 1000
+    },
+    {
+      "name": "RegionTC",
+      "alias": "區域",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "DistrictEN",
+      "alias": "District",
+      "type": "esriFieldTypeString",
+      "length": 1000
+    },
+    {
+      "name": "DistrictTC",
+      "alias": "地區",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "NearbyPostOfficeEN",
+      "alias": "Nearby Post Office",
+      "type": "esriFieldTypeString",
+      "length": 1000
+    },
+    {
+      "name": "NearbyPostOfficeTC",
+      "alias": "附近的郵政局",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "iPostalKioskCodeEN",
+      "alias": "iPostal Kiosk Code",
+      "type": "esriFieldTypeString",
+      "length": 1000
+    },
+    {
+      "name": "iPostalKioskCodeTC",
+      "alias": "智郵寄編號",
+      "type": "esriFieldTypeString",
+      "length": 1500
+    },
+    {
+      "name": "MaxSizeEN",
+      "alias": "Maximum Dimension of iPostal Kiosk (L X D X H (mm))",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "MaxSizeTC",
+      "alias": "智郵寄最大尺寸(長 x 闊 x 高 (毫米))",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "ScopeofServicesEN",
+      "alias": "Scope of Services",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "ScopeofServicesTC",
+      "alias": "服務範圍",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "OpenHoursWeekdayEN",
+      "alias": "Open Hours (Monday to Friday)",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "OpenHoursWeekdayTC",
+      "alias": "開放時間 (星期一至五)",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "OpenHoursSatEN",
+      "alias": "Open Hours (Saturday)",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "OpenHoursSatTC",
+      "alias": "開放時間 (星期六)",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "OpenHoursSunEN",
+      "alias": "Open Hours (Sunday)",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "OpenHoursSunTC",
+      "alias": "開放時間 (星期日)",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "OpenHoursHolidayEN",
+      "alias": "Open Hours (Public Holiday)",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "OpenHoursHolidayTC",
+      "alias": "開放時間 (公眾假期)",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "TelephoneEN",
+      "alias": "Telephone",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "TelephoneTC",
+      "alias": "聯絡電話",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "RemarksEN",
+      "alias": "Remarks",
+      "type": "esriFieldTypeString",
+      "length": 4000
+    },
+    {
+      "name": "RemarksTC",
+      "alias": "備註",
+      "type": "esriFieldTypeString",
+      "length": 2000
+    },
+    {
+      "name": "Northing",
+      "alias": "Northing / 坐標北",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Easting",
+      "alias": "Easting / 坐標東",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Latitude",
+      "alias": "Latitude / 緯度",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "Longitude",
+      "alias": "Longitude / 經度",
+      "type": "esriFieldTypeDouble"
+    },
+    {
+      "name": "LastUpdate",
+      "alias": "Last Updated Date / 最後更新日期",
+      "type": "esriFieldTypeDate",
+      "length": 8
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "OBJECTID": 1,
+        "DatasetEN": "iPostal Kiosk Information",
+        "DatasetTC": "智郵寄資訊",
+        "NameEN": "Tong Yin Street Post Office iPostal Kiosk",
+        "AddressEN": "1/F, North Tower, Tseung Kwan O Government Offices, 30 Tong Yin Street, Tseung Kwan O",
+        "NameTC": "唐賢街郵政局智郵寄",
+        "AddressTC": "將軍澳唐賢街30號將軍澳政府合署北座一樓",
+        "RegionEN": "NEW TERRITORIES",
+        "RegionTC": "新界區",
+        "DistrictEN": "SAI KUNG",
+        "DistrictTC": "西貢區",
+        "NearbyPostOfficeEN": "TONG YIN STREET POST OFFICE",
+        "NearbyPostOfficeTC": "唐賢街郵政局",
+        "iPostalKioskCodeEN": "KTYS01",
+        "iPostalKioskCodeTC": "KTYS01",
+        "MaxSizeEN": "1330 x 784 x 2200",
+        "MaxSizeTC": "1330 x 784 x 2200",
+        "ScopeofServicesEN": "Sending Mail - Weight limit 2kg or below and size limit 300 mm(length) x 300 mm(width) X 100 mm(height)",
+        "ScopeofServicesTC": "投寄郵件 (重量限制 2公斤或以下及尺寸限制 300毫米（長）x 300毫米（闊）x 100毫米（高）)",
+        "OpenHoursWeekdayEN": "24 HOURS",
+        "OpenHoursWeekdayTC": "二十四小時",
+        "OpenHoursSatEN": "24 HOURS",
+        "OpenHoursSatTC": "二十四小時",
+        "OpenHoursSunEN": "24 HOURS",
+        "OpenHoursSunTC": "二十四小時",
+        "OpenHoursHolidayEN": "24 HOURS",
+        "OpenHoursHolidayTC": "二十四小時",
+        "TelephoneEN": "2921 2222",
+        "TelephoneTC": "2921 2222",
+        "RemarksEN": null,
+        "RemarksTC": null,
+        "Northing": 818429.43712513,
+        "Easting": 844498.30400544,
+        "Latitude": 22.30479964,
+        "Longitude": 114.2567491,
+        "LastUpdate": 1758174982000
+      },
+      "geometry": {
+        "x": 114.256749,
+        "y": 22.3048
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 2,
+        "DatasetEN": "iPostal Kiosk Information",
+        "DatasetTC": "智郵寄資訊",
+        "NameEN": "Yeung Uk Road Post Office iPostal Kiosk",
+        "AddressEN": "Shop 15, 1/F, Indihome, 138 Yeung Uk Road, Tsuen Wan",
+        "NameTC": "楊屋道郵政局智郵寄",
+        "AddressTC": "荃灣楊屋道138號樂悠居1樓15號",
+        "RegionEN": "NEW TERRITORIES",
+        "RegionTC": "新界區",
+        "DistrictEN": "TSUEN WAN",
+        "DistrictTC": "荃灣區",
+        "NearbyPostOfficeEN": "YEUNG UK ROAD POST OFFICE",
+        "NearbyPostOfficeTC": "楊屋道郵政局",
+        "iPostalKioskCodeEN": "KYUR01",
+        "iPostalKioskCodeTC": "KYUR01",
+        "MaxSizeEN": "1330 x 784 x 2200",
+        "MaxSizeTC": "1330 x 784 x 2200",
+        "ScopeofServicesEN": "Sending Mail - Weight limit 2kg or below and size limit 300 mm(length) x 300 mm(width) X 100 mm(height)",
+        "ScopeofServicesTC": "投寄郵件 (重量限制 2公斤或以下及尺寸限制 300毫米（長）x 300毫米（闊）x 100毫米（高）)",
+        "OpenHoursWeekdayEN": "24 HOURS",
+        "OpenHoursWeekdayTC": "二十四小時",
+        "OpenHoursSatEN": "24 HOURS",
+        "OpenHoursSatTC": "二十四小時",
+        "OpenHoursSunEN": "24 HOURS",
+        "OpenHoursSunTC": "二十四小時",
+        "OpenHoursHolidayEN": "24 HOURS",
+        "OpenHoursHolidayTC": "二十四小時",
+        "TelephoneEN": "2921 2222",
+        "TelephoneTC": "2921 2222",
+        "RemarksEN": null,
+        "RemarksTC": null,
+        "Northing": 825228.34616359,
+        "Easting": 830230.72941924,
+        "Latitude": 22.3662068,
+        "Longitude": 114.11825725,
+        "LastUpdate": 1758174938000
+      },
+      "geometry": {
+        "x": 114.118257,
+        "y": 22.366207
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 3,
+        "DatasetEN": "iPostal Kiosk Information",
+        "DatasetTC": "智郵寄資訊",
+        "NameEN": "Tai Wo Plaza iPostal Kiosk",
+        "AddressEN": "Site No. LK05, 1/F, East Wing, Tai Wo Plaza, Tai Po",
+        "NameTC": "太和廣場智郵寄",
+        "AddressTC": "大埔太和廣場東翼L1樓LK05號",
+        "RegionEN": "NEW TERRITORIES",
+        "RegionTC": "新界區",
+        "DistrictEN": "TAI PO",
+        "DistrictTC": "大埔區",
+        "NearbyPostOfficeEN": "TAI PO POST OFFICE",
+        "NearbyPostOfficeTC": "大埔郵政局",
+        "iPostalKioskCodeEN": "KTPO01",
+        "iPostalKioskCodeTC": "KTPO01",
+        "MaxSizeEN": "1330 x 784 x 2200",
+        "MaxSizeTC": "1330 x 784 x 2200",
+        "ScopeofServicesEN": "Sending Mail (Weight limit 2kg or below and size limit 300 mm(length) x 300 mm(width) X 100 mm(height))",
+        "ScopeofServicesTC": "投寄郵件 (重量限制 2公斤或以下及尺寸限制 300毫米（長）x 300毫米（闊）x 100毫米（高）)",
+        "OpenHoursWeekdayEN": "24 Hours",
+        "OpenHoursWeekdayTC": "24小時",
+        "OpenHoursSatEN": "24 Hours",
+        "OpenHoursSatTC": "24小時",
+        "OpenHoursSunEN": "24 Hours",
+        "OpenHoursSunTC": "24小時",
+        "OpenHoursHolidayEN": "24 Hours",
+        "OpenHoursHolidayTC": "24小時",
+        "TelephoneEN": "2921 2222",
+        "TelephoneTC": "2921 2222",
+        "RemarksEN": null,
+        "RemarksTC": null,
+        "Northing": 834609.75020797,
+        "Easting": 834704.19683026,
+        "Latitude": 22.45093541,
+        "Longitude": 114.16168189,
+        "LastUpdate": 1734080852000
+      },
+      "geometry": {
+        "x": 114.161682,
+        "y": 22.450936
+      }
+    },
+    {
+      "attributes": {
+        "OBJECTID": 4,
+        "DatasetEN": "iPostal Kiosk Information",
+        "DatasetTC": "智郵寄資訊",
+        "NameEN": "Lohas Park Community Hall iPostal Kiosk",
+        "AddressEN": "Lohas Park Community Hall, 1 Lohas Park Road, Tseung Kwan O",
+        "NameTC": "康城社區會堂智郵寄",
+        "AddressTC": "將軍澳康城路1號康城社區會堂",
+        "RegionEN": "NEW TERRITORIES",
+        "RegionTC": "新界區",
+        "DistrictEN": "SAI KUNG",
+        "DistrictTC": "西貢區",
+        "NearbyPostOfficeEN": "TSEUNG KWAN O POST OFFICE",
+        "NearbyPostOfficeTC": "將軍澳郵政局",
+        "iPostalKioskCodeEN": "KTKO01",
+        "iPostalKioskCodeTC": "KTKO01",
+        "MaxSizeEN": "1330 x 784 x 2200",
+        "MaxSizeTC": "1330 x 784 x 2200",
+        "ScopeofServicesEN": "Sending Mail (Weight limit 2kg or below and size limit 300 mm(length) x 300 mm(width) X 100 mm(height))",
+        "ScopeofServicesTC": "投寄郵件 (重量限制 2公斤或以下及尺寸限制 300毫米（長）x 300毫米（闊）x 100毫米（高）)",
+        "OpenHoursWeekdayEN": "24 HOURS",
+        "OpenHoursWeekdayTC": "二十四小時",
+        "OpenHoursSatEN": "24 HOURS",
+        "OpenHoursSatTC": "二十四小時",
+        "OpenHoursSunEN": "24 HOURS",
+        "OpenHoursSunTC": "二十四小時",
+        "OpenHoursHolidayEN": "24 HOURS",
+        "OpenHoursHolidayTC": "二十四小時",
+        "TelephoneEN": "2921 2222",
+        "TelephoneTC": "2921 2222",
+        "RemarksEN": null,
+        "RemarksTC": null,
+        "Northing": 817386.70058597,
+        "Easting": 846054.36029999,
+        "Latitude": 22.29537496,
+        "Longitude": 114.27184418,
+        "LastUpdate": 1734080838000
+      },
+      "geometry": {
+        "x": 114.271844,
+        "y": 22.295375
+      }
+    }
+  ],
+  "exceededTransferLimit": false
+}

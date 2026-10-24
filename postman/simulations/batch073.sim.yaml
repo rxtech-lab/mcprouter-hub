@@ -1,0 +1,5 @@
+simulation: batch073
+routing: path
+mocks:
+  - routeKey: commerce
+    path: ../mocks/batch073/config.yaml
