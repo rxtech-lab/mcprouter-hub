@@ -1,5 +1,7 @@
 import type { HandlerContext, ToolHandler } from "@/lib/mcp/types";
 import { UpstreamError } from "@/lib/mcp/fetcher";
+import { hasArticleBody } from "@/lib/news/decision";
+import { cachedArticle, firecrawlRequest, newsSearchId, newsSearchUrl, publicArticleUrl, scrapeArticle } from "@/lib/news/firecrawl";
 
 type RapidProvider = "trade-bloom" | "reuters";
 type Provider = RapidProvider | "hacker-news";
@@ -175,15 +177,50 @@ export const listTopNews: ToolHandler = async (input, context) => {
   return { requestedPerProvider: x, returned: news.length, partial: status.some((s) => s.status === "error"), providers: status, news };
 };
 
+async function withArticleContent(id: string, provider: Provider, article: Row, url: unknown, context: HandlerContext) {
+  if (Buffer.byteLength(JSON.stringify(article)) > 90_000) throw new UpstreamError("upstream_parse", `${provider} article exceeds the 90 KB detail limit`);
+  // A saved scrape can be reused even when the Decision API or Firecrawl is unavailable.
+  let canonical: string | undefined;
+  // An invalid optional link must not prevent returning a complete self-post body.
+  try { canonical = publicArticleUrl(url); } catch { /* Decide on the body before requiring a scrape URL. */ }
+  const cached = canonical ? await cachedArticle(canonical) : null;
+  if (cached) return { id, provider, article, content: cached };
+  if (await hasArticleBody(article)) return { id, provider, article };
+  if (!canonical) throw new Error("News detail has no article body or public article URL to scrape");
+  return { id, provider, article, content: await scrapeArticle(canonical, context) };
+}
+
+export const scrapeWebsite: ToolHandler = async (input, context) => scrapeArticle(input.url, context);
+
+export const searchNews: ToolHandler = async (input, context) => {
+  const query = typeof input.query === "string" ? input.query.trim() : "";
+  const limit = input.limit === undefined ? 10 : input.limit;
+  if (!query || query.length > 500) throw new Error("query must contain 1 to 500 characters");
+  if (typeof limit !== "number" || !Number.isInteger(limit) || limit < 1 || limit > 50) throw new Error("limit must be an integer from 1 to 50");
+  const data = await firecrawlRequest("/search", { query, sources: ["news"], categories: [], limit }, context);
+  if (!Array.isArray(data.news)) throw new UpstreamError("upstream_parse", "Firecrawl returned invalid news results");
+  const unique = new Map<string, Row>();
+  for (const row of data.news.slice(0, limit)) {
+    if (!record(row) || typeof row.title !== "string" || !row.title.trim()) throw new UpstreamError("upstream_parse", "Firecrawl returned invalid news results");
+    const url = publicArticleUrl(row.url);
+    unique.set(url, { id: newsSearchId(url), provider: "firecrawl", title: row.title.slice(0, 1000), url,
+      summary: typeof row.snippet === "string" ? row.snippet.slice(0, 2000) : null,
+      publishedAt: publishedAt(row.date) });
+  }
+  return { query, returned: unique.size, news: [...unique.values()] };
+};
+
 export const getNewsDetail: ToolHandler = async (input, context) => {
   const id = String(input.id ?? "");
+  if (/^firecrawl:[A-Za-z0-9_-]{1,4000}$/.test(id)) {
+    return { id, provider: "firecrawl", content: await scrapeArticle(newsSearchUrl(id), context) };
+  }
   if (/^hacker-news:[1-9][0-9]{0,15}$/.test(id)) {
     const reference = Number(id.slice("hacker-news:".length));
     if (!storyId(reference)) throw new Error("Invalid Hacker News id");
     const article = hackerNewsStory(await hackerNewsRequest(`/item/${reference}.json`, context), reference);
     if (!article) throw new UpstreamError("upstream_http", "Hacker News story not found or unavailable", 404);
-    if (Buffer.byteLength(JSON.stringify(article)) > 90_000) throw new UpstreamError("upstream_parse", "hacker-news article exceeds the 90 KB detail limit");
-    return { id, provider: "hacker-news", article };
+    return withArticleContent(id, "hacker-news", article, article.url, context);
   }
   let provider: RapidProvider;
   let path: string;
@@ -210,7 +247,6 @@ export const getNewsDetail: ToolHandler = async (input, context) => {
     if (!record(body) || body.status !== "success" || !record(body.data) || !Object.keys(body.data).length) return malformed(provider);
     article = body.data;
   }
-  // Preserve provider data; Trade Bloom bulletins contain metadata, not full text.
-  if (Buffer.byteLength(JSON.stringify(article)) > 90_000) throw new UpstreamError("upstream_parse", `${provider} article exceeds the 90 KB detail limit`);
-  return { id, provider, article };
+  return withArticleContent(id, provider, article,
+    provider === "reuters" ? query.url : article.longURL ?? article.shortURL, context);
 };

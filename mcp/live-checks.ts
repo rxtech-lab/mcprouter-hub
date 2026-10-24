@@ -78,6 +78,15 @@ export const liveCases: Record<string, LiveCase> = {
       return { id: first<{ id: string }>(news, "news article").id };
     },
   },
+  scrape_website: {
+    input: { url: "https://example.com/" },
+    check: (result) => typeof (result.data as { markdown?: unknown }).markdown === "string" &&
+      (result.data as { markdown: string }).markdown.trim() ? null : "Expected scraped Markdown",
+  },
+  search_news: {
+    input: { query: "technology news", limit: 1 },
+    check: (result) => Array.isArray((result.data as { news?: unknown }).news) ? null : "Expected a news result list",
+  },
   // Batch073: only the five sources with usable current bodies.
   hkma_information_centre: { input: { limit: 1 }, check: nonEmptyPage },
   hkstp_companies: { input: { limit: 1 }, check: nonEmptyPage },

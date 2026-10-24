@@ -46,9 +46,8 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
     getEntitlements(user).catch((error) => (console.error("[billing] entitlements", error), null)),
     getCatalog(user).catch((error) => (console.error("[billing] catalog", error), null)),
   ]);
-  const usage = entitlements?.usage.find((item) => item.key === billingConfig.usageItem);
+  const usage = (entitlements?.usage ?? []).filter((item) => [billingConfig.usageItem, billingConfig.chatUsageItem, billingConfig.premiumUsageItem].includes(item.key as "mcp_calls" | "chat" | "premium_mcp"));
   const currentPlans = new Set(entitlements ? activePlans(entitlements).flatMap((plan) => [plan.planKey, plan.planId]) : []);
-  const balances = (entitlements?.balances ?? []).filter((balance) => !billingConfig.creditUnit || balance.unit === billingConfig.creditUnit || balance.unit === billingConfig.chatCreditUnit);
   const selected = catalog?.plans.find((plan) => plan.id === changePlan);
   const selectedMode = selected && entitlements && planPurchaseMode(selected, entitlements);
   const currentCatalogPlan = selectedMode?.kind === "change" && catalog?.plans.find((plan) => plan.id === selectedMode.current.planId);
@@ -65,29 +64,26 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
         targetPrice={`${price(selected.priceAmountCents, selected.currency, t.locale)} ${interval(selected, t)}`} /> : null}
       <PageHeader
         title={t("Billing")}
-        description={billingConfig.enabled ? t("Each user message uses one chat unit. Direct MCP tool calls use MCP call credits.") : t("Metering is switched off on this deployment, so tool calls are free for now.")}
+        description={billingConfig.enabled ? t("Chat and MCP calls use your plan allowances. News tools use a separate premium allowance, including during chat.") : t("Metering is switched off on this deployment, so tool calls are free for now.")}
         actions={<PortalButton />}
       />
 
       <Card variant="filled">
-        <CardTitle>{t("Balance")}</CardTitle>
-        {balances.length ? (
-          <div className="mt-3 flex flex-col gap-1">
-            {balances.map((balance) => (
-              <p key={balance.unit} className="type-headline-medium tabular-nums">
-                {formatNumber(balance.available, t.locale)} <span className="type-title-medium text-on-surface-variant">{balance.name}</span>
-              </p>
+        <CardTitle>{t("Usage limits")}</CardTitle>
+        {usage.length ? (
+          <dl className="mt-3 grid gap-4 sm:grid-cols-3">
+            {usage.map((item) => (
+              <div key={item.key}>
+                <dt className="type-title-medium">{item.name}</dt>
+                <dd className="type-headline-medium tabular-nums">{formatNumber(item.used, t.locale)} / {item.limit === null ? "∞" : formatNumber(item.limit, t.locale)}</dd>
+                {item.resetsAt ? <dd className="type-body-small text-on-surface-variant">{t("Resets {date}", { date: formatDateTime(item.resetsAt, t.locale) })}</dd> : null}
+              </div>
             ))}
-          </div>
+          </dl>
         ) : (
-          <p className="mt-2 type-body-medium text-on-surface-variant">{entitlements ? t("No balance yet. Pick a plan or top up below.") : t("The balance is unavailable right now.")}</p>
+          <p className="mt-2 type-body-medium text-on-surface-variant">{entitlements ? t("No usage limits are configured yet.") : t("Usage is unavailable right now.")}</p>
         )}
-        {usage ? (
-          <p className="mt-3 type-body-small text-on-surface-variant">
-            {t.plural("{n} call this period", "{n} calls this period", usage.used, { n: formatNumber(usage.used, t.locale) })}
-            {usage.resetsAt ? ` · ${t("Resets {date}", { date: formatDateTime(usage.resetsAt, t.locale) })}` : ""}
-          </p>
-        ) : null}
+        <ButtonLink href="/usage/credits" variant="text" className="mt-3">{t("Stored credits and history")}</ButtonLink>
       </Card>
 
       <h2 className="mt-8 mb-3 type-title-large">{t("Plans")}</h2>
@@ -132,7 +128,11 @@ export default async function BillingPage({ searchParams }: PageProps<"/billing"
               <Card key={topup.id} className="flex flex-col gap-2">
                 <h3 className="type-title-medium">{topup.name}</h3>
                 <p className="type-headline-small">{price(topup.priceAmountCents, topup.currency, t.locale)}</p>
-                <p className="flex-1 type-body-medium text-on-surface-variant">{topup.description ?? `${formatNumber(topup.amount, t.locale)} ${topup.unit ?? t("units")}`}</p>
+                {topup.description ? <p className="flex-1 type-body-medium text-on-surface-variant">{topup.description}</p> : <span className="flex-1" />}
+                <p className="type-body-small text-on-surface-variant">{[
+                  `${formatNumber(topup.amount, t.locale)} ${topup.unit ?? t("units")}`,
+                  ...(topup.grants ?? []).map((grant) => `${formatNumber(grant.amount, t.locale)} ${grant.name}`),
+                ].join(" · ")}</p>
                 <ProductButton kind="topup" productId={topup.id} disabled={topup.eligible === false} label={topup.eligible === false ? topupBlocker(topup, catalog.plans, t) : t("Buy")} />
               </Card>
             ))}

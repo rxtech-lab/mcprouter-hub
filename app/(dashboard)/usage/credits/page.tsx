@@ -7,7 +7,6 @@ import { Badge } from "@/components/m3/chip";
 import { EmptyState } from "@/components/m3/page-header";
 import { Pagination } from "@/components/m3/pagination";
 import { requirePageUser } from "@/lib/auth";
-import { billingConfig } from "@/lib/billing/config";
 import { getBalanceLedger, getEntitlements, subscriptionConfigured } from "@/lib/billing/subscription";
 import { formatDateTime, formatNumber } from "@/lib/format";
 import { getT } from "@/lib/i18n/server";
@@ -30,15 +29,16 @@ export default async function UsageCreditsPage({ searchParams }: PageProps<"/usa
   const { page } = paramsSchema.parse({ page: Array.isArray(raw.page) ? raw.page[0] : raw.page });
   const [entitlements, ledger] = await Promise.all([
     getEntitlements(user).catch((error) => (console.error("[credits] entitlements", error), null)),
-    getBalanceLedger({ user, unit: billingConfig.creditUnit, page }).catch((error) => (console.error("[credits] ledger", error), null)),
+    getBalanceLedger({ user, page }).catch((error) => (console.error("[credits] ledger", error), null)),
   ]);
-  const balances = (entitlements?.balances ?? []).filter((balance) => !billingConfig.creditUnit || balance.unit === billingConfig.creditUnit);
+  const balances = entitlements?.balances ?? [];
 
   return (
     <>
       <Card variant="filled" className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <CardTitle>{t("Credit balance")}</CardTitle>
+          <p className="mt-2 type-body-small text-on-surface-variant">{t("Stored credits cover overage only when your usage policy allows it. Your plan limits appear on Billing.")}</p>
           {balances.length ? (
             balances.map((balance) => (
               <p key={balance.unit} className="mt-2 type-headline-medium tabular-nums">

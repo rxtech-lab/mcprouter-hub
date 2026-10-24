@@ -1,9 +1,9 @@
 import { waitUntil } from "@vercel/functions";
 import { ZodError } from "zod";
 import { incrementCallCount } from "@/lib/api-keys";
-import { billingConfig } from "@/lib/billing/config";
+import { billingConfig, mcpUsageItem } from "@/lib/billing/config";
 import { UsageLimitError } from "@/lib/billing/errors";
-import { debitBalance, recordUsage } from "@/lib/billing/subscription";
+import { recordUsage } from "@/lib/billing/subscription";
 import { logToolCall, type ToolCallLog } from "@/lib/usage";
 import type { CallerContext } from "@/lib/mcp/types";
 
@@ -16,22 +16,17 @@ export type McpToolResponse = {
 
 type Dependencies = {
   record: typeof recordUsage;
-  debit: typeof debitBalance;
   increment: (apiKeyId: string) => Promise<unknown>;
   log: (entry: ToolCallLog) => Promise<unknown>;
   billingEnabled: boolean;
-  /** Balance unit each call is paid from. Unset leaves the plan allowance as the only gate. */
-  creditUnit: string | undefined;
   defer: (promise: Promise<unknown>) => void;
 };
 
 const defaultDependencies: Dependencies = {
   record: recordUsage,
-  debit: debitBalance,
   increment: incrementCallCount,
   log: logToolCall,
   billingEnabled: billingConfig.enabled,
-  creditUnit: billingConfig.creditUnit,
   defer: (promise) => waitUntil(promise),
 };
 
@@ -45,19 +40,19 @@ function siteUrl() {
 
 function limitMessage(error: UsageLimitError) {
   const billing = `${siteUrl()}/billing`;
+  const name = error.item === billingConfig.premiumUsageItem ? "premium MCP" : "MCP";
   if (error.reason === "insufficient_balance") {
-    return `You're out of MCP call credits. Top up at ${billing} to keep using mcprouter.`;
+    return `You're out of ${name} call credits. Top up at ${billing} to keep using mcprouter.`;
   }
   const used = error.limit === null ? "" : ` (${error.used ?? error.limit}/${error.limit} calls used)`;
   const resets = error.resetsAt ? ` It resets ${new Date(error.resetsAt).toUTCString()}.` : "";
-  return `Your plan's MCP call allowance is used up${used}.${resets} Switch to Pay as you go at ${billing} to keep using mcprouter.`;
+  return `Your plan's ${name} call allowance is used up${used}.${resets} Review your plan at ${billing} to keep using mcprouter.`;
 }
 
 /**
- * Wraps one MCP tool call: pay for it from the caller's credit balance first
- * (or, with no credit unit configured, charge it against the plan allowance),
- * run it, then bump the key's call counter and log the call by tool for the
- * usage page. With a credit unit the usage item only tracks the call.
+ * Gate each billable call through RxSubscription's usage API, which alone decides
+ * allowances and overage charges. News uses a separate premium meter even during
+ * chat. Ordinary tools are included in an already metered chat message.
  */
 export async function meterToolCall(
   caller: CallerContext,
@@ -83,18 +78,17 @@ export async function meterToolCall(
         .catch((error) => console.error("[meter] failed to log tool call", error)),
     );
 
-  // Agent messages consume one chat unit before execution; direct MCP callers pay per tool.
-  if (deps.billingEnabled && !caller.guest && !(caller.chatMetered && !caller.apiKeyId)) {
+  const item = mcpUsageItem(call.service);
+  const premium = item === billingConfig.premiumUsageItem;
+  if (deps.billingEnabled && caller.guest && premium) {
+    log("denied", "premium_requires_account");
+    return text(`Sign in and review your premium MCP allowance at ${siteUrl()}/billing to use news tools.`, true);
+  }
+  if (deps.billingEnabled && !caller.guest && (premium || !(caller.chatMetered && !caller.apiKeyId))) {
     const idempotencyKey = `mcp:${caller.userId}:${crypto.randomUUID()}`;
     const metadata = { service: call.service, tool: call.tool, apiKeyId: caller.apiKeyId, channel: caller.channel ?? null };
-    const record = () => deps.record({ rxlabUserId: caller.userId, item: billingConfig.usageItem, idempotencyKey, metadata });
     try {
-      if (deps.creditUnit) {
-        await deps.debit({ rxlabUserId: caller.userId, unit: deps.creditUnit, idempotencyKey, description: call.tool, metadata });
-        deps.defer(record().catch((error) => console.error("[meter] failed to track usage", error)));
-      } else {
-        await record();
-      }
+      await deps.record({ rxlabUserId: caller.userId, item, idempotencyKey, metadata });
     } catch (error) {
       if (error instanceof UsageLimitError) {
         log("denied", error.reason);

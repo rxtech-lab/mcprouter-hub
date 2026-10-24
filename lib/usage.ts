@@ -32,7 +32,7 @@ export type DailyUsage = { day: string; value: number; credits: number };
  * from rx-subscription's usage log. Buckets are fetched hourly (UTC) and folded
  * into Hong Kong days, since rx-subscription's own day buckets are UTC.
  */
-export async function callsPerDay(user: AppUser, days: number): Promise<DailyUsage[]> {
+export async function callsPerDay(user: AppUser, days: number, item?: string): Promise<DailyUsage[]> {
   const since = windowStart(Math.min(days, MAX_WINDOW_DAYS));
   const empty = Array.from({ length: days }, (_, index) => ({
     day: new Date(since.getTime() + index * 86_400_000 + HK_OFFSET_MS).toISOString().slice(0, 10),
@@ -41,7 +41,9 @@ export async function callsPerDay(user: AppUser, days: number): Promise<DailyUsa
   }));
   if (!subscriptionConfigured) return empty;
 
-  const buckets = await getUsageStatistics({ user, item: billingConfig.usageItem, from: since, to: new Date(), granularity: "hour" });
+  const items = item ? [item] : [billingConfig.usageItem, billingConfig.premiumUsageItem];
+  const to = new Date();
+  const buckets = (await Promise.all(items.map((key) => getUsageStatistics({ user, item: key, from: since, to, granularity: "hour" })))).flat();
   const byDay = new Map(empty.map((row) => [row.day, row]));
   for (const bucket of buckets) {
     const day = new Date(new Date(bucket.start).getTime() + HK_OFFSET_MS).toISOString().slice(0, 10);

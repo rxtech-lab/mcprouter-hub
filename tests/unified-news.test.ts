@@ -1,4 +1,6 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
+import { migrate } from "drizzle-orm/libsql/migrator";
+import { db, newsContent } from "@/db";
 import { services } from "@/generated/registry";
 import { executeTool } from "@/lib/mcp/runtime";
 
@@ -9,14 +11,22 @@ function call(name: string, input: Record<string, unknown> = {}) {
 afterEach(() => vi.unstubAllEnvs());
 
 describe("Unified news contract", () => {
-  it("registers two tools globally under all three upstream API entries", () => {
+  it("registers news, search and scrape tools globally under all three upstream API entries", () => {
     expect(service.region).toBe("global");
     expect(service.apis).toEqual(["API-3820", "API-3821", "API-3822"]);
-    expect(service.tools.map((t) => t.name)).toEqual(["list_top_news", "get_news_detail"]);
+    expect(service.tools.map((t) => t.name)).toEqual(["list_top_news", "get_news_detail", "scrape_website", "search_news"]);
   });
   it("rejects unbounded counts before credentials or network", async () => {
     vi.stubEnv("RAPIDAPI_KEY", "");
     for (const x of [0, -1, 51, 1.5, "2", null]) await expect(call("list_top_news", { x })).rejects.toThrow();
+  });
+  it("rejects invalid search queries, limits and private scrape URLs", async () => {
+    vi.stubEnv("FIRECRAWL_API_KEY", "");
+    for (const query of ["", "  ", "x".repeat(501)]) await expect(call("search_news", { query })).rejects.toThrow();
+    for (const limit of [0, 51, 1.5, "2"]) await expect(call("search_news", { query: "news", limit })).rejects.toThrow();
+    for (const url of ["file:///etc/passwd", "https://localhost/path", "https://127.0.0.1/path", "http://[::1]/", "https://example.local/path", "https://user:pass@example.com/path", "https://example.com:8080/path"]) {
+      await expect(call("scrape_website", { url })).rejects.toThrow();
+    }
   });
   it("rejects malformed IDs and foreign or credential-bearing Reuters references before fetching", async () => {
     vi.stubEnv("RAPIDAPI_KEY", "");
@@ -32,12 +42,78 @@ describe("Unified news contract", () => {
 
 // Run against the Postman simulation; this suite uses the real runtime and HTTP fetcher.
 describe.skipIf(!process.env.UNIFIED_NEWS_SIM_URL)("Unified news over real HTTP", () => {
+  beforeAll(async () => { await migrate(db, { migrationsFolder: "db/migrations" }); });
   function configure(key = "simulation-ok") {
     vi.stubEnv("RAPIDAPI_KEY", key);
     vi.stubEnv("TRADE_BLOOM_BASE_URL", `${process.env.UNIFIED_NEWS_SIM_URL}/trade-bloom`);
     vi.stubEnv("REUTERS_BASE_URL", `${process.env.UNIFIED_NEWS_SIM_URL}/reuters`);
     vi.stubEnv("HACKER_NEWS_BASE_URL", `${process.env.UNIFIED_NEWS_SIM_URL}/hacker-news${key === "simulation-both-error" ? "/error" : ""}`);
+    vi.stubEnv("FIRECRAWL_BASE_URL", `${process.env.UNIFIED_NEWS_SIM_URL}/firecrawl/v2`);
+    vi.stubEnv("FIRECRAWL_API_KEY", "simulation-firecrawl");
+    vi.stubEnv("AI_GATEWAY_API_KEY", "simulation-gateway");
+    vi.stubEnv("NEWS_DECISION_BASE_URL", `${process.env.UNIFIED_NEWS_SIM_URL}/decision`);
   }
+  async function scrapeCount() {
+    return (await (await fetch(`${process.env.UNIFIED_NEWS_SIM_URL}/firecrawl/stats`)).json()).scrapes as number;
+  }
+  it("scrapes missing HN body after a decision and reuses content saved in the database", async () => {
+    configure();
+    await db.delete(newsContent);
+    const before = await scrapeCount();
+    const result = (await call("get_news_detail", { id: "hacker-news:101" })).data;
+    expect(result).toMatchObject({ article: { id: 101 }, content: { source: "firecrawl", cached: false, markdown: expect.stringContaining("Full article body") } });
+    expect(await db.select().from(newsContent)).toMatchObject([{ url: "https://example.com/story", markdown: expect.stringContaining("Full article body") }]);
+    const { scrapeArticle } = await import("@/lib/news/firecrawl");
+    const { handlerContext } = await import("@/lib/mcp/runtime");
+    const saved = await scrapeArticle("https://example.com/story", handlerContext(service, service.tools[1]));
+    expect(saved.cached).toBe(true);
+    expect(await scrapeCount()).toBe(before + 1);
+  });
+  it("keeps an existing Reuters body and an HN self-post without scraping", async () => {
+    configure();
+    const before = await scrapeCount();
+    const id = `reuters:${Buffer.from("https://www.reuters.com/world/example-1/").toString("base64url")}`;
+    expect((await call("get_news_detail", { id })).data).not.toHaveProperty("content");
+    expect((await call("get_news_detail", { id: "hacker-news:102" })).data).toMatchObject({ article: { text: "<p>Example question</p>" } });
+    expect(await scrapeCount()).toBe(before);
+  });
+  it("fails without scraping when the decision model fails", async () => {
+    configure();
+    vi.stubEnv("NEWS_DECISION_BASE_URL", `${process.env.UNIFIED_NEWS_SIM_URL}/decision/outage`);
+    const before = await scrapeCount();
+    const id = `reuters:${Buffer.from("https://www.reuters.com/world/example-2/").toString("base64url")}`;
+    await expect(call("get_news_detail", { id })).rejects.toThrow("decision failed");
+    expect(await scrapeCount()).toBe(before);
+  });
+  it("searches news and supports stateless details from search IDs", async () => {
+    configure();
+    const result = (await call("search_news", { query: "technology", limit: 2 })).data as { news: { id: string }[] };
+    expect(result).toMatchObject({ returned: 1, news: [{ provider: "firecrawl", title: "Example news" }] });
+    expect((await call("get_news_detail", { id: result.news[0].id })).data).toMatchObject({ provider: "firecrawl", content: { url: "https://example.com/search-story" } });
+  });
+  it("reuses a saved scrape without Firecrawl credentials and coalesces concurrent requests", async () => {
+    configure();
+    const before = await scrapeCount();
+    await Promise.all(Array.from({ length: 3 }, () => call("scrape_website", { url: "https://example.com/concurrent" })));
+    vi.stubEnv("FIRECRAWL_API_KEY", "");
+    expect((await call("scrape_website", { url: "https://example.com/concurrent#fragment" })).data).toMatchObject({ cached: true });
+    expect(await scrapeCount()).toBe(before + 1);
+  });
+  it.each(["rate-limit", "provider-error", "invalid-json", "blocked", "empty", "oversized"])("does not cache a failed scrape: %s", async (mode) => {
+    configure();
+    const url = `https://example.com/${mode}`;
+    const before = await scrapeCount();
+    for (let i = 0; i < 2; i++) {
+      await expect(call("scrape_website", { url })).rejects.not.toThrow("secret-echo");
+    }
+    expect(await scrapeCount()).toBe(before + 2);
+  });
+  it("handles empty search, rate limits and malformed search responses", async () => {
+    configure();
+    expect((await call("search_news", { query: "empty" })).data).toMatchObject({ returned: 0, news: [] });
+    await expect(call("search_news", { query: "rate limit" })).rejects.toMatchObject({ code: "upstream_http", status: 429 });
+    await expect(call("search_news", { query: "malformed" })).rejects.toMatchObject({ code: "upstream_parse" });
+  });
   it("requests x per source, deduplicates modules and preserves ranks while interleaving", async () => {
     configure();
     const result = (await call("list_top_news", { x: 2 })).data as { returned: number; partial: boolean; news: { id: string; provider: string }[] };

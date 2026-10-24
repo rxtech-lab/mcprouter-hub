@@ -10,9 +10,8 @@ export type ChatAllowance =
       kind: "member";
       billing: "ready" | "unavailable" | "unconfigured";
       metering: boolean;
-      credits: { unit: string; name: string; available: number }[];
-      chatCredits: { unit: string; name: string; available: number }[];
       chatAllowance: { used: number; limit: number | null; remaining: number | null; resetsAt: string | null } | null;
+      premiumAllowance: { used: number; limit: number | null; remaining: number | null; resetsAt: string | null } | null;
       allowance: { used: number; limit: number | null; remaining: number | null; resetsAt: string | null } | null;
     };
 
@@ -20,19 +19,18 @@ export type ChatAllowance =
 export async function currentChatAllowance(): Promise<ChatAllowance> {
   const user = await getCurrentUser();
   if (!user) return { kind: "guest", quota: await currentFreeChatQuota() };
-  const base = { kind: "member" as const, metering: billingConfig.enabled, credits: [], allowance: null, chatCredits: [], chatAllowance: null };
+  const base = { kind: "member" as const, metering: billingConfig.enabled, allowance: null, chatAllowance: null, premiumAllowance: null };
   if (!subscriptionConfigured) return { ...base, billing: "unconfigured" };
   try {
     const entitlements = await getEntitlements(user);
     const usage = entitlements.usage.find((item) => item.key === billingConfig.usageItem);
     const chat = entitlements.usage.find((item) => item.key === billingConfig.chatUsageItem);
+    const premium = entitlements.usage.find((item) => item.key === billingConfig.premiumUsageItem);
     return {
       ...base,
       billing: "ready",
-      chatCredits: entitlements.balances.filter((balance) => balance.unit === billingConfig.chatCreditUnit).map(({ unit, name, available }) => ({ unit, name, available })),
       chatAllowance: chat ? { used: chat.used, limit: chat.limit, remaining: chat.limit === null ? null : (chat.remaining ?? Math.max(0, chat.limit - chat.used)), resetsAt: chat.resetsAt } : null,
-      credits: entitlements.balances.filter((balance) => !billingConfig.creditUnit || balance.unit === billingConfig.creditUnit)
-        .map(({ unit, name, available }) => ({ unit, name, available })),
+      premiumAllowance: premium ? { used: premium.used, limit: premium.limit, remaining: premium.limit === null ? null : (premium.remaining ?? Math.max(0, premium.limit - premium.used)), resetsAt: premium.resetsAt } : null,
       allowance: usage ? {
         used: usage.used, limit: usage.limit,
         remaining: usage.limit === null ? null : (usage.remaining ?? Math.max(0, usage.limit - usage.used)),

@@ -29,7 +29,8 @@ an error code and HTTP/provider status when available. Any failed source yields
 explicit partial results; all three failed sources produce a tool error. An empty valid
 source is distinguished from an error. There are no automatic retries.
 
-`get_news_detail({"id": "<exact list result id>"})` returns `{id, provider, article}`.
+`get_news_detail({"id": "<exact list or search result id>"})` preserves provider data
+in `{id, provider, article}` and adds `content` when a saved/Firecrawl body is used.
 `article` preserves the provider's data object, including its original content
 structure. Trade Bloom returns the matching bulletin object from `data[]`, with
 metadata such as title, URLs, tickers and word count, not full article text.
@@ -42,12 +43,13 @@ The provider prefixes and routing are:
 | `trade-bloom:` | 14-character `internalID` | `GET /stories/bulletin?ids=...` |
 | `reuters:` | Base64url-encoded canonical HTTPS Reuters URL | `GET /details?url=...` |
 | `hacker-news:` | Positive safe-integer item ID | `GET /v0/item/<id>.json` |
+| `firecrawl:` | Base64url-encoded public article URL | Saved content or `POST /v2/scrape` |
 
 IDs are stateless, survive process restarts and need no preceding list call.
 Reuters references must resolve to `reuters.com` or `www.reuters.com`; credentials,
 foreign hosts, ports, fragments and non-HTTPS URLs are rejected. Trade Bloom and Reuters requests
 go to their fixed RapidAPI gateways, with the proper `x-rapidapi-host` header.
-The existing fetcher supplies a 15-second timeout. Authenticated upstream responses
+News detail, search and scrape allow a 60-second upstream timeout; headlines use 15 seconds. Authenticated upstream responses
 bypass the shared cache, whose key does not include credentials.
 
 ## Hacker News
@@ -61,10 +63,65 @@ request failure or malformed response fails that source explicitly. No retries o
 
 Story URLs accept HTTP/HTTPS without credentials; absent or unsafe URLs fall back to
 `https://news.ycombinator.com/item?id=<id>`. The summary is the optional story `text`
-(HTML), not fetched article content. Detail returns the original story object with
-metadata such as score, author and comment IDs, not the linked article or comment tree.
+(HTML), not fetched article content. Detail preserves the original story object with
+metadata such as score, author and comment IDs. Missing bodies use the fallback below.
 Missing, deleted, dead and non-story details return an explicit unavailable error.
 RapidAPI credentials are never sent to Hacker News.
+
+## Firecrawl search and article fallback
+
+Configure server-only `FIRECRAWL_API_KEY` and `AI_GATEWAY_API_KEY`, with optional
+`NEWS_DECISION_MODEL` (default `typesafe-ai/jev`). Apply `0012_news_content` using
+`bun run db:migrate` before serving requests. The build also applies migrations.
+The development credential is stored only in ignored `.env`; deployment must
+configure its own environment. Never use a `NEXT_PUBLIC_` key.
+
+`search_news({"query":"technology news","limit":10})` calls Firecrawl v2 search
+with `sources: ["news"]`. A nonblank query of at most 500 characters is required;
+limit defaults to 10 and accepts 1–50. Results include `id`, `provider: "firecrawl"`,
+title, URL, summary and publication time (or null). Results preserve source order,
+deduplicate identical URLs, and accept an empty result list. Search returns
+headlines only; `get_news_detail` accepts its stateless IDs to retrieve content.
+
+`scrape_website({"url":"https://example.com/article"})` returns
+`{url, markdown, source: "firecrawl", cached, scrapedAt}`. Firecrawl's v2 scrape
+uses main content, Markdown, PDF parsing and a two-day provider cache maximum age.
+Successful content is stored in the `news_content` database table by normalized
+URL, without fragments. The application cache has no expiry and works across
+process restarts and across the scrape/detail tools. Concurrent scrapes in one
+process share an in-flight request; separate instances may still scrape concurrently.
+
+For provider details, the tool first looks for saved URL content. On a cache miss,
+the AI SDK Decision API checks whether the original provider object includes an
+actual article/self-post body. A present body is returned unchanged. Metadata,
+summaries and teasers alone trigger scraping of the linked public page; the result
+is added as `content.markdown` while preserving the original `article`. A self-post
+body can be returned without an external URL. Missing bodies without a usable URL,
+Decision API outages, scrape errors and database failures are explicit errors.
+There are no automatic retries and no scrape after a decision failure.
+
+Only nonempty successful Markdown up to 90 KB is cached. HTTP/provider errors,
+invalid JSON, empty content, failed page status and oversized responses are not
+cached; upstream error bodies are redacted. Public HTTP(S) URLs are required;
+credentials, custom ports, IP literals and local hostnames are rejected. Firecrawl
+handles target DNS/redirect safety and publisher access restrictions; a successful
+scrape does not guarantee that a publisher supplied the complete article.
+
+Contracts were checked against the official [search](https://docs.firecrawl.dev/api-reference/endpoint/search)
+and [scrape](https://docs.firecrawl.dev/api-reference/endpoint/scrape) documentation
+and Orbit's v2 scrape integration brief on 2026-10-25. Postman owner mock lookup
+was skipped because the CLI is signed out; local fixtures are synthetic.
+
+`FIRECRAWL_BASE_URL` (including `/v2`) and `NEWS_DECISION_BASE_URL` are optional
+server-only overrides used by the HTTP simulation. Leave them unset in production.
+
+Verification on 2026-10-25: the five-member HTTP simulation and full suite passed
+(4,510 tests passed, five skipped). Typecheck, lint, generated
+catalogue and translation checks passed. Live Decision API classified metadata
+and self-post fixtures; Firecrawl returned nonempty Markdown, which a fresh process
+reused from SQLite without a Firecrawl key. Live news search accepted the request
+and returned an empty list. The new table migration was applied to the configured
+Turso database after verifying its existing migration state. No deployment was run.
 
 ## Provider contracts inspected in Chrome (2026-10-25 HKT)
 

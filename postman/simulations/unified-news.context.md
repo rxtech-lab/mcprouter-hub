@@ -5,7 +5,8 @@ response shapes are documented in `docs/unified-news.md`.
 
 ## Purpose
 
-Exercise the registered news tools against all three HTTP dependencies. The local
+Exercise the registered news tools against the three headline providers, Firecrawl
+and the Decision API. The local
 mock handlers contain synthetic examples based on Trade Bloom's observed bulletin
 metadata array, provider error envelopes, and official Hacker News story/item shapes.
 
@@ -14,7 +15,7 @@ metadata array, provider error envelopes, and official Hacker News story/item sh
 1. `postman simulation run postman/simulations/unified-news.sim.yaml --port 4988 --output ndjson`
 2. Use the listening event's base URL:
    `UNIFIED_NEWS_SIM_URL=http://localhost:4988 bunx vitest run tests/unified-news.test.ts`
-3. Inspect request events for both members; stop the foreground simulation with Ctrl-C.
+3. Inspect request events for all five members; stop the foreground simulation with Ctrl-C.
 
 ## Assumptions
 
@@ -27,6 +28,13 @@ metadata array, provider error envelopes, and official Hacker News story/item sh
 ## Observations
 
 <!-- begin:observations -->
+- 2026-10-25: All five members served requests in the Firecrawl fallback run;
+  none stayed silent. Registered-tool HTTP tests exercised decision-before-scrape,
+  existing-body bypass, saved-content reuse, concurrent scrape coalescing, search
+  IDs and failures without caching. Migrations ran against a local test database.
+- 2026-10-25: Separate live smoke checks classified metadata and self-post content,
+  retrieved nonempty Firecrawl Markdown, and reused the SQLite row in a fresh process
+  without a Firecrawl key. Live news search returned a valid empty result list.
 - 2026-10-25: Bulletin change: 36 focused tests passed over HTTP. All three members
   served requests; Trade Bloom used `ids`, matched bulletin identity, and rejected
   access errors, empty/unmatched arrays, duplicate matches and oversized metadata.
@@ -37,9 +45,6 @@ metadata array, provider error envelopes, and official Hacker News story/item sh
   empty feeds and missing RapidAPI credentials passed. Owner search remains skipped
   because the CLI is signed out. A separate live registered-tool check returned
   two top Hacker News stories and detail for item 8863 without RapidAPI credentials.
-- 2026-10-25: Both members served requests from the registered tools via the real
-  shared HTTP fetcher; no member stayed silent. Ranking, detail routing and source
-  failures were exercised by `tests/unified-news.test.ts`.
 <!-- end:observations -->
 
 ## What didn't work

@@ -8,6 +8,13 @@ export type ToolMode = (typeof TOOL_MODES)[number];
 const createdAt = () =>
   integer("created_at", { mode: "timestamp_ms" }).notNull().default(sql`(unixepoch() * 1000)`);
 
+/** Successful public article scrapes, reused across news sources and process restarts. */
+export const newsContent = sqliteTable("news_content", {
+  url: text("url").primaryKey(),
+  markdown: text("markdown").notNull(),
+  scrapedAt: createdAt(),
+});
+
 export const apiKeys = sqliteTable(
   "api_keys",
   {

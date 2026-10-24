@@ -215,6 +215,7 @@ export type CatalogTopup = {
   description: string | null;
   unit: string | null;
   amount: number;
+  grants?: Array<{ unit: string; name: string; amount: number }>;
   priceAmountCents: number;
   currency: string;
   eligible: boolean | null;

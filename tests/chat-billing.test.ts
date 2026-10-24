@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { UsageLimitError } from "@/lib/billing/errors";
 
-const mocks = vi.hoisted(() => ({ debit: vi.fn(), record: vi.fn(), config: { enabled: true, chatCreditUnit: "chat" } }));
+const mocks = vi.hoisted(() => ({ debit: vi.fn(), record: vi.fn(), config: { enabled: true, chatUsageItem: "chat" } }));
 vi.mock("@/lib/billing/config", () => ({ billingConfig: mocks.config }));
 vi.mock("@/lib/billing/subscription", () => ({ debitBalance: mocks.debit, recordUsage: mocks.record }));
 import { consumeChatMessage, DuplicateChatMessageError } from "@/lib/billing/chat";
@@ -9,34 +9,35 @@ import { consumeChatMessage, DuplicateChatMessageError } from "@/lib/billing/cha
 beforeEach(() => {
   vi.clearAllMocks();
   mocks.config.enabled = true;
-  mocks.debit.mockResolvedValue({ duplicate: false, balanceAfter: 0 });
+  mocks.record.mockResolvedValue({ duplicate: false, allowed: true, used: 1, limit: 50, remaining: 49 });
 });
 
-describe("chat balance gate", () => {
-  it.each(["web", "telegram", "whatsapp"] as const)("debits exactly one chat unit before a %s message", async (channel) => {
+describe("chat usage gate", () => {
+  it.each(["web", "telegram", "whatsapp"] as const)("records exactly one chat event before a %s message", async (channel) => {
     await consumeChatMessage({ userId: "member", messageId: "message-1", channel });
-    expect(mocks.debit).toHaveBeenCalledExactlyOnceWith(expect.objectContaining({ rxlabUserId: "member", unit: "chat", amount: 1, metadata: { channel } }));
-    // Recording usage as well could charge overage a second time.
-    expect(mocks.record).not.toHaveBeenCalled();
+    expect(mocks.record).toHaveBeenCalledExactlyOnceWith(expect.objectContaining({ rxlabUserId: "member", item: "chat", amount: 1, metadata: { channel } }));
+    // Only the usage API may decide whether to debit overage.
+    expect(mocks.debit).not.toHaveBeenCalled();
   });
 
-  it("refuses a zero balance without consulting an unlimited plan allowance", async () => {
-    mocks.debit.mockRejectedValue(new UsageLimitError("chat", "insufficient_balance", null, null));
-    await expect(consumeChatMessage({ userId: "member", messageId: "message-1", channel: "web" })).rejects.toMatchObject({ reason: "insufficient_balance" });
-    expect(mocks.record).not.toHaveBeenCalled();
+  it("refuses an exhausted usage allowance", async () => {
+    mocks.record.mockRejectedValue(new UsageLimitError("chat", "limit_exceeded", 50, 50));
+    await expect(consumeChatMessage({ userId: "member", messageId: "message-1", channel: "web" })).rejects.toMatchObject({ reason: "limit_exceeded" });
+    expect(mocks.debit).not.toHaveBeenCalled();
   });
 
-  it("uses a stable debit key and refuses duplicate agent runs", async () => {
+  it("uses a stable usage key and refuses duplicate agent runs", async () => {
     const input = { userId: "member", messageId: "message-1", channel: "web" as const };
     await consumeChatMessage(input);
-    mocks.debit.mockResolvedValue({ duplicate: true, balanceAfter: 0 });
+    mocks.record.mockResolvedValue({ duplicate: true, allowed: true, used: 1, limit: 50, remaining: 49 });
     await expect(consumeChatMessage(input)).rejects.toBeInstanceOf(DuplicateChatMessageError);
-    expect(mocks.debit.mock.calls[0][0].idempotencyKey).toBe(mocks.debit.mock.calls[1][0].idempotencyKey);
+    expect(mocks.record.mock.calls[0][0].idempotencyKey).toBe(mocks.record.mock.calls[1][0].idempotencyKey);
   });
 
   it("does not call billing when metering is disabled", async () => {
     mocks.config.enabled = false;
     await consumeChatMessage({ userId: "member", messageId: "message-1", channel: "web" });
     expect(mocks.debit).not.toHaveBeenCalled();
+    expect(mocks.record).not.toHaveBeenCalled();
   });
 });

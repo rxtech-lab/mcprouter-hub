@@ -17,3 +17,9 @@ mocks:
   - name: unified-news-hacker-news
     routeKey: hacker-news
     path: ../mocks/unified-news-hacker-news/config.yaml
+  - name: news-firecrawl
+    routeKey: firecrawl
+    path: ../mocks/news-firecrawl/config.yaml
+  - name: news-content-decision
+    routeKey: decision
+    path: ../mocks/news-content-decision/config.yaml
