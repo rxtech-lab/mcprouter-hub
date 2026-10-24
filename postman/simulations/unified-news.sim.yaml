@@ -14,3 +14,6 @@ mocks:
   - name: unified-news-reuters
     routeKey: reuters
     path: ../mocks/unified-news-reuters/config.yaml
+  - name: unified-news-hacker-news
+    routeKey: hacker-news
+    path: ../mocks/unified-news-hacker-news/config.yaml

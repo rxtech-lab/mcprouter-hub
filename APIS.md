@@ -2,14 +2,14 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **312 of 3821 implemented**, 3509 coming soon.
-1771 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **313 of 3822 implemented**, 3509 coming soon.
+1772 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
 ## Implementing an API
 
 1. Pick a coming-soon id below (or add a new entry at the end of [`mcp/apis.yaml`](mcp/apis.yaml) with the next id,
-   currently `API-3822`). Ids are permanent: never reuse or renumber one.
+   currently `API-3823`). Ids are permanent: never reuse or renumber one.
 2. Build the service (see [Adding an MCP service](README.md#adding-an-mcp-service)) and list the id under `apis:` in its
    `service.yaml`, with the API's datasets under `datasets:`.
 3. Run `bun run codegen`. The API flips to implemented here and on the website.
@@ -3945,3 +3945,4 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-3691` | [No. of Recipients of major Civil Service Housing Benefits](https://data.gov.hk/en-data/dataset/hk-try-tryhousing-civil-service-housing-benefits) | Files | Treasury | 🕒 Coming soon | — |
 | `API-3748` | [Staff Establishment](https://data.gov.hk/en-data/dataset/hk-wsd-wsd3-staff-establishment) | Files | Water Supplies Department | 🕒 Coming soon | — |
 | `API-3821` | [Reuters API news](https://rapidapi.com/mahmudulhasandev/api/reuters-api) | API | mahmudulhasandev (RapidAPI) | ✅ Implemented | [Global News](mcp/services/unified-news/service.yaml) |
+| `API-3822` | [Hacker News](https://github.com/HackerNews/API) | API | Y Combinator | ✅ Implemented | [Global News](mcp/services/unified-news/service.yaml) |

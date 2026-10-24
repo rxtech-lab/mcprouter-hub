@@ -67,8 +67,8 @@ export const liveCases: Record<string, LiveCase> = {
     input: { x: 1 },
     check: (result) => {
       const data = result.data as { partial?: boolean; providers?: { status: string; returned: number }[] };
-      return data.partial === false && data.providers?.length === 2 && data.providers.every((p) => p.status === "ok" && p.returned > 0)
-        ? null : "Expected non-empty headlines from both news providers";
+      return data.partial === false && data.providers?.length === 3 && data.providers.every((p) => p.status === "ok" && p.returned > 0)
+        ? null : "Expected non-empty headlines from all three news providers";
     },
   },
   get_news_detail: {

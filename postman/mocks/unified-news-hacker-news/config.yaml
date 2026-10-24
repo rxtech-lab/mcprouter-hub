@@ -1,0 +1,9 @@
+version: 1
+name: unified-news-hacker-news
+slug: unified-news-hacker-news
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

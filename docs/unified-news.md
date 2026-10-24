@@ -8,14 +8,16 @@ must include Global to expose it.
 Set `RAPIDAPI_KEY` in the server's `.env` and subscribe to both providers on RapidAPI.
 Next.js loads `.env` into the server environment; the key is never bundled for clients.
 Production needs the same environment variable in its deployment settings.
+Hacker News uses its public official API and requires no key. Missing RapidAPI
+credentials are reported as `configuration_error` errors for the two paid sources; Hacker News remains available.
 
 ## Tool contract
 
-`list_top_news({"x": 10})` returns up to 10 unique articles **per source** (20 total).
+`list_top_news({"x": 10})` returns up to 10 unique articles **per source** (30 total).
 `x` defaults to 10 and accepts integers 1–50. Trade Bloom's home-page top-news feed
 contains non-article modules; only article stories with detail IDs are included.
 Each provider's rank is retained, duplicates within that provider are removed,
-and the two ranked lists are interleaved, starting with Trade Bloom. No cross-source
+and the three ranked lists are interleaved in Trade Bloom, Reuters, Hacker News order. No cross-source
 deduplication or claim of a common editorial ranking is made. A provider may have
 fewer available articles than requested.
 
@@ -23,8 +25,8 @@ The result includes `requestedPerProvider`, `returned`, `partial`, `providers`, 
 `news`. Each news item has `id`, `provider`, `title`, `url`, `publishedAt` (ISO timestamp
 or null), and `summary` (or null). Titles are capped at 1,000 characters and summaries
 at 2,000. Each provider status includes its returned count; failures also include
-an error code and HTTP/provider status when available. One failed source yields
-explicit partial results; two failed sources produce a tool error. An empty valid
+an error code and HTTP/provider status when available. Any failed source yields
+explicit partial results; all three failed sources produce a tool error. An empty valid
 source is distinguished from an error. There are no automatic retries.
 
 `get_news_detail({"id": "<exact list result id>"})` returns `{id, provider, article}`.
@@ -36,13 +38,30 @@ The provider prefixes and routing are:
 |---|---|---|
 | `trade-bloom:` | 14-character `internalID` | `GET /stories/detail?id=...` |
 | `reuters:` | Base64url-encoded canonical HTTPS Reuters URL | `GET /details?url=...` |
+| `hacker-news:` | Positive safe-integer item ID | `GET /v0/item/<id>.json` |
 
 IDs are stateless, survive process restarts and need no preceding list call.
 Reuters references must resolve to `reuters.com` or `www.reuters.com`; credentials,
-foreign hosts, ports, fragments and non-HTTPS URLs are rejected. Requests always
-go to the fixed RapidAPI gateway, with the proper `x-rapidapi-host` header.
+foreign hosts, ports, fragments and non-HTTPS URLs are rejected. Trade Bloom and Reuters requests
+go to their fixed RapidAPI gateways, with the proper `x-rapidapi-host` header.
 The existing fetcher supplies a 15-second timeout. Authenticated upstream responses
 bypass the shared cache, whose key does not include credentials.
+
+## Hacker News
+
+The [official API contract](https://github.com/HackerNews/API) and Orbit discovery
+were checked on 2026-10-25. `GET /v0/topstories.json` returns ranked IDs; the service
+examines the first `x` unique candidates and fetches items with at most ten concurrent
+requests (at most `x + 1` requests total). Missing, deleted, dead and non-story items
+are skipped without backfilling, so fewer than `x` stories may be returned. An item
+request failure or malformed response fails that source explicitly. No retries occur.
+
+Story URLs accept HTTP/HTTPS without credentials; absent or unsafe URLs fall back to
+`https://news.ycombinator.com/item?id=<id>`. The summary is the optional story `text`
+(HTML), not fetched article content. Detail returns the original story object with
+metadata such as score, author and comment IDs, not the linked article or comment tree.
+Missing, deleted, dead and non-story details return an explicit unavailable error.
+RapidAPI credentials are never sent to Hacker News.
 
 ## Provider contracts inspected in Chrome (2026-10-25 HKT)
 
@@ -63,7 +82,7 @@ bypass the shared cache, whose key does not include credentials.
   `data_source: "live"` label does not independently establish reporting quality
   or freshness.
 
-Orbit discovery returned no matching contracts for the chosen providers, so the
+Orbit discovery returned no matching contracts for the two RapidAPI providers, so the
 Chrome playgrounds supplied the contracts. Postman is signed out; the owner mock
 search was skipped. The local simulation uses explicitly synthetic structural
 examples and the observed Trade Bloom detail failure, not invented successful detail.
@@ -77,11 +96,12 @@ UNIFIED_NEWS_SIM_URL=http://localhost:4988 bunx vitest run tests/unified-news.te
 ```
 
 Use synthetic credentials only. The tests direct the real registered tools and
-HTTP fetcher to both simulation members. They cover ranking, routing, source limits,
+HTTP fetcher to all three simulation members. They cover ranking, routing, source limits,
 duplicate stories, empty feeds, JSON/HTTP/envelope errors, partial failure, complete
 failure, unknown detail and credential redaction. These results establish behavior
 against stand-ins; live end-to-end validation still requires a configured `.env`
 key and successful provider access to Trade Bloom details.
 
-`TRADE_BLOOM_BASE_URL` and `REUTERS_BASE_URL` are server-only overrides for local
-simulation. Leave them unset for live RapidAPI calls.
+`TRADE_BLOOM_BASE_URL`, `REUTERS_BASE_URL` and `HACKER_NEWS_BASE_URL` are server-only overrides for local
+simulation. Leave them unset for live provider calls. The Hacker News override includes `/v0`
+when pointing at the official API; the simulation member serves that base directly.
