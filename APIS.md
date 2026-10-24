@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **301 of 3819 implemented**, 3518 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **310 of 3819 implemented**, 3509 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -1770,18 +1770,18 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-1896` | [Training Facilities](https://data.gov.hk/en-data/dataset/hk-fsd-fsd1-fsdtrainingfac) | API | Fire Services Department | 🕒 Coming soon | — |
 | `API-1959` | [Award of Contracts for the Sale of Domestic Properties under the purview of Government Property Agency (From 2021 onwards)](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-d-acsdp-cs) | API | Government Property Agency | 🕒 Coming soon | — |
 | `API-1960` | [Domestic Properties Available for Leasing under the purview of Government Property Agency](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-d-dpal-cs) | API | Government Property Agency | 🕒 Coming soon | — |
-| `API-1961` | [Domestic Properties Available for Sale under the purview of Government Property Agency](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-d-dpas-cs) | API | Government Property Agency | 🕒 Coming soon | — |
-| `API-1962` | [Open Space for Public Use in Joint-user Government Offices managed by Government Property Agency](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-d-ospugo-cs) | API | Government Property Agency | 🕒 Coming soon | — |
-| `API-1963` | [Surplus Government Accommodation Available for Leasing to Non-Governmental Organisations](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-d-sgaal-cs) | API | Government Property Agency | 🕒 Coming soon | — |
+| `API-1961` | [Domestic Properties Available for Sale under the purview of Government Property Agency](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-d-dpas-cs) | API | Government Property Agency | ✅ Implemented | [GPA Properties and Public Open Spaces](mcp/services/gpa-properties/service.yaml) |
+| `API-1962` | [Open Space for Public Use in Joint-user Government Offices managed by Government Property Agency](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-d-ospugo-cs) | API | Government Property Agency | ✅ Implemented | [GPA Properties and Public Open Spaces](mcp/services/gpa-properties/service.yaml) |
+| `API-1963` | [Surplus Government Accommodation Available for Leasing to Non-Governmental Organisations](https://data.gov.hk/en-data/dataset/hk-gpa-msd-gpa-psi-d-sgaal-cs) | API | Government Property Agency | ✅ Implemented | [GPA Properties and Public Open Spaces](mcp/services/gpa-properties/service.yaml) |
 | `API-1982` | [Bituminous Material Suppliers on Approved List](https://data.gov.hk/en-data/dataset/hk-hyd-bmsal-bituminous-material-suppliers-on-approved-list) | Files | Highways Department | 🕒 Coming soon | — |
 | `API-1983` | [Yearly Bituminous Material Consumption](https://data.gov.hk/en-data/dataset/hk-hyd-bmsal-yearly-bituminous-material-consumption) | Files | Highways Department | 🕒 Coming soon | — |
 | `API-2011` | [Tender Award and Forecast](https://data.gov.hk/en-data/dataset/hk-hyd-taf-tender-award-forecast) | Files | Highways Department | 🕒 Coming soon | — |
-| `API-2027` | [Existing Village/ Market Town Boundaries for Rural Representative Election (2019-2022)](https://data.gov.hk/en-data/dataset/hk-had-json1-existing-village-market-town-boundary-1922) | API | Home Affairs Department | 🕒 Coming soon | — |
-| `API-2028` | [Existing Village/ Market Town Boundaries for Rural Representative Election (2023-2026)](https://data.gov.hk/en-data/dataset/hk-had-json1-existing-village-market-town-boundary-2326) | API | Home Affairs Department | 🕒 Coming soon | — |
-| `API-2029` | [Existing Village/ Market Town Boundaries for Rural Representative Election (2027-2030)](https://data.gov.hk/en-data/dataset/hk-had-json1-existing-village-market-town-boundary-2730) | API | Home Affairs Department | 🕒 Coming soon | — |
-| `API-2031` | [Historical District Boundary](https://data.gov.hk/en-data/dataset/hk-had-json1-historical-district-boundary) | API | Home Affairs Department | 🕒 Coming soon | — |
-| `API-2033` | [District boundary](https://data.gov.hk/en-data/dataset/hk-had-json1-hong-kong-administrative-boundaries) | API | Home Affairs Department | 🕒 Coming soon | — |
-| `API-2044` | [Permitted Burial Grounds boundaries](https://data.gov.hk/en-data/dataset/hk-had-json1-permitted-burial-grounds-boundaries) | API | Home Affairs Department | 🕒 Coming soon | — |
+| `API-2027` | [Existing Village/ Market Town Boundaries for Rural Representative Election (2019-2022)](https://data.gov.hk/en-data/dataset/hk-had-json1-existing-village-market-town-boundary-1922) | API | Home Affairs Department | ✅ Implemented | [Home Affairs Boundaries](mcp/services/had-boundaries/service.yaml) |
+| `API-2028` | [Existing Village/ Market Town Boundaries for Rural Representative Election (2023-2026)](https://data.gov.hk/en-data/dataset/hk-had-json1-existing-village-market-town-boundary-2326) | API | Home Affairs Department | ✅ Implemented | [Home Affairs Boundaries](mcp/services/had-boundaries/service.yaml) |
+| `API-2029` | [Existing Village/ Market Town Boundaries for Rural Representative Election (2027-2030)](https://data.gov.hk/en-data/dataset/hk-had-json1-existing-village-market-town-boundary-2730) | API | Home Affairs Department | ✅ Implemented | [Home Affairs Boundaries](mcp/services/had-boundaries/service.yaml) |
+| `API-2031` | [Historical District Boundary](https://data.gov.hk/en-data/dataset/hk-had-json1-historical-district-boundary) | API | Home Affairs Department | ✅ Implemented | [Home Affairs Boundaries](mcp/services/had-boundaries/service.yaml) |
+| `API-2033` | [District boundary](https://data.gov.hk/en-data/dataset/hk-had-json1-hong-kong-administrative-boundaries) | API | Home Affairs Department | ✅ Implemented | [Home Affairs Boundaries](mcp/services/had-boundaries/service.yaml) |
+| `API-2044` | [Permitted Burial Grounds boundaries](https://data.gov.hk/en-data/dataset/hk-had-json1-permitted-burial-grounds-boundaries) | API | Home Affairs Department | ✅ Implemented | [Home Affairs Boundaries](mcp/services/had-boundaries/service.yaml) |
 | `API-3010` | [Redevelopment and Conversion of Industrial Buildings](https://data.gov.hk/en-data/dataset/hk-landsd-lao-executed-land-exchange-cases) | Files | Lands Department | 🕒 Coming soon | — |
 | `API-3011` | [Redevelopment and Conversion of Industrial Buildings](https://data.gov.hk/en-data/dataset/hk-landsd-lao-executed-lease-modification-cases) | Files | Lands Department | 🕒 Coming soon | — |
 | `API-3012` | [Redevelopment and Conversion of Industrial Buildings](https://data.gov.hk/en-data/dataset/hk-landsd-lao-executed-special-waiver-cases) | Files | Lands Department | 🕒 Coming soon | — |

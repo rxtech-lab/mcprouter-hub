@@ -52,6 +52,17 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Batch079: verified GPA and HAD feature layers; indoor archive remains blocked.
+  gpa_domestic_properties_for_sale: { input: { limit: 1 }, check: nonEmptyPage },
+  gpa_government_office_open_spaces: { input: { limit: 1 }, check: nonEmptyPage },
+  gpa_ngo_accommodation: { input: { limit: 1 }, check: nonEmptyPage },
+  had_village_boundaries_2019_2022: { input: { limit: 1 }, check: nonEmptyPage },
+  had_village_boundaries_2023_2026: { input: { limit: 1 }, check: nonEmptyPage },
+  had_village_boundaries_2027_2030: { input: { limit: 1 }, check: nonEmptyPage },
+  had_historical_district_boundaries: { input: { limit: 1 }, check: nonEmptyPage },
+  had_district_boundaries: { input: { limit: 1 }, check: nonEmptyPage },
+  had_permitted_burial_boundaries: { input: { limit: 1 }, check: nonEmptyPage },
+
   // Batch073: only the five sources with usable current bodies.
   hkma_information_centre: { input: { limit: 1 }, check: nonEmptyPage },
   hkstp_companies: { input: { limit: 1 }, check: nonEmptyPage },
