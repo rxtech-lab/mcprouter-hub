@@ -1,0 +1,48 @@
+[
+  {
+    "api": "API-2190",
+    "capture": "2190-features-body",
+    "captureSha256": "95cf5a6bf718e82a1227dd1b67692cbaa441b676b61b19832ad8c8989344cf65",
+    "fixture": "2190.json",
+    "fixtureSha256": "6fd7555a7182d7737e5817cc98d8d3d8b61a96a7ae30a65b2941144e3875a660",
+    "derivation": "Leading records only; envelope count adjusted for fixture. No source field values altered."
+  },
+  {
+    "api": "API-2414",
+    "capture": "2414-decoded.json",
+    "captureSha256": "c143019bebfdb45d072cc6e75bc749f8100aecb44947675132380992cc5434d0",
+    "fixture": "2414.json",
+    "fixtureSha256": "3a13fab3f4fc5a1b01817f4bb495f95f84daf7a92f676f8381f67cf5864d9793",
+    "derivation": "Leading records only; envelope count adjusted for fixture. No source field values altered.",
+    "wireCapture": "2414-body",
+    "wireSha256": "dd5d1b6c04d6ede2ef8930ca01e070148d07f318af9bc6b174af5b89c81805a4",
+    "decoding": "gzip decompressed locally, no additional HTTP request"
+  },
+  {
+    "api": "API-2418",
+    "capture": "2418-decoded.json",
+    "captureSha256": "c65fcd9ce59234091d43124f958947baeb4239b55ae19b540d26880b9f5f5d2d",
+    "fixture": "2418.json",
+    "fixtureSha256": "d657ddb2db9b2aeb9cbc499842f4b2e49af80cd09c5fb7281b1261ecddde566a",
+    "derivation": "Leading records only; envelope count adjusted for fixture. No source field values altered.",
+    "wireCapture": "2418-body",
+    "wireSha256": "c6ef072b781b538580e770841a81fecc794e3b5ab92b1ff425bf43e6aaaed04d",
+    "decoding": "gzip decompressed locally, no additional HTTP request"
+  },
+  {
+    "api": "API-2420",
+    "capture": "2420-body",
+    "captureSha256": "43481d9093f1f34d8c6ab6645d233e88cb945ee258256d0fe36d8dd9d286c043",
+    "fixture": "2420.json",
+    "fixtureSha256": "783e9ce4ccf41dcc614c9d1e4c90959e02ce353718c5b8db76f45a525f9e7d66",
+    "derivation": "Leading records only; envelope count adjusted for fixture. No source field values altered."
+  },
+  {
+    "api": "API-2430",
+    "capture": "2430-features-body",
+    "captureSha256": "3eca0e37e1c6dc1022e69613acb72fa2e42ba1876c0a873a7378f41cfe2c40a8",
+    "fixture": "2430.json",
+    "fixtureSha256": "634c5d0d35163496e1817eeedb02a27f79875fb45991efff11222c50d7a23110",
+    "derivation": "Leading records only; envelope count adjusted for fixture. No source field values altered."
+  }
+]

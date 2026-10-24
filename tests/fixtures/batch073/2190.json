@@ -1,0 +1,69 @@
+{
+  "objectIdFieldName": "OBJECTID",
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "Address_EN_",
+      "alias": "Address_EN_",
+      "type": "esriFieldTypeString",
+      "length": 78
+    },
+    {
+      "name": "Address_SC_",
+      "alias": "Address_SC_",
+      "type": "esriFieldTypeString",
+      "length": 54
+    },
+    {
+      "name": "Address_TC_",
+      "alias": "Address_TC_",
+      "type": "esriFieldTypeString",
+      "length": 54
+    },
+    {
+      "name": "NAME_EN_",
+      "alias": "NAME_EN_",
+      "type": "esriFieldTypeString",
+      "length": 28
+    },
+    {
+      "name": "NAME_SC_",
+      "alias": "NAME_SC_",
+      "type": "esriFieldTypeString",
+      "length": 33
+    },
+    {
+      "name": "NAME_TC_",
+      "alias": "NAME_TC_",
+      "type": "esriFieldTypeString",
+      "length": 33
+    },
+    {
+      "name": "OBJECTID",
+      "alias": "OBJECTID",
+      "type": "esriFieldTypeOID"
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "Address_EN_": "55th Floor\nTwo International Finance Centre\n8 Finance Street\nCentral\nHong Kong",
+        "Address_SC_": "香港中环\n金融街8号\n国际金融中心2期55楼",
+        "Address_TC_": "香港中環\n金融街8號\n國際金融中心2期55樓",
+        "NAME_EN_": "Hong Kong Monetary Authority",
+        "NAME_SC_": "香港金融管理局资讯中心",
+        "NAME_TC_": "香港金融管理局資訊中心",
+        "OBJECTID": 1
+      },
+      "geometry": {
+        "x": 114.1592,
+        "y": 22.2852
+      }
+    }
+  ]
+}

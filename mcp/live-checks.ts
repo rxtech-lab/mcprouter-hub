@@ -52,6 +52,13 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Batch073: only the five sources with usable current bodies.
+  hkma_information_centre: { input: { limit: 1 }, check: nonEmptyPage },
+  hkstp_companies: { input: { limit: 1 }, check: nonEmptyPage },
+  hkstp_jobs: { input: { limit: 1 }, check: nonEmptyPage },
+  hkstp_lab_office_space: { input: { limit: 1 }, check: nonEmptyPage },
+  ipostal_kiosks: { input: { limit: 1 }, check: nonEmptyPage },
+
   // Batch066: verified business and energy tables.
   service_business_receipts_indices: { input: { limit: 1 }, check: nonEmptyPage },
   service_business_receipts_yoy: { input: { limit: 1 }, check: nonEmptyPage },
