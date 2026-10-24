@@ -1,0 +1,97 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=625-68011&api_popup=1"
+    },
+    "title": "經季節性調整的食肆總收益數列（2019年10月至2020年9月期內的平均指數 = 100）",
+    "tablenote": [
+      "經季節性調整的數列是採用「X-12 自迴歸－求和－移動平均 (X-12 ARIMA)」方法編製。X-12 ARIMA及其相關版本是編製經季節性調整數列的常用標準方法。經季節性調整的數列可在取得更多數據後作出修訂。在按季食肆總收益指數方面，當每年第1季的數字發表時，會一併修訂對上3年的經季節性調整數列。",
+      "N.A. 沒有數字",
+      "[φ3] 數字代表增減少於 0.05%。"
+    ],
+    "source": "食肆的收入及購貨額按季統計調查 政府統計處經銷服務統計組 (查詢電話：3903 7401  查詢電郵：qsr@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 9,
+      "started": "2026-10-24T00:02:37+00:00",
+      "finished": "2026-10-24T00:02:38+00:00",
+      "durationSeconds": 0.015779
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Q",
+      "period": "200412",
+      "sv": "SA_VAL_IDX_RR",
+      "svDesc": "按季變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "Q",
+      "period": "200503",
+      "sv": "SA_VAL_IDX_RR",
+      "svDesc": "按季變動百分率 (%)",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202509",
+      "sv": "SA_VAL_IDX_RR",
+      "svDesc": "按季變動百分率 (%)",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "200412",
+      "sv": "SA_VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 63.5,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200412",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "按季變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "Q",
+      "period": "200503",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "按季變動百分率 (%)",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201603",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "按季變動百分率 (%)",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "200412",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 102.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 112.7,
+      "sd_value": ""
+    }
+  ]
+}

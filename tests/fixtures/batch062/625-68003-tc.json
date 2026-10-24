@@ -1,0 +1,1085 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=625-68003&api_popup=1"
+    },
+    "title": "按食肆類別劃分的食肆收益",
+    "tablenote": [
+      "2019年10月至2020年9月期內的平均指數 = 100。     價值指數量度在某一期間內與參照期相比的價值變動。數量指數則是將價值指數內的物價變動因素扣除後所得。     因應綜合消費物價指數重訂基期，政府統計處已重訂食肆收益價值及數量指數數列的參照期，新參照期為2019年10至2020年9月，而用以編製食肆收益數量指數的平減物價指數，亦從以2019/20年為基期的綜合消費物價指數數列中相關的項目選取。食肆收益數量指數以聯合國統計司採用的《2008年國民賬戶體系》所定的環比連接法編製。     以上的統計數字是按「香港標準行業分類2.0版」編製。     由於四捨五入關係，個別項目的數字加起來可能與總數略有出入。",
+      "N.A. 沒有數字",
+      "[φ3] 數字代表增減少於 0.05%。"
+    ],
+    "source": "食肆的收入及購貨額按季統計調查 政府統計處經銷服務統計組 (查詢電話：3903 7401  查詢電郵：qsr@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 106,
+      "started": "2026-10-24T00:02:38+00:00",
+      "finished": "2026-10-24T00:02:38+00:00",
+      "durationSeconds": 0.080286
+    }
+  },
+  "dataSet": [
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 13864,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 6667,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 3659,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 2438,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 258,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 841,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 56507,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 26774,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 15192,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 10229,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 1026,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "百萬港元",
+      "figure": 3286,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 64.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 81.3,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 56.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 50.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 100.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 65.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 81.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 58.3,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 53.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 100.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 48.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 6.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 9.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 12.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 7.1,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 3.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Q",
+      "period": "202509",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 104.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 135.3,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 85.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 82.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 147.1,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 87.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 105.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 134.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 88.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 86.1,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 148.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "指數",
+      "figure": 84.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 5.9,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 5.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 9.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 4.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 8.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "中式餐館",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 7.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 11.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "快餐店",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 5.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "酒吧",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 6.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "非中式餐館",
+      "freq": "Q",
+      "period": "201509",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "雜類飲食場所",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "按年變動百分率 (%)",
+      "figure": -3.9,
+      "sd_value": ""
+    }
+  ]
+}

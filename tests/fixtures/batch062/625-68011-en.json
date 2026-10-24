@@ -1,0 +1,97 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=625-68011&api_popup=1"
+    },
+    "title": "Seasonally adjusted series of total restaurant receipts (Average index from October 2019 to September 2020 = 100)",
+    "tablenote": [
+      "The seasonally adjusted series is compiled by the X-12 ARIMA method.  The X-12 ARIMA method and its related versions are the standard method commonly employed in compiling seasonally adjusted data series.  Seasonally adjusted series may be revised as more data become available.  For the quarterly indices of total restaurant receipts, the seasonally adjusted series for the preceding 3 years are revised each year when the figures for the first quarter are published.",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "Quarterly Survey of Restaurant Receipts and Purchases Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone number : 3903 7401  Enquiry e-mail : qsr@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 9,
+      "started": "2026-10-24T00:02:14+00:00",
+      "finished": "2026-10-24T00:02:14+00:00",
+      "durationSeconds": 0.009378
+    }
+  },
+  "dataSet": [
+    {
+      "freq": "Q",
+      "period": "200412",
+      "sv": "SA_VAL_IDX_RR",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "Q",
+      "period": "200503",
+      "sv": "SA_VAL_IDX_RR",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202509",
+      "sv": "SA_VAL_IDX_RR",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "200412",
+      "sv": "SA_VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 63.5,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "200412",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "Q",
+      "period": "200503",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "201603",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "Quarter-to-quarter % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "Q",
+      "period": "200412",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 102.7,
+      "sd_value": ""
+    },
+    {
+      "freq": "Q",
+      "period": "202606",
+      "sv": "SA_VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 112.7,
+      "sd_value": ""
+    }
+  ]
+}

@@ -1,0 +1,1085 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=625-68003&api_popup=1"
+    },
+    "title": "Restaurant receipts by type of restaurant",
+    "tablenote": [
+      "Average index from October 2019 to September 2020 = 100.     The value index measures the changes in value terms in a particular period as compared with a reference period, while the volume index is derived from the value index by adjusting for price changes.     In conjunction with the rebasing of the Composite Consumer Price Index, the series of value and volume indices of restaurant receipts have been re-referenced, taking October 2019 to September 2020 as the new reference period and adopting the relevant components of the 2019/20-based Composite Consumer Price Index as deflators for compiling the volume index of restaurant receipts. The volume index of restaurant receipts is compiled based on the chain-linking approach as stipulated in the System of National Accounts 2008 adopted by the United Nations Statistics Division.     The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0.     The sum of individual items may not add up to the total because of rounding.",
+      "N.A. Not available",
+      "[φ3] Figure denotes increase or decrease of less than 0.05%."
+    ],
+    "source": "Quarterly Survey of Restaurant Receipts and Purchases Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone number : 3903 7401  Enquiry e-mail : qsr@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 106,
+      "started": "2026-10-24T00:02:14+00:00",
+      "finished": "2026-10-24T00:02:15+00:00",
+      "durationSeconds": 0.081373
+    }
+  },
+  "dataSet": [
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 13864,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 6667,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 3659,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 2438,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 258,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 841,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 56507,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 26774,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 15192,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 10229,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 1026,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_RR",
+      "svDesc": "HK$ million",
+      "figure": 3286,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 64.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 81.3,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 56.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 50.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 100.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 50,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 65.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 81.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 58.3,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 53.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 100.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 48.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.1,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Q",
+      "period": "202509",
+      "sv": "VAL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 104.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 135.3,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 85.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 82.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 147.1,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 87.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 105.7,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 134.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 88.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 86.1,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 148.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Index",
+      "figure": 84.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2004",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Q",
+      "period": "200412",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.9,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Q",
+      "period": "200512",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": "",
+      "REST_GRPDesc": "Total",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.2,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 1,
+      "REST_GRPDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.8,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 3,
+      "REST_GRPDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.5,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 4,
+      "REST_GRPDesc": "Bars",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.4,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.6,
+      "sd_value": ""
+    },
+    {
+      "REST_GRP": 2,
+      "REST_GRPDesc": "Non-Chinese restaurants",
+      "freq": "Q",
+      "period": "201509",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "REST_GRP": 5,
+      "REST_GRPDesc": "Miscellaneous eating and drinking places",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "VOL_IDX_RR",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.9,
+      "sd_value": ""
+    }
+  ]
+}
