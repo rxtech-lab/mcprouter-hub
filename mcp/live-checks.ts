@@ -445,6 +445,18 @@ export const liveCases: Record<string, LiveCase> = {
   trades_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
   trades_statistics_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
 
+  // Batch064: verified information, financial and business performance tables.
+  information_communications_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  information_communications_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
+  financial_professional_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  professional_business_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
+  professional_business_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  professional_business_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
+  banking_statistics_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
+  domestic_banking_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  domestic_banking_detailed_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  insurance_detailed_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+
   // Batch063: verified commerce, transport, logistics and communications tables.
   trades_statistics_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
   trades_statistics_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
