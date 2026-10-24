@@ -189,6 +189,9 @@ const sensorOccupancy = [
 
 const cases: Case[] = [
   ...cases079,
+  // Upstream behavior for news is exercised over real HTTP in unified-news.test.ts.
+  { tool: "list_top_news", input: { x: 0 }, error: /Too small/ },
+  { tool: "get_news_detail", input: { id: "unknown:123" }, error: /Invalid string/ },
   ...cases053,
   ...cases027.map((c) => ({ ...c, name: c.file, ttl: 3600, data: expect.objectContaining({ returned: 2, hasMore: true, nextOffset: 2 }) })),
   ...cases025.map((c) => ({ ...c, name: c.file + c.input.lang, ttl: 3600, data: expect.objectContaining({ returned: 2, hasMore: true, nextOffset: 2 }) })),

@@ -1,0 +1,9 @@
+version: 1
+name: unified-news-reuters
+slug: unified-news-reuters
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true
