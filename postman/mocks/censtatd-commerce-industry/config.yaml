@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-commerce-industry
+slug: censtatd-commerce-industry
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

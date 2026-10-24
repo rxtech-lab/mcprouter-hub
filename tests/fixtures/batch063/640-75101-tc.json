@@ -1,0 +1,355 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=640-75101&api_popup=1"
+    },
+    "title": "所有資訊及通訊業公司主要統計數字",
+    "tablenote": [
+      "以上的統計數字是按「香港標準行業分類2.0版」編製。用戶可下載按「香港標準行業分類1.1版」編製的以往統計數字以作參考。     變動百分率是以未經進位數字計算。",
+      "2020年至2022年的數字包括與防疫抗疫措施有關的資助金額。",
+      "[§3] 增減少於 0.05%"
+    ],
+    "source": "政府統計處 商業服務統計組 電話：(852) 3903 7268 電郵：business-services@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 33,
+      "started": "2026-10-24T01:02:08+00:00",
+      "finished": "2026-10-24T01:02:08+00:00",
+      "durationSeconds": 0.010966
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 11.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": -0.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年變動百分率",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 50257,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 58825,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年變動百分率",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 11510,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": -0.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年變動百分率",
+      "figure": 2.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 101953,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": 0.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年變動百分率",
+      "figure": -0.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 103964,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": -2.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年變動百分率",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COST_SOLD",
+      "svDesc": "百萬港元",
+      "figure": 20656,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "COST_SOLD",
+      "svDesc": "按年變動百分率",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COST_SOLD",
+      "svDesc": "按年變動百分率",
+      "figure": -16.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COST_SOLD",
+      "svDesc": "按年變動百分率",
+      "figure": 18.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 259145,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "TR",
+      "svDesc": "按年變動百分率",
+      "figure": -2.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "按年變動百分率",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年變動百分率",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "OE",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "OE",
+      "svDesc": "按年變動百分率",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "OE",
+      "svDesc": "按年變動百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年變動百分率",
+      "figure": 3.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASSB_J",
+      "INDDesc": "資訊及通訊業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 129407,
+      "sd_value": ""
+    }
+  ]
+}

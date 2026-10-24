@@ -1,0 +1,1095 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=635-74009&api_popup=1"
+    },
+    "title": "Principal statistics for the logistics sector by industry grouping",
+    "tablenote": [
+      "Figures may not add up to the total due to rounding.",
+      "For Hong Kong-based airline and helicopter companies as well as air transport services not elsewhere classified, all the above statistics except number of companies are estimated by prorating the corresponding variable in this industry grouping by the share of freight revenue in the sum of passenger revenue and freight revenue.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures."
+    ],
+    "source": "Logistics &amp; Producer Prices Statistics Section, Census and Statistics Department Tel. : (852) 3903 7256 Email : transport@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 107,
+      "started": "2026-10-24T01:02:07+00:00",
+      "finished": "2026-10-24T01:02:07+00:00",
+      "durationSeconds": 0.023907
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_AST",
+      "INDDesc": "Logistics Sector",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 46759,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "Logistics Sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 47171,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5709,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1545,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2873,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "Ship owners and operators of sea-going freight vessels and freight vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 3003,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 384,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "Hong Kong-based airline and helicopter companies, local representative offices of overseas airline companies (freight), and air transport services not elsewhere classified",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5892,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 3179,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "Other logistics services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 790,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1114,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 943,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5760,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 10855,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "Packing and crating services, cargo inspection, sampling and weighing services, and shipbrokers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 618,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 4508,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": -716,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "Logistics Sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 88139,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1602,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 828,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1319,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "Ship owners and operators of sea-going freight vessels and freight vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 36545,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 168,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "Hong Kong-based airline and helicopter companies, local representative offices of overseas airline companies (freight), and air transport services not elsewhere classified",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 11092,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "Other logistics services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 904,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1677,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1239,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1735,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 25472,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "Packing and crating services, cargo inspection, sampling and weighing services, and shipbrokers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 969,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1972,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "Logistics Sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 15524,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 6970,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 324,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "Ship owners and operators of sea-going freight vessels and freight vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 190,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 102,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "Hong Kong-based airline and helicopter companies, local representative offices of overseas airline companies (freight), and air transport services not elsewhere classified",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 58,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 858,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "Other logistics services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1478,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 285,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 47,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 3258,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "Packing and crating services, cargo inspection, sampling and weighing services, and shipbrokers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 152,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 672,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "Logistics Sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 457064,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 13561,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 3541,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 4857,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "Ship owners and operators of sea-going freight vessels and freight vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 108440,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 370,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "Hong Kong-based airline and helicopter companies, local representative offices of overseas airline companies (freight), and air transport services not elsewhere classified",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 31081,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 8638,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "Other logistics services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 3509,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 3004,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 1800,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 19870,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 220614,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "Packing and crating services, cargo inspection, sampling and weighing services, and shipbrokers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 1518,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 36261,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "Logistics Sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 123577,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 25629,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 6245,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 5262,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "Ship owners and operators of sea-going freight vessels and freight vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 4254,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 800,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "Hong Kong-based airline and helicopter companies, local representative offices of overseas airline companies (freight), and air transport services not elsewhere classified",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 8433,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 11159,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "Other logistics services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 3675,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 2341,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 3077,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 12066,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 26833,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "Packing and crating services, cargo inspection, sampling and weighing services, and shipbrokers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 874,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 12928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "Logistics Sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 124547,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 8165,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 2499,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 2789,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "Ship owners and operators of sea-going freight vessels and freight vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 37651,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 559,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "Hong Kong-based airline and helicopter companies, local representative offices of overseas airline companies (freight), and air transport services not elsewhere classified",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 19086,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 5871,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "Other logistics services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 1635,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 2825,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 1949,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 7640,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 24037,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "Packing and crating services, cargo inspection, sampling and weighing services, and shipbrokers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 1467,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 8372,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "Logistics Sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 592375,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 20871,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 5914,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 9049,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "Ship owners and operators of sea-going freight vessels and freight vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 147987,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 922,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "Hong Kong-based airline and helicopter companies, local representative offices of overseas airline companies (freight), and air transport services not elsewhere classified",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 48065,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 14434,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "Other logistics services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 5203,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 5795,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 3982,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 27364,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 256942,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "Packing and crating services, cargo inspection, sampling and weighing services, and shipbrokers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 3105,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 42741,
+      "sd_value": ""
+    }
+  ]
+}

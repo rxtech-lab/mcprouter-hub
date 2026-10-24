@@ -1,0 +1,1095 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=635-74009&api_popup=1"
+    },
+    "title": "按行業組別劃分的物流業主要統計數字",
+    "tablenote": [
+      "由於數字經四捨五入，分項總和未必與總數相等。",
+      "就以香港作基地的航空公司及直升機公司，和其他航空運輸服務而言，除了公司數目外，上表的其他統計數字都是按該行業組別內的貨運收入相對於客運收入及貨運收入之和的比例來估算。",
+      "2020年至2022年的數字包括與防疫抗疫措施有關的資助金額。"
+    ],
+    "source": "政府統計處　物流及生產者價格統計組 電話 : (852) 3903 7256 電郵 : transport@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 107,
+      "started": "2026-10-24T01:02:07+00:00",
+      "finished": "2026-10-24T01:02:07+00:00",
+      "durationSeconds": 0.015103
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_AST",
+      "INDDesc": "物流業",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 46759,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "物流業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 47171,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "公路貨運（拖頭除外）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 5709,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "拖頭拖運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 1545,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "船務代理及管理人以及海外船公司駐港辦事處",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 2873,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "遠洋和往來香港與珠江三角洲港口的貨輪船東及貨輪營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 3003,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "港內水上貨運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 384,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "以香港作基地的航空公司及直升機公司，海外航空公司的駐港辦事處（貨運），以及其他航空運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 5892,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "貨倉及倉庫服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 3179,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "其他物流服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 790,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "貨櫃碼頭及貨運碼頭營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 1114,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "中流作業及貨櫃後勤活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 943,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "航空運輸輔助服務活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 5760,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "航空及海上貨運代理服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 10855,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "包裝及裝箱服務，驗貨、抽樣檢驗及稱量服務，以及船隻經紀",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 618,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速遞活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百萬港元",
+      "figure": 4508,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "航空運輸輔助服務活動",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": -716,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "物流業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 88139,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "公路貨運（拖頭除外）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1602,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "拖頭拖運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 828,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "船務代理及管理人以及海外船公司駐港辦事處",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1319,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "遠洋和往來香港與珠江三角洲港口的貨輪船東及貨輪營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 36545,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "港內水上貨運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 168,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "以香港作基地的航空公司及直升機公司，海外航空公司的駐港辦事處（貨運），以及其他航空運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 11092,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "貨倉及倉庫服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 2617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "其他物流服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 904,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "貨櫃碼頭及貨運碼頭營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1677,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "中流作業及貨櫃後勤活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1239,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "航空運輸輔助服務活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1735,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "航空及海上貨運代理服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 25472,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "包裝及裝箱服務，驗貨、抽樣檢驗及稱量服務，以及船隻經紀",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 969,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速遞活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百萬港元",
+      "figure": 1972,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "物流業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 15524,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "公路貨運（拖頭除外）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 6970,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "拖頭拖運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 1123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "船務代理及管理人以及海外船公司駐港辦事處",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 324,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "遠洋和往來香港與珠江三角洲港口的貨輪船東及貨輪營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 190,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "港內水上貨運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 102,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "以香港作基地的航空公司及直升機公司，海外航空公司的駐港辦事處（貨運），以及其他航空運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 58,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "貨倉及倉庫服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 858,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "其他物流服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 1478,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "貨櫃碼頭及貨運碼頭營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "中流作業及貨櫃後勤活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 285,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "航空運輸輔助服務活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 47,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "航空及海上貨運代理服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 3258,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "包裝及裝箱服務，驗貨、抽樣檢驗及稱量服務，以及船隻經紀",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 152,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速遞活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "數目",
+      "figure": 672,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "物流業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 457064,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "公路貨運（拖頭除外）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 13561,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "拖頭拖運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 3541,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "船務代理及管理人以及海外船公司駐港辦事處",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 4857,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "遠洋和往來香港與珠江三角洲港口的貨輪船東及貨輪營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 108440,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "港內水上貨運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 370,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "以香港作基地的航空公司及直升機公司，海外航空公司的駐港辦事處（貨運），以及其他航空運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 31081,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "貨倉及倉庫服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 8638,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "其他物流服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 3509,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "貨櫃碼頭及貨運碼頭營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 3004,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "中流作業及貨櫃後勤活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 1800,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "航空運輸輔助服務活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 19870,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "航空及海上貨運代理服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 220614,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "包裝及裝箱服務，驗貨、抽樣檢驗及稱量服務，以及船隻經紀",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 1518,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速遞活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百萬港元",
+      "figure": 36261,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "物流業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 123577,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "公路貨運（拖頭除外）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 25629,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "拖頭拖運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 6245,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "船務代理及管理人以及海外船公司駐港辦事處",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 5262,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "遠洋和往來香港與珠江三角洲港口的貨輪船東及貨輪營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 4254,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "港內水上貨運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 800,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "以香港作基地的航空公司及直升機公司，海外航空公司的駐港辦事處（貨運），以及其他航空運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 8433,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "貨倉及倉庫服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 11159,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "其他物流服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 3675,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "貨櫃碼頭及貨運碼頭營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 2341,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "中流作業及貨櫃後勤活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 3077,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "航空運輸輔助服務活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 12066,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "航空及海上貨運代理服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 26833,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "包裝及裝箱服務，驗貨、抽樣檢驗及稱量服務，以及船隻經紀",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 874,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速遞活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "數目",
+      "figure": 12928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "物流業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 124547,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "公路貨運（拖頭除外）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 8165,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "拖頭拖運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 2499,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "船務代理及管理人以及海外船公司駐港辦事處",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 2789,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "遠洋和往來香港與珠江三角洲港口的貨輪船東及貨輪營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 37651,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "港內水上貨運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 559,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "以香港作基地的航空公司及直升機公司，海外航空公司的駐港辦事處（貨運），以及其他航空運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 19086,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "貨倉及倉庫服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 5871,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "其他物流服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 1635,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "貨櫃碼頭及貨運碼頭營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 2825,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "中流作業及貨櫃後勤活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 1949,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "航空運輸輔助服務活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 7640,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "航空及海上貨運代理服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 24037,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "包裝及裝箱服務，驗貨、抽樣檢驗及稱量服務，以及船隻經紀",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 1467,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速遞活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百萬港元",
+      "figure": 8372,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST",
+      "INDDesc": "物流業",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 592375,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "公路貨運（拖頭除外）",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 20871,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "拖頭拖運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 5914,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "船務代理及管理人以及海外船公司駐港辦事處",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 9049,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501302_501402_501502",
+      "INDDesc": "遠洋和往來香港與珠江三角洲港口的貨輪船東及貨輪營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 147987,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "港內水上貨運服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 922,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101_510202_5109",
+      "INDDesc": "以香港作基地的航空公司及直升機公司，海外航空公司的駐港辦事處（貨運），以及其他航空運輸服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 48065,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "貨倉及倉庫服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 14434,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522103_522299_522903_522999",
+      "INDDesc": "其他物流服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 5203,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "貨櫃碼頭及貨運碼頭營運者",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 5795,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "中流作業及貨櫃後勤活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 3982,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "航空運輸輔助服務活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 27364,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "航空及海上貨運代理服務",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 256942,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522904_522905_522906",
+      "INDDesc": "包裝及裝箱服務，驗貨、抽樣檢驗及稱量服務，以及船隻經紀",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 3105,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速遞活動",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百萬港元",
+      "figure": 42741,
+      "sd_value": ""
+    }
+  ]
+}

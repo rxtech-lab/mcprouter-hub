@@ -1,0 +1,3346 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=635-74002&api_popup=1"
+    },
+    "title": "Principal statistics for all companies by industry grouping (transportation, storage and courier services sector)",
+    "tablenote": [
+      "Figures may not add up to the total due to rounding.",
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures.",
+      "[§3] Increase or decrease of less than 0.05%",
+      "[#1] Percentage changes are not presented whenever any of the two figures for comparison in consecutive years is negative, as it is very difficult to interpret meaningfully the percentage change so calculated."
+    ],
+    "source": "Logistics &amp; Producer Prices Statistics Section, Census and Statistics Department Tel. : (852) 3903 7256 Email : transport@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 332,
+      "started": "2026-10-24T01:02:06+00:00",
+      "finished": "2026-10-24T01:02:06+00:00",
+      "durationSeconds": 0.063481
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 9100,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 18050,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 7254,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5929,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 942,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 22838,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 3179,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1735,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2203,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 12104,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 4508,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 78742,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -10.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": -665,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": -2123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 13245,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2430,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 37949,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 431,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 33655,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2267,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 3052,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 27106,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1972,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 124723,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[#1]"
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 137,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[#1]"
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -63.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -27,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 607,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 20.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 52,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -5.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -18.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -71.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 150.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -24.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 26.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -30.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 17.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 28.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 43.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -23.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -17.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 22.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -39.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 11238,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 8093,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 519,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 254,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 149,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 858,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 475,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 359,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 4714,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 672,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 27330,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 24,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -5.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 20,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -47.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 44.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -26,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 64.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -21.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -11.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 21.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": -12.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 16.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 31400,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 17102,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 114006,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 1183,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 109353,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 8638,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 3708,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 5391,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 225123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 36261,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 552164,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 61524,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 31874,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 9869,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 2654,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 36765,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 11159,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 6838,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 5736,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 30571,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 12928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 209918,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -26,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -2.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": -5.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 32104,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 10664,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 40589,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 1176,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 62642,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 5871,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 4144,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 5053,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 26722,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 8372,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 197337,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -18,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -23.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -49,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 35,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 78.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 43,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -68.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -19.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -16.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 15.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 38.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 15.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 30,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -9.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -5.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -1.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -43,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -6.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -21.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 16.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 15.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 0.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -8.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 15.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 12.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "Land passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 62695,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "Land freight transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 26786,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "Cross-border water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 157884,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "Inland water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 2556,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "Air transport and service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 165846,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "Warehousing and storage",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 14434,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "Service activities incidental to land transportation and other land transport services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 7710,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "Service activities incidental to water transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 10645,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "Other transportation support activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 264332,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "Courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 42741,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "Transportation, storage and courier services sector",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 755629,
+      "sd_value": ""
+    }
+  ]
+}

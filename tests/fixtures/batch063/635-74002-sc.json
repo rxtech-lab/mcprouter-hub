@@ -1,0 +1,3346 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=635-74002&api_popup=1"
+    },
+    "title": "按行业组别划分的所有公司主要统计数字（运输、仓库及速递服务业）",
+    "tablenote": [
+      "由于数字经四舍五入，分项总和未必与总数相等。",
+      "2020年至2022年的数字包括与防疫抗疫措施有关的资助金额。",
+      "[§3] 增减少于 0.05%",
+      "[#1] 如果相连两年的数值其中之一为负数，有关的变动百分率甚难阐释，故不在表内显示。"
+    ],
+    "source": "政府统计处　物流及生产者价格统计组 电话 : (852) 3903 7256 电邮 : transport@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 332,
+      "started": "2026-10-24T01:02:06+00:00",
+      "finished": "2026-10-24T01:02:06+00:00",
+      "durationSeconds": 0.05814
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2005",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 9100,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 18050,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 7254,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 5929,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 942,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 22838,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 3179,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 1735,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 2203,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 12104,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 4508,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 78742,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -6.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 3.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -2.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 9.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -0.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -4.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -1.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 0.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 7.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 4.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 13.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 4.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -2.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -10.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -1.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": -3.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": -665,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": -2123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 13245,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 2430,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 37949,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 431,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 33655,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 2617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 2267,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 3052,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 27106,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 1972,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 124723,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[#1]"
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 137,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[#1]"
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -63.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -27,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 607,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 6.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 20.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 52,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -5.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -18.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -71.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 150.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -24.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 26.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -30.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 17.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 28.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 43.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -6.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -4.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -23.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -17.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 22.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -39.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 13.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 11238,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 8093,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 519,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 254,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 149,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 858,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 475,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 359,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 4714,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 672,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 27330,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2006",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 24,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 1.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 2.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 2.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 8.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 3.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 2.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 2.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -6.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -2.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -5.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 1.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -9.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -0.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -2.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 3.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": -1.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 20,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 13,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -47.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -3.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -9.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -9.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -8.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 44.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -26,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -13.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 64.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -21.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -11.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -9.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 14,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 21.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 9.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 3.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": -12.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 16.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 11.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 13.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 31400,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 17102,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 114006,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 1183,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 109353,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 8638,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 3708,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 5391,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 225123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 36261,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 552164,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 61524,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 31874,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 9869,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 2654,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 36765,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 11159,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 6838,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 5736,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 30571,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 12928,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 209918,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2007",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 5.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2016",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -6.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -26,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 1.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 2.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 1.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 2.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -2.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -1.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -1.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 10.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -3.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 3.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -0.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 5.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 17,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 1.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -6.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -4.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": -5.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 32104,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 10664,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 40589,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 1176,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 62642,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 5871,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 4144,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 5053,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 26722,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 8372,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 197337,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2008",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2012",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -18,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -23.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -49,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 35,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -3.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 13.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 78.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -1.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -0.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 43,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -0.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -68.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 4.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 3.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -19.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -8.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -16.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 11.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 15.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 38.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 1.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -13.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": -13.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 15.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 0.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 30,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2011",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 5.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2015",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -8.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2017",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2018",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -9.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -6.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -5.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -1.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -43,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -6.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 4.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -21.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -8.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2023",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -12,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 12.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 16.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 15.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 0.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 10.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 2.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -8.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": -13.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 15.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 5.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 12.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921_4922_4923_4924_4925_4926",
+      "INDDesc": "陆路客运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 62695,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927_4928",
+      "INDDesc": "陆路货运",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 26786,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_501",
+      "INDDesc": "跨境水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 157884,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_502",
+      "INDDesc": "港内水上运输",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 2556,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_51_5223",
+      "INDDesc": "航空运输及航空运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 165846,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_521",
+      "INDDesc": "货仓及仓库服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 14434,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5221_499",
+      "INDDesc": "陆路运输辅助服务活动及其他陆路运输服务",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 7710,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5222",
+      "INDDesc": "水上运输辅助服务活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 10645,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5229",
+      "INDDesc": "其他运输辅助活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 264332,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_532",
+      "INDDesc": "速递活动",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 42741,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_H",
+      "INDDesc": "运输、仓库及速递服务业",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 755629,
+      "sd_value": ""
+    }
+  ]
+}

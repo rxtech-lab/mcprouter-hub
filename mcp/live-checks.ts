@@ -422,4 +422,16 @@ export const liveCases: Record<string, LiveCase> = {
   accommodation_food_statistics_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
   trades_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
   trades_statistics_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
+
+  // Batch063: verified commerce, transport, logistics and communications tables.
+  trades_statistics_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  trades_statistics_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
+  transport_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  transport_statistics_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
+  transport_statistics_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  transport_statistics_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
+  transport_detailed_industry_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  logistics_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  information_communications_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  information_communications_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
 };

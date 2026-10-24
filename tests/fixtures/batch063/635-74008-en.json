@@ -1,0 +1,1453 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=635-74008&api_popup=1"
+    },
+    "title": "Principal statistics for all companies in selected detailed industry groupings (transportation, storage and courier services sector)",
+    "tablenote": [
+      "Figures for 2020 to 2022 include the amount of subsidy related to anti-epidemic measures."
+    ],
+    "source": "Logistics &amp; Producer Prices Statistics Section, Census and Statistics Department Tel. : (852) 3903 7256 Email : transport@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 143,
+      "started": "2026-10-24T01:02:07+00:00",
+      "finished": "2026-10-24T01:02:07+00:00",
+      "durationSeconds": 0.019214
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_AST_491_4921",
+      "INDDesc": "Railway and cable transport, and public bus services",
+      "freq": "Y",
+      "period": "2019",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 13359,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921",
+      "INDDesc": "Railway and cable transport, and public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 14546,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4922_4923_4924",
+      "INDDesc": "Taxis, non-scheduled and scheduled public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1324,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4925_4926",
+      "INDDesc": "School bus services and rental of passenger vehicles with drivers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2180,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5709,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1545,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2873,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5013_5014",
+      "INDDesc": "Ship owners and operators of sea-going vessels",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2840,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5015",
+      "INDDesc": "Ship owners and operators of vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 215,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5021",
+      "INDDesc": "Licensed and franchised ferry services, kaito and non-scheduled inland water passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 558,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 384,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101",
+      "INDDesc": "Hong Kong-based airline and helicopter companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 15893,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5102",
+      "INDDesc": "Local representative offices of overseas airline companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 770,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5212",
+      "INDDesc": "General cargo warehouses",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 2899,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522101",
+      "INDDesc": "Car park operation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 548,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522102",
+      "INDDesc": "Vehicular tunnel, bridge and highway operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1055,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 1114,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 943,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 5760,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 10855,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5321",
+      "INDDesc": "International courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 3542,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5015",
+      "INDDesc": "Ship owners and operators of vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": -44,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": -716,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921",
+      "INDDesc": "Railway and cable transport, and public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 10752,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4922_4923_4924",
+      "INDDesc": "Taxis, non-scheduled and scheduled public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1144,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4925_4926",
+      "INDDesc": "School bus services and rental of passenger vehicles with drivers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1349,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1602,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 828,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1319,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5013_5014",
+      "INDDesc": "Ship owners and operators of sea-going vessels",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 36380,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5015",
+      "INDDesc": "Ship owners and operators of vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 250,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5021",
+      "INDDesc": "Licensed and franchised ferry services, kaito and non-scheduled inland water passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 263,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 168,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101",
+      "INDDesc": "Hong Kong-based airline and helicopter companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 28025,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5102",
+      "INDDesc": "Local representative offices of overseas airline companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 49,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5212",
+      "INDDesc": "General cargo warehouses",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2394,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522101",
+      "INDDesc": "Car park operation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 797,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522102",
+      "INDDesc": "Vehicular tunnel, bridge and highway operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1295,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1677,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1239,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1735,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 25472,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5321",
+      "INDDesc": "International courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1696,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921",
+      "INDDesc": "Railway and cable transport, and public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4922_4923_4924",
+      "INDDesc": "Taxis, non-scheduled and scheduled public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 10118,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4925_4926",
+      "INDDesc": "School bus services and rental of passenger vehicles with drivers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1110,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 6970,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 324,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5013_5014",
+      "INDDesc": "Ship owners and operators of sea-going vessels",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 146,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5015",
+      "INDDesc": "Ship owners and operators of vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 49,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5021",
+      "INDDesc": "Licensed and franchised ferry services, kaito and non-scheduled inland water passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 151,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 102,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101",
+      "INDDesc": "Hong Kong-based airline and helicopter companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5102",
+      "INDDesc": "Local representative offices of overseas airline companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 51,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5212",
+      "INDDesc": "General cargo warehouses",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 836,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522101",
+      "INDDesc": "Car park operation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 124,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522102",
+      "INDDesc": "Vehicular tunnel, bridge and highway operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 22,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 285,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 47,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 3258,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5321",
+      "INDDesc": "International courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 168,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921",
+      "INDDesc": "Railway and cable transport, and public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 19083,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4922_4923_4924",
+      "INDDesc": "Taxis, non-scheduled and scheduled public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 4989,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4925_4926",
+      "INDDesc": "School bus services and rental of passenger vehicles with drivers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 7328,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 13561,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 3541,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 4857,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5013_5014",
+      "INDDesc": "Ship owners and operators of sea-going vessels",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 105677,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5015",
+      "INDDesc": "Ship owners and operators of vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 3473,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5021",
+      "INDDesc": "Licensed and franchised ferry services, kaito and non-scheduled inland water passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 813,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 370,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101",
+      "INDDesc": "Hong Kong-based airline and helicopter companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 80997,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5102",
+      "INDDesc": "Local representative offices of overseas airline companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 690,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5212",
+      "INDDesc": "General cargo warehouses",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 7952,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522101",
+      "INDDesc": "Car park operation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 2847,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522102",
+      "INDDesc": "Vehicular tunnel, bridge and highway operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 456,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 3004,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 1800,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 19870,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 220614,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5321",
+      "INDDesc": "International courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 32498,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921",
+      "INDDesc": "Railway and cable transport, and public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 33161,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4922_4923_4924",
+      "INDDesc": "Taxis, non-scheduled and scheduled public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 18563,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4925_4926",
+      "INDDesc": "School bus services and rental of passenger vehicles with drivers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 9800,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 25629,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 6245,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 5262,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5013_5014",
+      "INDDesc": "Ship owners and operators of sea-going vessels",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 4036,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5015",
+      "INDDesc": "Ship owners and operators of vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 570,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5021",
+      "INDDesc": "Licensed and franchised ferry services, kaito and non-scheduled inland water passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 1854,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 800,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101",
+      "INDDesc": "Hong Kong-based airline and helicopter companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 22868,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5102",
+      "INDDesc": "Local representative offices of overseas airline companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 1339,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5212",
+      "INDDesc": "General cargo warehouses",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 10201,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522101",
+      "INDDesc": "Car park operation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 2513,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522102",
+      "INDDesc": "Vehicular tunnel, bridge and highway operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 3201,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 2341,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 3077,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 12066,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 26833,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5321",
+      "INDDesc": "International courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 8597,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921",
+      "INDDesc": "Railway and cable transport, and public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 24884,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4922_4923_4924",
+      "INDDesc": "Taxis, non-scheduled and scheduled public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 3575,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4925_4926",
+      "INDDesc": "School bus services and rental of passenger vehicles with drivers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 3646,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 8165,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 2499,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 2789,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5013_5014",
+      "INDDesc": "Ship owners and operators of sea-going vessels",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 37348,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5015",
+      "INDDesc": "Ship owners and operators of vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 452,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5021",
+      "INDDesc": "Licensed and franchised ferry services, kaito and non-scheduled inland water passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 617,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 559,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101",
+      "INDDesc": "Hong Kong-based airline and helicopter companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 46183,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5102",
+      "INDDesc": "Local representative offices of overseas airline companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 805,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5212",
+      "INDDesc": "General cargo warehouses",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 5372,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522101",
+      "INDDesc": "Car park operation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 1360,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522102",
+      "INDDesc": "Vehicular tunnel, bridge and highway operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 2344,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 2825,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 1949,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 7640,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 24037,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5321",
+      "INDDesc": "International courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 5538,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_491_4921",
+      "INDDesc": "Railway and cable transport, and public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 44381,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4922_4923_4924",
+      "INDDesc": "Taxis, non-scheduled and scheduled public bus services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 7457,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4925_4926",
+      "INDDesc": "School bus services and rental of passenger vehicles with drivers",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 10857,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4927",
+      "INDDesc": "Freight transport by road (excl. tractors)",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 20871,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_4928",
+      "INDDesc": "Transport by tractors",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 5914,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5011_5012",
+      "INDDesc": "Ship agents and managers, and local representative offices of overseas shipping companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 9049,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5013_5014",
+      "INDDesc": "Ship owners and operators of sea-going vessels",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 144896,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5015",
+      "INDDesc": "Ship owners and operators of vessels moving between Hong Kong and the ports in Pearl River Delta",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 3938,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5021",
+      "INDDesc": "Licensed and franchised ferry services, kaito and non-scheduled inland water passenger transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 1634,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5022",
+      "INDDesc": "Inland freight water transport",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 922,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5101",
+      "INDDesc": "Hong Kong-based airline and helicopter companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 124915,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5102",
+      "INDDesc": "Local representative offices of overseas airline companies",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 1508,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5212",
+      "INDDesc": "General cargo warehouses",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 13245,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522101",
+      "INDDesc": "Car park operation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 4192,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522102",
+      "INDDesc": "Vehicular tunnel, bridge and highway operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 2806,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522201",
+      "INDDesc": "Container terminal and marine cargo terminal operators",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 5795,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522202_522204",
+      "INDDesc": "Mid-stream operation and container back-up activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 3982,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5223",
+      "INDDesc": "Service activities incidental to air transportation",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 27364,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_522901_522902",
+      "INDDesc": "Air and sea cargo forwarding services",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 256942,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_AST_5321",
+      "INDDesc": "International courier activities",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 37736,
+      "sd_value": ""
+    }
+  ]
+}
