@@ -1,0 +1,529 @@
+{
+  "id": "had-boundaries",
+  "title": "Home Affairs Boundaries",
+  "description": "Official Development datasets with localized names, bounded spatial queries and complete source attributes.",
+  "apis": [
+    "API-2027",
+    "API-2028",
+    "API-2029",
+    "API-2031",
+    "API-2033",
+    "API-2044"
+  ],
+  "datasets": [
+    "hk-had-json1-existing-village-market-town-boundary-1922",
+    "hk-had-json1-existing-village-market-town-boundary-2326",
+    "hk-had-json1-existing-village-market-town-boundary-2730",
+    "hk-had-json1-historical-district-boundary",
+    "hk-had-json1-hong-kong-administrative-boundaries",
+    "hk-had-json1-permitted-burial-grounds-boundaries"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "had_village_boundaries_2019_2022",
+      "title": "Village and market town boundaries 2019-2022",
+      "description": "Village and market town boundaries 2019-2022. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. Boundaries are solely for rural representative elections in the named term, not for other purposes. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/had_rcd_1699500451584_93029/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "VIL_ENAME",
+            "VIL_CNAME",
+            "RCOM_ENAME",
+            "RCOM_CNAME",
+            "PLANNO"
+          ],
+          "description": "Allowlisted source field; defaults to name for lang",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request2027",
+        "response": "response2027"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      }
+    },
+    {
+      "name": "had_village_boundaries_2023_2026",
+      "title": "Village and market town boundaries 2023-2026",
+      "description": "Village and market town boundaries 2023-2026. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. Boundaries are solely for rural representative elections in the named term, not for other purposes. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/had_rcd_1634522917609_57950/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "VIL_ENAME",
+            "VIL_CNAME",
+            "RCOM_ENAME",
+            "RCOM_CNAME",
+            "PLANNO",
+            "HAD_DISTRICT_ENAME",
+            "HAD_DISTRICT_CNAME"
+          ],
+          "description": "Allowlisted source field; defaults to name for lang",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request2028",
+        "response": "response2028"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      }
+    },
+    {
+      "name": "had_village_boundaries_2027_2030",
+      "title": "Village and market town boundaries 2027-2030",
+      "description": "Village and market town boundaries 2027-2030. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. Boundaries are solely for rural representative elections in the named term, not for other purposes. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/had_rcd_1698201058480_40217/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "VIL_ENAME",
+            "VIL_CNAME",
+            "RCOM_ENAME",
+            "RCOM_CNAME",
+            "PLANNO",
+            "HAD_DISTRICT_ENAME",
+            "HAD_DISTRICT_CNAME"
+          ],
+          "description": "Allowlisted source field; defaults to name for lang",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request2029",
+        "response": "response2029"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      }
+    },
+    {
+      "name": "had_historical_district_boundaries",
+      "title": "Historical district boundaries",
+      "description": "Historical district boundaries. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. Choose one of the four published historical layers: 1999, 2003, 2007 or 2015. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/had_rcd_1698200110310_61058/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        },
+        "year": {
+          "type": "string",
+          "enum": [
+            "1999",
+            "2003",
+            "2007",
+            "2015"
+          ],
+          "default": "2015",
+          "in": "local"
+        }
+      },
+      "transform": {
+        "request": "request2031",
+        "response": "response2031"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      }
+    },
+    {
+      "name": "had_district_boundaries",
+      "title": "District boundaries",
+      "description": "District boundaries. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/had_rcd_1634523272907_75218/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "NAME_EN",
+            "NAME_TC",
+            "AREA_CODE",
+            "AREA_ID",
+            "REGION"
+          ],
+          "description": "Allowlisted source field; defaults to name for lang",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request2033",
+        "response": "response2033"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      }
+    },
+    {
+      "name": "had_permitted_burial_boundaries",
+      "title": "Permitted burial ground boundaries",
+      "description": "Permitted burial ground boundaries. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/had_rcd_1698200340272_26535/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "pbg_name_en",
+            "pbg_name_tc",
+            "site_code"
+          ],
+          "description": "Allowlisted source field; defaults to name for lang",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request2044",
+        "response": "response2044"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      }
+    }
+  ]
+}

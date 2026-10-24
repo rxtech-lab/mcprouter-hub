@@ -1,0 +1,276 @@
+{
+  "id": "gpa-properties",
+  "title": "GPA Properties and Public Open Spaces",
+  "description": "Official Development datasets with localized names, bounded spatial queries and complete source attributes.",
+  "apis": [
+    "API-1961",
+    "API-1962",
+    "API-1963"
+  ],
+  "datasets": [
+    "hk-gpa-msd-gpa-psi-d-dpas-cs",
+    "hk-gpa-msd-gpa-psi-d-ospugo-cs",
+    "hk-gpa-msd-gpa-psi-d-sgaal-cs"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "gpa_domestic_properties_for_sale",
+      "title": "Domestic properties for sale",
+      "description": "Domestic properties for sale. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. This feed can contain an agency office/contact location and a no-tender/no-auction notice; a record is not proof of an available property. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/gpa_rcd_1633340662644_56138/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "en_address",
+            "tc_address",
+            "sc_address",
+            "en_remarks",
+            "tc_remarks",
+            "sc_remarks"
+          ],
+          "description": "Allowlisted source field; defaults to name for lang",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request1961",
+        "response": "response1961"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      }
+    },
+    {
+      "name": "gpa_government_office_open_spaces",
+      "title": "Government office public open spaces",
+      "description": "Government office public open spaces. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/gpa_rcd_1697776947850_90373/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "BLDG_ENGNM",
+            "BLDG_CHTNM",
+            "ADDRESS_EN",
+            "ADDRESS_TC"
+          ],
+          "description": "Allowlisted source field; defaults to name for lang",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID_1",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request1962",
+        "response": "response1962"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID_1 ASC",
+        "geometryPrecision": 6
+      }
+    },
+    {
+      "name": "gpa_ngo_accommodation",
+      "title": "Government accommodation for NGOs",
+      "description": "Government accommodation for NGOs. Read-only official CSDI feature records. Source fields, nulls and original languages are preserved; lang selects the name alias only. Search one allowlisted field (default localized name); SQL LIKE % and _ are wildcards. At most 100 records and 100 KB per page; geometry above 20 KB is explicitly omitted, available at meta.source. Continue with nextOffset and identical filters. Shape__Area and Shape__Length retain source projected units, not WGS84 degrees.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/gpa_rcd_1633341021167_93626/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "description": "Substring or SQL LIKE pattern in one published text field",
+          "in": "local"
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "en_name",
+            "tc_name",
+            "sc_name",
+            "en_address",
+            "tc_address",
+            "sc_address",
+            "en_district",
+            "tc_district",
+            "sc_district"
+          ],
+          "description": "Allowlisted source field; defaults to name for lang",
+          "in": "local"
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "description": "Exact source OBJECTID",
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "description": "WGS84 west,south,east,north; intersection",
+          "in": "local"
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request1963",
+        "response": "response1963"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000,
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      }
+    }
+  ]
+}
