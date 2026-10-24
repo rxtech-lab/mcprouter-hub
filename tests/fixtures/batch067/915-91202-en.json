@@ -1,0 +1,244 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=915-91202&api_popup=1"
+    },
+    "title": "Local consumption of electricity and gas by type of users and sales revenue from locally sold",
+    "tablenote": [
+      "1 terajoule = 1012joules.  Figures in the table may not add up to the total due to rounding.  Hong Kong derives its energy almost entirely from external supplies.  Energy is mainly imported directly (as in the case of oil products and coal products), or produced (as in the case of electricity and gas) through some intermediate transformation processes using imported fuel inputs.  Electricity in Hong Kong is supplied by the CLP Power Hong Kong Limited and The Hongkong Electric Company Limited, while gas is supplied by The Hong Kong and China Gas Company Limited.  The statistics in the table are provided by these three energy companies.",
+      "Excluding industry own use and losses, i.e. consumption of energy by power companies and energy losses in electricity transformation and distribution, and exports of electricity to Chinese Mainland."
+    ],
+    "source": "CLP Power Hong Kong Limited, The Hongkong Electric Company, Limited and The Hong Kong and China Gas Company Limited",
+    "count": {
+      "noOfRecords": 22,
+      "started": "2026-10-24T05:02:27+00:00",
+      "finished": "2026-10-24T05:02:27+00:00",
+      "durationSeconds": 0.038451
+    }
+  },
+  "dataSet": [
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 153201,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "Domestic",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 39941,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "Commercial",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 101683,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "Industrial",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 11190,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 4,
+      "USER_TYPEDesc": "Street lighting",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 387,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 31042,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "Domestic",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 7236.1224,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "Domestic",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "% share",
+      "figure": 26.1,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "Commercial",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "% share",
+      "figure": 66.4,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "Industrial",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "% share",
+      "figure": 7.3,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 4,
+      "USER_TYPEDesc": "Street lighting",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "% share",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "REVENUE_ELEC",
+      "svDesc": "HK$ million",
+      "figure": 47760,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 28556,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "Domestic",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 15266,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "Commercial",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 11678,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "Industrial",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 1612,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "Domestic",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "% share",
+      "figure": 53.5,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "Commercial",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "% share",
+      "figure": 40.9,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "Industrial",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "% share",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "REVENUE_GAS",
+      "svDesc": "HK$ million",
+      "figure": 8114,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Q",
+      "period": "202603",
+      "sv": "REVENUE_GAS",
+      "svDesc": "HK$ million",
+      "figure": 2468,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REVENUE_GAS",
+      "svDesc": "HK$ million",
+      "figure": 2206,
+      "sd_value": ""
+    }
+  ]
+}

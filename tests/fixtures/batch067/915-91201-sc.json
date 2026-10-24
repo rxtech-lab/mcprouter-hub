@@ -1,0 +1,176 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=915-91201&api_popup=1"
+    },
+    "title": "按使用者类别划分的电力和煤气用量的按月统计数字",
+    "tablenote": [
+      "1太焦耳 = 1012焦耳。  由于统计表内数字经四舍五入，分项总和未必与总数相等。  香港所需的能源差不多全赖外地供应。能源主要经由直接进口（如油产品及煤产品），或从进口燃料转化而成（如电力及煤气）。香港的电力是由中华电力有限公司和香港电灯有限公司供应，而煤气则由香港中华煤气有限公司供应。统计表内数字是由这三间能源公司所提供。",
+      "不包括电力公司自用及损耗(即电力公司内的消耗和在传送及分发电力时的能源损耗)和出口往中国内地的电力。",
+      "由于账单延迟发出，部分2023年3月的用量被包括在2023年4月的数字内。",
+      "- 不适用"
+    ],
+    "source": "中华电力有限公司、 香港电灯有限公司及 香港中华煤气有限公司",
+    "count": {
+      "noOfRecords": 16,
+      "started": "2026-10-24T05:02:26+00:00",
+      "finished": "2026-10-24T05:02:27+00:00",
+      "durationSeconds": 0.296556
+    }
+  },
+  "dataSet": [
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 35564,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "住宅",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 7556,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "商业",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 13763,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "工业",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 14124,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 4,
+      "USER_TYPEDesc": "街灯",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 120,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "197901",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 2421,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200001",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 8473.1184,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "GASC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 3021,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "住宅",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "GASC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 1501,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "商业",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "GASC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 1318,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "工业",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "GASC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 202,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "太焦耳",
+      "figure": 907,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "197901",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "太焦耳",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "M",
+      "period": "201810",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "太焦耳",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202607",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "太焦耳",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "太焦耳",
+      "figure": 0,
+      "sd_value": ""
+    }
+  ]
+}

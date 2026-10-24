@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-energy
+slug: censtatd-energy
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

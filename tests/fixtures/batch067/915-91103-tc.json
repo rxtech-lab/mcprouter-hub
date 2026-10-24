@@ -1,0 +1,165 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=915-91103&api_popup=1"
+    },
+    "title": "油產品和煤產品進口單位價格",
+    "tablenote": [
+      "本統計表的數字是根據香港對外貿易統計數字編製而成，並可能會因應相關數據的調整而作出修訂。",
+      "§ 由於數值較不顯著，數字不予公布。",
+      "- 不適用"
+    ],
+    "source": "香港能源統計 政府統計處 工業生產統計組 電話﹕(852) 3903 7246 電郵﹕energy@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 14,
+      "started": "2026-10-24T05:02:25+00:00",
+      "finished": "2026-10-24T05:02:25+00:00",
+      "durationSeconds": 0.01957
+    }
+  },
+  "dataSet": [
+    {
+      "PROD_TYPE": 1,
+      "PROD_TYPEDesc": "航空汽油與煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公升港元",
+      "figure": 6.04,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "2b",
+      "PROD_TYPEDesc": "車用汽油 (不含鉛汽油)",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公升港元",
+      "figure": 6.34,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 3,
+      "PROD_TYPEDesc": "輕質柴油、重質柴油與石腦油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公升港元",
+      "figure": 5.99,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 4,
+      "PROD_TYPEDesc": "燃油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公升港元",
+      "figure": 4.78,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 1,
+      "PROD_TYPEDesc": "航空汽油與煤油",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公升港元",
+      "figure": 6.27,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 3,
+      "PROD_TYPEDesc": "輕質柴油、重質柴油與石腦油",
+      "freq": "Q",
+      "period": "201403",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公升港元",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 6,
+      "PROD_TYPEDesc": "石油氣",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公斤港元",
+      "figure": 7.58,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 7,
+      "PROD_TYPEDesc": "天然氣",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公斤港元",
+      "figure": 4.09,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 10,
+      "PROD_TYPEDesc": "無煙煤",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公噸港元",
+      "figure": "",
+      "sd_value": "§"
+    },
+    {
+      "PROD_TYPE": 8,
+      "PROD_TYPEDesc": "蒸餾煤與其他煤產品",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公噸港元",
+      "figure": 572,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 9,
+      "PROD_TYPEDesc": "木炭",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公噸港元",
+      "figure": 3985,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 10,
+      "PROD_TYPEDesc": "無煙煤",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公噸港元",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "PROD_TYPE": 8,
+      "PROD_TYPEDesc": "蒸餾煤與其他煤產品",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公噸港元",
+      "figure": 798.4971,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 9,
+      "PROD_TYPEDesc": "木炭",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "每公噸港元",
+      "figure": 6627.5793,
+      "sd_value": ""
+    }
+  ]
+}

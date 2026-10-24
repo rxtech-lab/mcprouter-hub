@@ -1,0 +1,244 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=915-91202&api_popup=1"
+    },
+    "title": "按使用者類別劃分的本地電力和煤氣用量及本地銷售收入",
+    "tablenote": [
+      "1太焦耳 = 1012焦耳。  由於統計表內數字經四捨五入，分項總和未必與總數相等。  香港所需的能源差不多全賴外地供應。能源主要經由直接進口（如油產品及煤產品），或從進口燃料轉化而成（如電力及煤氣）。香港的電力是由中華電力有限公司和香港電燈有限公司供應，而煤氣則由香港中華煤氣有限公司供應。統計表內數字是由這三間能源公司所提供。",
+      "不包括電力公司自用及損耗(即電力公司內的消耗和在傳送及分發電力時的能源損耗)和出口往中國內地的電力。"
+    ],
+    "source": "中華電力有限公司、 香港電燈有限公司及 香港中華煤氣有限公司",
+    "count": {
+      "noOfRecords": 22,
+      "started": "2026-10-24T05:02:27+00:00",
+      "finished": "2026-10-24T05:02:27+00:00",
+      "durationSeconds": 0.044787
+    }
+  },
+  "dataSet": [
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 153201,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "住宅",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 39941,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "商業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 101683,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "工業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 11190,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 4,
+      "USER_TYPEDesc": "街燈",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 387,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 31042,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "住宅",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 7236.1224,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "住宅",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "百分比",
+      "figure": 26.1,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "商業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "百分比",
+      "figure": 66.4,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "工業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "百分比",
+      "figure": 7.3,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 4,
+      "USER_TYPEDesc": "街燈",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "百分比",
+      "figure": 0.3,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "REVENUE_ELEC",
+      "svDesc": "百萬港元",
+      "figure": 47760,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 28556,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "住宅",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 15266,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "商業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 11678,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "工業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "太焦耳",
+      "figure": 1612,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "住宅",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "百分比",
+      "figure": 53.5,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "商業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "百分比",
+      "figure": 40.9,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "工業",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "GASC_LOCAL",
+      "svDesc": "百分比",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "REVENUE_GAS",
+      "svDesc": "百萬港元",
+      "figure": 8114,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Q",
+      "period": "202603",
+      "sv": "REVENUE_GAS",
+      "svDesc": "百萬港元",
+      "figure": 2468,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "REVENUE_GAS",
+      "svDesc": "百萬港元",
+      "figure": 2206,
+      "sd_value": ""
+    }
+  ]
+}
