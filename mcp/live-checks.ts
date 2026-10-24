@@ -52,6 +52,18 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Batch066: verified business and energy tables.
+  service_business_receipts_indices: { input: { limit: 1 }, check: nonEmptyPage },
+  service_business_receipts_yoy: { input: { limit: 1 }, check: nonEmptyPage },
+  seasonally_adjusted_business_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  business_receipts_quarterly_change: { input: { limit: 1 }, check: nonEmptyPage },
+  industry_concentration_ratios: { input: { limit: 1 }, check: nonEmptyPage },
+  enterprise_operating_characteristics: { input: { limit: 1 }, check: nonEmptyPage },
+  enterprise_operating_characteristics_historical: { input: { limit: 1 }, check: nonEmptyPage },
+  overall_energy_balance: { input: { limit: 1 }, check: nonEmptyPage },
+  energy_net_import_values: { input: { limit: 1 }, check: nonEmptyPage },
+  energy_net_import_quantities: { input: { limit: 1 }, check: nonEmptyPage },
+
   // Batch060: construction, real estate and architectural business statistics.
   architecture_selected_statistics: { input: { limit: 1 }, check: nonEmptyPage },
   real_estate_selected_statistics: { input: { limit: 1 }, check: nonEmptyPage },
