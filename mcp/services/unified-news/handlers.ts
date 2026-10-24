@@ -189,7 +189,7 @@ export const getNewsDetail: ToolHandler = async (input, context) => {
   let path: string;
   let query: Record<string, string>;
   if (/^trade-bloom:[A-Za-z0-9]{14}$/.test(id)) {
-    provider = "trade-bloom"; path = "/stories/detail"; query = { id: id.slice("trade-bloom:".length) };
+    provider = "trade-bloom"; path = "/stories/bulletin"; query = { ids: id.slice("trade-bloom:".length) };
   } else if (/^reuters:[A-Za-z0-9_-]{1,4000}$/.test(id)) {
     provider = "reuters"; path = "/details";
     const reference = id.slice("reuters:".length);
@@ -198,9 +198,19 @@ export const getNewsDetail: ToolHandler = async (input, context) => {
     query = { url: articleUrl(decoded, provider) };
   } else { throw new Error("Invalid news id; use the exact provider-prefixed id from list_top_news"); }
   const body = await request(provider, path, query, apiKey(), context);
-  if (!record(body) || !record(body.data) || !Object.keys(body.data).length ||
-      (provider === "reuters" ? body.status !== "success" : body.status !== true || body.status_code !== 200)) return malformed(provider);
-  // Preserve the provider's content tree rather than invent a shared full-text schema.
-  if (Buffer.byteLength(JSON.stringify(body.data)) > 90_000) throw new UpstreamError("upstream_parse", `${provider} article exceeds the 90 KB detail limit`);
-  return { id, provider, article: body.data };
+  let article: Row;
+  if (provider === "trade-bloom") {
+    if (!record(body) || body.status !== true || body.status_code !== 200 || !Array.isArray(body.data) ||
+        !body.data.every(record)) return malformed(provider);
+    const matches = body.data.filter((row) => row.internalID === query.ids);
+    if (matches.length === 0) throw new UpstreamError("upstream_http", "Trade Bloom bulletin not found", 404);
+    if (matches.length !== 1 || typeof matches[0].title !== "string" || !matches[0].title.trim()) return malformed(provider);
+    article = matches[0];
+  } else {
+    if (!record(body) || body.status !== "success" || !record(body.data) || !Object.keys(body.data).length) return malformed(provider);
+    article = body.data;
+  }
+  // Preserve provider data; Trade Bloom bulletins contain metadata, not full text.
+  if (Buffer.byteLength(JSON.stringify(article)) > 90_000) throw new UpstreamError("upstream_parse", `${provider} article exceeds the 90 KB detail limit`);
+  return { id, provider, article };
 };

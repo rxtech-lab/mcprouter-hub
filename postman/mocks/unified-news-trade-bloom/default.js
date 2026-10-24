@@ -21,9 +21,15 @@ http.createServer((req, res) => {
       { stories: mode === "simulation-empty" ? [] : [stories[0], stories[0], { type: "video" }, ...stories.slice(1)] },
     ] } })); return;
   }
-  if (req.method === "GET" && url.pathname === "/stories/detail") {
-    // Only the provider's failure envelope has been observed live for detail.
-    res.end(JSON.stringify({ status_code: 401, status: false })); return;
+  if (req.method === "GET" && url.pathname === "/stories/bulletin") {
+    const id = url.searchParams.get("ids");
+    if (url.searchParams.has("id") || !id) { res.writeHead(400).end("Expected ids parameter"); return; }
+    let data = stories.filter((story) => story.internalID === id).map(({ internalID, title, longURL, published }) =>
+      ({ internalID, title, longURL, published, wordCount: 123 }));
+    if (mode === "simulation-mismatch") data = [{ ...data[0], internalID: "OTHER000000000" }];
+    if (mode === "simulation-duplicate") data = [...data, ...data];
+    if (mode === "simulation-oversized") data = data.map((row) => ({ ...row, extra: "x".repeat(91000) }));
+    res.end(JSON.stringify({ status_code: 200, status: true, data })); return;
   }
   res.writeHead(501).end(JSON.stringify({ error: "Endpoint not modeled" }));
 }).listen(process.env.PORT);

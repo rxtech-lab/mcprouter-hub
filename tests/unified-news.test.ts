@@ -52,9 +52,26 @@ describe.skipIf(!process.env.UNIFIED_NEWS_SIM_URL)("Unified news over real HTTP"
     const id = `reuters:${Buffer.from("https://www.reuters.com/world/example-1/").toString("base64url")}`;
     expect((await call("get_news_detail", { id })).data).toMatchObject({ id, provider: "reuters", article: { title: "Reuters example 1", content: "Example wire dispatch." } });
   });
-  it("routes Trade Bloom detail and rejects its observed HTTP-200 access-error envelope", async () => {
+  it("routes Trade Bloom detail to a matching bulletin using ids", async () => {
     configure();
+    const id = "trade-bloom:TNF3BYKIP3IM00";
+    expect((await call("get_news_detail", { id })).data).toMatchObject({
+      id, provider: "trade-bloom", article: { internalID: "TNF3BYKIP3IM00", title: "Trade Bloom example 0", wordCount: 123 },
+    });
+  });
+  it("rejects Trade Bloom bulletin provider access errors inside HTTP 200", async () => {
+    configure("simulation-business-error");
     await expect(call("get_news_detail", { id: "trade-bloom:TNF3BYKIP3IM00" })).rejects.toMatchObject({ code: "upstream_http", status: 401 });
+  });
+  it.each([
+    ["simulation-ok", "TNF3BYKIP3IM09", "upstream_http", 404],
+    ["simulation-mismatch", "TNF3BYKIP3IM00", "upstream_http", 404],
+    ["simulation-duplicate", "TNF3BYKIP3IM00", "upstream_parse", undefined],
+    ["simulation-oversized", "TNF3BYKIP3IM00", "upstream_parse", undefined],
+    ["simulation-malformed", "TNF3BYKIP3IM00", "upstream_parse", undefined],
+  ])("rejects unavailable or invalid Trade Bloom bulletins: %s", async (mode, reference, code, status) => {
+    configure(mode);
+    await expect(call("get_news_detail", { id: `trade-bloom:${reference}` })).rejects.toMatchObject({ code, status });
   });
   it.each([
     ["simulation-http", "upstream_http", 429],

@@ -31,12 +31,15 @@ source is distinguished from an error. There are no automatic retries.
 
 `get_news_detail({"id": "<exact list result id>"})` returns `{id, provider, article}`.
 `article` preserves the provider's data object, including its original content
-structure. Detail bodies above 90 KB fail explicitly rather than silently truncate.
+structure. Trade Bloom returns the matching bulletin object from `data[]`, with
+metadata such as title, URLs, tickers and word count, not full article text.
+Empty or unmatched bulletin results return 404; duplicate matches or malformed
+envelopes fail explicitly. Detail bodies above 90 KB fail explicitly rather than silently truncate.
 The provider prefixes and routing are:
 
 | Prefix | Reference | Upstream request |
 |---|---|---|
-| `trade-bloom:` | 14-character `internalID` | `GET /stories/detail?id=...` |
+| `trade-bloom:` | 14-character `internalID` | `GET /stories/bulletin?ids=...` |
 | `reuters:` | Base64url-encoded canonical HTTPS Reuters URL | `GET /details?url=...` |
 | `hacker-news:` | Positive safe-integer item ID | `GET /v0/item/<id>.json` |
 
@@ -67,13 +70,16 @@ RapidAPI credentials are never sent to Hacker News.
 
 - [Trade Bloom Finance](https://rapidapi.com/vibapidev/api/trade-bloom-finance):
   `https://trade-bloom-finance.p.rapidapi.com/news/top-news` takes no parameters.
-  Its successful envelope has `status_code: 200`, `status: true`, and
+  Its top-news envelope has `status_code: 200`, `status: true`, and
   `data.modules[].stories[]`. Article stories have `internalID`, `title`, `longURL`,
-  Unix-seconds `published`, and summary fields. The story-detail playground documents
-  `GET /stories/detail?id=<internalID>`. A request using a listed article returned
-  **HTTP 200 with `{status_code: 401, status: false}`**. That is an access failure,
-  and the integration reports it. No successful Trade Bloom detail body was observed;
-  the adapter's successful `data` object envelope remains unverified live.
+  Unix-seconds `published`, and summary fields. The old `/stories/detail` endpoint
+  returned HTTP 200 with `{status_code: 401, status: false}`, including in the
+  RapidAPI playground with an ID from `/stories/list`.
+  On 2026-10-25, `/stories/bulletin?ids=TNBP6OT9NJLV00` succeeded in the playground
+  and with the local key. Its envelope contains `status_code: 200`, `status: true`,
+  and a `data` array. The returned object includes `internalID`, title, URLs,
+  tickers, section, timestamps, ad parameters and word count; no full text was
+  present. Detail now uses this endpoint with one ID and returns the matching object.
 - [Reuters API](https://rapidapi.com/mahmudulhasandev/api/reuters-api):
   `https://reuters-api.p.rapidapi.com/latest?limit=2` returned a top-level array of
   `{link, title, published_at}` records. `/details?url=...` returned
@@ -85,7 +91,7 @@ RapidAPI credentials are never sent to Hacker News.
 Orbit discovery returned no matching contracts for the two RapidAPI providers, so the
 Chrome playgrounds supplied the contracts. Postman is signed out; the owner mock
 search was skipped. The local simulation uses explicitly synthetic structural
-examples and the observed Trade Bloom detail failure, not invented successful detail.
+examples based on the observed bulletin shape and provider access-error envelopes.
 
 ## Reproduce HTTP verification
 
@@ -100,8 +106,16 @@ HTTP fetcher to all three simulation members. They cover ranking, routing, sourc
 duplicate stories, empty feeds, JSON/HTTP/envelope errors, partial failure, complete
 failure, unknown detail and credential redaction. These results establish behavior
 against stand-ins; live end-to-end validation still requires a configured `.env`
-key and successful provider access to Trade Bloom details.
+key. Local live checks verify bulletin metadata access, not full article content.
 
 `TRADE_BLOOM_BASE_URL`, `REUTERS_BASE_URL` and `HACKER_NEWS_BASE_URL` are server-only overrides for local
 simulation. Leave them unset for live provider calls. The Hacker News override includes `/v0`
 when pointing at the official API; the simulation member serves that base directly.
+
+## Bulletin replacement verification (2026-10-25 HKT)
+
+The updated registered tools returned fresh headlines from all three providers
+(`partial: false`) and successful detail results for each returned ID using the
+local configured key. Trade Bloom used `/stories/bulletin` and returned metadata.
+The HTTP simulation passed 36 focused news and live-case tests; typecheck, lint
+and translation checks passed. These local results do not establish a remote CI rerun.

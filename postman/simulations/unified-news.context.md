@@ -6,8 +6,8 @@ response shapes are documented in `docs/unified-news.md`.
 ## Purpose
 
 Exercise the registered news tools against all three HTTP dependencies. The local
-mock handlers contain synthetic examples, including Trade Bloom's observed detail
-access failure, plus official Hacker News story/item shapes. No successful Trade Bloom detail response is fabricated.
+mock handlers contain synthetic examples based on Trade Bloom's observed bulletin
+metadata array, provider error envelopes, and official Hacker News story/item shapes.
 
 ## Execution
 
@@ -21,12 +21,17 @@ access failure, plus official Hacker News story/item shapes. No successful Trade
 - 2026-10-25: Owner mock discovery was skipped because `postman whoami` reported
   no signed-in account. The RapidAPI stand-ins come from the inspected Chrome contracts; Hacker News
   synthetic examples follow its official GitHub API contract and Orbit brief.
-- 2026-10-25: Real Trade Bloom detail success remains unverified; the simulation
-  proves its observed application-level 401 is rejected, not successful content access.
+- 2026-10-25: Trade Bloom detail now uses `/stories/bulletin?ids=...`. Its live
+  response contains metadata without full text; the mock models that shape.
 
 ## Observations
 
 <!-- begin:observations -->
+- 2026-10-25: Bulletin change: 36 focused tests passed over HTTP. All three members
+  served requests; Trade Bloom used `ids`, matched bulletin identity, and rejected
+  access errors, empty/unmatched arrays, duplicate matches and oversized metadata.
+- 2026-10-25: Separate live registered-tool calls passed headlines and details for
+  all three sources with the local key; Trade Bloom returned bulletin metadata.
 - 2026-10-25: All three members served registered-tool HTTP requests; none stayed
   silent. Hacker News ranking, filtering, stateless details, malformed/HTTP errors,
   empty feeds and missing RapidAPI credentials passed. Owner search remains skipped

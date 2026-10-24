@@ -13,7 +13,7 @@ tools:
       x: { type: integer, minimum: 1, maximum: 50, default: 10, in: local, description: "Maximum articles per provider, not the combined total." }
   - name: get_news_detail
     title: News article details
-    description: Fetch one article using the exact provider-prefixed id returned by list_top_news. trade-bloom IDs route to stories/detail by internalID; reuters IDs route to details by article URL. hacker-news IDs route to the official Firebase item endpoint by numeric ID. No prior list call or in-memory lookup is required. Returns id, provider and the provider's article data; content fields differ by source. Provider access restrictions are reported as errors, including failures inside HTTP 200 bodies.
+    description: Fetch one article using the exact provider-prefixed id returned by list_top_news. trade-bloom IDs route to stories/bulletin with ids=internalID (bulletin metadata, not full article text); reuters IDs route to details by article URL. hacker-news IDs route to the official Firebase item endpoint by numeric ID. No prior list call or in-memory lookup is required. Returns id, provider and the provider's article data; content fields differ by source. Provider access restrictions are reported as errors, including failures inside HTTP 200 bodies.
     handler: getNewsDetail
     input:
       id: { type: string, required: true, in: local, pattern: '^(trade-bloom:[A-Za-z0-9]{14}|reuters:[A-Za-z0-9_-]{1,4000}|hacker-news:[1-9][0-9]{0,15})$', description: Exact ID returned by list_top_news. }
