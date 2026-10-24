@@ -411,4 +411,15 @@ export const liveCases: Record<string, LiveCase> = {
   department_store_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
   restaurant_receipts_purchases: { input: { limit: 1 }, check: nonEmptyPage },
 
+  // Batch062: verified restaurant and industry business statistics.
+  restaurant_receipts_purchases_monthly: { input: { limit: 1 }, check: nonEmptyPage },
+  restaurant_receipts_by_type: { input: { limit: 1 }, check: nonEmptyPage },
+  restaurant_receipts_by_type_monthly: { input: { limit: 1 }, check: nonEmptyPage },
+  restaurant_receipts_seasonally_adjusted: { input: { limit: 1 }, check: nonEmptyPage },
+  accommodation_food_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  accommodation_food_statistics_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
+  accommodation_food_statistics_by_receipts: { input: { limit: 1 }, check: nonEmptyPage },
+  accommodation_food_statistics_by_value_added: { input: { limit: 1 }, check: nonEmptyPage },
+  trades_business_statistics: { input: { limit: 1 }, check: nonEmptyPage },
+  trades_statistics_by_employment: { input: { limit: 1 }, check: nonEmptyPage },
 };

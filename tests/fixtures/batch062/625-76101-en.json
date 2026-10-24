@@ -1,0 +1,866 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=625-76101&api_popup=1"
+    },
+    "title": "Principal statistics for all companies by industry grouping (accommodation and food services sector)",
+    "tablenote": [
+      "The above statistics are compiled based on the Hong Kong Standard Industrial Classification (HSIC) Version 2.0. Users may also download past statistics based on HSIC Version 1.1 for reference.  Figures may not add up to the total due to rounding.  Percentage changes are derived from unrounded figures.",
+      "Figures for 2021 to 2022 include the amount of subsidy related to anti-epidemic measures.",
+      "[§3] Increase or decrease of less than 0.05%",
+      "[#1] Percentage changes are not presented whenever any of the two figures for comparison in consecutive years is negative, as it is very difficult to interpret meaningfully the percentage change so calculated."
+    ],
+    "source": "Annual Survey of Economic Activities Distribution Services Statistics Section, Census and Statistics Department (Enquiry telephone no. : 3903 7399  Enquiry e-mail : asw@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 84,
+      "started": "2026-10-24T00:02:15+00:00",
+      "finished": "2026-10-24T00:02:15+00:00",
+      "durationSeconds": 0.037522
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 7953,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 6627,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 25505,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 13543,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "HK$ million",
+      "figure": 4009,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 14.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 14.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "HK$ million",
+      "figure": 11564,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "HK$ million",
+      "figure": 2212,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "HK$ million",
+      "figure": 32903,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "HK$ million",
+      "figure": 15801,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "HK$ million",
+      "figure": 5538,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": 3.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": 11.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2966,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 7291,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 7446,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 2722,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "HK$ million",
+      "figure": 1758,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 47.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 2.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": -13.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": 40,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "GS",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[#1]"
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 7141,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 867,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 12939,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 4675,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "Number",
+      "figure": 1123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 4.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "HC",
+      "svDesc": "Year-on-year % change",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 10915,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 14604,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 32938,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 16267,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "HK$ million",
+      "figure": 5757,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 29.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "Year-on-year % change",
+      "figure": 13.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 10190,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 7512,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 28960,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 12805,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "HK$ million",
+      "figure": 5966,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 76961,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 31849,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 228589,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 106064,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "Number",
+      "figure": 45564,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 10.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "Year-on-year % change",
+      "figure": 9.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 7.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 23,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "Year-on-year % change",
+      "figure": 8.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "Other food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 32673,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "Accommodation services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 23643,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "Food services",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 94814,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "Chinese restaurants",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 44870,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 17271,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "Fast food shops",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "HK$ million",
+      "figure": 29440,
+      "sd_value": ""
+    }
+  ]
+}

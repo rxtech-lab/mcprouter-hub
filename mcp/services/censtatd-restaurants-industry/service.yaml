@@ -1,0 +1,934 @@
+id: censtatd-restaurants-industry
+title: Hong Kong Restaurants and Industry Business Statistics
+description: Official C&SD restaurant receipts and purchases, seasonal indices, accommodation and food
+  services, import/export, wholesale and retail business performance.
+apis:
+  - API-0707
+  - API-0708
+  - API-0709
+  - API-0710
+  - API-0711
+  - API-0712
+  - API-0713
+  - API-0714
+  - API-0715
+  - API-0716
+datasets:
+  - hk-censtatd-tablechart-625-68002
+  - hk-censtatd-tablechart-625-68003
+  - hk-censtatd-tablechart-625-68004
+  - hk-censtatd-tablechart-625-68011
+  - hk-censtatd-tablechart-625-76101
+  - hk-censtatd-tablechart-625-76102
+  - hk-censtatd-tablechart-625-76103
+  - hk-censtatd-tablechart-625-76104
+  - hk-censtatd-tablechart-630-76001
+  - hk-censtatd-tablechart-630-76002
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: restaurant_receipts_purchases_monthly
+    title: Total restaurant receipts and restaurant purchases analysed by month (625-68002)
+    description: "Total restaurant receipts and restaurant purchases analysed by month. Official C&SD Table
+      625-68002. Newest periods first; paginate with nextOffset. Preserve original figures, missing or
+      suppressed values, revision flags, units and localized notes. Do not sum overlapping totals or size
+      groups. Index reference: October 2019–September 2020 = 100. "
+    path: /get.php
+    query:
+      id: 625-68002
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: VAL_IDX_RR = Value index of restaurant receipts; VAL_RP = Restaurant
+          purchases; VAL_RR = Restaurant receipts; VOL_IDX_RR = Volume index of restaurant receipts. Select
+          measure to distinguish levels and changes."
+        enum:
+          - VAL_IDX_RR
+          - VAL_RP
+          - VAL_RR
+          - VOL_IDX_RR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - index
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: restaurant_receipts_by_type
+    title: Restaurant receipts by type of restaurant (625-68003)
+    description: "Restaurant receipts by type of restaurant. Official C&SD Table 625-68003. Newest periods first;
+      paginate with nextOffset. Preserve original figures, missing or suppressed values, revision flags, units
+      and localized notes. Do not sum overlapping totals or size groups. Index reference: October
+      2019–September 2020 = 100. "
+    path: /get.php
+    query:
+      id: 625-68003
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(03|06|09|12)?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Q
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: VAL_IDX_RR = Value index of restaurant receipts; VAL_RR = Restaurant
+          receipts; VOL_IDX_RR = Volume index of restaurant receipts. Select measure to distinguish levels and
+          changes."
+        enum:
+          - VAL_IDX_RR
+          - VAL_RR
+          - VOL_IDX_RR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - index
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      restaurant:
+        type: string
+        in: local
+        description: 1 = Chinese restaurants; 2 = Non-Chinese restaurants; 3 = Fast food shops; 4 = Bars; 5 =
+          Miscellaneous eating and drinking places; TOTAL = Total. Original labels and units are preserved; do
+          not combine overlapping totals and subgroups.
+        enum:
+          - TOTAL
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
+  - name: restaurant_receipts_by_type_monthly
+    title: Restaurant receipts by type of restaurant analysed by month (625-68004)
+    description: "Restaurant receipts by type of restaurant analysed by month. Official C&SD Table 625-68004.
+      Newest periods first; paginate with nextOffset. Preserve original figures, missing or suppressed values,
+      revision flags, units and localized notes. Do not sum overlapping totals or size groups. Index
+      reference: October 2019–September 2020 = 100. "
+    path: /get.php
+    query:
+      id: 625-68004
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - M
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: VAL_IDX_RR = Value index of restaurant receipts; VAL_RR = Restaurant
+          receipts; VOL_IDX_RR = Volume index of restaurant receipts. Select measure to distinguish levels and
+          changes."
+        enum:
+          - VAL_IDX_RR
+          - VAL_RR
+          - VOL_IDX_RR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - index
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      restaurant:
+        type: string
+        in: local
+        description: 1 = Chinese restaurants; 2 = Non-Chinese restaurants; 3 = Fast food shops; 4 = Bars; 5 =
+          Miscellaneous eating and drinking places; TOTAL = Total. Original labels and units are preserved; do
+          not combine overlapping totals and subgroups.
+        enum:
+          - TOTAL
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
+  - name: restaurant_receipts_seasonally_adjusted
+    title: Seasonally adjusted series of total restaurant receipts (Average index from October 2019 to September
+      2020 = 100) (625-68011)
+    description: "Seasonally adjusted series of total restaurant receipts (Average index from October 2019 to
+      September 2020 = 100). Official C&SD Table 625-68011. Newest periods first; paginate with nextOffset.
+      Preserve original figures, missing or suppressed values, revision flags, units and localized notes. Do
+      not sum overlapping totals or size groups. Index reference: October 2019–September 2020 = 100.
+      Seasonally adjusted quarterly index and quarter-to-quarter change; not year-on-year change. "
+    path: /get.php
+    query:
+      id: 625-68011
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}(03|06|09|12)?$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Q
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: SA_VAL_IDX_RR = Seasonally adjusted value index of restaurant receipts;
+          SA_VOL_IDX_RR = Seasonally adjusted volume index of restaurant receipts. Select measure to
+          distinguish levels and changes."
+        enum:
+          - SA_VAL_IDX_RR
+          - SA_VOL_IDX_RR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - index
+          - qoq_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: accommodation_food_business_statistics
+    title: Principal statistics for all companies by industry grouping (accommodation and food services sector)
+      (625-76101)
+    description: "Principal statistics for all companies by industry grouping (accommodation and food services
+      sector). Official C&SD Table 625-76101. Newest periods first; paginate with nextOffset. Preserve
+      original figures, missing or suppressed values, revision flags, units and localized notes. Do not sum
+      overlapping totals or size groups. Annual Survey of Economic Activities; monetary values in HK$ million
+      and company/person counts remain separate. Group boundaries and confidentiality suppression follow
+      official notes. "
+    path: /get.php
+    query:
+      id: 625-76101
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold; GS = Gross
+          surplus; HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Select measure to distinguish levels and changes."
+        enum:
+          - COMP
+          - COST_SOLD
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      industry:
+        type: string
+        in: local
+        description: ind_ASW_1_56_others = Other food services; ind_ASW_55 = Accommodation services; ind_ASW_56 = Food
+          services; ind_ASW_561101_561109-561111 = Chinese restaurants; ind_ASW_5612_561902 = Fast food shops.
+          Original labels and units are preserved; do not combine overlapping totals and subgroups.
+        enum:
+          - ind_ASW_1_56_others
+          - ind_ASW_55
+          - ind_ASW_56
+          - ind_ASW_561101_561109-561111
+          - ind_ASW_5612_561902
+  - name: accommodation_food_statistics_by_employment
+    title: Principal statistics for all companies by industry grouping and number of persons engaged
+      (accommodation and food services sector) (625-76102)
+    description: "Principal statistics for all companies by industry grouping and number of persons engaged
+      (accommodation and food services sector). Official C&SD Table 625-76102. Newest periods first; paginate
+      with nextOffset. Preserve original figures, missing or suppressed values, revision flags, units and
+      localized notes. Do not sum overlapping totals or size groups. Annual Survey of Economic Activities;
+      monetary values in HK$ million and company/person counts remain separate. Group boundaries and
+      confidentiality suppression follow official notes. "
+    path: /get.php
+    query:
+      id: 625-76102
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold; HC =
+          Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA = Number of
+          persons engaged; TR = Total receipts. Select measure to distinguish levels and changes."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      industry:
+        type: string
+        in: local
+        description: ind_ASW_1_56_others = Other food services; ind_ASW_55 = Accommodation services; ind_ASW_56 = Food
+          services; ind_ASW_561101_561109-561111 = Chinese restaurants; ind_ASW_5612_561902 = Fast food shops.
+          Original labels and units are preserved; do not combine overlapping totals and subgroups.
+        enum:
+          - ind_ASW_1_56_others
+          - ind_ASW_55
+          - ind_ASW_56
+          - ind_ASW_561101_561109-561111
+          - ind_ASW_5612_561902
+      employment_group:
+        type: string
+        in: local
+        description: TOTAL = Total; <10 = < 10; 10-49 = 10 - 49; 100-199 = 100 - 199; 200-499 = 200 - 499; 50-99 = 50
+          - 99; 500_and_over = ≥ 500. Original labels and units are preserved; do not combine overlapping
+          totals and subgroups.
+        enum:
+          - TOTAL
+          - 10-49
+          - 100-199
+          - 200-499
+          - 50-99
+          - 500_and_over
+          - <10
+  - name: accommodation_food_statistics_by_receipts
+    title: Principal statistics for all companies by industry grouping and total receipts (accommodation and food
+      services sector) (625-76103)
+    description: "Principal statistics for all companies by industry grouping and total receipts (accommodation
+      and food services sector). Official C&SD Table 625-76103. Newest periods first; paginate with
+      nextOffset. Preserve original figures, missing or suppressed values, revision flags, units and localized
+      notes. Do not sum overlapping totals or size groups. Annual Survey of Economic Activities; monetary
+      values in HK$ million and company/person counts remain separate. Group boundaries and confidentiality
+      suppression follow official notes. "
+    path: /get.php
+    query:
+      id: 625-76103
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold; HC =
+          Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA = Number of
+          persons engaged; TR = Total receipts. Select measure to distinguish levels and changes."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      industry:
+        type: string
+        in: local
+        description: ind_ASW_1_56_others = Other food services; ind_ASW_55 = Accommodation services; ind_ASW_56 = Food
+          services; ind_ASW_561101_561109-561111 = Chinese restaurants; ind_ASW_5612_561902 = Fast food shops.
+          Original labels and units are preserved; do not combine overlapping totals and subgroups.
+        enum:
+          - ind_ASW_1_56_others
+          - ind_ASW_55
+          - ind_ASW_56
+          - ind_ASW_561101_561109-561111
+          - ind_ASW_5612_561902
+      receipts_group:
+        type: string
+        in: local
+        description: TOTAL = Total; <1000 = < 1,000; 1000-4999 = 1,000 - 4,999; 10000-19999 = 10,000 - 19,999;
+          20000-49999 = 20,000 - 49,999; 5000-9999 = 5,000 - 9,999; 50000_and_over = ≥ 50,000. Original labels
+          and units are preserved; do not combine overlapping totals and subgroups.
+        enum:
+          - TOTAL
+          - 1000-4999
+          - 10000-19999
+          - 20000-49999
+          - 5000-9999
+          - 50000_and_over
+          - <1000
+  - name: accommodation_food_statistics_by_value_added
+    title: Principal statistics for all companies by industry grouping and industry value added (accommodation and
+      food services sector) (625-76104)
+    description: "Principal statistics for all companies by industry grouping and industry value added
+      (accommodation and food services sector). Official C&SD Table 625-76104. Newest periods first; paginate
+      with nextOffset. Preserve original figures, missing or suppressed values, revision flags, units and
+      localized notes. Do not sum overlapping totals or size groups. Annual Survey of Economic Activities;
+      monetary values in HK$ million and company/person counts remain separate. Group boundaries and
+      confidentiality suppression follow official notes. "
+    path: /get.php
+    query:
+      id: 625-76104
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold; HC =
+          Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA = Number of
+          persons engaged; TR = Total receipts. Select measure to distinguish levels and changes."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      industry:
+        type: string
+        in: local
+        description: ind_ASW_1_56_others = Other food services; ind_ASW_55 = Accommodation services; ind_ASW_56 = Food
+          services; ind_ASW_561101_561109-561111 = Chinese restaurants; ind_ASW_5612_561902 = Fast food shops.
+          Original labels and units are preserved; do not combine overlapping totals and subgroups.
+        enum:
+          - ind_ASW_1_56_others
+          - ind_ASW_55
+          - ind_ASW_56
+          - ind_ASW_561101_561109-561111
+          - ind_ASW_5612_561902
+      value_added_group:
+        type: string
+        in: local
+        description: TOTAL = Total; <250 = < 250; 10000-24999 = 10,000 - 24,999; 250-499 = 250 - 499; 2500-4999 =
+          2,500 - 4,999; 25000_and_over = ≥ 25,000; 500-2499 = 500 - 2,499; 5000-9999 = 5,000 - 9,999.
+          Original labels and units are preserved; do not combine overlapping totals and subgroups.
+        enum:
+          - TOTAL
+          - 10000-24999
+          - 250-499
+          - 2500-4999
+          - 25000_and_over
+          - 500-2499
+          - 5000-9999
+          - <250
+  - name: trades_business_statistics
+    title: Principal statistics for all companies by industry grouping (import/export, wholesale and retail trades
+      sector) (630-76001)
+    description: "Principal statistics for all companies by industry grouping (import/export, wholesale and retail
+      trades sector). Official C&SD Table 630-76001. Newest periods first; paginate with nextOffset. Preserve
+      original figures, missing or suppressed values, revision flags, units and localized notes. Do not sum
+      overlapping totals or size groups. Annual Survey of Economic Activities; monetary values in HK$ million
+      and company/person counts remain separate. Group boundaries and confidentiality suppression follow
+      official notes. "
+    path: /get.php
+    query:
+      id: 630-76001
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold; GS = Gross
+          surplus; HC = Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA =
+          Number of persons engaged; TR = Total receipts. Select measure to distinguish levels and changes."
+        enum:
+          - COMP
+          - COST_SOLD
+          - GS
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - number
+          - yoy_percent
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      industry:
+        type: string
+        in: local
+        description: ind_ASW_1_45_others = Other import/export trade; ind_ASW_1_46_others = Other wholesale trade;
+          ind_ASW_1_47_others = Other retail trade; ind_ASW_45 = Import/export trade;
+          ind_ASW_451201_4513_452201_4523 = Food, alcoholic drinks and tobacco;
+          ind_ASW_451401-451405_452401-452405 = Clothing, footwear and allied products; ind_ASW_46 = Wholesale
+          trade; ind_ASW_460201_4603 = Food, alcoholic drinks and tobacco; ind_ASW_460401-460405 = Clothing,
+          footwear and allied products; ind_ASW_47 = Retail trade; ind_ASW_4711_4721-4723 = Food, alcoholic
+          drinks and tobacco; ind_ASW_4731-4733 = Fuel; ind_ASW_475101-475104_475199_477101_477102_477199 =
+          Clothing, footwear and allied products; ind_ASW_4773 = Transport equipment. Original labels and
+          units are preserved; do not combine overlapping totals and subgroups.
+        enum:
+          - ind_ASW_1_45_others
+          - ind_ASW_1_46_others
+          - ind_ASW_1_47_others
+          - ind_ASW_45
+          - ind_ASW_451201_4513_452201_4523
+          - ind_ASW_451401-451405_452401-452405
+          - ind_ASW_46
+          - ind_ASW_460201_4603
+          - ind_ASW_460401-460405
+          - ind_ASW_47
+          - ind_ASW_4711_4721-4723
+          - ind_ASW_4731-4733
+          - ind_ASW_475101-475104_475199_477101_477102_477199
+          - ind_ASW_4773
+  - name: trades_statistics_by_employment
+    title: Principal statistics for all companies by industry grouping and number of persons engaged
+      (import/export, wholesale and retail trades sector) (630-76002)
+    description: "Principal statistics for all companies by industry grouping and number of persons engaged
+      (import/export, wholesale and retail trades sector). Official C&SD Table 630-76002. Newest periods
+      first; paginate with nextOffset. Preserve original figures, missing or suppressed values, revision
+      flags, units and localized notes. Do not sum overlapping totals or size groups. Annual Survey of
+      Economic Activities; monetary values in HK$ million and company/person counts remain separate. Group
+      boundaries and confidentiality suppression follow official notes. "
+    path: /get.php
+    query:
+      id: 630-76002
+      full_series: 1
+    transform:
+      response: normalizeRestaurantsIndustry
+    input:
+      period:
+        type: string
+        in: local
+        description: Official YYYY or YYYYMM period; year prefix selects all its observations. Quarterly observations
+          end in 03/06/09/12. Combine with freq to separate annual and subannual observations.
+        pattern: ^\d{4}$
+      freq:
+        type: string
+        in: local
+        description: Y annual; M monthly; Q quarterly, as available.
+        enum:
+          - Y
+      indicator:
+        type: string
+        in: local
+        description: "Original variables: COMP = Compensation of employees; COST_SOLD = Cost of goods sold; HC =
+          Number of companies; IVA = Industry value added; OE = Operating expenses; PE_ASEA = Number of
+          persons engaged; TR = Total receipts. Select measure to distinguish levels and changes."
+        enum:
+          - COMP
+          - COST_SOLD
+          - HC
+          - IVA
+          - OE
+          - PE_ASEA
+          - TR
+      measure:
+        type: string
+        in: local
+        description: hkd_million = HK$ million; number = count; index = reference-period index; yoy_percent =
+          year-on-year change; qoq_percent = seasonally adjusted quarter-to-quarter change. No conversion or
+          aggregation.
+        enum:
+          - hkd_million
+          - number
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of observation data.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Offset after filtering; continue with nextOffset and identical filters.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Official title, source, notes and dimension labels.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+      industry:
+        type: string
+        in: local
+        description: ind_ASW_1_45_others = Other import/export trade; ind_ASW_1_46_others = Other wholesale trade;
+          ind_ASW_1_47_others = Other retail trade; ind_ASW_45 = Import/export trade;
+          ind_ASW_451201_4513_452201_4523 = Food, alcoholic drinks and tobacco;
+          ind_ASW_451401-451405_452401-452405 = Clothing, footwear and allied products; ind_ASW_46 = Wholesale
+          trade; ind_ASW_460201_4603 = Food, alcoholic drinks and tobacco; ind_ASW_460401-460405 = Clothing,
+          footwear and allied products; ind_ASW_47 = Retail trade; ind_ASW_4711_4721-4723 = Food, alcoholic
+          drinks and tobacco; ind_ASW_4731-4733 = Fuel; ind_ASW_475101-475104_475199_477101_477102_477199 =
+          Clothing, footwear and allied products; ind_ASW_4773 = Transport equipment. Original labels and
+          units are preserved; do not combine overlapping totals and subgroups.
+        enum:
+          - ind_ASW_1_45_others
+          - ind_ASW_1_46_others
+          - ind_ASW_1_47_others
+          - ind_ASW_45
+          - ind_ASW_451201_4513_452201_4523
+          - ind_ASW_451401-451405_452401-452405
+          - ind_ASW_46
+          - ind_ASW_460201_4603
+          - ind_ASW_460401-460405
+          - ind_ASW_47
+          - ind_ASW_4711_4721-4723
+          - ind_ASW_4731-4733
+          - ind_ASW_475101-475104_475199_477101_477102_477199
+          - ind_ASW_4773
+      employment_group:
+        type: string
+        in: local
+        description: TOTAL = Total; <10 = < 10; 10-49 = 10 - 49; 100-199 = 100 - 199; 200-499 = 200 - 499; 50-99 = 50
+          - 99; 500_and_over = ≥ 500. Original labels and units are preserved; do not combine overlapping
+          totals and subgroups.
+        enum:
+          - TOTAL
+          - 10-49
+          - 100-199
+          - 200-499
+          - 50-99
+          - 500_and_over
+          - <10

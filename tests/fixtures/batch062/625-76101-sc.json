@@ -1,0 +1,866 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=625-76101&api_popup=1"
+    },
+    "title": "按行业组别划分的所有公司主要统计数字（住宿及膳食服务业）",
+    "tablenote": [
+      "以上的统计数字是按「香港标准行业分类2.0版」编制。用户可下载按「香港标准行业分类1.1版」编制的以往统计数字以作参考。  由于数字经四舍五入，分项总和未必与总数相等。  变动百分率是以未经进位数字计算。",
+      "2021年至2022年的数字包括与防疫抗疫措施有关的资助金额。",
+      "[§3] 增减少于 0.05%",
+      "[#1] 如果相连两年的数值其中之一为负数，有关的变动百分率甚难阐释，故不在表内显示。"
+    ],
+    "source": "经济活动按年统计调查 政府统计处经销服务统计组 (查询电话：3903 7399  查询电邮：asw@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 84,
+      "started": "2026-10-24T00:02:38+00:00",
+      "finished": "2026-10-24T00:02:38+00:00",
+      "durationSeconds": 0.029538
+    }
+  },
+  "dataSet": [
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 7953,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 6627,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 25505,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 13543,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COMP",
+      "svDesc": "百万港元",
+      "figure": 4009,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 14.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 14.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 8.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 7.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": 1.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2021",
+      "sv": "COMP",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "百万港元",
+      "figure": 11564,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "百万港元",
+      "figure": 2212,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "百万港元",
+      "figure": 32903,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "百万港元",
+      "figure": 15801,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "COST_SOLD",
+      "svDesc": "百万港元",
+      "figure": 5538,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "按年变动百分率",
+      "figure": 3.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "按年变动百分率",
+      "figure": 11.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "按年变动百分率",
+      "figure": 5.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "按年变动百分率",
+      "figure": 7.3,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "COST_SOLD",
+      "svDesc": "按年变动百分率",
+      "figure": 5.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 2966,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 7291,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 7446,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 2722,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "GS",
+      "svDesc": "百万港元",
+      "figure": 1758,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -4.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 47.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 2.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": -13.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": 40,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2020",
+      "sv": "GS",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[#1]"
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 7141,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 867,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 12939,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 4675,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "HC",
+      "svDesc": "数目",
+      "figure": 1123,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 7.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 4.6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 7.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 8.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": 1.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2014",
+      "sv": "HC",
+      "svDesc": "按年变动百分率",
+      "figure": "",
+      "sd_value": "[§3]"
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 10915,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 14604,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 32938,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 16267,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "IVA",
+      "svDesc": "百万港元",
+      "figure": 5757,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 7.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 29.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 6.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "IVA",
+      "svDesc": "按年变动百分率",
+      "figure": 13.1,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 10.2,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 7.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 6.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "OE",
+      "svDesc": "按年变动百分率",
+      "figure": 6.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 10190,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 7512,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 28960,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 12805,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "OE",
+      "svDesc": "百万港元",
+      "figure": 5966,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 76961,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 31849,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 228589,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 106064,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "PE_ASEA",
+      "svDesc": "数目",
+      "figure": 45564,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 8.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 5.7,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 9.8,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 10.5,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "PE_ASEA",
+      "svDesc": "按年变动百分率",
+      "figure": 9.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 7.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 23,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 6.9,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2010",
+      "sv": "TR",
+      "svDesc": "按年变动百分率",
+      "figure": 8.4,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_1_56_others",
+      "INDDesc": "其他膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 32673,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_55",
+      "INDDesc": "住宿服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 23643,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_56",
+      "INDDesc": "膳食服务业",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 94814,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_561101_561109-561111",
+      "INDDesc": "中式餐馆及酒楼",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 44870,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2009",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 17271,
+      "sd_value": ""
+    },
+    {
+      "IND": "ind_ASW_5612_561902",
+      "INDDesc": "快餐店",
+      "freq": "Y",
+      "period": "2024",
+      "sv": "TR",
+      "svDesc": "百万港元",
+      "figure": 29440,
+      "sd_value": ""
+    }
+  ]
+}
