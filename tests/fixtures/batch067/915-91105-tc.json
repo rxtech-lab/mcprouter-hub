@@ -1,0 +1,305 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=915-91105&api_popup=1"
+    },
+    "title": "油產品儲存容量及油庫儲存量",
+    "tablenote": [
+      "油庫使用量百分率數字代表油庫使用量佔儲存容量的百分比。  日數數字代表在正常使用下的油庫儲備日數，計算程式為：儲備日數 ＝ 指定期間期末的油庫儲存量 ÷（下月的實際銷售量 ÷ 下月日數）。  以上數字由本港主要石油公司提供，它們佔香港油產品大部分的總儲存容量及油庫儲存量。這些數字是指期末的數字。",
+      "根據由本港主要石油公司提供的數字，自2025年第3季起沒有大型油庫用於儲存煤油。",
+      "- 不適用"
+    ],
+    "source": "機電工程署",
+    "count": {
+      "noOfRecords": 28,
+      "started": "2026-10-24T05:02:25+00:00",
+      "finished": "2026-10-24T05:02:25+00:00",
+      "durationSeconds": 0.051999
+    }
+  },
+  "dataSet": [
+    {
+      "PROD_TYPE": "E_1",
+      "PROD_TYPEDesc": "航空汽油與航空煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "STORAGE_CAP",
+      "svDesc": "千公升",
+      "figure": 484000,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_2b",
+      "PROD_TYPEDesc": "無鉛車用汽油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "STORAGE_CAP",
+      "svDesc": "千公升",
+      "figure": 93571,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_3",
+      "PROD_TYPEDesc": "輕質柴油、重質柴油與石腦油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "STORAGE_CAP",
+      "svDesc": "千公升",
+      "figure": 606588,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_4",
+      "PROD_TYPEDesc": "燃油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "STORAGE_CAP",
+      "svDesc": "千公升",
+      "figure": 574421,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_5",
+      "PROD_TYPEDesc": "煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "STORAGE_CAP",
+      "svDesc": "千公升",
+      "figure": 5006,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_1",
+      "PROD_TYPEDesc": "航空汽油與航空煤油",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "STORAGE_CAP",
+      "svDesc": "千公升",
+      "figure": 484000,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_5",
+      "PROD_TYPEDesc": "煤油",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "STORAGE_CAP",
+      "svDesc": "千公升",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "PROD_TYPE": "E_6",
+      "PROD_TYPEDesc": "石油氣",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "STORAGE_CAP",
+      "svDesc": "公噸",
+      "figure": 14385,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_1",
+      "PROD_TYPEDesc": "航空汽油與航空煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "TAN_STK",
+      "svDesc": "千公升",
+      "figure": 329512,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_2b",
+      "PROD_TYPEDesc": "無鉛車用汽油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "TAN_STK",
+      "svDesc": "千公升",
+      "figure": 50800,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_3",
+      "PROD_TYPEDesc": "輕質柴油、重質柴油與石腦油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "TAN_STK",
+      "svDesc": "千公升",
+      "figure": 309183,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_4",
+      "PROD_TYPEDesc": "燃油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "TAN_STK",
+      "svDesc": "千公升",
+      "figure": 235738,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_5",
+      "PROD_TYPEDesc": "煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "TAN_STK",
+      "svDesc": "千公升",
+      "figure": 3431,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_6",
+      "PROD_TYPEDesc": "石油氣",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "TAN_STK",
+      "svDesc": "公噸",
+      "figure": 11167,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_1",
+      "PROD_TYPEDesc": "航空汽油與航空煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "DAYS_OFFTAKE",
+      "svDesc": "天",
+      "figure": 15,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_2b",
+      "PROD_TYPEDesc": "無鉛車用汽油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "DAYS_OFFTAKE",
+      "svDesc": "天",
+      "figure": 31,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_3",
+      "PROD_TYPEDesc": "輕質柴油、重質柴油與石腦油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "DAYS_OFFTAKE",
+      "svDesc": "天",
+      "figure": 25,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_4",
+      "PROD_TYPEDesc": "燃油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "DAYS_OFFTAKE",
+      "svDesc": "天",
+      "figure": 11,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_5",
+      "PROD_TYPEDesc": "煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "DAYS_OFFTAKE",
+      "svDesc": "天",
+      "figure": 133,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_6",
+      "PROD_TYPEDesc": "石油氣",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "DAYS_OFFTAKE",
+      "svDesc": "天",
+      "figure": 10,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_1",
+      "PROD_TYPEDesc": "航空汽油與航空煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "P_TAN_UTIL",
+      "svDesc": "(%)",
+      "figure": 68.1,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_2b",
+      "PROD_TYPEDesc": "無鉛車用汽油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "P_TAN_UTIL",
+      "svDesc": "(%)",
+      "figure": 54.3,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_3",
+      "PROD_TYPEDesc": "輕質柴油、重質柴油與石腦油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "P_TAN_UTIL",
+      "svDesc": "(%)",
+      "figure": 51,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_4",
+      "PROD_TYPEDesc": "燃油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "P_TAN_UTIL",
+      "svDesc": "(%)",
+      "figure": 41,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_5",
+      "PROD_TYPEDesc": "煤油",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "P_TAN_UTIL",
+      "svDesc": "(%)",
+      "figure": 68.5,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_6",
+      "PROD_TYPEDesc": "石油氣",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "P_TAN_UTIL",
+      "svDesc": "(%)",
+      "figure": 77.6,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "E_5",
+      "PROD_TYPEDesc": "煤油",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "P_TAN_UTIL",
+      "svDesc": "(%)",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "PROD_TYPE": "E_6",
+      "PROD_TYPEDesc": "石油氣",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "P_TAN_UTIL",
+      "svDesc": "(%)",
+      "figure": 67.1,
+      "sd_value": ""
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=915-91103&api_popup=1"
+    },
+    "title": "Unit values of imports of oil products and coal products",
+    "tablenote": [
+      "Statistics in this table are compiled based on Hong Kong external trade statistics and may be revised when relevant data are adjusted.",
+      "§ Figure is not released due to relatively insignificant magnitude.",
+      "- Not applicable"
+    ],
+    "source": "Hong Kong Energy Statistics Industrial Production Statistics Section, Census and Statistics Department Tel.: (852) 3903 7246 Email: energy@censtatd.gov.hk",
+    "count": {
+      "noOfRecords": 14,
+      "started": "2026-10-24T05:01:51+00:00",
+      "finished": "2026-10-24T05:01:51+00:00",
+      "durationSeconds": 0.023242
+    }
+  },
+  "dataSet": [
+    {
+      "PROD_TYPE": 1,
+      "PROD_TYPEDesc": "Aviation gasoline and kerosene",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/litre",
+      "figure": 6.04,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": "2b",
+      "PROD_TYPEDesc": "Motor gasoline (unleaded petrol)",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/litre",
+      "figure": 6.34,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 3,
+      "PROD_TYPEDesc": "Gas oil, diesel oil and naphtha",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/litre",
+      "figure": 5.99,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 4,
+      "PROD_TYPEDesc": "Fuel oil",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/litre",
+      "figure": 4.78,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 1,
+      "PROD_TYPEDesc": "Aviation gasoline and kerosene",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/litre",
+      "figure": 6.27,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 3,
+      "PROD_TYPEDesc": "Gas oil, diesel oil and naphtha",
+      "freq": "Q",
+      "period": "201403",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/litre",
+      "figure": 6,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 6,
+      "PROD_TYPEDesc": "Liquefied petroleum gas",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/kg",
+      "figure": 7.58,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 7,
+      "PROD_TYPEDesc": "Natural gas",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/kg",
+      "figure": 4.09,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 10,
+      "PROD_TYPEDesc": "Anthracite",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/tonne",
+      "figure": "",
+      "sd_value": "§"
+    },
+    {
+      "PROD_TYPE": 8,
+      "PROD_TYPEDesc": "Steam coal and other coal",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/tonne",
+      "figure": 572,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 9,
+      "PROD_TYPEDesc": "Wood charcoal",
+      "freq": "Y",
+      "period": "2013",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/tonne",
+      "figure": 3985,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 10,
+      "PROD_TYPEDesc": "Anthracite",
+      "freq": "Q",
+      "period": "201303",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/tonne",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "PROD_TYPE": 8,
+      "PROD_TYPEDesc": "Steam coal and other coal",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/tonne",
+      "figure": 798.4971,
+      "sd_value": ""
+    },
+    {
+      "PROD_TYPE": 9,
+      "PROD_TYPEDesc": "Wood charcoal",
+      "freq": "Q",
+      "period": "202606",
+      "sv": "UNIT_VAL_IM",
+      "svDesc": "HK$/tonne",
+      "figure": 6627.5793,
+      "sd_value": ""
+    }
+  ]
+}

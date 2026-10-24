@@ -1,0 +1,176 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=915-91201&api_popup=1"
+    },
+    "title": "Monthly statistics on consumption of electricity and gas by type of users",
+    "tablenote": [
+      "1 terajoule = 1012joules.  Figures in the table may not add up to the total due to rounding.  Hong Kong derives its energy almost entirely from external supplies.  Energy is mainly imported directly (as in the case of oil products and coal products), or produced (as in the case of electricity and gas) through some intermediate transformation processes using imported fuel inputs.  Electricity in Hong Kong is supplied by the CLP Power Hong Kong Limited and The Hongkong Electric Company Limited, while gas is supplied by The Hong Kong and China Gas Company Limited.  The statistics in the table are provided by these three energy companies.",
+      "Excluding industry own use and losses, i.e. consumption of energy by power companies and energy losses in electricity transformation and distribution, and exports of electricity to Chinese Mainland.",
+      "Some consumption in March 2023 was included in the figure in April 2023 due to delay in billing.",
+      "- Not applicable"
+    ],
+    "source": "CLP Power Hong Kong Limited, The Hongkong Electric Company, Limited and The Hong Kong and China Gas Company Limited",
+    "count": {
+      "noOfRecords": 16,
+      "started": "2026-10-24T05:02:26+00:00",
+      "finished": "2026-10-24T05:02:26+00:00",
+      "durationSeconds": 0.287775
+    }
+  },
+  "dataSet": [
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 35564,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "Domestic",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 7556,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "Commercial",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 13763,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "Industrial",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 14124,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 4,
+      "USER_TYPEDesc": "Street lighting",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 120,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "197901",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 2421,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "M",
+      "period": "200001",
+      "sv": "ELEC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 8473.1184,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": "",
+      "USER_TYPEDesc": "Total",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "GASC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 3021,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 1,
+      "USER_TYPEDesc": "Domestic",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "GASC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 1501,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 2,
+      "USER_TYPEDesc": "Commercial",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "GASC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 1318,
+      "sd_value": ""
+    },
+    {
+      "USER_TYPE": 3,
+      "USER_TYPEDesc": "Industrial",
+      "freq": "Y",
+      "period": "1979",
+      "sv": "GASC_LOCAL",
+      "svDesc": "Terajoule",
+      "figure": 202,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "1979",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "Terajoule",
+      "figure": 907,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "197901",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "Terajoule",
+      "figure": "",
+      "sd_value": "-"
+    },
+    {
+      "freq": "M",
+      "period": "201810",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "Terajoule",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202607",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "Terajoule",
+      "figure": 0,
+      "sd_value": ""
+    },
+    {
+      "freq": "M",
+      "period": "202608",
+      "sv": "ELE_EX_CHN",
+      "svDesc": "Terajoule",
+      "figure": 0,
+      "sd_value": ""
+    }
+  ]
+}

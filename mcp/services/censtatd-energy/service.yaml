@@ -1,0 +1,924 @@
+id: censtatd-energy
+title: Hong Kong Energy Trade, Storage, Sales & Consumption
+description: Official C&SD oil and coal import unit values, net imports, stocks,
+  sales, trade partners, electricity and gas consumption and revenue.
+apis:
+  - API-0816
+  - API-0817
+  - API-0818
+  - API-0819
+  - API-0820
+  - API-0821
+  - API-0822
+  - API-0823
+  - API-0824
+  - API-0825
+datasets:
+  - hk-censtatd-tablechart-915-91103
+  - hk-censtatd-tablechart-915-91104
+  - hk-censtatd-tablechart-915-91105
+  - hk-censtatd-tablechart-915-91106
+  - hk-censtatd-tablechart-915-91107
+  - hk-censtatd-tablechart-915-91108
+  - hk-censtatd-tablechart-915-91109
+  - hk-censtatd-tablechart-915-91110
+  - hk-censtatd-tablechart-915-91201
+  - hk-censtatd-tablechart-915-91202
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: energy_import_unit_values
+    title: Unit values of imports of oil products and coal products (915-91103)
+    description: Unit values of imports of oil products and coal products. Official
+      C&SD table 915-91103. Newest observations first; paginate with nextOffset.
+      Original figures, units, flags and notes are preserved; empty values are
+      not zero. Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91103
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: UNIT_VAL_IM"
+        enum:
+          - UNIT_VAL_IM
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - hkd_per_kg
+          - hkd_per_litre
+          - hkd_per_tonne
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: 1 = Aviation gasoline and kerosene; 2b =
+          Motor gasoline (unleaded petrol); 3 = Gas oil, diesel oil and naphtha;
+          4 = Fuel oil; 6 = Liquefied petroleum gas; 7 = Natural gas; 10 =
+          Anthracite; 8 = Steam coal and other coal; 9 = Wood charcoal. TOTAL
+          means the explicit source total; absent categories are not totals."
+        enum:
+          - "1"
+          - "10"
+          - 2b
+          - "3"
+          - "4"
+          - "6"
+          - "7"
+          - "8"
+          - "9"
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: monthly_energy_net_imports
+    title: Monthly statistics on quantity of net imports and unit values of imports
+      of selected oil products and coal products (915-91104)
+    description: Monthly statistics on quantity of net imports and unit values of
+      imports of selected oil products and coal products. Official C&SD table
+      915-91104. Newest observations first; paginate with nextOffset. Original
+      figures, units, flags and notes are preserved; empty values are not zero.
+      Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91104
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - M
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: QTY_NET_IM; UNIT_VAL_IM"
+        enum:
+          - QTY_NET_IM
+          - UNIT_VAL_IM
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - hkd_per_litre
+          - kilolitres
+          - tonnes
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: 1 = Aviation gasoline and kerosene; 2b =
+          Motor gasoline (unleaded petrol); 3 = Gas oil, diesel oil and naphtha;
+          4 = Fuel oil; 6 = Liquefied petroleum gas; 7 = Natural gas; 8 = Steam
+          coal and other coal; 9 = Wood charcoal. TOTAL means the explicit
+          source total; absent categories are not totals."
+        enum:
+          - "1"
+          - 2b
+          - "3"
+          - "4"
+          - "6"
+          - "7"
+          - "8"
+          - "9"
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: oil_storage_and_stocks
+    title: Storage capacity and tank stock of oil products (915-91105)
+    description: Storage capacity and tank stock of oil products. Official C&SD
+      table 915-91105. Newest observations first; paginate with nextOffset.
+      Original figures, units, flags and notes are preserved; empty values are
+      not zero. Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91105
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: STORAGE_CAP; TAN_STK;
+          DAYS_OFFTAKE; P_TAN_UTIL"
+        enum:
+          - STORAGE_CAP
+          - TAN_STK
+          - DAYS_OFFTAKE
+          - P_TAN_UTIL
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - days
+          - kilolitres
+          - percent
+          - tonnes
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: E_1 = Aviation gasoline and aviation
+          kerosene; E_2b = Unleaded motor gasoline; E_3 = Gas oil, diesel oil
+          and naphtha; E_4 = Fuel oil; E_5 = Kerosene; E_6 = Liquefied petroleum
+          gas. TOTAL means the explicit source total; absent categories are not
+          totals."
+        enum:
+          - E_1
+          - E_2b
+          - E_3
+          - E_4
+          - E_5
+          - E_6
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: oil_sales_by_user
+    title: Sales of oil products by type of users (915-91106)
+    description: Sales of oil products by type of users. Official C&SD table
+      915-91106. Newest observations first; paginate with nextOffset. Original
+      figures, units, flags and notes are preserved; empty values are not zero.
+      Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91106
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: SALES_OIL"
+        enum:
+          - SALES_OIL
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - kilolitres
+          - tonnes
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: E_1 = Aviation gasoline and aviation
+          kerosene; E_2b = Unleaded motor gasoline; E_3 = Gas oil, diesel oil
+          and naphtha; E_4 = Fuel oil; E_5 = Kerosene; E_6 = Liquefied petroleum
+          gas. TOTAL means the explicit source total; absent categories are not
+          totals."
+        enum:
+          - E_1
+          - E_2b
+          - E_3
+          - E_4
+          - E_5
+          - E_6
+      sales:
+        type: string
+        in: local
+        description: "Official SALES_TYPE codes: TOTAL = Total; 1 = Sales for local
+          consumption; 1.1 = By electricity and gas companies; 1.2 = By
+          domestic, commercial and industrial users; 1.3 = By Government and
+          other users; 2 = Other sales; 2.1 = Non-local sales; 2.2 = Ship
+          stores; 2.3 = Aircraft stores. TOTAL means the explicit source total;
+          absent categories are not totals."
+        enum:
+          - TOTAL
+          - "1"
+          - "1.1"
+          - "1.2"
+          - "1.3"
+          - "2"
+          - "2.1"
+          - "2.2"
+          - "2.3"
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: oil_imports_by_supplier
+    title: Annual quantity of imports of oil products by supplier (915-91107)
+    description: Annual quantity of imports of oil products by supplier. Official
+      C&SD table 915-91107. Newest observations first; paginate with nextOffset.
+      Original figures, units, flags and notes are preserved; empty values are
+      not zero. Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91107
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: QTY_IM"
+        enum:
+          - QTY_IM
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - kilolitres
+          - tonnes
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: 1 = Aviation gasoline and kerosene; 2b =
+          Motor gasoline (unleaded petrol); 3 = Gas oil, diesel oil and naphtha;
+          4 = Fuel oil; 6 = Liquefied petroleum gas; 7 = Natural gas. TOTAL
+          means the explicit source total; absent categories are not totals."
+        enum:
+          - "1"
+          - 2b
+          - "3"
+          - "4"
+          - "6"
+          - "7"
+      country:
+        type: string
+        in: local
+        description: "Official COUNTRY codes: TOTAL = Total; ENERGY_33100 = Russia;
+          ENERGY_61200 = Taiwan; ENERGY_61300 = Indonesia; ENERGY_61700 = Korea;
+          ENERGY_61900 = Thailand; ENERGY_62100 = Japan; ENERGY_63100 = Chinese
+          Mainland; ENERGY_69300 = India; ENERGY_69400 = Malaysia; ENERGY_69700
+          = Singapore; ENERGY_99999 = Others; ENERGY_52100 = Saudi Arabia;
+          ENERGY_89100 = Australia; ENERGY_51900 = Qatar; ENERGY_52300 = United
+          Arab Emirates; ENERGY_89700 = Papua New Guinea; ENERGY_69100 = Brunei
+          Darussalam; ENERGY_41300 = Brazil; ENERGY_79300 = Nigeria. TOTAL means
+          the explicit source total; absent categories are not totals."
+        enum:
+          - TOTAL
+          - ENERGY_33100
+          - ENERGY_41300
+          - ENERGY_51900
+          - ENERGY_52100
+          - ENERGY_52300
+          - ENERGY_61200
+          - ENERGY_61300
+          - ENERGY_61700
+          - ENERGY_61900
+          - ENERGY_62100
+          - ENERGY_63100
+          - ENERGY_69100
+          - ENERGY_69300
+          - ENERGY_69400
+          - ENERGY_69700
+          - ENERGY_79300
+          - ENERGY_89100
+          - ENERGY_89700
+          - ENERGY_99999
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: coal_imports_by_supplier
+    title: Annual quantity of imports of coal products by supplier (915-91108)
+    description: Annual quantity of imports of coal products by supplier. Official
+      C&SD table 915-91108. Newest observations first; paginate with nextOffset.
+      Original figures, units, flags and notes are preserved; empty values are
+      not zero. Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91108
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: QTY_IM"
+        enum:
+          - QTY_IM
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - tonnes
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: 10 = Anthracite; 8 = Steam coal and
+          other coal; 9 = Wood charcoal. TOTAL means the explicit source total;
+          absent categories are not totals."
+        enum:
+          - "10"
+          - "8"
+          - "9"
+      country:
+        type: string
+        in: local
+        description: "Official COUNTRY codes: TOTAL = Total; ENERGY_22100 = Germany;
+          ENERGY_22200 = Netherlands; ENERGY_33100 = Russia; ENERGY_61300 =
+          Indonesia; ENERGY_61900 = Thailand; ENERGY_63100 = Chinese Mainland;
+          ENERGY_63300 = Vietnam; ENERGY_69400 = Malaysia; ENERGY_89100 =
+          Australia; ENERGY_99999 = Others; ENERGY_19100 = Canada; ENERGY_69700
+          = Singapore; ENERGY_25100 = Estonia; ENERGY_22300 = Belgium;
+          ENERGY_11100 = United States of America; ENERGY_41500 = Colombia;
+          ENERGY_79300 = Nigeria. TOTAL means the explicit source total; absent
+          categories are not totals."
+        enum:
+          - TOTAL
+          - ENERGY_11100
+          - ENERGY_19100
+          - ENERGY_22100
+          - ENERGY_22200
+          - ENERGY_22300
+          - ENERGY_25100
+          - ENERGY_33100
+          - ENERGY_41500
+          - ENERGY_61300
+          - ENERGY_61900
+          - ENERGY_63100
+          - ENERGY_63300
+          - ENERGY_69400
+          - ENERGY_69700
+          - ENERGY_79300
+          - ENERGY_89100
+          - ENERGY_99999
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: oil_reexports_by_destination
+    title: Annual quantity of re-exports of oil products by destination (915-91109)
+    description: Annual quantity of re-exports of oil products by destination.
+      Official C&SD table 915-91109. Newest observations first; paginate with
+      nextOffset. Original figures, units, flags and notes are preserved; empty
+      values are not zero. Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91109
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: QTY_RX"
+        enum:
+          - QTY_RX
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - kilolitres
+          - tonnes
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: 1 = Aviation gasoline and kerosene; 2b =
+          Motor gasoline (unleaded petrol); 3 = Gas oil, diesel oil and naphtha;
+          4 = Fuel oil; 6 = Liquefied petroleum gas; 7 = Natural gas. TOTAL
+          means the explicit source total; absent categories are not totals."
+        enum:
+          - "1"
+          - 2b
+          - "3"
+          - "4"
+          - "6"
+          - "7"
+      country:
+        type: string
+        in: local
+        description: "Official COUNTRY codes: TOTAL = Total; ENERGY_61500 = Macao;
+          ENERGY_61700 = Korea; ENERGY_63100 = Chinese Mainland; ENERGY_99999 =
+          Others; ENERGY_63300 = Vietnam; ENERGY_61200 = Taiwan; ENERGY_61600 =
+          Philippines; ENERGY_61100 = Cambodia; ENERGY_89100 = Australia. TOTAL
+          means the explicit source total; absent categories are not totals."
+        enum:
+          - TOTAL
+          - ENERGY_61100
+          - ENERGY_61200
+          - ENERGY_61500
+          - ENERGY_61600
+          - ENERGY_61700
+          - ENERGY_63100
+          - ENERGY_63300
+          - ENERGY_89100
+          - ENERGY_99999
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: coal_reexports_by_destination
+    title: Annual quantity of re-exports of coal products by destination (915-91110)
+    description: Annual quantity of re-exports of coal products by destination.
+      Official C&SD table 915-91110. Newest observations first; paginate with
+      nextOffset. Original figures, units, flags and notes are preserved; empty
+      values are not zero. Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91110
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: QTY_RX"
+        enum:
+          - QTY_RX
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - tonnes
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: 10 = Anthracite; 8 = Steam coal and
+          other coal; 9 = Wood charcoal. TOTAL means the explicit source total;
+          absent categories are not totals."
+        enum:
+          - "10"
+          - "8"
+          - "9"
+      country:
+        type: string
+        in: local
+        description: "Official COUNTRY codes: TOTAL = Total; ENERGY_61500 = Macao;
+          ENERGY_61700 = Korea; ENERGY_62100 = Japan; ENERGY_99999 = Others;
+          ENERGY_63100 = Chinese Mainland; ENERGY_63300 = Vietnam. TOTAL means
+          the explicit source total; absent categories are not totals."
+        enum:
+          - TOTAL
+          - ENERGY_61500
+          - ENERGY_61700
+          - ENERGY_62100
+          - ENERGY_63100
+          - ENERGY_63300
+          - ENERGY_99999
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: monthly_electricity_gas_consumption
+    title: Monthly statistics on consumption of electricity and gas by type of users
+      (915-91201)
+    description: Monthly statistics on consumption of electricity and gas by type of
+      users. Official C&SD table 915-91201. Newest observations first; paginate
+      with nextOffset. Original figures, units, flags and notes are preserved;
+      empty values are not zero. Totals and subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91201
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - M
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}(0[1-9]|1[0-2])?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: ELEC_LOCAL; GASC_LOCAL;
+          ELE_EX_CHN"
+        enum:
+          - ELEC_LOCAL
+          - GASC_LOCAL
+          - ELE_EX_CHN
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - terajoule
+      user:
+        type: string
+        in: local
+        description: "Official USER_TYPE codes: TOTAL = Total; 1 = Domestic; 2 =
+          Commercial; 3 = Industrial; 4 = Street lighting. TOTAL means the
+          explicit source total; absent categories are not totals."
+        enum:
+          - TOTAL
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: electricity_gas_consumption_revenue
+    title: Local consumption of electricity and gas by type of users and sales
+      revenue from locally sold (915-91202)
+    description: Local consumption of electricity and gas by type of users and sales
+      revenue from locally sold. Official C&SD table 915-91202. Newest
+      observations first; paginate with nextOffset. Original figures, units,
+      flags and notes are preserved; empty values are not zero. Totals and
+      subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 915-91202
+      full_series: 1
+    transform:
+      response: normalizeEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official annual Y, quarterly Q or monthly M frequency where available.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year matches all observations in that year; otherwise
+          exact YYYYMM period.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variable code: ELEC_LOCAL; REVENUE_ELEC;
+          GASC_LOCAL; REVENUE_GAS"
+        enum:
+          - ELEC_LOCAL
+          - REVENUE_ELEC
+          - GASC_LOCAL
+          - REVENUE_GAS
+      measure:
+        type: string
+        in: local
+        description: Source unit, without conversion. Percentage shares and percentages
+          remain distinct.
+        enum:
+          - hkd_million
+          - percent_share
+          - terajoule
+      user:
+        type: string
+        in: local
+        description: "Official USER_TYPE codes: TOTAL = Total; 1 = Domestic; 2 =
+          Commercial; 3 = Industrial; 4 = Street lighting. TOTAL means the
+          explicit source total; absent categories are not totals."
+        enum:
+          - TOTAL
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
