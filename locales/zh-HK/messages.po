@@ -79,33 +79,32 @@ msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show plans and usa
 msgstr "設定 RX_SUBSCRIPTION_URL 及 RX_SUBSCRIPTION_API_KEY 以顯示計劃及用量。"
 
 #: app/(dashboard)/billing/page.tsx
-msgid "Each user message uses one chat unit. Direct MCP tool calls use MCP call credits."
-msgstr "每則用戶訊息使用一個對話單位。直接調用 MCP 工具會使用 MCP 調用額度。"
+msgid "Chat and MCP calls use your plan allowances. News tools use a separate premium allowance, including during chat."
+msgstr "聊天及 MCP 呼叫會使用計劃配額。新聞工具使用獨立的進階配額，包括聊天期間的呼叫。"
 
 #: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Metering is switched off on this deployment, so tool calls are free for now."
 msgstr "此部署已關閉計量，工具調用暫時免費。"
 
 #: app/(dashboard)/billing/page.tsx
-msgid "Balance"
-msgstr "結餘"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "No balance yet. Pick a plan or top up below."
-msgstr "暫無結餘。請在下方選擇計劃或增值。"
-
-#: app/(dashboard)/billing/page.tsx app/(dashboard)/usage/credits/page.tsx
-msgid "The balance is unavailable right now."
-msgstr "暫時未能取得結餘。"
-
-#: app/(dashboard)/billing/page.tsx
-msgid "{n} call this period"
-msgid_plural "{n} calls this period"
-msgstr[0] "本週期 {n} 次調用"
+msgid "Usage limits"
+msgstr "用量上限"
 
 #: app/(dashboard)/billing/page.tsx app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
 msgid "Resets {date}"
 msgstr "於 {date} 重設"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "No usage limits are configured yet."
+msgstr "尚未設定用量上限。"
+
+#: app/(dashboard)/billing/page.tsx app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
+msgid "Usage is unavailable right now."
+msgstr "暫時未能取得用量。"
+
+#: app/(dashboard)/billing/page.tsx
+msgid "Stored credits and history"
+msgstr "儲值額度及記錄"
 
 #: app/(dashboard)/billing/page.tsx
 msgid "Plans"
@@ -387,10 +386,6 @@ msgstr "過去 30 日，香港時間"
 #: app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/layout.tsx app/(dashboard)/usage/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Usage"
 msgstr "用量"
-
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
-msgid "Usage is unavailable right now."
-msgstr "暫時未能取得用量。"
 
 #: app/(dashboard)/dashboard/page.tsx
 msgid "Browse services"
@@ -1502,7 +1497,7 @@ msgstr "沒有調用"
 msgid "{n} failed or denied"
 msgstr "{n} 次失敗或被拒絕"
 
-#: app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/layout.tsx components/agent/chat-allowance.tsx lib/agent/dashboard-tools.ts
+#: app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/layout.tsx lib/agent/dashboard-tools.ts
 msgid "Credits"
 msgstr "額度"
 
@@ -1515,8 +1510,16 @@ msgid "Credit balance"
 msgstr "額度結餘"
 
 #: app/(dashboard)/usage/credits/page.tsx
+msgid "Stored credits cover overage only when your usage policy allows it. Your plan limits appear on Billing."
+msgstr "只有用量政策允許時，儲值額度才會支付超額用量。計劃上限顯示於帳單頁面。"
+
+#: app/(dashboard)/usage/credits/page.tsx
 msgid "No credits yet. Pay as you go calls are paid from credits."
 msgstr "暫無額度。按用量付費的調用會從額度中扣除。"
+
+#: app/(dashboard)/usage/credits/page.tsx
+msgid "The balance is unavailable right now."
+msgstr "暫時未能取得結餘。"
 
 #: app/(dashboard)/usage/credits/page.tsx
 msgid "Top up"
@@ -1558,6 +1561,18 @@ msgstr "用量檢視"
 #: app/(dashboard)/usage/page.tsx
 msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show usage."
 msgstr "請設定 RX_SUBSCRIPTION_URL 和 RX_SUBSCRIPTION_API_KEY 以顯示用量。"
+
+#: app/(dashboard)/usage/page.tsx
+msgid "Usage meter"
+msgstr "用量類別"
+
+#: app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
+msgid "MCP calls"
+msgstr "MCP 呼叫"
+
+#: app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
+msgid "Premium MCP calls"
+msgstr "進階 MCP 呼叫"
 
 #: app/(dashboard)/usage/page.tsx
 msgid "Plan allowance"
@@ -2286,6 +2301,10 @@ msgid "Sign out"
 msgstr "登出"
 
 #: components/agent/chat-allowance.tsx
+msgid "Unavailable"
+msgstr "暫時無法取得"
+
+#: components/agent/chat-allowance.tsx
 msgid "Loading usage…"
 msgstr "正在載入用量…"
 
@@ -2298,12 +2317,8 @@ msgid "Sign in to view credits"
 msgstr "登入以查看額度"
 
 #: components/agent/chat-allowance.tsx
-msgid "Chat credits"
-msgstr "對話額度"
-
-#: components/agent/chat-allowance.tsx
-msgid "Unavailable"
-msgstr "暫時無法取得"
+msgid "Chat allowance"
+msgstr "聊天配額"
 
 #: components/agent/chat-allowance.tsx
 msgid "Chat and tool calls are free on this deployment."

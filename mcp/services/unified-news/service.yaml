@@ -2,7 +2,7 @@ id: unified-news
 title: Global News
 region: global
 apis: [API-3820, API-3821, API-3822]
-description: Top news and article details from Trade Bloom Finance and Reuters API via RapidAPI, plus the public Hacker News API, with provider-prefixed article IDs.
+description: Top news, news search and article content from Trade Bloom Finance, Reuters, Hacker News and Firecrawl. Missing article bodies use a decision model and persistent Firecrawl scrape cache.
 cacheTtl: 0
 tools:
   - name: list_top_news
@@ -13,7 +13,23 @@ tools:
       x: { type: integer, minimum: 1, maximum: 50, default: 10, in: local, description: "Maximum articles per provider, not the combined total." }
   - name: get_news_detail
     title: News article details
-    description: Fetch one article using the exact provider-prefixed id returned by list_top_news. trade-bloom IDs route to stories/bulletin with ids=internalID (bulletin metadata, not full article text); reuters IDs route to details by article URL. hacker-news IDs route to the official Firebase item endpoint by numeric ID. No prior list call or in-memory lookup is required. Returns id, provider and the provider's article data; content fields differ by source. Provider access restrictions are reported as errors, including failures inside HTTP 200 bodies.
+    description: Fetch article details using an exact id from list_top_news or search_news. Preserves provider article data. A decision model checks for an actual body; when missing, Firecrawl scrapes the linked page into content.markdown and saves it in the database for reuse. Firecrawl search IDs scrape directly. Reports provider, model, scrape and database failures explicitly; no automatic retries. Requires server AI Gateway configuration and FIRECRAWL_API_KEY for fallback.
     handler: getNewsDetail
+    timeoutMs: 60000
     input:
-      id: { type: string, required: true, in: local, pattern: '^(trade-bloom:[A-Za-z0-9]{14}|reuters:[A-Za-z0-9_-]{1,4000}|hacker-news:[1-9][0-9]{0,15})$', description: Exact ID returned by list_top_news. }
+      id: { type: string, required: true, in: local, pattern: '^(trade-bloom:[A-Za-z0-9]{14}|reuters:[A-Za-z0-9_-]{1,4000}|hacker-news:[1-9][0-9]{0,15}|firecrawl:[A-Za-z0-9_-]{1,4000})$', description: Exact ID returned by list_top_news or search_news. }
+  - name: scrape_website
+    title: Scrape website with Firecrawl
+    description: Return main page content as Markdown using Firecrawl v2. Accepts a public HTTP(S) URL. Successful content is stored in the database and reused on later requests, including news details. Requires server FIRECRAWL_API_KEY. No automatic retries.
+    handler: scrapeWebsite
+    timeoutMs: 60000
+    input:
+      url: { type: string, required: true, in: local, description: Public article URL to scrape. }
+  - name: search_news
+    title: Search news with Firecrawl
+    description: Search Firecrawl v2 with the news source. Returns ranked headlines, URLs, summaries and durable IDs for get_news_detail. Search does not scrape every result; request details to retrieve and cache a body. Requires server FIRECRAWL_API_KEY. No automatic retries.
+    handler: searchNews
+    timeoutMs: 60000
+    input:
+      query: { type: string, required: true, in: local, description: News search query containing 1 to 500 characters. }
+      limit: { type: integer, minimum: 1, maximum: 50, default: 10, in: local, description: Maximum news results. }

@@ -13,9 +13,7 @@ function deps(overrides: Partial<Parameters<typeof meterToolCall>[3]> = {}) {
     record: vi.fn(async () => ({ allowed: true, used: 1, limit: 100, remaining: 99, chargedUnits: 0, periodEnd: null, duplicate: false })),
     increment: vi.fn(async () => {}),
     log: vi.fn(async () => {}),
-    debit: vi.fn(async () => ({ entryId: "entry-1", duplicate: false, balanceAfter: 9 })),
     billingEnabled: true,
-    creditUnit: undefined as string | undefined,
     defer: (promise: Promise<unknown>) => void deferred.push(promise),
     ...overrides,
   };
@@ -54,19 +52,18 @@ describe("meterToolCall", () => {
   });
 
   it.each(["web", "telegram", "whatsapp"] as const)("includes tools in a metered %s chat message", async (channel) => {
-    const { value, settle } = deps({ creditUnit: "mcp-calls" });
+    const { value, settle } = deps();
     const result = await meterToolCall({ userId: "member", apiKeyId: null, scopes: [], channel, chatMetered: true }, call, async () => ({ eta: 3 }), value);
     await settle();
     expect(result.isError).toBeUndefined();
-    expect(value.debit).not.toHaveBeenCalled();
     expect(value.record).not.toHaveBeenCalled();
     expect(value.log).toHaveBeenCalledWith(expect.objectContaining({ userId: "member", channel, status: "ok" }));
   });
 
   it("still bills an API-key caller claiming to be a metered chat", async () => {
-    const { value } = deps({ creditUnit: "mcp-calls" });
+    const { value } = deps();
     await meterToolCall({ ...caller, chatMetered: true }, call, async () => ({}), value);
-    expect(value.debit).toHaveBeenCalledOnce();
+    expect(value.record).toHaveBeenCalledOnce();
   });
 
   it("refuses the call when the plan's allowance is used up", async () => {
@@ -75,7 +72,7 @@ describe("meterToolCall", () => {
     const result = await meterToolCall(caller, call, run, value);
     expect(run).not.toHaveBeenCalled();
     expect(result.isError).toBe(true);
-    expect(result.content[0].text).toMatch(/allowance is used up \(1000\/1000 calls used\).*Pay as you go.*\/billing/);
+    expect(result.content[0].text).toMatch(/allowance is used up \(1000\/1000 calls used\).*\/billing/);
     expect(value.increment).not.toHaveBeenCalled();
     expect(value.log).toHaveBeenCalledWith(expect.objectContaining({ status: "denied", errorCode: "limit_exceeded" }));
   });
@@ -96,30 +93,37 @@ describe("meterToolCall", () => {
     expect(result.content[0].text).toMatch(/Billing is temporarily unavailable/);
   });
 
-  it("pays for each call from the credit balance and only tracks the usage item", async () => {
-    const { value, settle } = deps({ creditUnit: "mcp-calls" });
-    const result = await meterToolCall(caller, call, async () => ({ eta: 3 }), value);
+  it.each(["list_top_news", "get_news_detail", "search_news", "scrape_website"])("records %s only against the premium meter", async (tool) => {
+    const { value, settle } = deps();
+    const result = await meterToolCall(caller, { service: "unified-news", tool }, async () => ({ ok: true }), value);
     await settle();
     expect(result.isError).toBeUndefined();
-    expect(value.debit).toHaveBeenCalledWith(expect.objectContaining({ rxlabUserId: "user-1", unit: "mcp-calls", description: "kmb_stop_eta" }));
-    const [debit] = vi.mocked(value.debit).mock.calls[0] as unknown as [{ idempotencyKey: string }];
-    expect(value.record).toHaveBeenCalledWith(expect.objectContaining({ item: "mcp_calls", idempotencyKey: debit.idempotencyKey }));
+    expect(value.record).toHaveBeenCalledExactlyOnceWith(expect.objectContaining({ rxlabUserId: "user-1", item: "premium_mcp" }));
   });
 
-  it("refuses the call when the credit balance is empty", async () => {
+  it("refuses premium calls before execution when their allowance is exhausted", async () => {
     const run = vi.fn();
-    const { value } = deps({ creditUnit: "mcp-calls", debit: vi.fn(async () => { throw new UsageLimitError("mcp-calls", "insufficient_balance", null, null); }) });
-    const result = await meterToolCall(caller, call, run, value);
+    const { value } = deps({ record: vi.fn(async () => { throw new UsageLimitError("premium_mcp", "limit_exceeded", 10, 10); }) });
+    const result = await meterToolCall(caller, { service: "unified-news", tool: "search_news" }, run, value);
     expect(run).not.toHaveBeenCalled();
-    expect(result.content[0].text).toMatch(/out of MCP call credits.*\/billing/);
-    expect(value.record).not.toHaveBeenCalled();
+    expect(result.content[0].text).toMatch(/premium MCP call allowance.*\/billing/);
   });
 
-  it("does not fail a paid call when usage tracking fails", async () => {
-    const { value, settle } = deps({ creditUnit: "mcp-calls", record: vi.fn(async () => { throw new Error("ECONNREFUSED"); }) });
-    const result = await meterToolCall(caller, call, async () => ({ eta: 3 }), value);
+  it.each(["web", "telegram", "whatsapp"] as const)("meters premium tools separately during %s chat", async (channel) => {
+    const { value, settle } = deps();
+    const result = await meterToolCall({ userId: "member", apiKeyId: null, scopes: [], chatMetered: true, channel }, { service: "unified-news", tool: "get_news_detail" }, async () => ({}), value);
     await settle();
     expect(result.isError).toBeUndefined();
+    expect(value.record).toHaveBeenCalledExactlyOnceWith(expect.objectContaining({ item: "premium_mcp" }));
+  });
+
+  it("requires an account for premium guest calls", async () => {
+    const { value } = deps();
+    const run = vi.fn();
+    const result = await meterToolCall({ userId: "guest", apiKeyId: null, scopes: [], guest: true }, { service: "unified-news", tool: "search_news" }, run, value);
+    expect(result.isError).toBe(true);
+    expect(run).not.toHaveBeenCalled();
+    expect(value.record).not.toHaveBeenCalled();
   });
 
   it("skips metering when billing is disabled and returns upstream errors", async () => {
@@ -127,7 +131,6 @@ describe("meterToolCall", () => {
     const result = await meterToolCall(caller, call, async () => { throw new UpstreamError("upstream_timeout", "too slow"); }, value);
     await settle();
     expect(value.record).not.toHaveBeenCalled();
-    expect(value.debit).not.toHaveBeenCalled();
     expect(result).toEqual({ content: [{ type: "text", text: "too slow" }], isError: true });
     expect(value.increment).toHaveBeenCalledWith("key-1");
     expect(value.log).toHaveBeenCalledWith(expect.objectContaining({ status: "error", errorCode: "upstream_timeout" }));

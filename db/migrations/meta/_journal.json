@@ -85,6 +85,13 @@
       "when": 1792556053268,
       "tag": "0011_datasets_live_org",
       "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "6",
+      "when": 1792864992048,
+      "tag": "0012_news_content",
+      "breakpoints": true
     }
   ]
 }

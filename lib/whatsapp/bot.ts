@@ -83,7 +83,7 @@ export function linkedMessage(email: string) {
 }
 
 export function overLimitMessage(origin: string) {
-  return `You have no chat credits left. Sign in to top up or change your plan:\n${origin}/login?next=${encodeURIComponent("/billing")}`;
+  return `Your chat allowance is used up. Sign in to review your usage and plan:\n${origin}/login?next=${encodeURIComponent("/billing")}`;
 }
 
 /** Answers one incoming WhatsApp message. Never throws; failures are logged and, where possible, told to the user. */

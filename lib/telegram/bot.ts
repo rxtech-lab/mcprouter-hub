@@ -93,7 +93,7 @@ export const SIGNED_OUT_LEAD = "Signed out. This Telegram account is no longer l
 export function overLimitMessage(origin: string) {
   const url = `${origin}/login?next=${encodeURIComponent("/billing")}`;
   return {
-    text: `You have no chat credits left. Sign in to top up or change your plan:\n${url}`,
+    text: `Your chat allowance is used up. Sign in to review your usage and plan:\n${url}`,
     button: buttonFor("Open billing", url),
   };
 }

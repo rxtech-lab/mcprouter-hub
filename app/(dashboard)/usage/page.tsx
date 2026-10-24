@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const RANGES = [7, 14, 30];
 
-const paramsSchema = z.object({ days: z.enum(["7", "14", "30"]).catch("30").transform(Number) });
+const paramsSchema = z.object({ days: z.enum(["7", "14", "30"]).catch("30").transform(Number), meter: z.enum(["standard", "premium"]).catch("standard") });
 
 export default async function UsageCallsPage({ searchParams }: PageProps<"/usage">) {
   const user = await requirePageUser();
@@ -29,18 +29,23 @@ export default async function UsageCallsPage({ searchParams }: PageProps<"/usage
   }
 
   const raw = await searchParams;
-  const { days } = paramsSchema.parse({ days: Array.isArray(raw.days) ? raw.days[0] : raw.days });
+  const { days, meter } = paramsSchema.parse({ days: Array.isArray(raw.days) ? raw.days[0] : raw.days, meter: Array.isArray(raw.meter) ? raw.meter[0] : raw.meter });
+  const item = meter === "premium" ? billingConfig.premiumUsageItem : billingConfig.usageItem;
   const [daily, entitlements, breakdown] = await Promise.all([
-    callsPerDay(user, days).catch((error) => (console.error("[usage] statistics", error), null)),
+    callsPerDay(user, days, item).catch((error) => (console.error("[usage] statistics", error), null)),
     getEntitlements(user).catch((error) => (console.error("[usage] entitlements", error), null)),
     callsByTool(user, days).catch((error) => (console.error("[usage] breakdown", error), null)),
   ]);
-  const allowance = entitlements?.usage.find((item) => item.key === billingConfig.usageItem);
+  const allowance = entitlements?.usage.find((usage) => usage.key === item);
   const total = daily?.reduce((sum, row) => sum + row.value, 0) ?? 0;
   const credits = daily?.reduce((sum, row) => sum + row.credits, 0) ?? 0;
 
   return (
     <>
+      <nav aria-label={t("Usage meter")} className="mb-4 flex gap-2">
+        <ButtonLink href={`/usage?days=${days}&meter=standard`} variant={meter === "standard" ? "tonal" : "text"} aria-current={meter === "standard" ? "page" : undefined}>{t("MCP calls")}</ButtonLink>
+        <ButtonLink href={`/usage?days=${days}&meter=premium`} variant={meter === "premium" ? "tonal" : "text"} aria-current={meter === "premium" ? "page" : undefined}>{t("Premium MCP calls")}</ButtonLink>
+      </nav>
       <div className="stagger grid gap-4 sm:grid-cols-3">
         <StatCard label={t("Calls, last {days} days", { days })} value={daily ? formatNumber(total, t.locale) : "–"} icon={<Activity size={18} />} />
         <StatCard
@@ -60,7 +65,7 @@ export default async function UsageCallsPage({ searchParams }: PageProps<"/usage
           </div>
           <nav aria-label={t("Range")} className="flex gap-1">
             {RANGES.map((range) => (
-              <ButtonLink key={range} href={`/usage?days=${range}`} variant={range === days ? "tonal" : "text"} aria-current={range === days ? "true" : undefined}>
+              <ButtonLink key={range} href={`/usage?days=${range}&meter=${meter}`} variant={range === days ? "tonal" : "text"} aria-current={range === days ? "true" : undefined}>
                 {t("{range} days", { range })}
               </ButtonLink>
             ))}
@@ -75,7 +80,7 @@ export default async function UsageCallsPage({ searchParams }: PageProps<"/usage
           <p className="mb-4 type-body-small text-on-surface-variant">{t("Last {days} days", { days })}</p>
           {breakdown ? (
             <HorizontalBars
-              rows={breakdown.byTool.map((row) => ({ label: row.tool, value: row.calls }))}
+              rows={breakdown.byTool.filter((row) => (row.service === "unified-news") === (meter === "premium")).map((row) => ({ label: row.tool, value: row.calls }))}
               empty={t("No tool calls in this range.")}
             />
           ) : (
@@ -87,7 +92,7 @@ export default async function UsageCallsPage({ searchParams }: PageProps<"/usage
           <p className="mb-4 type-body-small text-on-surface-variant">{t("Last {days} days", { days })}</p>
           {breakdown ? (
             <HorizontalBars
-              rows={breakdown.byProvider.map((row) => ({ label: row.title, detail: row.service, value: row.calls }))}
+              rows={breakdown.byProvider.filter((row) => (row.service === "unified-news") === (meter === "premium")).map((row) => ({ label: row.title, detail: row.service, value: row.calls }))}
               empty={t("No tool calls in this range.")}
             />
           ) : (
