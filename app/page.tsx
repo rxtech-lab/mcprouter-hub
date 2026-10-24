@@ -61,6 +61,7 @@ const steps = [
 ];
 
 export default async function Home({ searchParams }: PageProps<"/">) {
+  const previewServices = manifest.services.slice(0, 30);
   const toolCount = manifest.services.reduce((sum, service) => sum + service.tools.length, 0);
   const freeChat = freeChatConfig();
   const telegram = telegramConfig();
@@ -130,8 +131,11 @@ export default async function Home({ searchParams }: PageProps<"/">) {
 
         <section id="services" className="scroll-mt-24">
           <SectionHeading eyebrow={t("Services")} title={t("Everything Hongkongers check on their phone")} />
+          <p className="-mt-4 mb-8 max-w-2xl type-body-large text-on-surface-variant">
+            {t("Showing {shown} of {total} services. Visit the services page to browse the full catalogue.", { shown: previewServices.length, total: manifest.services.length })}
+          </p>
           <ul className="stagger grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {manifest.services.map((service, index) => (
+            {previewServices.map((service, index) => (
               <li key={service.id}>
                 <Link href={`/sources/${service.id}`} className="state-layer flex h-full flex-col gap-4 rounded-lg bg-surface-container-low p-5 text-on-surface">
                   <ServiceIcon id={service.id} index={index} />
@@ -148,7 +152,7 @@ export default async function Home({ searchParams }: PageProps<"/">) {
           </ul>
           <div className="mt-6 flex flex-wrap gap-2">
             <ButtonLink href="/sources" variant="tonal">
-              {t("Read more about the data sources")} <ArrowRight size={18} />
+              {t("View all services")} <ArrowRight size={18} />
             </ButtonLink>
             <ButtonLink href="/sources/providers" variant="text">
               {t("Search all providers")}
