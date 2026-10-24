@@ -80,11 +80,14 @@ for (const scenario of ["desktop", "mobile", "landing", "decline", "denied", "ti
       await expect(location).not.toContainText("latitude");
       const map = location.getByTestId("agent-map-canvas");
       await expect(map).toBeVisible();
-      // Tiles load only while the map intersects the chat viewport. CSS visibility
-      // alone does not ensure it is in view after the reply scrolls the chat.
-      await map.scrollIntoViewIfNeeded();
-      await expect(map).toBeInViewport();
-      await expect(map.locator("image").first()).toHaveAttribute("href", /api\.mapbox\.com\/styles\/v1\/mapbox\/dark-v11\/tiles\/256\//);
+      // A new turn smoothly scrolls the chat and can move the map again after
+      // the first scrollIntoView. Recheck the whole interaction so lazy tiles
+      // are asserted while the map remains in view, including on slower CI.
+      await expect(async () => {
+        await map.scrollIntoViewIfNeeded();
+        await expect(map).toBeInViewport({ timeout: 1_000 });
+        await expect(map.locator("image").first()).toHaveAttribute("href", /api\.mapbox\.com\/styles\/v1\/mapbox\/dark-v11\/tiles\/256\//, { timeout: 1_000 });
+      }).toPass({ timeout: 10_000 });
       await expect(map.getByRole("button", { name: "1. Location shared" })).toBeVisible();
       await expect(location.getByRole("link", { name: "Open in OpenStreetMap" })).toHaveAttribute("href", /mlat=22.28123&mlon=114.16123/);
       await expect(chat.getByRole("button", { name: "Answer sent", exact: true })).toBeDisabled();
