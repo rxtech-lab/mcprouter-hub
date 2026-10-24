@@ -38,7 +38,7 @@ Grouping units are table-specific. Information/communications and professional/b
 
 ## Repair ledger and boundaries
 
-Repair count **2/3**, recorded in `/private/tmp/batch064-evidence/repair-ledger.json`.
+Repair count **3/3**, recorded in `/private/tmp/batch064-evidence/repair-ledger.json`.
 
 1. The initial capture harness compared the entire status object to just code/name. Official success status also includes description and apiHelp. Diagnosis used the captured real responses: every one had code 0/name Success, nonempty data and matching record counts. The check now validates those fields individually without rejecting provider extensions. It was applied to archived originals; no network requests were replayed, fixtures invented or acceptance checks removed.
 2. The exhaustive per-row filtering test for API-0734/API-0735 exceeded Vitest's default five-second budget (approximately 5–6 seconds for thousands of rows). All live/captured/simulation checks passed. Only this exhaustive test received a 30-second budget; every fixture, assertion, input case and filter check remains intact. The full suite passes after that repair.
@@ -48,3 +48,9 @@ Sandbox `.git` permissions, DNS, loopback binding/access and Google Fonts downlo
 `tests/fixtures/batch064/provenance.json` records exact source URLs, capture timestamps, hashes and original row indices. External evidence at `/private/tmp/batch064-evidence/` contains the original responses and metadata, scripts, failed and final validation logs, simulation trace, audit, repair ledger, generated archive, full diff, final commit audit and hash manifest. Live results prove current provider access; fixture and simulation results prove behavior against those observed contracts. Production deployment and independent final-head verification remain outside this evidence.
 
 All ten APIs are retained. No failed, blocked or unverified task implementation requires removal. Keep the successful local commit frozen for independent per-ID verification; the parent handles any subsequent publication.
+
+## PR 69 CI repair, cycle 3 (2026-10-24)
+
+After rebasing, GitHub run 40063947782 had 3934 passing tests and only three failures: the exhaustive localized source-preservation tests for API-0734, API-0735 and API-0736 exceeded their default 5000 ms budget. Each test paginates all original observations in three languages and compares every original row against the complete output. Archived official captures and the existing independent verification establish the contracts; Vercel and live-check passed at the same head. This is a distinct exhaustive test from cycle 2. Give this test a scoped 30-second budget, preserving all fixtures, loops, source-field assertions, pagination and fetch-count assertions. No runtime API code changes or provider retries. Integrate current main and regenerate APIS.md to resolve its generated-count conflict. Validation and fresh independent verification are recorded by the hourly parent before publication.
+
+Cycle 3 local validation after integrating main: full suite **89 files passed, 4238 tests passed, 5 existing skips**; generated freshness **80 files**, lint and translation check **831 strings** pass. Production Webpack build passes against the isolated local database; Google Fonts required approved network access after sandbox DNS failure. Typecheck follows the build sequentially. No fresh upstream API retry was made. Independent RxCode verification of the final merged changes is still required before updating PR69.

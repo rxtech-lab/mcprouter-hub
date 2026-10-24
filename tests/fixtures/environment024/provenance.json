@@ -1,0 +1,140 @@
+[
+  {
+    "file": "API-3368.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=3&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "6f60f12d42944ceb343f7003195df622880dd76836d9f4fc55f5745fd28b8e96",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "API-3368-layer.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0?f=pjson",
+    "sha256": "349bc55d050a527bfb9ca33c23d31816b01988ad48ae2c566c61328ed0d6ab89",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "API-0072.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=3&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "9327d6634c7348aa31bc9e51e72f59cb7ee6b1281d880d12892f5cfb4a9c3be1",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "API-0072-layer.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0?f=pjson",
+    "sha256": "5a04eb593dba08cdd7127bf581909765b18ef55259408caae4d7f6da3adcccd1",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "API-0102.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=3&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "ee8601459a19980f395363f2eedf23092a272c3466218fd02f25985370fe19d9",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "API-0102-layer.json",
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0?f=pjson",
+    "sha256": "9bb170cdfb0e521d9c437d5d55a512e85a36a9b2e97eacec14a4871faabe21c7",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "wind-profile.txt",
+    "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/annual/g_00337_lev500.txt",
+    "sha256": "70efe7f71d350f7ce2cedebf63381f5787e3af3050ac3bd21685c41f58f359b4",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92081-en.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&lang=en&full_series=1",
+    "sha256": "6b078a285ffc8760025f989c17813d2060ce12813d08d8456ec2d4f68722f041",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92081-tc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&lang=tc&full_series=1",
+    "sha256": "34f77688384cfcef5f7f76d2f63152b799a9291707b1eb5bbffc634616b8631e",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92081-sc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&lang=sc&full_series=1",
+    "sha256": "bd53026d1f4bd1c8650e7269aa9b078c3e0427ef992895b06d92a5527f35baa8",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92081A-en.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&lang=en&full_series=1",
+    "sha256": "424c8c402470e3d208a5b76731da86c1729e45d671ad47740a4dc83ec15aed29",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92081A-tc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&lang=tc&full_series=1",
+    "sha256": "64901df5cda402a354b9b407b2527595e372778c42793b5da35ad968424e5be4",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92081A-sc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&lang=sc&full_series=1",
+    "sha256": "1643024e0ef2003ee842fcc57169a04e760309928f11546a691887c81afe74a7",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92082-en.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&lang=en&full_series=1",
+    "sha256": "e378bedbbfde568ba9b768180b0fa1a748e57db32c82829b4d51d1a88bd17afd",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92082-tc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&lang=tc&full_series=1",
+    "sha256": "9ec1dffae8fb0a09308683f34efb3d14c852eccadb8c61c66ee64e83e369b121",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92082-sc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&lang=sc&full_series=1",
+    "sha256": "186978e99911204780b4b872808f585293b6188b351a1f83d568f02b018a48b0",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92083-en.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&lang=en&full_series=1",
+    "sha256": "67ddac442e65c95bdc5ca32bc93ecf6e9f40ee44fce25bd0b1e99f05f3584833",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92083-tc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&lang=tc&full_series=1",
+    "sha256": "c0cb0760d6e42dbafceb56fa885e292591650bf8da2d1b420b4cdade667fe681",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92083-sc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&lang=sc&full_series=1",
+    "sha256": "1c521cfabbf2a3e178e7402a1762682f428641611cc1d53a58af12652e92d548",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92084-en.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&lang=en&full_series=1",
+    "sha256": "9c5493ee5d960ca8ed43a8c859103acd50c31d1064a47dbaa166e44de9c1d6fa",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92084-tc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&lang=tc&full_series=1",
+    "sha256": "0fc2bf76a380b3f3bb456f4f748ff070e508472804720839bde6afd497c0fced",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "930-92084-sc.json",
+    "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&lang=sc&full_series=1",
+    "sha256": "ed928b24a906a498e82475ee338d5358fabc9db43308b58c98b32752f2f63c09",
+    "capturedAt": "2026-10-22"
+  },
+  {
+    "file": "towngas.json",
+    "url": "https://appapi.towngas.com/opendata/v1/environment/",
+    "sha256": "78a6b82d3444da34a76fddcbf349fcfe38a80d08da3d430905255258f51a3a21",
+    "capturedAt": "2026-10-22"
+  }
+]

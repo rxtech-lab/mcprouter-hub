@@ -1,0 +1,389 @@
+{
+ "currentVersion": 10.91,
+ "cimVersion": "2.9.0",
+ "id": 0,
+ "name": "geotagging",
+ "type": "Feature Layer",
+ "parentLayer": null,
+ "defaultVisibility": true,
+ "minScale": 0,
+ "maxScale": 0,
+ "canScaleSymbols": false,
+ "geometryType": "esriGeometryPoint",
+ "description": "",
+ "copyrightText": "",
+ "editFieldsInfo": null,
+ "ownershipBasedAccessControlForFeatures": null,
+ "syncCanReturnChanges": false,
+ "relationships": [],
+ "isDataVersioned": false,
+ "isDataArchived": false,
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "isDataBranchVersioned": false,
+ "isDataReplicaTracked": false,
+ "isCoGoEnabled": false,
+ "supportsRollbackOnFailureParameter": true,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSQL": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsQuantizationEditMode": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsDatumTransformation": true,
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsQueryWithResultType": true,
+  "supportsReturningGeometryCentroid": false,
+  "supportsSqlExpression": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsQueryAnalytic": false
+ },
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true
+ },
+ "hasMetadata": true,
+ "extent": {
+  "xmin": 113.862825,
+  "ymin": 22.206552,
+  "xmax": 114.272695,
+  "ymax": 22.547122,
+  "spatialReference": {
+   "wkid": 4326,
+   "latestWkid": 4326,
+   "xyTolerance": 8.983152841195215E-9,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -400,
+   "falseY": -400,
+   "xyUnits": 9.999999999999999E8,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "sourceSpatialReference": {
+  "wkid": 4326,
+  "latestWkid": 4326,
+  "xyTolerance": 8.983152841195215E-9,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -400,
+  "falseY": -400,
+  "xyUnits": 9.999999999999999E8,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriSMS",
+    "style": "esriSMSCircle",
+    "color": [
+     131,
+     155,
+     37,
+     255
+    ],
+    "size": 4,
+    "angle": 0,
+    "xoffset": 0,
+    "yoffset": 0,
+    "outline": {
+     "color": [
+      0,
+      0,
+      0,
+      255
+     ],
+     "width": 0.7
+    }
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "hasM": false,
+ "hasZ": false,
+ "allowGeometryUpdates": false,
+ "allowTrueCurvesUpdates": false,
+ "onlyAllowTrueCurveUpdatesByTrueCurveClients": false,
+ "hasAttachments": false,
+ "supportsApplyEditsWithGlobalIds": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "objectIdField": "OBJECTID",
+ "globalIdField": "",
+ "displayField": "CompanyName",
+ "typeIdField": "",
+ "subtypeField": "",
+ "fields": [
+  {
+   "name": "CompanyName",
+   "type": "esriFieldTypeString",
+   "alias": "CompanyName",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 84,
+   "defaultValue": null,
+   "modelName": "CompanyName"
+  },
+  {
+   "name": "CompanyNameChi",
+   "type": "esriFieldTypeString",
+   "alias": "CompanyNameChi",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 57,
+   "defaultValue": null,
+   "modelName": "CompanyNameChi"
+  },
+  {
+   "name": "PartChi",
+   "type": "esriFieldTypeString",
+   "alias": "PartChi",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 30,
+   "defaultValue": null,
+   "modelName": "PartChi"
+  },
+  {
+   "name": "PartEng",
+   "type": "esriFieldTypeString",
+   "alias": "PartEng",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 40,
+   "defaultValue": null,
+   "modelName": "PartEng"
+  },
+  {
+   "name": "PremisesDetailsAddress01",
+   "type": "esriFieldTypeString",
+   "alias": "PremisesDetailsAddress01",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 98,
+   "defaultValue": null,
+   "modelName": "PremisesDetailsAddress01"
+  },
+  {
+   "name": "PremisesDetailsAddress02",
+   "type": "esriFieldTypeString",
+   "alias": "PremisesDetailsAddress02",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 60,
+   "defaultValue": null,
+   "modelName": "PremisesDetailsAddress02"
+  },
+  {
+   "name": "PremisesDetailsDistrict",
+   "type": "esriFieldTypeString",
+   "alias": "PremisesDetailsDistrict",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 15,
+   "defaultValue": null,
+   "modelName": "PremisesDetailsDistrict"
+  },
+  {
+   "name": "PremisesDetailsLatitude",
+   "type": "esriFieldTypeDouble",
+   "alias": "PremisesDetailsLatitude",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "PremisesDetailsLatitude"
+  },
+  {
+   "name": "PremisesDetailsLongitude",
+   "type": "esriFieldTypeDouble",
+   "alias": "PremisesDetailsLongitude",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "PremisesDetailsLongitude"
+  },
+  {
+   "name": "PremisesDetailsPart",
+   "type": "esriFieldTypeString",
+   "alias": "PremisesDetailsPart",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 4,
+   "defaultValue": null,
+   "modelName": "PremisesDetailsPart"
+  },
+  {
+   "name": "PremisesDetailsRegion",
+   "type": "esriFieldTypeString",
+   "alias": "PremisesDetailsRegion",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 3,
+   "defaultValue": null,
+   "modelName": "PremisesDetailsRegion"
+  },
+  {
+   "name": "PremisesDetailsType",
+   "type": "esriFieldTypeString",
+   "alias": "PremisesDetailsType",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 5,
+   "defaultValue": null,
+   "modelName": "PremisesDetailsType"
+  },
+  {
+   "name": "TypeChi",
+   "type": "esriFieldTypeString",
+   "alias": "TypeChi",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 34,
+   "defaultValue": null,
+   "modelName": "TypeChi"
+  },
+  {
+   "name": "TypeEng",
+   "type": "esriFieldTypeString",
+   "alias": "TypeEng",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 40,
+   "defaultValue": null,
+   "modelName": "TypeEng"
+  },
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null,
+   "editable": false,
+   "nullable": false,
+   "defaultValue": null,
+   "modelName": "OBJECTID"
+  }
+ ],
+ "geometryField": {
+  "name": "SHAPE",
+  "type": "esriFieldTypeGeometry",
+  "alias": "SHAPE",
+  "domain": null,
+  "editable": false,
+  "nullable": true,
+  "defaultValue": null,
+  "modelName": "SHAPE"
+ },
+ "indexes": [
+  {
+   "name": "FDO_OBJECTID",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "FDO_SHAPE",
+   "fields": "SHAPE",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  }
+ ],
+ "datesInUnknownTimezone": false,
+ "dateFieldsTimeReference": {
+  "timeZone": "China Standard Time",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [],
+ "templates": [
+  {
+   "name": "geotagging",
+   "description": "",
+   "prototype": {
+    "attributes": {
+     "TypeEng": null,
+     "CompanyName": null,
+     "CompanyNameChi": null,
+     "PartChi": null,
+     "PartEng": null,
+     "PremisesDetailsAddress01": null,
+     "PremisesDetailsAddress02": null,
+     "PremisesDetailsDistrict": null,
+     "PremisesDetailsLatitude": null,
+     "PremisesDetailsLongitude": null,
+     "PremisesDetailsPart": null,
+     "PremisesDetailsRegion": null,
+     "PremisesDetailsType": null,
+     "TypeChi": null
+    }
+   },
+   "drawingTool": "esriFeatureEditToolPoint"
+  }
+ ],
+ "maxRecordCount": 3000,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedExportFormats": "sqlite,filegdb",
+ "capabilities": "Query",
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "standardMaxRecordCount": 32000,
+ "tileMaxRecordCount": 8000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "maxRecordCountFactor": 1,
+ "serviceItemId": "4ff7a1bea5e048b8900446e04de1f34c"
+}

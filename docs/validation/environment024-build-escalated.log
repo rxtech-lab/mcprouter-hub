@@ -1,0 +1,76 @@
+▲ Next.js 16.4.2 (webpack)
+✓ Running next.config.ts took 11ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.7s
+  Running TypeScript ...
+  Finished TypeScript in 4.2s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/44) ...
+  Generating static pages using 15 workers (11/44) 
+  Generating static pages using 15 workers (22/44) 
+  Generating static pages using 15 workers (33/44) 
+✓ Generating static pages using 15 workers (44/44) in 710ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)                                              Revalidate  Expire
+┌ ƒ /
+├ ƒ /_not-found
+├ ƒ /.well-known/oauth-authorization-server/[[...path]]
+├ ƒ /.well-known/oauth-protected-resource/[[...path]]
+├ ƒ /api/auth/[...nextauth]
+├ ƒ /api/chat
+├ ƒ /api/free-chat
+├ ƒ /api/mcp/oauth/register
+├ ƒ /api/mcp/oauth/revoke
+├ ƒ /api/mcp/oauth/token
+├ ƒ /api/mcp/s/[service]/streamable
+├ ƒ /api/mcp/streamable
+├ ƒ /api/provider-chat
+├ ƒ /api/search
+├ ƒ /api/telegram
+├ ƒ /api/whatsapp
+├ ○ /apple-icon.png
+├ ƒ /billing
+├ ƒ /chat
+├ ƒ /chat/[id]
+├ ƒ /dashboard
+├ ƒ /guides
+├ ƒ /guides/[client]
+├ ƒ /keys
+├ ƒ /keys/apps
+├ ƒ /keys/setup
+├ ƒ /keys/telegram
+├ ƒ /keys/whatsapp
+├ ƒ /login
+├ ƒ /mcp-app-sandbox
+├ ƒ /oauth/authorize
+├ ○ /opengraph-image.png
+├ ○ /robots.txt
+├ ƒ /services
+├ ƒ /settings
+├ ○ /sitemap.xml                                                 1h      1y
+├ ƒ /sources
+├ ƒ /sources/[service]
+├ ƒ /sources/api/[id]
+├ ƒ /sources/apis
+├ ƒ /sources/providers
+├ ƒ /sources/providers/[org]
+├ ƒ /telegram/link
+├ ƒ /tracker
+├ ƒ /tracker/categories
+├ ƒ /tracker/datasets
+├ ƒ /tracker/providers
+├ ƒ /usage
+├ ƒ /usage/clients
+├ ƒ /usage/clients/[client]
+├ ƒ /usage/credits
+└ ƒ /whatsapp/link
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -62,7 +62,7 @@ describe("Commerce batch064", () => {
       for (const r of all) expect(r.measure).toBe(contracts[c.table].units[String(r.svDesc)]);
     }
     expect(fetchMock).toHaveBeenCalledTimes(3);
-  });
+  }, 30_000);
 
   it.each(batch064)("paginates and caches upstream resources independently of local filters for $api", async (c) => {
     const fixture = fixture064(c.table);

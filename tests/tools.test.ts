@@ -4,6 +4,7 @@ import { cases051 } from "./batch051-cases";
 import type { Case } from "./tool-case";
 import { cases027 } from "./health027-cases";
 import { cases025 } from "./health025-cases";
+import { toolCases024 } from "./environment024-cases";
 import { spatialCases023, fileCases023 } from "./environment023-cases";
 import { cases022 } from "./environment022-cases";
 import { environmentCases } from "./environment021-cases";
@@ -189,6 +190,7 @@ const cases: Case[] = [
   ...cases053,
   ...cases027.map((c) => ({ ...c, name: c.file, ttl: 3600, data: expect.objectContaining({ returned: 2, hasMore: true, nextOffset: 2 }) })),
   ...cases025.map((c) => ({ ...c, name: c.file + c.input.lang, ttl: 3600, data: expect.objectContaining({ returned: 2, hasMore: true, nextOffset: 2 }) })),
+  ...toolCases024,
   ...spatialCases023.map((c) => ({ ...c, name: c.file, ttl: 3600 })),
   ...fileCases023.map((c) => ({ ...c, name: c.file + c.lang, ttl: c.kind === "clothes" ? 3600 : 300,
     data: expect.objectContaining({ returned: 2, source: c.request.url, hasMore: true, nextOffset: 2 }) })),
