@@ -113,6 +113,16 @@ export const liveCases: Record<string, LiveCase> = {
   health_chinese_medicine_clinics: { input: { limit: 2 }, check: nonEmptyPage },
   health_flu_express: { input: { limit: 2 }, check: nonEmptyPage },
 
+  pland_site_wind_grids: { input: { limit: 2 }, check: nonEmptyPage },
+  afcd_boarding_establishments: { input: { limit: 2 }, check: nonEmptyPage },
+  afcd_pesticide_licensees: { input: { limit: 2 }, check: nonEmptyPage },
+  health_notifiable_diseases: { input: { limit: 2 }, check: nonEmptyPage },
+  health_notifiable_disease_deaths: { input: { limit: 2 }, check: nonEmptyPage },
+  health_registered_professionals: { input: { limit: 2 }, check: nonEmptyPage },
+  health_hospital_institutions_beds: { input: { limit: 2 }, check: nonEmptyPage },
+  health_public_expenditure: { input: { limit: 2 }, check: nonEmptyPage },
+  towngas_environment_performance: { input: { limit: 2 }, check: nonEmptyPage },
+  pland_site_wind_profile: { input: { objectId: 1, limit: 2 }, check: nonEmptyPage },
   // Environment batch 023
   epd_recycling_stations: { input: { limit: 2 }, check: nonEmptyPage },
   fehd_exhibition_resource_centres: { input: { limit: 2 }, check: nonEmptyPage },

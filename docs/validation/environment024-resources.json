@@ -1,0 +1,347 @@
+[
+  {
+    "id": "API-0072",
+    "dataset": "hk-afcd-afcdlist-boardingest",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-afcd-afcdlist-boardingest",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "API",
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=afcd_rcd_1759905192669_52213",
+        "language": "en, zh-Hant, zh-Hans"
+      }
+    ]
+  },
+  {
+    "id": "API-0102",
+    "dataset": "hk-afcd-afcdlist-pesticideslicenseeloc",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-afcd-afcdlist-pesticideslicenseeloc",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "API",
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=afcd_rcd_1635134709276_98320",
+        "language": "en, zh-Hant"
+      }
+    ]
+  },
+  {
+    "id": "API-0837",
+    "dataset": "hk-censtatd-tablechart-930-92081",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-tablechart-930-92081",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92081&full_series=1&download_excel=1",
+        "language": "en"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92081&full_series=1&download_excel=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92081&full_series=1&download_excel=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92081&full_series=1&download_csv=1",
+        "language": "en"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92081&full_series=1&download_csv=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92081&full_series=1&download_csv=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&lang=en&full_series=1",
+        "language": "en"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&lang=tc&full_series=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&lang=sc&full_series=1",
+        "language": "zh-Hans"
+      }
+    ]
+  },
+  {
+    "id": "API-0838",
+    "dataset": "hk-censtatd-tablechart-930-92081a",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-tablechart-930-92081a",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92081A&full_series=1&download_excel=1",
+        "language": "en"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92081A&full_series=1&download_excel=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92081A&full_series=1&download_excel=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92081A&full_series=1&download_csv=1",
+        "language": "en"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92081A&full_series=1&download_csv=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92081A&full_series=1&download_csv=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&lang=en&full_series=1",
+        "language": "en"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&lang=tc&full_series=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&lang=sc&full_series=1",
+        "language": "zh-Hans"
+      }
+    ]
+  },
+  {
+    "id": "API-0839",
+    "dataset": "hk-censtatd-tablechart-930-92082",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-tablechart-930-92082",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92082&full_series=1&download_excel=1",
+        "language": "en"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92082&full_series=1&download_excel=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92082&full_series=1&download_excel=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92082&full_series=1&download_csv=1",
+        "language": "en"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92082&full_series=1&download_csv=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92082&full_series=1&download_csv=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&lang=en&full_series=1",
+        "language": "en"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&lang=tc&full_series=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&lang=sc&full_series=1",
+        "language": "zh-Hans"
+      }
+    ]
+  },
+  {
+    "id": "API-0840",
+    "dataset": "hk-censtatd-tablechart-930-92083",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-tablechart-930-92083",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92083&full_series=1&download_excel=1",
+        "language": "en"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92083&full_series=1&download_excel=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92083&full_series=1&download_excel=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92083&full_series=1&download_csv=1",
+        "language": "en"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92083&full_series=1&download_csv=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92083&full_series=1&download_csv=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&lang=en&full_series=1",
+        "language": "en"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&lang=tc&full_series=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&lang=sc&full_series=1",
+        "language": "zh-Hans"
+      }
+    ]
+  },
+  {
+    "id": "API-0841",
+    "dataset": "hk-censtatd-tablechart-930-92084",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-tablechart-930-92084",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92084&full_series=1&download_excel=1",
+        "language": "en"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92084&full_series=1&download_excel=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "XLSX",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92084&full_series=1&download_excel=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/en/web_table.html?id=930-92084&full_series=1&download_csv=1",
+        "language": "en"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/tc/web_table.html?id=930-92084&full_series=1&download_csv=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "CSV",
+        "url": "https://www.censtatd.gov.hk/sc/web_table.html?id=930-92084&full_series=1&download_csv=1",
+        "language": "zh-Hans"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&lang=en&full_series=1",
+        "language": "en"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&lang=tc&full_series=1",
+        "language": "zh-Hant"
+      },
+      {
+        "format": "JSON",
+        "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&lang=sc&full_series=1",
+        "language": "zh-Hans"
+      }
+    ]
+  },
+  {
+    "id": "API-3365",
+    "dataset": "hk-pland-pland1-landscape-character-map-of-hong-kong-completed-in-2005",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-pland-pland1-landscape-character-map-of-hong-kong-completed-in-2005",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "API",
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=pland_rcd_1634259698832_46814",
+        "language": "en, zh-Hant"
+      }
+    ]
+  },
+  {
+    "id": "API-3368",
+    "dataset": "hk-pland-pland1-site-wind-availability-data",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-pland-pland1-site-wind-availability-data",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "CSV",
+        "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/open_data/site_wind_open_data.csv",
+        "language": "en"
+      },
+      {
+        "format": "GEOTIFF",
+        "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/open_data/site_wind_open_data_GeoTiff.zip",
+        "language": "en"
+      },
+      {
+        "format": "API",
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=pland_rcd_1634281652589_43389",
+        "language": "en"
+      }
+    ]
+  },
+  {
+    "id": "API-3602",
+    "dataset": "towngas-towngas-environment",
+    "metadataUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=towngas-towngas-environment",
+    "metadataHttpStatus": 200,
+    "resources": [
+      {
+        "format": "JSON",
+        "url": "https://appapi.towngas.com/opendata/v1/environment/",
+        "language": "en"
+      },
+      {
+        "format": "CSV",
+        "url": "https://serv.towngas.com/opendata/environmentdata/eng/towngas_environment_performance.csv",
+        "language": "en"
+      }
+    ]
+  }
+]

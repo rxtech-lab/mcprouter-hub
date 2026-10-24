@@ -1,0 +1,4 @@
+No config path provided, using default 'drizzle.config.ts'
+Reading config file '/private/tmp/mcprouter-batch024/drizzle.config.ts'
+◇ injected env (0) from .env
+[⣷] applying migrations...[2K[1G[✓] migrations applied successfully!

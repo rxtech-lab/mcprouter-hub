@@ -1,0 +1,428 @@
+{
+  "startedAt": "2026-10-22T08:12:22.033Z",
+  "finishedAt": "2026-10-22T08:12:28.091Z",
+  "passed": 9,
+  "failed": 0,
+  "repairCycles": 1,
+  "excluded": [
+    {
+      "id": "API-3365",
+      "status": "failed",
+      "reason": "Official CSDI FeatureServer returned HTTP 200 with error code 500, null message and empty details; no retry."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "API-3602",
+      "status": "passed",
+      "tool": "towngas_environment_performance",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "year-metric",
+        "languages"
+      ],
+      "source": "https://appapi.towngas.com/opendata/v1/environment/",
+      "fields": [
+        "category",
+        "metric",
+        "unit",
+        "value",
+        "year"
+      ]
+    },
+    {
+      "id": "API-0841",
+      "status": "passed",
+      "tool": "health_public_expenditure",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "series-period-dimensions",
+        "languages"
+      ],
+      "source": "Department of Health  (Enquiry telephone no. : 3586 2996   Enquiry e-mail : enquiries@dh.gov.hk)  Hospital Authority  (Enquiry telephone no. : 2300 6555   Enquiry e-mail : enquiry@ha.org.hk)",
+      "fields": [
+        "TYPE_INS",
+        "TYPE_INSDesc",
+        "freq",
+        "period",
+        "sv",
+        "svDesc",
+        "figure",
+        "sd_value",
+        "measure"
+      ]
+    },
+    {
+      "id": "API-0839",
+      "status": "passed",
+      "tool": "health_registered_professionals",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "series-period-dimensions",
+        "languages"
+      ],
+      "source": "Department of Health  (Enquiry telephone no. : 3586 3804   Enquiry e-mail : enquiries@dh.gov.hk)",
+      "fields": [
+        "OCC",
+        "OCCDesc",
+        "freq",
+        "period",
+        "sv",
+        "svDesc",
+        "figure",
+        "sd_value",
+        "measure"
+      ]
+    },
+    {
+      "id": "API-0837",
+      "status": "passed",
+      "tool": "health_notifiable_diseases",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "series-period-dimensions",
+        "languages"
+      ],
+      "source": "Centre for Health Protection, Department of Health  (Enquiry telephone no. : 2125 2270   Enquiry e-mail : enquiry_chpweb@dh.gov.hk)",
+      "fields": [
+        "ICD10",
+        "ICD10Desc",
+        "freq",
+        "period",
+        "sv",
+        "svDesc",
+        "figure",
+        "sd_value",
+        "measure"
+      ]
+    },
+    {
+      "id": "API-0838",
+      "status": "passed",
+      "tool": "health_notifiable_disease_deaths",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "series-period-dimensions",
+        "languages"
+      ],
+      "source": "Centre for Health Protection, Department of Health  (Enquiry telephone no. : 2125 2270   Enquiry e-mail : enquiry_chpweb@dh.gov.hk)",
+      "fields": [
+        "ICD10",
+        "ICD10Desc",
+        "freq",
+        "period",
+        "sv",
+        "svDesc",
+        "figure",
+        "sd_value",
+        "measure"
+      ]
+    },
+    {
+      "id": "API-0840",
+      "status": "passed",
+      "tool": "health_hospital_institutions_beds",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "series-period-dimensions",
+        "languages"
+      ],
+      "source": "Department of Health  (Enquiry telephone no. : 3586 3050   Enquiry e-mail : enquiries@dh.gov.hk)  Hospital Authority  (Enquiry telephone no. : 2300 6555   Enquiry e-mail : enquiry@ha.org.hk)",
+      "fields": [
+        "DC",
+        "DCDesc",
+        "TYPE_INS",
+        "TYPE_INSDesc",
+        "freq",
+        "period",
+        "sv",
+        "svDesc",
+        "figure",
+        "sd_value",
+        "measure"
+      ]
+    },
+    {
+      "id": "API-3368",
+      "status": "passed",
+      "tool": "pland_site_wind_grids",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "objectId-bbox-geometry",
+        "languages",
+        "profile-annual-200",
+        "profile-annual-300",
+        "profile-annual-500",
+        "profile-winter-200",
+        "profile-winter-300",
+        "profile-winter-500",
+        "profile-summer-200",
+        "profile-summer-300",
+        "profile-summer-500",
+        "profile-paging"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "annual_500",
+        "annual_300",
+        "annual_200",
+        "winter_500",
+        "winter_300",
+        "winter_200",
+        "summer_500",
+        "summer_300",
+        "summer_200",
+        "OBJECTID",
+        "Shape__Length",
+        "Shape__Area"
+      ]
+    },
+    {
+      "id": "API-0102",
+      "status": "passed",
+      "tool": "afcd_pesticide_licensees",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "objectId-bbox-geometry",
+        "search-CompanyName",
+        "search-CompanyNameChi",
+        "languages"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "CompanyName",
+        "CompanyNameChi",
+        "PartChi",
+        "PartEng",
+        "PremisesDetailsAddress01",
+        "PremisesDetailsAddress02",
+        "PremisesDetailsDistrict",
+        "PremisesDetailsLatitude",
+        "PremisesDetailsLongitude",
+        "PremisesDetailsPart",
+        "PremisesDetailsRegion",
+        "PremisesDetailsType",
+        "TypeChi",
+        "TypeEng",
+        "OBJECTID",
+        "name"
+      ]
+    },
+    {
+      "id": "API-0072",
+      "status": "passed",
+      "tool": "afcd_boarding_establishments",
+      "checks": [
+        "initial",
+        "pagination",
+        "empty-page",
+        "objectId-bbox-geometry",
+        "search-Shop_Name",
+        "languages"
+      ],
+      "source": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "fields": [
+        "Shop_Name",
+        "Address_EN__",
+        "Address_CHI__",
+        "TEL_",
+        "OBJECTID",
+        "name"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&full_series=1&lang=en",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&full_series=1&lang=en",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&full_series=1&lang=en",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&full_series=1&lang=en",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&full_series=1&lang=en",
+      "status": 200
+    },
+    {
+      "url": "https://appapi.towngas.com/opendata/v1/environment/",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&full_series=1&lang=tc",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&full_series=1&lang=tc",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&full_series=1&lang=tc",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&full_series=1&lang=tc",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&full_series=1&lang=tc",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92082&full_series=1&lang=sc",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92084&full_series=1&lang=sc",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081&full_series=1&lang=sc",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92083&full_series=1&lang=sc",
+      "status": 200
+    },
+    {
+      "url": "https://www.censtatd.gov.hk/api/get.php?id=930-92081A&full_series=1&lang=sc",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=1&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=1&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=1000000&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0/query?f=json&where=1%3D1+AND+OBJECTID%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6&geometry=113%2C22%2C115%2C23&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=1000000&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/pland_rcd_1634281652589_43389/FeatureServer/0/query?f=json&where=1%3D1+AND+OBJECTID%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1+AND+OBJECTID%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6&geometry=113%2C22%2C115%2C23&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/annual/g_00337_lev200.txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/annual/g_00337_lev300.txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/annual/g_00337_lev500.txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/winter/g_00337_lev200.txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/winter/g_00337_lev300.txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/winter/g_00337_lev500.txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/summer/g_00337_lev200.txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/summer/g_00337_lev300.txt",
+      "status": 200
+    },
+    {
+      "url": "https://www.pland.gov.hk/pland_en/resources/site_wind/site_wind/table/summer/g_00337_lev500.txt",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=1&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1+AND+OBJECTID%3D1+AND+%28UPPER%28CompanyName%29+LIKE+%27%25LEI+TUNG+CHINESE+MEDICINE%25%27%29&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=2&resultOffset=1000000&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1635134709276_98320/FeatureServer/0/query?f=json&where=1%3D1+AND+OBJECTID%3D1+AND+%28UPPER%28CompanyNameChi%29+LIKE+%27%25%E5%88%A9%E6%9D%B1%E4%B8%AD%E8%A5%BF%E8%91%AF%E8%A1%8C%25%27%29&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0/query?f=json&where=1%3D1+AND+OBJECTID%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6&geometry=113%2C22%2C115%2C23&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects",
+      "status": 200
+    },
+    {
+      "url": "https://portal.csdi.gov.hk/server/rest/services/common/afcd_rcd_1759905192669_52213/FeatureServer/0/query?f=json&where=1%3D1+AND+OBJECTID%3D1+AND+%28UPPER%28Shop_Name%29+LIKE+%27%25POSH+PAWS+RESORT%25%27%29&outFields=*&outSR=4326&returnGeometry=false&resultRecordCount=1&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+id: towngas-environment
+title: Towngas Environmental Performance Data
+description: Historical environmental performance as published by Towngas; years reflect
+  source coverage.
+apis:
+- API-3602
+datasets:
+- towngas-towngas-environment
+baseUrl: https://appapi.towngas.com/opendata/v1
+cacheTtl: 3600
+tools:
+- name: towngas_environment_performance
+  title: Towngas Environmental Performance Data
+  description: Historical Towngas resource use, air/aqueous emissions and waste/recycling
+    indicators with original units and values. This resource currently reports 2013–2018,
+    not current-year emissions. English source only. Search descriptions and metric
+    titles; filter year; paginate with nextOffset.
+  path: /environment/
+  transform:
+    response: normalize
+  input:
+    year:
+      type: integer
+      minimum: 1900
+      maximum: 2100
+      in: local
+    search:
+      type: string
+      pattern: ^.{1,100}$
+      in: local
+    lang:
+      type: string
+      enum:
+      - en
+      default: en
+      in: local
+      description: Only published languages; original source fields retained
+    limit:
+      type: integer
+      minimum: 1
+      maximum: 100
+      default: 20
+      in: local
+      description: Maximum records per page; also bounded to 100 KB
+    offset:
+      type: integer
+      minimum: 0
+      maximum: 1000000
+      default: 0
+      in: local
+      description: Continue with nextOffset and identical filters

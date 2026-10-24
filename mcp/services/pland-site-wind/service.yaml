@@ -1,0 +1,77 @@
+id: pland-site-wind
+title: Site Wind Availability Data
+description: Site Wind Availability Data from the official CSDI dataset.
+apis:
+- API-3368
+datasets:
+- hk-pland-pland1-site-wind-availability-data
+cacheTtl: 3600
+tools:
+- name: pland_site_wind_grids
+  title: Site Wind Availability Data
+  description: Site Wind Availability Data. Bounded grid/directory records by objectId
+    or WGS84 bbox. Original source attributes retained; paginate with nextOffset.
+    Published annual/winter/summer links for 200/300/500 m profiles. Use pland_site_wind_profile
+    to read a profile. This is modeled site wind availability, not current weather.
+  handler: query
+  timeoutMs: 30000
+  input:
+    objectId:
+      type: integer
+      minimum: 1
+      maximum: 2147483647
+      description: Exact source OBJECTID
+    bbox:
+      type: string
+      pattern: ^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$
+      description: WGS84 west,south,east,north; spatial intersection
+    geometry:
+      type: boolean
+      default: false
+      description: Include WGS84 geometry; oversized geometry explicitly omitted
+    limit: &id001
+      type: integer
+      minimum: 1
+      maximum: 100
+      default: 20
+      in: local
+      description: Maximum records per page; also bounded to 100 KB
+    offset: &id002
+      type: integer
+      minimum: 0
+      maximum: 1000000
+      default: 0
+      in: local
+      description: Continue with nextOffset and identical filters
+- name: pland_site_wind_profile
+  title: Site wind availability profile
+  description: Read a structured wind speed/direction frequency table linked by a
+    site wind grid OBJECTID. Choose annual, winter or summer and published height
+    200/300/500 m. Values and direction totals are source fractions, rounded by the
+    provider; not a current weather forecast. Find a grid with pland_site_wind_grids
+    and bbox first.
+  handler: profile
+  timeoutMs: 30000
+  input:
+    objectId:
+      type: integer
+      minimum: 1
+      maximum: 2147483647
+      required: true
+      description: Grid OBJECTID from pland_site_wind_grids
+    season:
+      type: string
+      enum:
+      - annual
+      - winter
+      - summer
+      default: annual
+    height:
+      type: integer
+      enum:
+      - 200
+      - 300
+      - 500
+      default: 500
+    limit: *id001
+    offset: *id002

@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **267 of 3819 implemented**, 3552 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **276 of 3819 implemented**, 3543 coming soon.
 1769 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -427,8 +427,8 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-2023` | [List of Community Used Clothes Recycling Banks locations](https://data.gov.hk/en-data/dataset/hk-had-json1-community-used-clothes-recycling-banks) | API | Home Affairs Department | ✅ Implemented | [Community Used Clothes Recycling Banks](mcp/services/had-clothes-banks/service.yaml) |
 | `API-2359` | [Hourly ambient gamma radiation level in Hong Kong](https://data.gov.hk/en-data/dataset/hk-hko-rss-hourly-ambient-gamma-radiation-level-in-hong-kong) | API | Hong Kong Observatory | ✅ Implemented | [HKO Weather and Radiation](mcp/services/hko-radiation/service.yaml) |
 | `API-3365` | [Landscape Character Map of Hong Kong (completed in 2005)](https://data.gov.hk/en-data/dataset/hk-pland-pland1-landscape-character-map-of-hong-kong-completed-in-2005) | API | Planning Department | 🕒 Coming soon | — |
-| `API-3368` | [Site Wind Availability Data](https://data.gov.hk/en-data/dataset/hk-pland-pland1-site-wind-availability-data) | API | Planning Department | 🕒 Coming soon | — |
-| `API-3602` | [Towngas Environmental Performance Data](https://data.gov.hk/en-data/dataset/towngas-towngas-environment) | API | The Hong Kong and China Gas Company Limited | 🕒 Coming soon | — |
+| `API-3368` | [Site Wind Availability Data](https://data.gov.hk/en-data/dataset/hk-pland-pland1-site-wind-availability-data) | API | Planning Department | ✅ Implemented | [Site Wind Availability Data](mcp/services/pland-site-wind/service.yaml) |
+| `API-3602` | [Towngas Environmental Performance Data](https://data.gov.hk/en-data/dataset/towngas-towngas-environment) | API | The Hong Kong and China Gas Company Limited | ✅ Implemented | [Towngas Environmental Performance Data](mcp/services/towngas-environment/service.yaml) |
 | `API-3604` | [Number of Renewable Energy Power Systems by Districts](https://data.gov.hk/en-data/dataset/hkelectric-cs_cbd-number-of-renewable-energy-power-systems-by-districts) | Files | The Hongkong Electric Company, Limited | 🕒 Coming soon | — |
 | `API-3605` | [Number of Renewable Energy Power Systems by Premises Type](https://data.gov.hk/en-data/dataset/hkelectric-cs_cbd-number-of-renewable-energy-power-systems-by-premises-type) | Files | The Hongkong Electric Company, Limited | 🕒 Coming soon | — |
 | `API-3606` | [Number of Renewable Energy Power Systems by Renewable Energy Type](https://data.gov.hk/en-data/dataset/hkelectric-cs_cbd-number-of-renewable-energy-power-systems-by-renewable-energy-type) | Files | The Hongkong Electric Company, Limited | 🕒 Coming soon | — |
@@ -450,13 +450,13 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-0043` | [Family medicine clinic quota](https://data.gov.hk/en-data/dataset/hospital-hadata-fmc-quota) | API | Hospital Authority | 🕒 Coming soon | — |
 | `API-0044` | [Flu Express](https://data.gov.hk/en-data/dataset/hk-dh-chpsebcddr-flu-express) | API | Department of Health | ✅ Implemented | [Hong Kong Health Statistics & Clinics](mcp/services/hk-health/service.yaml) |
 | `API-0045` | [Licensed pharmacies](https://data.gov.hk/en-data/dataset/hk-dh-dh_do-hk-dh-do-licensed-pharmacy) | API | Department of Health | 🕒 Coming soon | — |
-| `API-0072` | [Licensed Boarding Establishment](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-boardingest) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
-| `API-0102` | [Location of Pesticides Licensees](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-pesticideslicenseeloc) | API | Agriculture, Fisheries and Conservation Department | 🕒 Coming soon | — |
-| `API-0837` | [Health - Table 930-92081 : Number of notifiable infectious diseases](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92081) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0838` | [Health - Table 930-92081A : Number of deaths of notifiable infectious diseases](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92081a) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0839` | [Health - Table 930-92082 : Number of registered healthcare professionals](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92082) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0840` | [Health - Table 930-92083 : Medical institutions with hospital beds by area and type of institution](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92083) | API | Census and Statistics Department | 🕒 Coming soon | — |
-| `API-0841` | [Health - Table 930-92084 : Expenditure of Department of Health and Hospital Authority](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92084) | API | Census and Statistics Department | 🕒 Coming soon | — |
+| `API-0072` | [Licensed Boarding Establishment](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-boardingest) | API | Agriculture, Fisheries and Conservation Department | ✅ Implemented | [Licensed Boarding Establishment](mcp/services/afcd-boarding/service.yaml) |
+| `API-0102` | [Location of Pesticides Licensees](https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-pesticideslicenseeloc) | API | Agriculture, Fisheries and Conservation Department | ✅ Implemented | [Location of Pesticides Licensees](mcp/services/afcd-pesticides/service.yaml) |
+| `API-0837` | [Health - Table 930-92081 : Number of notifiable infectious diseases](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92081) | API | Census and Statistics Department | ✅ Implemented | [Hong Kong Health Statistics](mcp/services/censtatd-health/service.yaml) |
+| `API-0838` | [Health - Table 930-92081A : Number of deaths of notifiable infectious diseases](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92081a) | API | Census and Statistics Department | ✅ Implemented | [Hong Kong Health Statistics](mcp/services/censtatd-health/service.yaml) |
+| `API-0839` | [Health - Table 930-92082 : Number of registered healthcare professionals](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92082) | API | Census and Statistics Department | ✅ Implemented | [Hong Kong Health Statistics](mcp/services/censtatd-health/service.yaml) |
+| `API-0840` | [Health - Table 930-92083 : Medical institutions with hospital beds by area and type of institution](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92083) | API | Census and Statistics Department | ✅ Implemented | [Hong Kong Health Statistics](mcp/services/censtatd-health/service.yaml) |
+| `API-0841` | [Health - Table 930-92084 : Expenditure of Department of Health and Hospital Authority](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92084) | API | Census and Statistics Department | ✅ Implemented | [Hong Kong Health Statistics](mcp/services/censtatd-health/service.yaml) |
 | `API-0842` | [Health - Table 930-92085 : Department of Health - outpatient services](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92085) | API | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-0843` | [Health - Table 930-92086 : Hospital Authority - outpatient services](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92086) | API | Census and Statistics Department | 🕒 Coming soon | — |
 | `API-0844` | [Health - Table 930-92087 : Hospital Authority - inpatient services](https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-930-92087) | API | Census and Statistics Department | 🕒 Coming soon | — |

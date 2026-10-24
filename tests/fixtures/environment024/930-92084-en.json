@@ -1,0 +1,544 @@
+{
+    "header": {
+        "status": {
+            "name": "Success",
+            "code": 0,
+            "description": "Query success",
+            "apiHelp": "https:\/\/www.censtatd.gov.hk\/en\/web_table.html?id=930-92084&api_popup=1"
+        },
+        "title": "Expenditure of Department of Health and Hospital Authority",
+        "tablenote": [
+            "All figures exclude capital expenditure on medical projects under public works non-recurrent votes.",
+            "Figures are compiled using data from the Head 37 \u2013 Department of Health\u2019s Controlling Officer\u2019s Report of respective years, and including both Operating Account and Capital Account under General Revenue Account."
+        ],
+        "source": "Department of Health  (Enquiry telephone no. : 3586 2996   Enquiry e-mail : enquiries@dh.gov.hk)  Hospital Authority  (Enquiry telephone no. : 2300 6555   Enquiry e-mail : enquiry@ha.org.hk)",
+        "count": {
+            "noOfRecords": 52,
+            "started": "2026-10-22T08:03:24+00:00",
+            "finished": "2026-10-22T08:03:24+00:00",
+            "durationSeconds": 0.005134
+        }
+    },
+    "dataSet": [
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2011",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 44118,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2011",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 4197,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2011",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 39724,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2011",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 197,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 48864,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 4767,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 43872,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2012",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 225,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 52531,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 5362,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 46925,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2013",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 244,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 56805,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 5705,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 50825,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2014",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 275,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 61246,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 6315,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 54627,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2015",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 304,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 65738,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 6985,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 58433,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2016",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 320,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 69781,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 8007,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 61457,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2017",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 317,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 76904,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 9916,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 66675,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2018",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 313,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 86148,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 11659,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 74142,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2019",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 347,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 94958,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 13142,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 81479,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2020",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 337,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 104580,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 20064,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 84171,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2021",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 345,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 111065,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 20243,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 90459,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2022",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 363,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "",
+            "TYPE_INSDesc": "Total",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 106545,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "DH",
+            "TYPE_INSDesc": "Department of Health",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 12756,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "HA",
+            "TYPE_INSDesc": "Hospital Authority",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 93411,
+            "sd_value": ""
+        },
+        {
+            "TYPE_INS": "MED_SUB_DH",
+            "TYPE_INSDesc": "Medical subventions under Department of Health",
+            "freq": "Y",
+            "period": "2023",
+            "sv": "EXP",
+            "svDesc": "HK$ million",
+            "figure": 378,
+            "sd_value": ""
+        }
+    ]
+}
