@@ -1,0 +1,1083 @@
+id: censtatd-business-energy
+title: Hong Kong Business Receipts, Enterprise Characteristics & Energy
+description: Official C&SD service business receipts, concentration ratios, enterprise operating
+  characteristics and energy balance and net import statistics.
+apis:
+  - API-0758
+  - API-0759
+  - API-0760
+  - API-0761
+  - API-0762
+  - API-0763
+  - API-0764
+  - API-0813
+  - API-0814
+  - API-0815
+datasets:
+  - hk-censtatd-tablechart-660-69001
+  - hk-censtatd-tablechart-660-69002
+  - hk-censtatd-tablechart-660-69011
+  - hk-censtatd-tablechart-660-69012
+  - hk-censtatd-tablechart-660-76041
+  - hk-censtatd-tablechart-660-78001
+  - hk-censtatd-tablechart-660-78001a
+  - hk-censtatd-tablechart-915-91001
+  - hk-censtatd-tablechart-915-91101
+  - hk-censtatd-tablechart-915-91102
+baseUrl: https://www.censtatd.gov.hk/api
+lang:
+  param: lang
+  map:
+    en: en
+    tc: tc
+    sc: sc
+cacheTtl: 3600
+tools:
+  - name: service_business_receipts_indices
+    title: Business receipts indices for service industries and service domains (quarterly average of
+      2015 = 100) (660-69001)
+    description: Business receipts indices for service industries and service domains (quarterly average
+      of 2015 = 100). Official C&SD table 660-69001. Newest observations first; paginate with
+      nextOffset. Figures and flags remain unchanged; empty figures are not zero. Totals and
+      subgroups overlap; do not sum.
+    path: /get.php
+    query:
+      id: 660-69001
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: BRI = Business receipts index (quarterly average of
+          2015 = 100). Select with measure; preserve source units and notes."
+        enum:
+          - BRI
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - index
+      industry:
+        type: string
+        in: local
+        description: "Official IND codes: ind_QBRI_45 = Import/export trade; ind_QBRI_46 = Wholesale;
+          ind_QBRI_47 = Retail; ind_QBRI_49 = <i>Land transport<i>; ind_QBRI_49_50_51_522 =
+          Transportation; ind_QBRI_521 = Warehousing and storage; ind_QBRI_532 = Courier;
+          ind_QBRI_55 = Accommodation services; ind_QBRI_56 = Food services; ind_QBRI_591 = <i>Film
+          entertainment<i>; ind_QBRI_61 = <i>Telecommunications<i>; ind_QBRI_6412_6413 = Banking;
+          ind_QBRI_644_649_661_663 = Financing (except banking); ind_QBRI_65_662 = Insurance;
+          ind_QBRI_AS = <i>Asset management<i>; ind_QBRI_AT = <i>Air transport<i>; ind_QBRI_CO =
+          Computer and information technology services; ind_QBRI_FA = <i>Financial markets and asset
+          management<i>; ind_QBRI_J = Information and communications; ind_QBRI_L = Real estate;
+          ind_QBRI_M = Professional, scientific and technical services; ind_QBRI_N = Administrative
+          and support services; ind_QBRI_TO = Tourism, convention and exhibition services;
+          ind_QBRI_WT = <i>Water transport<i>. Source codes and labels are retained."
+        enum:
+          - ind_QBRI_45
+          - ind_QBRI_46
+          - ind_QBRI_47
+          - ind_QBRI_49
+          - ind_QBRI_49_50_51_522
+          - ind_QBRI_521
+          - ind_QBRI_532
+          - ind_QBRI_55
+          - ind_QBRI_56
+          - ind_QBRI_591
+          - ind_QBRI_61
+          - ind_QBRI_6412_6413
+          - ind_QBRI_644_649_661_663
+          - ind_QBRI_65_662
+          - ind_QBRI_AS
+          - ind_QBRI_AT
+          - ind_QBRI_CO
+          - ind_QBRI_FA
+          - ind_QBRI_J
+          - ind_QBRI_L
+          - ind_QBRI_M
+          - ind_QBRI_N
+          - ind_QBRI_TO
+          - ind_QBRI_WT
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: service_business_receipts_yoy
+    title: Year-on-year % change of business receipts indices for service industries and service domains
+      (660-69002)
+    description: Year-on-year % change of business receipts indices for service industries and service
+      domains. Official C&SD table 660-69002. Newest observations first; paginate with nextOffset.
+      Figures and flags remain unchanged; empty figures are not zero. Totals and subgroups overlap;
+      do not sum.
+    path: /get.php
+    query:
+      id: 660-69002
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: BRI = Business receipts index (quarterly average of
+          2015 = 100). Select with measure; preserve source units and notes."
+        enum:
+          - BRI
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - yoy_percent
+      industry:
+        type: string
+        in: local
+        description: "Official IND codes: ind_QBRI_45 = Import/export trade; ind_QBRI_46 = Wholesale;
+          ind_QBRI_47 = Retail; ind_QBRI_49 = <i>Land transport</i>; ind_QBRI_49_50_51_522 =
+          Transportation; ind_QBRI_521 = Warehousing and storage; ind_QBRI_532 = Courier;
+          ind_QBRI_55 = Accommodation services; ind_QBRI_56 = Food services; ind_QBRI_591 = <i>Film
+          entertainment</i>; ind_QBRI_61 = <i>Telecommunications</i>; ind_QBRI_6412_6413 = Banking;
+          ind_QBRI_644_649_661_663 = Financing (except banking); ind_QBRI_65_662 = Insurance;
+          ind_QBRI_AS = <i>Asset management</i>; ind_QBRI_AT = <i>Air transport</i>; ind_QBRI_CO =
+          Computer and information technology services; ind_QBRI_FA = <i>Financial markets and asset
+          management</i>; ind_QBRI_J = Information and communications; ind_QBRI_L = Real estate;
+          ind_QBRI_M = Professional, scientific and technical services; ind_QBRI_N = Administrative
+          and support services; ind_QBRI_TO = Tourism, convention and exhibition services;
+          ind_QBRI_WT = <i>Water transport</i>. Source codes and labels are retained."
+        enum:
+          - ind_QBRI_45
+          - ind_QBRI_46
+          - ind_QBRI_47
+          - ind_QBRI_49
+          - ind_QBRI_49_50_51_522
+          - ind_QBRI_521
+          - ind_QBRI_532
+          - ind_QBRI_55
+          - ind_QBRI_56
+          - ind_QBRI_591
+          - ind_QBRI_61
+          - ind_QBRI_6412_6413
+          - ind_QBRI_644_649_661_663
+          - ind_QBRI_65_662
+          - ind_QBRI_AS
+          - ind_QBRI_AT
+          - ind_QBRI_CO
+          - ind_QBRI_FA
+          - ind_QBRI_J
+          - ind_QBRI_L
+          - ind_QBRI_M
+          - ind_QBRI_N
+          - ind_QBRI_TO
+          - ind_QBRI_WT
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: seasonally_adjusted_business_receipts
+    title: Seasonally adjusted business receipts indices for service industries and service domains
+      (quarterly average of 2015 = 100) (660-69011)
+    description: Seasonally adjusted business receipts indices for service industries and service
+      domains (quarterly average of 2015 = 100). Official C&SD table 660-69011. Newest observations
+      first; paginate with nextOffset. Figures and flags remain unchanged; empty figures are not
+      zero. Totals and subgroups overlap; do not sum. Seasonally adjusted series may be revised;
+      preserve notes about industries without a clear seasonal pattern.
+    path: /get.php
+    query:
+      id: 660-69011
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Q
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: BRI_SA = Seasonally adjusted business receipts index
+          (quarterly average of 2015 = 100). Select with measure; preserve source units and notes."
+        enum:
+          - BRI_SA
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - index
+      industry:
+        type: string
+        in: local
+        description: "Official IND codes: ind_QBRI_45 = Import/export trade; ind_QBRI_46 = Wholesale;
+          ind_QBRI_47 = Retail; ind_QBRI_49 = <i>Land transport</i>; ind_QBRI_49_50_51_522 =
+          Transportation; ind_QBRI_521 = Warehousing and storage; ind_QBRI_532 = Courier;
+          ind_QBRI_55 = Accommodation services; ind_QBRI_56 = Food services; ind_QBRI_591 = <i>Film
+          entertainment</i>; ind_QBRI_61 = <i>Telecommunications</i>; ind_QBRI_6412_6413 = Banking;
+          ind_QBRI_644_649_661_663 = Financing (except banking); ind_QBRI_65_662 = Insurance;
+          ind_QBRI_AS = <i>Asset management</i>; ind_QBRI_AT = <i>Air transport</i>; ind_QBRI_CO =
+          Computer and information technology services; ind_QBRI_FA = <i>Financial markets and asset
+          management</i>; ind_QBRI_J = Information and communications; ind_QBRI_L = Real estate;
+          ind_QBRI_M = Professional, scientific and technical services; ind_QBRI_N = Administrative
+          and support services; ind_QBRI_TO = Tourism, convention and exhibition services;
+          ind_QBRI_WT = <i>Water transport</i>. Source codes and labels are retained."
+        enum:
+          - ind_QBRI_45
+          - ind_QBRI_46
+          - ind_QBRI_47
+          - ind_QBRI_49
+          - ind_QBRI_49_50_51_522
+          - ind_QBRI_521
+          - ind_QBRI_532
+          - ind_QBRI_55
+          - ind_QBRI_56
+          - ind_QBRI_591
+          - ind_QBRI_61
+          - ind_QBRI_6412_6413
+          - ind_QBRI_644_649_661_663
+          - ind_QBRI_65_662
+          - ind_QBRI_AS
+          - ind_QBRI_AT
+          - ind_QBRI_CO
+          - ind_QBRI_FA
+          - ind_QBRI_J
+          - ind_QBRI_L
+          - ind_QBRI_M
+          - ind_QBRI_N
+          - ind_QBRI_TO
+          - ind_QBRI_WT
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: business_receipts_quarterly_change
+    title: Quarter-to-quarter % change of business receipts indices for service industries and service
+      domains based on the seasonally adjusted series (660-69012)
+    description: Quarter-to-quarter % change of business receipts indices for service industries and
+      service domains based on the seasonally adjusted series. Official C&SD table 660-69012. Newest
+      observations first; paginate with nextOffset. Figures and flags remain unchanged; empty
+      figures are not zero. Totals and subgroups overlap; do not sum. Seasonally adjusted series may
+      be revised; preserve notes about industries without a clear seasonal pattern.
+    path: /get.php
+    query:
+      id: 660-69012
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Q
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: BRI_SA = Seasonally adjusted business receipts index
+          (quarterly average of 2015 = 100). Select with measure; preserve source units and notes."
+        enum:
+          - BRI_SA
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - qoq_percent
+      industry:
+        type: string
+        in: local
+        description: "Official IND codes: ind_QBRI_45 = Import/export trade; ind_QBRI_46 = Wholesale;
+          ind_QBRI_47 = Retail; ind_QBRI_49 = <i>Land transport</i>; ind_QBRI_49_50_51_522 =
+          Transportation; ind_QBRI_521 = Warehousing and storage; ind_QBRI_532 = Courier;
+          ind_QBRI_55 = Accommodation services; ind_QBRI_56 = Food services; ind_QBRI_591 = <i>Film
+          entertainment</i>; ind_QBRI_61 = <i>Telecommunications</i>; ind_QBRI_6412_6413 = Banking;
+          ind_QBRI_644_649_661_663 = Financing (except banking); ind_QBRI_65_662 = Insurance;
+          ind_QBRI_AS = <i>Asset management</i>; ind_QBRI_AT = <i>Air transport</i>; ind_QBRI_CO =
+          Computer and information technology services; ind_QBRI_FA = <i>Financial markets and asset
+          management</i>; ind_QBRI_J = Information and communications; ind_QBRI_L = Real estate;
+          ind_QBRI_M = Professional, scientific and technical services; ind_QBRI_N = Administrative
+          and support services; ind_QBRI_TO = Tourism, convention and exhibition services;
+          ind_QBRI_WT = <i>Water transport</i>. Source codes and labels are retained."
+        enum:
+          - ind_QBRI_45
+          - ind_QBRI_46
+          - ind_QBRI_47
+          - ind_QBRI_49
+          - ind_QBRI_49_50_51_522
+          - ind_QBRI_521
+          - ind_QBRI_532
+          - ind_QBRI_55
+          - ind_QBRI_56
+          - ind_QBRI_591
+          - ind_QBRI_61
+          - ind_QBRI_6412_6413
+          - ind_QBRI_644_649_661_663
+          - ind_QBRI_65_662
+          - ind_QBRI_AS
+          - ind_QBRI_AT
+          - ind_QBRI_CO
+          - ind_QBRI_FA
+          - ind_QBRI_J
+          - ind_QBRI_L
+          - ind_QBRI_M
+          - ind_QBRI_N
+          - ind_QBRI_TO
+          - ind_QBRI_WT
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: industry_concentration_ratios
+    title: Concentration ratios by selected industry grouping (660-76041)
+    description: Concentration ratios by selected industry grouping. Official C&SD table 660-76041.
+      Newest observations first; paginate with nextOffset. Figures and flags remain unchanged; empty
+      figures are not zero. Totals and subgroups overlap; do not sum. CR(10), CR(20), CR(50) are
+      ratios from 0 to 1, not percentages. Compare concentration over time; cross-industry
+      comparisons depend on industry size.
+    path: /get.php
+    query:
+      id: 660-76041
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: CR = Concentration Ratios (CR); HC = Number of
+          companies. Select with measure; preserve source units and notes."
+        enum:
+          - CR
+          - HC
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - cr10_ratio
+          - cr20_ratio
+          - cr50_ratio
+          - number
+      industry:
+        type: string
+        in: local
+        description: "Official IND codes: ind_ASW_10-12 = Manufacturing of food, beverages and tobacco;
+          ind_ASW_24_25_28-30_33 = Manufacturing of metal products, machinery and equipment;
+          ind_ASW_37-39 = Sewerage, waste management and remediation activities; ind_ASW_41_42 =
+          Construction of buildings and civil engineering; ind_ASW_45 = Import/export trade;
+          ind_ASW_46 = Wholesale trade; ind_ASW_47 = Retail trade; ind_ASW_49 = Land transport;
+          ind_ASW_50 = Water transport; ind_ASW_51 = Air transport; ind_ASW_52 = Warehousing and
+          support activities for transportation; ind_ASW_532 = Courier activities; ind_ASW_55 =
+          Accommodation services; ind_ASW_56 = Food services; ind_ASW_6412 = Banking; ind_ASW_65_662
+          = Insurance; ind_ASW_6811-6813 = Real estate development and/or leasing; ind_ASW_ASSB_K10
+          = Financing (except banking); ind_ASW_ASSB_M = Professional, scientific and technical
+          activities; ind_ASW_J = Information and communications; ind_ASW_N = Administrative and
+          support service activities. Source codes and labels are retained."
+        enum:
+          - ind_ASW_10-12
+          - ind_ASW_24_25_28-30_33
+          - ind_ASW_37-39
+          - ind_ASW_41_42
+          - ind_ASW_45
+          - ind_ASW_46
+          - ind_ASW_47
+          - ind_ASW_49
+          - ind_ASW_50
+          - ind_ASW_51
+          - ind_ASW_52
+          - ind_ASW_532
+          - ind_ASW_55
+          - ind_ASW_56
+          - ind_ASW_6412
+          - ind_ASW_65_662
+          - ind_ASW_6811-6813
+          - ind_ASW_ASSB_K10
+          - ind_ASW_ASSB_M
+          - ind_ASW_J
+          - ind_ASW_N
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: enterprise_operating_characteristics
+    title: Operating characteristics of enterprises analysed by sector (only including companies with
+      employees), 2018 - 2024 (660-78001)
+    description: Operating characteristics of enterprises analysed by sector (only including companies
+      with employees), 2018 - 2024. Official C&SD table 660-78001. Newest observations first;
+      paginate with nextOffset. Figures and flags remain unchanged; empty figures are not zero.
+      Totals and subgroups overlap; do not sum. Only enterprises with employees. SME means fewer
+      than 50 persons engaged. The 2018 classification differs from 2008-2017; do not join as a
+      comparable series. Profit ratio measures are distinct.
+    path: /get.php
+    query:
+      id: 660-78001
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: COMP_TO_TR = Ratio of compensation of employees to
+          total receipts; NOE = Number of companies with employees; PR_FQ = Profit ratio (First
+          quartile); PR_M = Profit ratio (Median); PR_O = Profit ratio (Overall); SITNOEM = Share in
+          total number of employees in respective sector; SITNOEN = Share in total number of
+          companies with employees in respective sector; SOCOEITOE = Share of compensation of
+          employees in total operating expenses. Select with measure; preserve source units and
+          notes."
+        enum:
+          - COMP_TO_TR
+          - NOE
+          - PR_FQ
+          - PR_M
+          - PR_O
+          - SITNOEM
+          - SITNOEN
+          - SOCOEITOE
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - number
+          - percent
+      industry:
+        type: string
+        in: local
+        description: "Official IND codes: ind_SMW_ASEA_2018_10-12 = 4.5   Food processing and production;
+          ind_SMW_ASEA_2018_13-33 = 5.    Manufacturing; ind_SMW_ASEA_2018_45_46 =
+          7.    Import/export trade and wholesale; ind_SMW_ASEA_2018_47 = 1.    Retail;
+          ind_SMW_ASEA_2018_471101_471102 = 1.1   Supermarkets and convenience stores;
+          ind_SMW_ASEA_2018_47_OTH = 1.2   Other retail stores; ind_SMW_ASEA_2018_5322 = 4.4   Local
+          courier services; ind_SMW_ASEA_2018_55 = 8.    Accommodation services;
+          ind_SMW_ASEA_2018_56 = 2.    Food and beverage services; ind_SMW_ASEA_2018_561101 =
+          2.4   Hong Kong style tea cafes; ind_SMW_ASEA_2018_561109-561111 = 2.1   Chinese
+          restaurants; ind_SMW_ASEA_2018_5612_561902 = 2.3   Fast food cafes;
+          ind_SMW_ASEA_2018_56_OTH = 2.5   Other food and beverage services; ind_SMW_ASEA_2018_6822
+          = 3.1   Real estate maintenance management; ind_SMW_ASEA_2018_6822_80_81 = 3.    Estate
+          management, security and cleaning services; ind_SMW_ASEA_2018_80_811_813 = 3.2   Security
+          services; ind_SMW_ASEA_2018_812 = 3.3   Cleaning services; ind_SMW_ASEA_2018_873 =
+          4.1   Elderly homes; ind_SMW_ASEA_2018_9601 = 4.2   Laundry and dry cleaning services;
+          ind_SMW_ASEA_2018_960201 = 4.3   Hairdressing services; ind_SMW_ASEA_2018_ALL = (C) All
+          sectors; ind_SMW_ASEA_2018_F = 6.    Construction; ind_SMW_ASEA_2018_H_J =
+          9.    Transportation, storage, courier services, information and communications;
+          ind_SMW_ASEA_2018_K-N = 10.   Financing, insurance, real estate, professional and business
+          services; ind_SMW_ASEA_2018_LPS = (A) Low-paying sectors; ind_SMW_ASEA_2018_NLPS = (B)
+          Non-low-paying sectors; ind_SMW_ASEA_2018_NON_CHI = 2.2   Non-Chinese restaurants;
+          ind_SMW_ASEA_2018_OLPS = 4.    Other low-paying sectors; ind_SMW_ASEA_2018_OTH =
+          12.   Others; ind_SMW_ASEA_2018_P-S = 11.   Social and personal services. Source codes and
+          labels are retained."
+        enum:
+          - ind_SMW_ASEA_2018_10-12
+          - ind_SMW_ASEA_2018_13-33
+          - ind_SMW_ASEA_2018_45_46
+          - ind_SMW_ASEA_2018_47
+          - ind_SMW_ASEA_2018_471101_471102
+          - ind_SMW_ASEA_2018_47_OTH
+          - ind_SMW_ASEA_2018_5322
+          - ind_SMW_ASEA_2018_55
+          - ind_SMW_ASEA_2018_56
+          - ind_SMW_ASEA_2018_561101
+          - ind_SMW_ASEA_2018_561109-561111
+          - ind_SMW_ASEA_2018_5612_561902
+          - ind_SMW_ASEA_2018_56_OTH
+          - ind_SMW_ASEA_2018_6822
+          - ind_SMW_ASEA_2018_6822_80_81
+          - ind_SMW_ASEA_2018_80_811_813
+          - ind_SMW_ASEA_2018_812
+          - ind_SMW_ASEA_2018_873
+          - ind_SMW_ASEA_2018_9601
+          - ind_SMW_ASEA_2018_960201
+          - ind_SMW_ASEA_2018_ALL
+          - ind_SMW_ASEA_2018_F
+          - ind_SMW_ASEA_2018_H_J
+          - ind_SMW_ASEA_2018_K-N
+          - ind_SMW_ASEA_2018_LPS
+          - ind_SMW_ASEA_2018_NLPS
+          - ind_SMW_ASEA_2018_NON_CHI
+          - ind_SMW_ASEA_2018_OLPS
+          - ind_SMW_ASEA_2018_OTH
+          - ind_SMW_ASEA_2018_P-S
+      enterprise:
+        type: string
+        in: local
+        description: "Official ENT codes: SME = Small and medium enterprises with employees; ent_SMW_ALL =
+          All enterprises with employees. Source codes and labels are retained."
+        enum:
+          - SME
+          - ent_SMW_ALL
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: enterprise_operating_characteristics_historical
+    title: Operating characteristics of enterprises analysed by sector (only including companies with
+      employees), 2008 - 2017 (660-78001A)
+    description: Operating characteristics of enterprises analysed by sector (only including companies
+      with employees), 2008 - 2017. Official C&SD table 660-78001A. Newest observations first;
+      paginate with nextOffset. Figures and flags remain unchanged; empty figures are not zero.
+      Totals and subgroups overlap; do not sum. Only enterprises with employees. SME means fewer
+      than 50 persons engaged. The 2018 classification differs from 2008-2017; do not join as a
+      comparable series. Profit ratio measures are distinct.
+    path: /get.php
+    query:
+      id: 660-78001A
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: COMP_TO_TR = Ratio of compensation of employees to
+          total receipts; NOE = Number of companies with employees; PR_FQ = Profit ratio (First
+          quartile); PR_M = Profit ratio (Median); PR_O = Profit ratio (Overall); SITNOEM = Share in
+          total number of employees in respective sector; SITNOEN = Share in total number of
+          companies with employees in respective sector; SOCOEITOE = Share of compensation of
+          employees in total operating expenses. Select with measure; preserve source units and
+          notes."
+        enum:
+          - COMP_TO_TR
+          - NOE
+          - PR_FQ
+          - PR_M
+          - PR_O
+          - SITNOEM
+          - SITNOEN
+          - SOCOEITOE
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - number
+          - percent
+      industry:
+        type: string
+        in: local
+        description: "Official IND codes: ind_SMW_ASEA_2008_10-12 = 4.5   Food processing and production;
+          ind_SMW_ASEA_2008_13-33 = 5.    Manufacturing; ind_SMW_ASEA_2008_45_46 =
+          7.    Import/export trade and wholesale; ind_SMW_ASEA_2008_47 = 1.    Retail;
+          ind_SMW_ASEA_2008_471101_471102 = 1.1   Supermarkets and convenience stores;
+          ind_SMW_ASEA_2008_47_OTH = 1.2   Other retail stores; ind_SMW_ASEA_2008_5322 = 4.4   Local
+          courier services; ind_SMW_ASEA_2008_5611 = 2.    Restaurants; ind_SMW_ASEA_2008_561101 =
+          2.4   Hong Kong style tea cafes; ind_SMW_ASEA_2008_561109-561111 = 2.1   Chinese
+          restaurants; ind_SMW_ASEA_2008_5612_561902 = 2.3   Fast food cafes; ind_SMW_ASEA_2008_6822
+          = 3.1   Real estate maintenance management; ind_SMW_ASEA_2008_6822_80_81 = 3.    Estate
+          management, security and cleaning services; ind_SMW_ASEA_2008_80_811_813 = 3.2   Security
+          services; ind_SMW_ASEA_2008_812 = 3.3   Cleaning services; ind_SMW_ASEA_2008_873 =
+          4.1   Elderly homes; ind_SMW_ASEA_2008_9601 = 4.2   Laundry and dry cleaning services;
+          ind_SMW_ASEA_2008_960201 = 4.3   Hairdressing services; ind_SMW_ASEA_2008_ALL = (C) All
+          sectors; ind_SMW_ASEA_2008_F = 6.    Construction; ind_SMW_ASEA_2008_H_J =
+          9.    Transportation, storage, courier services, information and communications;
+          ind_SMW_ASEA_2008_I = 8.    Accommodation and food services; ind_SMW_ASEA_2008_K-N =
+          10.   Financing, insurance, real estate, professional and business services;
+          ind_SMW_ASEA_2008_LPS = (A) Low-paying sectors; ind_SMW_ASEA_2008_NLPS = (B)
+          Non-low-paying sectors; ind_SMW_ASEA_2008_NON_CHI = 2.2   Non-Chinese restaurants;
+          ind_SMW_ASEA_2008_OLPS = 4.    Other low-paying sectors; ind_SMW_ASEA_2008_OTH =
+          12.   Others; ind_SMW_ASEA_2008_P-S = 11.   Social and personal services. Source codes and
+          labels are retained."
+        enum:
+          - ind_SMW_ASEA_2008_10-12
+          - ind_SMW_ASEA_2008_13-33
+          - ind_SMW_ASEA_2008_45_46
+          - ind_SMW_ASEA_2008_47
+          - ind_SMW_ASEA_2008_471101_471102
+          - ind_SMW_ASEA_2008_47_OTH
+          - ind_SMW_ASEA_2008_5322
+          - ind_SMW_ASEA_2008_5611
+          - ind_SMW_ASEA_2008_561101
+          - ind_SMW_ASEA_2008_561109-561111
+          - ind_SMW_ASEA_2008_5612_561902
+          - ind_SMW_ASEA_2008_6822
+          - ind_SMW_ASEA_2008_6822_80_81
+          - ind_SMW_ASEA_2008_80_811_813
+          - ind_SMW_ASEA_2008_812
+          - ind_SMW_ASEA_2008_873
+          - ind_SMW_ASEA_2008_9601
+          - ind_SMW_ASEA_2008_960201
+          - ind_SMW_ASEA_2008_ALL
+          - ind_SMW_ASEA_2008_F
+          - ind_SMW_ASEA_2008_H_J
+          - ind_SMW_ASEA_2008_I
+          - ind_SMW_ASEA_2008_K-N
+          - ind_SMW_ASEA_2008_LPS
+          - ind_SMW_ASEA_2008_NLPS
+          - ind_SMW_ASEA_2008_NON_CHI
+          - ind_SMW_ASEA_2008_OLPS
+          - ind_SMW_ASEA_2008_OTH
+          - ind_SMW_ASEA_2008_P-S
+      enterprise:
+        type: string
+        in: local
+        description: "Official ENT codes: SME = Small and medium enterprises with employees; ent_SMW_ALL =
+          All enterprises with employees. Source codes and labels are retained."
+        enum:
+          - SME
+          - ent_SMW_ALL
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: overall_energy_balance
+    title: Overall energy balance (915-91001)
+    description: Overall energy balance. Official C&SD table 915-91001. Newest observations first;
+      paginate with nextOffset. Figures and flags remain unchanged; empty figures are not zero.
+      Totals and subgroups overlap; do not sum. Preserve negative net flows. Distinguish primary and
+      final energy, per-capita megajoules, terajoules, population in thousands, monetary values,
+      tonnes and kilolitres; no unit conversion or aggregation.
+    path: /get.php
+    query:
+      id: 915-91001
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: EST_MID_POP = Estimated mid-year population; F_EN_REQ
+          = Final energy requirements; P_CONSUM_F = Per capita consumption of final energy
+          requirements; P_CONSUM_P = Per capita consumption of primary energy requirements; P_EN_REQ
+          = Primary energy requirements. Select with measure; preserve source units and notes."
+        enum:
+          - EST_MID_POP
+          - F_EN_REQ
+          - P_CONSUM_F
+          - P_CONSUM_P
+          - P_EN_REQ
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - megajoule
+          - terajoule
+          - thousand_persons
+      requirement:
+        type: string
+        in: local
+        description: "Official EN_REQ_TYPE codes: TOTAL = Total; Bunker = Bunker; Elect_gen = Electricity
+          generation; Ex = Exports; Gas_manu = Gas manufacture; Im = Imports; Ind_prod = Indigenous
+          production; Sup_stock = Supply from stock; ind_use = Industry own use and loss. Source
+          codes and labels are retained."
+        enum:
+          - TOTAL
+          - Bunker
+          - Elect_gen
+          - Ex
+          - Gas_manu
+          - Im
+          - Ind_prod
+          - Sup_stock
+          - ind_use
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: TOTAL = Total; COAL = Coal products; ELEC = Electricity; GAS
+          = Gas; OIL = Oil products. Source codes and labels are retained."
+        enum:
+          - TOTAL
+          - COAL
+          - ELEC
+          - GAS
+          - OIL
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: energy_net_import_values
+    title: Value of net imports of oil products and coal products (915-91101)
+    description: Value of net imports of oil products and coal products. Official C&SD table 915-91101.
+      Newest observations first; paginate with nextOffset. Figures and flags remain unchanged; empty
+      figures are not zero. Totals and subgroups overlap; do not sum. Preserve negative net flows.
+      Distinguish primary and final energy, per-capita megajoules, terajoules, population in
+      thousands, monetary values, tonnes and kilolitres; no unit conversion or aggregation.
+    path: /get.php
+    query:
+      id: 915-91101
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: VAL_NET_IM = Value of net imports. Select with
+          measure; preserve source units and notes."
+        enum:
+          - VAL_NET_IM
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - hkd_million
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: TOTAL = Total; 1 = Aviation gasoline and kerosene; 10 =
+          Anthracite; 2b = Motor gasoline (unleaded petrol); 3 = Gas oil, diesel oil and naphtha; 4
+          = Fuel oil; 6 = Liquefied petroleum gas; 7 = Natural gas; 8 = Steam coal and other coal; 9
+          = Wood charcoal. Source codes and labels are retained."
+        enum:
+          - TOTAL
+          - "1"
+          - "10"
+          - 2b
+          - "3"
+          - "4"
+          - "6"
+          - "7"
+          - "8"
+          - "9"
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en
+  - name: energy_net_import_quantities
+    title: Quantity of net imports of oil products and coal products (915-91102)
+    description: Quantity of net imports of oil products and coal products. Official C&SD table
+      915-91102. Newest observations first; paginate with nextOffset. Figures and flags remain
+      unchanged; empty figures are not zero. Totals and subgroups overlap; do not sum. Preserve
+      negative net flows. Distinguish primary and final energy, per-capita megajoules, terajoules,
+      population in thousands, monetary values, tonnes and kilolitres; no unit conversion or
+      aggregation.
+    path: /get.php
+    query:
+      id: 915-91102
+      full_series: 1
+    transform:
+      response: normalizeBusinessEnergy
+    input:
+      freq:
+        type: string
+        in: local
+        description: Official Y annual or Q quarterly frequency.
+        enum:
+          - Q
+          - Y
+      period:
+        type: string
+        in: local
+        description: Four-digit year or exact YYYYMM quarter end where available; year matches all
+          observations in that year.
+        pattern: ^\d{4}(03|06|09|12)?$
+      indicator:
+        type: string
+        in: local
+        description: "Official statistical variables: QTY_NET_IM = Quantity of net imports. Select with
+          measure; preserve source units and notes."
+        enum:
+          - QTY_NET_IM
+      measure:
+        type: string
+        in: local
+        description: Normalized source unit; CR ratios are 0 to 1. No conversion or aggregation.
+        enum:
+          - kilolitres
+          - tonnes
+      product:
+        type: string
+        in: local
+        description: "Official PROD_TYPE codes: 1 = Aviation gasoline and kerosene; 10 = Anthracite; 2b =
+          Motor gasoline (unleaded petrol); 3 = Gas oil, diesel oil and naphtha; 4 = Fuel oil; 6 =
+          Liquefied petroleum gas; 7 = Natural gas; 8 = Steam coal and other coal; 9 = Wood
+          charcoal. Source codes and labels are retained."
+        enum:
+          - "1"
+          - "10"
+          - 2b
+          - "3"
+          - "4"
+          - "6"
+          - "7"
+          - "8"
+          - "9"
+      limit:
+        type: integer
+        in: local
+        description: Maximum observations per page; also bounded to 100 KB of rows.
+        default: 50
+        minimum: 1
+        maximum: 100
+      offset:
+        type: integer
+        in: local
+        description: Continue using nextOffset with the same filters and language.
+        default: 0
+        minimum: 0
+        maximum: 100000
+      lang:
+        type: string
+        description: Language of official title, labels, units and notes.
+        enum:
+          - en
+          - tc
+          - sc
+        default: en

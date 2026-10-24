@@ -1,0 +1,5 @@
+simulation: batch066
+routing: path
+mocks:
+  - routeKey: censtatd
+    path: ../mocks/censtatd-business-energy/config.yaml

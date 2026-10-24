@@ -1,0 +1,9 @@
+version: 1
+name: censtatd-business-energy
+slug: censtatd-business-energy
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true
