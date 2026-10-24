@@ -10,6 +10,13 @@ const service = (apis: string[], datasets = ["d1"]) =>
   serviceSpec.parse({ id: "svc", title: "Service", apis, datasets, tools: [{ name: "t", description: "x", handler: "h" }] });
 
 describe("API tracker", () => {
+  it("requires external documentation for APIs without government datasets", () => {
+    expect(resolveApis(registry(entry("API-0001", [])), []).problems.join()).toContain("must provide a docs URL");
+    const yaml = registry(entry("API-0001", []).replace("datasets: []", "datasets: [], docs: https://example.com/docs"));
+    const { tracker, problems } = resolveApis(yaml, [service(["API-0001"], [])]);
+    expect(problems).toEqual([]);
+    expect(tracker!.apis[0].docs).toBe("https://example.com/docs");
+  });
   it("marks APIs a service lists as implemented and the rest as coming soon", () => {
     const { tracker, problems } = resolveApis(registry(entry("API-0001") + entry("API-0003", ["d2"])), [service(["API-0001"])]);
     expect(problems).toEqual([]);

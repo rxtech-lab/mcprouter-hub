@@ -16,7 +16,8 @@ describe("exposedServices", () => {
   });
 
   it("filters by region", () => {
-    expect(exposedServices(services, { ...OPEN_EXPOSURE, regions: ["hk"] })).toHaveLength(services.length);
+    expect(exposedServices(services, { ...OPEN_EXPOSURE, regions: ["hk"] }).map((s) => s.id)).toEqual(services.filter((s) => s.region === "hk").map((s) => s.id));
+    expect(exposedServices(services, { ...OPEN_EXPOSURE, regions: ["global"] }).map((s) => s.id)).toContain("unified-news");
     expect(exposedServices(services, { ...OPEN_EXPOSURE, regions: ["elsewhere"] })).toEqual([]);
     expect(serviceExposure(bus, { ...OPEN_EXPOSURE, regions: ["elsewhere"] })).toBe("region");
   });

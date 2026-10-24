@@ -51,12 +51,16 @@ export const apiSpec = z
     provider: z.string().min(1),
     category: z.enum(Object.keys(API_CATEGORIES) as [ApiCategory, ...ApiCategory[]]),
     /** DATA.GOV.HK (CKAN) dataset ids behind this API. */
-    datasets: z.array(z.string().min(1)).min(1),
+    datasets: z.array(z.string().min(1)),
     kind: z.enum(Object.keys(API_KINDS) as [ApiKind, ...ApiKind[]]).default("api"),
     /** Developer docs, when there's a better page than the first dataset's. */
     docs: z.url({ protocol: /^https$/ }).optional(),
   })
-  .strict();
+  .strict()
+  .refine((api) => api.datasets.length > 0 || api.docs !== undefined, {
+    message: "APIs without DATA.GOV.HK datasets must provide a docs URL",
+    path: ["docs"],
+  });
 
 export const apiRegistrySpec = z.object({ apis: z.array(apiSpec).min(1) }).strict();
 

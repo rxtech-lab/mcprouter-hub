@@ -1,0 +1,19 @@
+# Simulation scaffold. Add fault-injection scenarios under each mock, e.g.:
+#   scenarios:
+#     - overrides:
+#         conditions:
+#           latency: { delay_ms: 500 }
+# Then serve it with: postman simulation run <this file>
+
+simulation: unified-news
+routing: path
+mocks:
+  - name: unified-news-trade-bloom
+    routeKey: trade-bloom
+    path: ../mocks/unified-news-trade-bloom/config.yaml
+  - name: unified-news-reuters
+    routeKey: reuters
+    path: ../mocks/unified-news-reuters/config.yaml
+  - name: unified-news-hacker-news
+    routeKey: hacker-news
+    path: ../mocks/unified-news-hacker-news/config.yaml

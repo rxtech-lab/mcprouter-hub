@@ -3242,6 +3242,10 @@ msgstr "將金鑰作為 Bearer 權杖發送。只支援 stdio 的客戶端可透
 msgid "Hong Kong"
 msgstr "香港"
 
+#: lib/regions.ts
+msgid "Global"
+msgstr "全球"
+
 #: lib/service-content.ts
 msgid "Hong Kong Bus, Minibus & Tram Arrivals MCP"
 msgstr "香港巴士、小巴及電車到站 MCP"

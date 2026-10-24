@@ -32571,3 +32571,27 @@ apis:
     datasets:
       - hk-wfsfaa-wfao_01-data-on-spending-data-of-head-173
     kind: files
+
+  - id: API-3820
+    title: Trade Bloom Finance news
+    description: Top article headlines and provider-routed story detail requests via RapidAPI. Detail availability depends on provider access.
+    provider: vibapidev (RapidAPI)
+    category: finance
+    datasets: []
+    docs: https://rapidapi.com/vibapidev/api/trade-bloom-finance
+
+  - id: API-3821
+    title: Reuters API news
+    description: Latest Reuters article headlines and article details by URL via RapidAPI.
+    provider: mahmudulhasandev (RapidAPI)
+    category: other
+    datasets: []
+    docs: https://rapidapi.com/mahmudulhasandev/api/reuters-api
+
+  - id: API-3822
+    title: Hacker News
+    description: Ranked top stories and story details from the official public Hacker News Firebase API.
+    provider: Y Combinator
+    category: other
+    datasets: []
+    docs: https://github.com/HackerNews/API

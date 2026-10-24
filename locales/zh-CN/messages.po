@@ -3242,6 +3242,10 @@ msgstr "将密钥作为 Bearer 令牌发送。仅支持 stdio 的客户端可通
 msgid "Hong Kong"
 msgstr "香港"
 
+#: lib/regions.ts
+msgid "Global"
+msgstr "全球"
+
 #: lib/service-content.ts
 msgid "Hong Kong Bus, Minibus & Tram Arrivals MCP"
 msgstr "香港巴士、小巴及电车到站 MCP"

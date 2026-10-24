@@ -63,6 +63,21 @@ export const liveCases: Record<string, LiveCase> = {
   had_district_boundaries: { input: { limit: 1 }, check: nonEmptyPage },
   had_permitted_burial_boundaries: { input: { limit: 1 }, check: nonEmptyPage },
 
+  list_top_news: {
+    input: { x: 1 },
+    check: (result) => {
+      const data = result.data as { partial?: boolean; providers?: { status: string; returned: number }[] };
+      return data.partial === false && data.providers?.length === 3 && data.providers.every((p) => p.status === "ok" && p.returned > 0)
+        ? null : "Expected non-empty headlines from all three news providers";
+    },
+  },
+  get_news_detail: {
+    input: async (call) => {
+      const result = await call("list_top_news", { x: 1 });
+      const news = (result.data as { news?: { id: string }[] }).news;
+      return { id: first<{ id: string }>(news, "news article").id };
+    },
+  },
   // Batch073: only the five sources with usable current bodies.
   hkma_information_centre: { input: { limit: 1 }, check: nonEmptyPage },
   hkstp_companies: { input: { limit: 1 }, check: nonEmptyPage },
