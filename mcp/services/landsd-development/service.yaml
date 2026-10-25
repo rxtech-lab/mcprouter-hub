@@ -1,0 +1,886 @@
+{
+  "id": "landsd-development",
+  "title": "LandsD Development Records and Survey Sheets",
+  "description": "Official public facilities, land grants, tenancies, road lines and historical survey sheet downloads.",
+  "apis": [
+    "API-3103",
+    "API-3105",
+    "API-3106",
+    "API-3107",
+    "API-3116",
+    "API-3120"
+  ],
+  "datasets": [
+    "hk-landsd-openmap-old-survey-sheets",
+    "hk-landsd-openmap-private-treaty-grant-cases",
+    "hk-landsd-openmap-public-facilities",
+    "hk-landsd-openmap-public-open-space",
+    "hk-landsd-openmap-road-centreline",
+    "hk-landsd-openmap-short-term-tenancy"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "landsd_old_survey_sheets_1",
+      "title": "OldSurveySheet_OLD600_MapIndex",
+      "description": "OldSurveySheet_OLD600_MapIndex: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Structured sheet index with edition dates and provider GeoTIFF download links; raster imagery is not decoded. Five series cover OLD600, T1200, 1960s–1970s, 1980s–1990s and 2000s.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1631584892859_72892/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "SHEETNO",
+            "GeoTiff"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31030",
+        "response": "response31030"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_old_survey_sheets_2",
+      "title": "OldSurveySheet_T1200_MapIndex",
+      "description": "OldSurveySheet_T1200_MapIndex: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Structured sheet index with edition dates and provider GeoTIFF download links; raster imagery is not decoded. Five series cover OLD600, T1200, 1960s–1970s, 1980s–1990s and 2000s.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1639990901210_47291/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "SHEETNO",
+            "GeoTiff"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31031",
+        "response": "response31031"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_old_survey_sheets_3",
+      "title": "OldSurveySheet_1960s_1970s_MapIndex",
+      "description": "OldSurveySheet_1960s_1970s_MapIndex: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Structured sheet index with edition dates and provider GeoTIFF download links; raster imagery is not decoded. Five series cover OLD600, T1200, 1960s–1970s, 1980s–1990s and 2000s.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1640047202071_61921/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "SHEETNO",
+            "GeoTiff"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31032",
+        "response": "response31032"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_old_survey_sheets_4",
+      "title": "OldSurveySheet_1980s_1990s_MapIndex",
+      "description": "OldSurveySheet_1980s_1990s_MapIndex: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Structured sheet index with edition dates and provider GeoTIFF download links; raster imagery is not decoded. Five series cover OLD600, T1200, 1960s–1970s, 1980s–1990s and 2000s.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1640047456225_68329/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "SHEETNO",
+            "GeoTiff"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31033",
+        "response": "response31033"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_old_survey_sheets_5",
+      "title": "OldSurveySheet_2000s_MapIndex",
+      "description": "OldSurveySheet_2000s_MapIndex: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Structured sheet index with edition dates and provider GeoTIFF download links; raster imagery is not decoded. Five series cover OLD600, T1200, 1960s–1970s, 1980s–1990s and 2000s.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1671592436814_1059/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "SHEETNO",
+            "GeoTiff"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31034",
+        "response": "response31034"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_private_treaty_grants",
+      "title": "EPTG",
+      "description": "EPTG: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Source geometries and records are not legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637225273612_90378/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "SEARCH02_EN",
+            "SEARCH02_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31050",
+        "response": "response31050"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_public_facilities",
+      "title": "PF",
+      "description": "PF: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Source geometries and records are not legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637304790394_97921/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC",
+            "NSEARCH05_EN",
+            "NSEARCH05_TC",
+            "NSEARCH06_EN",
+            "NSEARCH06_TC",
+            "NSEARCH07_EN",
+            "NSEARCH07_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31060",
+        "response": "response31060"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_public_open_space",
+      "title": "POS",
+      "description": "POS: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Source geometries and records are not legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637304969323_68704/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC",
+            "NSEARCH05_EN",
+            "NSEARCH05_TC",
+            "NSEARCH06_EN",
+            "NSEARCH06_TC",
+            "NSEARCH07_EN",
+            "NSEARCH07_TC",
+            "NSEARCH08_EN",
+            "NSEARCH08_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31070",
+        "response": "response31070"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_road_centrelines",
+      "title": "RoadCentreLine",
+      "description": "RoadCentreLine: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Source geometries and records are not legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637310758814_80061/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "STREETTYPE",
+            "ENGLISHSTREETNAME",
+            "CHINESESTREETNAME"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31160",
+        "response": "response31160"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_short_term_tenancies",
+      "title": "ShortTermTenancy",
+      "description": "ShortTermTenancy: official Lands Department CSDI records. Preserve source fields, nulls, dates (epoch milliseconds), units and links. lang selects the name alias only; no automatic translation. Up to 100 rows / 100 KB, stable OBJECTID paging; geometry over 20 KB explicitly omitted. Continue with nextOffset and identical filters. Source geometries and records are not legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637217451459_59809/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "STTNo",
+            "DCDistrict",
+            "UserEN",
+            "UserTC",
+            "GrantType",
+            "TermEN",
+            "TermTC",
+            "LBSInfo",
+            "RentEN",
+            "RentTC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request31200",
+        "response": "response31200"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    }
+  ]
+}

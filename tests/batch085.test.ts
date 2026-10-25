@@ -19,7 +19,7 @@ afterEach(() => { vi.unstubAllGlobals(); setCacheForTesting(null); });
 describe("Batch085 land case contracts", () => {
   it("registers exactly ten IDs with the original dataset mapping", () => {
     const retained = [...batch085.map((c) => c.api), "API-3081"].sort();
-    expect(services.filter((s) => s.id.startsWith("landsd-")).flatMap((s) => s.apis).sort()).toEqual(retained);
+    expect(services.filter((s) => ["landsd-land-cases", "landsd-topographic"].includes(s.id)).flatMap((s) => s.apis).sort()).toEqual(retained);
     for (const c of batch085) {
       expect(services.filter((s) => s.apis.includes(c.api)).map((s) => s.id)).toEqual([c.service]);
       expect((manifest.datasets as Record<string, string[]>)[c.dataset]).toEqual([c.service]);

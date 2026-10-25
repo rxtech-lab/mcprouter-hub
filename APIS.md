@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **323 of 3822 implemented**, 3499 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **331 of 3822 implemented**, 3491 coming soon.
 1772 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -1865,11 +1865,11 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-3100` | [Revitalisation of Industrial Buildings 2009 - Executed Special Waiver Cases (From 2010 onwards in GML format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-swc) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
 | `API-3101` | [Old Urban and Town Maps](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-mapping-old-urban-and-town-maps) | API | Lands Department | 🕒 Coming soon | — |
 | `API-3102` | [Old Photos of Hong Kong](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-old-photos-of-hong-kong) | Files | Lands Department | 🕒 Coming soon | — |
-| `API-3103` | [Old Survey Sheets](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-old-survey-sheets) | API | Lands Department | 🕒 Coming soon | — |
+| `API-3103` | [Old Survey Sheets](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-old-survey-sheets) | API | Lands Department | ✅ Implemented | [LandsD Development Records and Survey Sheets](mcp/services/landsd-development/service.yaml) |
 | `API-3104` | [Digital Orthophoto Map DOPM100-L0](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-orthophoto-map-of-hong-kong) | Files | Lands Department | 🕒 Coming soon | — |
-| `API-3105` | [Executed Private Treaty Grant Cases (Available in GML and GeoJSON)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-private-treaty-grant-cases) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3106` | [Public Facilities (excluding Public Open Space) (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-public-facilities) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3107` | [Public Open Space (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-public-open-space) | API | Lands Department | 🕒 Coming soon | — |
+| `API-3105` | [Executed Private Treaty Grant Cases (Available in GML and GeoJSON)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-private-treaty-grant-cases) | API | Lands Department | ✅ Implemented | [LandsD Development Records and Survey Sheets](mcp/services/landsd-development/service.yaml) |
+| `API-3106` | [Public Facilities (excluding Public Open Space) (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-public-facilities) | API | Lands Department | ✅ Implemented | [LandsD Development Records and Survey Sheets](mcp/services/landsd-development/service.yaml) |
+| `API-3107` | [Public Open Space (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-public-open-space) | API | Lands Department | ✅ Implemented | [LandsD Development Records and Survey Sheets](mcp/services/landsd-development/service.yaml) |
 | `API-3108` | [Revision Date of 3D Spatial Data - 3D-BIT00](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-revision-date-of-3d-spatial-data-3d-bit00) | Files | Lands Department | 🕒 Coming soon | — |
 | `API-3109` | [Revision Date of Digital Land Boundary Maps - iC1000](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-revision-date-of-digital-land-boundary-maps-ic1000) | Files | Lands Department | 🕒 Coming soon | — |
 | `API-3110` | [Revision Date of Digital Topographic Maps - iB1000](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-revision-date-of-digital-topographic-maps-ib1000) | Files | Lands Department | 🕒 Coming soon | — |
@@ -1878,11 +1878,11 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-3113` | [Revision Date of Digital Topographic Maps - iB5000](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-revision-date-of-digital-topographic-maps-ib5000) | Files | Lands Department | 🕒 Coming soon | — |
 | `API-3114` | [Revision Date of Geo-Reference Database - iG1000](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-revision-date-of-geo-reference-database-ig1000) | Files | Lands Department | 🕒 Coming soon | — |
 | `API-3115` | [Revision Date of GeoCommunity Database – iGeoCom](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-revision-date-of-geocommunity-database-igeocom) | Files | Lands Department | 🕒 Coming soon | — |
-| `API-3116` | [Road Centreline](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-road-centreline) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3117` | [Hong Kong Satellite Positioning Reference Station Network (SatRef) Network RTK Integrity Monitoring (IM) Data Stream (NMEA Format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-satref-raw-data-nmea) | API | Lands Department | 🕒 Coming soon | — |
+| `API-3116` | [Road Centreline](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-road-centreline) | API | Lands Department | ✅ Implemented | [LandsD Development Records and Survey Sheets](mcp/services/landsd-development/service.yaml) |
+| `API-3117` | [Hong Kong Satellite Positioning Reference Station Network (SatRef) Network RTK Integrity Monitoring (IM) Data Stream (NMEA Format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-satref-raw-data-nmea) | API | Lands Department | ✅ Implemented | [LandsD SatRef Raw GNSS Data](mcp/services/landsd-satref/service.yaml) |
 | `API-3118` | [Hong Kong Satellite Positioning Reference Station Network (SatRef) GNSS Raw Data Streams (RTCM Format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-satref-raw-data-rtcm) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3119` | [Hong Kong Satellite Positioning Reference Station Network (SatRef) GNSS Raw Data (RINEX Format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-satref-raw-rinex) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3120` | [Short Term Tenancy](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-short-term-tenancy) | API | Lands Department | 🕒 Coming soon | — |
+| `API-3119` | [Hong Kong Satellite Positioning Reference Station Network (SatRef) GNSS Raw Data (RINEX Format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-satref-raw-rinex) | API | Lands Department | ✅ Implemented | [LandsD SatRef Raw GNSS Data](mcp/services/landsd-satref/service.yaml) |
+| `API-3120` | [Short Term Tenancy](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-short-term-tenancy) | API | Lands Department | ✅ Implemented | [LandsD Development Records and Survey Sheets](mcp/services/landsd-development/service.yaml) |
 | `API-3121` | [3D Visualisation Map (2017)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-smo-3d-vis-map) | API | Lands Department | 🕒 Coming soon | — |
 | `API-3122` | [Designated spots available for application for temporarily setting up of street counters](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-street-counters) | API | Lands Department | 🕒 Coming soon | — |
 | `API-3123` | [Summary of land transaction applications received and under processing (From January 2022 onwards in CSV format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-summary-land-transaction-applications) | Files | Lands Department | 🕒 Coming soon | — |

@@ -1,0 +1,354 @@
+{
+  "31030": {
+    "label": "OldSurveySheet_OLD600_MapIndex",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "search": [
+      "SHEETNO",
+      "GeoTiff"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "SHEETNO": "esriFieldTypeString",
+      "EDITION_DATE": "esriFieldTypeDate",
+      "EDITION": "esriFieldTypeInteger",
+      "GeoTiff": "esriFieldTypeString",
+      "Shape__Length": "esriFieldTypeDouble",
+      "Shape__Area": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "31031": {
+    "label": "OldSurveySheet_T1200_MapIndex",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "search": [
+      "SHEETNO",
+      "GeoTiff"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "SHEETNO": "esriFieldTypeString",
+      "EDITION_DATE": "esriFieldTypeDate",
+      "EDITION": "esriFieldTypeInteger",
+      "GeoTiff": "esriFieldTypeString",
+      "Shape__Length": "esriFieldTypeDouble",
+      "Shape__Area": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "31032": {
+    "label": "OldSurveySheet_1960s_1970s_MapIndex",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "search": [
+      "SHEETNO",
+      "GeoTiff"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "SHEETNO": "esriFieldTypeString",
+      "EDITION_DATE": "esriFieldTypeDate",
+      "EDITION": "esriFieldTypeInteger",
+      "GeoTiff": "esriFieldTypeString",
+      "Shape__Length": "esriFieldTypeDouble",
+      "Shape__Area": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "31033": {
+    "label": "OldSurveySheet_1980s_1990s_MapIndex",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "search": [
+      "SHEETNO",
+      "GeoTiff"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "SHEETNO": "esriFieldTypeString",
+      "EDITION_DATE": "esriFieldTypeDate",
+      "EDITION": "esriFieldTypeInteger",
+      "GeoTiff": "esriFieldTypeString",
+      "Shape__Length": "esriFieldTypeDouble",
+      "Shape__Area": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "31034": {
+    "label": "OldSurveySheet_2000s_MapIndex",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "search": [
+      "SHEETNO",
+      "GeoTiff"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "SHEETNO": "esriFieldTypeString",
+      "EDITION_DATE": "esriFieldTypeDate",
+      "EDITION": "esriFieldTypeInteger",
+      "GeoTiff": "esriFieldTypeString",
+      "Shape__Length": "esriFieldTypeDouble",
+      "Shape__Area": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "31050": {
+    "label": "EPTG",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "search": [
+      "DATASET_EN",
+      "DATASET_TC",
+      "NAME_EN",
+      "ADDRESS_EN",
+      "NAME_TC",
+      "ADDRESS_TC",
+      "SEARCH01_EN",
+      "SEARCH01_TC",
+      "SEARCH02_EN",
+      "SEARCH02_TC",
+      "NSEARCH01_EN",
+      "NSEARCH01_TC",
+      "NSEARCH02_EN",
+      "NSEARCH02_TC",
+      "NSEARCH03_EN",
+      "NSEARCH03_TC",
+      "NSEARCH04_EN",
+      "NSEARCH04_TC"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "DATASET_EN": "esriFieldTypeString",
+      "DATASET_TC": "esriFieldTypeString",
+      "NAME_EN": "esriFieldTypeString",
+      "ADDRESS_EN": "esriFieldTypeString",
+      "NAME_TC": "esriFieldTypeString",
+      "ADDRESS_TC": "esriFieldTypeString",
+      "SEARCH01_EN": "esriFieldTypeString",
+      "SEARCH01_TC": "esriFieldTypeString",
+      "SEARCH02_EN": "esriFieldTypeString",
+      "SEARCH02_TC": "esriFieldTypeString",
+      "NSEARCH01_EN": "esriFieldTypeString",
+      "NSEARCH01_TC": "esriFieldTypeString",
+      "NSEARCH02_EN": "esriFieldTypeString",
+      "NSEARCH02_TC": "esriFieldTypeString",
+      "NSEARCH03_EN": "esriFieldTypeString",
+      "NSEARCH03_TC": "esriFieldTypeString",
+      "NSEARCH04_EN": "esriFieldTypeString",
+      "NSEARCH04_TC": "esriFieldTypeString",
+      "NORTHING": "esriFieldTypeDouble",
+      "EASTING": "esriFieldTypeDouble",
+      "LATITUDE": "esriFieldTypeDouble",
+      "LONGITUDE": "esriFieldTypeDouble",
+      "LASTUPDATE": "esriFieldTypeDate"
+    },
+    "geometry": "esriGeometryPoint"
+  },
+  "31060": {
+    "label": "PF",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "search": [
+      "DATASET_EN",
+      "DATASET_TC",
+      "NAME_EN",
+      "ADDRESS_EN",
+      "NAME_TC",
+      "ADDRESS_TC",
+      "SEARCH01_EN",
+      "SEARCH01_TC",
+      "NSEARCH01_EN",
+      "NSEARCH01_TC",
+      "NSEARCH02_EN",
+      "NSEARCH02_TC",
+      "NSEARCH03_EN",
+      "NSEARCH03_TC",
+      "NSEARCH04_EN",
+      "NSEARCH04_TC",
+      "NSEARCH05_EN",
+      "NSEARCH05_TC",
+      "NSEARCH06_EN",
+      "NSEARCH06_TC",
+      "NSEARCH07_EN",
+      "NSEARCH07_TC"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "DATASET_EN": "esriFieldTypeString",
+      "DATASET_TC": "esriFieldTypeString",
+      "NAME_EN": "esriFieldTypeString",
+      "ADDRESS_EN": "esriFieldTypeString",
+      "NAME_TC": "esriFieldTypeString",
+      "ADDRESS_TC": "esriFieldTypeString",
+      "SEARCH01_EN": "esriFieldTypeString",
+      "SEARCH01_TC": "esriFieldTypeString",
+      "NSEARCH01_EN": "esriFieldTypeString",
+      "NSEARCH01_TC": "esriFieldTypeString",
+      "NSEARCH02_EN": "esriFieldTypeString",
+      "NSEARCH02_TC": "esriFieldTypeString",
+      "NSEARCH03_EN": "esriFieldTypeString",
+      "NSEARCH03_TC": "esriFieldTypeString",
+      "NSEARCH04_EN": "esriFieldTypeString",
+      "NSEARCH04_TC": "esriFieldTypeString",
+      "NSEARCH05_EN": "esriFieldTypeString",
+      "NSEARCH05_TC": "esriFieldTypeString",
+      "NSEARCH06_EN": "esriFieldTypeString",
+      "NSEARCH06_TC": "esriFieldTypeString",
+      "NSEARCH07_EN": "esriFieldTypeString",
+      "NSEARCH07_TC": "esriFieldTypeString",
+      "NORTHING": "esriFieldTypeDouble",
+      "EASTING": "esriFieldTypeDouble",
+      "LATITUDE": "esriFieldTypeDouble",
+      "LONGITUDE": "esriFieldTypeDouble",
+      "LASTUPDATE": "esriFieldTypeDate"
+    },
+    "geometry": "esriGeometryPoint"
+  },
+  "31070": {
+    "label": "POS",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "search": [
+      "DATASET_EN",
+      "DATASET_TC",
+      "NAME_EN",
+      "ADDRESS_EN",
+      "NAME_TC",
+      "ADDRESS_TC",
+      "SEARCH01_EN",
+      "SEARCH01_TC",
+      "NSEARCH01_EN",
+      "NSEARCH01_TC",
+      "NSEARCH02_EN",
+      "NSEARCH02_TC",
+      "NSEARCH03_EN",
+      "NSEARCH03_TC",
+      "NSEARCH04_EN",
+      "NSEARCH04_TC",
+      "NSEARCH05_EN",
+      "NSEARCH05_TC",
+      "NSEARCH06_EN",
+      "NSEARCH06_TC",
+      "NSEARCH07_EN",
+      "NSEARCH07_TC",
+      "NSEARCH08_EN",
+      "NSEARCH08_TC"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "DATASET_EN": "esriFieldTypeString",
+      "DATASET_TC": "esriFieldTypeString",
+      "NAME_EN": "esriFieldTypeString",
+      "ADDRESS_EN": "esriFieldTypeString",
+      "NAME_TC": "esriFieldTypeString",
+      "ADDRESS_TC": "esriFieldTypeString",
+      "SEARCH01_EN": "esriFieldTypeString",
+      "SEARCH01_TC": "esriFieldTypeString",
+      "NSEARCH01_EN": "esriFieldTypeString",
+      "NSEARCH01_TC": "esriFieldTypeString",
+      "NSEARCH02_EN": "esriFieldTypeString",
+      "NSEARCH02_TC": "esriFieldTypeString",
+      "NSEARCH03_EN": "esriFieldTypeString",
+      "NSEARCH03_TC": "esriFieldTypeString",
+      "NSEARCH04_EN": "esriFieldTypeString",
+      "NSEARCH04_TC": "esriFieldTypeString",
+      "NSEARCH05_EN": "esriFieldTypeString",
+      "NSEARCH05_TC": "esriFieldTypeString",
+      "NSEARCH06_EN": "esriFieldTypeString",
+      "NSEARCH06_TC": "esriFieldTypeString",
+      "NSEARCH07_EN": "esriFieldTypeString",
+      "NSEARCH07_TC": "esriFieldTypeString",
+      "NSEARCH08_EN": "esriFieldTypeString",
+      "NSEARCH08_TC": "esriFieldTypeString",
+      "NORTHING": "esriFieldTypeDouble",
+      "EASTING": "esriFieldTypeDouble",
+      "LATITUDE": "esriFieldTypeDouble",
+      "LONGITUDE": "esriFieldTypeDouble",
+      "LASTUPDATE": "esriFieldTypeDate"
+    },
+    "geometry": "esriGeometryPoint"
+  },
+  "31160": {
+    "label": "RoadCentreLine",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "ENGLISHSTREETNAME",
+      "tc": "CHINESESTREETNAME"
+    },
+    "search": [
+      "STREETTYPE",
+      "ENGLISHSTREETNAME",
+      "CHINESESTREETNAME"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "STREETCENTRELINEID": "esriFieldTypeInteger",
+      "STREETCODE": "esriFieldTypeInteger",
+      "STREETTYPE": "esriFieldTypeString",
+      "ENGLISHSTREETNAME": "esriFieldTypeString",
+      "CHINESESTREETNAME": "esriFieldTypeString",
+      "LASTUPDATEDATE": "esriFieldTypeDate",
+      "Shape__Length": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolyline"
+  },
+  "31200": {
+    "label": "ShortTermTenancy",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "STTNo",
+      "tc": "STTNo"
+    },
+    "search": [
+      "STTNo",
+      "DCDistrict",
+      "UserEN",
+      "UserTC",
+      "GrantType",
+      "TermEN",
+      "TermTC",
+      "LBSInfo",
+      "RentEN",
+      "RentTC"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "Shape__Length": "esriFieldTypeDouble",
+      "Shape__Area": "esriFieldTypeDouble",
+      "STTNo": "esriFieldTypeString",
+      "DCDistrict": "esriFieldTypeString",
+      "Area": "esriFieldTypeDouble",
+      "UserEN": "esriFieldTypeString",
+      "UserTC": "esriFieldTypeString",
+      "GrantType": "esriFieldTypeString",
+      "CommencementDate": "esriFieldTypeDate",
+      "TermEN": "esriFieldTypeString",
+      "TermTC": "esriFieldTypeString",
+      "LBSInfo": "esriFieldTypeString",
+      "RentEN": "esriFieldTypeString",
+      "RentTC": "esriFieldTypeString"
+    },
+    "geometry": "esriGeometryPolygon"
+  }
+}
