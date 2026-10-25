@@ -33,7 +33,7 @@ NMEA returns a bounded live snapshot of 1–3 complete GGA messages, at most 64 
 
 The RINEX tool supports actual documented hourly RINEX2 observation files with 1s/5s intervals. It bounds download to 2 MB and expanded gzip to 16 MB, validates the CompactRINEX header and station, preserves header lines and exposes SHA256 and original file URL. Hatanaka observations are not decoded; use RNXCMP for restoration. Missing dates/files return the exact provider HTTP error. The live sample was `2026/298/hkcl/5s/hkcl298a.26d.gz`, 217,359 compressed / 632,046 expanded bytes. The directory did not publish a 30s child for that date; that HTTP 404 path was not retried and is not exposed as a supported interval. Scheduled checks use two days ago in UTC.
 
-## Final validation
+## Original validation at `53b6c9a`
 
 - Focused: 77 passed across three files (`focused-confirmed.log`).
 - Full suite: 4,644 passed; 46 pre-existing skips; 102 files passed (`full-confirmed.log`). No new skips.
@@ -51,3 +51,14 @@ Postman CLI 1.75.0 is signed out, so provider-owned mock search was unavailable;
 The full ten-ID task remains incomplete. Eight IDs have working bounded tools, validated inputs, source-aware languages, caching and actionable errors; two are explicitly excluded. Tests include provider-derived fixtures, MCP route/discovery, stable registration, malformed/error/empty behavior, geometry/CRS bounds, checksums and gzip parsing. No UI was needed. AGENTS.md, installed Next route documentation, Postman API Engineer/Discovery/Simulation/Mocking and the catalogue workflow were read.
 
 Parent must independently verify each retained ID and the exact final local commit/diff/history. PUBLISHABLE_SUBSET: UNVERIFIED pending that verification. No automatic retry of excluded APIs, no push/PR/merge, and no manual review/done/complete transition.
+
+
+## Authorized CI repair — cycle 3/3
+
+Parent independently verified the original eight-ID subset at `53b6c9aefd8d6a80e138050f5d54829169b8d2a1` and published PR80. GitHub Actions run `40230325293` then failed typecheck at `handlers.ts(24,41)`: `string | NonSharedBuffer` was not assignable to `Uint8Array<ArrayBufferLike>`. The old local dependency symlink resolved `@types/node` 20.19.43; frozen `bun.lock` and CI installed 26.6.5, whose Socket data event includes string chunks. This was reproduced exactly with a frozen install before the fix. CI used Bun 1.4.4; local repair checks use Bun 1.4.0 / Node 26.9.0, locked `@types/node` 26.6.5, TypeScript 5.9.3 and Next 16.4.3.
+
+Only the owned worktree's `node_modules` symlink was removed and replaced with `bun install --frozen-lockfile`. Shared root dependency hash and the lockfile hash are unchanged (`cycle3/dependency-before.json`, `dependency-after.json`). The socket listener now converts a declared string chunk to a UTF-8 Buffer while passing raw Buffer chunks through unchanged. It still never calls `setEncoding`; all existing protocol checks, byte/sample/time limits and error behavior remain. Four focused handler tests exercise fragmented buffer-only, mixed/string delivery and corrupt-checksum rejection, including connection/request and socket cleanup assertions. No unrelated review note was changed.
+
+Locked-dependency revalidation passed: codegen and freshness (91 files), typecheck, lint, translations (836 strings), 81 focused tests across four files, 4,648 full-suite tests across 103 files plus 46 existing skips, production Webpack build with isolated SQLite, and all 118 real HTTP/TCP simulation assertions. The frozen simulation log again records 104 requests, including twelve injected HTTP failures, with all retained tools served. Initial build font fetch was blocked by sandbox DNS; approved network access resolved that environment prerequisite. No new upstream live calls were made: original fresh live evidence and the parent's successful GitHub live-check workflow apply to the earlier head, not fresh live verification of this follow-up.
+
+Evidence is `/private/tmp/batch086-evidence/cycle3/`; the cumulative ledger is `/private/tmp/batch086-evidence/repair-ledger.md`. The budget is now exhausted at **3/3**. The original exclusions and complete acceptance contract remain unchanged. This follow-up is a local commit only; no push or PR mutation. Parent must obtain fresh independent per-ID/subset/every-outgoing-commit verification at the new exact head before publishing. PR80 remains open at the previous head with auto-merge configured; no new remote CI result is claimed. The external Vercel failure is outside this repair's scope; no cause is asserted.

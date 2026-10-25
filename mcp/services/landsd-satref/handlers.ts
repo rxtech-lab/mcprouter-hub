@@ -21,7 +21,7 @@ function stream(): ToolHandler {
       socket.on("connect", () => socket.write(`GET ${base.pathname.replace(/\/$/, "")}/${mount} HTTP/1.0\r\nHost: ${base.host}\r\nUser-Agent: NTRIP mcprouter/1.0\r\nAccept: */*\r\nConnection: close\r\n${Object.entries(tool.spec.headers ?? {}).map(([k, v]) => `${k}: ${v}\r\n`).join("")}\r\n`));
       socket.on("data", (chunk) => {
         try {
-          bytes = Buffer.concat([bytes, chunk]);
+          bytes = Buffer.concat([bytes, typeof chunk === "string" ? Buffer.from(chunk, "utf8") : chunk]);
           if (bytes.length > 65536) throw new UpstreamError("upstream_parse", "SatRef sample exceeds 64 KB; request fewer frames.");
           const end = bytes.indexOf("\r\n\r\n");
           if (end < 0) { if (bytes.length > 8192) throw new UpstreamError("upstream_parse", "Malformed NTRIP response headers."); return; }

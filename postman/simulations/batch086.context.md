@@ -10,5 +10,7 @@ Exercise actual Batch086 MCP runtime over real HTTP/TCP against source-derived p
 ## Observations
 2026-10-26: retained eight-ID run passed 118 asserted checks, including real NMEA transport through the MCP route. All twelve retained tools served requests through the single development member; no member was silent. Frozen log `/private/tmp/batch086-evidence/simulation-final.ndjson` records 104 request events (92 served, 12 injected failures). Separate fresh live execution passed 17 checks. Initial raw RTCM and old-map download failures are excluded, with no retry and no retained mock paths.
 
+2026-10-26 cycle3: after a frozen dependency install (types/node26.6.5), the socket chunk compatibility repair passed the same 118 assertions. All twelve retained tools again served the single member; no member was silent. Frozen log `/private/tmp/batch086-evidence/cycle3/simulation.ndjson` has 104 request events (92 served, 12 injected failures), stopped with SIGINT. No live upstream calls were repeated in this repair.
+
 ## Limits
 Snapshots sample one selected station; other published mountpoints are allowlisted from provider documentation, not individually live-tested. RINEX reader supports hourly RINEX2 1s/5s headers; Hatanaka observations are not decoded. Large map downloads may exceed the 64 MB bound and return an explicit error.
