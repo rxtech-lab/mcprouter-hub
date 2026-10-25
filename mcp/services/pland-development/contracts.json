@@ -1,0 +1,391 @@
+{
+  "3361-1": {
+    "label": "TPIS_ADM.OD_RA_PLAN_CSDI",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "RA_ENG",
+      "tc": "RA_CHT",
+      "sc": "RA_CHS"
+    },
+    "search": [
+      "SECT_NO",
+      "GEOJSON_LINK",
+      "GML_LINK",
+      "SHP_LINK",
+      "RA_PLAN_NO",
+      "RA_ENG",
+      "RA_CHT",
+      "RA_CHS",
+      "OZP_SCHM",
+      "SUB_AREA"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "SECT_NO": "esriFieldTypeString",
+      "PLAN_SCALE": "esriFieldTypeInteger",
+      "GEOJSON_LINK": "esriFieldTypeString",
+      "GML_LINK": "esriFieldTypeString",
+      "SHP_LINK": "esriFieldTypeString",
+      "RA_PLAN_NO": "esriFieldTypeString",
+      "RA_ENG": "esriFieldTypeString",
+      "RA_CHT": "esriFieldTypeString",
+      "RA_CHS": "esriFieldTypeString",
+      "GAZ_DATE": "esriFieldTypeDate",
+      "OZP_SCHM": "esriFieldTypeString",
+      "SUB_AREA": "esriFieldTypeString",
+      "Shape__Area": "esriFieldTypeDouble",
+      "Shape__Length": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "3362": {
+    "label": "Enf_Pros_5yrs_2021to2025",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "EN_SCH2_USE",
+      "tc": "EN_SCH2_USEC"
+    },
+    "search": [
+      "E_CASE_NO",
+      "PLAN_NO",
+      "EN_SCH2_USE",
+      "EN_SCH2_USEC",
+      "RN_SCH2_USE",
+      "RN_SCH2_USEC",
+      "DECISION"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "E_CASE_NO": "esriFieldTypeString",
+      "PLAN_NO": "esriFieldTypeString",
+      "EN_NDATE": "esriFieldTypeDate",
+      "EN_NEXPIRY": "esriFieldTypeDate",
+      "EN_SCH2_USE": "esriFieldTypeString",
+      "EN_SCH2_USEC": "esriFieldTypeString",
+      "CNEN_NDATE": "esriFieldTypeDate",
+      "RN_NDATE": "esriFieldTypeDate",
+      "RN_NEXPIRY": "esriFieldTypeDate",
+      "RN_SCH2_USE": "esriFieldTypeString",
+      "RN_SCH2_USEC": "esriFieldTypeString",
+      "CNRN_NDATE": "esriFieldTypeDate",
+      "CANN_NDATE": "esriFieldTypeDate",
+      "SENT_DATE": "esriFieldTypeDate",
+      "DECISION": "esriFieldTypeString",
+      "GRTOTAL": "esriFieldTypeInteger"
+    },
+    "geometry": "esriGeometryPoint"
+  },
+  "3366": {
+    "label": "Distribution_of_Brownfield_Sites",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "OBJECTID"
+    },
+    "search": [],
+    "fields": {
+      "SUM_Area_h": "esriFieldTypeDouble",
+      "OBJECTID": "esriFieldTypeOID",
+      "Shape__Length": "esriFieldTypeDouble",
+      "Shape__Area": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "3369": {
+    "label": "SVP",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "DESC_ENG",
+      "tc": "DESC_TC",
+      "sc": "DESC_SC"
+    },
+    "search": [
+      "VPID",
+      "DESC_ENG",
+      "DESC_TC",
+      "DESC_SC",
+      "LP_ENG",
+      "LP_TC",
+      "LP_SC",
+      "MAP_ENG",
+      "MAP_TC",
+      "MAP_SC",
+      "ORTHO_ENG",
+      "ORTHO_TC",
+      "ORTHO_SC",
+      "PAN_E_TC_1",
+      "PAN_E_SC_1",
+      "PAN_E_TC_2",
+      "PAN_E_SC_2"
+    ],
+    "fields": {
+      "VPID": "esriFieldTypeString",
+      "DESC_ENG": "esriFieldTypeString",
+      "DESC_TC": "esriFieldTypeString",
+      "DESC_SC": "esriFieldTypeString",
+      "X": "esriFieldTypeInteger",
+      "Y": "esriFieldTypeInteger",
+      "Z": "esriFieldTypeDouble",
+      "ORIENT_DEG": "esriFieldTypeInteger",
+      "LP_ENG": "esriFieldTypeString",
+      "LP_TC": "esriFieldTypeString",
+      "LP_SC": "esriFieldTypeString",
+      "MAP_ENG": "esriFieldTypeString",
+      "MAP_TC": "esriFieldTypeString",
+      "MAP_SC": "esriFieldTypeString",
+      "ORTHO_ENG": "esriFieldTypeString",
+      "ORTHO_TC": "esriFieldTypeString",
+      "ORTHO_SC": "esriFieldTypeString",
+      "PAN_E_TC_1": "esriFieldTypeString",
+      "PAN_E_SC_1": "esriFieldTypeString",
+      "PAN_E_TC_2": "esriFieldTypeString",
+      "PAN_E_SC_2": "esriFieldTypeString",
+      "OBJECTID": "esriFieldTypeOID"
+    },
+    "geometry": "esriGeometryMultipoint"
+  },
+  "3616-0": {
+    "label": "TPIS_ADM.OD_OZP_PLAN_CSDI",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "NAME_ENG",
+      "tc": "NAME_CHT",
+      "sc": "NAME_CHS"
+    },
+    "search": [
+      "PLAN_NO",
+      "NAME_ENG",
+      "NAME_CHT",
+      "SECT_NO",
+      "GEOJSON_LINK",
+      "GML_LINK",
+      "SHP_LINK",
+      "NAME_CHS"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "PLAN_NO": "esriFieldTypeString",
+      "NAME_ENG": "esriFieldTypeString",
+      "NAME_CHT": "esriFieldTypeString",
+      "PUB_DATE": "esriFieldTypeDate",
+      "APRV_DATE": "esriFieldTypeDate",
+      "SECT_NO": "esriFieldTypeString",
+      "PLAN_SCALE": "esriFieldTypeInteger",
+      "GEOJSON_LINK": "esriFieldTypeString",
+      "GML_LINK": "esriFieldTypeString",
+      "SHP_LINK": "esriFieldTypeString",
+      "NAME_CHS": "esriFieldTypeString",
+      "Shape__Area": "esriFieldTypeDouble",
+      "Shape__Length": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "3617": {
+    "label": "PG12C",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "NAME_ENG",
+      "tc": "NAME_CHI"
+    },
+    "search": [
+      "NAME_ENG",
+      "NAME_CHI"
+    ],
+    "fields": {
+      "NAME_ENG": "esriFieldTypeString",
+      "NAME_CHI": "esriFieldTypeString",
+      "Shape_Leng": "esriFieldTypeDouble",
+      "OBJECTID": "esriFieldTypeOID",
+      "Shape__Length": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolyline"
+  },
+  "3618": {
+    "label": "PG13G",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "LABEL_ENG",
+      "tc": "LABEL_CHI"
+    },
+    "search": [
+      "CATEGORY",
+      "LABEL_ENG",
+      "LABEL_CHI",
+      "PLAN_NO"
+    ],
+    "fields": {
+      "CATEGORY": "esriFieldTypeString",
+      "LABEL_ENG": "esriFieldTypeString",
+      "LABEL_CHI": "esriFieldTypeString",
+      "PLAN_NO": "esriFieldTypeString",
+      "Shape_Leng": "esriFieldTypeDouble",
+      "OBJECTID": "esriFieldTypeOID",
+      "Shape__Length": "esriFieldTypeDouble",
+      "Shape__Area": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "3621-0": {
+    "label": "AMEND_PAST",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "CASE_NO"
+    },
+    "search": [
+      "CASE_NO",
+      "DPO",
+      "SCHM_CODE",
+      "OZP_PLN_NO",
+      "STATUS",
+      "PROP_AMEND",
+      "LOCAT_ADDR",
+      "S12A_DECI",
+      "S12A_D_DATE"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "CASE_NO": "esriFieldTypeString",
+      "FI_NO": "esriFieldTypeSmallInteger",
+      "DPO": "esriFieldTypeString",
+      "SCHM_CODE": "esriFieldTypeString",
+      "OZP_PLN_NO": "esriFieldTypeString",
+      "STATUS": "esriFieldTypeString",
+      "PROP_AMEND": "esriFieldTypeString",
+      "LOCAT_ADDR": "esriFieldTypeString",
+      "S12A_DECI": "esriFieldTypeString",
+      "S12A_D_DATE": "esriFieldTypeString",
+      "LST_UPLOAD": "esriFieldTypeDate",
+      "Shape__Area": "esriFieldTypeDouble",
+      "Shape__Length": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "3621-1": {
+    "label": "AMEND_CRT",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "CASE_NO"
+    },
+    "search": [
+      "CASE_NO",
+      "DPO",
+      "SCHM_CODE",
+      "OZP_PLN_NO",
+      "STATUS",
+      "PROP_AMEND",
+      "LOCAT_ADDR",
+      "S12A_DECI",
+      "S12A_D_DATE"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "CASE_NO": "esriFieldTypeString",
+      "FI_NO": "esriFieldTypeSmallInteger",
+      "DPO": "esriFieldTypeString",
+      "SCHM_CODE": "esriFieldTypeString",
+      "OZP_PLN_NO": "esriFieldTypeString",
+      "STATUS": "esriFieldTypeString",
+      "PROP_AMEND": "esriFieldTypeString",
+      "LOCAT_ADDR": "esriFieldTypeString",
+      "S12A_DECI": "esriFieldTypeString",
+      "S12A_D_DATE": "esriFieldTypeString",
+      "LST_UPLOAD": "esriFieldTypeDate",
+      "Shape__Area": "esriFieldTypeDouble",
+      "Shape__Length": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "3621-2": {
+    "label": "APP_PAST",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "CASE_NO"
+    },
+    "search": [
+      "CASE_NO",
+      "TYPE_CODE",
+      "DPO",
+      "SCHM_CODE",
+      "OZP_PLN_NO",
+      "STATUS",
+      "APLY_USE",
+      "LOCAT_ADDR",
+      "APPEAL_NO",
+      "S16_DECI",
+      "S16_D_DATE",
+      "S17_DECI",
+      "S17_D_DATE",
+      "APL_DECI",
+      "APL_D_DATE"
+    ],
+    "fields": {
+      "OBJECTID": "esriFieldTypeOID",
+      "CASE_NO": "esriFieldTypeString",
+      "TYPE_CODE": "esriFieldTypeString",
+      "FI_NO": "esriFieldTypeSmallInteger",
+      "DPO": "esriFieldTypeString",
+      "SCHM_CODE": "esriFieldTypeString",
+      "OZP_PLN_NO": "esriFieldTypeString",
+      "STATUS": "esriFieldTypeString",
+      "APLY_USE": "esriFieldTypeString",
+      "LOCAT_ADDR": "esriFieldTypeString",
+      "APPEAL_NO": "esriFieldTypeString",
+      "S16_DECI": "esriFieldTypeString",
+      "S16_D_DATE": "esriFieldTypeString",
+      "S17_DECI": "esriFieldTypeString",
+      "S17_D_DATE": "esriFieldTypeString",
+      "APL_DECI": "esriFieldTypeString",
+      "APL_D_DATE": "esriFieldTypeString",
+      "LST_UPLOAD": "esriFieldTypeDate",
+      "Shape__Area": "esriFieldTypeDouble",
+      "Shape__Length": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  },
+  "3621-3": {
+    "label": "APP_CRT",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "CASE_NO"
+    },
+    "search": [
+      "OZP_PLN_NO",
+      "CASE_NO",
+      "TYPE_CODE",
+      "DPO",
+      "SCHM_CODE",
+      "STATUS",
+      "APLY_USE",
+      "LOCAT_ADDR",
+      "APPEAL_NO",
+      "S16_DECI",
+      "S16_D_DATE",
+      "S17_DECI",
+      "S17_D_DATE",
+      "APL_DECI",
+      "APL_D_DATE"
+    ],
+    "fields": {
+      "OZP_PLN_NO": "esriFieldTypeString",
+      "OBJECTID": "esriFieldTypeOID",
+      "CASE_NO": "esriFieldTypeString",
+      "TYPE_CODE": "esriFieldTypeString",
+      "FI_NO": "esriFieldTypeSmallInteger",
+      "DPO": "esriFieldTypeString",
+      "SCHM_CODE": "esriFieldTypeString",
+      "STATUS": "esriFieldTypeString",
+      "APLY_USE": "esriFieldTypeString",
+      "LOCAT_ADDR": "esriFieldTypeString",
+      "APPEAL_NO": "esriFieldTypeString",
+      "S16_DECI": "esriFieldTypeString",
+      "S16_D_DATE": "esriFieldTypeString",
+      "S17_DECI": "esriFieldTypeString",
+      "S17_D_DATE": "esriFieldTypeString",
+      "APL_DECI": "esriFieldTypeString",
+      "APL_D_DATE": "esriFieldTypeString",
+      "LST_UPLOAD": "esriFieldTypeDate",
+      "Shape__Area": "esriFieldTypeDouble",
+      "Shape__Length": "esriFieldTypeDouble"
+    },
+    "geometry": "esriGeometryPolygon"
+  }
+}

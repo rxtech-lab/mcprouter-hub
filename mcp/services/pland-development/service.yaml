@@ -1,0 +1,1005 @@
+{
+  "id": "pland-development",
+  "title": "Planning Data and Development Guidelines",
+  "description": "Official regulated areas, statutory plans, planning applications, enforcement, land-utilization raster cells, brownfield sites and strategic viewpoints.",
+  "apis": [
+    "API-3361",
+    "API-3362",
+    "API-3366",
+    "API-3369",
+    "API-3616",
+    "API-3617",
+    "API-3618",
+    "API-3621",
+    "API-3363"
+  ],
+  "datasets": [
+    "hk-pland-pland1-digital-planning-data-of-regulated-areas",
+    "hk-pland-pland1-enforcement-prosecution-cases",
+    "hk-pland-pland1-profile-and-operations-of-brownfield-sites-in-nt",
+    "hk-pland-pland1-strategic-viewing-points",
+    "tpd-tpb1-digital-planning-data-of-statutory-plans",
+    "tpd-tpb1-graphic-data-of-town-planning-board-planning-guidelines-no-12c",
+    "tpd-tpb1-graphic-data-of-town-planning-board-planning-guidelines-no-13g",
+    "tpd-tpb1-planning-applications-under-12a-16-17-17b",
+    "hk-pland-pland1-land-utilization-in-hong-kong-raster-grid"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "pland_regulated_areas",
+      "title": "TPIS_ADM.OD_RA_PLAN_CSDI",
+      "description": "TPIS_ADM.OD_RA_PLAN_CSDI: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://www.ozp.tpb.gov.hk",
+      "path": "/arcgis2/rest/services/DATA/RA_PLAN_CSDI/FeatureServer/1/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "SECT_NO",
+            "GEOJSON_LINK",
+            "GML_LINK",
+            "SHP_LINK",
+            "RA_PLAN_NO",
+            "RA_ENG",
+            "RA_CHT",
+            "RA_CHS",
+            "OZP_SCHM",
+            "SUB_AREA"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request33611",
+        "response": "response33611"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_completed_enforcement_cases",
+      "title": "Enf_Pros_5yrs_2021to2025",
+      "description": "Enf_Pros_5yrs_2021to2025: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated. Completed enforcement/prosecution cases; currently 2021\u20132025 rollover, not pending cases.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/pland_rcd_1706687725748_46633/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "E_CASE_NO",
+            "PLAN_NO",
+            "EN_SCH2_USE",
+            "EN_SCH2_USEC",
+            "RN_SCH2_USE",
+            "RN_SCH2_USEC",
+            "DECISION"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3362",
+        "response": "response3362"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_brownfield_sites",
+      "title": "Distribution_of_Brownfield_Sites",
+      "description": "Distribution_of_Brownfield_Sites: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated. 2019 study distribution, not a current land-use survey. SUM_Area_h is the published area field; name is the numeric OBJECTID.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/pland_rcd_1629267205223_96851/FeatureServer/0/query",
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3366",
+        "response": "response3366"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_strategic_viewpoints",
+      "title": "SVP",
+      "description": "SVP: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/pland_rcd_1634282175930_80034/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "VPID",
+            "DESC_ENG",
+            "DESC_TC",
+            "DESC_SC",
+            "LP_ENG",
+            "LP_TC",
+            "LP_SC",
+            "MAP_ENG",
+            "MAP_TC",
+            "MAP_SC",
+            "ORTHO_ENG",
+            "ORTHO_TC",
+            "ORTHO_SC",
+            "PAN_E_TC_1",
+            "PAN_E_SC_1",
+            "PAN_E_TC_2",
+            "PAN_E_SC_2"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3369",
+        "response": "response3369"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_statutory_plans",
+      "title": "TPIS_ADM.OD_OZP_PLAN_CSDI",
+      "description": "TPIS_ADM.OD_OZP_PLAN_CSDI: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://www.ozp.tpb.gov.hk",
+      "path": "/arcgis2/rest/services/DATA/OZP_PLAN_CSDI/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "PLAN_NO",
+            "NAME_ENG",
+            "NAME_CHT",
+            "SECT_NO",
+            "GEOJSON_LINK",
+            "GML_LINK",
+            "SHP_LINK",
+            "NAME_CHS"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request36160",
+        "response": "response36160"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_deep_bay_guideline_12c",
+      "title": "PG12C",
+      "description": "PG12C: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/pland_rcd_1634271289661_14537/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "NAME_ENG",
+            "NAME_CHI"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3617",
+        "response": "response3617"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_storage_guideline_13g",
+      "title": "PG13G",
+      "description": "PG13G: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/pland_rcd_1634271138488_52424/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "CATEGORY",
+            "LABEL_ENG",
+            "LABEL_CHI",
+            "PLAN_NO"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3618",
+        "response": "response3618"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_planning_applications_amend_past",
+      "title": "Past section 12A amendment applications",
+      "description": "Past section 12A amendment applications. AMEND_PAST: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://www.ozp.tpb.gov.hk",
+      "path": "/arcgis2/rest/services/DATA/APP_AMEND_CSDI/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "CASE_NO",
+            "DPO",
+            "SCHM_CODE",
+            "OZP_PLN_NO",
+            "STATUS",
+            "PROP_AMEND",
+            "LOCAT_ADDR",
+            "S12A_DECI",
+            "S12A_D_DATE"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request36210",
+        "response": "response36210"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_planning_applications_amend_current",
+      "title": "Current section 12A amendment applications",
+      "description": "Current section 12A amendment applications. AMEND_CRT: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://www.ozp.tpb.gov.hk",
+      "path": "/arcgis2/rest/services/DATA/APP_AMEND_CSDI/FeatureServer/1/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "CASE_NO",
+            "DPO",
+            "SCHM_CODE",
+            "OZP_PLN_NO",
+            "STATUS",
+            "PROP_AMEND",
+            "LOCAT_ADDR",
+            "S12A_DECI",
+            "S12A_D_DATE"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request36211",
+        "response": "response36211"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_planning_applications_application_past",
+      "title": "Past sections 16/17 applications and section 17B appeals",
+      "description": "Past sections 16/17 applications and section 17B appeals. APP_PAST: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://www.ozp.tpb.gov.hk",
+      "path": "/arcgis2/rest/services/DATA/APP_AMEND_CSDI/FeatureServer/2/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "CASE_NO",
+            "TYPE_CODE",
+            "DPO",
+            "SCHM_CODE",
+            "OZP_PLN_NO",
+            "STATUS",
+            "APLY_USE",
+            "LOCAT_ADDR",
+            "APPEAL_NO",
+            "S16_DECI",
+            "S16_D_DATE",
+            "S17_DECI",
+            "S17_D_DATE",
+            "APL_DECI",
+            "APL_D_DATE"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request36212",
+        "response": "response36212"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_planning_applications_application_current",
+      "title": "Current sections 16/17 applications and section 17B appeals",
+      "description": "Current sections 16/17 applications and section 17B appeals. APP_CRT: official Planning Department/Town Planning Board records. Stable OBJECTID pagination, at most 100 records / 100 KB. Geometry over 20 KB explicitly omitted with source query URL available. Original nulls, units, dates (epoch milliseconds) and download links preserved. lang selects a published name alias only; source fields remain untranslated.",
+      "baseUrl": "https://www.ozp.tpb.gov.hk",
+      "path": "/arcgis2/rest/services/DATA/APP_AMEND_CSDI/FeatureServer/3/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "OZP_PLN_NO",
+            "CASE_NO",
+            "TYPE_CODE",
+            "DPO",
+            "SCHM_CODE",
+            "STATUS",
+            "APLY_USE",
+            "LOCAT_ADDR",
+            "APPEAL_NO",
+            "S16_DECI",
+            "S16_D_DATE",
+            "S17_DECI",
+            "S17_D_DATE",
+            "APL_DECI",
+            "APL_D_DATE"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request36213",
+        "response": "response36213"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "pland_land_use_cell",
+      "title": "Land utilization raster cell",
+      "description": "Read the published land-utilization raster code at a WGS84 coordinate for 2018\u20132025. Broad-brush historical land-use data, not parcel-level legal zoning. Raw provider pixel codes and attributes are preserved; no invented class translation. Outside raster coverage returns an empty result. Uses the official raster MapServer identify adapter, not a fabricated feature API.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "handler": "raster",
+      "timeoutMs": 30000,
+      "input": {
+        "longitude": {
+          "type": "number",
+          "minimum": 113.7,
+          "maximum": 114.5,
+          "required": true
+        },
+        "latitude": {
+          "type": "number",
+          "minimum": 22.1,
+          "maximum": 22.6,
+          "required": true
+        },
+        "year": {
+          "type": "integer",
+          "enum": [
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+          ],
+          "default": 2025
+        }
+      }
+    }
+  ]
+}

@@ -52,6 +52,19 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  pland_regulated_areas: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_completed_enforcement_cases: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_brownfield_sites: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_strategic_viewpoints: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_statutory_plans: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_deep_bay_guideline_12c: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_storage_guideline_13g: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_planning_applications_amend_past: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_planning_applications_amend_current: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_planning_applications_application_past: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_planning_applications_application_current: { input: { limit: 1 }, check: nonEmptyPage },
+  pland_land_use_cell: { input: { longitude: 114.17, latitude: 22.3, year: 2025 }, check: nonEmptyPage },
+
   ...Object.fromEntries(["old_survey_sheets_1", "old_survey_sheets_2", "old_survey_sheets_3", "old_survey_sheets_4", "old_survey_sheets_5", "private_treaty_grants", "public_facilities", "public_open_space", "road_centrelines", "short_term_tenancies"].map((name) => [`landsd_${name}`, { input: { limit: 1 }, check: nonEmptyPage }])),
   landsd_satref_nmea_snapshot: { input: {}, check: nonEmptyPage },
   landsd_satref_rinex_header: { input: async () => { const date = new Date(Date.now() - 2 * 86400000); const year = date.getUTCFullYear(); return { year, day: Math.floor((Date.UTC(year, date.getUTCMonth(), date.getUTCDate()) - Date.UTC(year, 0, 0)) / 86400000) }; } },
