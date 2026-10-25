@@ -52,6 +52,9 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  ...Object.fromEntries(["old_survey_sheets_1", "old_survey_sheets_2", "old_survey_sheets_3", "old_survey_sheets_4", "old_survey_sheets_5", "private_treaty_grants", "public_facilities", "public_open_space", "road_centrelines", "short_term_tenancies"].map((name) => [`landsd_${name}`, { input: { limit: 1 }, check: nonEmptyPage }])),
+  landsd_satref_nmea_snapshot: { input: {}, check: nonEmptyPage },
+  landsd_satref_rinex_header: { input: async () => { const date = new Date(Date.now() - 2 * 86400000); const year = date.getUTCFullYear(); return { year, day: Math.floor((Date.UTC(year, date.getUTCMonth(), date.getUTCDate()) - Date.UTC(year, 0, 0)) / 86400000) }; } },
   // Batch085 official CSDI records and the documented LandsD PNG tile.
   landsd_land_acquisition_notices: { input: { limit: 1 }, check: nonEmptyPage },
   landsd_executed_land_exchanges: { input: { limit: 1 }, check: nonEmptyPage },

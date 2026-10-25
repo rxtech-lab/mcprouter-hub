@@ -1,0 +1,5 @@
+simulation: batch086
+routing: path
+mocks:
+  - routeKey: development
+    path: ../mocks/batch086/config.yaml

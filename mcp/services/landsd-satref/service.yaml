@@ -1,0 +1,102 @@
+{
+  "id": "landsd-satref",
+  "title": "LandsD SatRef Raw GNSS Data",
+  "description": "Bounded public NMEA NTRIP snapshots and HTTPS CompactRINEX file headers.",
+  "apis": [
+    "API-3117",
+    "API-3119"
+  ],
+  "datasets": [
+    "hk-landsd-openmap-satref-raw-data-nmea",
+    "hk-landsd-openmap-satref-raw-rinex"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "landsd_satref_nmea_snapshot",
+      "title": "SatRef NMEA live snapshot",
+      "description": "Read live NMEA GGA sentences with checksum, UTC, coordinates, quality, satellite count and source units. Public NTRIP on TCP port 2101, no credentials. Bounded snapshot of 1\u20133 samples / 64 KB / 35 seconds; cache 10 seconds. Not a continuous subscription. No localized raw-data variants.",
+      "baseUrl": "http://ntrip.geodetic.gov.hk:2101",
+      "handler": "nmea",
+      "input": {
+        "station": {
+          "type": "string",
+          "enum": [
+            "HKFN",
+            "HKQT",
+            "TCHK"
+          ],
+          "default": "HKFN"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3,
+          "default": 1
+        }
+      },
+      "cacheTtl": 10,
+      "timeoutMs": 35000
+    },
+    {
+      "name": "landsd_satref_rinex_header",
+      "title": "SatRef raw CompactRINEX download and header",
+      "description": "Download an actual hourly RINEX 2 observation file from the official HTTPS host. Inputs select UTC year/day/hour, station and 1s or 5s epoch interval. Validate gzip (2 MB compressed / 16 MB expanded), CompactRINEX header and station; return structured header and original download link. Observations remain Hatanaka compressed and require RNXCMP restoration. Missing files explicitly return HTTP status; no invented data. Provider may not retain every date/interval. No language variants.",
+      "handler": "rinex",
+      "timeoutMs": 15000,
+      "input": {
+        "station": {
+          "type": "string",
+          "enum": [
+            "HKCL",
+            "HKLM",
+            "HKTK",
+            "HKKS",
+            "HKKT",
+            "HKLT",
+            "HKMW",
+            "HKNP",
+            "HKOH",
+            "HKPC",
+            "HKSC",
+            "HKSL",
+            "HKSS",
+            "HKST",
+            "HKWS",
+            "T430",
+            "HKFN",
+            "HKQT",
+            "TCHK"
+          ],
+          "default": "HKCL"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 2010,
+          "maximum": 2100,
+          "required": true
+        },
+        "day": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 366,
+          "required": true
+        },
+        "hour": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23,
+          "default": 0
+        },
+        "interval": {
+          "type": "integer",
+          "enum": [
+            1,
+            5
+          ],
+          "default": 5
+        }
+      }
+    }
+  ]
+}

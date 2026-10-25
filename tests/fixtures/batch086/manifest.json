@@ -1,0 +1,157 @@
+[
+  {
+    "api": "API-3103",
+    "dataset": "hk-landsd-openmap-old-survey-sheets",
+    "service": "landsd-development",
+    "tool": "landsd_old_survey_sheets_1",
+    "file": "31030",
+    "layer": "landsd_rcd_1631584892859_72892",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1631584892859_72892/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "56dc2b3b4ac439fed0eedaf5292afda1f5ad874c2ee4f3cb8798991d64973403",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3103",
+    "dataset": "hk-landsd-openmap-old-survey-sheets",
+    "service": "landsd-development",
+    "tool": "landsd_old_survey_sheets_2",
+    "file": "31031",
+    "layer": "landsd_rcd_1639990901210_47291",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1639990901210_47291/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "3e11c455cf61176929042832e0afae44eb31b5b11b5320a6b7db67f0e5737d8a",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3103",
+    "dataset": "hk-landsd-openmap-old-survey-sheets",
+    "service": "landsd-development",
+    "tool": "landsd_old_survey_sheets_3",
+    "file": "31032",
+    "layer": "landsd_rcd_1640047202071_61921",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1640047202071_61921/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "baf90800cf75728751bc1b394adf2a425c6f8479e414bb3ba378048daf68bc4b",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3103",
+    "dataset": "hk-landsd-openmap-old-survey-sheets",
+    "service": "landsd-development",
+    "tool": "landsd_old_survey_sheets_4",
+    "file": "31033",
+    "layer": "landsd_rcd_1640047456225_68329",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1640047456225_68329/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "2c6d87e5a9f1d6e6ffecb82d2914842c7b4cd9246a13798626ee5a239bd49b6c",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3103",
+    "dataset": "hk-landsd-openmap-old-survey-sheets",
+    "service": "landsd-development",
+    "tool": "landsd_old_survey_sheets_5",
+    "file": "31034",
+    "layer": "landsd_rcd_1671592436814_1059",
+    "names": {
+      "en": "SHEETNO"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1671592436814_1059/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "b42048eda3ed9ff9935c7da35480c4645c9900668856b9503f7d5d8941eceb60",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3105",
+    "dataset": "hk-landsd-openmap-private-treaty-grant-cases",
+    "service": "landsd-development",
+    "tool": "landsd_private_treaty_grants",
+    "file": "31050",
+    "layer": "landsd_rcd_1637225273612_90378",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637225273612_90378/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "bf7199d26a07bf81f66902c72a4fea8e128867fc3e9709d56194725d2b288744",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3106",
+    "dataset": "hk-landsd-openmap-public-facilities",
+    "service": "landsd-development",
+    "tool": "landsd_public_facilities",
+    "file": "31060",
+    "layer": "landsd_rcd_1637304790394_97921",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637304790394_97921/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "ad75db2276ac7894bea605b854fc689916f31e186a3b8c42e4e0f5883797a183",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3107",
+    "dataset": "hk-landsd-openmap-public-open-space",
+    "service": "landsd-development",
+    "tool": "landsd_public_open_space",
+    "file": "31070",
+    "layer": "landsd_rcd_1637304969323_68704",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637304969323_68704/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "6fc4c43b46fc47345a412ef4cd3a967ddd635b1212b4c5bdecb0bd1448a7670e",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3116",
+    "dataset": "hk-landsd-openmap-road-centreline",
+    "service": "landsd-development",
+    "tool": "landsd_road_centrelines",
+    "file": "31160",
+    "layer": "landsd_rcd_1637310758814_80061",
+    "names": {
+      "en": "ENGLISHSTREETNAME",
+      "tc": "CHINESESTREETNAME"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637310758814_80061/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "63effdc7eb64949392e72c0ac1250e9310e07d0c0351ba3f7a10dfc66d65192d",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3120",
+    "dataset": "hk-landsd-openmap-short-term-tenancy",
+    "service": "landsd-development",
+    "tool": "landsd_short_term_tenancies",
+    "file": "31200",
+    "layer": "landsd_rcd_1637217451459_59809",
+    "names": {
+      "en": "STTNo",
+      "tc": "STTNo"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637217451459_59809/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "c68f98060b3dcaab279164e8d6463cb9ef3c42d05d4f93177a916126cab2d8d9",
+    "capturedAt": "2026-10-26"
+  }
+]
