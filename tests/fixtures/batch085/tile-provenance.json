@@ -1,0 +1,10 @@
+{
+  "api": "API-3081",
+  "dataset": "hk-landsd-openmap-landsd-topo-map-api",
+  "source": "https://mapapi.geodata.gov.hk/gs/api/v1.0.0/xyz/basemap/HK80/11/287/385.png",
+  "documentation": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI",
+  "capturedAt": "2026-10-26",
+  "sha256": "48eb13d9573c08ea88a02129997de69b05d47e51c4ea3f4fefab2c647e60cf7d",
+  "bytes": 62796,
+  "format": "PNG"
+}
