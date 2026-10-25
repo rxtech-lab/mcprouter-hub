@@ -52,6 +52,24 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  // Batch085 official CSDI records and the documented LandsD PNG tile.
+  landsd_land_acquisition_notices: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_executed_land_exchanges: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_executed_lease_extensions: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_executed_lease_modifications: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_land_sale_records: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_industrial_2009_land_exchanges: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_industrial_2009_lease_modifications: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_industrial_2018_lease_modifications: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_industrial_2009_special_waivers: { input: { limit: 1 }, check: nonEmptyPage },
+  landsd_topographic_tile: {
+    input: { sr: "HK80", z: 11, x: 287, y: 385 },
+    check: (result) => {
+      const tile = result.data as { available?: boolean; width?: number; height?: number };
+      return tile.available === true && tile.width === 256 && tile.height === 256 ? null : "Expected a validated 256-pixel LandsD PNG tile";
+    },
+  },
+
   // Batch079: verified GPA and HAD feature layers; indoor archive remains blocked.
   gpa_domestic_properties_for_sale: { input: { limit: 1 }, check: nonEmptyPage },
   gpa_government_office_open_spaces: { input: { limit: 1 }, check: nonEmptyPage },

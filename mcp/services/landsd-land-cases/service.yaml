@@ -1,0 +1,895 @@
+{
+  "id": "landsd-land-cases",
+  "title": "LandsD Land Administration Cases",
+  "description": "Official Lands Department land case records and government acquisition notices through CSDI.",
+  "apis": [
+    "API-3085",
+    "API-3086",
+    "API-3087",
+    "API-3088",
+    "API-3089",
+    "API-3097",
+    "API-3098",
+    "API-3099",
+    "API-3100"
+  ],
+  "datasets": [
+    "hk-landsd-openmap-lao-land-acquisition",
+    "hk-landsd-openmap-lao-lec",
+    "hk-landsd-openmap-lao-lext",
+    "hk-landsd-openmap-lao-lmc",
+    "hk-landsd-openmap-lao-lsr",
+    "hk-landsd-openmap-lao-rcib-lec",
+    "hk-landsd-openmap-lao-rcib-lmc",
+    "hk-landsd-openmap-lao-rcib-lmc-2018",
+    "hk-landsd-openmap-lao-rcib-swc"
+  ],
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "landsd_land_acquisition_notices",
+      "title": "Government Notices and Plans Issued by Lands Department for Land Acquisition and Foreshore and Seabed Reclamation (Since 2 January 2009)",
+      "description": "Government Notices and Plans Issued by Lands Department for Land Acquisition and Foreshore and Seabed Reclamation (Since 2 January 2009). Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; this layer publishes a single mixed-language title, with no separate Chinese field. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1631605302496_6070/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "Publication_Date",
+            "Project_Title",
+            "Type_of_Government_Notice",
+            "Government_Notice",
+            "Related_Gazette_Plan__Note_",
+            "Type"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3085",
+        "response": "response3085"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_executed_land_exchanges",
+      "title": "Executed Land Exchange Cases (Available in GML)",
+      "description": "Executed Land Exchange Cases (Available in GML). Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; English and Traditional Chinese are available; Simplified Chinese is not published by this layer. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637224372675_83413/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "SEARCH02_EN",
+            "SEARCH02_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC",
+            "NSEARCH05_EN",
+            "NSEARCH05_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3086",
+        "response": "response3086"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_executed_lease_extensions",
+      "title": "Executed Lease Extension Cases (Available in GML)",
+      "description": "Executed Lease Extension Cases (Available in GML). Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; English and Traditional Chinese are available; Simplified Chinese is not published by this layer. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637224682055_15833/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3087",
+        "response": "response3087"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_executed_lease_modifications",
+      "title": "Executed Lease Modification Cases (Available in GML)",
+      "description": "Executed Lease Modification Cases (Available in GML). Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; English and Traditional Chinese are available; Simplified Chinese is not published by this layer. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637225104335_55505/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "SEARCH02_EN",
+            "SEARCH02_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3088",
+        "response": "response3088"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_land_sale_records",
+      "title": "Land Sale Records",
+      "description": "Land Sale Records. Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; English and Traditional Chinese are available; Simplified Chinese is not published by this layer. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1631600922343_18223/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "SEARCH02_EN",
+            "SEARCH02_TC",
+            "SEARCH03_EN",
+            "SEARCH03_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC",
+            "NSEARCH05_EN",
+            "NSEARCH05_TC",
+            "NSEARCH06_EN",
+            "NSEARCH06_TC",
+            "NSEARCH07_EN",
+            "NSEARCH07_TC",
+            "NSEARCH08_EN",
+            "NSEARCH08_TC",
+            "NSEARCH09_EN",
+            "NSEARCH09_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3089",
+        "response": "response3089"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_industrial_2009_land_exchanges",
+      "title": "Revitalisation of Industrial Buildings 2009 - Executed Land Exchange Cases (From 2014 onwards in GML format)",
+      "description": "Revitalisation of Industrial Buildings 2009 - Executed Land Exchange Cases (From 2014 onwards in GML format). Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; English and Traditional Chinese are available; Simplified Chinese is not published by this layer. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637307354337_52132/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "SEARCH02_EN",
+            "SEARCH02_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC",
+            "NSEARCH05_EN",
+            "NSEARCH05_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3097",
+        "response": "response3097"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_industrial_2009_lease_modifications",
+      "title": "Revitalisation of Industrial Buildings 2009 - Executed Lease Modification Cases (From 2011 onwards in GML format)",
+      "description": "Revitalisation of Industrial Buildings 2009 - Executed Lease Modification Cases (From 2011 onwards in GML format). Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; English and Traditional Chinese are available; Simplified Chinese is not published by this layer. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637307503370_15433/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "SEARCH02_EN",
+            "SEARCH02_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC",
+            "NSEARCH05_EN",
+            "NSEARCH05_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3098",
+        "response": "response3098"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_industrial_2018_lease_modifications",
+      "title": "Revitalisation of Industrial Buildings 2018 - Executed Lease Modification Cases (Available in GML)",
+      "description": "Revitalisation of Industrial Buildings 2018 - Executed Lease Modification Cases (Available in GML). Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; English and Traditional Chinese are available; Simplified Chinese is not published by this layer. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637309419658_86585/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "SEARCH02_EN",
+            "SEARCH02_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC",
+            "NSEARCH04_EN",
+            "NSEARCH04_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3099",
+        "response": "response3099"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "landsd_industrial_2009_special_waivers",
+      "title": "Revitalisation of Industrial Buildings 2009 - Executed Special Waiver Cases (From 2010 onwards in GML format)",
+      "description": "Revitalisation of Industrial Buildings 2009 - Executed Special Waiver Cases (From 2010 onwards in GML format). Official CSDI structured access to the catalogue GML dataset. All source fields, nulls, dates, links, units and original text are preserved. lang selects only the name alias; English and Traditional Chinese are available; Simplified Chinese is not published by this layer. At most 100 records and 100 KB per page. Geometry over 20 KB is explicitly omitted; use meta.source for the complete geometry. Continue with nextOffset and identical filters. Locations represent source case points, not lot boundaries (except acquisition polygons). Shape__Area/Shape__Length retain provider projected units. Historical cases are not current sale offers or legal title evidence.",
+      "baseUrl": "https://portal.csdi.gov.hk",
+      "path": "/server/rest/services/common/landsd_rcd_1637307618005_4554/FeatureServer/0/query",
+      "input": {
+        "search": {
+          "type": "string",
+          "pattern": "^.{1,100}$",
+          "in": "local",
+          "description": "Substring / SQL LIKE pattern (% and _ are wildcards)."
+        },
+        "searchField": {
+          "type": "string",
+          "enum": [
+            "DATASET_EN",
+            "DATASET_TC",
+            "NAME_EN",
+            "ADDRESS_EN",
+            "NAME_TC",
+            "ADDRESS_TC",
+            "SEARCH01_EN",
+            "SEARCH01_TC",
+            "SEARCH02_EN",
+            "SEARCH02_TC",
+            "NSEARCH01_EN",
+            "NSEARCH01_TC",
+            "NSEARCH02_EN",
+            "NSEARCH02_TC",
+            "NSEARCH03_EN",
+            "NSEARCH03_TC"
+          ],
+          "in": "local",
+          "description": "Published field; default is localized name."
+        },
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": true,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "transform": {
+        "request": "request3100",
+        "response": "response3100"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    }
+  ]
+}

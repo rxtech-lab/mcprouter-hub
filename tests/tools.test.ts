@@ -1,4 +1,4 @@
-import { cases079 } from "./batch079-cases";
+import { cases079 } from "./batch079-cases"; import { cases085 } from "./batch085-cases";
 import { commerceCases } from "./commerce-cases";
 import { cases053 } from "./batch053-cases";
 import { cases051 } from "./batch051-cases";
@@ -188,7 +188,7 @@ const sensorOccupancy = [
 ].join("\n");
 
 const cases: Case[] = [
-  ...cases079,
+  ...cases079, ...cases085,
   // Upstream behavior for news is exercised over real HTTP in unified-news.test.ts.
   { tool: "list_top_news", input: { x: 0 }, error: /Too small/ }, { tool: "get_news_detail", input: { id: "unknown:123" }, error: /Invalid string/ }, { tool: "scrape_website", input: { url: "file:///etc/passwd" }, error: /public HTTP/ }, { tool: "search_news", input: { query: " " }, error: /query must contain/ },
   ...cases053,

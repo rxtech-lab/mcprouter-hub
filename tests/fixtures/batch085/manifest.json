@@ -1,0 +1,145 @@
+[
+  {
+    "api": "API-3085",
+    "dataset": "hk-landsd-openmap-lao-land-acquisition",
+    "service": "landsd-land-cases",
+    "tool": "landsd_land_acquisition_notices",
+    "file": "3085",
+    "layer": "landsd_rcd_1631605302496_6070",
+    "names": {
+      "en": "Project_Title"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1631605302496_6070/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "2c76868aa355cab602b81617a6fc3ca382a1f143b6ecf91ad403e135421ff37f",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3086",
+    "dataset": "hk-landsd-openmap-lao-lec",
+    "service": "landsd-land-cases",
+    "tool": "landsd_executed_land_exchanges",
+    "file": "3086",
+    "layer": "landsd_rcd_1637224372675_83413",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637224372675_83413/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "75039b376884bb728ee6f92943dbd65b3f3f11cd909c09a72dfe4a2415ec8499",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3087",
+    "dataset": "hk-landsd-openmap-lao-lext",
+    "service": "landsd-land-cases",
+    "tool": "landsd_executed_lease_extensions",
+    "file": "3087",
+    "layer": "landsd_rcd_1637224682055_15833",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637224682055_15833/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "6db2dee12adb216e33c722fb7f3bbacea9cb7b5a8c4d6201a239cf12ca38aa7c",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3088",
+    "dataset": "hk-landsd-openmap-lao-lmc",
+    "service": "landsd-land-cases",
+    "tool": "landsd_executed_lease_modifications",
+    "file": "3088",
+    "layer": "landsd_rcd_1637225104335_55505",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637225104335_55505/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "a2ec68beef2615f343b86c4322611f9f173135b7a29173c713ae2a712888b24b",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3089",
+    "dataset": "hk-landsd-openmap-lao-lsr",
+    "service": "landsd-land-cases",
+    "tool": "landsd_land_sale_records",
+    "file": "3089",
+    "layer": "landsd_rcd_1631600922343_18223",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1631600922343_18223/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "c7254be3bbbd05616e1c620b1bfa8b81c71878dbcead9b48c95e02eb9291a94e",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3097",
+    "dataset": "hk-landsd-openmap-lao-rcib-lec",
+    "service": "landsd-land-cases",
+    "tool": "landsd_industrial_2009_land_exchanges",
+    "file": "3097",
+    "layer": "landsd_rcd_1637307354337_52132",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637307354337_52132/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "e12ab54e81d57aed12722f2ef49ef64211fb1d298e9911786000459eeaa8d225",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3098",
+    "dataset": "hk-landsd-openmap-lao-rcib-lmc",
+    "service": "landsd-land-cases",
+    "tool": "landsd_industrial_2009_lease_modifications",
+    "file": "3098",
+    "layer": "landsd_rcd_1637307503370_15433",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637307503370_15433/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "38f53d506b02b93a4ec07f9441f2642c628e44b3e2c3bf4de4cadc2bf49aa394",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3099",
+    "dataset": "hk-landsd-openmap-lao-rcib-lmc-2018",
+    "service": "landsd-land-cases",
+    "tool": "landsd_industrial_2018_lease_modifications",
+    "file": "3099",
+    "layer": "landsd_rcd_1637309419658_86585",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637309419658_86585/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "82242f858c6fbe5cad1c13be6a918a9907355794c3e457989b2abb92102537c1",
+    "capturedAt": "2026-10-26"
+  },
+  {
+    "api": "API-3100",
+    "dataset": "hk-landsd-openmap-lao-rcib-swc",
+    "service": "landsd-land-cases",
+    "tool": "landsd_industrial_2009_special_waivers",
+    "file": "3100",
+    "layer": "landsd_rcd_1637307618005_4554",
+    "names": {
+      "en": "NAME_EN",
+      "tc": "NAME_TC"
+    },
+    "oid": "OBJECTID",
+    "source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637307618005_4554/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "sha256": "ba2ecbe4bd0a19326c670cc4263549bb9558cde02f8047ce5df62e8e255c8986",
+    "capturedAt": "2026-10-26"
+  }
+]

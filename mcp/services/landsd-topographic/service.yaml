@@ -1,0 +1,35 @@
+id: landsd-topographic
+title: LandsD Topographic Map
+description: Verified PNG tile metadata and download URLs from the official LandsD XYZ basemap service.
+apis: [API-3081]
+datasets: [hk-landsd-openmap-landsd-topo-map-api]
+baseUrl: https://mapapi.geodata.gov.hk
+cacheTtl: 43200
+tools:
+  - name: landsd_topographic_tile
+    title: Topographic map tile
+    description: Fetch and validate one PNG topographic basemap tile, returning its download URL, dimensions, byte count, checksum and required attribution. This is a raster tile, not a feature or address query. Coordinates must use the selected provider XYZ scheme; consult the linked documentation. The basemap has no language variants (labels are a separate API). A 204 response explicitly reports no tile. No bulk downloads; respect provider usage limits. Display the Lands Department logo and copyright notice when using the tile.
+    handler: tile
+    timeoutMs: 15000
+    input:
+      sr:
+        type: string
+        enum: [HK80, WGS84]
+        default: HK80
+      z:
+        type: integer
+        minimum: 10
+        maximum: 20
+        required: true
+      x:
+        type: integer
+        minimum: 0
+        maximum: 16777215
+        required: true
+        description: Provider XYZ x coordinate (bounded to 24 bits).
+      y:
+        type: integer
+        minimum: 0
+        maximum: 16777215
+        required: true
+        description: Provider XYZ y coordinate (bounded to 24 bits).

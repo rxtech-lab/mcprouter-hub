@@ -2,7 +2,7 @@
 
 # API tracker
 
-Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **313 of 3822 implemented**, 3509 coming soon.
+Every upstream API mcprouter serves as MCP tools, or plans to, including every DATA.GOV.HK dataset. **323 of 3822 implemented**, 3499 coming soon.
 1772 have a live API; 2050 only publish data files. New DATA.GOV.HK datasets are added with `bun run apis:import`.
 The same list is on the website under Data sources → APIs (`/sources/apis`).
 
@@ -1853,16 +1853,16 @@ The same list is on the website under Data sources → APIs (`/sources/apis`).
 | `API-3078` | [Lot](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-lot) | API | Lands Department | 🕒 Coming soon | — |
 | `API-3079` | [LandsD Map Label API](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-map-label-api) | API | Lands Department | 🕒 Coming soon | — |
 | `API-3080` | [Slope Maintenance Responsibility Boundaries](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-slope-maintenance-responsibility-boundaries) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3081` | [LandsD Topographic Map API](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-topo-map-api) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3085` | [Government Notices and Plans Issued by Lands Department for Land Acquisition and Foreshore and Seabed Reclamation (Since 2 January 2009)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-land-acquisition) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3086` | [Executed Land Exchange Cases (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-lec) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3087` | [Executed Lease Extension Cases (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-lext) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3088` | [Executed Lease Modification Cases (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-lmc) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3089` | [Land Sale Records](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-lsr) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3097` | [Revitalisation of Industrial Buildings 2009 - Executed Land Exchange Cases (From 2014 onwards in GML format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-lec) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3098` | [Revitalisation of Industrial Buildings 2009 - Executed Lease Modification Cases (From 2011 onwards in GML format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-lmc) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3099` | [Revitalisation of Industrial Buildings 2018 - Executed Lease Modification Cases (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-lmc-2018) | API | Lands Department | 🕒 Coming soon | — |
-| `API-3100` | [Revitalisation of Industrial Buildings 2009 - Executed Special Waiver Cases (From 2010 onwards in GML format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-swc) | API | Lands Department | 🕒 Coming soon | — |
+| `API-3081` | [LandsD Topographic Map API](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-topo-map-api) | API | Lands Department | ✅ Implemented | [LandsD Topographic Map](mcp/services/landsd-topographic/service.yaml) |
+| `API-3085` | [Government Notices and Plans Issued by Lands Department for Land Acquisition and Foreshore and Seabed Reclamation (Since 2 January 2009)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-land-acquisition) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
+| `API-3086` | [Executed Land Exchange Cases (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-lec) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
+| `API-3087` | [Executed Lease Extension Cases (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-lext) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
+| `API-3088` | [Executed Lease Modification Cases (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-lmc) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
+| `API-3089` | [Land Sale Records](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-lsr) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
+| `API-3097` | [Revitalisation of Industrial Buildings 2009 - Executed Land Exchange Cases (From 2014 onwards in GML format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-lec) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
+| `API-3098` | [Revitalisation of Industrial Buildings 2009 - Executed Lease Modification Cases (From 2011 onwards in GML format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-lmc) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
+| `API-3099` | [Revitalisation of Industrial Buildings 2018 - Executed Lease Modification Cases (Available in GML)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-lmc-2018) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
+| `API-3100` | [Revitalisation of Industrial Buildings 2009 - Executed Special Waiver Cases (From 2010 onwards in GML format)](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-lao-rcib-swc) | API | Lands Department | ✅ Implemented | [LandsD Land Administration Cases](mcp/services/landsd-land-cases/service.yaml) |
 | `API-3101` | [Old Urban and Town Maps](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-mapping-old-urban-and-town-maps) | API | Lands Department | 🕒 Coming soon | — |
 | `API-3102` | [Old Photos of Hong Kong](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-old-photos-of-hong-kong) | Files | Lands Department | 🕒 Coming soon | — |
 | `API-3103` | [Old Survey Sheets](https://data.gov.hk/en-data/dataset/hk-landsd-openmap-old-survey-sheets) | API | Lands Department | 🕒 Coming soon | — |
