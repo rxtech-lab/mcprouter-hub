@@ -1,0 +1,182 @@
+[
+  {
+    "api": "API-0214",
+    "dataset": "hk-censtatd-census_geo-2016-population-bycensus-by-lsbg",
+    "layer": "censtatd_rcd_1629267205229_49850",
+    "layerId": 0,
+    "file": "0214",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_49850/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "5e19125fee97bbcf01d3ac8d9744259e53b7fb110c56e80143fc39bed9ed7464",
+    "capturedAt": "2026-10-26T01:03:39.102739+00:00",
+    "layerSchemaSha256": "1c1965f2514b20e6f97f8c674eb2bf1ea11dd9246c5ce59278e328fa633894e5",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2016_lsbg",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "lsbg_eng",
+      "tc": "lsbg_chi"
+    },
+    "year": 2016,
+    "geometry": "esriGeometryPolygon"
+  },
+  {
+    "api": "API-0215",
+    "dataset": "hk-censtatd-census_geo-2016-population-bycensus-by-ltpu",
+    "layer": "censtatd_rcd_1629267205224_87566",
+    "layerId": 0,
+    "file": "0215",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205224_87566/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "00002bd7a9cfd5034057b3043d4717b1c3de4c43694e7f8a3b176a0febdb950e",
+    "capturedAt": "2026-10-26T01:03:38.163680+00:00",
+    "layerSchemaSha256": "06855ab68247ef1ab3098add43fb4408e97b2286620c32feec6b4d5c958b3afd",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2016_ltpu",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "ltpug_eng",
+      "tc": "ltpug_chi"
+    },
+    "year": 2016,
+    "geometry": "esriGeometryPolygon"
+  },
+  {
+    "api": "API-0216",
+    "dataset": "hk-censtatd-census_geo-2016-population-bycensus-by-ssbg",
+    "layer": "censtatd_rcd_1629267205229_2386",
+    "layerId": 0,
+    "file": "0216",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_2386/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "88dabb2ef524aa37cd5015fafce8264836e290854db68ecb7220c9eb12710b55",
+    "capturedAt": "2026-10-26T01:03:39.286212+00:00",
+    "layerSchemaSha256": "53506a9f2460668dc843dbbff3652908c79aa89e0f951e89506b93c880a2f5e1",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2016_ssbg",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "ssbg_eng",
+      "tc": "ssbg_chi"
+    },
+    "year": 2016,
+    "geometry": "esriGeometryPolygon"
+  },
+  {
+    "api": "API-0217",
+    "dataset": "hk-censtatd-census_geo-2016-population-bycensus-by-stpu",
+    "layer": "censtatd_rcd_1629267205229_40996",
+    "layerId": 0,
+    "file": "0217",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_40996/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "07d41087eaccd767c5ecfca820fa51e905eb88dca235a7ed16b7f71bf443b4c6",
+    "capturedAt": "2026-10-26T01:03:39.426964+00:00",
+    "layerSchemaSha256": "f56d49472e5465efd8d50d2bcdc3dea5c1b7234fa8a80354d328be9bfe8d509a",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2016_stpu",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "stpug_eng",
+      "tc": "stpug_chi"
+    },
+    "year": 2016,
+    "geometry": "esriGeometryPolygon"
+  },
+  {
+    "api": "API-0218",
+    "dataset": "hk-censtatd-census_geo-2016-population-bycensus-su-by-dcd",
+    "layer": "censtatd_rcd_1635932488538_10765",
+    "layerId": 0,
+    "file": "0218",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635932488538_10765/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "d593583461d2a21bbe4c15ba2267481017eedb8fc18b59505c3315bead8099e4",
+    "capturedAt": "2026-10-26T01:03:39.645808+00:00",
+    "layerSchemaSha256": "4c6615a3ad1f2e0e29f6b5f49cdc53b297e916a4af11f479551228c01bc0dcea",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2016_sdu_dcd",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dc_eng",
+      "tc": "dc_chi"
+    },
+    "year": 2016,
+    "geometry": "esriGeometryPolygon"
+  },
+  {
+    "api": "API-0219",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-by-dcca",
+    "layer": "censtatd_rcd_1635933003339_9920",
+    "layerId": 0,
+    "file": "0219",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933003339_9920/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "1650a4223c7d657d56fbf2ba55a5c0d71cc0170f0c2a0761ae30ddf568603825",
+    "capturedAt": "2026-10-26T01:03:39.491307+00:00",
+    "layerSchemaSha256": "217aa174b474356438984ac427edea1969873e32766bfbf772829ebb3d7f5c6d",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2021_dcca",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dcca_eng",
+      "tc": "dcca_chi"
+    },
+    "year": 2021,
+    "geometry": "esriGeometryPolygon"
+  },
+  {
+    "api": "API-0220",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-by-dcd",
+    "layer": "censtatd_rcd_1635932856094_19982",
+    "layerId": 0,
+    "file": "0220",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635932856094_19982/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "53b374c124a36037e21e2369df0e0b6cb4b5e8e314598071b35fc3dcc8cc0583",
+    "capturedAt": "2026-10-26T01:03:40.290443+00:00",
+    "layerSchemaSha256": "51f668beb437dbe362c93e474297771f40d4fd8a7cc9257b0d0d88259d562366",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2021_dcd",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dc_eng",
+      "tc": "dc_chi"
+    },
+    "year": 2021,
+    "geometry": "esriGeometryPolygon"
+  },
+  {
+    "api": "API-0222",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-by-lsg",
+    "layer": "censtatd_rcd_1635933282224_58228",
+    "layerId": 0,
+    "file": "0222",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933282224_58228/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "b98dfeca3fa81a8ccd71bf4af4385082aa1b712d706fc610795fc8f1f562195f",
+    "capturedAt": "2026-10-26T01:03:40.667643+00:00",
+    "layerSchemaSha256": "e6a9b66bbaaeb988f198ebb0ba9e1fb2917713fb57b904fe9ba596bfd07f0aaa",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2021_lsg",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "lsbg_eng",
+      "tc": "lsbg_chi"
+    },
+    "year": 2021,
+    "geometry": "esriGeometryPolygon"
+  },
+  {
+    "api": "API-0223",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-by-ltpu",
+    "layer": "censtatd_rcd_1635933102538_82889",
+    "layerId": 0,
+    "file": "0223",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933102538_82889/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID+ASC&geometryPrecision=6",
+    "sha256": "11472b93acd2156394d85c36fe50591d8daade4e2141df1b6b97fc3117a69177",
+    "capturedAt": "2026-10-26T01:03:41.036699+00:00",
+    "layerSchemaSha256": "0eebb31de197ee440b4d4d19b72343e845fc81e0ecf8cccaf5408fc3b5f17f18",
+    "service": "censtatd-census-2016-2021",
+    "tool": "census_2021_ltpu",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "ltpug_eng",
+      "tc": "ltpug_chi"
+    },
+    "year": 2021,
+    "geometry": "esriGeometryPolygon"
+  }
+]
