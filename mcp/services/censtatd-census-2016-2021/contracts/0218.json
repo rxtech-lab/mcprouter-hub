@@ -1,0 +1,26 @@
+{
+  "label": "API-0218 DC_16BC_SDU",
+  "oid": "OBJECTID",
+  "names": {
+    "en": "dc_eng",
+    "tc": "dc_chi"
+  },
+  "search": [
+    "dc_eng",
+    "dc_chi"
+  ],
+  "fields": {
+    "dc": "esriFieldTypeDouble",
+    "dc_chi": "esriFieldTypeString",
+    "dc_class": "esriFieldTypeString",
+    "dc_eng": "esriFieldTypeString",
+    "sdu_dh": "esriFieldTypeString",
+    "sdu_n": "esriFieldTypeString",
+    "sdu_oq": "esriFieldTypeString",
+    "sdu_pop": "esriFieldTypeString",
+    "OBJECTID": "esriFieldTypeOID",
+    "Shape__Length": "esriFieldTypeDouble",
+    "Shape__Area": "esriFieldTypeDouble"
+  },
+  "geometry": "esriGeometryPolygon"
+}
