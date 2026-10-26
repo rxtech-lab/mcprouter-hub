@@ -52,7 +52,7 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
-  ...Object.fromEntries(["census_2016_lsbg", "census_2016_ltpu", "census_2016_ssbg", "census_2016_stpu", "census_2016_sdu_dcd", "census_2021_dcca", "census_2021_dcd", "census_2021_lsg", "census_2021_ltpu"].map((name) => [name, { input: { limit: 1 }, check: nonEmptyPage }])),
+  ...Object.fromEntries(["census_2021_major_housing_estates", "census_2021_new_towns", "census_2021_small_subunit_groups", "census_2021_small_planning_unit_groups", "census_2021_subdivided_units_districts", "population_households_by_district", "living_quarters_by_area_type", "living_quarters_by_district", "population_density_by_district", "census_2016_lsbg", "census_2016_ltpu", "census_2016_ssbg", "census_2016_stpu", "census_2016_sdu_dcd", "census_2021_dcca", "census_2021_dcd", "census_2021_lsg", "census_2021_ltpu"].map((name) => [name, { input: { limit: 1 }, check: nonEmptyPage }])),
   ...Object.fromEntries(["2006_ssbg", "2006_stpu", "2011_dcca", "2011_dcd", "2011_lsbg", "2011_ltpu", "2011_ssbg", "2011_stpu", "2016_dcca", "2016_dcd"].map((name) => [`census_${name}`, { input: { limit: 1 }, check: nonEmptyPage }])),
   ...Object.fromEntries(["old_survey_sheets_1", "old_survey_sheets_2", "old_survey_sheets_3", "old_survey_sheets_4", "old_survey_sheets_5", "private_treaty_grants", "public_facilities", "public_open_space", "road_centrelines", "short_term_tenancies"].map((name) => [`landsd_${name}`, { input: { limit: 1 }, check: nonEmptyPage }])),
   landsd_satref_nmea_snapshot: { input: {}, check: nonEmptyPage },

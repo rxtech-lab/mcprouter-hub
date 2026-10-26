@@ -1,0 +1,35 @@
+{
+  "label": "API-0231 AREA_LQ_2023",
+  "oid": "OBJECTID",
+  "names": {
+    "en": "AREA_ENG",
+    "tc": "AREA_CHI"
+  },
+  "search": [
+    "AREA_ENG",
+    "AREA_CHI"
+  ],
+  "fields": {
+    "AREA_CHI": "esriFieldTypeString",
+    "AREA_ENG": "esriFieldTypeString",
+    "PERIOD": "esriFieldTypeDouble",
+    "QTR_ALL": "esriFieldTypeDouble",
+    "QTR_PH": "esriFieldTypeDouble",
+    "QTR_PH_NDQ": "esriFieldTypeDouble",
+    "QTR_PH_PRF": "esriFieldTypeDouble",
+    "QTR_PH_SQ": "esriFieldTypeDouble",
+    "QTR_PH_SSTV": "esriFieldTypeDouble",
+    "QTR_PH_VBM": "esriFieldTypeDouble",
+    "QTR_PRH": "esriFieldTypeDouble",
+    "QTR_PRH_HA": "esriFieldTypeDouble",
+    "QTR_PRH_HS": "esriFieldTypeDouble",
+    "QTR_SSF": "esriFieldTypeDouble",
+    "QTR_SSF_HA": "esriFieldTypeDouble",
+    "QTR_SSF_HS": "esriFieldTypeDouble",
+    "QTR_SSF_URA": "esriFieldTypeDouble",
+    "OBJECTID": "esriFieldTypeOID",
+    "Shape__Length": "esriFieldTypeDouble",
+    "Shape__Area": "esriFieldTypeDouble"
+  },
+  "geometry": "esriGeometryPolygon"
+}

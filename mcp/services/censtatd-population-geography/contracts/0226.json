@@ -1,0 +1,24 @@
+{
+  "label": "API-0226 SSUG_21C",
+  "oid": "OBJECTID",
+  "names": {
+    "en": "ssbg_eng",
+    "tc": "ssbg_chi"
+  },
+  "search": [
+    "ssbg_eng",
+    "ssbg_chi"
+  ],
+  "fields": {
+    "dh": "esriFieldTypeString",
+    "oq": "esriFieldTypeDouble",
+    "ssbg": "esriFieldTypeString",
+    "ssbg_chi": "esriFieldTypeString",
+    "ssbg_eng": "esriFieldTypeString",
+    "t_pop": "esriFieldTypeDouble",
+    "OBJECTID": "esriFieldTypeOID",
+    "Shape__Length": "esriFieldTypeDouble",
+    "Shape__Area": "esriFieldTypeDouble"
+  },
+  "geometry": "esriGeometryPolygon"
+}

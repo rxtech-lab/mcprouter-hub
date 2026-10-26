@@ -1,0 +1,25 @@
+{
+  "label": "API-0233 Density_2024",
+  "oid": "OBJECTID",
+  "names": {
+    "en": "DC_ENG",
+    "tc": "DC_CHI"
+  },
+  "search": [
+    "DC_ENG",
+    "DC_CHI"
+  ],
+  "fields": {
+    "DC": "esriFieldTypeDouble",
+    "DC_CHI": "esriFieldTypeString",
+    "DC_ENG": "esriFieldTypeString",
+    "LA": "esriFieldTypeDouble",
+    "MYPOPN_LAND": "esriFieldTypeDouble",
+    "PERIOD": "esriFieldTypeDouble",
+    "POPN_D": "esriFieldTypeDouble",
+    "OBJECTID": "esriFieldTypeOID",
+    "Shape__Length": "esriFieldTypeDouble",
+    "Shape__Area": "esriFieldTypeDouble"
+  },
+  "geometry": "esriGeometryPolygon"
+}
