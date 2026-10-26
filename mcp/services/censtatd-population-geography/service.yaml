@@ -1,0 +1,616 @@
+{
+  "id": "censtatd-population-geography",
+  "title": "Hong Kong Population and Housing Geography",
+  "description": "C&SD 2021 Census estate, new town, subunit and planning unit statistics, subdivided units, district population, living quarters and density. Source periods are preserved; these are not real-time estimates.",
+  "apis": [
+    "API-0224",
+    "API-0225",
+    "API-0226",
+    "API-0227",
+    "API-0228",
+    "API-0230",
+    "API-0231",
+    "API-0232",
+    "API-0233"
+  ],
+  "datasets": [
+    "hk-censtatd-census_geo-2021-population-census-by-mhe",
+    "hk-censtatd-census_geo-2021-population-census-by-nt",
+    "hk-censtatd-census_geo-2021-population-census-by-ssg",
+    "hk-censtatd-census_geo-2021-population-census-by-stpu",
+    "hk-censtatd-census_geo-2021-population-census-su-by-dcd",
+    "hk-censtatd-census_geo-dc-ghs-csdi",
+    "hk-censtatd-census_geo-hkads-table9-10-csdi",
+    "hk-censtatd-census_geo-hkmds-table8-1-csdi",
+    "hk-censtatd-census_geo-table110-02001-csdi"
+  ],
+  "baseUrl": "https://portal.csdi.gov.hk",
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "census_2021_major_housing_estates",
+      "title": "2021 Population Census (Statistics and Boundaries of Major Housing Estates)",
+      "description": "2021 Population Census (Statistics and Boundaries of Major Housing Estates). Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Historical 2021 Census figures. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-2021-population-census-by-mhe",
+      "path": "/server/rest/services/common/censtatd_rcd_1695182015782_79001/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0224",
+        "response": "response0224"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "census_2021_new_towns",
+      "title": "2021 Population Census (Statistics and Boundaries of New Towns)",
+      "description": "2021 Population Census (Statistics and Boundaries of New Towns). Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Historical 2021 Census figures. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-2021-population-census-by-nt",
+      "path": "/server/rest/services/common/censtatd_rcd_1695181913136_27614/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0225",
+        "response": "response0225"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "census_2021_small_subunit_groups",
+      "title": "2021 Population Census (Statistics and Boundaries of Small Subunit Groups)",
+      "description": "2021 Population Census (Statistics and Boundaries of Small Subunit Groups). Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Historical 2021 Census figures. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-2021-population-census-by-ssg",
+      "path": "/server/rest/services/common/censtatd_rcd_1635933365202_19171/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0226",
+        "response": "response0226"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "census_2021_small_planning_unit_groups",
+      "title": "2021 Population Census (Statistics and Boundaries of Small Tertiary Planning Unit Groups)",
+      "description": "2021 Population Census (Statistics and Boundaries of Small Tertiary Planning Unit Groups). Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Historical 2021 Census figures. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-2021-population-census-by-stpu",
+      "path": "/server/rest/services/common/censtatd_rcd_1635933193720_58660/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0227",
+        "response": "response0227"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "census_2021_subdivided_units_districts",
+      "title": "2021 Population Census (Statistics of Subdivided Units by District Council District)",
+      "description": "2021 Population Census (Statistics of Subdivided Units by District Council District). Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Historical 2021 Census figures. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-2021-population-census-su-by-dcd",
+      "path": "/server/rest/services/common/censtatd_rcd_1635933617052_68946/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0228",
+        "response": "response0228"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "population_households_by_district",
+      "title": "Dataset on population and household statistics analysed by District Council district",
+      "description": "Dataset on population and household statistics analysed by District Council district. Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Source periods: year field (captured layer includes 2016 observations). Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-dc-ghs-csdi",
+      "path": "/server/rest/services/common/censtatd_rcd_1635934545173_69201/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0230",
+        "response": "response0230"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "living_quarters_by_area_type",
+      "title": "Stock of permanent living quarters by area and type",
+      "description": "Stock of permanent living quarters by area and type. Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Source periods: PERIOD field (captured layer AREA_LQ_2023). Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-hkads-table9-10-csdi",
+      "path": "/server/rest/services/common/censtatd_rcd_1635933883228_46491/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0231",
+        "response": "response0231"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "living_quarters_by_district",
+      "title": "Stock of permanent living quarters by District Council district",
+      "description": "Stock of permanent living quarters by District Council district. Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Source periods: YEAR and QUARTER fields (captured layer Q3 2023). Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-hkmds-table8-1-csdi",
+      "path": "/server/rest/services/common/censtatd_rcd_1635934103275_66203/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0232",
+        "response": "response0232"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "population_density_by_district",
+      "title": "Land area, mid-year population and population density by District Council district",
+      "description": "Land area, mid-year population and population density by District Council district. Original measure field codes, units, nulls, numeric strings and suppression markers (-) are preserved. Consult the official catalogue data dictionary to interpret fields; Shape__Area/Shape__Length retain projected source units. lang selects only the bilingual name alias. Query by objectId or WGS84 intersection bbox; continue with nextOffset and identical filters. At most 100 records and 100 KB per page. Geometry is opt-in; polygons over 20 KB are explicitly omitted, with complete geometry at meta.source. Source periods: PERIOD field (captured layer Density_2024; all numeric values retain their original source scale). Source: https://data.gov.hk/en-data/dataset/hk-censtatd-census_geo-table110-02001-csdi",
+      "path": "/server/rest/services/common/censtatd_rcd_1635934215448_25451/FeatureServer/0/query",
+      "query": {
+        "f": "json",
+        "where": "1=1",
+        "outFields": "*",
+        "outSR": 4326,
+        "orderByFields": "OBJECTID ASC",
+        "geometryPrecision": 6
+      },
+      "input": {
+        "objectId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647,
+          "in": "local"
+        },
+        "bbox": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?,-?[0-9]+(?:[.][0-9]+)?$",
+          "in": "local",
+          "description": "WGS84 west,south,east,north; polygon intersection."
+        },
+        "geometry": {
+          "type": "boolean",
+          "default": false,
+          "name": "returnGeometry"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc"
+          ],
+          "default": "en",
+          "in": "local",
+          "description": "Name alias only. Source publishes English and Traditional Chinese; no Simplified Chinese variant."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "name": "resultRecordCount"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "name": "resultOffset"
+        }
+      },
+      "transform": {
+        "request": "request0233",
+        "response": "response0233"
+      },
+      "response": {
+        "format": "json"
+      },
+      "timeoutMs": 30000
+    }
+  ]
+}

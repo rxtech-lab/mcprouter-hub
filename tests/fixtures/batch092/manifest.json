@@ -1,0 +1,278 @@
+[
+  {
+    "api": "API-0224",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-by-mhe",
+    "service": "censtatd-population-geography",
+    "tool": "census_2021_major_housing_estates",
+    "file": "224",
+    "layer": "censtatd_rcd_1695182015782_79001",
+    "layerId": 0,
+    "layerName": "MHE_21C",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "estate_eng",
+      "tc": "estate_chi"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1695182015782_79001/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "c614f529db40d466bd3858994f34d649510d786176c4e214d0ec3c4c28946c6e",
+    "capturedAt": "2026-10-26T02:03:12.916623+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1695182015782_79001/FeatureServer/0?f=pjson",
+    "schemaSha256": "e9b499a2f8e7da4ac732d1affd40961f0ae11691faa361defa5ebf4df1ba603e",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-2021-population-census-by-mhe",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=censtatd_rcd_1695182015782_79001",
+        "format": "API"
+      }
+    ]
+  },
+  {
+    "api": "API-0225",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-by-nt",
+    "service": "censtatd-population-geography",
+    "tool": "census_2021_new_towns",
+    "file": "225",
+    "layer": "censtatd_rcd_1695181913136_27614",
+    "layerId": 0,
+    "layerName": "NewTown_21C",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "newtown_eng",
+      "tc": "newtown_chi"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1695181913136_27614/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "952fdc6faa8ef868b95233361920f7299f3271673e4b0baf21dc458aabf6bc5b",
+    "capturedAt": "2026-10-26T02:03:14.518401+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1695181913136_27614/FeatureServer/0?f=pjson",
+    "schemaSha256": "80ef3161985ea683d7c9ab52a1c8bfd79566b4513c03e02b08f91465c2424278",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-2021-population-census-by-nt",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=censtatd_rcd_1695181913136_27614",
+        "format": "API"
+      }
+    ]
+  },
+  {
+    "api": "API-0226",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-by-ssg",
+    "service": "censtatd-population-geography",
+    "tool": "census_2021_small_subunit_groups",
+    "file": "226",
+    "layer": "censtatd_rcd_1635933365202_19171",
+    "layerId": 0,
+    "layerName": "SSUG_21C",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "ssbg_eng",
+      "tc": "ssbg_chi"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933365202_19171/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "7a49a6a9e3ba6fb84d4ec1bf3b51bc9309c25f7e2ef3a43450f4cebe6b66cd3a",
+    "capturedAt": "2026-10-26T02:03:13.800490+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933365202_19171/FeatureServer/0?f=pjson",
+    "schemaSha256": "a1be9e9f62439a29566f595b3862b95d33cdef0e25d6a46e249c9e379fe1dba0",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-2021-population-census-by-ssg",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=censtatd_rcd_1635933365202_19171",
+        "format": "API"
+      },
+      {
+        "url": "https://www.census2021.gov.hk/doc/SSUG_21C.zip",
+        "format": "CSV"
+      },
+      {
+        "url": "https://www.census2021.gov.hk/doc/SSUG_21C.xlsx",
+        "format": "XLSX"
+      }
+    ]
+  },
+  {
+    "api": "API-0227",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-by-stpu",
+    "service": "censtatd-population-geography",
+    "tool": "census_2021_small_planning_unit_groups",
+    "file": "227",
+    "layer": "censtatd_rcd_1635933193720_58660",
+    "layerId": 0,
+    "layerName": "STPUG_21C",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "stpug_eng",
+      "tc": "stpug_chi"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933193720_58660/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "c9a3ffe65817bb95cd68936ba00ae2f1bb4e1cac30ee7cf2da1bd6bf29151fab",
+    "capturedAt": "2026-10-26T02:03:13.713945+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933193720_58660/FeatureServer/0?f=pjson",
+    "schemaSha256": "e4ce034681810b8920c30fad96ded4555d73a7b1cfa5e237af4f8f0ae562fc15",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-2021-population-census-by-stpu",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=censtatd_rcd_1635933193720_58660",
+        "format": "API"
+      },
+      {
+        "url": "https://www.census2021.gov.hk/doc/STPUG_21C.zip",
+        "format": "CSV"
+      },
+      {
+        "url": "https://www.census2021.gov.hk/doc/STPUG_21C.xlsx",
+        "format": "XLSX"
+      }
+    ]
+  },
+  {
+    "api": "API-0228",
+    "dataset": "hk-censtatd-census_geo-2021-population-census-su-by-dcd",
+    "service": "censtatd-population-geography",
+    "tool": "census_2021_subdivided_units_districts",
+    "file": "228",
+    "layer": "censtatd_rcd_1635933617052_68946",
+    "layerId": 0,
+    "layerName": "DC_21C_SDU",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dc_eng",
+      "tc": "dc_chi"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933617052_68946/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "072146a0132834faecd954b814453a6ded750ecfb7c968278a776e31f5fcc7e1",
+    "capturedAt": "2026-10-26T02:03:29.646307+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933617052_68946/FeatureServer/0?f=pjson",
+    "schemaSha256": "a60b5fb4bc3ccbec06f79857bbd8e129b98642d11a30c61b4df4526c394b62ce",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-2021-population-census-su-by-dcd",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=censtatd_rcd_1635933617052_68946",
+        "format": "API"
+      },
+      {
+        "url": "https://www.census2021.gov.hk/doc/DC_21C_SDU.zip",
+        "format": "CSV"
+      },
+      {
+        "url": "https://www.census2021.gov.hk/doc/DC_21C_SDU.xlsx",
+        "format": "XLSX"
+      }
+    ]
+  },
+  {
+    "api": "API-0230",
+    "dataset": "hk-censtatd-census_geo-dc-ghs-csdi",
+    "service": "censtatd-population-geography",
+    "tool": "population_households_by_district",
+    "file": "230",
+    "layer": "censtatd_rcd_1635934545173_69201",
+    "layerId": 0,
+    "layerName": "DC_GHS",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dc_eng",
+      "tc": "dc_chi"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635934545173_69201/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "ea7958dad8fd1dd3829ac324c1e632c5f497e7aef1144454530b2d1affa35f77",
+    "capturedAt": "2026-10-26T02:03:15.263404+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635934545173_69201/FeatureServer/0?f=pjson",
+    "schemaSha256": "f9098255cb34e386951acd4472d7f1f7ac5ee92ec73df7ed26650becb6694649",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-dc-ghs-csdi",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?datasetId=censtatd_rcd_1635934545173_69201",
+        "format": "API"
+      }
+    ]
+  },
+  {
+    "api": "API-0231",
+    "dataset": "hk-censtatd-census_geo-hkads-table9-10-csdi",
+    "service": "censtatd-population-geography",
+    "tool": "living_quarters_by_area_type",
+    "file": "231",
+    "layer": "censtatd_rcd_1635933883228_46491",
+    "layerId": 0,
+    "layerName": "AREA_LQ_2023",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "AREA_ENG",
+      "tc": "AREA_CHI"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933883228_46491/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "bbc5af0d7f8410b305ddea83e708510e644ad582105f3249e095685571ae8409",
+    "capturedAt": "2026-10-26T02:03:30.219596+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635933883228_46491/FeatureServer/0?f=pjson",
+    "schemaSha256": "9ac01a5fd65795a5326b435bdae75a19479ebd5e071a72d4722c56bb30ab5b75",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-hkads-table9-10-csdi",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=censtatd_rcd_1635933883228_46491",
+        "format": "API"
+      }
+    ]
+  },
+  {
+    "api": "API-0232",
+    "dataset": "hk-censtatd-census_geo-hkmds-table8-1-csdi",
+    "service": "censtatd-population-geography",
+    "tool": "living_quarters_by_district",
+    "file": "232",
+    "layer": "censtatd_rcd_1635934103275_66203",
+    "layerId": 0,
+    "layerName": "DCD_LQ_Q32023",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "DC_ENG",
+      "tc": "DC_CHI"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635934103275_66203/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "f1b650384d9c1ccc7c38df9fc12c5a213458c12c9197fad127a162def3b18b26",
+    "capturedAt": "2026-10-26T02:03:15.950402+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635934103275_66203/FeatureServer/0?f=pjson",
+    "schemaSha256": "7dfc6ca8a74fb6740d6f8c7e1c11362db22caea0968cae46a104120a85df5e6c",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-hkmds-table8-1-csdi",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=censtatd_rcd_1635934103275_66203",
+        "format": "API"
+      }
+    ]
+  },
+  {
+    "api": "API-0233",
+    "dataset": "hk-censtatd-census_geo-table110-02001-csdi",
+    "service": "censtatd-population-geography",
+    "tool": "population_density_by_district",
+    "file": "233",
+    "layer": "censtatd_rcd_1635934215448_25451",
+    "layerId": 0,
+    "layerName": "Density_2024",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "DC_ENG",
+      "tc": "DC_CHI"
+    },
+    "url": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635934215448_25451/FeatureServer/0/query?f=json&where=1%3D1&outFields=%2A&outSR=4326&orderByFields=OBJECTID+ASC&geometryPrecision=6&returnGeometry=true&resultRecordCount=2&resultOffset=0",
+    "status": 200,
+    "sha256": "602e4f93f8740673f85dbfdd25bdc6601ffe017265e4e05f053ea17294aeb7bb",
+    "capturedAt": "2026-10-26T02:03:16.604663+00:00",
+    "schemaUrl": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635934215448_25451/FeatureServer/0?f=pjson",
+    "schemaSha256": "2ea87729f74fd9988da712ff1db50ac6dd5994f58e13ddd25a0378e1c156d739",
+    "catalogUrl": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-censtatd-census_geo-table110-02001-csdi",
+    "resources": [
+      {
+        "url": "https://portal.csdi.gov.hk/geoportal/?lang=en&datasetId=censtatd_rcd_1635934215448_25451",
+        "format": "API"
+      }
+    ]
+  }
+]

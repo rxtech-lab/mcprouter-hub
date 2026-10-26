@@ -1,0 +1,24 @@
+{
+  "label": "API-0232 DCD_LQ_Q32023",
+  "oid": "OBJECTID",
+  "names": {
+    "en": "DC_ENG",
+    "tc": "DC_CHI"
+  },
+  "search": [
+    "DC_ENG",
+    "DC_CHI"
+  ],
+  "fields": {
+    "DC": "esriFieldTypeDouble",
+    "DC_CHI": "esriFieldTypeString",
+    "DC_ENG": "esriFieldTypeString",
+    "LQ": "esriFieldTypeDouble",
+    "QUARTER": "esriFieldTypeDouble",
+    "YEAR": "esriFieldTypeDouble",
+    "OBJECTID": "esriFieldTypeOID",
+    "Shape__Length": "esriFieldTypeDouble",
+    "Shape__Area": "esriFieldTypeDouble"
+  },
+  "geometry": "esriGeometryPolygon"
+}

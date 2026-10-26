@@ -1,0 +1,26 @@
+{
+  "label": "API-0228 DC_21C_SDU",
+  "oid": "OBJECTID",
+  "names": {
+    "en": "dc_eng",
+    "tc": "dc_chi"
+  },
+  "search": [
+    "dc_eng",
+    "dc_chi"
+  ],
+  "fields": {
+    "dc": "esriFieldTypeDouble",
+    "dc_chi": "esriFieldTypeString",
+    "dc_class": "esriFieldTypeString",
+    "dc_eng": "esriFieldTypeString",
+    "sdu_dh": "esriFieldTypeDouble",
+    "sdu_n": "esriFieldTypeDouble",
+    "sdu_oq": "esriFieldTypeDouble",
+    "sdu_pop": "esriFieldTypeDouble",
+    "OBJECTID": "esriFieldTypeOID",
+    "Shape__Length": "esriFieldTypeDouble",
+    "Shape__Area": "esriFieldTypeDouble"
+  },
+  "geometry": "esriGeometryPolygon"
+}

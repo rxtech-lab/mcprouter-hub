@@ -1,0 +1,436 @@
+{
+ "currentVersion": 10.91,
+ "cimVersion": "2.9.0",
+ "id": 0,
+ "name": "AREA_LQ_2023",
+ "type": "Feature Layer",
+ "parentLayer": null,
+ "defaultVisibility": true,
+ "minScale": 0,
+ "maxScale": 0,
+ "canScaleSymbols": false,
+ "geometryType": "esriGeometryPolygon",
+ "description": "",
+ "copyrightText": "",
+ "editFieldsInfo": null,
+ "ownershipBasedAccessControlForFeatures": null,
+ "syncCanReturnChanges": false,
+ "relationships": [],
+ "isDataVersioned": false,
+ "isDataArchived": false,
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "isDataBranchVersioned": false,
+ "isDataReplicaTracked": false,
+ "isCoGoEnabled": false,
+ "supportsRollbackOnFailureParameter": true,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSQL": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsQuantizationEditMode": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsDatumTransformation": true,
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsQueryWithResultType": true,
+  "supportsReturningGeometryCentroid": true,
+  "supportsSqlExpression": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsQueryAnalytic": false
+ },
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true
+ },
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "Shape__Area",
+  "shapeLengthFieldName": "Shape__Length",
+  "units": "esriMeters"
+ },
+ "hasMetadata": true,
+ "extent": {
+  "xmin": 799186.8389999997,
+  "ymin": 799837,
+  "xmax": 869854,
+  "ymax": 847618,
+  "spatialReference": {
+   "wkid": 102140,
+   "latestWkid": 2326,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -4786700,
+   "falseY": -11651800,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "sourceSpatialReference": {
+  "wkid": 102140,
+  "latestWkid": 2326,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -4786700,
+  "falseY": -11651800,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriSFS",
+    "style": "esriSFSSolid",
+    "color": [
+     241,
+     181,
+     252,
+     255
+    ],
+    "outline": {
+     "type": "esriSLS",
+     "style": "esriSLSSolid",
+     "color": [
+      110,
+      110,
+      110,
+      255
+     ],
+     "width": 0.7
+    }
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "hasM": false,
+ "hasZ": false,
+ "allowGeometryUpdates": true,
+ "allowTrueCurvesUpdates": true,
+ "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+ "hasAttachments": false,
+ "supportsApplyEditsWithGlobalIds": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "objectIdField": "OBJECTID",
+ "globalIdField": "",
+ "displayField": "AREA_CHI",
+ "typeIdField": "",
+ "subtypeField": "",
+ "fields": [
+  {
+   "name": "AREA_CHI",
+   "type": "esriFieldTypeString",
+   "alias": "AREA_CHI",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 9,
+   "defaultValue": null,
+   "modelName": "AREA_CHI"
+  },
+  {
+   "name": "AREA_ENG",
+   "type": "esriFieldTypeString",
+   "alias": "AREA_ENG",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 16,
+   "defaultValue": null,
+   "modelName": "AREA_ENG"
+  },
+  {
+   "name": "PERIOD",
+   "type": "esriFieldTypeDouble",
+   "alias": "PERIOD",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "PERIOD"
+  },
+  {
+   "name": "QTR_ALL",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_ALL",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_ALL"
+  },
+  {
+   "name": "QTR_PH",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PH",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PH"
+  },
+  {
+   "name": "QTR_PH_NDQ",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PH_NDQ",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PH_NDQ"
+  },
+  {
+   "name": "QTR_PH_PRF",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PH_PRF",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PH_PRF"
+  },
+  {
+   "name": "QTR_PH_SQ",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PH_SQ",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PH_SQ"
+  },
+  {
+   "name": "QTR_PH_SSTV",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PH_SSTV",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PH_SSTV"
+  },
+  {
+   "name": "QTR_PH_VBM",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PH_VBM",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PH_VBM"
+  },
+  {
+   "name": "QTR_PRH",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PRH",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PRH"
+  },
+  {
+   "name": "QTR_PRH_HA",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PRH_HA",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PRH_HA"
+  },
+  {
+   "name": "QTR_PRH_HS",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_PRH_HS",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_PRH_HS"
+  },
+  {
+   "name": "QTR_SSF",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_SSF",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_SSF"
+  },
+  {
+   "name": "QTR_SSF_HA",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_SSF_HA",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_SSF_HA"
+  },
+  {
+   "name": "QTR_SSF_HS",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_SSF_HS",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_SSF_HS"
+  },
+  {
+   "name": "QTR_SSF_URA",
+   "type": "esriFieldTypeDouble",
+   "alias": "QTR_SSF_URA",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "QTR_SSF_URA"
+  },
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null,
+   "editable": false,
+   "nullable": false,
+   "defaultValue": null,
+   "modelName": "OBJECTID"
+  },
+  {
+   "name": "Shape__Length",
+   "type": "esriFieldTypeDouble",
+   "alias": "SHAPE_Length",
+   "domain": null,
+   "editable": false,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "SHAPE_Length"
+  },
+  {
+   "name": "Shape__Area",
+   "type": "esriFieldTypeDouble",
+   "alias": "SHAPE_Area",
+   "domain": null,
+   "editable": false,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "SHAPE_Area"
+  }
+ ],
+ "geometryField": {
+  "name": "SHAPE",
+  "type": "esriFieldTypeGeometry",
+  "alias": "SHAPE",
+  "domain": null,
+  "editable": true,
+  "nullable": true,
+  "defaultValue": null,
+  "modelName": "SHAPE"
+ },
+ "indexes": [
+  {
+   "name": "FDO_OBJECTID",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "FDO_SHAPE",
+   "fields": "SHAPE",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  }
+ ],
+ "datesInUnknownTimezone": false,
+ "dateFieldsTimeReference": {
+  "timeZone": "China Standard Time",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [],
+ "templates": [
+  {
+   "name": "AREA_LQ_2023",
+   "description": "",
+   "prototype": {
+    "attributes": {
+     "QTR_SSF_URA": null,
+     "AREA_CHI": null,
+     "AREA_ENG": null,
+     "PERIOD": null,
+     "QTR_ALL": null,
+     "QTR_PH": null,
+     "QTR_PH_NDQ": null,
+     "QTR_PH_PRF": null,
+     "QTR_PH_SQ": null,
+     "QTR_PH_SSTV": null,
+     "QTR_PH_VBM": null,
+     "QTR_PRH": null,
+     "QTR_PRH_HA": null,
+     "QTR_PRH_HS": null,
+     "QTR_SSF": null,
+     "QTR_SSF_HA": null,
+     "QTR_SSF_HS": null
+    }
+   },
+   "drawingTool": "esriFeatureEditToolPolygon"
+  }
+ ],
+ "maxRecordCount": 3000,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedExportFormats": "sqlite,filegdb",
+ "capabilities": "Query",
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "standardMaxRecordCount": 4000,
+ "tileMaxRecordCount": 4000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "maxRecordCountFactor": 1,
+ "serviceItemId": "b6f099e9e0684a1e87a8352100d857f5"
+}
