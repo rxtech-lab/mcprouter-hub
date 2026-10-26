@@ -1,5 +1,24 @@
 Implementation evidence for exactly API-0309–0318. Base/fetched `origin/main`: `736e2af3da2c7ee575d826916e4f90b9a7d319a6`. Owned branch `batch094-population`, worktree `/private/tmp/mcprouter-batch094`. Final commit/head and frozen file hashes are in `/private/tmp/batch094-evidence/handoff.json` and `evidence-manifest.json`. Independent verification and publication are the orchestrator's next gates; no push, PR, task-status move or deployment was performed.
 
+## Final cycle-3 verification setup (resolved)
+
+The independent report `/private/tmp/batch094-independent-report.md` at original implementation head `29aefc1b63fcfbf6772cc4b74f16f373e0294479` found all ten local implementations, 708 tests, 60 replays, 278 hashes, codegen and outgoing history PASS. Full markers remained UNVERIFIED because authoritative task input and a locked-version build were unavailable. The parent supplied the authoritative task export `/private/tmp/batch094-authoritative-task.json` for task `FB7E377F-910B-420D-ACA3-7FDE448CD084`, now archived under the evidence directory. Current explicit user rules authorize local commits and supersede the export's stale no-commit/attention text. No board changes were made.
+
+Only the task-owned `node_modules` symlink was unlinked, after verifying its exact shared target. `bun install --frozen-lockfile` installed 743 packages into an isolated real directory: Next **16.4.3**, @types/node 26.6.5. `package.json` and `bun.lock` hashes are unchanged; shared Next/@types version-file hashes are unchanged. No shared dependencies were modified. Bun used was 1.4.0. Lock SHA-256: `885d880ad96f5674f844ea2017d62654b5519a8e9940d70236823709c9c7990d`.
+
+| Locked-dependency command | Result | Evidence log |
+|---|---|---|
+| `bun install --frozen-lockfile` | PASS; Next 16.4.3 | `cycle3-install.log` |
+| `bun run test` | 5,019 passed, 46 existing skips, 112 files passed | `cycle3-full-tests.log` |
+| `bun run lint` | PASS | `cycle3-lint.log` |
+| `bun run typecheck` | PASS | `cycle3-typecheck.log` |
+| `bun scripts/codegen.ts --check` | 95 files current | `cycle3-codegen-check.log` |
+| `bun run i18n:check` | 836 strings current | `cycle3-i18n.log` |
+| `bun --conditions=react-server scripts/check-batch094.ts captures` | 60 complete-capture checks PASS | `cycle3-captures-checks.log` |
+| `TURSO_DATABASE_URL=file:local.db bun run build` | Default Turbopack production build PASS on Next 16.4.3; TypeScript and 44 static pages PASS | `cycle3-build.log` |
+
+Every command exited 0 in the owned worktree. Exact results/log hashes are in `cycle3-results.json`; dependency isolation evidence is in `cycle3-before.json` and `cycle3-dependencies.json`. This cycle made no provider calls or retries, no API behavior changes and no test/assertion changes. Earlier HTTP simulation and live-provider results remain archived evidence. The final local commit changes only this document and the tracked repair ledger; implementation files still match the independently inspected original head. Repair budget is **3/3 used, 0 remaining**. Setup is resolved; full final-head independent verification/publication markers remain for the parent to determine. No push, PR, deployment or review/done move.
+
 ## Per-ID acceptance
 
 | API | Table | MCP tool | Rows per language | Implementation AC |
@@ -27,7 +46,7 @@ Original figures (including empty strings), units/descriptions, flags, notes and
 
 `tests/fixtures/batch094/manifest.json` records all 30 complete source SHA-256 hashes, fixture SHA-256 hashes, original row indices, exact source URLs, source row counts, stable API IDs and datasets. Fixtures contain the actual header and deterministic unmodified row excerpts covering every dimension code, indicator, source unit, frequency, source flag and figure type, plus boundary periods. `provenance.json` in the external evidence directory confirms exact excerpt/header equality against hash-verified complete captures and that each official catalogue advertises the implemented localized URL. Captures, times, HTTP status and hashes: `captures.json`, `catalogue.json`, `live/*.meta`; original byte bodies and catalogue HTML remain external. All en/tc/sc bodies have the same non-description fields.
 
-## Validation
+## Historical cycle-2 validation
 
 All logs below are in `/private/tmp/batch094-evidence/`.
 
@@ -47,6 +66,6 @@ All logs below are in `/private/tmp/batch094-evidence/`.
 | Fixture/source/catalogue provenance | 30 PASS | `provenance.json` |
 | Patch whitespace | PASS | `diff-check.log` |
 
-`bun run build` completed migrations/codegen but default Turbopack could not resolve shared node_modules outside the worktree. The repository-supported `next build --webpack` then passed; this is Webpack build evidence, not Turbopack success. Dependencies are linked to the existing main-workspace installation; the build reports Next 16.4.2, whereas package.json requests 16.4.3. No install or dependency changes were made. Sandbox DNS and loopback EPERM were escalated; these are separate from provider behavior. Postman CLI 1.75.0 ran locally. Orbit search returned unrelated public APIs, so no candidate was selected; the owner's mock search required login. Local mocks derive only from captured official responses. No remote Postman workspace mutation.
+Historical cycle-2 limitation (resolved by cycle 3 above): `bun run build` completed migrations/codegen but default Turbopack could not resolve shared node_modules outside the worktree. The repository-supported `next build --webpack` then passed; this is Webpack build evidence, not Turbopack success. Dependencies are linked to the existing main-workspace installation; the build reports Next 16.4.2, whereas package.json requests 16.4.3. No install or dependency changes were made. Sandbox DNS and loopback EPERM were escalated; these are separate from provider behavior. Postman CLI 1.75.0 ran locally. Orbit search returned unrelated public APIs, so no candidate was selected; the owner's mock search required login. Local mocks derive only from captured official responses. No remote Postman workspace mutation.
 
-Generated files live under ignored `generated/` by repository convention and are reproducible with `bun run codegen`; APIS.md is tracked. No UI or Next.js application code changed. AGENTS.md and the installed route-handler guide were read. Existing meaningful malformed/error/empty/coverage assertions were retained. Repair budget: 2/3 used; see `batch094-repair-ledger.md` and external ledger. Initial failing logs remain external for audit. No deployment, browser, independent-agent or publication claims are made.
+Generated files live under ignored `generated/` by repository convention and are reproducible with `bun run codegen`; APIS.md is tracked. No UI or Next.js application code changed. AGENTS.md and the installed route-handler guide were read. Existing meaningful malformed/error/empty/coverage assertions were retained. Repair budget at cycle-2 handoff: 2/3 used; see `batch094-repair-ledger.md` and external ledger. Initial failing logs remain external for audit. No deployment, browser, independent-agent or publication claims are made.
