@@ -1,0 +1,235 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=110-06833&api_popup=1"
+    },
+    "title": "Overall dependency ratio by District Council district",
+    "tablenote": [
+      "Figures are compiled based on the survey results of the General Household Survey (GHS) from January to December of the year concerned as well as the mid-year population estimates and may be regarded as referring to the overall situation of the whole year.     The GHS covers the land-based non-institutional population and thus does not cover (a) inmates of institutions; and (b) persons living on board vessels. The land-based non-institutional population constitutes about 99% of the Hong Kong Resident Population.",
+      "Overall dependency ratio refers to the number of persons aged under 15 and those aged 65 and over per 1 000 persons aged between 15 and 64.",
+      "The boundaries of the Wan Chai district and Eastern district adopted since 2016 are different from those adopted in 2015 and earlier years. Therefore, figures of the Wan Chai and Eastern districts for 2016 and thereafter are not strictly comparable with those for 2015 and earlier years in this table."
+    ],
+    "source": "General Household Survey Social Analysis and Research Section, Census and Statistics Department (Enquiry telephone no. : 3863 2791 Enquiry e-mail : ghs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 950,
+      "started": "2026-10-26T04:02:04+00:00",
+      "finished": "2026-10-26T04:02:04+00:00",
+      "durationSeconds": 0.024298
+    }
+  },
+  "dataSet": [
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 378,
+      "sd_value": ""
+    },
+    {
+      "DC": "A",
+      "DCDesc": "Central and Western",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 326,
+      "sd_value": ""
+    },
+    {
+      "DC": "B",
+      "DCDesc": "Wan Chai",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 341,
+      "sd_value": ""
+    },
+    {
+      "DC": "C",
+      "DCDesc": "Eastern",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 382,
+      "sd_value": ""
+    },
+    {
+      "DC": "D",
+      "DCDesc": "Southern",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 370,
+      "sd_value": ""
+    },
+    {
+      "DC": "E",
+      "DCDesc": "Yau Tsim Mong",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 377,
+      "sd_value": ""
+    },
+    {
+      "DC": "F",
+      "DCDesc": "Sham Shui Po",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 425,
+      "sd_value": ""
+    },
+    {
+      "DC": "G",
+      "DCDesc": "Kowloon City",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 392,
+      "sd_value": ""
+    },
+    {
+      "DC": "H",
+      "DCDesc": "Wong Tai Sin",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 455,
+      "sd_value": ""
+    },
+    {
+      "DC": "J",
+      "DCDesc": "Kwun Tong",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 413,
+      "sd_value": ""
+    },
+    {
+      "DC": "K",
+      "DCDesc": "Tsuen Wan",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 364,
+      "sd_value": ""
+    },
+    {
+      "DC": "L",
+      "DCDesc": "Tuen Mun",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 342,
+      "sd_value": ""
+    },
+    {
+      "DC": "M",
+      "DCDesc": "Yuen Long",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 389,
+      "sd_value": ""
+    },
+    {
+      "DC": "N",
+      "DCDesc": "North",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 409,
+      "sd_value": ""
+    },
+    {
+      "DC": "P",
+      "DCDesc": "Tai Po",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 377,
+      "sd_value": ""
+    },
+    {
+      "DC": "Q",
+      "DCDesc": "Sai Kung",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 333,
+      "sd_value": ""
+    },
+    {
+      "DC": "R",
+      "DCDesc": "Sha Tin",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 340,
+      "sd_value": ""
+    },
+    {
+      "DC": "S",
+      "DCDesc": "Kwai Tsing",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 363,
+      "sd_value": ""
+    },
+    {
+      "DC": "T",
+      "DCDesc": "Islands",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "Ratio",
+      "figure": 391,
+      "sd_value": ""
+    },
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO_XFDH",
+      "svDesc": "Ratio",
+      "figure": 393,
+      "sd_value": ""
+    },
+    {
+      "DC": "T",
+      "DCDesc": "Islands",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DEP_RATIO_XFDH",
+      "svDesc": "Ratio",
+      "figure": 418,
+      "sd_value": ""
+    }
+  ]
+}

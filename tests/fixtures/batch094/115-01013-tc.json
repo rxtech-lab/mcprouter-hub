@@ -1,0 +1,165 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=115-01013&api_popup=1"
+    },
+    "title": "按性別及年齡組別劃分的初婚人數",
+    "tablenote": [],
+    "source": "政府統計處人口統計組(一) (查詢電話：3863 2702  查詢電郵：population@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 800,
+      "started": "2026-10-26T04:02:05+00:00",
+      "finished": "2026-10-26T04:02:05+00:00",
+      "durationSeconds": 0.022631
+    }
+  },
+  "dataSet": [
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "",
+      "AGEDesc": "Total",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 35465,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "16-17",
+      "AGEDesc": "16 - 17",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 408,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "18-19",
+      "AGEDesc": "18 - 19",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 1236,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "20-24",
+      "AGEDesc": "20 - 24",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 14770,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "25-29",
+      "AGEDesc": "25 - 29",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 14624,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "30-34",
+      "AGEDesc": "30 - 34",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 3331,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "35-39",
+      "AGEDesc": "35 - 39",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 739,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "40-44",
+      "AGEDesc": "40 - 44",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 146,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "45-49",
+      "AGEDesc": "45 - 49",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 69,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "AGE": "50_and_over",
+      "AGEDesc": "≥50",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 142,
+      "sd_value": ""
+    },
+    {
+      "SEX": "M",
+      "SEXDesc": "男",
+      "AGE": "",
+      "AGEDesc": "Total",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 35492,
+      "sd_value": ""
+    },
+    {
+      "SEX": "M",
+      "SEXDesc": "男",
+      "AGE": "50_and_over",
+      "AGEDesc": "≥50",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "PMFT",
+      "svDesc": "數目",
+      "figure": 1213,
+      "sd_value": ""
+    }
+  ]
+}

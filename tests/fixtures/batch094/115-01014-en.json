@@ -1,0 +1,84 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=115-01014&api_popup=1"
+    },
+    "title": "Number of marriages registered in Hong Kong with both bridegrooms and brides being Hong Kong residents, bridegrooms/brides from Chinese Mainland and number of issuance of Certificate of Absence of Marriage Records (claimed for the purpose of marrying in Chinese Mainland)",
+    "tablenote": [
+      "Before the reference year of 2010, the figures of bridegrooms/brides from Mainland are estimated with reference to two data items in the individual registered marriage records provided by the Immigration Department on a monthly basis, viz. “place of previous residence” being in Chinese Mainland and “duration of stay in Hong Kong” being less than one year. The figure thus compiled might have included one-way permit holders entering Hong Kong and getting married in less than one year. Nevertheless, it still provides a good proxy indicator to cross-boundary marriage statistics. Since the reference year of 2010, besides the above two data items, more information (e.g. holding of travel document type) is used to enhance the estimates of bridegrooms/brides from Mainland.",
+      "Since the issuance of Certificate of Absence of Marriage Records (claimed for the purpose of marrying in Chinese Mainland) may not eventually lead to marriages, the figures only serve as a proxy indicator to cross-boundary marriage statistics."
+    ],
+    "source": "Demographic Statistics Section (1), Census and Statistics Department (Enquiry telephone no. : 3863 2702  Enquiry e-mail : population@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 280,
+      "started": "2026-10-26T04:02:05+00:00",
+      "finished": "2026-10-26T04:02:05+00:00",
+      "durationSeconds": 0.011605
+    }
+  },
+  "dataSet": [
+    {
+      "WBG_HKR": 1,
+      "WBG_HKRDesc": "Both bridegrooms and brides are Hong Kong residents",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MARRIAGE",
+      "svDesc": "Number",
+      "figure": 40042,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 2,
+      "WBG_HKRDesc": "Bridegrooms are Hong Kong residents and brides from Mainland",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MARRIAGE",
+      "svDesc": "Number",
+      "figure": 703,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 3,
+      "WBG_HKRDesc": "Brides are Hong Kong residents and bridegrooms from Mainland",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MARRIAGE",
+      "svDesc": "Number",
+      "figure": 79,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 2,
+      "WBG_HKRDesc": "Bridegrooms are Hong Kong residents and brides from Mainland",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MARRIAGE_ICAMR",
+      "svDesc": "Number",
+      "figure": 15776,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 2,
+      "WBG_HKRDesc": "Bridegrooms are Hong Kong residents and brides from Mainland",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "ICAMR",
+      "svDesc": "Number",
+      "figure": 15073,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 3,
+      "WBG_HKRDesc": "Brides are Hong Kong residents and bridegrooms from Mainland",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ICAMR",
+      "svDesc": "Number",
+      "figure": 3356,
+      "sd_value": ""
+    }
+  ]
+}

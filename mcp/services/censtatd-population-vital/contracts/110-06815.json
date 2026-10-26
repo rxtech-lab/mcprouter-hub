@@ -1,0 +1,62 @@
+{
+  "dimensions": {
+    "ACT": [
+      "",
+      "ACT-EA",
+      "ACT-EI",
+      "EI-FTS",
+      "EI-HM",
+      "EI-OTH_XFH"
+    ],
+    "DC": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T"
+    ]
+  },
+  "indicators": {
+    "PP": [
+      "ACT",
+      "DC"
+    ]
+  },
+  "units": {
+    "en": {
+      "PP": {
+        "No. ('000)": "No. ('000)",
+        "Percentage share in respective district (%)": "Percentage share in respective district (%)"
+      }
+    },
+    "tc": {
+      "PP": {
+        "千人": "No. ('000)",
+        "在個別分區中的百分比（%）": "Percentage share in respective district (%)"
+      }
+    },
+    "sc": {
+      "PP": {
+        "千人": "No. ('000)",
+        "在个别分区中的百分比（%）": "Percentage share in respective district (%)"
+      }
+    }
+  },
+  "frequencies": [
+    "Y"
+  ]
+}

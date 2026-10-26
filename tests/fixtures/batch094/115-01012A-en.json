@@ -1,0 +1,84 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=115-01012A&api_popup=1"
+    },
+    "title": "Monthly number of live births by sex",
+    "tablenote": [
+      "Figures refer to the total number of live births born in Hong Kong in the reference period counted by the occurrence time of the events (i.e. births actually taking place in that reference period).",
+      "p Provisional figure"
+    ],
+    "source": "Demographic Statistics Section (1), Census and Statistics Department (Enquiry telephone no. : 3863 2702  Enquiry e-mail : population@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 2019,
+      "started": "2026-10-26T04:02:04+00:00",
+      "finished": "2026-10-26T04:02:05+00:00",
+      "durationSeconds": 0.275565
+    }
+  },
+  "dataSet": [
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "BIRTH",
+      "svDesc": "Number",
+      "figure": 110884,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "Female",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "BIRTH",
+      "svDesc": "Number",
+      "figure": 53523,
+      "sd_value": ""
+    },
+    {
+      "SEX": "M",
+      "SEXDesc": "Male",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "BIRTH",
+      "svDesc": "Number",
+      "figure": 57361,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "M",
+      "period": "197601",
+      "sv": "BIRTH",
+      "svDesc": "Number",
+      "figure": 6264,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "M",
+      "period": "202601",
+      "sv": "BIRTH",
+      "svDesc": "Number",
+      "figure": 2585,
+      "sd_value": "p"
+    },
+    {
+      "SEX": "M",
+      "SEXDesc": "Male",
+      "freq": "M",
+      "period": "202608",
+      "sv": "BIRTH",
+      "svDesc": "Number",
+      "figure": 1226,
+      "sd_value": "p"
+    }
+  ]
+}

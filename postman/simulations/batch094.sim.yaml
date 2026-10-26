@@ -1,0 +1,5 @@
+simulation: batch094
+routing: path
+mocks:
+  - routeKey: census
+    path: ../mocks/batch094/config.yaml

@@ -1,0 +1,197 @@
+{
+  "dimensions": {
+    "SEX": [
+      "",
+      "F",
+      "M"
+    ]
+  },
+  "indicators": {
+    "BIRTH": [
+      "SEX"
+    ],
+    "CBR": [],
+    "CDIVR": [
+      "SEX"
+    ],
+    "CDR": [],
+    "CMR": [
+      "SEX"
+    ],
+    "DEATH": [
+      "SEX"
+    ],
+    "ELB_M": [
+      "SEX"
+    ],
+    "IMR": [
+      "SEX"
+    ],
+    "MARRIAGE": [],
+    "MED_AGE_1STM": [
+      "SEX"
+    ],
+    "MED_W_FIRST_B": [
+      "SEX"
+    ],
+    "MMR": [],
+    "NI": [],
+    "SDR": [],
+    "TFR_XFDH": []
+  },
+  "units": {
+    "en": {
+      "BIRTH": {
+        "('000)": "('000)",
+        "Year-on-year % change": "Year-on-year % change"
+      },
+      "CBR": {
+        "Rate": "Rate"
+      },
+      "CDIVR": {
+        "Rate": "Rate"
+      },
+      "CDR": {
+        "Rate": "Rate"
+      },
+      "CMR": {
+        "Rate": "Rate"
+      },
+      "DEATH": {
+        "('000)": "('000)",
+        "Year-on-year % change": "Year-on-year % change"
+      },
+      "ELB_M": {
+        "(years)": "(years)"
+      },
+      "IMR": {
+        "Rate": "Rate"
+      },
+      "MARRIAGE": {
+        "('000)": "('000)",
+        "Year-on-year % change": "Year-on-year % change"
+      },
+      "MED_AGE_1STM": {
+        "(years)": "(years)"
+      },
+      "MED_W_FIRST_B": {
+        "(years)": "(years)"
+      },
+      "MMR": {
+        "Ratio": "Ratio"
+      },
+      "NI": {
+        "Rate": "Rate"
+      },
+      "SDR": {
+        "Rate": "Rate"
+      },
+      "TFR_XFDH": {
+        "Rate": "Rate"
+      }
+    },
+    "tc": {
+      "BIRTH": {
+        "('000)": "('000)",
+        "按年變動百分率": "Year-on-year % change"
+      },
+      "CBR": {
+        "比率": "Rate"
+      },
+      "CDIVR": {
+        "比率": "Rate"
+      },
+      "CDR": {
+        "比率": "Rate"
+      },
+      "CMR": {
+        "比率": "Rate"
+      },
+      "DEATH": {
+        "('000)": "('000)",
+        "按年變動百分率": "Year-on-year % change"
+      },
+      "ELB_M": {
+        "（年）": "(years)"
+      },
+      "IMR": {
+        "比率": "Rate"
+      },
+      "MARRIAGE": {
+        "('000)": "('000)",
+        "按年變動百分率": "Year-on-year % change"
+      },
+      "MED_AGE_1STM": {
+        "（歲）": "(years)"
+      },
+      "MED_W_FIRST_B": {
+        "（歲）": "(years)"
+      },
+      "MMR": {
+        "比率": "Ratio"
+      },
+      "NI": {
+        "比率": "Rate"
+      },
+      "SDR": {
+        "比率": "Rate"
+      },
+      "TFR_XFDH": {
+        "比率": "Rate"
+      }
+    },
+    "sc": {
+      "BIRTH": {
+        "('000)": "('000)",
+        "按年变动百分率": "Year-on-year % change"
+      },
+      "CBR": {
+        "比率": "Rate"
+      },
+      "CDIVR": {
+        "比率": "Rate"
+      },
+      "CDR": {
+        "比率": "Rate"
+      },
+      "CMR": {
+        "比率": "Rate"
+      },
+      "DEATH": {
+        "('000)": "('000)",
+        "按年变动百分率": "Year-on-year % change"
+      },
+      "ELB_M": {
+        "（年）": "(years)"
+      },
+      "IMR": {
+        "比率": "Rate"
+      },
+      "MARRIAGE": {
+        "('000)": "('000)",
+        "按年变动百分率": "Year-on-year % change"
+      },
+      "MED_AGE_1STM": {
+        "（岁）": "(years)"
+      },
+      "MED_W_FIRST_B": {
+        "（岁）": "(years)"
+      },
+      "MMR": {
+        "比率": "Ratio"
+      },
+      "NI": {
+        "比率": "Rate"
+      },
+      "SDR": {
+        "比率": "Rate"
+      },
+      "TFR_XFDH": {
+        "比率": "Rate"
+      }
+    }
+  },
+  "frequencies": [
+    "Y"
+  ]
+}

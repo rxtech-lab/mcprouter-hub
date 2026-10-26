@@ -1,0 +1,247 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=115-01011&api_popup=1"
+    },
+    "title": "生命事件",
+    "tablenote": [
+      "1961年至1995年與人口有關的數字是根據「廣義時點」方法編製，而1996年及以後的數字是根據「居住人口」方法編製。",
+      "由衞生署編制的孕婦死亡比率是按指定期間根據香港法例第174章《生死登記條例》登記的出生及死亡人數而編製。由於部分孕婦死亡個案須待死因裁判官完成調查後才予以登記，因此這些個案可能於死亡發生的同年或其後年份登記。以2021年為例，當年登記的三宗孕婦死亡個案，分別發生於2016年、2020年及2021年。",
+      "數字以粗出生率減去粗死亡率計算，反映僅由出生和死亡所造成的人口變動。",
+      "不包括女性外籍家庭傭工。",
+      "1981年後的生育率均是用沒有包括女性外籍家庭傭工的人口作分母編製。載於本表內的總和生育率與較早期的數字或有不同，部份原因是由於在編製總和生育率時所採用的內地女性在香港所生嬰兒的涵蓋範圍已作出修訂，持中國護照過境的內地女性（而其配偶為香港居民）在香港所生的嬰兒也包括在內。",
+      "根據2021年人口普查參考時刻的人口年齡及性別分布情況作為標準而計算。",
+      "數字是統計期間內按事件發生時間計算的香港活產嬰兒總數（即在該統計期間實際發生的出生）。",
+      "數字是統計期間內按事件發生時間計算的死亡總數（即在該統計期間內實際發生的死亡）。",
+      "「總計」包括性別不詳的死亡人數。",
+      "N.A. 沒有數字",
+      "‡ 由於2022年死亡率在2019冠狀病毒病疫情期間異常地高，請小心詮釋2022年的出生時平均預期壽命。",
+      "p 臨時數字",
+      "[φ3] 數字代表增減少於 0.05%。"
+    ],
+    "source": "政府統計處人口統計組(一) (查詢電話：3863 2702  查詢電郵：population@censtatd.gov.hk)  衞生署衞生統計科 (查詢電話：3586 2060  查詢電郵：enquiries@dh.gov.hk)",
+    "count": {
+      "noOfRecords": 1984,
+      "started": "2026-10-26T04:02:04+00:00",
+      "finished": "2026-10-26T04:02:04+00:00",
+      "durationSeconds": 0.049356
+    }
+  },
+  "dataSet": [
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "ELB_M",
+      "svDesc": "（年）",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "SEX": "M",
+      "SEXDesc": "男",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "ELB_M",
+      "svDesc": "（年）",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "freq": "Y",
+      "period": "1971",
+      "sv": "ELB_M",
+      "svDesc": "（年）",
+      "figure": 75.3,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "freq": "Y",
+      "period": "1984",
+      "sv": "ELB_M",
+      "svDesc": "（年）",
+      "figure": 79,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "freq": "Y",
+      "period": "2022",
+      "sv": "ELB_M",
+      "svDesc": "（年）",
+      "figure": 86.8,
+      "sd_value": "‡"
+    },
+    {
+      "freq": "Y",
+      "period": "1961",
+      "sv": "MARRIAGE",
+      "svDesc": "('000)",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "Y",
+      "period": "1961",
+      "sv": "MARRIAGE",
+      "svDesc": "按年變動百分率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "MED_AGE_1STM",
+      "svDesc": "（歲）",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "1971",
+      "sv": "IMR",
+      "svDesc": "比率",
+      "figure": 17.7,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "1976",
+      "sv": "MED_W_FIRST_B",
+      "svDesc": "（歲）",
+      "figure": 24.4,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "1961",
+      "sv": "MMR",
+      "svDesc": "比率",
+      "figure": 46,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "2025",
+      "sv": "MMR",
+      "svDesc": "比率",
+      "figure": 0,
+      "sd_value": "p"
+    },
+    {
+      "freq": "Y",
+      "period": "1961",
+      "sv": "NI",
+      "svDesc": "比率",
+      "figure": 28.9,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "1961",
+      "sv": "TFR_XFDH",
+      "svDesc": "比率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "freq": "Y",
+      "period": "1971",
+      "sv": "SDR",
+      "svDesc": "比率",
+      "figure": 19.2,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "1972",
+      "sv": "CDIVR",
+      "svDesc": "比率",
+      "figure": 0.09,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "BIRTH",
+      "svDesc": "('000)",
+      "figure": 110.9,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "2002",
+      "sv": "BIRTH",
+      "svDesc": "按年變動百分率",
+      "figure": 0,
+      "sd_value": "[φ3]"
+    },
+    {
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CBR",
+      "svDesc": "比率",
+      "figure": 35,
+      "sd_value": ""
+    },
+    {
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CDR",
+      "svDesc": "比率",
+      "figure": 6.1,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "CMR",
+      "svDesc": "比率",
+      "figure": "",
+      "sd_value": "N.A."
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "DEATH",
+      "svDesc": "('000)",
+      "figure": 19.3,
+      "sd_value": ""
+    },
+    {
+      "SEX": "M",
+      "SEXDesc": "男",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DEATH",
+      "svDesc": "按年變動百分率",
+      "figure": -0.9,
+      "sd_value": ""
+    }
+  ]
+}

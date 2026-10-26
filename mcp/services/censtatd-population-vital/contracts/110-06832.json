@@ -1,0 +1,86 @@
+{
+  "dimensions": {
+    "DC": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T"
+    ]
+  },
+  "indicators": {
+    "SEX_RATIO": [
+      "DC"
+    ],
+    "SEX_RATIO_LF": [
+      "DC"
+    ],
+    "SEX_RATIO_LF_XFDH": [
+      "DC"
+    ],
+    "SEX_RATIO_XFDH": [
+      "DC"
+    ]
+  },
+  "units": {
+    "en": {
+      "SEX_RATIO": {
+        "Ratio": "Ratio"
+      },
+      "SEX_RATIO_LF": {
+        "Ratio": "Ratio"
+      },
+      "SEX_RATIO_LF_XFDH": {
+        "Ratio": "Ratio"
+      },
+      "SEX_RATIO_XFDH": {
+        "Ratio": "Ratio"
+      }
+    },
+    "tc": {
+      "SEX_RATIO": {
+        "比率": "Ratio"
+      },
+      "SEX_RATIO_LF": {
+        "比率": "Ratio"
+      },
+      "SEX_RATIO_LF_XFDH": {
+        "比率": "Ratio"
+      },
+      "SEX_RATIO_XFDH": {
+        "比率": "Ratio"
+      }
+    },
+    "sc": {
+      "SEX_RATIO": {
+        "比率": "Ratio"
+      },
+      "SEX_RATIO_LF": {
+        "比率": "Ratio"
+      },
+      "SEX_RATIO_LF_XFDH": {
+        "比率": "Ratio"
+      },
+      "SEX_RATIO_XFDH": {
+        "比率": "Ratio"
+      }
+    }
+  },
+  "frequencies": [
+    "Y"
+  ]
+}

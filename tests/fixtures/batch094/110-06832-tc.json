@@ -1,0 +1,256 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=110-06832&api_popup=1"
+    },
+    "title": "按區議會分區劃分的陸上非住院人口性別比率及勞動人口性別比率",
+    "tablenote": [
+      "數字是根據該年1月至12月進行的「綜合住戶統計調查」結果，以及年中人口估計數字而編製，可被視為反映全年的整體情況。     「綜合住戶統計調查」涵蓋陸上非住院人口，因而並不包括 (a) 公共機構／社團院舍的住院人士；以及 (b)水上居民。陸上非住院人口約佔居港人口的99%。",
+      "性別比率是指男性數目相對每千名女性的比率。",
+      "自 2016 年起所採用的灣仔區議會及東區區議會分界，不同於在2015 年及較早年份所採用的分界，因此本統計表內的2016 年及以後的灣仔區議會及東區區議會的統計數字不可與2015 年及較早年份作嚴格的比較。",
+      "勞動人口是指15歲及以上陸上非住院人口，並符合就業人士或失業人士的定義。公共機構／社團院舍的住院人士及水上居民並不包括在內。"
+    ],
+    "source": "綜合住戶統計調查  政府統計處社會分析及研究組 (查詢電話：3863 2791 查詢電郵：ghs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 1900,
+      "started": "2026-10-26T04:02:04+00:00",
+      "finished": "2026-10-26T04:02:04+00:00",
+      "durationSeconds": 0.045527
+    }
+  },
+  "dataSet": [
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 954,
+      "sd_value": ""
+    },
+    {
+      "DC": "A",
+      "DCDesc": "中西區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 877,
+      "sd_value": ""
+    },
+    {
+      "DC": "B",
+      "DCDesc": "灣仔區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 815,
+      "sd_value": ""
+    },
+    {
+      "DC": "C",
+      "DCDesc": "東區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 890,
+      "sd_value": ""
+    },
+    {
+      "DC": "D",
+      "DCDesc": "南區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 930,
+      "sd_value": ""
+    },
+    {
+      "DC": "E",
+      "DCDesc": "油尖旺區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 998,
+      "sd_value": ""
+    },
+    {
+      "DC": "F",
+      "DCDesc": "深水埗區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 992,
+      "sd_value": ""
+    },
+    {
+      "DC": "G",
+      "DCDesc": "九龍城區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 912,
+      "sd_value": ""
+    },
+    {
+      "DC": "H",
+      "DCDesc": "黃大仙區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 979,
+      "sd_value": ""
+    },
+    {
+      "DC": "J",
+      "DCDesc": "觀塘區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 988,
+      "sd_value": ""
+    },
+    {
+      "DC": "K",
+      "DCDesc": "荃灣區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 916,
+      "sd_value": ""
+    },
+    {
+      "DC": "L",
+      "DCDesc": "屯門區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 987,
+      "sd_value": ""
+    },
+    {
+      "DC": "M",
+      "DCDesc": "元朗區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 1012,
+      "sd_value": ""
+    },
+    {
+      "DC": "N",
+      "DCDesc": "北區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 965,
+      "sd_value": ""
+    },
+    {
+      "DC": "P",
+      "DCDesc": "大埔區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 918,
+      "sd_value": ""
+    },
+    {
+      "DC": "Q",
+      "DCDesc": "西貢區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 945,
+      "sd_value": ""
+    },
+    {
+      "DC": "R",
+      "DCDesc": "沙田區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 942,
+      "sd_value": ""
+    },
+    {
+      "DC": "S",
+      "DCDesc": "葵青區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 1032,
+      "sd_value": ""
+    },
+    {
+      "DC": "T",
+      "DCDesc": "離島區",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "比率",
+      "figure": 1019,
+      "sd_value": ""
+    },
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO_LF",
+      "svDesc": "比率",
+      "figure": 1341,
+      "sd_value": ""
+    },
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO_LF_XFDH",
+      "svDesc": "比率",
+      "figure": 1530,
+      "sd_value": ""
+    },
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO_XFDH",
+      "svDesc": "比率",
+      "figure": 1007,
+      "sd_value": ""
+    },
+    {
+      "DC": "T",
+      "DCDesc": "離島區",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEX_RATIO_XFDH",
+      "svDesc": "比率",
+      "figure": 893,
+      "sd_value": ""
+    }
+  ]
+}

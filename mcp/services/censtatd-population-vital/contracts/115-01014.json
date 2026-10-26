@@ -1,0 +1,58 @@
+{
+  "dimensions": {
+    "WBG_HKR": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  "indicators": {
+    "ICAMR": [
+      "WBG_HKR"
+    ],
+    "MARRIAGE": [
+      "WBG_HKR"
+    ],
+    "MARRIAGE_ICAMR": [
+      "WBG_HKR"
+    ]
+  },
+  "units": {
+    "en": {
+      "ICAMR": {
+        "Number": "Number"
+      },
+      "MARRIAGE": {
+        "Number": "Number"
+      },
+      "MARRIAGE_ICAMR": {
+        "Number": "Number"
+      }
+    },
+    "tc": {
+      "ICAMR": {
+        "數目": "Number"
+      },
+      "MARRIAGE": {
+        "數目": "Number"
+      },
+      "MARRIAGE_ICAMR": {
+        "數目": "Number"
+      }
+    },
+    "sc": {
+      "ICAMR": {
+        "数目": "Number"
+      },
+      "MARRIAGE": {
+        "数目": "Number"
+      },
+      "MARRIAGE_ICAMR": {
+        "数目": "Number"
+      }
+    }
+  },
+  "frequencies": [
+    "Y"
+  ]
+}
