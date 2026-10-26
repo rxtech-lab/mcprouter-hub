@@ -1,0 +1,35 @@
+{
+  "dimensions": {
+    "PER_STATUS_PARENT": [
+      "",
+      "mw_np",
+      "mw_oth",
+      "mw_p"
+    ]
+  },
+  "indicators": {
+    "MAINLAND_WM": [
+      "PER_STATUS_PARENT"
+    ]
+  },
+  "units": {
+    "en": {
+      "MAINLAND_WM": {
+        "Number": "Number"
+      }
+    },
+    "tc": {
+      "MAINLAND_WM": {
+        "數目": "Number"
+      }
+    },
+    "sc": {
+      "MAINLAND_WM": {
+        "数目": "Number"
+      }
+    }
+  },
+  "frequencies": [
+    "Y"
+  ]
+}

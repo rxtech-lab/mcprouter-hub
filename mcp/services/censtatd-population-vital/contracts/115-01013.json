@@ -1,0 +1,46 @@
+{
+  "dimensions": {
+    "AGE": [
+      "",
+      "16-17",
+      "18-19",
+      "20-24",
+      "25-29",
+      "30-34",
+      "35-39",
+      "40-44",
+      "45-49",
+      "50_and_over"
+    ],
+    "SEX": [
+      "F",
+      "M"
+    ]
+  },
+  "indicators": {
+    "PMFT": [
+      "AGE",
+      "SEX"
+    ]
+  },
+  "units": {
+    "en": {
+      "PMFT": {
+        "Number": "Number"
+      }
+    },
+    "tc": {
+      "PMFT": {
+        "數目": "Number"
+      }
+    },
+    "sc": {
+      "PMFT": {
+        "数目": "Number"
+      }
+    }
+  },
+  "frequencies": [
+    "Y"
+  ]
+}

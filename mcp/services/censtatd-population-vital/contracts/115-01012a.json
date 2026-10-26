@@ -1,0 +1,35 @@
+{
+  "dimensions": {
+    "SEX": [
+      "",
+      "F",
+      "M"
+    ]
+  },
+  "indicators": {
+    "BIRTH": [
+      "SEX"
+    ]
+  },
+  "units": {
+    "en": {
+      "BIRTH": {
+        "Number": "Number"
+      }
+    },
+    "tc": {
+      "BIRTH": {
+        "數目": "Number"
+      }
+    },
+    "sc": {
+      "BIRTH": {
+        "数目": "Number"
+      }
+    }
+  },
+  "frequencies": [
+    "M",
+    "Y"
+  ]
+}

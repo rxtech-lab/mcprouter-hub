@@ -1,0 +1,67 @@
+{
+  "dimensions": {
+    "DC": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T"
+    ],
+    "MARITAL": [
+      "",
+      "1",
+      "2.1",
+      "2.2",
+      "2.3"
+    ],
+    "SEX": [
+      "",
+      "F",
+      "M"
+    ]
+  },
+  "indicators": {
+    "PP15": [
+      "DC",
+      "MARITAL",
+      "SEX"
+    ]
+  },
+  "units": {
+    "en": {
+      "PP15": {
+        "No. ('000)": "No. ('000)",
+        "Percentage share in respective sex and district (%)": "Percentage share in respective sex and district (%)"
+      }
+    },
+    "tc": {
+      "PP15": {
+        "千人": "No. ('000)",
+        "在個別性別及分區中的百分比（%）": "Percentage share in respective sex and district (%)"
+      }
+    },
+    "sc": {
+      "PP15": {
+        "千人": "No. ('000)",
+        "在个别性别及分区中的百分比（%）": "Percentage share in respective sex and district (%)"
+      }
+    }
+  },
+  "frequencies": [
+    "Y"
+  ]
+}

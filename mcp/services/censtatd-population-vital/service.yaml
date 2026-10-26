@@ -1,0 +1,1043 @@
+{
+  "id": "censtatd-population-vital",
+  "title": "Hong Kong District Population and Vital Statistics",
+  "description": "Official C&SD district household survey population, demographic ratios, births, first marriages and cross-boundary marriages. Historical statistical series; original units and notes retained.",
+  "apis": [
+    "API-0309",
+    "API-0310",
+    "API-0311",
+    "API-0312",
+    "API-0313",
+    "API-0314",
+    "API-0315",
+    "API-0316",
+    "API-0317",
+    "API-0318"
+  ],
+  "datasets": [
+    "hk-censtatd-tablechart-110-06814",
+    "hk-censtatd-tablechart-110-06815",
+    "hk-censtatd-tablechart-110-06831",
+    "hk-censtatd-tablechart-110-06832",
+    "hk-censtatd-tablechart-110-06833",
+    "hk-censtatd-tablechart-115-01011",
+    "hk-censtatd-tablechart-115-01012",
+    "hk-censtatd-tablechart-115-01012a",
+    "hk-censtatd-tablechart-115-01013",
+    "hk-censtatd-tablechart-115-01014"
+  ],
+  "baseUrl": "https://www.censtatd.gov.hk/api",
+  "lang": {
+    "param": "lang",
+    "map": {
+      "en": "en",
+      "tc": "tc",
+      "sc": "sc"
+    }
+  },
+  "cacheTtl": 3600,
+  "tools": [
+    {
+      "name": "district_population_marital_status",
+      "title": "Land-based non-institutional population aged 15 and over by District Council district, sex and marital status",
+      "description": "Land-based non-institutional population aged 15 and over by District Council district, sex and marital status. Official Table 110-06814. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-06814",
+      "path": "/get.php",
+      "query": {
+        "id": "110-06814",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "PP15"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "No. ('000)",
+            "Percentage share in respective sex and district (%)"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "DC": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T"
+          ],
+          "in": "local",
+          "description": "Exact provider DC code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "MARITAL": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "1",
+            "2.1",
+            "2.2",
+            "2.3"
+          ],
+          "in": "local",
+          "description": "Exact provider MARITAL code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "SEX": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "F",
+            "M"
+          ],
+          "in": "local",
+          "description": "Exact provider SEX code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "district_population_economic_activity",
+      "title": "Land-based non-institutional population by District Council district and economic activity status",
+      "description": "Land-based non-institutional population by District Council district and economic activity status. Official Table 110-06815. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-06815",
+      "path": "/get.php",
+      "query": {
+        "id": "110-06815",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "PP"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "No. ('000)",
+            "Percentage share in respective district (%)"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "ACT": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "ACT-EA",
+            "ACT-EI",
+            "EI-FTS",
+            "EI-HM",
+            "EI-OTH_XFH"
+          ],
+          "in": "local",
+          "description": "Exact provider ACT code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "DC": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T"
+          ],
+          "in": "local",
+          "description": "Exact provider DC code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "district_population_median_age",
+      "title": "Median age of land-based non-institutional population and labour force by District Council district and sex",
+      "description": "Median age of land-based non-institutional population and labour force by District Council district and sex. Official Table 110-06831. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-06831",
+      "path": "/get.php",
+      "query": {
+        "id": "110-06831",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "MED_AGE_LF",
+            "MED_AGE_LF_XFDH",
+            "MED_AGE_POP",
+            "MED_AGE_POP_XFDH"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "(Years)"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "DC": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T"
+          ],
+          "in": "local",
+          "description": "Exact provider DC code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "SEX": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "F",
+            "M"
+          ],
+          "in": "local",
+          "description": "Exact provider SEX code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "district_population_sex_ratio",
+      "title": "Sex ratio of land-based non-institutional population and labour force by District Council district",
+      "description": "Sex ratio of land-based non-institutional population and labour force by District Council district. Official Table 110-06832. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-06832",
+      "path": "/get.php",
+      "query": {
+        "id": "110-06832",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "SEX_RATIO",
+            "SEX_RATIO_LF",
+            "SEX_RATIO_LF_XFDH",
+            "SEX_RATIO_XFDH"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "Ratio"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "DC": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T"
+          ],
+          "in": "local",
+          "description": "Exact provider DC code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "district_population_dependency_ratio",
+      "title": "Overall dependency ratio by District Council district",
+      "description": "Overall dependency ratio by District Council district. Official Table 110-06833. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-06833",
+      "path": "/get.php",
+      "query": {
+        "id": "110-06833",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "DEP_RATIO",
+            "DEP_RATIO_XFDH"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "Ratio"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "DC": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T"
+          ],
+          "in": "local",
+          "description": "Exact provider DC code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "population_vital_events",
+      "title": "Vital events",
+      "description": "Vital events. Official Table 115-01011. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-115-01011",
+      "path": "/get.php",
+      "query": {
+        "id": "115-01011",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "BIRTH",
+            "CBR",
+            "CDIVR",
+            "CDR",
+            "CMR",
+            "DEATH",
+            "ELB_M",
+            "IMR",
+            "MARRIAGE",
+            "MED_AGE_1STM",
+            "MED_W_FIRST_B",
+            "MMR",
+            "NI",
+            "SDR",
+            "TFR_XFDH"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "('000)",
+            "(years)",
+            "Rate",
+            "Ratio",
+            "Year-on-year % change"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "SEX": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "F",
+            "M"
+          ],
+          "in": "local",
+          "description": "Exact provider SEX code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "births_mainland_mothers",
+      "title": "Number of live births born in Hong Kong to Mainland women",
+      "description": "Number of live births born in Hong Kong to Mainland women. Official Table 115-01012. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-115-01012",
+      "path": "/get.php",
+      "query": {
+        "id": "115-01012",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "MAINLAND_WM"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "Number"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "PER_STATUS_PARENT": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "mw_np",
+            "mw_oth",
+            "mw_p"
+          ],
+          "in": "local",
+          "description": "Exact provider PER_STATUS_PARENT code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "monthly_live_births_by_sex",
+      "title": "Monthly number of live births by sex",
+      "description": "Monthly number of live births by sex. Official Table 115-01012A. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-115-01012a",
+      "path": "/get.php",
+      "query": {
+        "id": "115-01012A",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "M",
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}(0[1-9]|1[0-2])?$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "BIRTH"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "Number"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "SEX": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "F",
+            "M"
+          ],
+          "in": "local",
+          "description": "Exact provider SEX code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "first_marriages_by_sex_age",
+      "title": "Persons marrying for the first time by sex and age group",
+      "description": "Persons marrying for the first time by sex and age group. Official Table 115-01013. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-115-01013",
+      "path": "/get.php",
+      "query": {
+        "id": "115-01013",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "PMFT"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "Number"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "AGE": {
+          "type": "string",
+          "enum": [
+            "TOTAL",
+            "16-17",
+            "18-19",
+            "20-24",
+            "25-29",
+            "30-34",
+            "35-39",
+            "40-44",
+            "45-49",
+            "50_and_over"
+          ],
+          "in": "local",
+          "description": "Exact provider AGE code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "SEX": {
+          "type": "string",
+          "enum": [
+            "F",
+            "M"
+          ],
+          "in": "local",
+          "description": "Exact provider SEX code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "name": "cross_boundary_marriages_certificates",
+      "title": "Number of marriages registered in Hong Kong with both bridegrooms and brides being Hong Kong residents, bridegrooms/brides from Chinese Mainland and number of issuance of Certificate of Absence of Marriage Records (claimed for the purpose of marrying in Chinese Mainland)",
+      "description": "Number of marriages registered in Hong Kong with both bridegrooms and brides being Hong Kong residents, bridegrooms/brides from Chinese Mainland and number of issuance of Certificate of Absence of Marriage Records (claimed for the purpose of marrying in Chinese Mainland). Official Table 115-01014. Newest observations first; original figure, svDesc, dimensions and sd_value flags preserved; empty figures are not zero. measure uses English unit labels across languages. Totals overlap children; consult notes for definitions, survey exclusions, revisions and comparability. Source: https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-115-01014",
+      "path": "/get.php",
+      "query": {
+        "id": "115-01014",
+        "full_series": 1
+      },
+      "transform": {
+        "response": "normalize"
+      },
+      "input": {
+        "freq": {
+          "type": "string",
+          "enum": [
+            "Y"
+          ],
+          "in": "local",
+          "description": "Y annual; M monthly where published. Monthly birth table also contains annual totals; do not add the two."
+        },
+        "period": {
+          "type": "string",
+          "pattern": "^\\d{4}$",
+          "in": "local",
+          "description": "Source year YYYY or month YYYYMM. A year includes all matching annual and monthly records; use freq to select one."
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "ICAMR",
+            "MARRIAGE",
+            "MARRIAGE_ICAMR"
+          ],
+          "in": "local",
+          "description": "Exact source statistical series code. Counts, rates, ratios and percentage changes are separate measures."
+        },
+        "measure": {
+          "type": "string",
+          "enum": [
+            "Number"
+          ],
+          "in": "local",
+          "description": "English source unit label, stable across languages. Distinguishes levels and percentages for the same indicator."
+        },
+        "WBG_HKR": {
+          "type": "string",
+          "enum": [
+            "1",
+            "2",
+            "3"
+          ],
+          "in": "local",
+          "description": "Exact provider WBG_HKR code as a string; TOTAL selects an explicit empty source code. An absent dimension is not a total. Source value types and labels are retained."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20,
+          "in": "local",
+          "description": "Maximum rows per page, also bounded to 100 KB of records."
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000000,
+          "default": 0,
+          "in": "local",
+          "description": "Continue with nextOffset and identical filters."
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "tc",
+            "sc"
+          ],
+          "in": "local",
+          "description": "Published source language; original descriptions, notes and source flags retained.",
+          "default": "en"
+        }
+      },
+      "timeoutMs": 30000
+    }
+  ]
+}

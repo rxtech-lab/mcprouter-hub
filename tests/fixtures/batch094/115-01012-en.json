@@ -1,0 +1,74 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=115-01012&api_popup=1"
+    },
+    "title": "Number of live births born in Hong Kong to Mainland women",
+    "tablenote": [
+      "Include Hong Kong Non-permanent Residents (such as persons from the Mainland having resided in Hong Kong for less than 7 years) and non-Hong Kong residents.",
+      "Mainland mothers did not provide the father’s residential status during birth registration."
+    ],
+    "source": "Demographic Statistics Section (1), Census and Statistics Department (Enquiry telephone no. : 3863 2702  Enquiry e-mail : population@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 119,
+      "started": "2026-10-26T04:02:04+00:00",
+      "finished": "2026-10-26T04:02:04+00:00",
+      "durationSeconds": 0.021428
+    }
+  },
+  "dataSet": [
+    {
+      "PER_STATUS_PARENT": "",
+      "PER_STATUS_PARENTDesc": "Total",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MAINLAND_WM",
+      "svDesc": "Number",
+      "figure": 394,
+      "sd_value": ""
+    },
+    {
+      "PER_STATUS_PARENT": "mw_np",
+      "PER_STATUS_PARENTDesc": "Whose spouses are not Hong Kong Permanent Residents",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "MAINLAND_WM",
+      "svDesc": "Number",
+      "figure": 458,
+      "sd_value": ""
+    },
+    {
+      "PER_STATUS_PARENT": "mw_p",
+      "PER_STATUS_PARENTDesc": "Whose spouses are Hong Kong Permanent Residents",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "MAINLAND_WM",
+      "svDesc": "Number",
+      "figure": 5651,
+      "sd_value": ""
+    },
+    {
+      "PER_STATUS_PARENT": "mw_oth",
+      "PER_STATUS_PARENTDesc": "Others",
+      "freq": "Y",
+      "period": "2003",
+      "sv": "MAINLAND_WM",
+      "svDesc": "Number",
+      "figure": 96,
+      "sd_value": ""
+    },
+    {
+      "PER_STATUS_PARENT": "mw_p",
+      "PER_STATUS_PARENTDesc": "Whose spouses are Hong Kong Permanent Residents",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "MAINLAND_WM",
+      "svDesc": "Number",
+      "figure": 1436,
+      "sd_value": ""
+    }
+  ]
+}

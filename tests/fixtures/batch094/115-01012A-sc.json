@@ -1,0 +1,84 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=115-01012A&api_popup=1"
+    },
+    "title": "按性别划分的每月活产婴儿数目",
+    "tablenote": [
+      "数字是统计期间内按事件发生时间计算的香港活产婴儿总数（即在该统计期间实际发生的出生）。",
+      "p 临时数字"
+    ],
+    "source": "政府统计处人口统计组(一) (查询电话：3863 2702  查询电邮：population@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 2019,
+      "started": "2026-10-26T04:02:05+00:00",
+      "finished": "2026-10-26T04:02:05+00:00",
+      "durationSeconds": 0.241624
+    }
+  },
+  "dataSet": [
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "BIRTH",
+      "svDesc": "数目",
+      "figure": 110884,
+      "sd_value": ""
+    },
+    {
+      "SEX": "F",
+      "SEXDesc": "女",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "BIRTH",
+      "svDesc": "数目",
+      "figure": 53523,
+      "sd_value": ""
+    },
+    {
+      "SEX": "M",
+      "SEXDesc": "男",
+      "freq": "Y",
+      "period": "1961",
+      "sv": "BIRTH",
+      "svDesc": "数目",
+      "figure": 57361,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "M",
+      "period": "197601",
+      "sv": "BIRTH",
+      "svDesc": "数目",
+      "figure": 6264,
+      "sd_value": ""
+    },
+    {
+      "SEX": "",
+      "SEXDesc": "Total",
+      "freq": "M",
+      "period": "202601",
+      "sv": "BIRTH",
+      "svDesc": "数目",
+      "figure": 2585,
+      "sd_value": "p"
+    },
+    {
+      "SEX": "M",
+      "SEXDesc": "男",
+      "freq": "M",
+      "period": "202608",
+      "sv": "BIRTH",
+      "svDesc": "数目",
+      "figure": 1226,
+      "sd_value": "p"
+    }
+  ]
+}

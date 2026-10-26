@@ -1,0 +1,84 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/tc/web_table.html?id=115-01014&api_popup=1"
+    },
+    "title": "在香港登記結婚而新郎及新娘均為香港人的數目、新郎／新娘為中國內地人士的數目及獲發「無結婚紀錄證明書」（聲稱作為在中國內地申請結婚之用）的人士數目",
+    "tablenote": [
+      "2010統計年度以前的數字是根據入境事務處按月提供的個人結婚登記紀錄內的兩項資料，即「來港前居住的地方」是中國內地和「在香港的逗留時間」少於1年，來估算內地新郎／新娘的數字。這數字可能包括持有單程通行證來港並於不足1年內結婚的人士。然而，有關數字仍是提供跨境婚姻統計一個很好的指標。由2010統計年度起，除上述兩項資料外，採用更多相關的資料（例如所持旅行證件類別）用以改良內地新郎／新娘的估算。",
+      "由於獲發「無結婚紀錄證明書」（聲稱作為在中國內地申請結婚之用）人士最後未必結婚，數字只能作跨境婚姻統計的一個粗略指標。"
+    ],
+    "source": "政府統計處人口統計組(一) (查詢電話：3863 2702  查詢電郵：population@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 280,
+      "started": "2026-10-26T04:02:05+00:00",
+      "finished": "2026-10-26T04:02:05+00:00",
+      "durationSeconds": 0.00867
+    }
+  },
+  "dataSet": [
+    {
+      "WBG_HKR": 1,
+      "WBG_HKRDesc": "新郎及新娘均為香港人",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MARRIAGE",
+      "svDesc": "數目",
+      "figure": 40042,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 2,
+      "WBG_HKRDesc": "新郎為香港人而新娘為內地人",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MARRIAGE",
+      "svDesc": "數目",
+      "figure": 703,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 3,
+      "WBG_HKRDesc": "新娘為香港人而新郎為內地人",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MARRIAGE",
+      "svDesc": "數目",
+      "figure": 79,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 2,
+      "WBG_HKRDesc": "新郎為香港人而新娘為內地人",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MARRIAGE_ICAMR",
+      "svDesc": "數目",
+      "figure": 15776,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 2,
+      "WBG_HKRDesc": "新郎為香港人而新娘為內地人",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "ICAMR",
+      "svDesc": "數目",
+      "figure": 15073,
+      "sd_value": ""
+    },
+    {
+      "WBG_HKR": 3,
+      "WBG_HKRDesc": "新娘為香港人而新郎為內地人",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "ICAMR",
+      "svDesc": "數目",
+      "figure": 3356,
+      "sd_value": ""
+    }
+  ]
+}

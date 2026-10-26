@@ -1,0 +1,74 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=115-01012&api_popup=1"
+    },
+    "title": "内地女性在香港所生的活产婴儿数目",
+    "tablenote": [
+      "包括香港非永久性居民（例如从内地来港少于7年的人士）及非香港居民。",
+      "在出生登记时，内地母亲并没有提供婴儿父亲居民身分的资料。"
+    ],
+    "source": "政府统计处人口统计组(一) (查询电话：3863 2702  查询电邮：population@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 119,
+      "started": "2026-10-26T04:02:04+00:00",
+      "finished": "2026-10-26T04:02:04+00:00",
+      "durationSeconds": 0.005286
+    }
+  },
+  "dataSet": [
+    {
+      "PER_STATUS_PARENT": "",
+      "PER_STATUS_PARENTDesc": "Total",
+      "freq": "Y",
+      "period": "1986",
+      "sv": "MAINLAND_WM",
+      "svDesc": "数目",
+      "figure": 394,
+      "sd_value": ""
+    },
+    {
+      "PER_STATUS_PARENT": "mw_np",
+      "PER_STATUS_PARENTDesc": "其配偶为非香港永久性居民",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "MAINLAND_WM",
+      "svDesc": "数目",
+      "figure": 458,
+      "sd_value": ""
+    },
+    {
+      "PER_STATUS_PARENT": "mw_p",
+      "PER_STATUS_PARENTDesc": "其配偶为香港永久性居民",
+      "freq": "Y",
+      "period": "1998",
+      "sv": "MAINLAND_WM",
+      "svDesc": "数目",
+      "figure": 5651,
+      "sd_value": ""
+    },
+    {
+      "PER_STATUS_PARENT": "mw_oth",
+      "PER_STATUS_PARENTDesc": "其他",
+      "freq": "Y",
+      "period": "2003",
+      "sv": "MAINLAND_WM",
+      "svDesc": "数目",
+      "figure": 96,
+      "sd_value": ""
+    },
+    {
+      "PER_STATUS_PARENT": "mw_p",
+      "PER_STATUS_PARENTDesc": "其配偶为香港永久性居民",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "MAINLAND_WM",
+      "svDesc": "数目",
+      "figure": 1436,
+      "sd_value": ""
+    }
+  ]
+}

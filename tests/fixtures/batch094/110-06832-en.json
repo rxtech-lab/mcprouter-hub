@@ -1,0 +1,256 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/en/web_table.html?id=110-06832&api_popup=1"
+    },
+    "title": "Sex ratio of land-based non-institutional population and labour force by District Council district",
+    "tablenote": [
+      "Figures are compiled based on the survey results of the General Household Survey (GHS) from January to December of the year concerned as well as the mid-year population estimates and may be regarded as referring to the overall situation of the whole year.     The GHS covers the land-based non-institutional population and thus does not cover (a) inmates of institutions; and (b) persons living on board vessels.  The land-based non-institutional population constitutes about 99% of the Hong Kong Resident Population.",
+      "Sex ratio refers to the ratio of the number of males per 1 000 females.",
+      "The boundaries of the Wan Chai district and Eastern district adopted since 2016 are different from those adopted in 2015 and earlier years. Therefore, figures of the Wan Chai and Eastern districts for 2016 and thereafter are not strictly comparable with those for 2015 and earlier years in this table.",
+      "Labour force refers to the land-based non-institutional population aged 15 and over who satisfy the criteria for being classified as employed persons or unemployed persons. Inmates of institutions and persons living on board vessels are excluded."
+    ],
+    "source": "General Household Survey Social Analysis and Research Section, Census and Statistics Department (Enquiry telephone no. : 3863 2791 Enquiry e-mail : ghs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 1900,
+      "started": "2026-10-26T04:02:04+00:00",
+      "finished": "2026-10-26T04:02:04+00:00",
+      "durationSeconds": 0.052437
+    }
+  },
+  "dataSet": [
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 954,
+      "sd_value": ""
+    },
+    {
+      "DC": "A",
+      "DCDesc": "Central and Western",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 877,
+      "sd_value": ""
+    },
+    {
+      "DC": "B",
+      "DCDesc": "Wan Chai",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 815,
+      "sd_value": ""
+    },
+    {
+      "DC": "C",
+      "DCDesc": "Eastern",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 890,
+      "sd_value": ""
+    },
+    {
+      "DC": "D",
+      "DCDesc": "Southern",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 930,
+      "sd_value": ""
+    },
+    {
+      "DC": "E",
+      "DCDesc": "Yau Tsim Mong",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 998,
+      "sd_value": ""
+    },
+    {
+      "DC": "F",
+      "DCDesc": "Sham Shui Po",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 992,
+      "sd_value": ""
+    },
+    {
+      "DC": "G",
+      "DCDesc": "Kowloon City",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 912,
+      "sd_value": ""
+    },
+    {
+      "DC": "H",
+      "DCDesc": "Wong Tai Sin",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 979,
+      "sd_value": ""
+    },
+    {
+      "DC": "J",
+      "DCDesc": "Kwun Tong",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 988,
+      "sd_value": ""
+    },
+    {
+      "DC": "K",
+      "DCDesc": "Tsuen Wan",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 916,
+      "sd_value": ""
+    },
+    {
+      "DC": "L",
+      "DCDesc": "Tuen Mun",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 987,
+      "sd_value": ""
+    },
+    {
+      "DC": "M",
+      "DCDesc": "Yuen Long",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 1012,
+      "sd_value": ""
+    },
+    {
+      "DC": "N",
+      "DCDesc": "North",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 965,
+      "sd_value": ""
+    },
+    {
+      "DC": "P",
+      "DCDesc": "Tai Po",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 918,
+      "sd_value": ""
+    },
+    {
+      "DC": "Q",
+      "DCDesc": "Sai Kung",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 945,
+      "sd_value": ""
+    },
+    {
+      "DC": "R",
+      "DCDesc": "Sha Tin",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 942,
+      "sd_value": ""
+    },
+    {
+      "DC": "S",
+      "DCDesc": "Kwai Tsing",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 1032,
+      "sd_value": ""
+    },
+    {
+      "DC": "T",
+      "DCDesc": "Islands",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO",
+      "svDesc": "Ratio",
+      "figure": 1019,
+      "sd_value": ""
+    },
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO_LF",
+      "svDesc": "Ratio",
+      "figure": 1341,
+      "sd_value": ""
+    },
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO_LF_XFDH",
+      "svDesc": "Ratio",
+      "figure": 1530,
+      "sd_value": ""
+    },
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "SEX_RATIO_XFDH",
+      "svDesc": "Ratio",
+      "figure": 1007,
+      "sd_value": ""
+    },
+    {
+      "DC": "T",
+      "DCDesc": "Islands",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "SEX_RATIO_XFDH",
+      "svDesc": "Ratio",
+      "figure": 893,
+      "sd_value": ""
+    }
+  ]
+}

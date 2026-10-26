@@ -1,0 +1,235 @@
+{
+  "header": {
+    "status": {
+      "name": "Success",
+      "code": 0,
+      "description": "Query success",
+      "apiHelp": "https://www.censtatd.gov.hk/sc/web_table.html?id=110-06833&api_popup=1"
+    },
+    "title": "按区议会分区划分的总抚养比率",
+    "tablenote": [
+      "数字是根据该年1月至12月进行的「综合住户统计调查」结果，以及年中人口估计数字而编制，可被视为反映全年的整体情况。     「综合住户统计调查」涵盖陆上非住院人口，因而并不包括 (a) 公共机构／社团院舍的住院人士；以及 (b)水上居民。陆上非住院人口约占居港人口的99%。",
+      "总抚养比率是指15岁以下和65岁及以上人口数目相对每千名15至64岁人口的比率。",
+      "自 2016 年起所采用的湾仔区议会及东区区议会分界，不同于在2015 年及较早年份所采用的分界，因此本统计表内的2016 年及以后的湾仔区议会及东区区议会的统计数字不可与2015 年及较早年份作严格的比较。"
+    ],
+    "source": "综合住户统计调查  政府统计处社会分析及研究组 (查询电话：3863 2791 查询电邮：ghs@censtatd.gov.hk)",
+    "count": {
+      "noOfRecords": 950,
+      "started": "2026-10-26T04:02:04+00:00",
+      "finished": "2026-10-26T04:02:04+00:00",
+      "durationSeconds": 0.021455
+    }
+  },
+  "dataSet": [
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 378,
+      "sd_value": ""
+    },
+    {
+      "DC": "A",
+      "DCDesc": "中西区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 326,
+      "sd_value": ""
+    },
+    {
+      "DC": "B",
+      "DCDesc": "湾仔区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 341,
+      "sd_value": ""
+    },
+    {
+      "DC": "C",
+      "DCDesc": "东区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 382,
+      "sd_value": ""
+    },
+    {
+      "DC": "D",
+      "DCDesc": "南区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 370,
+      "sd_value": ""
+    },
+    {
+      "DC": "E",
+      "DCDesc": "油尖旺区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 377,
+      "sd_value": ""
+    },
+    {
+      "DC": "F",
+      "DCDesc": "深水埗区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 425,
+      "sd_value": ""
+    },
+    {
+      "DC": "G",
+      "DCDesc": "九龙城区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 392,
+      "sd_value": ""
+    },
+    {
+      "DC": "H",
+      "DCDesc": "黄大仙区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 455,
+      "sd_value": ""
+    },
+    {
+      "DC": "J",
+      "DCDesc": "观塘区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 413,
+      "sd_value": ""
+    },
+    {
+      "DC": "K",
+      "DCDesc": "荃湾区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 364,
+      "sd_value": ""
+    },
+    {
+      "DC": "L",
+      "DCDesc": "屯门区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 342,
+      "sd_value": ""
+    },
+    {
+      "DC": "M",
+      "DCDesc": "元朗区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 389,
+      "sd_value": ""
+    },
+    {
+      "DC": "N",
+      "DCDesc": "北区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 409,
+      "sd_value": ""
+    },
+    {
+      "DC": "P",
+      "DCDesc": "大埔区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 377,
+      "sd_value": ""
+    },
+    {
+      "DC": "Q",
+      "DCDesc": "西贡区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 333,
+      "sd_value": ""
+    },
+    {
+      "DC": "R",
+      "DCDesc": "沙田区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 340,
+      "sd_value": ""
+    },
+    {
+      "DC": "S",
+      "DCDesc": "葵青区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 363,
+      "sd_value": ""
+    },
+    {
+      "DC": "T",
+      "DCDesc": "离岛区",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO",
+      "svDesc": "比率",
+      "figure": 391,
+      "sd_value": ""
+    },
+    {
+      "DC": "",
+      "DCDesc": "Total",
+      "freq": "Y",
+      "period": "2001",
+      "sv": "DEP_RATIO_XFDH",
+      "svDesc": "比率",
+      "figure": 393,
+      "sd_value": ""
+    },
+    {
+      "DC": "T",
+      "DCDesc": "离岛区",
+      "freq": "Y",
+      "period": "2025",
+      "sv": "DEP_RATIO_XFDH",
+      "svDesc": "比率",
+      "figure": 418,
+      "sd_value": ""
+    }
+  ]
+}

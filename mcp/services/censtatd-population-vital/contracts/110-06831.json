@@ -1,0 +1,95 @@
+{
+  "dimensions": {
+    "DC": [
+      "",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T"
+    ],
+    "SEX": [
+      "",
+      "F",
+      "M"
+    ]
+  },
+  "indicators": {
+    "MED_AGE_LF": [
+      "DC",
+      "SEX"
+    ],
+    "MED_AGE_LF_XFDH": [
+      "DC",
+      "SEX"
+    ],
+    "MED_AGE_POP": [
+      "DC",
+      "SEX"
+    ],
+    "MED_AGE_POP_XFDH": [
+      "DC",
+      "SEX"
+    ]
+  },
+  "units": {
+    "en": {
+      "MED_AGE_LF": {
+        "(Years)": "(Years)"
+      },
+      "MED_AGE_LF_XFDH": {
+        "(Years)": "(Years)"
+      },
+      "MED_AGE_POP": {
+        "(Years)": "(Years)"
+      },
+      "MED_AGE_POP_XFDH": {
+        "(Years)": "(Years)"
+      }
+    },
+    "tc": {
+      "MED_AGE_LF": {
+        "(歲)": "(Years)"
+      },
+      "MED_AGE_LF_XFDH": {
+        "(歲)": "(Years)"
+      },
+      "MED_AGE_POP": {
+        "(歲)": "(Years)"
+      },
+      "MED_AGE_POP_XFDH": {
+        "(歲)": "(Years)"
+      }
+    },
+    "sc": {
+      "MED_AGE_LF": {
+        "(岁)": "(Years)"
+      },
+      "MED_AGE_LF_XFDH": {
+        "(岁)": "(Years)"
+      },
+      "MED_AGE_POP": {
+        "(岁)": "(Years)"
+      },
+      "MED_AGE_POP_XFDH": {
+        "(岁)": "(Years)"
+      }
+    }
+  },
+  "frequencies": [
+    "Y"
+  ]
+}
