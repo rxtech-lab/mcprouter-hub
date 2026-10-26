@@ -52,6 +52,7 @@ async function archivedFile(call: CallTool) {
 }
 
 export const liveCases: Record<string, LiveCase> = {
+  ...Object.fromEntries(["2006_ssbg", "2006_stpu", "2011_dcca", "2011_dcd", "2011_lsbg", "2011_ltpu", "2011_ssbg", "2011_stpu", "2016_dcca", "2016_dcd"].map((name) => [`census_${name}`, { input: { limit: 1 }, check: nonEmptyPage }])),
   ...Object.fromEntries(["old_survey_sheets_1", "old_survey_sheets_2", "old_survey_sheets_3", "old_survey_sheets_4", "old_survey_sheets_5", "private_treaty_grants", "public_facilities", "public_open_space", "road_centrelines", "short_term_tenancies"].map((name) => [`landsd_${name}`, { input: { limit: 1 }, check: nonEmptyPage }])),
   landsd_satref_nmea_snapshot: { input: {}, check: nonEmptyPage },
   landsd_satref_rinex_header: { input: async () => { const date = new Date(Date.now() - 2 * 86400000); const year = date.getUTCFullYear(); return { year, day: Math.floor((Date.UTC(year, date.getUTCMonth(), date.getUTCDate()) - Date.UTC(year, 0, 0)) / 86400000) }; } },

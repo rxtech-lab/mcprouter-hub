@@ -1,0 +1,9 @@
+version: 1
+name: batch090
+slug: batch090
+protocol: http
+interceptRequests: true
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true

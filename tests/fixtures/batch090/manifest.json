@@ -1,0 +1,182 @@
+[
+  {
+    "api": "API-0204",
+    "dataset": "hk-censtatd-census_geo-2006-population-bycensus-by-ssbg",
+    "service": "censtatd-census-history",
+    "tool": "census_2006_ssbg",
+    "file": "0204",
+    "layer": "censtatd_rcd_1635931306405_72167",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "ssbg_eng",
+      "tc": "ssbg_chi"
+    },
+    "year": 2006,
+    "sha256": "c1f77a1c83b38568be85680d86e5ae42102c4ea632f3e598cdcb2e9de1b8cf55",
+    "capturedAt": "2026-10-26T00:03:41.709698+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635931306405_72167/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "24f343b226a6282728ec6a95bfedf8040331e8be3a32498301f594e70b7d07f3"
+  },
+  {
+    "api": "API-0205",
+    "dataset": "hk-censtatd-census_geo-2006-population-bycensus-by-stpu",
+    "service": "censtatd-census-history",
+    "tool": "census_2006_stpu",
+    "file": "0205",
+    "layer": "censtatd_rcd_1635931180148_90380",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "stpug_eng",
+      "tc": "stpug_chi"
+    },
+    "year": 2006,
+    "sha256": "f7cf6fa2501f79f6243fcf976c68ba1666168b7396bc1345a46e13893cea1e89",
+    "capturedAt": "2026-10-26T00:03:41.710134+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1635931180148_90380/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "66d70aa726c42df6e855df3dae7a1cffa6cbbf895408b2c6f7206bc661107561"
+  },
+  {
+    "api": "API-0206",
+    "dataset": "hk-censtatd-census_geo-2011-population-census-by-dcca",
+    "service": "censtatd-census-history",
+    "tool": "census_2011_dcca",
+    "file": "0206",
+    "layer": "censtatd_rcd_1629267205229_46115",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dcca_eng",
+      "tc": "dcca_chi"
+    },
+    "year": 2011,
+    "sha256": "e04dc32b1045f8d0751d022b7ca0705269174ec64b4877cab0aa0df60b56ab62",
+    "capturedAt": "2026-10-26T00:03:41.710459+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_46115/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "1b7dbb668cd2736e831d89cb54188411f8283a5dcfd9b53a7381543a4ea8d86e"
+  },
+  {
+    "api": "API-0207",
+    "dataset": "hk-censtatd-census_geo-2011-population-census-by-dcd",
+    "service": "censtatd-census-history",
+    "tool": "census_2011_dcd",
+    "file": "0207",
+    "layer": "censtatd_rcd_1629267205229_54778",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dc_eng",
+      "tc": "dc_chi"
+    },
+    "year": 2011,
+    "sha256": "aaa69a35f9538c14b8556277f1cd9406b421dfb114ee0d239de2153601303f9e",
+    "capturedAt": "2026-10-26T00:03:41.710762+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_54778/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "59dba049cfc77232a523be99b50179cd7ad58285f6bf0d1b61fe8d64f35b1dcf"
+  },
+  {
+    "api": "API-0208",
+    "dataset": "hk-censtatd-census_geo-2011-population-census-by-lsbg",
+    "service": "censtatd-census-history",
+    "tool": "census_2011_lsbg",
+    "file": "0208",
+    "layer": "censtatd_rcd_1629267205229_58728",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "lsbg_eng",
+      "tc": "lsbg_chi"
+    },
+    "year": 2011,
+    "sha256": "70a8a29b269b54bc529cabb5d3b1ca13ab707c5c51025980b4b15d7dde1cd578",
+    "capturedAt": "2026-10-26T00:03:41.711035+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_58728/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "d778b58541e65035b6d182e9daec947bf3f7b23697bd68a9955692b12f2b7f99"
+  },
+  {
+    "api": "API-0209",
+    "dataset": "hk-censtatd-census_geo-2011-population-census-by-ltpu",
+    "service": "censtatd-census-history",
+    "tool": "census_2011_ltpu",
+    "file": "0209",
+    "layer": "censtatd_rcd_1629267205229_857",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "ltpug_eng",
+      "tc": "ltpug_chi"
+    },
+    "year": 2011,
+    "sha256": "4470bccaf01b1c8a0f221b51c8435d219b20ae2dcc78203262a38bcea9763501",
+    "capturedAt": "2026-10-26T00:03:41.711337+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_857/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "2daa9cc1176de95d5514abeb18943b3bb6a24ace6d1c1aeeebbdea2fe2b3fb7c"
+  },
+  {
+    "api": "API-0210",
+    "dataset": "hk-censtatd-census_geo-2011-population-census-by-ssbg",
+    "service": "censtatd-census-history",
+    "tool": "census_2011_ssbg",
+    "file": "0210",
+    "layer": "censtatd_rcd_1629267205229_66380",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "ssbg_eng",
+      "tc": "ssbg_chi"
+    },
+    "year": 2011,
+    "sha256": "45b23302f2c262f28c9be8c54a047abd24cbff60a69aa5c56c146ff6c0576c69",
+    "capturedAt": "2026-10-26T00:03:41.711594+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_66380/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "c42bdc437b955e7d40c7ea886fe57014e73c768b22a8fca1b03921569d3a9122"
+  },
+  {
+    "api": "API-0211",
+    "dataset": "hk-censtatd-census_geo-2011-population-census-by-stpu",
+    "service": "censtatd-census-history",
+    "tool": "census_2011_stpu",
+    "file": "0211",
+    "layer": "censtatd_rcd_1629267205229_97980",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "stpug_eng",
+      "tc": "stpug_chi"
+    },
+    "year": 2011,
+    "sha256": "3b1c5dc4a9530ac214f4d3341c365b718b3386b3d38f5dd70f12cfb7a58eec3a",
+    "capturedAt": "2026-10-26T00:03:41.711891+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205229_97980/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "8ef8d905a32e881eb75c5678786fe214e9f7029db2db80bed2f44c0b4e72cf7a"
+  },
+  {
+    "api": "API-0212",
+    "dataset": "hk-censtatd-census_geo-2016-population-bycensus-by-dcca",
+    "service": "censtatd-census-history",
+    "tool": "census_2016_dcca",
+    "file": "0212",
+    "layer": "censtatd_rcd_1629267205219_53611",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dcca_eng",
+      "tc": "dcca_chi"
+    },
+    "year": 2016,
+    "sha256": "70bf849100bdcaa84d1958e92783ba0230c370af1db30575486cf378be3c9f23",
+    "capturedAt": "2026-10-26T00:03:41.712195+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205219_53611/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "40b378e0a809568074ceffb118bd7cd368ed1ccfb58c6897ed56c5256b6fedb2"
+  },
+  {
+    "api": "API-0213",
+    "dataset": "hk-censtatd-census_geo-2016-population-bycensus-by-dcd",
+    "service": "censtatd-census-history",
+    "tool": "census_2016_dcd",
+    "file": "0213",
+    "layer": "censtatd_rcd_1629267205219_37828",
+    "oid": "OBJECTID",
+    "names": {
+      "en": "dc_eng",
+      "tc": "dc_chi"
+    },
+    "year": 2016,
+    "sha256": "b3c0d02d0e56e5e78fb5ab6d5c616449b63f3e00fe3312f54078abf96efe028a",
+    "capturedAt": "2026-10-26T00:03:41.712502+00:00",
+    "query": "https://portal.csdi.gov.hk/server/rest/services/common/censtatd_rcd_1629267205219_37828/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&resultRecordCount=2&resultOffset=0&orderByFields=OBJECTID%20ASC&geometryPrecision=6",
+    "layerSchemaSha256": "7de416d0a2db474f52ab0a061e0ed55c7b3db32f55b592f284d48c90826f82e9"
+  }
+]
