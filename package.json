@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun run codegen && next dev",
+    "dev": "bun run db:migrate && bun run codegen && next dev",
     "build": "drizzle-kit migrate && bun run codegen && next build",
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
@@ -37,6 +37,8 @@
     "@rxtech-lab/authjs-rxlab": "1.6.1",
     "@vercel/functions": "^3.10.1",
     "ai": "^7.0.143",
+    "cron-parser": "^5.10.4",
+    "cronstrue": "^3.38.0",
     "drizzle-orm": "^0.45.4",
     "fast-xml-parser": "^5.11.2",
     "firebase": "^13.0.0",

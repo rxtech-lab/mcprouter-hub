@@ -5,6 +5,8 @@ const port = 3199;
 export default defineConfig({
   testDir: "./e2e",
   timeout: 60_000,
+  // CI runs next dev, so first visits can include route compilation and streaming.
+  expect: { timeout: process.env.CI ? 15_000 : 5_000 },
   use: { baseURL: `http://localhost:${port}`, trace: "retain-on-failure" },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
@@ -13,6 +15,7 @@ export default defineConfig({
     timeout: 180_000,
     reuseExistingServer: false,
     env: {
+      NEXT_E2E: "true",
       DEV_BYPASS_AUTH: "true",
       AUTH_SECRET: "e2e-only-secret-e2e-only-secret-123456",
       TURSO_DATABASE_URL: "file:e2e.db",

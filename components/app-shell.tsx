@@ -18,11 +18,11 @@ const items: NavItem[] = [
   { href: "/keys", label: msg("API keys"), icon: <KeyRound size={22} /> },
   { href: "/usage", label: msg("Usage"), icon: <BarChart3 size={22} /> },
   { href: "/services", label: msg("Services"), icon: <Blocks size={22} /> },
-  { href: "/tracker", label: msg("Tracker"), icon: <Radar size={22} /> },
+  { href: "/tracker", label: msg("Tracker"), icon: <Radar size={22} />, divider: true },
   { href: "/chat", label: msg("Agent"), icon: <MessageSquareText size={22} /> },
   { href: "/tasks", label: msg("Scheduled tasks"), icon: <CalendarClock size={22} /> },
   { href: "/mcp-clients", label: msg("MCP clients"), icon: <Cable size={22} /> },
-  { href: "/billing", label: msg("Billing"), icon: <CreditCard size={22} /> },
+  { href: "/billing", label: msg("Billing"), icon: <CreditCard size={22} />, divider: true },
   { href: "/settings", label: msg("Settings"), icon: <Settings size={22} /> },
 ];
 
@@ -53,12 +53,13 @@ export function AppShell({ children, account }: { children: ReactNode; account: 
           <NavigationRail
             items={navItems}
             header={
-              <Link href="/" aria-label={t("mcprouter home")} className="rounded-md">
-                <Logo size={40} />
+              <Link href="/" aria-label={t("mcprouter home")} className="flex min-w-0 items-center gap-3 rounded-md lg:w-full lg:px-2">
+                <Logo size={36} />
+                <span className="hidden type-title-medium tracking-tight lg:block">mcprouter</span>
               </Link>
             }
             footer={
-              <div className="flex flex-col items-center gap-3">
+              <div className="flex w-full flex-col items-center gap-3 lg:flex-row lg:justify-between lg:px-2">
                 <LanguageMenu side="right" />
                 {account}
               </div>

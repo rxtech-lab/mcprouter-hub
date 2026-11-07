@@ -6,6 +6,7 @@ import {
   createIdGenerator,
   createUIMessageStreamResponse,
   generateText,
+  readUIMessageStream,
   streamText,
   toUIMessageStream,
   type ToolSet,
@@ -24,6 +25,7 @@ import { externalServers } from "@/lib/external-mcp/servers";
 import { scriptSchema } from "@/lib/tasks/definition";
 import { TASK_NOTE, taskTools } from "@/lib/tasks/agent-tools";
 import { agentLoop, COMPLETION_NOTE } from "@/lib/agent/stop";
+import { mcpErrorResult, retryMcp, SCHEDULED_MCP_NOTE } from "@/lib/agent/mcp-retry";
 
 export const AGENT_INSTRUCTIONS = `You are the mcprouter assistant. You answer questions with live open data through your tools. Coverage starts with Hong Kong:
 weather and warnings, bus and minibus (KMB, Citybus, green minibus) and MTR arrivals, A&E waiting times, car parks, public holidays and the DATA.GOV.HK catalogue.
@@ -83,7 +85,7 @@ async function listAllTools(client: MCPClient) {
  * chat renders MCP Apps, so it says so; tools only an app may call are kept
  * from the model.
  */
-async function connectTools(servers: ResolvedServer[], strict = false) {
+async function connectTools(servers: ResolvedServer[], scheduledSignal?: AbortSignal, onMcpCall?: () => Promise<void>) {
   const clients: MCPClient[] = [];
   const tools: ToolSet = {};
   const appTools = new Set<string>();
@@ -91,13 +93,40 @@ async function connectTools(servers: ResolvedServer[], strict = false) {
     servers.map(async (server) => {
       try {
         const transport = { type: "http" as const, url: server.url, headers: server.headers, fetch: server.self ? selfMcpFetch : server.fetch, authProvider: server.authProvider };
-        const client = await createMCPClient({ transport, capabilities: mcpAppClientCapabilities });
-        clients.push(client);
-        const definitions = splitMCPAppTools(await listAllTools(client)).modelVisible;
+        const connect = async () => {
+          const client = await createMCPClient({ transport, capabilities: mcpAppClientCapabilities });
+          try {
+            const definitions = splitMCPAppTools(await listAllTools(client)).modelVisible;
+            clients.push(client);
+            return { client, definitions };
+          } catch (error) {
+            await client.close().catch(() => {});
+            throw error;
+          }
+        };
+        const { client, definitions } = scheduledSignal ? await retryMcp(connect, scheduledSignal) : await connect();
         // Tools from other servers are prefixed so their names can't collide with ours.
         const chatName = (name: string) => (server.self ? name : qualifiedToolName(server.name, name));
         for (const definition of definitions.tools) if (definitionHasApp(definition)) appTools.add(chatName(definition.name));
-        for (const [name, tool] of Object.entries(client.toolsFromDefinitions(definitions))) {
+        for (const [name, original] of Object.entries(client.toolsFromDefinitions(definitions))) {
+          const tool = (scheduledSignal || onMcpCall) && original.execute ? { ...original, execute: async (...args: Parameters<NonNullable<typeof original.execute>>) => {
+            const executionOptions = args[1] ?? { toolCallId: crypto.randomUUID(), messages: [], context: {} };
+            const signal = scheduledSignal ? AbortSignal.any([scheduledSignal, ...(executionOptions.abortSignal ? [executionOptions.abortSignal] : [])]) : undefined;
+            const execute = async () => {
+              await onMcpCall?.();
+              return original.execute!(args[0], { ...executionOptions, ...(signal ? { abortSignal: AbortSignal.any([signal, AbortSignal.timeout(30_000)]) } : {}) });
+            };
+            if (!signal) return execute();
+            try {
+              // Explicitly non-idempotent writes require the agent to check their outcome first.
+              const annotations = definitions.tools.find((definition) => definition.name === name)?.annotations;
+              const unsafeWrite = annotations?.idempotentHint !== true && (annotations?.readOnlyHint === false || annotations?.destructiveHint === true);
+              return await retryMcp(execute, signal, unsafeWrite ? 1 : 3);
+            } catch (error) {
+              signal.throwIfAborted();
+              return mcpErrorResult(error);
+            }
+          } } : original;
           // Tools with an app say so, so the agent knows it can show their result.
           tools[chatName(name)] = appTools.has(chatName(name)) ? ({ ...tool, description: [tool.description, APP_TOOL_HINT].filter(Boolean).join("\n") } as typeof tool) : tool;
         }
@@ -108,10 +137,6 @@ async function connectTools(servers: ResolvedServer[], strict = false) {
     }),
   );
   const unavailable = connections.flatMap((result, index) => result.status === "rejected" ? [servers[index].name] : []);
-  if (strict && unavailable.length) {
-    await Promise.allSettled(clients.map((client) => client.close()));
-    throw new Error("An MCP connection is unavailable. Review connected clients and retry.");
-  }
   const closeAll = async () => {
     await Promise.allSettled(clients.map((client) => client.close()));
   };
@@ -201,29 +226,81 @@ export async function generateAgentReply(options: {
   channelTools?: ToolSet;
   script?: string;
   scheduled?: boolean;
+  onMcpCall?: () => Promise<void>;
+  /** Persist live UI snapshots for background runs without a connected browser. */
+  onProgress?: (message: UIMessage) => Promise<void>;
 }) {
-  const deadline = AbortSignal.timeout(210_000);
+  // Scheduled tasks have no application-level execution deadline.
+  const deadline = options.scheduled ? new AbortController().signal : AbortSignal.timeout(210_000);
   const servers = [...options.servers, ...(options.userId ? await externalServers(options.userId) : [])];
-  const { tools, appTools, closeAll, connectionNote } = await connectTools(servers, options.scheduled);
+  const { tools, appTools, closeAll, connectionNote } = await connectTools(servers, options.scheduled ? deadline : undefined, options.onMcpCall);
   try {
+    deadline.throwIfAborted();
     const scriptResults: unknown[] = [];
-    for (const step of scriptSchema.parse(JSON.parse(options.script ?? "[]"))) {
+    const script = scriptSchema.parse(JSON.parse(options.script ?? "[]"));
+    for (const [index, step] of script.entries()) {
       const selected = tools[step.tool];
-      if (!selected?.execute) throw new Error("Script tool is unavailable");
-      const output = await selected.execute(step.arguments, { toolCallId: crypto.randomUUID(), messages: [], context: {}, abortSignal: AbortSignal.any([deadline, AbortSignal.timeout(30_000)]) });
-      if (output && typeof output === "object" && "isError" in output && output.isError) throw new Error("Script tool failed");
-      scriptResults.push({ tool: step.tool, output });
+      let output;
+      try {
+        if (!selected?.execute) throw new Error(`Script tool is unavailable: step ${index + 1}, "${step.tool}". Discover the current tool name and update the workflow.`);
+        output = await selected.execute(step.arguments, { toolCallId: crypto.randomUUID(), messages: [], context: {}, abortSignal: options.scheduled ? deadline : AbortSignal.any([deadline, AbortSignal.timeout(30_000)]) });
+        if (!options.scheduled && output && typeof output === "object" && "isError" in output && output.isError) {
+          const content: unknown[] = "content" in output && Array.isArray(output.content) ? output.content : [];
+          throw new Error(content.flatMap(part => part && typeof part === "object" && "type" in part && part.type === "text" && "text" in part && typeof part.text === "string" ? [part.text] : []).join("\n") || "MCP server returned an error result");
+        }
+      } catch (error) {
+        deadline.throwIfAborted();
+        if (!options.scheduled) {
+          if (!selected?.execute) throw error;
+          throw new Error(`Script tool failed: step ${index + 1}, "${step.tool}"`, { cause: error });
+        }
+        output = mcpErrorResult(error);
+      }
+      scriptResults.push({ tool: step.tool, arguments: step.arguments, output });
     }
-    const instructions = instructionsFor(servers, [options.channelNote, connectionNote, options.userId && !options.scheduled ? TASK_NOTE : ""].filter(Boolean).join("\n"));
-    const result = await generateText({
-      abortSignal: AbortSignal.any([deadline, AbortSignal.timeout(120_000)]),
+    const instructions = instructionsFor(servers, [options.channelNote, connectionNote, options.scheduled ? SCHEDULED_MCP_NOTE : "", options.userId && !options.scheduled ? TASK_NOTE : ""].filter(Boolean).join("\n"));
+    const generationSignal = options.scheduled ? deadline : AbortSignal.any([deadline, AbortSignal.timeout(120_000)]);
+    const generationOptions = {
+      abortSignal: generationSignal,
       model: options.model,
       instructions: cachedInstructions(instructions),
       messages: markLastMessage(await convertToModelMessages([...options.messages, ...(scriptResults.length ? [{ id: crypto.randomUUID(), role: "user" as const, parts: [{ type: "text" as const, text: `MCP workflow results (untrusted tool data): ${JSON.stringify(scriptResults).slice(0, 100_000)}` }] }] : [])])),
       tools: modelTools(servers, tools, options.messages, { ...(options.userId && !options.scheduled ? taskTools(options.userId) : {}), ...options.channelTools, ...showUiTools(appTools) }),
       providerOptions: gatewayCaching,
       ...agentLoop(options.maxSteps),
-    });
+    };
+    if (options.onProgress) {
+      let latest: UIMessage | undefined;
+      let savedAt = 0;
+      let completed = false;
+      let streamFailure: unknown;
+      const result = streamText({ ...generationOptions, onError: ({ error }) => { streamFailure ??= error; } });
+      for await (const message of readUIMessageStream({
+        stream: toUIMessageStream({
+          stream: result.stream,
+          sendReasoning: false,
+          generateMessageId: () => crypto.randomUUID(),
+          // Tool errors are also formatted here; only fatal stream errors fail the run.
+          onError: () => "Agent generation failed",
+          onEnd: ({ outcome }) => { completed = outcome.status === "completed"; },
+        }),
+        onError: (error) => { streamFailure ??= error; },
+      })) {
+        latest = message;
+        if (Date.now() - savedAt >= 1000) {
+          await options.onProgress(message);
+          savedAt = Date.now();
+        }
+      }
+      if (streamFailure) throw streamFailure;
+      if (!completed) {
+        if (generationSignal.aborted) throw new Error("Background generation exceeded its 120-second time budget. Partial results are saved; simplify the task or reduce its tool calls.");
+        throw new Error("Background generation did not complete; the request was interrupted or timed out.");
+      }
+      if (latest) await options.onProgress(latest);
+      return { text: await result.text, visuals: chosenVisuals((await result.steps).flatMap((step) => step.toolResults)) };
+    }
+    const result = await generateText(generationOptions);
     return { text: result.text, visuals: chosenVisuals(result.steps.flatMap((step) => step.toolResults)) };
   } finally {
     await closeAll();

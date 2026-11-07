@@ -1,0 +1,55 @@
+import { createClient } from "@libsql/client";
+import { expect, test } from "@playwright/test";
+
+test("configures cron visually and shows per-run consumption in a dedicated dialog", async ({ page }) => {
+  await page.goto("/tasks/new");
+  const title = `Daily briefing ${Date.now()}`;
+  await page.getByLabel("Title", { exact: true }).fill(title);
+  await page.getByLabel("Instructions", { exact: true }).fill("Report weather and transport updates.");
+  await page.getByLabel("Cron expression", { exact: true }).fill("0 9 * * MON-FRI");
+  await expect(page.getByText(/At 09:00/)).toBeVisible();
+  await page.getByRole("button", { name: "Configure visually" }).click();
+  const dialog = page.getByRole("dialog", { name: "Configure cron schedule" });
+  await expect(dialog).toBeVisible();
+  await dialog.getByRole("navigation", { name: "Cron fields" }).getByRole("button", { name: /Hour/ }).click();
+  await dialog.getByLabel("Hour", { exact: true }).selectOption("range");
+  await dialog.getByLabel("From", { exact: true }).fill("8");
+  await dialog.getByLabel("Through", { exact: true }).fill("10");
+  await expect(dialog).toHaveCSS("opacity", "1");
+  await page.screenshot({ path: test.info().outputPath("task-cron-dialog-desktop.png") });
+  await dialog.getByRole("button", { name: "Use schedule" }).click();
+  await expect(dialog).not.toBeVisible();
+  await expect(page.getByLabel("Title", { exact: true })).toHaveValue(title);
+  await expect(page.getByLabel("Cron expression", { exact: true })).toHaveValue("0 8-10 * * MON-FRI");
+  await page.getByRole("button", { name: "Save scheduled task" }).click();
+  await expect(page).toHaveURL(/\/tasks\/[a-f0-9-]+$/);
+  const taskId = new URL(page.url()).pathname.split("/").at(-1)!;
+  const client = createClient({ url: "file:e2e.db" });
+  try {
+    await client.execute({ sql: "INSERT INTO task_runs (id, task_id, status, created_at, finished_at, trigger, usage_tracked, chat_units, chat_charged_units, mcp_calls, premium_mcp_units, mcp_charged_units) VALUES (?, ?, 'failed', ?, ?, 'manual', 1, 1, 2, 3, 2, 4)", args: [crypto.randomUUID(), taskId, Date.now() - 10_000, Date.now()] });
+  } finally { client.close(); }
+  await page.screenshot({ path: test.info().outputPath("task-overview-desktop.png"), fullPage: true });
+  await page.getByRole("link", { name: "Run history", exact: true }).click();
+  await expect(page.getByText("Manual trigger · 1 chat units · 3 MCP calls")).toBeVisible();
+  await page.getByRole("link", { name: "View run usage" }).click();
+  const usage = page.getByRole("dialog", { name: "Run usage", exact: true });
+  await expect(usage).toContainText("Premium MCP allowance consumed");
+  await expect(usage).toContainText("4 credits");
+  await usage.getByRole("button", { name: "Close", exact: true }).click();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({ path: test.info().outputPath("task-history-mobile.png"), fullPage: true });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.getByRole("navigation", { name: "Task details" }).getByRole("link", { name: "Overview", exact: true }).click();
+  await page.getByRole("link", { name: "Edit", exact: true }).click();
+  await page.getByRole("button", { name: "Configure visually" }).click();
+  await expect(page.getByRole("dialog", { name: "Configure cron schedule" })).toBeVisible();
+  await expect(page.getByRole("dialog", { name: "Configure cron schedule" })).toHaveCSS("opacity", "1");
+  await page.screenshot({ path: test.info().outputPath("task-cron-dialog-mobile.png"), fullPage: true });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog", { name: "Configure cron schedule" })).not.toBeVisible();
+  await page.getByRole("button", { name: "Cancel", exact: true }).click();
+  await page.getByRole("link", { name: "Delete", exact: true }).click();
+  await page.getByRole("dialog", { name: "Delete scheduled task" }).getByRole("button", { name: "Delete", exact: true }).click();
+  await expect(page).toHaveURL(/\/tasks$/);
+});
