@@ -53,7 +53,7 @@ export async function POST(request: Request) {
   }
   let servers;
   try {
-    // Never connect configured external servers or include dashboard/account tools in catalogue chat.
+    // Guests use only catalogue tools. Member OAuth clients are attached by the shared runner.
     servers = DEFAULT_AGENT_SERVERS.map((server) => resolveServer(server, {
       origin: new URL(request.url).origin, userId, internalKey: process.env.MCPROUTER_INTERNAL_KEY,
       channel: "web", chatMetered: true, scopes: scope.services, toolMode: "all",
@@ -75,10 +75,10 @@ export async function POST(request: Request) {
 
   try {
     return await streamAgentReply({
-      servers, messages, model: user ? (process.env.AI_MODEL ?? config.model) : config.model,
+      servers, userId: user?.id, messages, model: user ? (process.env.AI_MODEL ?? config.model) : config.model,
       maxSteps: user ? AGENT_TOOL_STEPS : GUEST_AGENT_TOOL_STEPS, headers,
       toolScope: scope.tools.map((tool) => tool.name),
-      channelNote: `This conversation is exclusively about ${scope.title}. Its tools are already loaded. Use only these tools; explain when a question requires another provider.`,
+      channelNote: `This conversation is exclusively about ${scope.title}. Its tools are already loaded. Use these provider tools and, for signed-in users, their connected external MCP tools.`,
     });
   } catch {
     return plain("The agent could not answer. Try again.", 503);

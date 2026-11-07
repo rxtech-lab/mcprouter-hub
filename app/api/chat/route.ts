@@ -15,7 +15,7 @@ export async function POST(request: Request) {
   if (!user) return Response.json({ error: "unauthorized" }, { status: 401 });
 
   // The client sends only its newest message; earlier ones are loaded from the database.
-  const body = (await request.json()) as { id?: unknown; message?: UIMessage };
+  const body = (await request.json()) as { id?: unknown; taskAgent?: boolean; message?: UIMessage };
   const parsedId = chatIdSchema.safeParse(body.id);
   if (!parsedId.success || !body.message || body.message.role !== "user") return Response.json({ error: "bad request" }, { status: 400 });
   const chatId = parsedId.data;
@@ -51,9 +51,10 @@ export async function POST(request: Request) {
 
   return streamAgentReply({
     servers,
+    userId: user.id,
     messages,
     model: process.env.AI_MODEL ?? "anthropic/claude-sonnet-5-5",
-    channelNote: DASHBOARD_NOTE,
+    channelNote: DASHBOARD_NOTE + (body.taskAgent ? "\nYou are the task agent. Help write bounded MCP workflow scripts and draft scheduled tasks for review. Discover actual tool names before writing scripts." : ""),
     channelTools: dashboardTools(dashboardData(user)),
     onFinished: (finished) => saveMessages(chatId, finished),
   });

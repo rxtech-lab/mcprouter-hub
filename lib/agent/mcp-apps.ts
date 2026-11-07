@@ -1,6 +1,7 @@
 import "server-only";
 import { createMCPClient, mcpAppClientCapabilities, readMCPAppResource, splitMCPAppTools, type MCPAppResource, type MCPClient } from "@ai-sdk/mcp";
 import { serviceById, services } from "@/generated/registry";
+import { externalServers } from "@/lib/external-mcp/servers";
 import { parseMcpServers } from "@/lib/agent/mcp-servers";
 import { appResourceMeta, appStructuredContent, appHtml, hasApp, MCP_APP_MIME_TYPE, serviceIdFromAppUri } from "@/lib/mcp/apps";
 import { meterToolCall, type McpToolResponse } from "@/lib/mcp/meter";
@@ -56,9 +57,10 @@ function externalServer(name: string) {
   return server as typeof server & { url: string };
 }
 
-async function withClient<T>(serverName: string, run: (client: MCPClient) => Promise<T>) {
-  const server = externalServer(serverName);
-  const client = await createMCPClient({ transport: { type: "http", url: server.url, headers: server.headers }, capabilities: mcpAppClientCapabilities });
+async function withClient<T>(serverName: string, run: (client: MCPClient) => Promise<T>, userId?: string) {
+  const server = userId && serverName.startsWith("oauth_") ? (await externalServers(userId)).find((item) => item.name === serverName) : externalServer(serverName);
+  if (!server) throw new Error("NOT_FOUND");
+  const client = await createMCPClient({ transport: { type: "http", url: server.url, headers: server.headers, ...("authProvider" in server ? { authProvider: server.authProvider, fetch: server.fetch } : {}) }, capabilities: mcpAppClientCapabilities });
   try {
     return await run(client);
   } finally {
@@ -80,21 +82,21 @@ async function appVisibleTools(client: MCPClient) {
 const RESOURCE_TTL_MS = 5 * 60_000;
 const resourceCache = new Map<string, { value: ToolApp; expires: number }>();
 
-export async function externalToolApp(serverName: string, resourceUri: string): Promise<ToolApp> {
-  const key = `${serverName} ${resourceUri}`;
-  const hit = resourceCache.get(key);
+export async function externalToolApp(serverName: string, resourceUri: string, userId?: string): Promise<ToolApp> {
+  const key = `${userId ?? "configured"} ${serverName} ${resourceUri}`;
+  const hit = serverName.startsWith("oauth_") ? undefined : resourceCache.get(key);
   if (hit && hit.expires > Date.now()) return hit.value;
   const value = await withClient(serverName, async (client) => ({
     resource: await readMCPAppResource({ client, uri: resourceUri }),
     appTools: await appVisibleTools(client),
-  }));
-  resourceCache.set(key, { value, expires: Date.now() + RESOURCE_TTL_MS });
+  }), userId);
+  if (!serverName.startsWith("oauth_")) resourceCache.set(key, { value, expires: Date.now() + RESOURCE_TTL_MS });
   return value;
 }
 
-export async function callExternalTool(serverName: string, name: string, args: Record<string, unknown>) {
+export async function callExternalTool(serverName: string, name: string, args: Record<string, unknown>, userId?: string) {
   return withClient(serverName, async (client) => {
     if (!(await appVisibleTools(client)).includes(name)) throw new Error("FORBIDDEN");
     return client.callTool({ name, arguments: args });
-  });
+  }, userId);
 }

@@ -92,6 +92,20 @@
       "when": 1792864992048,
       "tag": "0012_news_content",
       "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "6",
+      "when": 1793957981307,
+      "tag": "0013_scheduled_tasks",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "6",
+      "when": 1793958258574,
+      "tag": "0014_oauth_refresh_lock",
+      "breakpoints": true
     }
   ]
 }

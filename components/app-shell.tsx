@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart3, Blocks, CreditCard, KeyRound, LayoutDashboard, MessageSquareText, Radar, Settings } from "lucide-react";
+import { BarChart3, CalendarClock, Cable, Blocks, CreditCard, KeyRound, LayoutDashboard, MessageSquareText, Radar, Settings } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Tooltip } from "radix-ui";
@@ -20,6 +20,8 @@ const items: NavItem[] = [
   { href: "/services", label: msg("Services"), icon: <Blocks size={22} /> },
   { href: "/tracker", label: msg("Tracker"), icon: <Radar size={22} /> },
   { href: "/chat", label: msg("Agent"), icon: <MessageSquareText size={22} /> },
+  { href: "/tasks", label: msg("Scheduled tasks"), icon: <CalendarClock size={22} /> },
+  { href: "/mcp-clients", label: msg("MCP clients"), icon: <Cable size={22} /> },
   { href: "/billing", label: msg("Billing"), icon: <CreditCard size={22} /> },
   { href: "/settings", label: msg("Settings"), icon: <Settings size={22} /> },
 ];

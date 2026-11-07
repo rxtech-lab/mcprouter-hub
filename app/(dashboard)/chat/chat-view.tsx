@@ -18,11 +18,12 @@ type ChatViewProps = {
   id: string;
   initialMessages: UIMessage[];
   isNew?: boolean;
+  taskAgent?: boolean;
   /** Sent as the first message as soon as the chat opens. */
   initialPrompt?: string;
 };
 
-export function ChatView({ id, initialMessages, isNew = false, initialPrompt }: ChatViewProps) {
+export function ChatView({ id, initialMessages, isNew = false, initialPrompt, taskAgent = false }: ChatViewProps) {
   const t = useT();
   const snackbar = useSnackbar();
   const history = useChatHistory();
@@ -32,7 +33,7 @@ export function ChatView({ id, initialMessages, isNew = false, initialPrompt }: 
     transport: new DefaultChatTransport({
       api: "/api/chat",
       // Earlier messages are stored on the server; only the newest one is sent.
-      prepareSendMessagesRequest: ({ id, messages }) => ({ body: { id, message: messages.at(-1) } }),
+      prepareSendMessagesRequest: ({ id, messages }) => ({ body: { id, taskAgent, message: messages.at(-1) } }),
     }),
     onError: (error) => snackbar.show(error.message || t("The agent could not answer. Try again."), { tone: "error" }),
     onFinish: () => history?.refresh(),
@@ -71,10 +72,10 @@ export function ChatView({ id, initialMessages, isNew = false, initialPrompt }: 
         void sendMessage({ text });
       }}
       onStop={() => stop()}
-      title={t("Agent")}
+      title={taskAgent ? "Task agent" : t("Agent")}
       actions={<ChatHistoryButton />}
       intro={t("The agent calls mcprouter tools for you, and can link you to dashboard pages and actions like creating a key. Tool calls count towards your plan, like calls from your own keys.")}
-      suggestions={DASHBOARD_SUGGESTIONS}
+      suggestions={taskAgent ? ["Write a daily weather briefing task", "Help me write an MCP workflow script", "Show my scheduled tasks"] : DASHBOARD_SUGGESTIONS}
       notice={<ChatAllowance status={status} />}
       canCallAppTools
     />
