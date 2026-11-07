@@ -206,3 +206,27 @@ Each service with an app also has `mcp/services/<id>/card.ts`, which turns a too
 ## Tracker
 
 `converted` comes from `generated/manifest.json`. Planned / in progress / skipped (with a reason) and priority are set by admins (RxLab role `admin`) in the dataset dialog. `package_search` only indexes ~785 datasets, so the sync walks `package_list` and calls `package_show` for new ids first, then the least recently synced.
+
+## Scheduled tasks and external MCP clients
+
+Signed-in members manage schedules under **Scheduled tasks** in the sidebar. Creation and editing have dedicated pages; enable, pause, delete and disconnect use native HTML dialogs. Each run saves a result chat and a run-history entry. Recurring schedules use standard numeric five-field cron expressions (`minute hour day-of-month month day-of-week`) with an IANA time zone (default UTC). For example, `0 9 * * 1-5` in `Asia/Shanghai` runs weekdays at 09:00. The server computes the next run and skips missed occurrences. One-time schedules still accept a UTC timestamp. Existing fixed repeats migrate to matching UTC cron schedules.
+
+The regular agent and `/taskagent` can use `draft_scheduled_task` to write task instructions, cron expressions, time zones and optional MCP scripts as a paused task with a review link. The user reviews its instructions, schedule and script, then enables it. Scripts are bounded JSON MCP workflows, not JavaScript or shell programs:
+
+```json
+[{"tool":"hko_current_weather","arguments":{"lang":"en"}}]
+```
+
+Use tool names and arguments discovered from the connected server, not the illustrative name above. Up to 20 calls run sequentially; their outputs are passed to the agent with the task instructions. A script cannot read files, run shell commands or loop. Runs have a time budget and consume the owner's normal chat allowance; included first-party MCP calls retain normal member metering. External providers may apply their own charges.
+
+**MCP clients** adds outbound OAuth connections, separate from the **Connected apps** that call mcprouter. Public HTTPS Streamable HTTP MCP endpoints are supported, with OAuth discovery, dynamic registration or a pre-registered client ID/secret, S256 PKCE, account-bound single-use callback state, pinned authorization servers, and automatic refresh on a 401. Register the exact redirect URI `https://<your-domain>/api/external-mcp/callback` when using a pre-registered client. The provider's requested scopes appear on its consent screen. Credentials are encrypted with `AUTH_SECRET` and never sent to the agent or browser. Refresh operations are serialized with a database lease. Private networks and HTTP/redirecting endpoints are rejected; resolved public IPs are pinned to sockets to prevent DNS rebinding.
+
+All signed-in web agents, the task agent, linked Telegram/WhatsApp agents and scheduled runs get the owner's connected tools. Guests get no OAuth clients or schedule tools. Tool names from each OAuth connection have a stable `oauth_<connection-id>__` namespace. Disconnect removes the stored credentials; revoke mcprouter at the external provider to revoke the grant there as well.
+
+Deployment requires:
+
+- `bun run dev` applies pending database migrations before starting Next.js. For an already-running server, run `bun run db:migrate` to update its configured database, including migration 0015 for cron expressions and time zones.
+- Configure a stable `AUTH_SECRET`, canonical `APP_URL`, `MCPROUTER_INTERNAL_KEY`, and a random `CRON_SECRET`.
+- Deploy `vercel.json` with the every-minute `/api/cron/tasks` cron. The hosting plan must permit this frequency. Another scheduler can call the same endpoint using `Authorization: Bearer <CRON_SECRET>`.
+
+The cron claims due tasks atomically with a ten-minute lease and consumes each occurrence before invoking tools. It processes one task per tick; additional due tasks wait for the following tick. Runs interrupted by function termination are marked failed after ten minutes and are not automatically replayed, because an external tool may already have performed side effects. Recurrences remain scheduled. Results appear in chat history; email and push delivery are not part of this feature.

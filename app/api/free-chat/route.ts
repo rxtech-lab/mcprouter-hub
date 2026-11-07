@@ -82,6 +82,7 @@ export async function POST(request: Request) {
 
   return streamAgentReply({
     servers,
+    userId: user?.id,
     messages,
     model: user ? (process.env.AI_MODEL ?? config.model) : config.model,
     maxSteps: user ? AGENT_TOOL_STEPS : GUEST_AGENT_TOOL_STEPS,

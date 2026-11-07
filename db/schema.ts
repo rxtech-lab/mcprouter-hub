@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { index, integer, primaryKey, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
+import { index, integer, primaryKey, real, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 
 /** How an MCP connection lists tools: every tool by name, or only `search_tools`, `read_tool` and `use_tool`. */
 export const TOOL_MODES = ["all", "search"] as const;
@@ -294,3 +294,57 @@ export type Chat = typeof chats.$inferSelect;
 export type WhatsAppLink = typeof whatsappLinks.$inferSelect;
 export type TelegramLink = typeof telegramLinks.$inferSelect;
 export type McpSettings = typeof mcpSettings.$inferSelect;
+
+/** Outbound MCP connections. All OAuth material is sealed with AUTH_SECRET. */
+export const externalMcpClients = sqliteTable("external_mcp_clients", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull(),
+  name: text("name").notNull(),
+  url: text("url").notNull(),
+  redirectUri: text("redirect_uri").notNull(),
+  credentials: text("credentials").notNull(),
+  connected: integer("connected", { mode: "boolean" }).notNull().default(false),
+  toolsCache: text("tools_cache", { mode: "json" }).$type<{ tools: { name: string; title?: string; description?: string }[]; fetchedAt: number }>(),
+  toolsCacheVersion: integer("tools_cache_version").notNull().default(0),
+  refreshLeaseId: text("refresh_lease_id"),
+  refreshLeaseUntil: integer("refresh_lease_until", { mode: "timestamp_ms" }),
+  stateHash: text("state_hash"),
+  stateExpiresAt: integer("state_expires_at", { mode: "timestamp_ms" }),
+  createdAt: createdAt(),
+}, (table) => [index("external_mcp_user_idx").on(table.userId), uniqueIndex("external_mcp_state_idx").on(table.stateHash)]);
+
+export const scheduledTasks = sqliteTable("scheduled_tasks", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull(),
+  title: text("title").notNull(),
+  prompt: text("prompt").notNull(),
+  /** A bounded JSON MCP workflow, never evaluated as JavaScript. */
+  script: text("script").notNull().default("[]"),
+  /** Legacy column retained for database compatibility; new schedules use cron. */
+  intervalMinutes: integer("interval_minutes"),
+  cronExpression: text("cron_expression"),
+  timeZone: text("time_zone").notNull().default("UTC"),
+  nextRunAt: integer("next_run_at", { mode: "timestamp_ms" }).notNull(),
+  enabled: integer("enabled", { mode: "boolean" }).notNull().default(true),
+  leaseId: text("lease_id"),
+  leaseUntil: integer("lease_until", { mode: "timestamp_ms" }),
+  createdAt: createdAt(),
+}, (table) => [index("scheduled_tasks_user_idx").on(table.userId), index("scheduled_tasks_due_idx").on(table.enabled, table.nextRunAt)]);
+
+export const taskRuns = sqliteTable("task_runs", {
+  id: text("id").primaryKey(),
+  taskId: text("task_id").notNull().references(() => scheduledTasks.id, { onDelete: "cascade" }),
+  chatId: text("chat_id"),
+  status: text("status", { enum: ["running", "succeeded", "failed"] }).notNull(),
+  error: text("error"),
+  createdAt: createdAt(),
+  finishedAt: integer("finished_at", { mode: "timestamp_ms" }),
+  trigger: text("trigger", { enum: ["scheduled", "manual"] }),
+  usageTracked: integer("usage_tracked", { mode: "boolean" }).notNull().default(false),
+  chatUnits: integer("chat_units").notNull().default(0),
+  chatChargedUnits: real("chat_charged_units").notNull().default(0),
+  mcpCalls: integer("mcp_calls").notNull().default(0),
+  mcpUnits: integer("mcp_units").notNull().default(0),
+  premiumMcpUnits: integer("premium_mcp_units").notNull().default(0),
+  mcpChargedUnits: real("mcp_charged_units").notNull().default(0),
+}, (table) => [index("task_runs_task_idx").on(table.taskId, table.createdAt)]);

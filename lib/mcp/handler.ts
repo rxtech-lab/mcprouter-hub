@@ -10,7 +10,7 @@ import { registerServices } from "@/lib/mcp/register";
 import type { CallerContext, ServiceDefinition } from "@/lib/mcp/types";
 
 /** `toolMode` is the connection's choice of how tools are listed; null leaves it to the endpoint. */
-type CallerExtra = { userId: string; apiKeyId: string | null; scopes: string[]; toolMode: ToolMode | null; guest?: boolean; chatMetered?: boolean; channel: CallChannel; oauthClientId?: string | null };
+type CallerExtra = { userId: string; apiKeyId: string | null; scopes: string[]; toolMode: ToolMode | null; guest?: boolean; chatMetered?: boolean; taskRunId?: string; channel: CallChannel; oauthClientId?: string | null };
 
 const AGENT_CHANNELS = new Set<CallChannel>(["web", "telegram", "whatsapp"]);
 
@@ -39,7 +39,7 @@ export async function verifyMcpToken(request: Request, bearerToken?: string): Pr
     const scopes = request.headers.get(INTERNAL_SCOPES_HEADER)?.split(",").map((id) => id.trim()).filter(Boolean) ?? [];
     const claimedMode = request.headers.get(INTERNAL_TOOLS_HEADER)?.trim();
     const toolMode = TOOL_MODES.find((mode) => mode === claimedMode) ?? null;
-    const extra: CallerExtra = { userId, apiKeyId: null, scopes, toolMode, guest, chatMetered: request.headers.get(INTERNAL_CHAT_METERED_HEADER) === "1", channel: agentChannel(request, guest) };
+    const extra: CallerExtra = { userId, apiKeyId: null, scopes, toolMode, guest, taskRunId: request.headers.get("x-mcprouter-task-run") ?? undefined, chatMetered: request.headers.get(INTERNAL_CHAT_METERED_HEADER) === "1", channel: agentChannel(request, guest) };
     return { token, clientId: "mcprouter-agent", scopes: [], extra };
   }
 
@@ -78,6 +78,7 @@ function callerFrom(request: Request): CallerContext | null {
     scopes: extra.scopes ?? [],
     guest: extra.guest ?? false,
     chatMetered: extra.chatMetered ?? false,
+    taskRunId: extra.taskRunId,
     channel: extra.channel,
     oauthClientId: extra.oauthClientId ?? null,
   };

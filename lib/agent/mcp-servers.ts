@@ -41,7 +41,7 @@ export function parseMcpServers(raw: string | undefined): McpServerConfig[] {
 /** Resolve "self" to this deployment's endpoint and attach the internal credentials. */
 export function resolveServer(
   server: McpServerConfig,
-  context: { origin: string; userId: string; internalKey: string | undefined; channel?: AgentChannel; chatMetered?: boolean; scopes?: readonly string[]; toolMode?: ToolMode | null },
+  context: { origin: string; userId: string; internalKey: string | undefined; channel?: AgentChannel; chatMetered?: boolean; taskRunId?: string; scopes?: readonly string[]; toolMode?: ToolMode | null },
 ) {
   if (server.url !== "self") return { name: server.name, url: server.url, headers: server.headers, self: false, toolMode: null };
   if (!context.internalKey) throw new Error("MCPROUTER_INTERNAL_KEY must be set for the agent to use this app's MCP server");
@@ -53,6 +53,7 @@ export function resolveServer(
       Authorization: `Bearer ${context.internalKey}`,
       "x-mcprouter-user": context.userId,
       "x-mcprouter-chat-metered": context.chatMetered ? "1" : "0",
+      ...(context.taskRunId ? { "x-mcprouter-task-run": context.taskRunId } : {}),
       ...(context.channel ? { "x-mcprouter-channel": context.channel } : {}),
       ...(context.scopes?.length ? { "x-mcprouter-scopes": context.scopes.join(",") } : {}),
       ...(context.toolMode ? { "x-mcprouter-tools": context.toolMode } : {}),

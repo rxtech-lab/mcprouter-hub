@@ -63,6 +63,8 @@ export type CallerContext = {
   guest?: boolean;
   /** Trusted internal agent: the user message has already consumed one chat unit. */
   chatMetered?: boolean;
+  /** Only accepted from an authenticated internal agent. */
+  taskRunId?: string;
   /** Where the call came from, for usage by client. */
   channel?: CallChannel;
   /** The OAuth client, when `channel` is `oauth`. */

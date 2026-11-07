@@ -15,8 +15,8 @@ export async function loadToolApp(chatToolName: string, uri: string) {
     const name = toolName.parse(chatToolName);
     const { server } = splitToolName(name);
     if (!server) return ownToolApp(resourceUri.parse(uri), name);
-    await requireActionUser();
-    return externalToolApp(server, resourceUri.parse(uri));
+    const user = await requireActionUser();
+    return externalToolApp(server, resourceUri.parse(uri), user.id);
   });
 }
 
@@ -31,6 +31,6 @@ export async function callAppTool(chatToolName: string, name: string, args: unkn
     const input = toolArguments.parse(args ?? {});
     const { server } = splitToolName(openedBy);
     if (!server) return callOwnTool({ userId: user.id, apiKeyId: null, scopes: [], channel: "web" }, openedBy, toolName.parse(name), input);
-    return callExternalTool(server, toolName.parse(name), input);
+    return callExternalTool(server, toolName.parse(name), input, user.id);
   });
 }
