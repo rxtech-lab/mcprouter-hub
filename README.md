@@ -209,9 +209,9 @@ Each service with an app also has `mcp/services/<id>/card.ts`, which turns a too
 
 ## Scheduled tasks and external MCP clients
 
-Signed-in members manage schedules under **Scheduled tasks** in the sidebar. Creation and editing have dedicated pages; enable, pause, delete and disconnect use native HTML dialogs. Each run saves a result chat and a run-history entry. Schedule times are entered in UTC; repeats are fixed hourly, 24-hour or 7-day intervals. Missed intervals are skipped rather than replayed.
+Signed-in members manage schedules under **Scheduled tasks** in the sidebar. Creation and editing have dedicated pages; enable, pause, delete and disconnect use native HTML dialogs. Each run saves a result chat and a run-history entry. Recurring schedules use standard numeric five-field cron expressions (`minute hour day-of-month month day-of-week`) with an IANA time zone (default UTC). For example, `0 9 * * 1-5` in `Asia/Shanghai` runs weekdays at 09:00. The server computes the next run and skips missed occurrences. One-time schedules still accept a UTC timestamp. Existing fixed repeats migrate to matching UTC cron schedules.
 
-The regular agent and `/taskagent` can use `draft_scheduled_task` to write a paused task with a review link. The user reviews its instructions, schedule and script, then enables it. Scripts are bounded JSON MCP workflows, not JavaScript or shell programs:
+The regular agent and `/taskagent` can use `draft_scheduled_task` to write task instructions, cron expressions, time zones and optional MCP scripts as a paused task with a review link. The user reviews its instructions, schedule and script, then enables it. Scripts are bounded JSON MCP workflows, not JavaScript or shell programs:
 
 ```json
 [{"tool":"hko_current_weather","arguments":{"lang":"en"}}]
@@ -225,7 +225,7 @@ All signed-in web agents, the task agent, linked Telegram/WhatsApp agents and sc
 
 Deployment requires:
 
-- Run `bun run db:migrate` to apply migrations 0013 and 0014.
+- `bun run dev` applies pending database migrations before starting Next.js. For an already-running server, run `bun run db:migrate` to update its configured database, including migration 0015 for cron expressions and time zones.
 - Configure a stable `AUTH_SECRET`, canonical `APP_URL`, `MCPROUTER_INTERNAL_KEY`, and a random `CRON_SECRET`.
 - Deploy `vercel.json` with the every-minute `/api/cron/tasks` cron. The hosting plan must permit this frequency. Another scheduler can call the same endpoint using `Authorization: Bearer <CRON_SECRET>`.
 

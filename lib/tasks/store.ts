@@ -1,7 +1,7 @@
 import "server-only";
 import { and, desc, eq, isNull, lte, or } from "drizzle-orm";
 import { db, scheduledTasks, taskRuns } from "@/db";
-import { taskSchema } from "./definition";
+import { nextCronOccurrence, taskSchema } from "./definition";
 
 export async function listTasks(userId: string) {
   return db.select().from(scheduledTasks).where(eq(scheduledTasks.userId, userId)).orderBy(desc(scheduledTasks.createdAt)).limit(100);
@@ -17,8 +17,10 @@ export async function runsFor(userId: string, id: string) {
 }
 export async function saveTask(userId: string, input: unknown, id?: string, enabled = true) {
   const data = taskSchema.parse(input);
-  if (new Date(data.runAt).getTime() <= Date.now()) throw new Error("Choose a future run time");
-  const values = { title: data.title, prompt: data.prompt, script: data.script, intervalMinutes: data.intervalMinutes, nextRunAt: new Date(data.runAt) };
+  const now = new Date();
+  const nextRunAt = data.cronExpression ? nextCronOccurrence(data.cronExpression, data.timeZone, now) : new Date(data.runAt!);
+  if (nextRunAt <= now) throw new Error("Choose a future run time");
+  const values = { title: data.title, prompt: data.prompt, script: data.script, intervalMinutes: null, cronExpression: data.cronExpression, timeZone: data.timeZone, nextRunAt };
   if (id) {
     await getTask(userId, id);
     const result = await db.update(scheduledTasks).set(values).where(and(eq(scheduledTasks.id, id), eq(scheduledTasks.userId, userId), or(isNull(scheduledTasks.leaseUntil), lte(scheduledTasks.leaseUntil, new Date())))).returning();

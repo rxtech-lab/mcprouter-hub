@@ -1,5 +1,5 @@
 import "server-only";
-import { lookup } from "node:dns/promises";
+import { lookup, Resolver } from "node:dns/promises";
 import { isIP } from "node:net";
 import { request as httpsRequest } from "node:https";
 import { Readable } from "node:stream";
@@ -14,11 +14,23 @@ export function publicAddress(address: string) {
   return isIP(address) === 6 && /^[23][0-9a-f]{3}:/i.test(address) && !address.toLowerCase().startsWith("2001:db8:");
 }
 
+function syntheticAddress(address: string) {
+  return /^198\.(18|19)\./.test(address);
+}
+
 async function publicTarget(value: string | URL) {
   const url = new URL(value);
   if (url.protocol !== "https:" || url.username || url.password || url.hash || (url.port && url.port !== "443")) throw new Error("Use a public HTTPS MCP URL");
   const host = url.hostname.replace(/^\[|\]$/g, "");
-  const addresses = isIP(host) ? [{ address: host }] : await lookup(host, { all: true });
+  let addresses = isIP(host) ? [{ address: host }] : await lookup(host, { all: true });
+  // Local VPNs can replace public DNS answers with benchmarking-range fake IPs.
+  // Resolve those names independently; never connect to the synthetic address.
+  if (process.env.NODE_ENV === "development" && !isIP(host) && addresses.length && addresses.every(({ address }) => syntheticAddress(address))) {
+    const resolver = new Resolver({ timeout: 3000, tries: 1 });
+    resolver.setServers(["1.1.1.1", "8.8.8.8"]);
+    const results = await Promise.allSettled([resolver.resolve4(host), resolver.resolve6(host)]);
+    addresses = results.flatMap((result) => result.status === "fulfilled" ? result.value.map((address) => ({ address })) : []);
+  }
   if (!addresses.length || addresses.some(({ address }) => !publicAddress(address))) throw new Error("Private network endpoints are not supported");
   return { url, address: addresses[0].address };
 }

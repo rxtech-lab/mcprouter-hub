@@ -13,6 +13,7 @@ export default defineConfig({
     timeout: 180_000,
     reuseExistingServer: false,
     env: {
+      NEXT_E2E: "true",
       DEV_BYPASS_AUTH: "true",
       AUTH_SECRET: "e2e-only-secret-e2e-only-secret-123456",
       TURSO_DATABASE_URL: "file:e2e.db",

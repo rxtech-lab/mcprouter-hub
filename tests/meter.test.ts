@@ -36,6 +36,17 @@ describe("meterToolCall", () => {
     expect(value.log).toHaveBeenCalledWith(expect.objectContaining({ userId: "user-1", apiKeyId: "key-1", ...call, status: "ok", errorCode: null }));
   });
 
+  it("attributes only accepted MCP billing to the task run, including charges before a tool error", async () => {
+    const recordTaskUsage = vi.fn(async () => {});
+    const { value } = deps({ recordTaskUsage });
+    await meterToolCall({ ...caller, taskRunId: "run-1" }, { service: "unified-news", tool: "search_news" }, async () => { throw new Error("upstream"); }, value);
+    expect(recordTaskUsage).toHaveBeenCalledWith({ userId: "user-1", runId: "run-1", premium: true, chargedUnits: 0 });
+    recordTaskUsage.mockClear();
+    const denied = deps({ recordTaskUsage, record: vi.fn(async () => { throw new UsageLimitError("mcp_calls", "limit_exceeded", 1, 1); }) });
+    await meterToolCall({ ...caller, taskRunId: "run-1" }, call, async () => ({}), denied.value);
+    expect(recordTaskUsage).not.toHaveBeenCalled();
+  });
+
   it("logs the channel and OAuth client the call came from", async () => {
     const { value, settle } = deps();
     await meterToolCall({ userId: "user-1", apiKeyId: null, scopes: [], channel: "oauth", oauthClientId: "client-1" }, call, async () => ({}), value);

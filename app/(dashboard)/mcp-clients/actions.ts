@@ -1,7 +1,7 @@
 "use server";
 
 import { auth } from "@ai-sdk/mcp";
-import { and, eq } from "drizzle-orm";
+import { and, eq, sql } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { headers } from "next/headers";
 import { z } from "zod";
@@ -11,6 +11,16 @@ import { requireActionUser } from "@/lib/auth";
 import { connectionFor, oauthProvider } from "@/lib/external-mcp/provider";
 import { assertPublicUrl, externalFetch } from "@/lib/external-mcp/safe-fetch";
 import { seal, unseal } from "@/lib/sealed";
+import { clientTools } from "@/lib/external-mcp/details";
+
+export async function reloadClientTools(id: string) {
+  return runAction(async () => {
+    const user = await requireActionUser();
+    const result = await clientTools(user.id, z.uuid().parse(id), true);
+    if (result.error) throw new Error(result.error);
+    revalidatePath("/mcp-clients");
+  });
+}
 
 export async function connectClient(input: { name: string; url: string; clientId?: string; clientSecret?: string; id?: string }) {
   return runAction(async () => {
@@ -26,7 +36,7 @@ export async function connectClient(input: { name: string; url: string; clientId
       const saved = JSON.parse(unseal("external-mcp", previous.credentials) ?? "{}");
       // A reconnect is a fresh interactive authorization, retaining only client registration.
       const credentials = seal("external-mcp", JSON.stringify({ client: saved.client, dynamic: saved.dynamic, server: saved.server }));
-      await db.update(externalMcpClients).set({ connected: false, stateHash: null, credentials }).where(and(eq(externalMcpClients.id, id), eq(externalMcpClients.userId, user.id)));
+      await db.update(externalMcpClients).set({ connected: false, stateHash: null, credentials, toolsCache: null, toolsCacheVersion: sql`${externalMcpClients.toolsCacheVersion} + 1` }).where(and(eq(externalMcpClients.id, id), eq(externalMcpClients.userId, user.id)));
     } else {
       await db.insert(externalMcpClients).values({ id, userId: user.id, name: data.name, url: data.url, redirectUri: `${new URL(origin).origin}/api/external-mcp/callback`, credentials: seal("external-mcp", JSON.stringify(data.clientId ? { client: { client_id: data.clientId, ...(data.clientSecret ? { client_secret: data.clientSecret } : {}) } } : {})) });
     }

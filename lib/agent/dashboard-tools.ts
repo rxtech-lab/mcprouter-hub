@@ -23,7 +23,6 @@ export type DashboardNavigation = { href: string; label: string };
 export const DASHBOARD_PAGES = {
   scheduled_tasks: { href: "/tasks", label: msg("Scheduled tasks") },
   mcp_clients: { href: "/mcp-clients", label: msg("MCP clients") },
-  task_agent: { href: "/taskagent", label: msg("Task agent") },
   overview: { href: "/dashboard", label: msg("Overview") },
   tour: { href: "/dashboard?intro=all", label: msg("Dashboard tour") },
   api_keys: { href: "/keys", label: msg("API keys") },
@@ -48,7 +47,7 @@ const featureIds = INTRO_CARDS.filter((card) => card.kind === "feature").map((ca
 
 export const DASHBOARD_NOTE = `You are also the guide to the mcprouter dashboard the user is signed in to. Its tabs:
 Overview (calls today, plan usage, shortcuts; "Tour and what's new" replays the intro), API keys (keys; Connected apps for OAuth clients and per-client setup guides; Telegram and WhatsApp to link the chat bots),
-Usage (calls per day, Usage by client, Credits), Services (every tool and its datasets), Tracker (which DATA.GOV.HK datasets are being converted), Agent (this chat), Billing (plan and allowance) and Settings (which regions, services and tools the MCP endpoints expose).
+Usage (calls per day, Usage by client, Credits), Services (every tool and its datasets), Tracker (which DATA.GOV.HK datasets are being converted), Agent (this chat; also drafts scheduled tasks and MCP workflows), Scheduled tasks (review, enable and manage schedules), Billing (plan and allowance) and Settings (which regions, services and tools the MCP endpoints expose).
 New: mcprouter works in ChatGPT, Gemini and Claude (set up under Connected apps), and the agent answers on Telegram and WhatsApp (link under API keys).
 Answer questions about the dashboard and the user's account directly: use ${ACCOUNT_SUMMARY_TOOL_NAME} and ${LIST_KEYS_TOOL_NAME} for their numbers instead of guessing.
 When the user wants to go somewhere, call ${OPEN_PAGE_TOOL_NAME}; the chat shows an Open button that opens it in a new tab. When they want something done (create, rename, revoke or change the services of a key, set up a chat client, link Telegram or WhatsApp), call ${START_ACTION_TOOL_NAME}: the Open button takes them to that dialog, filled in, for them to confirm. These dashboard tools can't create, change or revoke anything themselves, and nothing opens until they press Open, so never say it is done or opened; tell them to press Open to review and confirm.

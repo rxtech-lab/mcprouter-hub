@@ -6,11 +6,23 @@ test("creates, edits, pauses and deletes a scheduled task through dedicated view
   await expect(page.getByRole("heading", { name: "New scheduled task" })).toBeVisible();
   await page.getByLabel("Title", { exact: true }).fill(`Browser task ${Date.now()}`);
   await page.getByLabel("Instructions", { exact: true }).fill("Summarize today's weather");
-  await page.getByLabel("Next run (UTC)").fill("2099-01-01T09:00");
+  await page.getByLabel("Cron expression", { exact: true }).fill("0 9 * * 1-5");
+  await page.getByLabel("Time zone", { exact: true }).fill("Asia/Shanghai");
   await page.getByRole("button", { name: "Save scheduled task" }).click();
   await expect(page).toHaveURL(/\/tasks\/[a-f0-9-]+$/);
   await expect(page.getByText("Scheduled task saved", { exact: true })).toBeVisible();
   await expect(page.getByRole("navigation", { name: "Your scheduled tasks" })).toBeVisible();
+  await expect(page.getByText("0 9 * * 1-5 (Asia/Shanghai)", { exact: false })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Next scheduled run" })).toBeVisible();
+  await page.getByRole("link", { name: "Run now", exact: true }).click();
+  const manual = page.getByRole("dialog", { name: "Run scheduled task now" });
+  await expect(manual).toBeVisible();
+  await expect(manual).toContainText("Its schedule and paused state will stay unchanged");
+  await manual.getByRole("button", { name: "Cancel", exact: true }).click();
+  await page.getByRole("link", { name: "Run history", exact: true }).click();
+  await expect(page).toHaveURL(/tab=history/);
+  await expect(page.getByRole("heading", { name: "No runs yet" })).toBeVisible();
+  await page.getByRole("navigation", { name: "Task details" }).getByRole("link", { name: "Overview", exact: true }).click();
   await page.getByRole("link", { name: "Pause", exact: true }).click();
   const pause = page.getByRole("dialog", { name: "Pause scheduled task" });
   await expect(pause).toBeVisible();
@@ -43,7 +55,7 @@ test("opens the native OAuth dialog from the sidebar and keeps secrets out of th
 });
 
 
-test("keeps task creation usable on mobile and exposes the task agent", async ({ page }) => {
+test("keeps task creation usable on mobile and opens the shared agent from task links", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/tasks/new");
   await expect(page.getByLabel("Instructions", { exact: true })).toBeVisible();
@@ -51,6 +63,15 @@ test("keeps task creation usable on mobile and exposes the task agent", async ({
   await page.getByLabel("Instructions", { exact: true }).fill("Summarize weather");
   await page.screenshot({ path: "/private/tmp/mcprouter-tasks-mobile.png", fullPage: true });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.goto("/tasks");
+  await page.getByRole("link", { name: "Build with the agent", exact: true }).click();
+  await expect(page).toHaveURL(/\/chat$/);
+  await expect(page.getByText("Help me write an MCP workflow script", { exact: true })).toBeVisible();
+});
+
+
+test("redirects the former task agent to the shared agent", async ({ page }) => {
   await page.goto("/taskagent");
+  await expect(page).toHaveURL(/\/chat$/);
   await expect(page.getByText("Help me write an MCP workflow script", { exact: true })).toBeVisible();
 });

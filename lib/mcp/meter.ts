@@ -1,3 +1,4 @@
+import { recordTaskMcpUsage } from "@/lib/tasks/usage";
 import { waitUntil } from "@vercel/functions";
 import { ZodError } from "zod";
 import { incrementCallCount } from "@/lib/api-keys";
@@ -16,6 +17,7 @@ export type McpToolResponse = {
 
 type Dependencies = {
   record: typeof recordUsage;
+  recordTaskUsage: typeof recordTaskMcpUsage;
   increment: (apiKeyId: string) => Promise<unknown>;
   log: (entry: ToolCallLog) => Promise<unknown>;
   billingEnabled: boolean;
@@ -24,6 +26,7 @@ type Dependencies = {
 
 const defaultDependencies: Dependencies = {
   record: recordUsage,
+  recordTaskUsage: recordTaskMcpUsage,
   increment: incrementCallCount,
   log: logToolCall,
   billingEnabled: billingConfig.enabled,
@@ -88,7 +91,8 @@ export async function meterToolCall(
     const idempotencyKey = `mcp:${caller.userId}:${crypto.randomUUID()}`;
     const metadata = { service: call.service, tool: call.tool, apiKeyId: caller.apiKeyId, channel: caller.channel ?? null };
     try {
-      await deps.record({ rxlabUserId: caller.userId, item, idempotencyKey, metadata });
+      const usage = await deps.record({ rxlabUserId: caller.userId, item, idempotencyKey, metadata });
+      if (caller.taskRunId && !usage.duplicate) await deps.recordTaskUsage({ userId: caller.userId, runId: caller.taskRunId, premium, chargedUnits: usage.chargedUnits });
     } catch (error) {
       if (error instanceof UsageLimitError) {
         log("denied", error.reason);
