@@ -30,6 +30,7 @@ export function useSnackbar() {
 export function SnackbarProvider({ children }: { children: ReactNode }) {
   const t = useT();
   const [snack, setSnack] = useState<Snack | null>(null);
+  const overlay = useRef<HTMLDivElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const counter = useRef(0);
 
@@ -49,6 +50,11 @@ export function SnackbarProvider({ children }: { children: ReactNode }) {
     return id;
   }, [dismiss]);
 
+  useEffect(() => {
+    if (snack && !overlay.current?.matches(":popover-open")) overlay.current?.showPopover();
+    if (!snack && overlay.current?.matches(":popover-open")) overlay.current.hidePopover();
+  }, [snack]);
+
   useEffect(() => () => {
     if (timer.current) clearTimeout(timer.current);
   }, []);
@@ -56,7 +62,7 @@ export function SnackbarProvider({ children }: { children: ReactNode }) {
   return (
     <SnackbarContext.Provider value={{ show, dismiss }}>
       {children}
-      <div aria-live="polite" className="pointer-events-none fixed inset-x-0 top-6 z-[60] flex justify-end px-4">
+      <div ref={overlay} popover="manual" aria-live="polite" className="pointer-events-none fixed inset-x-0 top-6 bottom-auto z-[60] m-0 w-full max-w-none overflow-visible border-0 bg-transparent p-0 px-4 [:popover-open]:flex justify-end">
         {snack ? (
           <div
             key={snack.id}

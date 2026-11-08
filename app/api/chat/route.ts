@@ -51,6 +51,7 @@ export async function POST(request: Request) {
 
   return streamAgentReply({
     servers,
+    userId: user.id,
     messages,
     model: process.env.AI_MODEL ?? "anthropic/claude-sonnet-5-5",
     channelNote: DASHBOARD_NOTE,

@@ -64,7 +64,7 @@ function defaultReply(deps: BotDeps) {
       resolveServer(server, { origin: deps.origin, userId: user.id, internalKey: process.env.MCPROUTER_INTERNAL_KEY, channel: "telegram", chatMetered: true, scopes: user.scopes, toolMode: user.toolMode }),
     );
     const signOut = signOutTool();
-    const { text, visuals } = await generateAgentReply({ servers, messages, model: deps.config.model, channelNote: TELEGRAM_CHANNEL_NOTE, channelTools: signOut.tools });
+    const { text, visuals } = await generateAgentReply({ userId: user.id, servers, messages, model: deps.config.model, channelNote: TELEGRAM_CHANNEL_NOTE, channelTools: signOut.tools });
     return { text, cards: cardsForVisuals(visuals), signOut: signOut.requested() };
   };
 }

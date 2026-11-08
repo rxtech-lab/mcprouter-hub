@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Browser tests can run alongside the developer server.
+  distDir: process.env.NEXT_E2E === "true" ? ".next-e2e" : ".next",
   // Mapbox raster tiles use a browser-visible public token. Never expose secret tokens.
   env: {
     NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: [process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN, process.env.MAPBOX_API_KEY].find((token) => token?.startsWith("pk.")) ?? "",

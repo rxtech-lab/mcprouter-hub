@@ -56,3 +56,23 @@ for (const surface of ["landing", "service"] as const) {
     });
   }
 }
+
+test("long user messages are fully readable in the conversation without a nested scrollbar", async ({ page }) => {
+  await page.route("**/api/provider-chat", (route) => route.fulfill({
+    contentType: "text/event-stream", headers: { "x-vercel-ai-ui-message-stream": "v1" },
+    body: 'data: {"type":"start","messageId":"long-prompt-reply"}\n\ndata: {"type":"finish"}\n\ndata: [DONE]\n\n',
+  }));
+  await page.goto("/sources/td-street-parking?chat=1");
+  const chat = page.getByRole("dialog", { name: "On-street Parking" });
+  const prompt = "Read the complete article and check for duplicates before saving. ".repeat(50) + "End of the full instructions.";
+  await chat.getByRole("textbox", { name: "Message", exact: true }).fill(prompt);
+  await chat.getByRole("button", { name: "Send", exact: true }).click();
+  const message = chat.getByTestId("user-message").last();
+  await expect(message).toContainText("End of the full instructions.");
+  const bounds = await message.locator(":scope > div").evaluate((element) => ({
+    height: element.clientHeight, contentHeight: element.scrollHeight, overflow: getComputedStyle(element).overflowY,
+  }));
+  expect(bounds.height).toBeGreaterThan(160);
+  expect(bounds.contentHeight).toBeLessThanOrEqual(bounds.height + 1);
+  expect(bounds.overflow).not.toMatch(/auto|scroll/);
+});

@@ -377,7 +377,7 @@ function TurnItem({ turn, minHeight, busy, onAnswer, inputDisabled }: { turn: Tu
     <li data-turn={turn.id} className="flex flex-col gap-4" style={{ minHeight }}>
       {turn.user ? (
         <div className="flex justify-end pb-2" data-testid="user-message">
-          <div className={`${turn.user.parts.some((part) => part.type === "text" && parseLocationAnswer(part.text)) ? "" : "max-h-40"} max-w-[min(680px,90%)] origin-bottom-right overflow-y-auto rounded-[20px] rounded-br-xs bg-primary-container px-4 py-2 type-body-large wrap-anywhere text-on-primary-container animate-message-in`}>
+          <div className="max-w-[min(680px,90%)] origin-bottom-right rounded-[20px] rounded-br-xs bg-primary-container px-4 py-2 type-body-large wrap-anywhere text-on-primary-container animate-message-in">
             <MessageParts message={turn.user} />
           </div>
         </div>
@@ -397,6 +397,8 @@ type ChatPanelProps = {
   status: "submitted" | "streaming" | "ready" | "error";
   onSend: (text: string) => void;
   onStop: () => void;
+  /** Background task runs keep running independently of this view. */
+  canStop?: boolean;
   title: ReactNode;
   /** Trailing header actions, such as the chat history button. */
   actions?: ReactNode;
@@ -417,7 +419,7 @@ type ChatPanelProps = {
 };
 
 /** The conversation: scroll new questions to the top, suggestions when empty, and the composer. */
-export function ChatPanel({ messages, status, onSend, onStop, title, actions, intro, notice, disabled = false, canCallAppTools = false, suggestions = SUGGESTIONS, placeholder, inputValue, onInputChange, inputRef }: ChatPanelProps) {
+export function ChatPanel({ messages, status, onSend, onStop, canStop = true, title, actions, intro, notice, disabled = false, canCallAppTools = false, suggestions = SUGGESTIONS, placeholder, inputValue, onInputChange, inputRef }: ChatPanelProps) {
   const t = useT();
   const [localInput, setLocalInput] = useState("");
   const input = inputValue ?? localInput;
@@ -502,13 +504,13 @@ export function ChatPanel({ messages, status, onSend, onStop, title, actions, in
           placeholder={placeholder ?? t("Ask about weather, buses, MTR, hospitals…")}
           className="max-h-40 min-h-10 min-w-0 flex-1 resize-none bg-transparent py-2 type-body-large outline-none placeholder:truncate placeholder:text-on-surface-variant disabled:opacity-60"
         />
-        {busy ? (
+        {busy && canStop ? (
           <IconButton label={t("Stop")} variant="tonal" onClick={onStop}>
             <Square size={18} />
           </IconButton>
         ) : (
           <IconButton label={t("Send")} variant="filled" type="submit"
- disabled={disabled || !input.trim()}>
+ disabled={disabled || busy || !input.trim()}>
             <ArrowUp size={20} />
           </IconButton>
         )}

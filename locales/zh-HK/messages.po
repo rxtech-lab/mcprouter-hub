@@ -198,7 +198,7 @@ msgstr "目前計劃將維持至續期。現在透過 Stripe 儲存付款方式�
 msgid "Review prorated charges and confirm your change securely with Stripe. Opening the review does not change your plan. Access updates after Stripe confirms the change."
 msgstr "前往 Stripe 安全地檢視按比例計算的費用並確認變更。開啟檢視頁面不會更改計劃。Stripe 確認變更後，使用權限才會更新。"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
+#: app/(dashboard)/billing/plan-change-dialog.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tasks/task-form.tsx app/(dashboard)/tasks/task-operation.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
 msgid "Cancel"
 msgstr "取消"
 
@@ -218,7 +218,7 @@ msgstr "發生錯誤，請再試一次。"
 msgid "Review with Stripe"
 msgstr "前往 Stripe 檢視"
 
-#: app/(dashboard)/chat/[id]/page.tsx app/(dashboard)/chat/chat-view.tsx app/(dashboard)/chat/page.tsx app/(dashboard)/usage/clients/client-icon.tsx components/app-shell.tsx lib/intro-cards.ts
+#: app/(dashboard)/chat/[id]/page.tsx app/(dashboard)/chat/chat-view.tsx app/(dashboard)/chat/page.tsx app/(dashboard)/tasks/task-sidebar.tsx app/(dashboard)/usage/clients/client-icon.tsx components/app-shell.tsx lib/intro-cards.ts
 msgid "Agent"
 msgstr "AI 助理"
 
@@ -254,7 +254,7 @@ msgstr "刪除對話？"
 msgid "“{title}” and all its messages will be deleted. This can't be undone."
 msgstr "「{title}」及其所有訊息將會被刪除，此操作無法復原。"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(dashboard)/chat/chat-history.tsx app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-operation.tsx
 msgid "Delete"
 msgstr "刪除"
 
@@ -291,12 +291,28 @@ msgid "Create an API key for Claude Code"
 msgstr "為 Claude Code 建立 API 金鑰"
 
 #: app/(dashboard)/chat/chat-view.tsx
-msgid "Show me the dashboard tour"
-msgstr "帶我瀏覽控制台導覽"
+msgid "Write a daily weather briefing task"
+msgstr "編寫每日天氣簡報任務"
+
+#: app/(dashboard)/chat/chat-view.tsx
+msgid "Help me write an MCP workflow script"
+msgstr "幫我編寫 MCP 工作流程指令碼"
 
 #: app/(dashboard)/chat/chat-view.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx
 msgid "The agent could not answer. Try again."
 msgstr "AI 助理未能回答，請再試一次。"
+
+#: app/(dashboard)/chat/chat-view.tsx
+msgid "Task is running. Results update automatically."
+msgstr "工作正在執行，結果會自動更新。"
+
+#: app/(dashboard)/chat/chat-view.tsx
+msgid "Task failed"
+msgstr "工作失敗"
+
+#: app/(dashboard)/chat/chat-view.tsx components/task-error-details.tsx
+msgid "Error details"
+msgstr "錯誤詳情"
 
 #: app/(dashboard)/chat/chat-view.tsx
 msgid "The agent calls mcprouter tools for you, and can link you to dashboard pages and actions like creating a key. Tool calls count towards your plan, like calls from your own keys."
@@ -330,7 +346,7 @@ msgstr "教學"
 msgid "Card {index} of {count}"
 msgstr "第 {index} 張，共 {count} 張"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/tracker/layout.tsx app/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
+#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tracker/layout.tsx app/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Overview"
 msgstr "概覽"
 
@@ -901,7 +917,7 @@ msgid "{count} tool"
 msgid_plural "{count} tools"
 msgstr[0] "{count} 個工具"
 
-#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/agent/map.tsx components/client-setup-dialog.tsx components/site-search.tsx
+#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/agent/map.tsx components/client-setup-dialog.tsx components/site-search.tsx components/task-error-details.tsx
 msgid "Close"
 msgstr "關閉"
 
@@ -1098,6 +1114,362 @@ msgstr "正在重設…"
 msgid "Everything is exposed"
 msgstr "已全部開放"
 
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Back to task"
+msgstr "返回任務"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Edit scheduled task"
+msgstr "編輯排程任務"
+
+#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/page.tsx app/(dashboard)/tasks/task-sidebar.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts
+msgid "Scheduled tasks"
+msgstr "排程任務"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Your agent will run this task automatically."
+msgstr "你的代理會自動執行此任務。"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Paused — review and enable to run"
+msgstr "已暫停 — 檢視並啟用後即可執行"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "View running task"
+msgstr "檢視執行中的任務"
+
+#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-operation.tsx
+msgid "Run now"
+msgstr "立即執行"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Next scheduled run"
+msgstr "下次排程執行"
+
+#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/page.tsx
+msgid "No upcoming run"
+msgstr "沒有待執行的任務"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid " · Run manually at any time"
+msgstr " · 可隨時手動執行"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Latest run"
+msgstr "最近一次執行"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Interrupted"
+msgstr "已中斷"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "No runs yet"
+msgstr "暫無執行記錄"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Run now to get your first result"
+msgstr "立即執行以取得首個結果"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Task details"
+msgstr "任務詳情"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Run history"
+msgstr "執行記錄"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Latest 30 runs · {timeZone}"
+msgstr "最近 30 次執行 · {timeZone}"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Refresh history"
+msgstr "重新整理記錄"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Interrupted — awaiting cleanup"
+msgstr "已中斷 — 等待清理"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Duration: {duration}"
+msgstr "耗時：{duration}"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Open result"
+msgstr "開啟結果"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Start a manual run or wait for the next scheduled time. Results will appear here."
+msgstr "手動執行一次，或等待下次排程執行。結果會顯示在這裏。"
+
+#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-form.tsx
+msgid "Instructions"
+msgstr "指示"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Schedule & workflow"
+msgstr "排程與工作流程"
+
+#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-form.tsx
+msgid "Once"
+msgstr "僅一次"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Manual runs use your plan allowance and keep this schedule unchanged. Results are saved in chat."
+msgstr "手動執行會使用你的計劃額度，目前排程維持不變。結果會儲存在對話中。"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Edit"
+msgstr "編輯"
+
+#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-form.tsx
+msgid "MCP workflow script"
+msgstr "MCP 工作流程指令碼"
+
+#: app/(dashboard)/tasks/[id]/page.tsx
+msgid "Manage task"
+msgstr "管理任務"
+
+#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-operation.tsx
+msgid "Pause"
+msgstr "暫停"
+
+#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-operation.tsx
+msgid "Enable"
+msgstr "啟用"
+
+#: app/(dashboard)/tasks/new/page.tsx
+msgid "New scheduled task"
+msgstr "新增排程任務"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "AUTOMATIONS"
+msgstr "自動化"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Give your agent a routine. Run instructions and MCP workflows on a schedule, or whenever you need them."
+msgstr "為你的代理設定例行任務。按排程或隨時執行指示及 MCP 工作流程。"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "New task"
+msgstr "新增任務"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "{count} scheduled"
+msgstr "{count} 個已排程"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "{count} paused"
+msgstr "{count} 個已暫停"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Build with the agent"
+msgstr "使用智能體建立"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Task schedules"
+msgstr "任務排程"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Filter tasks"
+msgstr "篩選任務"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "All tasks"
+msgstr "所有任務"
+
+#: app/(dashboard)/tasks/page.tsx app/(dashboard)/tasks/task-display.tsx app/(dashboard)/tasks/task-sidebar.tsx
+msgid "Scheduled"
+msgstr "已排程"
+
+#: app/(dashboard)/tasks/page.tsx app/(dashboard)/tasks/task-display.tsx app/(dashboard)/tasks/task-sidebar.tsx
+msgid "Paused"
+msgstr "已暫停"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "One-time task"
+msgstr "一次性任務"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Next run"
+msgstr "下次執行"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "No tasks in this view"
+msgstr "此檢視中沒有任務"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Your next routine starts here"
+msgstr "從這裏開始你的下一個例行任務"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Choose another filter to see your tasks."
+msgstr "選擇其他篩選條件以檢視任務。"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Create a schedule for a daily briefing, a recurring check, or an MCP workflow. Results are saved to chat."
+msgstr "為每日簡報、定期檢查或 MCP 工作流程建立排程。結果會儲存在對話中。"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "View all tasks"
+msgstr "檢視所有任務"
+
+#: app/(dashboard)/tasks/page.tsx
+msgid "Create your first task"
+msgstr "建立首個任務"
+
+#: app/(dashboard)/tasks/task-display.tsx components/agent/chat-panel.tsx components/agent/tool-app.tsx
+msgid "Running"
+msgstr "執行中"
+
+#: app/(dashboard)/tasks/task-display.tsx app/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
+msgid "In progress"
+msgstr "進行中"
+
+#: app/(dashboard)/tasks/task-display.tsx
+msgid "{seconds}s"
+msgstr "{seconds} 秒"
+
+#: app/(dashboard)/tasks/task-display.tsx
+msgid "{minutes}m {seconds}s"
+msgstr "{minutes} 分 {seconds} 秒"
+
+#: app/(dashboard)/tasks/task-display.tsx
+msgid "Succeeded"
+msgstr "已成功"
+
+#: app/(dashboard)/tasks/task-display.tsx components/agent/chat-panel.tsx
+msgid "Failed"
+msgstr "失敗"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Saving scheduled task…"
+msgstr "正在儲存排程任務…"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Scheduled task saved"
+msgstr "已儲存排程任務"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Title"
+msgstr "標題"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Schedule"
+msgstr "排程"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Recurring (cron)"
+msgstr "定期執行（cron）"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Cron expression"
+msgstr "Cron 表達式"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Minute, hour, day of month, month, day of week. Supports lists, ranges, steps, named months/weekdays, L, #, ?, H and aliases such as @daily. Tasks are checked once a minute; missed runs are skipped."
+msgstr "分鐘、小時、日期、月份、星期。支援清單、範圍、步長、月份及星期名稱、L、#、?、H 以及 @daily 等別名。每分鐘檢查一次工作，錯過的執行會略過。"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Time zone"
+msgstr "時區"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "IANA time zone, such as Asia/Shanghai or America/New_York. The next run is calculated automatically."
+msgstr "IANA 時區，例如 Asia/Shanghai 或 America/New_York。下次執行時間會自動計算。"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Next run (UTC)"
+msgstr "下次執行（UTC）"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "MCP workflow script (optional)"
+msgstr "MCP 工作流程指令碼（選填）"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "A JSON array of up to 20 sequential MCP tool calls, each with tool and arguments. The agent receives the outputs and completes the instructions. Ask the task agent to write this for you."
+msgstr "一個 JSON 陣列，包含最多 20 個依序執行的 MCP 工具呼叫，每項包含 tool 及 arguments。代理會接收輸出並完成指示。你可以讓任務代理代為編寫。"
+
+#: app/(dashboard)/tasks/task-form.tsx
+msgid "Save scheduled task"
+msgstr "儲存排程任務"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "This task is already running. Follow its progress in run history."
+msgstr "此任務正在執行。可在執行記錄中查看進度。"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Run this task now using your MCP connections and plan allowance? Its schedule and paused state will stay unchanged. You can follow the run and open its result in run history."
+msgstr "使用你的 MCP 連線及計劃額度立即執行此任務？排程及暫停狀態會維持不變。你可以在執行記錄中查看進度並開啟結果。"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Delete this schedule and its run history? Saved chats are kept."
+msgstr "刪除此排程及其執行記錄？已儲存的對話會保留。"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Allow this task to run using your MCP connections and plan allowance? Past recurring times are skipped; a past one-time task is scheduled for the next minute."
+msgstr "允許此任務使用你的 MCP 連線及計劃額度執行？已錯過的定期執行時間會被略過；已過期的一次性任務會安排在下一分鐘執行。"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Pause future runs of this task?"
+msgstr "暫停此任務日後的執行？"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Delete scheduled task"
+msgstr "刪除排程任務"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Enable scheduled task"
+msgstr "啟用排程任務"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Pause scheduled task"
+msgstr "暫停排程任務"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Run scheduled task now"
+msgstr "立即執行排程任務"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "View run history"
+msgstr "檢視執行記錄"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Starting task…"
+msgstr "正在啟動任務…"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Task started. Follow progress in run history."
+msgstr "任務已啟動。可在執行記錄中查看進度。"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Deleting task…"
+msgstr "正在刪除任務…"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Enabling task…"
+msgstr "正在啟用任務…"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Pausing task…"
+msgstr "正在暫停任務…"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Task deleted"
+msgstr "已刪除任務"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Task enabled"
+msgstr "已啟用任務"
+
+#: app/(dashboard)/tasks/task-operation.tsx
+msgid "Task paused"
+msgstr "已暫停任務"
+
+#: app/(dashboard)/tasks/task-sidebar.tsx
+msgid "Your scheduled tasks"
+msgstr "你的排程任務"
+
 #: app/(dashboard)/tracker/actions.ts
 msgid "Say why this dataset is skipped"
 msgstr "請說明略過此數據集的原因"
@@ -1174,10 +1546,6 @@ msgstr "未開始"
 #: app/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
 msgid "Planned"
 msgstr "已計劃"
-
-#: app/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
-msgid "In progress"
-msgstr "進行中"
 
 #: app/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
 msgid "Skipped"
@@ -2388,14 +2756,6 @@ msgstr "已搜尋工具"
 msgid "{count} found"
 msgstr "找到 {count} 個"
 
-#: components/agent/chat-panel.tsx
-msgid "Failed"
-msgstr "失敗"
-
-#: components/agent/chat-panel.tsx components/agent/tool-app.tsx
-msgid "Running"
-msgstr "執行中"
-
 #: components/agent/chat-panel.tsx components/agent/tool-app.tsx
 msgid "Input"
 msgstr "輸入"
@@ -2597,6 +2957,10 @@ msgstr "分享位置"
 msgid "Getting your location…"
 msgstr "正在取得你的位置…"
 
+#: components/app-shell.tsx lib/agent/dashboard-tools.ts
+msgid "MCP clients"
+msgstr "MCP 用戶端"
+
 #: components/charts.tsx
 msgid "{label}: {total} in total"
 msgstr "{label}：共 {total}"
@@ -2796,6 +3160,10 @@ msgstr "找不到文字搜尋結果。試試向助理提問。"
 #: components/site-search.tsx
 msgid "Understanding your search…"
 msgstr "正在理解你的搜尋…"
+
+#: components/task-error-details.tsx
+msgid "This earlier run did not record its original error. New runs include the failure stage and reason."
+msgstr "此次較早的執行未記錄原始錯誤。新的執行會包含失敗階段和原因。"
 
 #: components/tool-mode-dialog.tsx
 msgid "Endpoint default"
