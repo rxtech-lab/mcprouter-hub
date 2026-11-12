@@ -3,7 +3,7 @@ import { parseTaskCron } from "./cron";
 
 export const scriptSchema = z.array(z.object({
   tool: z.string().regex(/^[A-Za-z][A-Za-z0-9_-]{0,199}$/),
-  arguments: z.record(z.string(), z.unknown()).default({}),
+  arguments: z.object({}).catchall(z.unknown()).default({}),
 })).max(20);
 export const taskSchema = z.object({
   title: z.string().trim().min(1).max(120),

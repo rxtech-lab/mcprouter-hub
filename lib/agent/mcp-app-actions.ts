@@ -7,7 +7,7 @@ import { requireActionUser } from "@/lib/auth";
 
 const toolName = z.string().min(1).max(200);
 const resourceUri = z.string().startsWith("ui://").max(500);
-const toolArguments = z.record(z.string(), z.unknown()).default({});
+const toolArguments = z.object({}).catchall(z.unknown()).default({});
 
 /** The MCP App HTML for a tool part. This app's apps are public, like its tool list; other servers need a member. */
 export async function loadToolApp(chatToolName: string, uri: string) {

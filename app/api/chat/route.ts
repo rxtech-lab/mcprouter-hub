@@ -8,7 +8,7 @@ import { DASHBOARD_NOTE, dashboardTools } from "@/lib/agent/dashboard-tools";
 import { parseMcpServers, resolveServer } from "@/lib/agent/mcp-servers";
 import { streamAgentReply } from "@/lib/agent/run";
 
-export const maxDuration = 120;
+export const maxDuration = 300;
 
 export async function POST(request: Request) {
   const user = await getCurrentUser();

@@ -10,7 +10,7 @@ import type { ToolMode } from "@/db/schema";
 export const mcpServerSchema = z.object({
   name: z.string().regex(/^[a-z][a-z0-9_-]*$/i, "server names are letters, digits, - and _"),
   url: z.union([z.literal("self"), z.url({ protocol: /^https?$/ })]),
-  headers: z.record(z.string(), z.string()).default({}),
+  headers: z.object({}).catchall(z.string()).default({}),
 });
 
 export type McpServerConfig = z.infer<typeof mcpServerSchema>;

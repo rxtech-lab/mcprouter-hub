@@ -87,7 +87,7 @@ export function registerMetaTools(server: McpServer, entries: readonly Searchabl
       description: `Run a tool by name with its arguments (see ${META_TOOL_NAMES.read} for the schema). Each call counts against your plan.`,
       inputSchema: z.object({
         name: z.string().trim().min(1).describe("The tool to run"),
-        arguments: z.record(z.string(), z.unknown()).optional().describe("The tool's arguments"),
+        arguments: z.object({}).catchall(z.unknown()).optional().describe("The tool's arguments"),
       }),
       annotations: { readOnlyHint: true, openWorldHint: true },
     },

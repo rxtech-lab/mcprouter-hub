@@ -9,7 +9,7 @@ import { DEFAULT_AGENT_SERVERS, resolveServer } from "@/lib/agent/mcp-servers";
 import { streamAgentReply } from "@/lib/agent/run";
 import { clientAddress, consumeFreeMessage, freeChatConfig, GUEST_COOKIE, subjectsFor } from "@/lib/free-chat";
 
-export const maxDuration = 120;
+export const maxDuration = 300;
 const plain = (message: string, status: number) => new Response(message, { status, headers: { "content-type": "text/plain; charset=utf-8" } });
 
 /** Catalogue conversations are ephemeral; signed-in calls still use the member's normal MCP metering. */

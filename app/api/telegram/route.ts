@@ -4,7 +4,7 @@ import { parseUpdate, telegramConfig, verifySecretToken } from "@/lib/telegram/a
 import { handleIncomingMessage } from "@/lib/telegram/bot";
 
 /** Replies are generated after the webhook is acknowledged, within this budget. */
-export const maxDuration = 120;
+export const maxDuration = 300;
 
 const plain = (message: string, status: number) => new Response(message, { status, headers: { "content-type": "text/plain; charset=utf-8" } });
 
