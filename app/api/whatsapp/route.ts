@@ -4,7 +4,7 @@ import { handleIncomingMessage } from "@/lib/whatsapp/bot";
 import { parseIncomingMessages, verifySignature, whatsAppConfig } from "@/lib/whatsapp/wasender";
 
 /** Replies are generated after the webhook is acknowledged, within this budget. */
-export const maxDuration = 120;
+export const maxDuration = 300;
 
 const plain = (message: string, status: number) => new Response(message, { status, headers: { "content-type": "text/plain; charset=utf-8" } });
 

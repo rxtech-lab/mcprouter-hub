@@ -8,7 +8,7 @@ import { streamAgentReply } from "@/lib/agent/run";
 import { getCurrentUser } from "@/lib/auth";
 import { clientAddress, consumeFreeMessage, freeChatConfig, GUEST_COOKIE, subjectsFor } from "@/lib/free-chat";
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 /** Earlier turns come from the browser (free chats aren't stored), so their size is capped. */
 const MAX_HISTORY = 20;

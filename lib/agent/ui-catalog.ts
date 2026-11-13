@@ -77,12 +77,11 @@ const componentNames = Object.keys(components) as [UiComponent, ...UiComponent[]
 /** The spec the agent sends: json-render's flat element map, display props only. */
 export const uiSpecSchema = z.object({
   root: z.string().min(1).describe("Key of the top element"),
-  elements: z
-    .record(
-      z.string(),
+  elements: z.object({})
+    .catchall(
       z.object({
         type: z.enum(componentNames),
-        props: z.record(z.string(), z.unknown()).describe("The component's props, as listed in the tool description"),
+        props: z.object({}).catchall(z.unknown()).describe("The component's props, as listed in the tool description"),
         children: z.array(z.string()).optional().describe("Keys of child elements, for Stack, Grid and Card"),
       }),
     )
