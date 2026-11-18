@@ -16,7 +16,7 @@ import { ServicesDialog } from "@/components/services-dialog";
 import { SetupSteps } from "@/components/setup-steps";
 import { ToolModeBadge, ToolModeDialog } from "@/components/tool-mode-dialog";
 import { useActionRunner } from "@/components/use-action-runner";
-import { listHref } from "@/app/sources/params";
+import { listHref } from "@/app/(site)/sources/params";
 import { formatDate, formatRelative } from "@/lib/format";
 import { useT } from "@/lib/i18n/client";
 import type { ServiceSelection } from "@/lib/service-selection";

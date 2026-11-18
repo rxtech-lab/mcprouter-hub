@@ -1,10 +1,21 @@
 import { proxy as authProxy } from "@/lib/auth";
-import { isPublicCacheRequest, isPublicPage, PUBLIC_CACHE_CONTROL } from "@/lib/public-cache";
+import { isPublicCacheRequest, isPublicPage } from "@/lib/public-cache";
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
+import { publicCatalogueResponse } from "@/lib/public-catalogue-response";
 import { publicPath, splitLocalePath } from "@/lib/i18n/routing";
 
 export default async function proxy(request: NextRequest, event: NextFetchEvent) {
   const route = splitLocalePath(request.nextUrl.pathname);
+  if (request.nextUrl.pathname.startsWith("/catalogue-render/")) {
+    // The public renderer accepts only its URL parameters, never session state.
+    return NextResponse.next();
+  }
+  const enabled = process.env.NODE_ENV === "production"
+    && process.env.PUBLIC_CDN_CACHE_ENABLED === "true" && process.env.DEV_BYPASS_AUTH !== "true";
+  if (enabled && isPublicCacheRequest(request)) {
+    const html = await publicCatalogueResponse(request.nextUrl, route.locale ?? "en", route.pathname);
+    if (html) return html;
+  }
   const localized = Boolean(route.locale && publicPath(route.pathname));
   const forwarded = new Headers(request.headers);
   // Never trust caller-supplied locale or canonical metadata headers.
@@ -29,16 +40,7 @@ export default async function proxy(request: NextRequest, event: NextFetchEvent)
     routing.headers.forEach((value, name) => response.headers.set(name, value));
     if (localized) response.headers.delete("x-middleware-next");
   }
-  // Keep browser/Next.js Cache-Control unchanged. Only Cloudflare may share
-  // these responses, after the matching request-side rules are installed.
-  if (response) {
-    const enabled = process.env.NODE_ENV === "production"
-      && process.env.PUBLIC_CDN_CACHE_ENABLED === "true"
-      && process.env.DEV_BYPASS_AUTH !== "true";
-    response.headers.set("Cloudflare-CDN-Cache-Control",
-      enabled && isPublicCacheRequest(request) && !response.headers.has("set-cookie")
-        ? PUBLIC_CACHE_CONTROL : "no-store");
-  }
+  response?.headers.set("Cloudflare-CDN-Cache-Control", "no-store");
   return response;
 }
 

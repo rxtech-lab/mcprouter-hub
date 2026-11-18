@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { getLocale } from "@/lib/i18n/server";
+import { catalogueRender, getLocale } from "@/lib/i18n/server";
 import { LOCALES, type Locale } from "@/lib/i18n/config";
 import { localizedHref, publicPath } from "@/lib/i18n/routing";
 
@@ -31,9 +31,11 @@ export function indexableQuery(query: URLSearchParams) {
 }
 
 export async function seoMetadata(title: string, description: string, pathOverride?: string): Promise<Metadata> {
-  const [requestHeaders, locale] = await Promise.all([headers(), getLocale()]);
-  const path = pathOverride ?? requestHeaders.get("x-site-path") ?? "/";
-  const query = new URLSearchParams(requestHeaders.get("x-site-query") ?? "");
+  const context = catalogueRender();
+  const requestHeaders = context.path ? null : await headers();
+  const locale = await getLocale();
+  const path = pathOverride ?? context.path ?? requestHeaders?.get("x-site-path") ?? "/";
+  const query = new URLSearchParams(context.query ?? requestHeaders?.get("x-site-query") ?? "");
   const suffix = canonicalQuery(path, query);
   const canonical = `${seoOrigin()}${localizedHref(path, locale)}${suffix}`;
   const languages = languageAlternates(`${path}${suffix}`);

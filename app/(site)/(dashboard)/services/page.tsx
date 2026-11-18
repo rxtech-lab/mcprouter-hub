@@ -8,7 +8,7 @@ import { requirePageUser } from "@/lib/auth";
 import { getT } from "@/lib/i18n/server";
 import { matchesService } from "@/lib/mcp/search";
 import { siteUrl } from "@/lib/site";
-import { listHref, parseListParams } from "@/app/sources/params";
+import { listHref, parseListParams } from "@/app/(site)/sources/params";
 import { ServicesView, type ServiceCard } from "./services-view";
 
 export async function generateMetadata(): Promise<Metadata> {

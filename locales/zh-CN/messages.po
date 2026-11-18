@@ -6,2645 +6,2645 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Source-Language: en\n"
 
-#: app/(dashboard)/billing/actions.ts
+#: app/(site)/(dashboard)/billing/actions.ts
 msgid "This plan change is unavailable. Refresh billing, or manage your subscription with its billing provider."
 msgstr "暂时无法更改此方案。请刷新账单页面，或通过付款服务提供商管理订阅。"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Current plan"
 msgstr "当前套餐"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Opening checkout…"
 msgstr "正在打开结账页面…"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Redirecting to checkout"
 msgstr "正在跳转到结账页面"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Opening…"
 msgstr "正在打开…"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Opening billing portal…"
 msgstr "正在打开账单门户…"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Redirecting to the billing portal"
 msgstr "正在跳转到账单门户"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Invoices & payment"
 msgstr "发票与付款"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Payment complete. Your plan will update in a moment."
 msgstr "付款成功，你的套餐将很快更新。"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Checkout cancelled. Nothing was charged."
 msgstr "已取消结账，未产生任何扣费。"
 
-#: app/(dashboard)/billing/billing-buttons.tsx
+#: app/(site)/(dashboard)/billing/billing-buttons.tsx
 msgid "Plan review complete. Billing will reflect confirmed changes once Stripe finishes processing."
 msgstr "方案查看已结束。Stripe 完成处理后，账单会显示已确认的变更。"
 
-#: app/(dashboard)/billing/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
+#: app/(site)/(dashboard)/billing/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Billing"
 msgstr "账单"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Not available"
 msgstr "不可用"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Purchase limit reached"
 msgstr "已达购买上限"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Requires {plan}"
 msgstr "需要 {plan}"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Requires a paid plan"
 msgstr "需要付费套餐"
 
-#: app/(dashboard)/billing/page.tsx app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx app/(site)/(dashboard)/usage/credits/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "Billing is not configured"
 msgstr "未配置账单"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show plans and usage."
 msgstr "设置 RX_SUBSCRIPTION_URL 和 RX_SUBSCRIPTION_API_KEY 以显示套餐和用量。"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Chat and MCP calls use your plan allowances. News tools use a separate premium allowance, including during chat."
 msgstr "聊天和 MCP 调用使用套餐配额。新闻工具使用独立的高级配额，包括聊天期间的调用。"
 
-#: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
+#: app/(site)/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Metering is switched off on this deployment, so tool calls are free for now."
 msgstr "此部署已关闭计量，目前工具调用免费。"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Usage limits"
 msgstr "用量上限"
 
-#: app/(dashboard)/billing/page.tsx app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
+#: app/(site)/(dashboard)/billing/page.tsx app/(site)/(dashboard)/dashboard/page.tsx app/(site)/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
 msgid "Resets {date}"
 msgstr "{date} 重置"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "No usage limits are configured yet."
 msgstr "尚未设置用量上限。"
 
-#: app/(dashboard)/billing/page.tsx app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
+#: app/(site)/(dashboard)/billing/page.tsx app/(site)/(dashboard)/dashboard/page.tsx app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
 msgid "Usage is unavailable right now."
 msgstr "暂时无法获取用量。"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Stored credits and history"
 msgstr "储值点数和记录"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Plans"
 msgstr "套餐"
 
-#: app/(dashboard)/billing/page.tsx app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/page.tsx app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "Change plan"
 msgstr "更改方案"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Plan change scheduled"
 msgstr "已安排更改方案"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Plan change unavailable"
 msgstr "无法更改方案"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Included when you have no plan"
 msgstr "无套餐时默认包含"
 
-#: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
+#: app/(site)/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Start {days}-day trial"
 msgstr "开始 {days} 天试用"
 
-#: app/(dashboard)/billing/page.tsx components/landing-pricing.tsx
+#: app/(site)/(dashboard)/billing/page.tsx components/landing-pricing.tsx
 msgid "Choose plan"
 msgstr "选择套餐"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "{plan} starts on {date}"
 msgstr "{plan} 将于 {date} 开始"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "This subscription cannot be changed here. Manage it with its billing provider or contact support."
 msgstr "此订阅无法在这里更改。请通过付款服务提供商管理，或联系支持。"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "No plans available"
 msgstr "暂无可用套餐"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Plans will appear here once they're published."
 msgstr "套餐发布后将显示在这里。"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "The plan catalogue couldn't be loaded."
 msgstr "无法加载套餐目录。"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Top-ups"
 msgstr "充值"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "units"
 msgstr "单位"
 
-#: app/(dashboard)/billing/page.tsx
+#: app/(site)/(dashboard)/billing/page.tsx
 msgid "Buy"
 msgstr "购买"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx app/sources/apis/api-dialog.tsx components/m3/snackbar.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx app/(site)/sources/apis/api-dialog.tsx components/m3/snackbar.tsx
 msgid "Dismiss"
 msgstr "关闭"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "From {plan}"
 msgstr "当前：{plan}"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "To {plan}"
 msgstr "更改为：{plan}"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "When should this change start?"
 msgstr "何时开始更改方案？"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "Immediately, with prorated billing"
 msgstr "立即更改，费用按比例计算"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "At the next billing period"
 msgstr "于下一个账单周期开始"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "Keep your current plan until renewal. Save a payment method with Stripe now; the new plan starts and is billed at the next period. Opening the review does not schedule a change."
 msgstr "当前方案将保持至续期。现在通过 Stripe 保存付款方式；新方案将于下一个周期开始并收费。打开查看页面不会安排变更。"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "Review prorated charges and confirm your change securely with Stripe. Opening the review does not change your plan. Access updates after Stripe confirms the change."
 msgstr "前往 Stripe 安全地查看按比例计算的费用并确认变更。打开查看页面不会更改方案。Stripe 确认变更后，使用权限才会更新。"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tasks/task-form.tsx app/(dashboard)/tasks/task-operation.tsx app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/datasets/filters-button.tsx app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/settings/settings-view.tsx app/(site)/(dashboard)/tasks/task-form.tsx app/(site)/(dashboard)/tasks/task-operation.tsx app/(site)/(dashboard)/tracker/dataset-table.tsx app/(site)/(dashboard)/tracker/datasets/filters-button.tsx app/(site)/oauth/authorize/decision-buttons.tsx app/(site)/telegram/link/link-buttons.tsx app/(site)/whatsapp/link/link-buttons.tsx components/agent/user-input.tsx components/m3/dialog.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
 msgid "Cancel"
 msgstr "取消"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "Opening plan review…"
 msgstr "正在打开方案查看页面…"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "Redirecting to plan review"
 msgstr "正在转至方案查看页面"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx lib/action-result.ts
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx lib/action-result.ts
 msgid "Something went wrong. Please try again."
 msgstr "出了点问题，请重试。"
 
-#: app/(dashboard)/billing/plan-change-dialog.tsx
+#: app/(site)/(dashboard)/billing/plan-change-dialog.tsx
 msgid "Review with Stripe"
 msgstr "前往 Stripe 查看"
 
-#: app/(dashboard)/chat/[id]/page.tsx app/(dashboard)/chat/chat-view.tsx app/(dashboard)/chat/page.tsx app/(dashboard)/tasks/task-sidebar.tsx app/(dashboard)/usage/clients/client-icon.tsx components/app-shell.tsx lib/intro-cards.ts
+#: app/(site)/(dashboard)/chat/[id]/page.tsx app/(site)/(dashboard)/chat/chat-view.tsx app/(site)/(dashboard)/chat/page.tsx app/(site)/(dashboard)/tasks/task-sidebar.tsx app/(site)/(dashboard)/usage/clients/client-icon.tsx components/app-shell.tsx lib/intro-cards.ts
 msgid "Agent"
 msgstr "智能体"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Search chats"
 msgstr "搜索对话"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "No chats match your search."
 msgstr "没有匹配的对话。"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Your chats will appear here."
 msgstr "你的对话将显示在这里。"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Delete “{title}”"
 msgstr "删除“{title}”"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Loading chats"
 msgstr "正在加载对话"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Load more"
 msgstr "加载更多"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Delete chat?"
 msgstr "删除对话？"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "“{title}” and all its messages will be deleted. This can't be undone."
 msgstr "“{title}”及其所有消息将被删除，此操作无法撤销。"
 
-#: app/(dashboard)/chat/chat-history.tsx app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Delete"
 msgstr "删除"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Deleting chat…"
 msgstr "正在删除对话…"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Chat deleted"
 msgstr "对话已删除"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Chat history"
 msgstr "对话历史"
 
-#: app/(dashboard)/chat/chat-history.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/(dashboard)/chat/chat-history.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx lib/agent/dashboard-tools.ts
 msgid "New chat"
 msgstr "新对话"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Recent"
 msgstr "最近"
 
-#: app/(dashboard)/chat/chat-history.tsx
+#: app/(site)/(dashboard)/chat/chat-history.tsx
 msgid "Chats"
 msgstr "对话"
 
-#: app/(dashboard)/chat/chat-view.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx
 msgid "How many calls have I made today?"
 msgstr "我今天调用了多少次？"
 
-#: app/(dashboard)/chat/chat-view.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx
 msgid "Create an API key for Claude Code"
 msgstr "为 Claude Code 创建 API 密钥"
 
-#: app/(dashboard)/chat/chat-view.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx
 msgid "Write a daily weather briefing task"
 msgstr "编写每日天气简报任务"
 
-#: app/(dashboard)/chat/chat-view.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx
 msgid "Help me write an MCP workflow script"
 msgstr "帮我编写 MCP 工作流脚本"
 
-#: app/(dashboard)/chat/chat-view.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx app/(site)/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx
 msgid "The agent could not answer. Try again."
 msgstr "智能体无法回答，请重试。"
 
-#: app/(dashboard)/chat/chat-view.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx
 msgid "Task is running. Results update automatically."
 msgstr "任务正在运行，结果会自动更新。"
 
-#: app/(dashboard)/chat/chat-view.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx
 msgid "Task failed"
 msgstr "任务失败"
 
-#: app/(dashboard)/chat/chat-view.tsx components/task-error-details.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx components/task-error-details.tsx
 msgid "Error details"
 msgstr "错误详情"
 
-#: app/(dashboard)/chat/chat-view.tsx
+#: app/(site)/(dashboard)/chat/chat-view.tsx
 msgid "The agent calls mcprouter tools for you, and can link you to dashboard pages and actions like creating a key. Tool calls count towards your plan, like calls from your own keys."
 msgstr "智能体会为你调用 mcprouter 工具，也能带你前往控制台页面和操作，例如创建密钥。工具调用会计入你的套餐，与你自己的密钥调用相同。"
 
-#: app/(dashboard)/dashboard/intro-dialog.tsx app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/dashboard/intro-dialog.tsx app/(site)/(dashboard)/services/services-view.tsx
 msgid "Back"
 msgstr "返回"
 
-#: app/(dashboard)/dashboard/intro-dialog.tsx
+#: app/(site)/(dashboard)/dashboard/intro-dialog.tsx
 msgid "Skip"
 msgstr "跳过"
 
-#: app/(dashboard)/dashboard/intro-dialog.tsx app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/page.tsx components/agent/chat-panel.tsx components/agent/tool-app.tsx
+#: app/(site)/(dashboard)/dashboard/intro-dialog.tsx app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/page.tsx components/agent/chat-panel.tsx components/agent/tool-app.tsx
 msgid "Done"
 msgstr "完成"
 
-#: app/(dashboard)/dashboard/intro-dialog.tsx components/m3/pagination.tsx
+#: app/(site)/(dashboard)/dashboard/intro-dialog.tsx components/m3/pagination.tsx
 msgid "Next"
 msgstr "下一页"
 
-#: app/(dashboard)/dashboard/intro-dialog.tsx
+#: app/(site)/(dashboard)/dashboard/intro-dialog.tsx
 msgid "New feature"
 msgstr "新功能"
 
-#: app/(dashboard)/dashboard/intro-dialog.tsx
+#: app/(site)/(dashboard)/dashboard/intro-dialog.tsx
 msgid "Tutorial"
 msgstr "教程"
 
-#: app/(dashboard)/dashboard/intro-dialog.tsx
+#: app/(site)/(dashboard)/dashboard/intro-dialog.tsx
 msgid "Card {index} of {count}"
 msgstr "第 {index} 张，共 {count} 张"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tracker/layout.tsx app/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
+#: app/(site)/(dashboard)/dashboard/page.tsx app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tracker/layout.tsx app/(site)/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Overview"
 msgstr "概览"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Hello, {name}"
 msgstr "你好，{name}"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "{n} tool call so far today."
 msgid_plural "{n} tool calls so far today."
 msgstr[0] "今天已有 {n} 次工具调用。"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "No tool calls yet today."
 msgstr "今天还没有工具调用。"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "{services} services and {tools} tools are ready."
 msgstr "{services} 个服务和 {tools} 个工具已就绪。"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-tabs.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/page.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
+#: app/(site)/(dashboard)/dashboard/page.tsx app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/keys-tabs.tsx app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/keys/page.tsx app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "API keys"
 msgstr "API 密钥"
 
-#: app/(dashboard)/dashboard/page.tsx app/page.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx components/site-search.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx app/(site)/page.tsx components/agent/hero-chat.tsx components/site-search-chat.tsx components/site-search.tsx
 msgid "Ask the agent"
 msgstr "询问智能体"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Tour and what's new"
 msgstr "导览与新功能"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Calls today"
 msgstr "今日调用"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Calls, last 30 days"
 msgstr "近 30 天调用"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Active API keys"
 msgstr "有效 API 密钥"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "Calls per day"
 msgstr "每日调用"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Last 30 days, Hong Kong time"
 msgstr "近 30 天，香港时间"
 
-#: app/(dashboard)/dashboard/page.tsx app/(dashboard)/usage/layout.tsx app/(dashboard)/usage/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
+#: app/(site)/(dashboard)/dashboard/page.tsx app/(site)/(dashboard)/usage/layout.tsx app/(site)/(dashboard)/usage/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Usage"
 msgstr "用量"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Browse services"
 msgstr "浏览服务"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Every tool, its inputs and the datasets behind it."
 msgstr "所有工具、其输入参数及背后的数据集。"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Usage and credits"
 msgstr "用量与额度"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Calls per day and your credit history."
 msgstr "每日调用量和额度记录。"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Plan and billing"
 msgstr "套餐与账单"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Check your allowance or change your plan."
 msgstr "查看剩余额度或更改套餐。"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Plan usage"
 msgstr "套餐用量"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Calls included in your plan"
 msgstr "套餐包含的调用次数"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "No metered plan yet."
 msgstr "暂无计量套餐。"
 
-#: app/(dashboard)/dashboard/page.tsx
+#: app/(site)/(dashboard)/dashboard/page.tsx
 msgid "Billing is not configured."
 msgstr "未配置账单。"
 
-#: app/(dashboard)/keys/actions.ts
+#: app/(site)/(dashboard)/keys/actions.ts
 msgid "Give the key a name"
 msgstr "请为密钥命名"
 
-#: app/(dashboard)/keys/actions.ts
+#: app/(site)/(dashboard)/keys/actions.ts
 msgid "Use 60 characters or fewer"
 msgstr "不超过 60 个字符"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Keys let MCP clients call mcprouter on your behalf. Clients that support OAuth can sign in instead. Each tool call counts against your plan."
 msgstr "密钥让 MCP 客户端代表你调用 mcprouter。支持 OAuth 的客户端可直接登录。每次工具调用都会计入你的套餐。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Add client"
 msgstr "添加客户端"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "No connected apps"
 msgstr "暂无已连接的应用"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Pick your client to see how to add mcprouter. Clients that support OAuth ask you to sign in and approve access, with no key to copy."
 msgstr "选择你的客户端，查看如何添加 mcprouter。支持 OAuth 的客户端会要求你登录并授权访问，无需复制密钥。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/usage/layout.tsx app/page.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/usage/layout.tsx app/(site)/page.tsx
 msgid "Clients"
 msgstr "客户端"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/apps/page.tsx app/(dashboard)/keys/keys-tabs.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/apps/page.tsx app/(site)/(dashboard)/keys/keys-tabs.tsx lib/agent/dashboard-tools.ts
 msgid "Connected apps"
 msgstr "已连接的应用"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Last used"
 msgstr "上次使用"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Connected"
 msgstr "已连接"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Actions for {name}"
 msgstr "{name} 的操作"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Change services"
 msgstr "更改服务"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx components/tool-mode-dialog.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx components/tool-mode-dialog.tsx
 msgid "Change tool mode"
 msgstr "更改工具模式"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Disconnect"
 msgstr "断开连接"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Choose which services “{name}” can call. It sees only their tools."
 msgstr "选择“{name}”可调用的服务。它只能看到这些服务的工具。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/oauth/authorize/services-field.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/oauth/authorize/services-field.tsx
 msgid "Services this app may call"
 msgstr "此应用可调用的服务"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Choose how “{name}” sees tools. It picks this up the next time it lists tools."
 msgstr "选择“{name}”如何看到工具。它下次列出工具时生效。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Add {name}"
 msgstr "添加 {name}"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Replace {placeholder} with a key from the API keys tab. New keys show these steps with the key filled in."
 msgstr "将 {placeholder} 替换为“API 密钥”标签页中的密钥。新建密钥时，这些步骤会自动填入密钥。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "You sign in to mcprouter and approve access, with no key to copy. The client then appears in this list."
 msgstr "你只需登录 mcprouter 并授权访问，无需复制密钥。之后该客户端会出现在此列表中。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/page.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/page.tsx
 msgid "Create a key"
 msgstr "创建密钥"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Sign-in method"
 msgstr "登录方式"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/guides/[client]/page.tsx app/login/page.tsx components/site-header.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/guides/[client]/page.tsx app/(site)/login/page.tsx components/site-header.tsx
 msgid "Sign in"
 msgstr "登录"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/keys/keys-view.tsx app/(dashboard)/usage/clients/client-icon.tsx app/guides/[client]/page.tsx app/page.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/usage/clients/client-icon.tsx app/(site)/guides/[client]/page.tsx app/(site)/page.tsx
 msgid "API key"
 msgstr "API 密钥"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Tools to expose"
 msgstr "要公开的工具"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx components/tool-mode-dialog.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx components/tool-mode-dialog.tsx
 msgid "Search tools"
 msgstr "搜索工具"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "All tools"
 msgstr "所有工具"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "The client sees only search_tools, read_tool and use_tool, and finds the tools it needs, so its context stays small."
 msgstr "客户端只会看到 search_tools、read_tool 和 use_tool，再自行找出所需工具，让上下文保持精简。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "The client sees every tool by name. Some clients cap how many tools they load, so this suits clients without a limit."
 msgstr "客户端会看到每个工具的名称。部分客户端会限制加载的工具数量，因此这适合没有上限的客户端。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Disconnect this app?"
 msgstr "断开此应用？"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "“{name}” will lose access immediately. It can connect again only after you sign in and approve it."
 msgstr "“{name}”将立即失去访问权限。只有在你登录并重新授权后，它才能再次连接。"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "Disconnecting…"
 msgstr "正在断开连接…"
 
-#: app/(dashboard)/keys/apps/apps-view.tsx
+#: app/(site)/(dashboard)/keys/apps/apps-view.tsx
 msgid "App disconnected"
 msgstr "应用已断开连接"
 
-#: app/(dashboard)/keys/keys-tabs.tsx
+#: app/(site)/(dashboard)/keys/keys-tabs.tsx
 msgid "Access"
 msgstr "访问"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Create key"
 msgstr "创建密钥"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "No API keys yet"
 msgstr "暂无 API 密钥"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Create a key, then paste the ready-made config into Claude Code, Codex, Gemini CLI, Cursor or any MCP client. Claude, ChatGPT and Gemini sign in with OAuth instead, see <link>Set up a client</link>."
 msgstr "创建密钥后，将现成的配置粘贴到 Claude Code、Codex、Gemini CLI、Cursor 或任何 MCP 客户端。Claude、ChatGPT 和 Gemini 则通过 OAuth 登录，请参阅<link>设置客户端</link>。"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Choose how clients using “{name}” see tools. They pick this up the next time they list tools."
 msgstr "选择使用“{name}”的客户端如何看到工具。它们下次列出工具时生效。"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Revoked"
 msgstr "已撤销"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Expired"
 msgstr "已过期"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/usage/layout.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/usage/layout.tsx
 msgid "Calls"
 msgstr "调用"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Created"
 msgstr "创建时间"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Expires"
 msgstr "过期时间"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Never"
 msgstr "永不"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Rename"
 msgstr "重命名"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Revoke"
 msgstr "撤销"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Services this key may call"
 msgstr "此密钥可调用的服务"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/services/services-view.tsx app/(dashboard)/settings/settings-view.tsx app/oauth/authorize/services-field.tsx components/service-badges.tsx components/services-dialog.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/services/services-view.tsx app/(site)/(dashboard)/settings/settings-view.tsx app/(site)/oauth/authorize/services-field.tsx components/service-badges.tsx components/services-dialog.tsx
 msgid "All services"
 msgstr "所有服务"
 
-#: app/(dashboard)/keys/keys-view.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/(dashboard)/keys/keys-view.tsx lib/agent/dashboard-tools.ts
 msgid "Create API key"
 msgstr "创建 API 密钥"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "The key is shown once, right after you create it."
 msgstr "密钥仅在创建后显示一次。"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Creating…"
 msgstr "正在创建…"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Create"
 msgstr "创建"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Creating key…"
 msgstr "正在创建密钥…"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Key created"
 msgstr "密钥已创建"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Name"
 msgstr "名称"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "e.g. Claude Code on my laptop"
 msgstr "例如：我笔记本上的 Claude Code"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "In 30 days"
 msgstr "30 天后"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "In 90 days"
 msgstr "90 天后"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "In 1 year"
 msgstr "1 年后"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "“{name}” is ready"
 msgstr "“{name}”已就绪"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Copy this key now. It is stored only as a hash, so it can't be shown again."
 msgstr "请立即复制此密钥。密钥仅以哈希形式存储，之后无法再次显示。"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Key copied"
 msgstr "密钥已复制"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/usage/clients/[client]/page.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/usage/clients/[client]/page.tsx
 msgid "Client"
 msgstr "客户端"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Config copied"
 msgstr "配置已复制"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Claude, ChatGPT and other clients that sign in with OAuth don't need a key. See <link>Set up a client</link>."
 msgstr "Claude、ChatGPT 等使用 OAuth 登录的客户端无需密钥。请参阅<link>设置客户端</link>。"
 
-#: app/(dashboard)/keys/keys-view.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/(dashboard)/keys/keys-view.tsx lib/agent/dashboard-tools.ts
 msgid "Rename key"
 msgstr "重命名密钥"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/settings/settings-view.tsx app/(site)/(dashboard)/tracker/dataset-table.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
 msgid "Saving…"
 msgstr "正在保存…"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx app/(dashboard)/tracker/dataset-table.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/settings/settings-view.tsx app/(site)/(dashboard)/tracker/dataset-table.tsx components/services-dialog.tsx components/tool-mode-dialog.tsx
 msgid "Save"
 msgstr "保存"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Renaming key…"
 msgstr "正在重命名密钥…"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Key renamed"
 msgstr "密钥已重命名"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Choose which services “{name}” can call. Clients see only these tools."
 msgstr "选择“{name}”可调用的服务。客户端只能看到这些工具。"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx components/services-dialog.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/settings/settings-view.tsx components/services-dialog.tsx
 msgid "Saving services…"
 msgstr "正在保存服务…"
 
-#: app/(dashboard)/keys/keys-view.tsx app/(dashboard)/settings/settings-view.tsx components/services-dialog.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx app/(site)/(dashboard)/settings/settings-view.tsx components/services-dialog.tsx
 msgid "Services updated"
 msgstr "服务已更新"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Revoke this key?"
 msgstr "撤销此密钥？"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Clients using “{name}” ({prefix}…) will stop working immediately. This can't be undone."
 msgstr "使用“{name}”（{prefix}…）的客户端将立即停止工作，此操作无法撤销。"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Revoking key…"
 msgstr "正在撤销密钥…"
 
-#: app/(dashboard)/keys/keys-view.tsx
+#: app/(site)/(dashboard)/keys/keys-view.tsx
 msgid "Key revoked"
 msgstr "密钥已撤销"
 
-#: app/(dashboard)/keys/telegram/actions.ts
+#: app/(site)/(dashboard)/keys/telegram/actions.ts
 msgid "Unknown account"
 msgstr "未知账户"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Account linked. Go back to Telegram and ask your question again."
 msgstr "账户已关联。请返回 Telegram 重新提问。"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Open Telegram"
 msgstr "打开 Telegram"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "No linked Telegram accounts"
 msgstr "暂无已关联的 Telegram 账户"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Message the mcprouter bot on Telegram (@{username}). It replies with a sign-in link that links your account, and then answers with the same tools and plan as the agent here."
 msgstr "在 Telegram 上给 mcprouter 机器人（@{username}）发消息。它会回复一个登录链接用于关联你的账户，之后便使用与这里的智能体相同的工具和套餐为你解答。"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Message the mcprouter bot on Telegram. It replies with a sign-in link that links your account, and then answers with the same tools and plan as the agent here."
 msgstr "在 Telegram 上给 mcprouter 机器人发消息。它会回复一个登录链接用于关联你的账户，之后便使用与这里的智能体相同的工具和套餐为你解答。"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Chat on Telegram"
 msgstr "在 Telegram 上对话"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "The Telegram bot isn't set up on this deployment."
 msgstr "此部署未设置 Telegram 机器人。"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Linked Telegram accounts"
 msgstr "已关联的 Telegram 账户"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Telegram {account}"
 msgstr "Telegram {account}"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Linked {date}. Tool calls count against your plan."
 msgstr "于 {date} 关联。工具调用会计入你的套餐。"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Unlink"
 msgstr "解除关联"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Choose which services the bot may call when {name} messages it."
 msgstr "选择{name}发消息时，机器人可调用的服务。"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Services the bot may call"
 msgstr "机器人可调用的服务"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Choose how the bot sees tools when {name} messages it."
 msgstr "选择 {name} 发消息时机器人如何看到工具。"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Unlink this Telegram account?"
 msgstr "解除关联此 Telegram 账户？"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "The bot will stop answering {name} as you. Messaging it again sends a new sign-in link."
 msgstr "机器人将不再以你的身份回复 {name}。再次给它发消息会收到新的登录链接。"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Unlinking…"
 msgstr "正在解除关联…"
 
-#: app/(dashboard)/keys/telegram/telegram-view.tsx
+#: app/(site)/(dashboard)/keys/telegram/telegram-view.tsx
 msgid "Account unlinked"
 msgstr "账户已解除关联"
 
-#: app/(dashboard)/keys/whatsapp/actions.ts
+#: app/(site)/(dashboard)/keys/whatsapp/actions.ts
 msgid "Unknown number"
 msgstr "未知号码"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Number linked. Go back to WhatsApp and ask your question again."
 msgstr "号码已关联。请返回 WhatsApp 重新提问。"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Open WhatsApp"
 msgstr "打开 WhatsApp"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "No linked numbers"
 msgstr "暂无已关联的号码"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Message the mcprouter bot on WhatsApp (+{number}). It replies with a sign-in link that links your number, and then answers with the same tools and plan as the agent here."
 msgstr "在 WhatsApp 上给 mcprouter 机器人（+{number}）发消息。它会回复一个登录链接用于关联你的号码，之后便使用与这里的智能体相同的工具和套餐为你解答。"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Message the mcprouter bot on WhatsApp. It replies with a sign-in link that links your number, and then answers with the same tools and plan as the agent here."
 msgstr "在 WhatsApp 上给 mcprouter 机器人发消息。它会回复一个登录链接用于关联你的号码，之后便使用与这里的智能体相同的工具和套餐为你解答。"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Chat on WhatsApp"
 msgstr "在 WhatsApp 上对话"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "The WhatsApp bot isn't set up on this deployment."
 msgstr "此部署未设置 WhatsApp 机器人。"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Linked WhatsApp numbers"
 msgstr "已关联的 WhatsApp 号码"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "WhatsApp {number}"
 msgstr "WhatsApp {number}"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Unlink this number?"
 msgstr "解除关联此号码？"
 
-#: app/(dashboard)/keys/whatsapp/whatsapp-view.tsx
+#: app/(site)/(dashboard)/keys/whatsapp/whatsapp-view.tsx
 msgid "Number unlinked"
 msgstr "号码已解除关联"
 
-#: app/(dashboard)/services/page.tsx app/(dashboard)/tracker/dataset-table.tsx app/page.tsx app/sources/sources-header.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
+#: app/(site)/(dashboard)/services/page.tsx app/(site)/(dashboard)/tracker/dataset-table.tsx app/(site)/page.tsx app/(site)/sources/sources-header.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Services"
 msgstr "服务"
 
-#: app/(dashboard)/services/page.tsx
+#: app/(site)/(dashboard)/services/page.tsx
 msgid "{services} services, {tools} tools. Use the combined endpoint for everything, or a service endpoint for a smaller tool list."
 msgstr "{services} 个服务，{tools} 个工具。使用综合端点调用全部工具，或使用单个服务端点获取更精简的工具列表。"
 
-#: app/(dashboard)/services/page.tsx components/service-combobox.tsx
+#: app/(site)/(dashboard)/services/page.tsx components/service-combobox.tsx
 msgid "Search services"
 msgstr "搜索服务"
 
-#: app/(dashboard)/services/page.tsx
+#: app/(site)/(dashboard)/services/page.tsx
 msgid "Search services, tools and datasets"
 msgstr "搜索服务、工具和数据集"
 
-#: app/(dashboard)/services/page.tsx components/service-combobox.tsx
+#: app/(site)/(dashboard)/services/page.tsx components/service-combobox.tsx
 msgid "No services match “{query}”"
 msgstr "没有与“{query}”匹配的服务"
 
-#: app/(dashboard)/services/page.tsx
+#: app/(site)/(dashboard)/services/page.tsx
 msgid "Try a shorter word, a tool name such as get_weather, or a dataset ID."
 msgstr "试试更短的词、工具名称（如 get_weather）或数据集 ID。"
 
-#: app/(dashboard)/services/page.tsx
+#: app/(site)/(dashboard)/services/page.tsx
 msgid "service"
 msgid_plural "services"
 msgstr[0] "个服务"
 
-#: app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx
 msgid "Copy endpoint"
 msgstr "复制端点"
 
-#: app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx
 msgid "Endpoint copied"
 msgstr "端点已复制"
 
-#: app/(dashboard)/services/services-view.tsx app/page.tsx app/sources/apis/page.tsx app/sources/page.tsx components/service-combobox.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx app/(site)/page.tsx app/(site)/sources/apis/page.tsx app/(site)/sources/page.tsx components/service-combobox.tsx
 msgid "{count} tool"
 msgid_plural "{count} tools"
 msgstr[0] "{count} 个工具"
 
-#: app/(dashboard)/services/services-view.tsx app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/agent/map.tsx components/client-setup-dialog.tsx components/site-search.tsx components/task-error-details.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx app/(site)/(dashboard)/tracker/dataset-table.tsx app/(site)/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx components/agent/map.tsx components/client-setup-dialog.tsx components/site-search.tsx components/task-error-details.tsx
 msgid "Close"
 msgstr "关闭"
 
-#: app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx
 msgid "Input JSON Schema"
 msgstr "输入 JSON Schema"
 
-#: app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx
 msgid "Schema copied"
 msgstr "Schema 已复制"
 
-#: app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx
 msgid "Endpoint"
 msgstr "端点"
 
-#: app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx
 msgid "Copy {service} endpoint"
 msgstr "复制 {service} 端点"
 
-#: app/(dashboard)/services/services-view.tsx app/sources/[service]/page.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx app/(site)/sources/[service]/page.tsx
 msgid "Tools"
 msgstr "工具"
 
-#: app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx
 msgid "Input schema"
 msgstr "输入 Schema"
 
-#: app/(dashboard)/services/services-view.tsx
+#: app/(site)/(dashboard)/services/services-view.tsx
 msgid "Datasets:"
 msgstr "数据集："
 
-#: app/(dashboard)/settings/actions.ts
+#: app/(site)/(dashboard)/settings/actions.ts
 msgid "Unknown region"
 msgstr "未知地区"
 
-#: app/(dashboard)/settings/actions.ts
+#: app/(site)/(dashboard)/settings/actions.ts
 msgid "Unknown tool"
 msgstr "未知工具"
 
-#: app/(dashboard)/settings/actions.ts app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/actions.ts app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Keep at least one tool, or hide the whole service instead"
 msgstr "请保留至少一个工具，或改为隐藏整个服务"
 
-#: app/(dashboard)/settings/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/(dashboard)/settings/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts
 msgid "Settings"
 msgstr "设置"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Exposed"
 msgstr "已开放"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Region hidden"
 msgstr "地区已隐藏"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Hidden"
 msgstr "已隐藏"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "All tools hidden"
 msgstr "所有工具已隐藏"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Choose which regions, services and tools your MCP endpoints expose. This applies to every API key, OAuth app and the agent; a key limited to some services narrows it further."
 msgstr "选择你的 MCP 端点开放哪些地区、服务和工具。设置适用于所有 API 密钥、OAuth 应用和助手；仅限部分服务的密钥会进一步缩小范围。"
 
-#: app/(dashboard)/settings/page.tsx app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/page.tsx app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Expose everything"
 msgstr "全部开放"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Regions"
 msgstr "地区"
 
-#: app/(dashboard)/settings/page.tsx app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "All"
 msgstr "全部"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Services exposed"
 msgstr "已开放服务"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Tools exposed"
 msgstr "已开放工具"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Only services from {regions} are exposed."
 msgstr "仅开放来自{regions}的服务。"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Services from every region are exposed, including regions added later: {regions}."
 msgstr "开放所有地区的服务，包括以后新增的地区：{regions}。"
 
-#: app/(dashboard)/settings/page.tsx app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/page.tsx app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Change regions"
 msgstr "更改地区"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Services and tools"
 msgstr "服务和工具"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "No services are exposed, so MCP clients and the agent have no tools. Choose services to expose some."
 msgstr "没有开放任何服务，因此 MCP 客户端和智能体都没有可用的工具。请选择要开放的服务。"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Only the services you picked are exposed. New services stay hidden until you add them."
 msgstr "仅开放你选择的服务。新服务会保持隐藏，直到你添加。"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "Every service is exposed, including new ones. Pick some to expose only those."
 msgstr "开放所有服务，包括新服务。选择部分服务即仅开放这些服务。"
 
-#: app/(dashboard)/settings/page.tsx app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/page.tsx app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Choose services"
 msgstr "选择服务"
 
-#: app/(dashboard)/settings/page.tsx
+#: app/(site)/(dashboard)/settings/page.tsx
 msgid "{visible} of {total} tools"
 msgstr "{visible} / {total} 个工具"
 
-#: app/(dashboard)/settings/page.tsx app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/page.tsx app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Choose tools"
 msgstr "选择工具"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Saving regions…"
 msgstr "正在保存地区…"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Regions updated"
 msgstr "已更新地区"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Expose only services whose data comes from these regions. Choose All to include regions added later."
 msgstr "仅开放数据来自这些地区的服务。选择“所有地区”即包括以后新增的地区。"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Regions to expose"
 msgstr "要开放的地区"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "All regions"
 msgstr "所有地区"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "MCP clients and the agent see only these services. Choose All to expose every service, including new ones."
 msgstr "MCP 客户端和助手只会看到这些服务。选择“所有服务”即开放所有服务，包括新服务。"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Services to expose"
 msgstr "要开放的服务"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "{count} of these is outside the regions you expose, so it stays hidden."
 msgid_plural "{count} of these are outside the regions you expose, so they stay hidden."
 msgstr[0] "其中 {count} 个不在你开放的地区内，因此会保持隐藏。"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Saving tools…"
 msgstr "正在保存工具…"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Tools updated"
 msgstr "已更新工具"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Tools of {service} that MCP clients and the agent can call."
 msgstr "MCP 客户端和助手可以调用的{service}工具。"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Unselect all"
 msgstr "取消全选"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Select all"
 msgstr "全选"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Expose everything?"
 msgstr "要全部开放吗？"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Every region, service and tool will be exposed again, including ones added later."
 msgstr "所有地区、服务和工具都会再次开放，包括以后新增的项目。"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Resetting…"
 msgstr "正在重置…"
 
-#: app/(dashboard)/settings/settings-view.tsx
+#: app/(site)/(dashboard)/settings/settings-view.tsx
 msgid "Everything is exposed"
 msgstr "已全部开放"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Back to task"
 msgstr "返回任务"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Edit scheduled task"
 msgstr "编辑定时任务"
 
-#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/page.tsx app/(dashboard)/tasks/task-sidebar.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/page.tsx app/(site)/(dashboard)/tasks/task-sidebar.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts
 msgid "Scheduled tasks"
 msgstr "定时任务"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Your agent will run this task automatically."
 msgstr "你的智能体会自动运行此任务。"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Paused — review and enable to run"
 msgstr "已暂停 — 查看并启用后即可运行"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "View running task"
 msgstr "查看运行中的任务"
 
-#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Run now"
 msgstr "立即运行"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Next scheduled run"
 msgstr "下次定时运行"
 
-#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/page.tsx
 msgid "No upcoming run"
 msgstr "没有待运行的任务"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid " · Run manually at any time"
 msgstr " · 可随时手动运行"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Latest run"
 msgstr "最近一次运行"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Interrupted"
 msgstr "已中断"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "No runs yet"
 msgstr "暂无运行记录"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Run now to get your first result"
 msgstr "立即运行以获取首个结果"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Task details"
 msgstr "任务详情"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Run history"
 msgstr "运行历史"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Latest 30 runs · {timeZone}"
 msgstr "最近 30 次运行 · {timeZone}"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Refresh history"
 msgstr "刷新历史记录"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Interrupted — awaiting cleanup"
 msgstr "已中断 — 等待清理"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Duration: {duration}"
 msgstr "用时：{duration}"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Open result"
 msgstr "打开结果"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Start a manual run or wait for the next scheduled time. Results will appear here."
 msgstr "手动运行一次，或等待下次定时运行。结果会显示在这里。"
 
-#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Instructions"
 msgstr "指令"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Schedule & workflow"
 msgstr "计划与工作流"
 
-#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Once"
 msgstr "仅一次"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Manual runs use your plan allowance and keep this schedule unchanged. Results are saved in chat."
 msgstr "手动运行会使用你的套餐额度，当前计划保持不变。结果会保存在对话中。"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Edit"
 msgstr "编辑"
 
-#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "MCP workflow script"
 msgstr "MCP 工作流脚本"
 
-#: app/(dashboard)/tasks/[id]/page.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx
 msgid "Manage task"
 msgstr "管理任务"
 
-#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Pause"
 msgstr "暂停"
 
-#: app/(dashboard)/tasks/[id]/page.tsx app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/[id]/page.tsx app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Enable"
 msgstr "启用"
 
-#: app/(dashboard)/tasks/new/page.tsx
+#: app/(site)/(dashboard)/tasks/new/page.tsx
 msgid "New scheduled task"
 msgstr "新建定时任务"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "AUTOMATIONS"
 msgstr "自动化"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Give your agent a routine. Run instructions and MCP workflows on a schedule, or whenever you need them."
 msgstr "为你的智能体设置日常任务。按计划或随时运行指令和 MCP 工作流。"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "New task"
 msgstr "新建任务"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "{count} scheduled"
 msgstr "{count} 个已安排"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "{count} paused"
 msgstr "{count} 个已暂停"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Build with the agent"
 msgstr "使用智能体构建"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Task schedules"
 msgstr "任务计划"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Filter tasks"
 msgstr "筛选任务"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "All tasks"
 msgstr "所有任务"
 
-#: app/(dashboard)/tasks/page.tsx app/(dashboard)/tasks/task-display.tsx app/(dashboard)/tasks/task-sidebar.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx app/(site)/(dashboard)/tasks/task-display.tsx app/(site)/(dashboard)/tasks/task-sidebar.tsx
 msgid "Scheduled"
 msgstr "已安排"
 
-#: app/(dashboard)/tasks/page.tsx app/(dashboard)/tasks/task-display.tsx app/(dashboard)/tasks/task-sidebar.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx app/(site)/(dashboard)/tasks/task-display.tsx app/(site)/(dashboard)/tasks/task-sidebar.tsx
 msgid "Paused"
 msgstr "已暂停"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "One-time task"
 msgstr "一次性任务"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Next run"
 msgstr "下次运行"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "No tasks in this view"
 msgstr "此视图中没有任务"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Your next routine starts here"
 msgstr "从这里开始你的下一个日常任务"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Choose another filter to see your tasks."
 msgstr "选择其他筛选条件以查看任务。"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Create a schedule for a daily briefing, a recurring check, or an MCP workflow. Results are saved to chat."
 msgstr "为每日简报、定期检查或 MCP 工作流创建计划。结果会保存在对话中。"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "View all tasks"
 msgstr "查看所有任务"
 
-#: app/(dashboard)/tasks/page.tsx
+#: app/(site)/(dashboard)/tasks/page.tsx
 msgid "Create your first task"
 msgstr "创建首个任务"
 
-#: app/(dashboard)/tasks/task-display.tsx components/agent/chat-panel.tsx components/agent/tool-app.tsx
+#: app/(site)/(dashboard)/tasks/task-display.tsx components/agent/chat-panel.tsx components/agent/tool-app.tsx
 msgid "Running"
 msgstr "运行中"
 
-#: app/(dashboard)/tasks/task-display.tsx app/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
+#: app/(site)/(dashboard)/tasks/task-display.tsx app/(site)/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
 msgid "In progress"
 msgstr "进行中"
 
-#: app/(dashboard)/tasks/task-display.tsx
+#: app/(site)/(dashboard)/tasks/task-display.tsx
 msgid "{seconds}s"
 msgstr "{seconds} 秒"
 
-#: app/(dashboard)/tasks/task-display.tsx
+#: app/(site)/(dashboard)/tasks/task-display.tsx
 msgid "{minutes}m {seconds}s"
 msgstr "{minutes} 分 {seconds} 秒"
 
-#: app/(dashboard)/tasks/task-display.tsx
+#: app/(site)/(dashboard)/tasks/task-display.tsx
 msgid "Succeeded"
 msgstr "已成功"
 
-#: app/(dashboard)/tasks/task-display.tsx components/agent/chat-panel.tsx
+#: app/(site)/(dashboard)/tasks/task-display.tsx components/agent/chat-panel.tsx
 msgid "Failed"
 msgstr "失败"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Saving scheduled task…"
 msgstr "正在保存定时任务…"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Scheduled task saved"
 msgstr "定时任务已保存"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Title"
 msgstr "标题"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Schedule"
 msgstr "计划"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Recurring (cron)"
 msgstr "定期运行（cron）"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Cron expression"
 msgstr "Cron 表达式"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Minute, hour, day of month, month, day of week. Supports lists, ranges, steps, named months/weekdays, L, #, ?, H and aliases such as @daily. Tasks are checked once a minute; missed runs are skipped."
 msgstr "分钟、小时、日期、月份、星期。支持列表、范围、步长、月份及星期名称、L、#、?、H 以及 @daily 等别名。每分钟检查一次任务，错过的运行将跳过。"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Time zone"
 msgstr "时区"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "IANA time zone, such as Asia/Shanghai or America/New_York. The next run is calculated automatically."
 msgstr "IANA 时区，例如 Asia/Shanghai 或 America/New_York。下次运行时间会自动计算。"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Next run (UTC)"
 msgstr "下次运行（UTC）"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "MCP workflow script (optional)"
 msgstr "MCP 工作流脚本（可选）"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "A JSON array of up to 20 sequential MCP tool calls, each with tool and arguments. The agent receives the outputs and completes the instructions. Ask the task agent to write this for you."
 msgstr "一个 JSON 数组，包含最多 20 个依次执行的 MCP 工具调用，每项包含 tool 和 arguments。智能体会接收输出并完成指令。你可以让任务智能体代为编写。"
 
-#: app/(dashboard)/tasks/task-form.tsx
+#: app/(site)/(dashboard)/tasks/task-form.tsx
 msgid "Save scheduled task"
 msgstr "保存定时任务"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "This task is already running. Follow its progress in run history."
 msgstr "此任务正在运行。可在运行历史中查看进度。"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Run this task now using your MCP connections and plan allowance? Its schedule and paused state will stay unchanged. You can follow the run and open its result in run history."
 msgstr "使用你的 MCP 连接和套餐额度立即运行此任务？计划和暂停状态会保持不变。你可以在运行历史中查看进度并打开结果。"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Delete this schedule and its run history? Saved chats are kept."
 msgstr "删除此计划及其运行历史？已保存的对话会保留。"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Allow this task to run using your MCP connections and plan allowance? Past recurring times are skipped; a past one-time task is scheduled for the next minute."
 msgstr "允许此任务使用你的 MCP 连接和套餐额度运行？已错过的定期运行时间会被跳过；已过期的一次性任务会安排在下一分钟运行。"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Pause future runs of this task?"
 msgstr "暂停此任务今后的运行？"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Delete scheduled task"
 msgstr "删除定时任务"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Enable scheduled task"
 msgstr "启用定时任务"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Pause scheduled task"
 msgstr "暂停定时任务"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Run scheduled task now"
 msgstr "立即运行定时任务"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "View run history"
 msgstr "查看运行历史"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Starting task…"
 msgstr "正在启动任务…"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Task started. Follow progress in run history."
 msgstr "任务已启动。可在运行历史中查看进度。"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Deleting task…"
 msgstr "正在删除任务…"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Enabling task…"
 msgstr "正在启用任务…"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Pausing task…"
 msgstr "正在暂停任务…"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Task deleted"
 msgstr "任务已删除"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Task enabled"
 msgstr "任务已启用"
 
-#: app/(dashboard)/tasks/task-operation.tsx
+#: app/(site)/(dashboard)/tasks/task-operation.tsx
 msgid "Task paused"
 msgstr "任务已暂停"
 
-#: app/(dashboard)/tasks/task-sidebar.tsx
+#: app/(site)/(dashboard)/tasks/task-sidebar.tsx
 msgid "Your scheduled tasks"
 msgstr "你的定时任务"
 
-#: app/(dashboard)/tracker/actions.ts
+#: app/(site)/(dashboard)/tracker/actions.ts
 msgid "Say why this dataset is skipped"
 msgstr "请说明跳过此数据集的原因"
 
-#: app/(dashboard)/tracker/categories/page.tsx
+#: app/(site)/(dashboard)/tracker/categories/page.tsx
 msgid "Tracker · Categories"
 msgstr "追踪器 · 类别"
 
-#: app/(dashboard)/tracker/categories/page.tsx
+#: app/(site)/(dashboard)/tracker/categories/page.tsx
 msgid "category"
 msgid_plural "categories"
 msgstr[0] "个类别"
 
-#: app/(dashboard)/tracker/categories/page.tsx
+#: app/(site)/(dashboard)/tracker/categories/page.tsx
 msgid "Search categories"
 msgstr "搜索类别"
 
-#: app/(dashboard)/tracker/categories/page.tsx
+#: app/(site)/(dashboard)/tracker/categories/page.tsx
 msgid "No categories match “{query}”"
 msgstr "没有与“{query}”匹配的类别"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Dataset"
 msgstr "数据集"
 
-#: app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/page.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx app/(site)/sources/apis/page.tsx
 msgid "Provider"
 msgstr "数据提供方"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Formats"
 msgstr "格式"
 
-#: app/(dashboard)/tracker/dataset-table.tsx app/sources/apis/page.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx app/(site)/sources/apis/page.tsx
 msgid "Status"
 msgstr "状态"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "No datasets match these filters."
 msgstr "没有符合这些筛选条件的数据集。"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Saving status…"
 msgstr "正在保存状态…"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Status saved"
 msgstr "状态已保存"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Real API endpoint"
 msgstr "真实 API 端点"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Id"
 msgstr "ID"
 
-#: app/(dashboard)/tracker/dataset-table.tsx app/(dashboard)/tracker/layout.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx app/(site)/(dashboard)/tracker/layout.tsx
 msgid "Categories"
 msgstr "类别"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Reason"
 msgstr "原因"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Open on DATA.GOV.HK"
 msgstr "在 DATA.GOV.HK 上打开"
 
-#: app/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
 msgid "Not started"
 msgstr "未开始"
 
-#: app/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
 msgid "Planned"
 msgstr "已计划"
 
-#: app/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx lib/tracker.ts
 msgid "Skipped"
 msgstr "已跳过"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Priority"
 msgstr "优先级"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "None"
 msgstr "无"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Low"
 msgstr "低"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Medium"
 msgstr "中"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "High"
 msgstr "高"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Reason (required)"
 msgstr "原因（必填）"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "Notes"
 msgstr "备注"
 
-#: app/(dashboard)/tracker/dataset-table.tsx
+#: app/(site)/(dashboard)/tracker/dataset-table.tsx
 msgid "e.g. PDF only, no machine-readable data"
 msgstr "例如：仅有 PDF，无机器可读数据"
 
-#: app/(dashboard)/tracker/datasets/filters-button.tsx
+#: app/(site)/(dashboard)/tracker/datasets/filters-button.tsx
 msgid "Filters"
 msgstr "筛选"
 
-#: app/(dashboard)/tracker/datasets/filters-button.tsx
+#: app/(site)/(dashboard)/tracker/datasets/filters-button.tsx
 msgid "Filter datasets"
 msgstr "筛选数据集"
 
-#: app/(dashboard)/tracker/datasets/filters-button.tsx
+#: app/(site)/(dashboard)/tracker/datasets/filters-button.tsx
 msgid "Apply"
 msgstr "应用"
 
-#: app/(dashboard)/tracker/datasets/filters-button.tsx
+#: app/(site)/(dashboard)/tracker/datasets/filters-button.tsx
 msgid "Format"
 msgstr "格式"
 
-#: app/(dashboard)/tracker/datasets/filters-button.tsx
+#: app/(site)/(dashboard)/tracker/datasets/filters-button.tsx
 msgid "Any format"
 msgstr "任意格式"
 
-#: app/(dashboard)/tracker/datasets/filters-button.tsx app/sources/providers/[org]/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/filters-button.tsx app/(site)/sources/providers/[org]/page.tsx
 msgid "Endpoints"
 msgstr "端点"
 
-#: app/(dashboard)/tracker/datasets/filters-button.tsx app/sources/providers/[org]/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/filters-button.tsx app/(site)/sources/providers/[org]/page.tsx
 msgid "All datasets"
 msgstr "全部数据集"
 
-#: app/(dashboard)/tracker/datasets/filters-button.tsx
+#: app/(site)/(dashboard)/tracker/datasets/filters-button.tsx
 msgid "Real API endpoints only"
 msgstr "仅真实 API 端点"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Tracker · Datasets"
 msgstr "追踪器 · 数据集"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Category: {name}"
 msgstr "类别：{name}"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Provider: {name}"
 msgstr "数据提供方：{name}"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Format: {name}"
 msgstr "格式：{name}"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Real API endpoints"
 msgstr "真实 API 端点"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Search datasets"
 msgstr "搜索数据集"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Search by title or id"
 msgstr "按标题或 ID 搜索"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Filter by status"
 msgstr "按状态筛选"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Remove {filter}"
 msgstr "移除 {filter}"
 
-#: app/(dashboard)/tracker/datasets/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx
 msgid "Clear filters"
 msgstr "清除筛选"
 
-#: app/(dashboard)/tracker/datasets/page.tsx app/sources/providers/[org]/page.tsx
+#: app/(site)/(dashboard)/tracker/datasets/page.tsx app/(site)/sources/providers/[org]/page.tsx
 msgid "dataset"
 msgid_plural "datasets"
 msgstr[0] "个数据集"
 
-#: app/(dashboard)/tracker/layout.tsx
+#: app/(site)/(dashboard)/tracker/layout.tsx
 msgid "Conversion tracker"
 msgstr "转换追踪器"
 
-#: app/(dashboard)/tracker/layout.tsx
+#: app/(site)/(dashboard)/tracker/layout.tsx
 msgid "How much of the DATA.GOV.HK catalogue mcprouter serves as MCP tools. Converted datasets come from the service YAML files."
 msgstr "mcprouter 已将多少 DATA.GOV.HK 目录内容作为 MCP 工具提供。已转换的数据集来自服务 YAML 文件。"
 
-#: app/(dashboard)/tracker/layout.tsx
+#: app/(site)/(dashboard)/tracker/layout.tsx
 msgid "Tracker views"
 msgstr "追踪器视图"
 
-#: app/(dashboard)/tracker/layout.tsx app/sources/providers/[org]/page.tsx app/sources/sources-header.tsx
+#: app/(site)/(dashboard)/tracker/layout.tsx app/(site)/sources/providers/[org]/page.tsx app/(site)/sources/sources-header.tsx
 msgid "Providers"
 msgstr "数据提供方"
 
-#: app/(dashboard)/tracker/layout.tsx app/sources/providers/[org]/page.tsx
+#: app/(site)/(dashboard)/tracker/layout.tsx app/(site)/sources/providers/[org]/page.tsx
 msgid "Datasets"
 msgstr "数据集"
 
-#: app/(dashboard)/tracker/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
+#: app/(site)/(dashboard)/tracker/page.tsx components/app-shell.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Tracker"
 msgstr "追踪器"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "Datasets converted"
 msgstr "已转换数据集"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "Overall conversion"
 msgstr "总体转换率"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "{n} datasets are still waiting for their first metadata sync."
 msgstr "{n} 个数据集仍在等待首次元数据同步。"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "By status"
 msgstr "按状态"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "Real APIs converted"
 msgstr "已转换的真实 API"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "Top categories"
 msgstr "热门类别"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "All {count} categories"
 msgstr "全部 {count} 个类别"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "Top providers"
 msgstr "主要数据提供方"
 
-#: app/(dashboard)/tracker/page.tsx
+#: app/(site)/(dashboard)/tracker/page.tsx
 msgid "All {count} providers"
 msgstr "全部 {count} 个数据提供方"
 
-#: app/(dashboard)/tracker/providers/page.tsx
+#: app/(site)/(dashboard)/tracker/providers/page.tsx
 msgid "Tracker · Providers"
 msgstr "追踪器 · 数据提供方"
 
-#: app/(dashboard)/tracker/providers/page.tsx app/sources/providers/page.tsx
+#: app/(site)/(dashboard)/tracker/providers/page.tsx app/(site)/sources/providers/page.tsx
 msgid "provider"
 msgid_plural "providers"
 msgstr[0] "个数据提供方"
 
-#: app/(dashboard)/tracker/providers/page.tsx app/sources/providers/page.tsx
+#: app/(site)/(dashboard)/tracker/providers/page.tsx app/(site)/sources/providers/page.tsx
 msgid "Search providers"
 msgstr "搜索数据提供方"
 
-#: app/(dashboard)/tracker/providers/page.tsx app/sources/providers/page.tsx
+#: app/(site)/(dashboard)/tracker/providers/page.tsx app/(site)/sources/providers/page.tsx
 msgid "No providers match “{query}”"
 msgstr "没有与“{query}”匹配的数据提供方"
 
-#: app/(dashboard)/tracker/providers/page.tsx app/sources/providers/page.tsx
+#: app/(site)/(dashboard)/tracker/providers/page.tsx app/(site)/sources/providers/page.tsx
 msgid "Search departments and organisations"
 msgstr "搜索部门和机构"
 
-#: app/(dashboard)/tracker/tracker-ui.tsx app/sources/providers/page.tsx
+#: app/(site)/(dashboard)/tracker/tracker-ui.tsx app/(site)/sources/providers/page.tsx
 msgid "The catalogue hasn't been synced yet"
 msgstr "目录尚未同步"
 
-#: app/(dashboard)/tracker/tracker-ui.tsx
+#: app/(site)/(dashboard)/tracker/tracker-ui.tsx
 msgid "Run {command}, or wait for the daily sync, to load the DATA.GOV.HK catalogue."
 msgstr "运行 {command}，或等待每日同步，以加载 DATA.GOV.HK 目录。"
 
-#: app/(dashboard)/tracker/tracker-ui.tsx
+#: app/(site)/(dashboard)/tracker/tracker-ui.tsx
 msgid "{name} converted"
 msgstr "{name} 已转换"
 
-#: app/(dashboard)/tracker/tracker-ui.tsx
+#: app/(site)/(dashboard)/tracker/tracker-ui.tsx
 msgid "Try a shorter word."
 msgstr "试试更短的词。"
 
-#: app/(dashboard)/tracker/tracker-ui.tsx
+#: app/(site)/(dashboard)/tracker/tracker-ui.tsx
 msgid "{converted} of {total} converted"
 msgstr "已转换 {converted}/{total}"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx
 msgid "Client usage"
 msgstr "客户端用量"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx
 msgid "All clients"
 msgstr "全部客户端"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/clients/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/clients/page.tsx
 msgid "Last call {time}"
 msgstr "最近调用：{time}"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx
 msgid "No calls in the last {days} days"
 msgstr "最近 {days} 天无调用"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "Calls, last {days} days"
 msgstr "调用次数（最近 {days} 天）"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx
 msgid "Failed or denied"
 msgstr "失败或被拒绝"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx
 msgid "Errors and calls refused by billing"
 msgstr "错误及因账单原因被拒绝的调用"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx
 msgid "Average latency"
 msgstr "平均延迟"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx
 msgid "{ms} ms"
 msgstr "{ms} 毫秒"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "Hong Kong time"
 msgstr "香港时间"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/clients/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/clients/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "Range"
 msgstr "范围"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/clients/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/clients/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "{range} days"
 msgstr "{range} 天"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "By tool"
 msgstr "按工具"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "Last {days} days"
 msgstr "最近 {days} 天"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "No tool calls in this range."
 msgstr "此范围内没有工具调用。"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "The breakdown is unavailable right now."
 msgstr "明细暂时无法显示。"
 
-#: app/(dashboard)/usage/clients/[client]/page.tsx app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/clients/[client]/page.tsx app/(site)/(dashboard)/usage/page.tsx
 msgid "By provider"
 msgstr "按数据提供方"
 
-#: app/(dashboard)/usage/clients/client-icon.tsx
+#: app/(site)/(dashboard)/usage/clients/client-icon.tsx
 msgid "Connected app"
 msgstr "已连接的应用"
 
-#: app/(dashboard)/usage/clients/page.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/(dashboard)/usage/clients/page.tsx lib/agent/dashboard-tools.ts
 msgid "Usage by client"
 msgstr "按客户端统计用量"
 
-#: app/(dashboard)/usage/clients/page.tsx
+#: app/(site)/(dashboard)/usage/clients/page.tsx
 msgid "By client"
 msgstr "按客户端"
 
-#: app/(dashboard)/usage/clients/page.tsx
+#: app/(site)/(dashboard)/usage/clients/page.tsx
 msgid "API keys, connected apps and the agent in each channel, last {days} days"
 msgstr "各渠道的 API 密钥、已连接的应用和智能体，最近 {days} 天"
 
-#: app/(dashboard)/usage/clients/page.tsx
+#: app/(site)/(dashboard)/usage/clients/page.tsx
 msgid "Usage by client is unavailable right now."
 msgstr "按客户端统计的用量暂时无法显示。"
 
-#: app/(dashboard)/usage/clients/page.tsx
+#: app/(site)/(dashboard)/usage/clients/page.tsx
 msgid "No calls in this range"
 msgstr "此范围内没有调用"
 
-#: app/(dashboard)/usage/clients/page.tsx
+#: app/(site)/(dashboard)/usage/clients/page.tsx
 msgid "Calls from your API keys, connected apps, Telegram and WhatsApp will appear here."
 msgstr "来自你的 API 密钥、已连接的应用、Telegram 和 WhatsApp 的调用将显示在这里。"
 
-#: app/(dashboard)/usage/clients/page.tsx
+#: app/(site)/(dashboard)/usage/clients/page.tsx
 msgid "No calls"
 msgstr "无调用"
 
-#: app/(dashboard)/usage/clients/page.tsx
+#: app/(site)/(dashboard)/usage/clients/page.tsx
 msgid "{n} failed or denied"
 msgstr "{n} 次失败或被拒绝"
 
-#: app/(dashboard)/usage/credits/page.tsx app/(dashboard)/usage/layout.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/(dashboard)/usage/credits/page.tsx app/(site)/(dashboard)/usage/layout.tsx lib/agent/dashboard-tools.ts
 msgid "Credits"
 msgstr "额度"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show credits."
 msgstr "请设置 RX_SUBSCRIPTION_URL 和 RX_SUBSCRIPTION_API_KEY 以显示额度。"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "Credit balance"
 msgstr "额度余额"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "Stored credits cover overage only when your usage policy allows it. Your plan limits appear on Billing."
 msgstr "只有用量政策允许时，储值点数才会支付超额用量。套餐上限显示在账单页面。"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "No credits yet. Pay as you go calls are paid from credits."
 msgstr "暂无额度。按量付费的调用将从额度中扣除。"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "The balance is unavailable right now."
 msgstr "暂时无法获取余额。"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "Top up"
 msgstr "充值"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "History"
 msgstr "记录"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "The credit history couldn't be loaded."
 msgstr "无法加载额度记录。"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "No credit activity"
 msgstr "暂无额度变动"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "Top-ups and calls paid from credits will appear here."
 msgstr "充值记录和从额度中扣除的调用将显示在这里。"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "Balance {amount}"
 msgstr "余额 {amount}"
 
-#: app/(dashboard)/usage/credits/page.tsx
+#: app/(site)/(dashboard)/usage/credits/page.tsx
 msgid "entry"
 msgid_plural "entries"
 msgstr[0] "条记录"
 
-#: app/(dashboard)/usage/layout.tsx
+#: app/(site)/(dashboard)/usage/layout.tsx
 msgid "MCP calls made with your keys, connected apps, or the agent in the web chat, Telegram and WhatsApp."
 msgstr "通过你的密钥、已连接的应用，或网页对话、Telegram 和 WhatsApp 中的智能体发起的 MCP 调用。"
 
-#: app/(dashboard)/usage/layout.tsx
+#: app/(site)/(dashboard)/usage/layout.tsx
 msgid "Usage views"
 msgstr "用量视图"
 
-#: app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/page.tsx
 msgid "Set RX_SUBSCRIPTION_URL and RX_SUBSCRIPTION_API_KEY to show usage."
 msgstr "请设置 RX_SUBSCRIPTION_URL 和 RX_SUBSCRIPTION_API_KEY 以显示用量。"
 
-#: app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/page.tsx
 msgid "Usage meter"
 msgstr "用量类别"
 
-#: app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
+#: app/(site)/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
 msgid "MCP calls"
 msgstr "MCP 调用"
 
-#: app/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
+#: app/(site)/(dashboard)/usage/page.tsx components/agent/chat-allowance.tsx
 msgid "Premium MCP calls"
 msgstr "高级 MCP 调用"
 
-#: app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/page.tsx
 msgid "Plan allowance"
 msgstr "套餐额度"
 
-#: app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/page.tsx
 msgid "Credits spent, last {days} days"
 msgstr "已用额度（最近 {days} 天）"
 
-#: app/(dashboard)/usage/page.tsx
+#: app/(site)/(dashboard)/usage/page.tsx
 msgid "Calls past the allowance"
 msgstr "超出套餐额度的调用"
 
-#: app/guides/[client]/page.tsx
+#: app/(site)/guides/[client]/page.tsx
 msgid "Connect {client} to MCPRouter"
 msgstr "将 {client} 连接到 MCPRouter"
 
-#: app/guides/[client]/page.tsx
+#: app/(site)/guides/[client]/page.tsx
 msgid "Set up MCPRouter with OAuth or an API key to access Hong Kong open data from your AI client."
 msgstr "通过 OAuth 或 API 密钥设置 MCPRouter，在 AI 客户端中访问香港开放数据。"
 
-#: app/guides/[client]/page.tsx app/guides/page.tsx app/page.tsx app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx components/site-footer.tsx lib/site-search/catalogue.ts
+#: app/(site)/guides/[client]/page.tsx app/(site)/guides/page.tsx app/(site)/page.tsx app/(site)/sources/[service]/page.tsx app/(site)/sources/api/[id]/page.tsx components/site-footer.tsx lib/site-search/catalogue.ts
 msgid "Setup guides"
 msgstr "设置指南"
 
-#: app/guides/[client]/page.tsx
+#: app/(site)/guides/[client]/page.tsx
 msgid "Authentication"
 msgstr "身份验证"
 
-#: app/guides/[client]/page.tsx app/page.tsx app/sources/[service]/page.tsx
+#: app/(site)/guides/[client]/page.tsx app/(site)/page.tsx app/(site)/sources/[service]/page.tsx
 msgid "Get an API key"
 msgstr "获取 API 密钥"
 
-#: app/guides/[client]/page.tsx app/sources/[service]/page.tsx app/sources/sources-header.tsx components/site-footer.tsx lib/site-search/catalogue.ts
+#: app/(site)/guides/[client]/page.tsx app/(site)/sources/[service]/page.tsx app/(site)/sources/sources-header.tsx components/site-footer.tsx lib/site-search/catalogue.ts
 msgid "Data sources"
 msgstr "数据源"
 
-#: app/guides/page.tsx
+#: app/(site)/guides/page.tsx
 msgid "MCP Setup Guides & Hong Kong Data Use Cases"
 msgstr "MCP 设置指南与香港数据用例"
 
-#: app/guides/page.tsx
+#: app/(site)/guides/page.tsx
 msgid "Connect your AI client to MCPRouter and explore Hong Kong transport, weather, air quality and economic data."
 msgstr "将 AI 客户端连接到 MCPRouter，探索香港交通、天气、空气质量和经济数据。"
 
-#: app/guides/page.tsx
+#: app/(site)/guides/page.tsx
 msgid "Hong Kong data use cases"
 msgstr "香港数据用例"
 
-#: app/guides/page.tsx
+#: app/(site)/guides/page.tsx
 msgid "Start with a service below for example questions, available tools and source limitations."
 msgstr "选择以下服务，查看示例问题、可用工具及数据来源限制。"
 
-#: app/layout.tsx app/page.tsx
+#: app/(site)/layout.tsx app/(site)/page.tsx
 msgid "Connect to data and services through MCP tools, with one endpoint and one API key."
 msgstr "通过 MCP 工具连接数据与服务，只需一个端点和一把 API 密钥。"
 
-#: app/layout.tsx app/page.tsx
+#: app/(site)/layout.tsx app/(site)/page.tsx
 msgid "MCP tools for everyone"
 msgstr "人人可用的 MCP 工具"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "API keys for Claude, Cursor, VS Code and any MCP client"
 msgstr "适用于 Claude、Cursor、VS Code 及任何 MCP 客户端的 API 密钥"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "The mcprouter agent, with your chats saved"
 msgstr "mcprouter 智能体，保存你的对话"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "Usage by key and tool, and your plan in one place"
 msgstr "按密钥和工具查看用量，套餐信息一目了然"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "Open data, ready for your AI."
 msgstr "开放数据，为你的 AI 准备就绪。"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "{count} service"
 msgid_plural "{count} services"
 msgstr[0] "{count} 个服务"
 
-#: app/login/page.tsx lib/site-search/catalogue.ts
+#: app/(site)/login/page.tsx lib/site-search/catalogue.ts
 msgid "Home"
 msgstr "首页"
 
-#: app/login/page.tsx components/app-shell.tsx
+#: app/(site)/login/page.tsx components/app-shell.tsx
 msgid "mcprouter home"
 msgstr "mcprouter 首页"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "Use your RxLab account to manage API keys, usage and saved chats."
 msgstr "使用你的 RxLab 账户管理 API 密钥、用量和已保存的对话。"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "Sign-in is not configured. Set the AUTH_* environment variables, or set DEV_BYPASS_AUTH=true locally."
 msgstr "登录尚未配置。请设置 AUTH_* 环境变量，或在本地设置 DEV_BYPASS_AUTH=true。"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "Continue with RxLab"
 msgstr "使用 RxLab 继续"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "or"
 msgstr "或"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "Try the agent without an account"
 msgstr "无需账户即可试用智能体"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "{count} free message a day"
 msgid_plural "{count} free messages a day"
 msgstr[0] "每天 {count} 条免费消息"
 
-#: app/login/page.tsx
+#: app/(site)/login/page.tsx
 msgid "mcprouter only reads your RxLab profile and email. API keys are stored hashed and shown once."
 msgstr "mcprouter 仅读取你的 RxLab 个人资料和邮箱。API 密钥以哈希形式存储，且仅显示一次。"
 
-#: app/oauth/authorize/decision-buttons.tsx app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx
+#: app/(site)/oauth/authorize/decision-buttons.tsx app/(site)/telegram/link/link-buttons.tsx app/(site)/whatsapp/link/link-buttons.tsx
 msgid "Cancelling…"
 msgstr "正在取消…"
 
-#: app/oauth/authorize/decision-buttons.tsx
+#: app/(site)/oauth/authorize/decision-buttons.tsx
 msgid "Connecting…"
 msgstr "正在连接…"
 
-#: app/oauth/authorize/decision-buttons.tsx
+#: app/(site)/oauth/authorize/decision-buttons.tsx
 msgid "Allow"
 msgstr "允许"
 
-#: app/oauth/authorize/page.tsx
+#: app/(site)/oauth/authorize/page.tsx
 msgid "Connect an app"
 msgstr "连接应用"
 
-#: app/oauth/authorize/page.tsx
+#: app/(site)/oauth/authorize/page.tsx
 msgid "Can't connect this app"
 msgstr "无法连接此应用"
 
-#: app/oauth/authorize/page.tsx app/telegram/link/page.tsx app/whatsapp/link/page.tsx
+#: app/(site)/oauth/authorize/page.tsx app/(site)/telegram/link/page.tsx app/(site)/whatsapp/link/page.tsx
 msgid "Go to dashboard"
 msgstr "前往控制台"
 
-#: app/oauth/authorize/page.tsx
+#: app/(site)/oauth/authorize/page.tsx
 msgid "Allow {client} to use mcprouter?"
 msgstr "允许 {client} 使用 mcprouter？"
 
-#: app/oauth/authorize/page.tsx app/telegram/link/page.tsx app/whatsapp/link/page.tsx
+#: app/(site)/oauth/authorize/page.tsx app/(site)/telegram/link/page.tsx app/(site)/whatsapp/link/page.tsx
 msgid "Signed in as {user}."
 msgstr "已以 {user} 身份登录。"
 
-#: app/oauth/authorize/page.tsx
+#: app/(site)/oauth/authorize/page.tsx
 msgid "Call the {service} tools as you. Each tool call counts against your plan, like calls made with an API key."
 msgstr "以你的身份调用 {service} 工具。每次工具调用都会计入你的套餐，与使用 API 密钥的调用相同。"
 
-#: app/oauth/authorize/page.tsx
+#: app/(site)/oauth/authorize/page.tsx
 msgid "Call mcprouter services as you, all of them or only the ones you pick below. Each tool call counts against your plan, like calls made with an API key."
 msgstr "以你的身份调用 mcprouter 服务，可以是全部，或仅限你在下方选择的服务。每次工具调用都会计入你的套餐，与使用 API 密钥的调用相同。"
 
-#: app/oauth/authorize/page.tsx
+#: app/(site)/oauth/authorize/page.tsx
 msgid "It can't see or change your keys, chats or billing. Disconnect it any time under API keys → Connected apps."
 msgstr "它无法查看或更改你的密钥、对话或账单。你可以随时在“API 密钥 → 已连接的应用”中断开连接。"
 
-#: app/oauth/authorize/page.tsx
+#: app/(site)/oauth/authorize/page.tsx
 msgid "You'll be sent back to {target}. Only allow apps you trust."
 msgstr "你将被重定向回 {target}。请只允许你信任的应用。"
 
-#: app/oauth/authorize/services-field.tsx
+#: app/(site)/oauth/authorize/services-field.tsx
 msgid "You can change this later under API keys → Connected apps."
 msgstr "你之后可以在“API 密钥 → 已连接的应用”中更改。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Telegram & WhatsApp"
 msgstr "Telegram 和 WhatsApp"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "How it works"
 msgstr "使用方式"
 
-#: app/page.tsx components/landing-pricing.tsx lib/site-search/catalogue.ts
+#: app/(site)/page.tsx components/landing-pricing.tsx lib/site-search/catalogue.ts
 msgid "Pricing"
 msgstr "价格"
 
-#: app/page.tsx components/landing-pricing.tsx
+#: app/(site)/page.tsx components/landing-pricing.tsx
 msgid "Get started"
 msgstr "开始使用"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Sign in, then create an API key scoped to the services you need."
 msgstr "登录后，创建一个仅限所需服务的 API 密钥。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Connect your client"
 msgstr "连接你的客户端"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Sign in from Claude, Claude Code, ChatGPT, Codex, Cursor or any MCP client."
 msgstr "在 Claude、Claude Code、ChatGPT、Codex、Cursor 或任何 MCP 客户端中登录。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Just ask"
 msgstr "直接提问"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "“When's the next 1A bus?” Your assistant calls the right tool, live."
 msgstr "“下一班 1A 巴士什么时候到？”你的助手会实时调用合适的工具。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Message the bot like a friend. Link your account once and every answer uses your plan."
 msgstr "像和朋友聊天一样给机器人发消息。只需关联一次账户，所有回答都使用你的套餐。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Next 1A bus from Star Ferry?"
 msgstr "天星码头下一班 1A 巴士？"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "The next **1A** leaves Star Ferry in **4 min**, then 11 and 19 min."
 msgstr "下一班 **1A** 将在 **4 分钟**后从天星码头开出，之后是 11 分钟和 19 分钟。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Ask about buses, weather or A&E waits right in WhatsApp, no app or setup needed."
 msgstr "直接在 WhatsApp 中询问巴士、天气或急症室等候时间，无需安装应用或进行设置。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Any typhoon signal today?"
 msgstr "今天有台风信号吗？"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "**No tropical cyclone signal** is in force. 28°C with a chance of showers."
 msgstr "目前**没有热带气旋警告信号**生效。气温 28°C，可能有阵雨。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "{services} services · {tools} MCP tools"
 msgstr "{services} 个服务 · {tools} 个 MCP 工具"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Open data, as tools your AI can call."
 msgstr "开放数据，化为你的 AI 可调用的工具。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Live public data for anyone, through one MCP endpoint and one API key. We're starting with Hong Kong: weather, buses, MTR, A&E waiting times, car parks, public holidays and the whole DATA.GOV.HK catalogue."
 msgstr "人人可用的实时公共数据，只需一个 MCP 端点和一个 API 密钥。我们从香港开始：天气、巴士、港铁、急诊等候时间、停车场、公众假期，以及整个 DATA.GOV.HK 目录。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Open dashboard"
 msgstr "打开控制台"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "View pricing"
 msgstr "查看价格"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Try it right here: {limit} free messages a day, no account needed."
 msgstr "立即在这里试用：每天 {limit} 条免费消息，无需账户。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Everything Hongkongers check on their phone"
 msgstr "香港人每天在手机上查看的一切"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Showing {shown} of {total} services. Visit the services page to browse the full catalogue."
 msgstr "显示 {total} 项服务中的 {shown} 项。前往服务页面浏览完整目录。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "View all services"
 msgstr "查看所有服务"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Search all providers"
 msgstr "搜索所有数据提供方"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Works with the assistants you already use"
 msgstr "支持你已在使用的 AI 助手"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "One MCP endpoint for every client. Most sign in with OAuth, so there's no key to copy; the rest take an API key."
 msgstr "所有客户端共用一个 MCP 端点。大多数通过 OAuth 登录，无需复制密钥；其余的使用 API 密钥。"
 
-#: app/page.tsx components/client-setup-dialog.tsx
+#: app/(site)/page.tsx components/client-setup-dialog.tsx
 msgid "Set up {name}"
 msgstr "设置 {name}"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Using something else?"
 msgstr "在用其他工具？"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Any client that speaks MCP over streamable HTTP can connect with the endpoint URL and an API key."
 msgstr "任何支持基于 streamable HTTP 的 MCP 的客户端，都可以通过端点 URL 和 API 密钥连接。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Chat apps"
 msgstr "聊天应用"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "No AI app? Just message the bot."
 msgstr "没有 AI 应用？直接给机器人发消息。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "The same live data on Telegram and WhatsApp. Nothing to install or configure."
 msgstr "在 Telegram 和 WhatsApp 上获取同样的实时数据，无需安装或配置。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "{name} bot"
 msgstr "{name} 机器人"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Online now"
 msgstr "已上线"
 
-#: app/page.tsx app/sources/api/[id]/page.tsx app/sources/apis/page.tsx lib/apis.ts lib/site-search/catalogue.ts
+#: app/(site)/page.tsx app/(site)/sources/api/[id]/page.tsx app/(site)/sources/apis/page.tsx lib/apis.ts lib/site-search/catalogue.ts
 msgid "Coming soon"
 msgstr "即将推出"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Chat on {name}"
 msgstr "在 {name} 上对话"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "From sign-in to answers in a minute"
 msgstr "从登录到获得答案，只需一分钟"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Loading pricing…"
 msgstr "正在加载价格…"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Ready when your assistant is."
 msgstr "随时为你的 AI 助手就绪。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Free to start. Every tool call is metered on your dashboard."
 msgstr "免费开始使用。每次工具调用都会在控制台中计量。"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "Is it going to rain? Any warnings?"
 msgstr "会下雨吗？有没有天气警告？"
 
-#: app/page.tsx
+#: app/(site)/page.tsx
 msgid "It's <strong>27°C</strong> at the Observatory with <strong>79% humidity</strong>. No rain in the past hour and <strong>no warnings are in force</strong>."
 msgstr "天文台录得 <strong>27°C</strong>，<strong>相对湿度 79%</strong>。过去一小时没有降雨，<strong>目前没有生效的警告</strong>。"
 
-#: app/sources/[service]/page.tsx app/sources/apis/api-dialog.tsx components/site-search-chat.tsx components/site-search.tsx
+#: app/(site)/sources/[service]/page.tsx app/(site)/sources/apis/api-dialog.tsx components/site-search-chat.tsx components/site-search.tsx
 msgid "Chat"
 msgstr "聊天"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "Use this MCP service"
 msgstr "使用此 MCP 服务"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "Connect a supported AI client, then ask a question. Your assistant uses the tools below to request data from the source."
 msgstr "连接支持的 AI 客户端后即可提问。助手会使用以下工具向数据来源请求数据。"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "Example questions"
 msgstr "示例问题"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "Data freshness and limitations"
 msgstr "数据时效与限制"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "Results come from upstream providers and may be cached. Check timestamps in the returned data. MCPRouter by RxLab is an independent service."
 msgstr "结果来自上游提供方，可能使用缓存。请查看返回数据中的时间戳。MCPRouter 是 RxLab 提供的独立服务。"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "What your assistant can call through this service."
 msgstr "你的 AI 助手可以通过此服务调用的工具。"
 
-#: app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx app/sources/sources-header.tsx
+#: app/(site)/sources/[service]/page.tsx app/(site)/sources/api/[id]/page.tsx app/(site)/sources/sources-header.tsx
 msgid "APIs"
 msgstr "API"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "Upstream APIs this service implements, by their tracker id."
 msgstr "此服务实现的上游 API，按追踪器 ID 列出。"
 
-#: app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx
+#: app/(site)/sources/[service]/page.tsx app/(site)/sources/api/[id]/page.tsx
 msgid "Source datasets"
 msgstr "来源数据集"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "Published on DATA.GOV.HK and fetched live when a tool is called."
 msgstr "发布于 DATA.GOV.HK，调用工具时实时获取。"
 
-#: app/sources/[service]/page.tsx
+#: app/(site)/sources/[service]/page.tsx
 msgid "Browse every DATA.GOV.HK provider"
 msgstr "浏览所有 DATA.GOV.HK 数据提供方"
 
-#: app/sources/[service]/page.tsx app/sources/api/[id]/page.tsx app/sources/apis/page.tsx
+#: app/(site)/sources/[service]/page.tsx app/(site)/sources/api/[id]/page.tsx app/(site)/sources/apis/page.tsx
 msgid "Available tools"
 msgstr "可用工具"
 
-#: app/sources/[service]/page.tsx app/sources/apis/page.tsx
+#: app/(site)/sources/[service]/page.tsx app/(site)/sources/apis/page.tsx
 msgid "Display tools"
 msgstr "展示工具"
 
-#: app/sources/api/[id]/page.tsx app/sources/apis/page.tsx
+#: app/(site)/sources/api/[id]/page.tsx app/(site)/sources/apis/page.tsx
 msgid "API docs"
 msgstr "API 文档"
 
-#: app/sources/apis/api-dialog.tsx
+#: app/(site)/sources/apis/api-dialog.tsx
 msgid "Minimize"
 msgstr "最小化"
 
-#: app/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx
+#: app/(site)/sources/apis/api-dialog.tsx components/agent/hero-chat.tsx
 msgid "Full screen"
 msgstr "全屏"
 
-#: app/sources/apis/api-dialog.tsx
+#: app/(site)/sources/apis/api-dialog.tsx
 msgid "API workspace"
 msgstr "API 工作区"
 
-#: app/sources/apis/api-dialog.tsx
+#: app/(site)/sources/apis/api-dialog.tsx
 msgid "Details & tools"
 msgstr "详情与工具"
 
-#: app/sources/apis/api-dialog.tsx
+#: app/(site)/sources/apis/api-dialog.tsx
 msgid "API details and tools"
 msgstr "API 详情和工具"
 
-#: app/sources/apis/api-dialog.tsx
+#: app/(site)/sources/apis/api-dialog.tsx
 msgid "Resize panels"
 msgstr "调整面板大小"
 
-#: app/sources/apis/api-dialog.tsx
+#: app/(site)/sources/apis/api-dialog.tsx
 msgid "Chat with this API"
 msgstr "与此 API 聊天"
 
-#: app/sources/apis/api-dialog.tsx
+#: app/(site)/sources/apis/api-dialog.tsx
 msgid "Ask about {title}. Only the tools listed in the details panel are available here."
 msgstr "询问有关 {title} 的问题。此处仅可使用详情面板中列出的工具。"
 
-#: app/sources/apis/api-dialog.tsx
+#: app/(site)/sources/apis/api-dialog.tsx
 msgid "Ask about {title}…"
 msgstr "询问有关 {title} 的问题…"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "MCP APIs"
 msgstr "MCP API"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Every open data API mcprouter serves as MCP tools, and the ones coming soon."
 msgstr "mcprouter 以 MCP 工具提供的所有开放数据 API，以及即将推出的 API。"
 
-#: app/sources/apis/page.tsx lib/apis.ts lib/site-search/catalogue.ts
+#: app/(site)/sources/apis/page.tsx lib/apis.ts lib/site-search/catalogue.ts
 msgid "Implemented"
 msgstr "已实现"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "APIs implemented"
 msgstr "已实现的 API"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "{count} coming soon"
 msgstr "{count} 个即将推出"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Each API has a permanent id. Pull requests that add one carry its id, e.g. {id} for a new entry."
 msgstr "每个 API 都有一个永久 ID。新增 API 的 Pull Request 需带上其 ID，例如新条目的 {id}。"
 
-#: app/sources/apis/page.tsx components/site-search.tsx
+#: app/(site)/sources/apis/page.tsx components/site-search.tsx
 msgid "Search APIs"
 msgstr "搜索 API"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Search by name, id, provider or dataset"
 msgstr "按名称、ID、数据提供方或数据集搜索"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "All · {total}"
 msgstr "全部 · {total}"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Type"
 msgstr "类型"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "All types"
 msgstr "所有类型"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Category"
 msgstr "类别"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "All categories"
 msgstr "所有类别"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "No APIs match “{query}”"
 msgstr "没有与“{query}”匹配的 API"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "No APIs match these filters"
 msgstr "没有符合这些筛选条件的 API"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Try another search, or clear the filters."
 msgstr "请尝试其他搜索词，或清除筛选条件。"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "API"
 msgid_plural "APIs"
 msgstr[0] "个 API"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "API details"
 msgstr "API 详情"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Show a custom view of the results."
 msgstr "以自定义界面展示结果。"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Show an API tool's visual app."
 msgstr "显示 API 工具的可视化应用。"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Show a map with pins and routes."
 msgstr "显示带标记和路线的地图。"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Served by"
 msgstr "提供服务"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Coming soon. To build it, list {id} under {key} in a service YAML and put the id in the pull request title."
 msgstr "即将推出。如需实现，请在服务 YAML 的 {key} 下列出 {id}，并在 Pull Request 标题中注明该 ID。"
 
-#: app/sources/apis/page.tsx
+#: app/(site)/sources/apis/page.tsx
 msgid "Dataset on DATA.GOV.HK"
 msgid_plural "Datasets on DATA.GOV.HK"
 msgstr[0] "DATA.GOV.HK 上的数据集"
 
-#: app/sources/page.tsx
+#: app/(site)/sources/page.tsx
 msgid "MCP Services"
 msgstr "MCP 服务"
 
-#: app/sources/page.tsx
+#: app/(site)/sources/page.tsx
 msgid "The open data services mcprouter serves as MCP tools."
 msgstr "mcprouter 以 MCP 工具提供的开放数据服务。"
 
-#: app/sources/page.tsx
+#: app/(site)/sources/page.tsx
 msgid "{count} dataset"
 msgid_plural "{count} datasets"
 msgstr[0] "{count} 个数据集"
 
-#: app/sources/providers/[org]/page.tsx
+#: app/(site)/sources/providers/[org]/page.tsx
 msgid "Datasets {provider} publishes on DATA.GOV.HK."
 msgstr "{provider}在 DATA.GOV.HK 上发布的数据集。"
 
-#: app/sources/providers/[org]/page.tsx
+#: app/(site)/sources/providers/[org]/page.tsx
 msgid "With APIs"
 msgstr "提供 API"
 
-#: app/sources/providers/[org]/page.tsx
+#: app/(site)/sources/providers/[org]/page.tsx
 msgid "In mcprouter"
 msgstr "已接入 mcprouter"
 
-#: app/sources/providers/[org]/page.tsx
+#: app/(site)/sources/providers/[org]/page.tsx
 msgid "Search {provider} datasets"
 msgstr "搜索{provider}的数据集"
 
-#: app/sources/providers/[org]/page.tsx
+#: app/(site)/sources/providers/[org]/page.tsx
 msgid "Search this provider's datasets"
 msgstr "搜索此数据提供方的数据集"
 
-#: app/sources/providers/[org]/page.tsx
+#: app/(site)/sources/providers/[org]/page.tsx
 msgid "No datasets match"
 msgstr "没有匹配的数据集"
 
-#: app/sources/providers/[org]/page.tsx
+#: app/(site)/sources/providers/[org]/page.tsx
 msgid "Try another search, or show all datasets."
 msgstr "请尝试其他搜索词，或显示所有数据集。"
 
-#: app/sources/providers/page.tsx components/site-footer.tsx
+#: app/(site)/sources/providers/page.tsx components/site-footer.tsx
 msgid "Data providers"
 msgstr "数据提供方"
 
-#: app/sources/providers/page.tsx
+#: app/(site)/sources/providers/page.tsx
 msgid "Explore the organisations behind the data available through McpRouter."
 msgstr "了解 McpRouter 数据背后的提供机构。"
 
-#: app/sources/providers/page.tsx
+#: app/(site)/sources/providers/page.tsx
 msgid "Data from DATA.GOV.HK and its providers."
 msgstr "数据来自 DATA.GOV.HK 及其数据提供方。"
 
-#: app/sources/providers/page.tsx
+#: app/(site)/sources/providers/page.tsx
 msgid "Try a shorter name, or an abbreviation such as HKO or TD."
 msgstr "请尝试更短的名称，或 HKO、TD 等缩写。"
 
-#: app/sources/providers/page.tsx
+#: app/(site)/sources/providers/page.tsx
 msgid "Provider details appear after the daily DATA.GOV.HK catalogue sync."
 msgstr "数据提供方详情将在每日 DATA.GOV.HK 目录同步后显示。"
 
-#: app/sources/providers/page.tsx
+#: app/(site)/sources/providers/page.tsx
 msgid "{n} dataset"
 msgid_plural "{n} datasets"
 msgstr[0] "{n} 个数据集"
 
-#: app/sources/providers/page.tsx
+#: app/(site)/sources/providers/page.tsx
 msgid "{n} with APIs"
 msgstr "{n} 个提供 API"
 
-#: app/sources/providers/page.tsx
+#: app/(site)/sources/providers/page.tsx
 msgid "{count} in mcprouter"
 msgstr "{count} 个已接入 mcprouter"
 
-#: app/sources/sources-header.tsx
+#: app/(site)/sources/sources-header.tsx
 msgid "McpRouter connects data and services to your MCP clients."
 msgstr "McpRouter 将数据与服务连接至你的 MCP 客户端。"
 
-#: app/sources/sources-header.tsx
+#: app/(site)/sources/sources-header.tsx
 msgid "The catalogue has {datasets} datasets from {providers} government departments and organisations."
 msgstr "目录收录了来自 {providers} 个政府部门和机构的 {datasets} 个数据集。"
 
-#: app/sources/sources-header.tsx
+#: app/(site)/sources/sources-header.tsx
 msgid "Data source views"
 msgstr "数据源视图"
 
-#: app/telegram/link/link-buttons.tsx app/whatsapp/link/link-buttons.tsx
+#: app/(site)/telegram/link/link-buttons.tsx app/(site)/whatsapp/link/link-buttons.tsx
 msgid "Linking…"
 msgstr "正在关联…"
 
-#: app/telegram/link/link-buttons.tsx
+#: app/(site)/telegram/link/link-buttons.tsx
 msgid "Link account"
 msgstr "关联账户"
 
-#: app/telegram/link/page.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
+#: app/(site)/telegram/link/page.tsx lib/agent/dashboard-tools.ts lib/intro-cards.ts
 msgid "Link Telegram"
 msgstr "关联 Telegram"
 
-#: app/telegram/link/page.tsx app/whatsapp/link/page.tsx
+#: app/(site)/telegram/link/page.tsx app/(site)/whatsapp/link/page.tsx
 msgid "This link has expired"
 msgstr "此链接已过期"
 
-#: app/telegram/link/page.tsx
+#: app/(site)/telegram/link/page.tsx
 msgid "Links from the Telegram bot work for 30 minutes. Send the bot any message to get a new one."
 msgstr "Telegram 机器人发送的链接有效期为 30 分钟。向机器人发送任意消息即可获取新链接。"
 
-#: app/telegram/link/page.tsx
+#: app/(site)/telegram/link/page.tsx
 msgid "Telegram {account} is already linked"
 msgstr "Telegram {account} 已关联"
 
-#: app/telegram/link/page.tsx
+#: app/(site)/telegram/link/page.tsx
 msgid "Go back to Telegram and ask away."
 msgstr "返回 Telegram，尽管提问吧。"
 
-#: app/telegram/link/page.tsx
+#: app/(site)/telegram/link/page.tsx
 msgid "Manage linked accounts"
 msgstr "管理已关联账户"
 
-#: app/telegram/link/page.tsx
+#: app/(site)/telegram/link/page.tsx
 msgid "Link Telegram {account} to your account?"
 msgstr "将 Telegram {account} 关联到你的账户？"
 
-#: app/telegram/link/page.tsx app/whatsapp/link/page.tsx
+#: app/(site)/telegram/link/page.tsx app/(site)/whatsapp/link/page.tsx
 msgid "The bot answers as you. Its tool calls count against your plan, the same as the agent on the web."
 msgstr "机器人将以你的身份回答。其工具调用会计入你的套餐用量，与网页版智能体相同。"
 
-#: app/telegram/link/page.tsx
+#: app/(site)/telegram/link/page.tsx
 msgid "This Telegram account is linked to another account now; linking moves it to yours. Unlink it any time under API keys → Telegram."
 msgstr "此 Telegram 账户目前已关联到另一个账户；关联后会转移到你的账户。你可以随时在“API 密钥 → Telegram”中解除关联。"
 
-#: app/telegram/link/page.tsx
+#: app/(site)/telegram/link/page.tsx
 msgid "Unlink it any time under API keys → Telegram."
 msgstr "可随时在“API 密钥 → Telegram”中解除关联。"
 
-#: app/whatsapp/link/link-buttons.tsx
+#: app/(site)/whatsapp/link/link-buttons.tsx
 msgid "Link number"
 msgstr "关联号码"
 
-#: app/whatsapp/link/page.tsx lib/agent/dashboard-tools.ts
+#: app/(site)/whatsapp/link/page.tsx lib/agent/dashboard-tools.ts
 msgid "Link WhatsApp"
 msgstr "关联 WhatsApp"
 
-#: app/whatsapp/link/page.tsx
+#: app/(site)/whatsapp/link/page.tsx
 msgid "Links from the WhatsApp bot work for 30 minutes. Send the bot any message to get a new one."
 msgstr "WhatsApp 机器人发送的链接有效期为 30 分钟。向机器人发送任意消息即可获取新链接。"
 
-#: app/whatsapp/link/page.tsx
+#: app/(site)/whatsapp/link/page.tsx
 msgid "WhatsApp {number} is already linked"
 msgstr "WhatsApp {number} 已关联"
 
-#: app/whatsapp/link/page.tsx
+#: app/(site)/whatsapp/link/page.tsx
 msgid "Go back to WhatsApp and ask away."
 msgstr "返回 WhatsApp，尽管提问吧。"
 
-#: app/whatsapp/link/page.tsx
+#: app/(site)/whatsapp/link/page.tsx
 msgid "Manage linked numbers"
 msgstr "管理已关联号码"
 
-#: app/whatsapp/link/page.tsx
+#: app/(site)/whatsapp/link/page.tsx
 msgid "Link WhatsApp {number} to your account?"
 msgstr "将 WhatsApp {number} 关联到你的账户？"
 
-#: app/whatsapp/link/page.tsx
+#: app/(site)/whatsapp/link/page.tsx
 msgid "This number is linked to another account now; linking moves it to yours. Unlink it any time under API keys → WhatsApp."
 msgstr "此号码目前已关联到另一个账户；关联后会转移到你的账户。你可以随时在“API 密钥 → WhatsApp”中解除关联。"
 
-#: app/whatsapp/link/page.tsx
+#: app/(site)/whatsapp/link/page.tsx
 msgid "Unlink it any time under API keys → WhatsApp."
 msgstr "可随时在“API 密钥 → WhatsApp”中解除关联。"
 
