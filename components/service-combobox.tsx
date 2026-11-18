@@ -3,7 +3,7 @@
 import { Check, LoaderCircle, Search, X } from "lucide-react";
 import { Popover } from "radix-ui";
 import { useEffect, useId, useRef, useState } from "react";
-import { searchServices } from "@/app/(dashboard)/services/actions";
+import { searchServices } from "@/app/(site)/(dashboard)/services/actions";
 import { FilterChip } from "@/components/m3/chip";
 import { cn } from "@/components/m3/cn";
 import { useT } from "@/lib/i18n/client";

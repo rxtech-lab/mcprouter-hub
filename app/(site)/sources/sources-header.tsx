@@ -1,13 +1,13 @@
 import { LinkTabs } from "@/components/m3/tabs";
 import manifest from "@/generated/manifest.json";
 import { apiTracker } from "@/lib/apis";
-import { catalogueTotals } from "@/lib/sources";
+import { cachedCatalogueTotals, catalogueTotals } from "@/lib/sources";
 import { formatNumber } from "@/lib/format";
-import { getT } from "@/lib/i18n/server";
+import { catalogueRender, getT } from "@/lib/i18n/server";
 
 /** Title and tabs shared by the Services, APIs and Providers lists. */
 export async function SourcesHeader() {
-  const [totals, t] = await Promise.all([catalogueTotals(), getT()]);
+  const [totals, t] = await Promise.all([catalogueRender().locale ? cachedCatalogueTotals() : catalogueTotals(), getT()]);
   return (
     <div className="mb-6">
       <h1 className="type-headline-large md:type-display-small">{t("Data sources")}</h1>

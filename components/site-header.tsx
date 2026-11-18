@@ -5,7 +5,7 @@ import { ButtonLink } from "@/components/m3/button";
 import { cn } from "@/components/m3/cn";
 import { LanguageMenu } from "@/components/language-menu";
 import { getCurrentUser } from "@/lib/auth";
-import { getT } from "@/lib/i18n/server";
+import { catalogueRender, getT } from "@/lib/i18n/server";
 import { SiteSearch } from "@/components/site-search";
 import { searchNavigation } from "@/lib/site-search/catalogue";
 
@@ -25,7 +25,7 @@ export async function SiteHeader({ active, className }: { active?: "sources" | "
           </Suspense>
           <LanguageMenu />
           <Suspense fallback={<AccountAction signedIn={false} label={t("Sign in")} />}>
-            <SessionAction />
+            {catalogueRender().locale ? <AccountAction signedIn={false} label={t("Sign in")} /> : <SessionAction />}
           </Suspense>
         </nav>
       </div>

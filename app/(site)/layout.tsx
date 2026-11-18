@@ -5,7 +5,7 @@ import { Roboto_Flex, Roboto_Mono } from "next/font/google";
 import { I18nProvider } from "@/lib/i18n/client";
 import { getMessages } from "@/lib/i18n/messages";
 import { getLocale, getT } from "@/lib/i18n/server";
-import "./globals.css";
+import "@/app/globals.css";
 import { seoOrigin } from "@/lib/seo";
 import { StructuredData } from "@/components/structured-data";
 

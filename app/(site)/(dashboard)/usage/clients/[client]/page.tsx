@@ -5,7 +5,7 @@ import { DailyBarChart, HorizontalBars } from "@/components/charts";
 import { ButtonLink } from "@/components/m3/button";
 import { Card, CardTitle, StatCard } from "@/components/m3/card";
 import { Badge } from "@/components/m3/chip";
-import { BackLink } from "@/app/sources/back-link";
+import { BackLink } from "@/app/(site)/sources/back-link";
 import { requirePageUser } from "@/lib/auth";
 import { formatNumber, formatRelative } from "@/lib/format";
 import { getT } from "@/lib/i18n/server";

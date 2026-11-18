@@ -27,7 +27,7 @@ const coveredCount = coveredIds.length
 
 // Cache Components are not enabled in this app, so use the Data Cache for these
 // public aggregates. A short TTL also picks up syncs run outside the web process.
-const cachedCatalogueTotals = unstable_cache(async () => {
+export const cachedCatalogueTotals = unstable_cache(async () => {
   const [row] = await db
     .select({ datasets: count(), providers: sql<number>`count(distinct ${datasets.organization})` })
     .from(datasets)

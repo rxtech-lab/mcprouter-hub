@@ -15,21 +15,24 @@ beforeEach(() => {
   vi.stubEnv("NODE_ENV", "production");
   vi.stubEnv("PUBLIC_CDN_CACHE_ENABLED", "true");
   vi.stubEnv("DEV_BYPASS_AUTH", "false");
+  vi.stubGlobal("fetch", vi.fn(async () => new Response("<html></html>", {
+    headers: { "content-type": "text/html", "cache-control": "public, max-age=0, must-revalidate" },
+  })));
   authProxy.mockReset().mockImplementation(() => {
     const response = NextResponse.next();
     response.cookies.set("session-refresh", "test-only");
     return response;
   });
 });
-afterEach(() => vi.unstubAllEnvs());
+afterEach(() => { vi.unstubAllGlobals(); vi.unstubAllEnvs(); });
 
 describe("public crawler caching", () => {
-  it.each(["/", "/sources", "/sources/hko-weather"])("caches cookie-free HTML at %s without invoking auth", async (path) => {
+  it.each(["/sources", "/sources/apis"])("caches cookie-free HTML at %s without invoking auth", async (path) => {
     const response = await proxy(request(path), event);
     expect(authProxy).not.toHaveBeenCalled();
     expect(response?.headers.get("set-cookie")).toBeNull();
     expect(response?.headers.get("Cloudflare-CDN-Cache-Control")).toBe(PUBLIC_CACHE_CONTROL);
-    expect(response?.headers.has("cache-control")).toBe(false);
+    expect(response?.headers.get("Vercel-CDN-Cache-Control")).toBe("no-store");
   });
 
   it.each(PUBLIC_CACHE_EXCLUDED_HEADERS)("bypasses cache when %s is present, even empty", async (name) => {
@@ -51,6 +54,33 @@ describe("public crawler caching", () => {
     expect(response?.headers.get("Cloudflare-CDN-Cache-Control")).toBe(PUBLIC_CACHE_CONTROL);
     // The middleware must not rewrite URLs or collapse query variants.
     expect(response?.headers.get("x-middleware-rewrite")).toBeNull();
+  });
+
+  it.each(["en", "zh-CN", "zh-HK"])("keeps the explicit %s catalogue locale on a cacheable rewrite", async locale => {
+    const path = `/${locale}/sources/apis?page=2`;
+    const response = await proxy(request(path), event);
+    expect(vi.mocked(fetch).mock.calls[0][0].toString()).toContain(`/catalogue-render/${locale}/apis/q-`);
+    expect(response?.headers.get("Cloudflare-CDN-Cache-Control")).toBe(PUBLIC_CACHE_CONTROL);
+    expect(isPublicCacheRequest(request(path, { cookie: "locale=en" }))).toBe(false);
+    expect(isPublicCacheRequest(request(path + "&_rsc=test"))).toBe(false);
+  });
+
+  it.each([
+    [200, { "cache-control": "private" }],
+    [200, { "cache-control": "public, no-store" }],
+    [200, { "cache-control": "public, no-cache" }],
+    [200, { "set-cookie": "session=x" }],
+    [200, { "cdn-cache-control": "no-store" }],
+    [200, { "vary": "*" }],
+    [200, { "content-type": "text/x-component" }],
+    [500, {}],
+  ] as [number, Record<string, string>][])("falls back on unsafe final response %s %o", async (status, extra) => {
+    vi.mocked(fetch).mockResolvedValueOnce(new Response("origin", {
+      status, headers: { "content-type": "text/html", "cache-control": "public", ...extra },
+    }));
+    const response = await proxy(request(), event);
+    expect(response?.headers.get("Cloudflare-CDN-Cache-Control")).toBe("no-store");
+    expect(response?.headers.get("x-middleware-next")).toBe("1");
   });
 
   it("keeps session refresh and its cookies for signed-in requests", async () => {
@@ -111,7 +141,7 @@ describe("public crawler caching", () => {
       ],
     }, browser_ttl: { mode: "respect_origin" } });
     expect(cache.expression).toContain("not http.request.headers.truncated");
-    expect(cache.expression).toContain('http.request.uri.path eq "/sources/apis"');
+    expect(cache.expression).toContain('http.request.uri.path in {"/sources/apis" "/en/sources/apis" "/zh-CN/sources/apis" "/zh-HK/sources/apis"}');
     expect(cache.expression).toContain('all(http.request.uri.args.names[*] in {"api" "page" "status" "category" "kind"})');
     expect(cache.expression).toContain("len(http.request.uri.query) le 512");
     for (const name of PUBLIC_CACHE_EXCLUDED_HEADERS) {

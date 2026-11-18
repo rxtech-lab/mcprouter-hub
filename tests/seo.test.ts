@@ -3,7 +3,7 @@ import { NextRequest, type NextFetchEvent } from "next/server";
 import { localizedHref, splitLocalePath } from "@/lib/i18n/routing";
 
 vi.mock("next/headers", () => ({ headers: async () => new Headers({ "x-site-path": "/login" }) }));
-vi.mock("@/lib/i18n/server", () => ({ getLocale: async () => "en" }));
+vi.mock("@/lib/i18n/server", () => ({ catalogueRender: () => ({}), getLocale: async () => "en" }));
 vi.mock("@/lib/auth", () => ({ proxy: vi.fn(async () => null) }));
 import { canonicalQuery, indexableQuery, seoMetadata, seoOrigin } from "@/lib/seo";
 import proxy from "@/proxy";

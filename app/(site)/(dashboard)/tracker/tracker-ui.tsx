@@ -4,7 +4,7 @@ import { EmptyState } from "@/components/m3/page-header";
 import { Pagination } from "@/components/m3/pagination";
 import { LinearProgress } from "@/components/m3/progress";
 import { SearchBar } from "@/components/m3/search-bar";
-import { listHref } from "@/app/sources/params";
+import { listHref } from "@/app/(site)/sources/params";
 import { formatNumber } from "@/lib/format";
 import { getT } from "@/lib/i18n/server";
 import { percent, type Progress } from "@/lib/tracker";
